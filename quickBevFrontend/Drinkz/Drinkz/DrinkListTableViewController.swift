@@ -23,7 +23,7 @@ class DrinkListTableViewController: UITableViewController {
             }
         }
         private func fetchInventory(completion: @escaping ([Drink]?) -> Void) {
-            AF.request("http://127.0.0.1:4000/inventory", method: .get)
+            AF.request("http://127.0.0.1:5000/inventory", method: .get)
                 .validate()
                 .responseJSON { response in
                     switch response.result {

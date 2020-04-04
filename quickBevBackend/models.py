@@ -14,11 +14,11 @@ db = SQLAlchemy(app)
 
 class Drink(db.object):
     __table__name = 'drink'
-    id = db.Column(db.Integer, nullable = False, primary_key = True)
+    id = db.Column(db.String, nullable = False, primary_key = True)
     name = db.Column(db.String(80), nullable = False)
     description = db.Column(db.String(80), nullable = False)
     price = db.Column(db.Float(), nullable = False)
-    bar_id = db.Column(db.Integer, db.ForeignKey('bar.id'), nullable = False)
+    bar_id = db.Column(db.String, db.ForeignKey('bar.id'), nullable = False)
     order_drink = relationship('Order_Drink', lazy = True)
 
 class Bar(db.object):
@@ -29,7 +29,7 @@ class Bar(db.object):
     city = db.Column(db.String(80), nullable = False)
     state = db.Column(db.String(80), nullable = False)
     zip_code = db.Column(db.Integer, nullable = False)
-    date_joined = db.Column(db.DateTime(timezone=False), nullable = False)
+    date_joined = db.Column(db.Date(timezone=False), nullable = False)
     drink = relationship('Drink', lazy = True)
     administrator = relationship('Administrator', lazy = True)
     order = relationship('Order', lazy = True)
@@ -37,12 +37,12 @@ class Bar(db.object):
 
 class Administrator(db.object):
     __table__name = 'administrator'
-    id = db.Column(db.Integer, nullable = False, primary_key = True)
+    id = db.Column(db.String, nullable = False, primary_key = True)
     first_name = db.Column(db.String(80), nullable = False)
     last_name = db.Column(db.String(80), nullable = False)
     email = db.Column(db.String(80), nullable = False)
     bar_id = db.Column(db.String(80), db.foreign_key('bar.id'), nullable = False)
-    birthday = db.Column(db.DateTime(timezone=False), nullable = False)
+    birthday = db.Column(db.Date(timezone=False), nullable = False)
 
 class User(db.object):
     __table__name = 'user'
@@ -50,7 +50,7 @@ class User(db.object):
     first_name = db.Column(db.String(80), nullable = False)
     last_name = db.Column(db.String(80), nullable = False)
     email = db.Column(db.String(80), nullable = False)
-    birthday = db.Column(db.DateTime(timezone=False), nullable = False)
+    birthday = db.Column(db.Date(timezone=False), nullable = False)
     university = db.Column(db.String(80), nullable = True)
     order = relationship('Order', lazy = True)
 
@@ -65,6 +65,7 @@ class Order_Drink(db.object):
     __table__name = 'order_drink'
     order_id = db.Column(db.String, db.foreign_key('order.id'), nullable = False, primary_key = True)
     drink_id = db.Column(db.String(80), db.foreign_key('drink.id'), nullable = False, primary_key = True)
+    quantity = bar_id = db.Column(db.Integer, nullable = False)
     
 
 db.drop_all()
