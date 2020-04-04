@@ -21,7 +21,7 @@ class DrinkViewController: UIViewController {
         navigationItem.title = drink!.name
                    drinkImageView.image = drink!.image
                    drinkDescription.text = drink!.description
-                   amount.text = "$\(String(describing: drink!.amount))"
+                   amount.text = "$\(String(describing: drink!.price))"
         // Do any additional setup after loading the view.
     }
   
