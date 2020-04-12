@@ -34,7 +34,7 @@ class DrinkListTableViewController: UITableViewController {
                         os_log("fuck")
                         return completion(nil)
                   }
-                  let inventory = rawInventory.flatMap{ drinkDict -> Drink? in var data = drinkDict!
+                  let inventory = rawInventory.compactMap{ drinkDict -> Drink? in var data = drinkDict!
                     
                   data["image"] = UIImage(named: drinkDict!["image"] as! String)
                   
@@ -53,7 +53,7 @@ class DrinkListTableViewController: UITableViewController {
             }
     }
     @IBAction func ordersButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "orders", sender: nil)
+        performSegue(withIdentifier: "Orders", sender: nil)
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -65,7 +65,7 @@ class DrinkListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Drink", for: indexPath) as! DrinkTableViewCell
         cell.name.text = drinks[indexPath.row].name
         cell.imageView?.image = drinks[indexPath.row].image
-        cell.amount.text = "$\(drinks[indexPath.row].price)"
+        cell.amount.text = drinks[indexPath.row].price.stringValue
         cell.miscellaneousText.text = drinks[indexPath.row].description
         return cell
     }
@@ -73,10 +73,10 @@ class DrinkListTableViewController: UITableViewController {
         return 100.0
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "drink", sender: self.drinks[indexPath.row] as Drink)
+        performSegue(withIdentifier: "Drink", sender: self.drinks[indexPath.row] as Drink)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "drink" {
+        if segue.identifier == "Drink" {
             guard let vc = segue.destination as? DrinkViewController else { return }
             vc.drink = sender as? Drink
         }

@@ -103,7 +103,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$8.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Yw-cE-NEx">
-                                            <rect key="frame" x="107" y="62" width="62" height="26"/>
+                                            <rect key="frame" x="107" y="62" width="258" height="26"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                             <nil key="textColor"/>
@@ -118,12 +118,13 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="Drink"/>
                                 <connections>
                                     <outlet property="amount" destination="5Yw-cE-NEx" id="ciW-ZJ-7TQ"/>
                                     <outlet property="drinkImageView" destination="R23-Xe-lFM" id="nKX-kh-T3X"/>
                                     <outlet property="miscellaneousText" destination="phX-hb-Peg" id="8GS-Av-u5a"/>
                                     <outlet property="name" destination="B6k-Ty-G2L" id="jsL-BL-Xg7"/>
-                                    <segue destination="wiS-nk-Gbf" kind="show" id="gYm-Gi-Vvx"/>
+                                    <segue destination="wiS-nk-Gbf" kind="show" identifier="Drink" id="gYm-Gi-Vvx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

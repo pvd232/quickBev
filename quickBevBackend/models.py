@@ -30,6 +30,10 @@ class Drink(db.Model):
     bar_id = db.Column(UUID(as_uuid=True), db.ForeignKey('bar.id'), nullable = False)
     order_drink = relationship('OrderDrink', lazy = True)
 
+    @property
+    def serialize(self):
+        return {'name': self.name, 'image': "mango", 'id': self.id, 'description': self.description, 'price': self.price, 'bar_id': self.bar_id}
+
 class Bar(db.Model):
     __table__name = 'bar'
     id = db.Column(UUID(as_uuid=True), primary_key = True, unique=True, nullable=False)
