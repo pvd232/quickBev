@@ -1,6 +1,5 @@
-from models import db, Drink, Bar, app
+from models import db, Drink, Bar, app, UserTable
 import uuid
-from uuid import UUID
 import json
 from datetime import date
 from sqlalchemy.ext.declarative import DeclarativeMeta
@@ -10,33 +9,6 @@ from sqlalchemy.orm.collections import InstrumentedList
 # https://stackoverflow.com/questions/12664385/sqlalchemy-metaclass-confusion
 # https://www.w3schools.com/python/ref_func_isinstance.asp
 # https://stackoverflow.com/questions/5022066/how-to-serialize-sqlalchemy-result-to-json/7032311
-
-
-class AlchemyEncoder(json.JSONEncoder):
-
-    def default(self, obj):
-
-        if isinstance(obj.__class__, DeclarativeMeta):
-            fields = {}
-                
-            #https://stackoverflow.com/questions/1958219/convert-sqlalchemy-row-object-to-python-dict
-            for column in obj.__table__.columns:
-                data = getattr(obj, column.name)
-                field = column.name
-                # this will fail on non-encodable values, like other classes
-                try:
-                    json.dumps(data)
-                    fields[field] = data
-                except TypeError:
-                    #https://stackoverflow.com/questions/36588126/uuid-is-not-json-serializable
-                    if isinstance(data, UUID):
-                        fields[field] = data.hex
-                    else:
-                        fields[field] = None
-            # a json-encodable dict
-            return fields
-
-        return json.JSONEncoder.default(self, obj)
 
 def load_json(filename):
 
@@ -80,14 +52,16 @@ def create_bar():
         city = bar['city']
         state = bar['state']
         zipcode = bar['zipcode']
+        country = bar['country']
         date_joined = date.today()
 
         new_bar = Bar(id=id, name=name, street=street, city=city,
-                      state=state, zipcode=zipcode, date_joined=date_joined)
+                      state=state, zipcode=zipcode, country=country, date_joined=date_joined)
 
         # After I create the drink, I can then add it to my session.
         db.session.add(new_bar)
-
+    me = UserTable(id = "a", password= 'a', first_name = 'peter', last_name = 'driscoll')
+    db.session.add(me)
     # commit the session to my DB.
     db.session.commit()
 
