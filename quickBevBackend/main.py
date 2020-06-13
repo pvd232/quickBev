@@ -58,7 +58,7 @@ def orders():
         return Response(status=200, response=json.dumps(response))
     if request.method == 'GET':
         order_list = []
-        response = {'orders':''}
+        response = {}
         order_service = Order_Service()
         orders = order_service.get_orders()
         for order in orders:
@@ -80,10 +80,14 @@ def register_new_user():
 @app.route('/getBars', methods=['GET'])
 def get_bars():
     response = {}
+    bar_list = []
     bar_service = Bar_Service()
     bars = bar_service.get_bars()
-    response['bars'] = bars
-    return jsonify(response), 200
+    for bar in bars:
+        bar_list.append(bar.serialize())
+    response['bars'] = bar_list
+    print('response', response)
+    return jsonify(response['bars'])
 
 if __name__ == '__main__':
     app.debug = True

@@ -60,7 +60,7 @@ class Bar(db.Model):
 
     @property
     def serialize(self):
-        return {'id': self.id, 'name': self.name, 'city': self.city, 'state': self.state, 'zipcode': self.zipcode, 'country' : self.country, 'date_joined': self.date_joined}
+        return {'id': self.id, 'name': self.name, 'street' : self.street, 'city': self.city,  'state': self.state, 'zipcode': self.zipcode, 'country' : self.country, 'date_joined': self.date_joined}
 
 
 class Administrator(db.Model):

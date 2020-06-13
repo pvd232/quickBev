@@ -7,9 +7,26 @@
 //
 
 import UIKit
+import CoreLocation
 
-struct Bar {
+//struct BarList: Codable {
+//    let barList: [Bar]
+//    enum CodingKeys: String, CodingKey {
+//        case barResponse = "bars"
+//    }
+//    init(from decoder: Decoder) throws {
+//        let container = try decoder.container(keyedBy: CodingKeys.self)
+//        self.barList = try container.decode([Bar].self, forKey: .barResponse)
+//    }
+//    func encode(to encoder: Encoder) throws {
+//        var container = encoder.container(keyedBy: CodingKeys.self)
+//
+//        try container.encode(self.barList, forKey: .barResponse)
+//    }
+//}
 
+class Bar:Codable {
+    
     let id: String
     let name: String
     let street: String
@@ -17,10 +34,11 @@ struct Bar {
     let state: String
     let zipcode: String
     let country: String
+    var address: String
+    var coordinate: CLLocationCoordinate2D?
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
-        case barResponse = "bar"
         case name = "name"
         case street = "street"
         case city = "city"
@@ -28,30 +46,44 @@ struct Bar {
         case zipcode = "zipcode"
         case country = "country"
     }
-}
-
-extension Bar: Codable {
-    init(from decoder: Decoder) throws {
+    
+    required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        let barResponse = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .barResponse)
-        self.id = try barResponse.decode(String.self, forKey: .id)
-        self.name = try barResponse.decode(String.self, forKey: .name)
-        self.street = try barResponse.decode(String.self, forKey: .street)
-        self.city = try barResponse.decode(String.self, forKey: .city)
-        self.state = try barResponse.decode(String.self, forKey: .state)
-        self.zipcode = try barResponse.decode(String.self, forKey: .zipcode)
-        self.country = try barResponse.decode(String.self, forKey: .country)
+        self.id = try container.decode(String.self, forKey: .id)
+        self.name = try container.decode(String.self, forKey: .name)
+        self.street = try container.decode(String.self, forKey: .street)
+        self.city = try container.decode(String.self, forKey: .city)
+        self.state = try container.decode(String.self, forKey: .state)
+        self.zipcode = try container.decode(String.self, forKey: .zipcode)
+        self.country = try container.decode(String.self, forKey: .country)
+        self.address = "\(self.street), \(self.city), \(self.state) \(self.zipcode)"
+     
     }
-
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        var barResponse = container.nestedContainer(keyedBy: CodingKeys.self, forKey: .barResponse)
-        try barResponse.encode(self.name, forKey: .name)
-        try barResponse.encode(self.id, forKey: .id)
-        try barResponse.encode(self.street, forKey: .street)
-        try barResponse.encode(self.city, forKey: .city)
-        try barResponse.encode(self.state, forKey: .state)
-        try barResponse.encode(self.zipcode, forKey: .zipcode)
-        try barResponse.encode(self.country, forKey: .country)
+        try container.encode(self.name, forKey: .name)
+        try container.encode(self.id, forKey: .id)
+        try container.encode(self.street, forKey: .street)
+        try container.encode(self.city, forKey: .city)
+        try container.encode(self.state, forKey: .state)
+        try container.encode(self.zipcode, forKey: .zipcode)
+        try container.encode(self.country, forKey: .country)
     }
 }
+
+
+func getLocation(from address: String, completion: @escaping (_ location: CLLocationCoordinate2D?)-> Void) {
+           let geocoder = CLGeocoder()
+           geocoder.geocodeAddressString(address) { (placemarks, error) in
+               guard let placemarks = placemarks,
+               let location = placemarks.first?.location?.coordinate else {
+                   completion(nil)
+                   return
+               }
+               completion(location)
+           }
+       }
+
+
+
+

@@ -30,6 +30,7 @@ extension User: Codable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let userResponse = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .userResponse)
+              print("userResponse", userResponse)
         self.email = try userResponse.decode(String.self, forKey: .email)
         self.first_name = try userResponse.decode(String.self, forKey: .first_name)
         self.last_name = try userResponse.decode(String.self, forKey: .last_name)

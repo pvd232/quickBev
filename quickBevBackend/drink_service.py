@@ -98,6 +98,6 @@ class Bar_Service(object):
             response = []
             for bar in self.bar_repository.get_bars():
                 bar_serialized = bar.serialize
-                bar_model = Bar_Model(id=bar_serialized['id'], name=bar_serialized['name'], state=bar_serialized['street'], zipcode=bar_serialized['zipcode'], country=bar_serialized['country'])
+                bar_model = Bar_Model(id=bar_serialized['id'], name=bar_serialized['name'], street=bar_serialized['street'], city=bar_serialized['city'], state=bar_serialized['state'], zipcode=str(bar_serialized['zipcode']), country=bar_serialized['country'])
                 response.append(bar_model)
             return response

@@ -51,4 +51,4 @@ class Bar_Model(object):
         self.country = country
 
     def serialize(self):
-        return {'id': self.id, 'name': self.name, 'street': self.street, 'city': self.city, 'city': self.city, 'state': self.state, 'zipcode': self.zipcode, 'country': self.country}
+        return {'id': self.id, 'name': self.name, 'street': self.street, 'city': self.city, 'state': self.state, 'zipcode': self.zipcode, 'country': self.country}
