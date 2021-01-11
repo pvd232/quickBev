@@ -45,14 +45,11 @@ class DrinkListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
+        return (tableView.frame.height/8)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedDrink = CheckoutCart.shared.userBarDrinks[indexPath.row].copy() as! Drink
-        print("selectedDrink", selectedDrink)
-//        let mainStoryBoard = UIStoryboard(name:"Main", bundle: nil)
-        let viewController =  DrinkViewController(drink:selectedDrink)
-            navigationController!.pushViewController(viewController, animated: true)
+            navigationController!.pushViewController(DrinkViewController(drink:selectedDrink), animated: true)
     }
 }

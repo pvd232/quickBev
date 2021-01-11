@@ -22,7 +22,6 @@ class TabCreationViewController2: UIViewController {
         
         let attributes = [NSAttributedString.Key.font: UIFont(name: "Charter-Roman", size: 20)!]
         self.navigationController!.navigationBar.standardAppearance.titleTextAttributes  = attributes
-        self.navigationController!.navigationBar.standardAppearance.backgroundColor = UIColor.init(red: 134/255, green: 130/255, blue: 230/255, alpha: 1.0)
     }
     
     @objc func eventPrivacyEventHandler () {

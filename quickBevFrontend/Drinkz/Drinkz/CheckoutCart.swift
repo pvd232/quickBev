@@ -49,7 +49,7 @@ extension CheckoutCart {
         }).rounded(digits:2)
         self.salesTax = (self.cost * userBar!.salesTaxRate).rounded(digits:2)
         self.tipAmount = (self.tipPercentage * self.subtotal).rounded(digits: 2)
-        self.cost = self.subtotal + self.salesTax + self.tipAmount
+        self.cost = (self.subtotal + self.salesTax + self.tipAmount).rounded(digits: 2)
     }
     public func emptyCart () {
         self.userId = ""
@@ -61,6 +61,6 @@ extension CheckoutCart {
 extension Double {
     func rounded(digits: Int) -> Double {
         let multiplier = pow(10.0, Double(digits))
-        return (self * multiplier).rounded() / multiplier
+        return Darwin.round(self * multiplier) / multiplier
     }
 }

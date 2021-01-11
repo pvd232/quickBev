@@ -220,9 +220,9 @@ class HomePageViewController: UIViewController, NewBarPickedProtocol{
         })
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.standardAppearance.backgroundColor = UIColor.init(red: 134/255, green: 130/255, blue: 230/255, alpha: 1.0)
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        self.navigationController?.navigationBar.standardAppearance.backgroundColor = UIColor.init(red: 134/255, green: 130/255, blue: 230/255, alpha: 1.0)
+//    }
     
     @objc func launchAccountViewController () {
         navigationController?.pushViewController(AccountViewController(), animated: true)

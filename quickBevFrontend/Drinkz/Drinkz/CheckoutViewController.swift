@@ -74,6 +74,9 @@ class CheckoutViewController : UIViewController, UITableViewDelegate, UITableVie
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(CheckoutCartTableViewCell.self, forCellReuseIdentifier: "CheckoutCartCell")
+        
+        addMoreItemsButton.addTarget(self, action: #selector(clickAddMoreItems), for: .touchUpInside)
+        reviewOrderButton.addTarget(self, action: #selector(proceedToReviewOrder), for: .touchUpInside)
         CheckoutCart.shared.calculateCost()
     }
     
@@ -81,9 +84,9 @@ class CheckoutViewController : UIViewController, UITableViewDelegate, UITableVie
         self.title = "Your Order"
         let attributes = [NSAttributedString.Key.font: UIFont(name: "Charter-Roman", size: 25)!]
         self.navigationController!.navigationBar.standardAppearance.titleTextAttributes  = attributes
-        self.navigationController!.navigationBar.standardAppearance.backgroundColor = UIColor.init(red: 134/255, green: 130/255, blue: 230/255, alpha: 1.0)
     }
-    @IBAction func clickAddMoreItems(_ sender: RoundButton) {
+    
+    @objc func clickAddMoreItems(_ sender: RoundButton) {
         let homePageViewController =  HomePageViewController()
         let drinkListTableViewController =  DrinkListTableViewController()
         
@@ -91,9 +94,13 @@ class CheckoutViewController : UIViewController, UITableViewDelegate, UITableVie
         navigationController.setViewControllers([drinkListTableViewController, homePageViewController], animated: true)
     }
     
+    @objc func proceedToReviewOrder () {
+        navigationController?.pushViewController(ReviewOrderViewController(), animated: true)
+    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
         return (tableView.frame.height / 6)
     }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

@@ -25,8 +25,6 @@ class TabCreationViewController: UIViewController, UITextFieldDelegate, UITextVi
         super.viewDidLoad()
         let attributes = [NSAttributedString.Key.font: UIFont(name: "Charter-Roman", size: 20)!]
         self.navigationController!.navigationBar.standardAppearance.titleTextAttributes  = attributes
-        self.navigationController!.navigationBar.standardAppearance.backgroundColor = UIColor.init(red: 134/255, green: 130/255, blue: 230/255, alpha: 1.0)
-        
         barTextField.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(launchBarArrayViewController)))
         
         descriptionTextField.addLeftBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)

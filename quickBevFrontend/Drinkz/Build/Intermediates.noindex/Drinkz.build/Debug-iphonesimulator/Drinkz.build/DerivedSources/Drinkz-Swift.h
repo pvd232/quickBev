@@ -401,7 +401,8 @@ SWIFT_CLASS("_TtC6Drinkz22CheckoutViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
-- (IBAction)clickAddMoreItems:(RoundButton * _Nonnull)sender;
+- (void)clickAddMoreItems:(RoundButton * _Nonnull)sender;
+- (void)proceedToReviewOrder;
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
@@ -484,7 +485,6 @@ SWIFT_CLASS("_TtC6Drinkz22HomePageViewController")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidLoad;
-- (void)viewWillAppear:(BOOL)animated;
 - (void)launchAccountViewController;
 - (void)launchBarViewController;
 - (void)launchCheckoutViewController;
@@ -594,24 +594,15 @@ SWIFT_CLASS("_TtC6Drinkz35RegistrationWithEmailViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIView;
-@class UIImageView;
 
 SWIFT_CLASS("_TtC6Drinkz25ReviewOrderViewController")
 @interface ReviewOrderViewController : UIViewController
-@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified defaultPaymentMethodView;
-@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified cardLogoImageView;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified cardCompanyName;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified orderSubtotalLabel;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified salesTaxLabel;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified tipAmountLabel;
-@property (nonatomic, weak) IBOutlet RoundButton * _Null_unspecified addPaymentMethodButton;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified orderTotalLabel;
-- (void)viewDidLoad;
-- (IBAction)choosePaymentButtonTapped:(RoundButton * _Nonnull)sender;
-- (IBAction)changeDefaultPaymentMethodButtonClicked:(RoundButton * _Nonnull)sender;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewDidLoad;
+- (void)choosePaymentButtonTapped:(RoundButton * _Nonnull)sender;
+- (IBAction)changeDefaultPaymentMethodButtonClicked:(RoundButton * _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
 @class STPPaymentContext;
@@ -757,6 +748,15 @@ SWIFT_CLASS("_TtC6Drinkz26TabCreationViewController2")
 - (void)eventPrivacyEventHandler;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC6Drinkz28TemplateNavigationController")
+@interface TemplateNavigationController : UINavigationController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithRootViewController:(UIViewController * _Nonnull)rootViewController OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNavigationBarClass:(Class _Nullable)navigationBarClass toolbarClass:(Class _Nullable)toolbarClass SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
 

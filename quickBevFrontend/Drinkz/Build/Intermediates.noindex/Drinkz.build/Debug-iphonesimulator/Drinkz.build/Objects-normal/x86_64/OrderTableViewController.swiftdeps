@@ -22,11 +22,13 @@ depends-top-level:
 - "UITableView"
 - "UITableViewController"
 depends-member:
+- !private ["s18AdditiveArithmeticP", ""]
 - !private ["9Alamofire0A8ExtendedP", "count"]
 - !private ["Sa", "count"]
-- !private ["SK", ""]
+- ["SK", ""]
 - !private ["SK", "count"]
 - !private ["So15CALayerDelegateP", "dequeueReusableCell"]
+- !private ["So15CALayerDelegateP", "dequeueReusableCellWithIdentifier"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "count"]
 - !private ["s7CVarArgP", "CheckoutCart"]
 - ["s7CVarArgP", ""]
@@ -37,8 +39,9 @@ depends-member:
 - !private ["s7CVarArgP", "viewDidLoad"]
 - !private ["6Drinkz12CheckoutCartC", "cart"]
 - !private ["6Drinkz12CheckoutCartC", "shared"]
-- !private ["Sl", ""]
+- ["Sl", ""]
 - !private ["Sl", "count"]
+- ["SL", ""]
 - !private ["10Foundation15ContiguousBytesP", "count"]
 - !private ["s28CustomDebugStringConvertibleP", "CheckoutCart"]
 - ["s28CustomDebugStringConvertibleP", ""]
@@ -68,6 +71,13 @@ depends-member:
 - !private ["SQ", "viewDidLoad"]
 - !private ["s25ExpressibleByArrayLiteralP", ""]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s25ExpressibleByFloatLiteralP", ""]
+- !private ["s27ExpressibleByIntegerLiteralP", ""]
+- ["s32ExpressibleByStringInterpolationP", ""]
+- ["s26ExpressibleByStringLiteralP", ""]
+- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["SF", ""]
 - !private ["SH", "CheckoutCart"]
 - ["SH", ""]
 - !private ["SH", "cart"]
@@ -77,19 +87,27 @@ depends-member:
 - !private ["SH", "viewDidLoad"]
 - !private ["s12IdentifiableP", "cart"]
 - !private ["s12IdentifiableP", "shared"]
+- ["s25LosslessStringConvertibleP", ""]
 - !private ["SM", ""]
 - !private ["SM", "count"]
 - !private ["10Foundation19MutableDataProtocolP", "count"]
 - !private ["So8NSCodingP", "CheckoutCart"]
 - ["So8NSCodingP", "DrinkTableViewCell"]
+- ["So8NSCodingP", "IndexPath"]
+- ["So8NSCodingP", "Int"]
+- ["So8NSCodingP", "UITableView"]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "dequeueReusableCell"]
+- !private ["So8NSCodingP", "dequeueReusableCellWithIdentifier"]
 - ["So8NSCodingP", "init"]
 - ["So8NSCodingP", "numberOfSections"]
 - ["So8NSCodingP", "tableView"]
 - ["So8NSCodingP", "viewDidLoad"]
 - !private ["So26NSExtensionRequestHandlingP", "CheckoutCart"]
 - ["So26NSExtensionRequestHandlingP", "DrinkTableViewCell"]
+- ["So26NSExtensionRequestHandlingP", "IndexPath"]
+- ["So26NSExtensionRequestHandlingP", "Int"]
+- ["So26NSExtensionRequestHandlingP", "UITableView"]
 - ["So26NSExtensionRequestHandlingP", ""]
 - ["So26NSExtensionRequestHandlingP", "init"]
 - ["So26NSExtensionRequestHandlingP", "numberOfSections"]
@@ -97,6 +115,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - !private ["So20NSFetchRequestResultP", "cart"]
 - !private ["So20NSFetchRequestResultP", "shared"]
+- ["So15NSManagedObjectC", ""]
 - !private ["So15NSManagedObjectC", "cart"]
 - !private ["So15NSManagedObjectC", "shared"]
 - !private ["So8NSObjectC", "CheckoutCart"]
@@ -107,6 +126,7 @@ depends-member:
 - ["So8NSObjectC", ""]
 - !private ["So8NSObjectC", "cart"]
 - !private ["So8NSObjectC", "dequeueReusableCell"]
+- !private ["So8NSObjectC", "dequeueReusableCellWithIdentifier"]
 - ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "numberOfSections"]
 - !private ["So8NSObjectC", "shared"]
@@ -114,14 +134,19 @@ depends-member:
 - ["So8NSObjectC", "viewDidLoad"]
 - !private ["So8NSObjectP", "CheckoutCart"]
 - ["So8NSObjectP", "DrinkTableViewCell"]
+- ["So8NSObjectP", "IndexPath"]
+- ["So8NSObjectP", "Int"]
+- ["So8NSObjectP", "UITableView"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "cart"]
 - !private ["So8NSObjectP", "dequeueReusableCell"]
+- !private ["So8NSObjectP", "dequeueReusableCellWithIdentifier"]
 - ["So8NSObjectP", "init"]
 - ["So8NSObjectP", "numberOfSections"]
 - !private ["So8NSObjectP", "shared"]
 - ["So8NSObjectP", "tableView"]
 - ["So8NSObjectP", "viewDidLoad"]
+- !private ["Sj", ""]
 - !private ["7Combine16ObservableObjectP", "cart"]
 - !private ["7Combine16ObservableObjectP", "shared"]
 - !private ["6Drinkz24OrderTableViewControllerC", "CheckoutCart"]
@@ -139,20 +164,33 @@ depends-member:
 - !private ["Sk", "count"]
 - !private ["Sm", ""]
 - !private ["Sm", "count"]
-- !private ["ST", ""]
+- ["ST", ""]
 - !private ["ST", "count"]
+- !private ["s13SignedNumericP", ""]
+- !private ["Sx", ""]
+- ["s16TextOutputStreamP", ""]
+- ["s20TextOutputStreamableP", ""]
 - !private ["So29UIAccessibilityIdentificationP", "dequeueReusableCell"]
+- !private ["So29UIAccessibilityIdentificationP", "dequeueReusableCellWithIdentifier"]
 - !private ["So12UIAppearanceP", "dequeueReusableCell"]
+- !private ["So12UIAppearanceP", "dequeueReusableCellWithIdentifier"]
 - !private ["So21UIAppearanceContainerP", "CheckoutCart"]
 - ["So21UIAppearanceContainerP", "DrinkTableViewCell"]
+- ["So21UIAppearanceContainerP", "IndexPath"]
+- ["So21UIAppearanceContainerP", "Int"]
+- ["So21UIAppearanceContainerP", "UITableView"]
 - ["So21UIAppearanceContainerP", ""]
 - !private ["So21UIAppearanceContainerP", "dequeueReusableCell"]
+- !private ["So21UIAppearanceContainerP", "dequeueReusableCellWithIdentifier"]
 - ["So21UIAppearanceContainerP", "init"]
 - ["So21UIAppearanceContainerP", "numberOfSections"]
 - ["So21UIAppearanceContainerP", "tableView"]
 - ["So21UIAppearanceContainerP", "viewDidLoad"]
 - !private ["So18UIContentContainerP", "CheckoutCart"]
 - ["So18UIContentContainerP", "DrinkTableViewCell"]
+- ["So18UIContentContainerP", "IndexPath"]
+- ["So18UIContentContainerP", "Int"]
+- ["So18UIContentContainerP", "UITableView"]
 - ["So18UIContentContainerP", ""]
 - ["So18UIContentContainerP", "init"]
 - ["So18UIContentContainerP", "numberOfSections"]
@@ -160,25 +198,39 @@ depends-member:
 - ["So18UIContentContainerP", "viewDidLoad"]
 - ["So33UIContextMenuInteractionAnimatingP", ""]
 - !private ["So17UICoordinateSpaceP", "dequeueReusableCell"]
+- !private ["So17UICoordinateSpaceP", "dequeueReusableCellWithIdentifier"]
 - !private ["So23UIDataSourceTranslatingP", "dequeueReusableCell"]
 - !private ["So13UIDynamicItemP", "dequeueReusableCell"]
+- !private ["So13UIDynamicItemP", "dequeueReusableCellWithIdentifier"]
 - !private ["So18UIFocusEnvironmentP", "CheckoutCart"]
 - ["So18UIFocusEnvironmentP", "DrinkTableViewCell"]
+- ["So18UIFocusEnvironmentP", "IndexPath"]
+- ["So18UIFocusEnvironmentP", "Int"]
+- ["So18UIFocusEnvironmentP", "UITableView"]
 - ["So18UIFocusEnvironmentP", ""]
 - !private ["So18UIFocusEnvironmentP", "dequeueReusableCell"]
+- !private ["So18UIFocusEnvironmentP", "dequeueReusableCellWithIdentifier"]
 - ["So18UIFocusEnvironmentP", "init"]
 - ["So18UIFocusEnvironmentP", "numberOfSections"]
 - ["So18UIFocusEnvironmentP", "tableView"]
 - ["So18UIFocusEnvironmentP", "viewDidLoad"]
 - !private ["So11UIFocusItemP", "dequeueReusableCell"]
-- !private ["So20UIFocusItemContainerP", ""]
+- !private ["So11UIFocusItemP", "dequeueReusableCellWithIdentifier"]
+- ["So20UIFocusItemContainerP", ""]
 - !private ["So20UIFocusItemContainerP", "dequeueReusableCell"]
+- !private ["So20UIFocusItemContainerP", "dequeueReusableCellWithIdentifier"]
 - !private ["So30UIFocusItemScrollableContainerP", "dequeueReusableCell"]
+- !private ["So30UIFocusItemScrollableContainerP", "dequeueReusableCellWithIdentifier"]
 - !private ["So24UILargeContentViewerItemP", "dequeueReusableCell"]
+- !private ["So24UILargeContentViewerItemP", "dequeueReusableCellWithIdentifier"]
 - !private ["So30UIPasteConfigurationSupportingP", "CheckoutCart"]
 - ["So30UIPasteConfigurationSupportingP", "DrinkTableViewCell"]
+- ["So30UIPasteConfigurationSupportingP", "IndexPath"]
+- ["So30UIPasteConfigurationSupportingP", "Int"]
+- ["So30UIPasteConfigurationSupportingP", "UITableView"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "dequeueReusableCell"]
+- !private ["So30UIPasteConfigurationSupportingP", "dequeueReusableCellWithIdentifier"]
 - ["So30UIPasteConfigurationSupportingP", "init"]
 - ["So30UIPasteConfigurationSupportingP", "numberOfSections"]
 - ["So30UIPasteConfigurationSupportingP", "tableView"]
@@ -190,19 +242,26 @@ depends-member:
 - ["So11UIResponderC", "UITableView"]
 - ["So11UIResponderC", ""]
 - !private ["So11UIResponderC", "dequeueReusableCell"]
+- !private ["So11UIResponderC", "dequeueReusableCellWithIdentifier"]
 - ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "numberOfSections"]
 - ["So11UIResponderC", "tableView"]
 - ["So11UIResponderC", "viewDidLoad"]
 - !private ["So30UIResponderStandardEditActionsP", "CheckoutCart"]
 - ["So30UIResponderStandardEditActionsP", "DrinkTableViewCell"]
+- ["So30UIResponderStandardEditActionsP", "IndexPath"]
+- ["So30UIResponderStandardEditActionsP", "Int"]
+- ["So30UIResponderStandardEditActionsP", "UITableView"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "dequeueReusableCell"]
+- !private ["So30UIResponderStandardEditActionsP", "dequeueReusableCellWithIdentifier"]
 - ["So30UIResponderStandardEditActionsP", "init"]
 - ["So30UIResponderStandardEditActionsP", "numberOfSections"]
 - ["So30UIResponderStandardEditActionsP", "tableView"]
 - ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- ["So12UIScrollViewC", ""]
 - !private ["So12UIScrollViewC", "dequeueReusableCell"]
+- !private ["So12UIScrollViewC", "dequeueReusableCellWithIdentifier"]
 - !private ["So20UIScrollViewDelegateP", "CheckoutCart"]
 - ["So20UIScrollViewDelegateP", "DrinkTableViewCell"]
 - ["So20UIScrollViewDelegateP", "IndexPath"]
@@ -216,6 +275,9 @@ depends-member:
 - !private ["So35UISpringLoadedInteractionSupportingP", "dequeueReusableCell"]
 - !private ["So16UIStateRestoringP", "CheckoutCart"]
 - ["So16UIStateRestoringP", "DrinkTableViewCell"]
+- ["So16UIStateRestoringP", "IndexPath"]
+- ["So16UIStateRestoringP", "Int"]
+- ["So16UIStateRestoringP", "UITableView"]
 - ["So16UIStateRestoringP", ""]
 - ["So16UIStateRestoringP", "init"]
 - ["So16UIStateRestoringP", "numberOfSections"]
@@ -255,22 +317,31 @@ depends-member:
 - ["So19UITableViewDelegateP", "viewDidLoad"]
 - !private ["So18UITraitEnvironmentP", "CheckoutCart"]
 - ["So18UITraitEnvironmentP", "DrinkTableViewCell"]
+- ["So18UITraitEnvironmentP", "IndexPath"]
+- ["So18UITraitEnvironmentP", "Int"]
+- ["So18UITraitEnvironmentP", "UITableView"]
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "dequeueReusableCell"]
+- !private ["So18UITraitEnvironmentP", "dequeueReusableCellWithIdentifier"]
 - ["So18UITraitEnvironmentP", "init"]
 - ["So18UITraitEnvironmentP", "numberOfSections"]
 - ["So18UITraitEnvironmentP", "tableView"]
 - ["So18UITraitEnvironmentP", "viewDidLoad"]
 - !private ["So23UIUserActivityRestoringP", "CheckoutCart"]
 - ["So23UIUserActivityRestoringP", "DrinkTableViewCell"]
+- ["So23UIUserActivityRestoringP", "IndexPath"]
+- ["So23UIUserActivityRestoringP", "Int"]
+- ["So23UIUserActivityRestoringP", "UITableView"]
 - ["So23UIUserActivityRestoringP", ""]
 - !private ["So23UIUserActivityRestoringP", "dequeueReusableCell"]
+- !private ["So23UIUserActivityRestoringP", "dequeueReusableCellWithIdentifier"]
 - ["So23UIUserActivityRestoringP", "init"]
 - ["So23UIUserActivityRestoringP", "numberOfSections"]
 - ["So23UIUserActivityRestoringP", "tableView"]
 - ["So23UIUserActivityRestoringP", "viewDidLoad"]
 - ["So6UIViewC", ""]
 - !private ["So6UIViewC", "dequeueReusableCell"]
+- !private ["So6UIViewC", "dequeueReusableCellWithIdentifier"]
 - !private ["So16UIViewControllerC", "CheckoutCart"]
 - ["So16UIViewControllerC", "DrinkTableViewCell"]
 - ["So16UIViewControllerC", "IndexPath"]
@@ -283,8 +354,10 @@ depends-member:
 - ["So16UIViewControllerC", "viewDidLoad"]
 - !private ["s14_ArrayProtocolP", "count"]
 - !private ["s24_DestructorSafeContainerP", "count"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s19_HasContiguousBytesP", "count"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CheckoutCart"]
@@ -302,14 +375,16 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "count"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "dequeueReusableCell"]
 depends-nominal:
+- !private "s18AdditiveArithmeticP"
 - !private "9Alamofire0A8ExtendedP"
 - !private "Sa"
-- !private "SK"
+- "SK"
 - !private "So15CALayerDelegateP"
 - !private "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
 - !private "6Drinkz12CheckoutCartC"
-- !private "Sl"
+- "Sl"
+- "SL"
 - !private "10Foundation15ContiguousBytesP"
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
@@ -319,21 +394,34 @@ depends-nominal:
 - !private "SE"
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- "s32ExpressibleByStringInterpolationP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "SF"
 - "SH"
 - !private "s12IdentifiableP"
+- "s25LosslessStringConvertibleP"
 - !private "SM"
 - !private "10Foundation19MutableDataProtocolP"
 - "So8NSCodingP"
 - "So26NSExtensionRequestHandlingP"
 - !private "So20NSFetchRequestResultP"
-- !private "So15NSManagedObjectC"
+- "So15NSManagedObjectC"
 - "So8NSObjectC"
 - "So8NSObjectP"
+- !private "Sj"
 - !private "7Combine16ObservableObjectP"
 - "6Drinkz24OrderTableViewControllerC"
 - !private "Sk"
 - !private "Sm"
-- !private "ST"
+- "ST"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
@@ -344,13 +432,13 @@ depends-nominal:
 - !private "So13UIDynamicItemP"
 - "So18UIFocusEnvironmentP"
 - !private "So11UIFocusItemP"
-- !private "So20UIFocusItemContainerP"
+- "So20UIFocusItemContainerP"
 - !private "So30UIFocusItemScrollableContainerP"
 - !private "So24UILargeContentViewerItemP"
 - "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
-- !private "So12UIScrollViewC"
+- "So12UIScrollViewC"
 - "So20UIScrollViewDelegateP"
 - !private "So35UISpringLoadedInteractionSupportingP"
 - "So16UIStateRestoringP"
@@ -365,8 +453,10 @@ depends-nominal:
 - "So16UIViewControllerC"
 - !private "s14_ArrayProtocolP"
 - !private "s24_DestructorSafeContainerP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"

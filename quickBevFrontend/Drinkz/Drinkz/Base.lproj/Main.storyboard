@@ -51,10 +51,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="3dM-8m-t35" userLabel="DrinkQuanitityButtonStackView">
-                                <rect key="frame" x="141.5" y="570.5" width="131.5" height="66"/>
+                                <rect key="frame" x="137.5" y="570.5" width="139.5" height="78"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYg-bX-hco" customClass="RoundButton" customModule="Drinkz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="24" height="66"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="78"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="55"/>
                                         <state key="normal" title="-">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,13 +66,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kez-Co-w3W">
-                                        <rect key="frame" x="54" y="0.0" width="19.5" height="66"/>
+                                        <rect key="frame" x="60" y="0.0" width="19.5" height="78"/>
                                         <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="35"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJH-Qy-nNe" customClass="RoundButton" customModule="Drinkz" customModuleProvider="target">
-                                        <rect key="frame" x="103.5" y="0.0" width="28" height="66"/>
+                                        <rect key="frame" x="109.5" y="0.0" width="30" height="78"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                         <state key="normal" title="+">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -229,23 +229,23 @@
                                 <rect key="frame" x="20.5" y="20" width="373" height="255.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHr-YE-jYu">
-                                        <rect key="frame" x="0.0" y="0.0" width="373" height="81"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="80"/>
                                         <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XEX-yj-IKq">
-                                        <rect key="frame" x="0.0" y="101" width="373" height="21"/>
+                                        <rect key="frame" x="0.0" y="100" width="373" height="22"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtotal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysn-zC-qo0">
-                                                <rect key="frame" x="0.0" y="0.0" width="321" height="21"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="317.5" height="22"/>
                                                 <fontDescription key="fontDescription" name="Charter-Black" family="Charter" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="$20.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zR-3G-KjR">
-                                                <rect key="frame" x="321" y="0.0" width="52" height="21"/>
-                                                <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="17"/>
+                                                <rect key="frame" x="317.5" y="0.0" width="55.5" height="22"/>
+                                                <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -352,7 +352,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Rjl-wU-fEe" secondAttribute="height" multiplier="373:60" id="4NR-cF-eH6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Charter-Black" family="Charter" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="Charter-Black" family="Charter" pointSize="20"/>
                                 <state key="normal" title="Select Payment Method">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -377,8 +377,8 @@
                             <constraint firstItem="dNg-5F-7xt" firstAttribute="top" secondItem="oNy-cW-n8Q" secondAttribute="top" constant="20" id="Ztw-Jq-Sy9"/>
                             <constraint firstItem="dNg-5F-7xt" firstAttribute="centerX" secondItem="oNy-cW-n8Q" secondAttribute="centerX" id="cSY-wu-D0L"/>
                             <constraint firstItem="aVC-Du-QJE" firstAttribute="top" secondItem="dNg-5F-7xt" secondAttribute="bottom" constant="30" id="fos-Ug-MbZ"/>
-                            <constraint firstItem="oNy-cW-n8Q" firstAttribute="trailing" secondItem="Rjl-wU-fEe" secondAttribute="trailing" constant="10" id="j85-gL-uxI"/>
-                            <constraint firstItem="oNy-cW-n8Q" firstAttribute="bottom" secondItem="Rjl-wU-fEe" secondAttribute="bottom" constant="10" id="nVw-FM-9te"/>
+                            <constraint firstItem="Rjl-wU-fEe" firstAttribute="trailing" secondItem="oNy-cW-n8Q" secondAttribute="trailing" constant="-10" id="j85-gL-uxI"/>
+                            <constraint firstItem="Rjl-wU-fEe" firstAttribute="bottom" secondItem="oNy-cW-n8Q" secondAttribute="bottom" constant="-10" id="nVw-FM-9te"/>
                             <constraint firstItem="dNg-5F-7xt" firstAttribute="width" secondItem="oNy-cW-n8Q" secondAttribute="width" multiplier="0.9" id="ntV-4T-psZ"/>
                         </constraints>
                     </view>
@@ -1680,64 +1680,64 @@
     </scenes>
     <designables>
         <designable name="87n-pv-dft">
-            <size key="intrinsicContentSize" width="68" height="25"/>
+            <size key="intrinsicContentSize" width="68" height="37"/>
         </designable>
         <designable name="8xE-3d-pt2">
-            <size key="intrinsicContentSize" width="62" height="20"/>
+            <size key="intrinsicContentSize" width="62" height="32"/>
         </designable>
         <designable name="Avi-yX-8ka">
-            <size key="intrinsicContentSize" width="242" height="25"/>
+            <size key="intrinsicContentSize" width="242" height="37"/>
         </designable>
         <designable name="CEU-iq-rEr">
-            <size key="intrinsicContentSize" width="183" height="25"/>
+            <size key="intrinsicContentSize" width="183" height="37"/>
         </designable>
         <designable name="EDN-d6-l6r">
-            <size key="intrinsicContentSize" width="136" height="25"/>
+            <size key="intrinsicContentSize" width="136" height="37"/>
         </designable>
         <designable name="Gel-tx-aLf">
-            <size key="intrinsicContentSize" width="74" height="25"/>
+            <size key="intrinsicContentSize" width="74" height="37"/>
         </designable>
         <designable name="InE-uV-yaI">
-            <size key="intrinsicContentSize" width="149" height="26"/>
+            <size key="intrinsicContentSize" width="149" height="38"/>
         </designable>
         <designable name="KCn-03-bAu">
-            <size key="intrinsicContentSize" width="190" height="25"/>
+            <size key="intrinsicContentSize" width="190" height="37"/>
         </designable>
         <designable name="MuF-fV-nee">
-            <size key="intrinsicContentSize" width="74" height="25"/>
+            <size key="intrinsicContentSize" width="74" height="37"/>
         </designable>
         <designable name="QCo-HN-5Bx">
-            <size key="intrinsicContentSize" width="217" height="25"/>
+            <size key="intrinsicContentSize" width="217" height="37"/>
         </designable>
         <designable name="Rjl-wU-fEe">
-            <size key="intrinsicContentSize" width="231" height="24"/>
+            <size key="intrinsicContentSize" width="243" height="37"/>
         </designable>
         <designable name="Rug-pG-NqH">
-            <size key="intrinsicContentSize" width="204" height="25"/>
+            <size key="intrinsicContentSize" width="204" height="37"/>
         </designable>
         <designable name="WJH-Qy-nNe">
-            <size key="intrinsicContentSize" width="28" height="54"/>
+            <size key="intrinsicContentSize" width="30" height="66"/>
         </designable>
         <designable name="b1n-t5-3cc">
-            <size key="intrinsicContentSize" width="203" height="25"/>
+            <size key="intrinsicContentSize" width="203" height="37"/>
         </designable>
         <designable name="eDh-Or-mDn">
-            <size key="intrinsicContentSize" width="205" height="25"/>
+            <size key="intrinsicContentSize" width="205" height="37"/>
         </designable>
         <designable name="h5g-cY-7Sh">
-            <size key="intrinsicContentSize" width="204" height="25"/>
+            <size key="intrinsicContentSize" width="204" height="37"/>
         </designable>
         <designable name="iYg-bX-hco">
-            <size key="intrinsicContentSize" width="24" height="66"/>
+            <size key="intrinsicContentSize" width="30" height="78"/>
         </designable>
         <designable name="j9Z-HI-7LX">
-            <size key="intrinsicContentSize" width="278" height="25"/>
+            <size key="intrinsicContentSize" width="278" height="37"/>
         </designable>
         <designable name="mE4-je-ENa">
-            <size key="intrinsicContentSize" width="174" height="26"/>
+            <size key="intrinsicContentSize" width="174" height="38"/>
         </designable>
         <designable name="qcp-yr-Mw1">
-            <size key="intrinsicContentSize" width="103" height="25"/>
+            <size key="intrinsicContentSize" width="103" height="37"/>
         </designable>
     </designables>
     <resources>

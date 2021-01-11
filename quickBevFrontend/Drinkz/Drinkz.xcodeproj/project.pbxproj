@@ -19,6 +19,7 @@
 		1D236D192430346300BF3412 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1D236D182430346300BF3412 /* Podfile */; };
 		1D37EB28259FB5E5001CE16A /* Bar+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D37EB24259FB5E5001CE16A /* Bar+CoreDataProperties.swift */; };
 		1D3BF3A6258D011A007CB39B /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3BF3A5258D011A007CB39B /* Tab.swift */; };
+		1D40374725AC076300F1E61F /* TemplateNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D40374625AC076300F1E61F /* TemplateNavigationController.swift */; };
 		1D56E7822592FFB300BE9F13 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D56E7812592FFB300BE9F13 /* CheckoutViewController.swift */; };
 		1D56E785259304BE00BE9F13 /* CheckoutCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D56E784259304BE00BE9F13 /* CheckoutCart.swift */; };
 		1D56E78825930A8000BE9F13 /* CheckoutCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D56E78725930A8000BE9F13 /* CheckoutCartTableViewCell.swift */; };
@@ -73,6 +74,7 @@
 		1D236D182430346300BF3412 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1D37EB24259FB5E5001CE16A /* Bar+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bar+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		1D3BF3A5258D011A007CB39B /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		1D40374625AC076300F1E61F /* TemplateNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TemplateNavigationController.swift; path = ../../TemplateNavigationController.swift; sourceTree = "<group>"; };
 		1D56E7812592FFB300BE9F13 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		1D56E784259304BE00BE9F13 /* CheckoutCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutCart.swift; sourceTree = "<group>"; };
 		1D56E78725930A8000BE9F13 /* CheckoutCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutCartTableViewCell.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		1D236D002430204800BF3412 /* Drinkz */ = {
 			isa = PBXGroup;
 			children = (
+				1D40374625AC076300F1E61F /* TemplateNavigationController.swift */,
 				1DEF0F352596E6CE00DA5BEB /* Drinkz.xcdatamodeld */,
 				1D82D36525A4E05E00468378 /* Drink+CoreDataProperties.swift */,
 				1D82D36725A4E05E00468378 /* User+CoreDataProperties.swift */,
@@ -335,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D82D36F25A4E05E00468378 /* Order+CoreDataProperties.swift in Sources */,
+				1D40374725AC076300F1E61F /* TemplateNavigationController.swift in Sources */,
 				1D7865D92487A03200389C54 /* SplashPageViewController.swift in Sources */,
 				1DE913F02485FD1F0034094D /* User.swift in Sources */,
 				1D921037258C06D100C9676D /* BarArrayTableViewCell.swift in Sources */,

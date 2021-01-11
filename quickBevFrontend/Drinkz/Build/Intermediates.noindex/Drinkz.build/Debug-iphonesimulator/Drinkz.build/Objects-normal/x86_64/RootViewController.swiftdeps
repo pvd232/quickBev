@@ -24,6 +24,7 @@ depends-top-level:
 - "RootViewController"
 - !private "SplashPageViewController"
 - !private "StringLiteralType"
+- !private "TemplateNavigationController"
 - !private "UINavigationController"
 - "UIViewController"
 - "Void"
@@ -39,7 +40,6 @@ depends-member:
 - !private ["So22UIViewAnimationOptionsV", "curveEaseOut"]
 - !private ["So22UIViewAnimationOptionsV", "init"]
 - !private ["So22UIViewAnimationOptionsV", "transitionCrossDissolve"]
-- ["SK", ""]
 - !private ["So15CALayerDelegateP", "addSubview"]
 - !private ["So15CALayerDelegateP", "bounds"]
 - !private ["So15CALayerDelegateP", "frame"]
@@ -48,6 +48,7 @@ depends-member:
 - !private ["s7CVarArgP", "HomePageViewController"]
 - !private ["s7CVarArgP", "LoginViewController"]
 - !private ["s7CVarArgP", "SplashPageViewController"]
+- !private ["s7CVarArgP", "TemplateNavigationController"]
 - !private ["s7CVarArgP", "UINavigationController"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "addChild"]
@@ -71,16 +72,16 @@ depends-member:
 - !private ["s7CVarArgP", "willMove"]
 - !private ["6Drinkz12CheckoutCartC", "shared"]
 - !private ["6Drinkz12CheckoutCartC", "userId"]
-- ["Sl", ""]
 - !private ["SL", "<"]
 - !private ["SL", "<="]
 - !private ["SL", ">"]
 - !private ["SL", ">="]
-- ["SL", ""]
+- !private ["SL", ""]
 - !private ["s28CustomDebugStringConvertibleP", "CheckoutCart"]
 - !private ["s28CustomDebugStringConvertibleP", "HomePageViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "LoginViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "SplashPageViewController"]
+- !private ["s28CustomDebugStringConvertibleP", "TemplateNavigationController"]
 - !private ["s28CustomDebugStringConvertibleP", "UINavigationController"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "addChild"]
@@ -110,6 +111,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "HomePageViewController"]
 - !private ["s23CustomStringConvertibleP", "LoginViewController"]
 - !private ["s23CustomStringConvertibleP", "SplashPageViewController"]
+- !private ["s23CustomStringConvertibleP", "TemplateNavigationController"]
 - !private ["s23CustomStringConvertibleP", "UINavigationController"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "addChild"]
@@ -145,6 +147,7 @@ depends-member:
 - !private ["SQ", "HomePageViewController"]
 - !private ["SQ", "LoginViewController"]
 - !private ["SQ", "SplashPageViewController"]
+- !private ["SQ", "TemplateNavigationController"]
 - !private ["SQ", "UINavigationController"]
 - ["SQ", ""]
 - !private ["SQ", "addChild"]
@@ -174,7 +177,6 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "curveEaseOut"]
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "transitionCrossDissolve"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
@@ -185,9 +187,6 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "frame"]
 - !private ["s23ExpressibleByNilLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "removeFromSuperview"]
-- ["s32ExpressibleByStringInterpolationP", ""]
-- ["s26ExpressibleByStringLiteralP", ""]
-- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["SF", "<"]
 - !private ["SF", "<="]
 - !private ["SF", ">"]
@@ -196,6 +195,7 @@ depends-member:
 - !private ["SH", "HomePageViewController"]
 - !private ["SH", "LoginViewController"]
 - !private ["SH", "SplashPageViewController"]
+- !private ["SH", "TemplateNavigationController"]
 - !private ["SH", "UINavigationController"]
 - ["SH", ""]
 - !private ["SH", "addChild"]
@@ -223,12 +223,12 @@ depends-member:
 - !private ["s12IdentifiableP", "userId"]
 - !private ["6Drinkz19LoginViewControllerC", ""]
 - !private ["6Drinkz19LoginViewControllerC", "init"]
-- ["s25LosslessStringConvertibleP", ""]
 - !private ["So8NSCodingP", "CheckoutCart"]
 - !private ["So8NSCodingP", "HomePageViewController"]
 - !private ["So8NSCodingP", "LoginViewController"]
 - ["So8NSCodingP", "NSCoder"]
 - !private ["So8NSCodingP", "SplashPageViewController"]
+- !private ["So8NSCodingP", "TemplateNavigationController"]
 - !private ["So8NSCodingP", "UINavigationController"]
 - ["So8NSCodingP", "UIViewController"]
 - ["So8NSCodingP", "Void"]
@@ -255,6 +255,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "LoginViewController"]
 - ["So26NSExtensionRequestHandlingP", "NSCoder"]
 - !private ["So26NSExtensionRequestHandlingP", "SplashPageViewController"]
+- !private ["So26NSExtensionRequestHandlingP", "TemplateNavigationController"]
 - !private ["So26NSExtensionRequestHandlingP", "UINavigationController"]
 - ["So26NSExtensionRequestHandlingP", "UIViewController"]
 - ["So26NSExtensionRequestHandlingP", "Void"]
@@ -274,7 +275,6 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "willMove"]
 - !private ["So20NSFetchRequestResultP", "shared"]
 - !private ["So20NSFetchRequestResultP", "userId"]
-- ["So15NSManagedObjectC", ""]
 - !private ["So15NSManagedObjectC", "shared"]
 - !private ["So15NSManagedObjectC", "userId"]
 - !private ["So8NSObjectC", "CheckoutCart"]
@@ -282,6 +282,7 @@ depends-member:
 - !private ["So8NSObjectC", "LoginViewController"]
 - ["So8NSObjectC", "NSCoder"]
 - !private ["So8NSObjectC", "SplashPageViewController"]
+- !private ["So8NSObjectC", "TemplateNavigationController"]
 - !private ["So8NSObjectC", "UINavigationController"]
 - ["So8NSObjectC", "UIViewController"]
 - ["So8NSObjectC", "Void"]
@@ -314,8 +315,8 @@ depends-member:
 - !private ["So8NSObjectP", "CheckoutCart"]
 - !private ["So8NSObjectP", "HomePageViewController"]
 - !private ["So8NSObjectP", "LoginViewController"]
-- ["So8NSObjectP", "NSCoder"]
 - !private ["So8NSObjectP", "SplashPageViewController"]
+- !private ["So8NSObjectP", "TemplateNavigationController"]
 - !private ["So8NSObjectP", "UINavigationController"]
 - ["So8NSObjectP", "UIViewController"]
 - ["So8NSObjectP", "Void"]
@@ -369,6 +370,7 @@ depends-member:
 - !private ["6Drinkz18RootViewControllerC", "LoginViewController"]
 - ["6Drinkz18RootViewControllerC", "NSCoder"]
 - !private ["6Drinkz18RootViewControllerC", "SplashPageViewController"]
+- !private ["6Drinkz18RootViewControllerC", "TemplateNavigationController"]
 - !private ["6Drinkz18RootViewControllerC", "UINavigationController"]
 - ["6Drinkz18RootViewControllerC", "UIViewController"]
 - ["6Drinkz18RootViewControllerC", "Void"]
@@ -385,7 +387,6 @@ depends-member:
 - !private ["6Drinkz18RootViewControllerC", "view"]
 - ["6Drinkz18RootViewControllerC", "viewDidLoad"]
 - !private ["6Drinkz11RoundButtonC", ""]
-- ["ST", ""]
 - !private ["s10SetAlgebraP", "ArrayLiteralElement"]
 - !private ["s10SetAlgebraP", "Element"]
 - !private ["s10SetAlgebraP", ""]
@@ -396,8 +397,8 @@ depends-member:
 - !private ["6Drinkz24SplashPageViewControllerC", ""]
 - !private ["6Drinkz24SplashPageViewControllerC", "init"]
 - !private ["Sx", ""]
-- ["s16TextOutputStreamP", ""]
-- ["s20TextOutputStreamableP", ""]
+- !private ["6Drinkz28TemplateNavigationControllerC", ""]
+- !private ["6Drinkz28TemplateNavigationControllerC", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "addSubview"]
 - !private ["So29UIAccessibilityIdentificationP", "bounds"]
 - !private ["So29UIAccessibilityIdentificationP", "frame"]
@@ -413,6 +414,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "LoginViewController"]
 - ["So21UIAppearanceContainerP", "NSCoder"]
 - !private ["So21UIAppearanceContainerP", "SplashPageViewController"]
+- !private ["So21UIAppearanceContainerP", "TemplateNavigationController"]
 - !private ["So21UIAppearanceContainerP", "UINavigationController"]
 - ["So21UIAppearanceContainerP", "UIViewController"]
 - ["So21UIAppearanceContainerP", "Void"]
@@ -440,6 +442,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "LoginViewController"]
 - ["So18UIContentContainerP", "NSCoder"]
 - !private ["So18UIContentContainerP", "SplashPageViewController"]
+- !private ["So18UIContentContainerP", "TemplateNavigationController"]
 - !private ["So18UIContentContainerP", "UINavigationController"]
 - ["So18UIContentContainerP", "UIViewController"]
 - ["So18UIContentContainerP", "Void"]
@@ -471,6 +474,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "LoginViewController"]
 - ["So18UIFocusEnvironmentP", "NSCoder"]
 - !private ["So18UIFocusEnvironmentP", "SplashPageViewController"]
+- !private ["So18UIFocusEnvironmentP", "TemplateNavigationController"]
 - !private ["So18UIFocusEnvironmentP", "UINavigationController"]
 - ["So18UIFocusEnvironmentP", "UIViewController"]
 - ["So18UIFocusEnvironmentP", "Void"]
@@ -500,19 +504,19 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "bounds"]
 - !private ["So20UIFocusItemContainerP", "frame"]
 - !private ["So20UIFocusItemContainerP", "removeFromSuperview"]
-- !private ["So10UIKeyInputP", ""]
 - !private ["So24UILargeContentViewerItemP", "addSubview"]
 - !private ["So24UILargeContentViewerItemP", "bounds"]
 - !private ["So24UILargeContentViewerItemP", "frame"]
 - !private ["So24UILargeContentViewerItemP", "removeFromSuperview"]
+- ["So22UINavigationControllerC", ""]
 - !private ["So22UINavigationControllerC", "didMove"]
 - !private ["So22UINavigationControllerC", "init"]
 - !private ["So22UINavigationControllerC", "view"]
 - !private ["So30UIPasteConfigurationSupportingP", "CheckoutCart"]
 - !private ["So30UIPasteConfigurationSupportingP", "HomePageViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "LoginViewController"]
-- ["So30UIPasteConfigurationSupportingP", "NSCoder"]
 - !private ["So30UIPasteConfigurationSupportingP", "SplashPageViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "TemplateNavigationController"]
 - !private ["So30UIPasteConfigurationSupportingP", "UINavigationController"]
 - ["So30UIPasteConfigurationSupportingP", "UIViewController"]
 - ["So30UIPasteConfigurationSupportingP", "Void"]
@@ -546,6 +550,7 @@ depends-member:
 - !private ["So11UIResponderC", "LoginViewController"]
 - ["So11UIResponderC", "NSCoder"]
 - !private ["So11UIResponderC", "SplashPageViewController"]
+- !private ["So11UIResponderC", "TemplateNavigationController"]
 - !private ["So11UIResponderC", "UINavigationController"]
 - ["So11UIResponderC", "UIViewController"]
 - ["So11UIResponderC", "Void"]
@@ -576,8 +581,8 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "CheckoutCart"]
 - !private ["So30UIResponderStandardEditActionsP", "HomePageViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "LoginViewController"]
-- ["So30UIResponderStandardEditActionsP", "NSCoder"]
 - !private ["So30UIResponderStandardEditActionsP", "SplashPageViewController"]
+- !private ["So30UIResponderStandardEditActionsP", "TemplateNavigationController"]
 - !private ["So30UIResponderStandardEditActionsP", "UINavigationController"]
 - ["So30UIResponderStandardEditActionsP", "UIViewController"]
 - ["So30UIResponderStandardEditActionsP", "Void"]
@@ -610,6 +615,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "LoginViewController"]
 - ["So16UIStateRestoringP", "NSCoder"]
 - !private ["So16UIStateRestoringP", "SplashPageViewController"]
+- !private ["So16UIStateRestoringP", "TemplateNavigationController"]
 - !private ["So16UIStateRestoringP", "UINavigationController"]
 - ["So16UIStateRestoringP", "UIViewController"]
 - ["So16UIStateRestoringP", "Void"]
@@ -627,14 +633,12 @@ depends-member:
 - !private ["So16UIStateRestoringP", "view"]
 - ["So16UIStateRestoringP", "viewDidLoad"]
 - !private ["So16UIStateRestoringP", "willMove"]
-- !private ["So11UITextInputP", ""]
-- !private ["So17UITextInputTraitsP", ""]
-- !private ["So34UITextPasteConfigurationSupportingP", ""]
 - !private ["So18UITraitEnvironmentP", "CheckoutCart"]
 - !private ["So18UITraitEnvironmentP", "HomePageViewController"]
 - !private ["So18UITraitEnvironmentP", "LoginViewController"]
 - ["So18UITraitEnvironmentP", "NSCoder"]
 - !private ["So18UITraitEnvironmentP", "SplashPageViewController"]
+- !private ["So18UITraitEnvironmentP", "TemplateNavigationController"]
 - !private ["So18UITraitEnvironmentP", "UINavigationController"]
 - ["So18UITraitEnvironmentP", "UIViewController"]
 - ["So18UITraitEnvironmentP", "Void"]
@@ -659,8 +663,8 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "CheckoutCart"]
 - !private ["So23UIUserActivityRestoringP", "HomePageViewController"]
 - !private ["So23UIUserActivityRestoringP", "LoginViewController"]
-- ["So23UIUserActivityRestoringP", "NSCoder"]
 - !private ["So23UIUserActivityRestoringP", "SplashPageViewController"]
+- !private ["So23UIUserActivityRestoringP", "TemplateNavigationController"]
 - !private ["So23UIUserActivityRestoringP", "UINavigationController"]
 - ["So23UIUserActivityRestoringP", "UIViewController"]
 - ["So23UIUserActivityRestoringP", "Void"]
@@ -698,6 +702,7 @@ depends-member:
 - !private ["So16UIViewControllerC", "LoginViewController"]
 - ["So16UIViewControllerC", "NSCoder"]
 - !private ["So16UIViewControllerC", "SplashPageViewController"]
+- !private ["So16UIViewControllerC", "TemplateNavigationController"]
 - !private ["So16UIViewControllerC", "UINavigationController"]
 - ["So16UIViewControllerC", "UIViewController"]
 - ["So16UIViewControllerC", "Void"]
@@ -716,15 +721,14 @@ depends-member:
 - ["So16UIViewControllerC", "viewDidLoad"]
 - !private ["So16UIViewControllerC", "willMove"]
 - !private ["6Drinkz14UsesAutoLayoutV", "subscript"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CheckoutCart"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "HomePageViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "LoginViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "SplashPageViewController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "TemplateNavigationController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UINavigationController"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addChild"]
@@ -750,6 +754,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "HomePageViewController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "LoginViewController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "SplashPageViewController"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "TemplateNavigationController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UINavigationController"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addChild"]
@@ -782,12 +787,10 @@ depends-member:
 depends-nominal:
 - !private "s18AdditiveArithmeticP"
 - !private "So22UIViewAnimationOptionsV"
-- "SK"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
 - !private "6Drinkz12CheckoutCartC"
-- "Sl"
-- "SL"
+- !private "SL"
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
@@ -795,23 +798,18 @@ depends-nominal:
 - !private "SE"
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
-- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- "s32ExpressibleByStringInterpolationP"
-- "s26ExpressibleByStringLiteralP"
-- "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "SF"
 - "SH"
 - !private "6Drinkz22HomePageViewControllerC"
 - !private "s12IdentifiableP"
 - !private "6Drinkz19LoginViewControllerC"
-- "s25LosslessStringConvertibleP"
 - "So8NSCodingP"
 - "So26NSExtensionRequestHandlingP"
 - !private "So20NSFetchRequestResultP"
-- "So15NSManagedObjectC"
+- !private "So15NSManagedObjectC"
 - "So8NSObjectC"
 - "So8NSObjectP"
 - !private "6Drinkz20NewBarPickedProtocolP"
@@ -822,13 +820,11 @@ depends-nominal:
 - !private "SY"
 - "6Drinkz18RootViewControllerC"
 - !private "6Drinkz11RoundButtonC"
-- "ST"
 - !private "s10SetAlgebraP"
 - !private "s13SignedNumericP"
 - !private "6Drinkz24SplashPageViewControllerC"
 - !private "Sx"
-- "s16TextOutputStreamP"
-- "s20TextOutputStreamableP"
+- !private "6Drinkz28TemplateNavigationControllerC"
 - !private "So29UIAccessibilityIdentificationP"
 - "So40UIAdaptivePresentationControllerDelegateP"
 - !private "So12UIAppearanceP"
@@ -841,27 +837,21 @@ depends-nominal:
 - "So18UIFocusEnvironmentP"
 - !private "So11UIFocusItemP"
 - !private "So20UIFocusItemContainerP"
-- !private "So10UIKeyInputP"
 - !private "So24UILargeContentViewerItemP"
-- !private "So22UINavigationControllerC"
+- "So22UINavigationControllerC"
 - "So30UIPasteConfigurationSupportingP"
 - "So39UIPopoverPresentationControllerDelegateP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
 - "So16UIStateRestoringP"
-- !private "So11UITextInputP"
-- !private "So17UITextInputTraitsP"
-- !private "So34UITextPasteConfigurationSupportingP"
 - "So18UITraitEnvironmentP"
 - "So23UIUserActivityRestoringP"
 - "So6UIViewC"
 - "So16UIViewControllerC"
 - !private "6Drinkz14UsesAutoLayoutV"
-- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
-- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"
 - !private "s21_ObjectiveCBridgeableP"

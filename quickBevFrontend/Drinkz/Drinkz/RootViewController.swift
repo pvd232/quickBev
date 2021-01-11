@@ -6,19 +6,18 @@
 //  Copyright © 2021 Peter Vail Driscoll II. All rights reserved.
 //
 import UIKit
+
 class RootViewController:  UIViewController {
     private var current: UIViewController
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-//    rootViewController.navigationBar.standardAppearance.backgroundColor = UIColor.init(red: 134/255, green: 130/255, blue: 230/255, alpha: 1.0)
-
     init() {
         if CheckoutCart.shared.userId != nil {
-            current = UINavigationController(rootViewController: HomePageViewController())
+            current = TemplateNavigationController(rootViewController: HomePageViewController())
         }
         else {
-            current = UINavigationController(rootViewController: SplashPageViewController())
+            current = TemplateNavigationController(rootViewController: SplashPageViewController())
         }
         super.init(nibName: nil, bundle: nil)
 
@@ -70,3 +69,4 @@ class RootViewController:  UIViewController {
 //       }
 //    }
 }
+

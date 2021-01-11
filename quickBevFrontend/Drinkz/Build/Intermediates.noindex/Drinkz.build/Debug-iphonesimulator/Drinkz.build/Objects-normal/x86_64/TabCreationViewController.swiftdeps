@@ -1326,7 +1326,6 @@ depends-member:
 - ["So8NSCodingP", "viewWillDisappear"]
 - !private ["So9NSCopyingP", "Key"]
 - !private ["So9NSCopyingP", ""]
-- !private ["So9NSCopyingP", "backgroundColor"]
 - !private ["So9NSCopyingP", "black"]
 - !private ["So9NSCopyingP", "dateStyle"]
 - !private ["So9NSCopyingP", "duration"]
@@ -1808,7 +1807,6 @@ depends-member:
 - !private ["So14NSSecureCodingP", "Key"]
 - !private ["So14NSSecureCodingP", ""]
 - !private ["So14NSSecureCodingP", "add"]
-- !private ["So14NSSecureCodingP", "backgroundColor"]
 - !private ["So14NSSecureCodingP", "black"]
 - !private ["So14NSSecureCodingP", "duration"]
 - !private ["So14NSSecureCodingP", "init"]
@@ -2217,8 +2215,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "viewForZoomingInScrollView"]
 - ["So21UIAppearanceContainerP", "viewWillAppear"]
 - ["So21UIAppearanceContainerP", "viewWillDisappear"]
-- ["So15UIBarAppearanceC", ""]
-- !private ["So15UIBarAppearanceC", "backgroundColor"]
+- !private ["So15UIBarAppearanceC", ""]
 - !private ["So15UIBarAppearanceC", "titleTextAttributes"]
 - !private ["So15UIBarButtonItemC", "init"]
 - ["So9UIBarItemC", ""]
@@ -2742,7 +2739,6 @@ depends-member:
 - !private ["So24UILargeContentViewerItemP", "textColor"]
 - !private ["So15UINavigationBarC", "isHidden"]
 - !private ["So15UINavigationBarC", "standardAppearance"]
-- !private ["So25UINavigationBarAppearanceC", "backgroundColor"]
 - !private ["So25UINavigationBarAppearanceC", "titleTextAttributes"]
 - !private ["So22UINavigationControllerC", "navigationBar"]
 - !private ["So22UINavigationControllerC", "popViewController"]
@@ -4485,7 +4481,7 @@ depends-nominal:
 - !private "So17UIAlertControllerC"
 - "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
-- "So15UIBarAppearanceC"
+- !private "So15UIBarAppearanceC"
 - !private "So15UIBarButtonItemC"
 - "So9UIBarItemC"
 - !private "So16UIBarPositioningP"

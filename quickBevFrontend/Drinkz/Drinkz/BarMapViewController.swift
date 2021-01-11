@@ -62,7 +62,6 @@ class BarMapViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
                                       action: #selector(back))
         navigationItem.leftBarButtonItem = backBtn
         navigationController?.interactivePopGestureRecognizer?.delegate = self
-        navigationController?.navigationBar.standardAppearance.backgroundColor = UIColor.init(red: 134/255, green: 130/255, blue: 230/255, alpha: 1.0)
         if CLLocationManager.locationServicesEnabled() {
             locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
             locationManager.allowsBackgroundLocationUpdates = true
