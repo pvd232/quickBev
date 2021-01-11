@@ -1,0 +1,917 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "STPCustomerContext"
+provides-nominal:
+- "6Stripe18STPCustomerContextC"
+provides-member:
+- ["6Stripe18STPCustomerContextC", ""]
+provides-dynamic-lookup:
+- "_customer"
+- "_includeApplePayPaymentMethods"
+- "_paymentMethods"
+- "apiClient"
+- "attachPaymentMethod"
+- "clearCache"
+- "clearCachedCustomer"
+- "clearCachedPaymentMethods"
+- "customer"
+- "customerRetrievedDate"
+- "detachPaymentMethod"
+- "includeApplePayPaymentMethods"
+- "keyManager"
+- "listPaymentMethodsForCustomer"
+- "paymentMethods"
+- "paymentMethodsRetrievedDate"
+- "retrieveCustomer"
+- "retrieveLastSelectedPaymentMethodIDForCustomer"
+- "saveLastSelectedPaymentMethodID"
+- "shouldUseCachedCustomer"
+- "shouldUseCachedPaymentMethods"
+- "updateCustomer"
+depends-top-level:
+- "!"
+- "!="
+- !private "&&"
+- !private "<"
+- "=="
+- "??"
+- !private "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- !private "CachedCustomerMaxAge"
+- !private "CastingPrecedence"
+- "Date"
+- !private "Dictionary"
+- "Error"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- "NSObject"
+- "STPAPIClient"
+- "STPAddress"
+- !private "STPAnalyticsClient"
+- "STPBackendAPIAdapter"
+- "STPCustomer"
+- "STPCustomerCompletionBlock"
+- "STPCustomerContext"
+- "STPCustomerEphemeralKeyProvider"
+- "STPEphemeralKeyManager"
+- "STPErrorBlock"
+- "STPPaymentMethod"
+- "STPPaymentMethodsCompletionBlock"
+- "String"
+- "StringLiteralType"
+- "TernaryPrecedence"
+- "TimeInterval"
+- "UserDefaults"
+- "Void"
+- !private "_customer"
+- !private "_includeApplePayPaymentMethods"
+- !private "_paymentMethods"
+- !private "clearCachedCustomer"
+- !private "clearCachedPaymentMethods"
+- !private "customer"
+- !private "customerRetrievedDate"
+- !private "includeApplePayPaymentMethods"
+- "kLastSelectedPaymentMethodDefaultsKey"
+- !private "keyManager"
+- !private "listPaymentMethodsForCustomer"
+- !private "paymentMethods"
+- !private "paymentMethodsRetrievedDate"
+- !private "retrieveCustomer"
+- !private "shouldUseCachedCustomer"
+- !private "shouldUseCachedPaymentMethods"
+- "stpDispatchToMainThreadIfNecessary"
+- !private "||"
+depends-member:
+- !private ["Sa", "append"]
+- !private ["SK", ""]
+- !private ["SK", "append"]
+- !private ["s7CVarArgP", "CachedCustomerMaxAge"]
+- !private ["s7CVarArgP", "Date"]
+- !private ["s7CVarArgP", "STPAPIClient"]
+- !private ["s7CVarArgP", "STPAddress"]
+- !private ["s7CVarArgP", "STPAnalyticsClient"]
+- !private ["s7CVarArgP", "STPCustomerContext"]
+- !private ["s7CVarArgP", "STPEphemeralKeyManager"]
+- !private ["s7CVarArgP", "UserDefaults"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_customer"]
+- !private ["s7CVarArgP", "_includeApplePayPaymentMethods"]
+- !private ["s7CVarArgP", "_paymentMethods"]
+- !private ["s7CVarArgP", "addClass"]
+- !private ["s7CVarArgP", "apiClient"]
+- !private ["s7CVarArgP", "apiVersion"]
+- !private ["s7CVarArgP", "append"]
+- ["s7CVarArgP", "attachPaymentMethod"]
+- !private ["s7CVarArgP", "card"]
+- !private ["s7CVarArgP", "clearCache"]
+- !private ["s7CVarArgP", "clearCachedCustomer"]
+- !private ["s7CVarArgP", "clearCachedPaymentMethods"]
+- !private ["s7CVarArgP", "customer"]
+- !private ["s7CVarArgP", "customerID"]
+- !private ["s7CVarArgP", "customerRetrievedDate"]
+- ["s7CVarArgP", "detachPaymentMethod"]
+- !private ["s7CVarArgP", "dictionary"]
+- !private ["s7CVarArgP", "getOrCreateKey"]
+- !private ["s7CVarArgP", "includeApplePayPaymentMethods"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "kLastSelectedPaymentMethodDefaultsKey"]
+- !private ["s7CVarArgP", "keyManager"]
+- ["s7CVarArgP", "listPaymentMethodsForCustomer"]
+- !private ["s7CVarArgP", "paymentMethods"]
+- !private ["s7CVarArgP", "paymentMethodsRetrievedDate"]
+- ["s7CVarArgP", "retrieveCustomer"]
+- !private ["s7CVarArgP", "retrieveLastSelectedPaymentMethodIDForCustomer"]
+- !private ["s7CVarArgP", "saveLastSelectedPaymentMethodID"]
+- !private ["s7CVarArgP", "set"]
+- !private ["s7CVarArgP", "shared"]
+- !private ["s7CVarArgP", "sharedClient"]
+- !private ["s7CVarArgP", "shippingInfoForCharge"]
+- !private ["s7CVarArgP", "shouldUseCachedCustomer"]
+- !private ["s7CVarArgP", "shouldUseCachedPaymentMethods"]
+- !private ["s7CVarArgP", "standard"]
+- !private ["s7CVarArgP", "stpDispatchToMainThreadIfNecessary"]
+- !private ["s7CVarArgP", "stripeId"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "type"]
+- ["s7CVarArgP", "updateCustomer"]
+- !private ["s7CVarArgP", "updateSources"]
+- !private ["s7CVarArgP", "wallet"]
+- !private ["Sl", ""]
+- !private ["Sl", "append"]
+- !private ["Sl", "subscript"]
+- !private ["SL", "init"]
+- !private ["SL", "timeIntervalSince"]
+- !private ["10Foundation15ContiguousBytesP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "CachedCustomerMaxAge"]
+- !private ["s28CustomDebugStringConvertibleP", "Date"]
+- !private ["s28CustomDebugStringConvertibleP", "STPAPIClient"]
+- !private ["s28CustomDebugStringConvertibleP", "STPAddress"]
+- !private ["s28CustomDebugStringConvertibleP", "STPAnalyticsClient"]
+- !private ["s28CustomDebugStringConvertibleP", "STPCustomerContext"]
+- !private ["s28CustomDebugStringConvertibleP", "STPEphemeralKeyManager"]
+- !private ["s28CustomDebugStringConvertibleP", "UserDefaults"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "_customer"]
+- !private ["s28CustomDebugStringConvertibleP", "_includeApplePayPaymentMethods"]
+- !private ["s28CustomDebugStringConvertibleP", "_paymentMethods"]
+- !private ["s28CustomDebugStringConvertibleP", "addClass"]
+- !private ["s28CustomDebugStringConvertibleP", "apiClient"]
+- !private ["s28CustomDebugStringConvertibleP", "apiVersion"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "applePay"]
+- ["s28CustomDebugStringConvertibleP", "attachPaymentMethod"]
+- !private ["s28CustomDebugStringConvertibleP", "card"]
+- !private ["s28CustomDebugStringConvertibleP", "clearCache"]
+- !private ["s28CustomDebugStringConvertibleP", "clearCachedCustomer"]
+- !private ["s28CustomDebugStringConvertibleP", "clearCachedPaymentMethods"]
+- !private ["s28CustomDebugStringConvertibleP", "customer"]
+- !private ["s28CustomDebugStringConvertibleP", "customerID"]
+- !private ["s28CustomDebugStringConvertibleP", "customerRetrievedDate"]
+- ["s28CustomDebugStringConvertibleP", "detachPaymentMethod"]
+- !private ["s28CustomDebugStringConvertibleP", "dictionary"]
+- !private ["s28CustomDebugStringConvertibleP", "getOrCreateKey"]
+- !private ["s28CustomDebugStringConvertibleP", "includeApplePayPaymentMethods"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "kLastSelectedPaymentMethodDefaultsKey"]
+- !private ["s28CustomDebugStringConvertibleP", "keyManager"]
+- ["s28CustomDebugStringConvertibleP", "listPaymentMethodsForCustomer"]
+- !private ["s28CustomDebugStringConvertibleP", "paymentMethods"]
+- !private ["s28CustomDebugStringConvertibleP", "paymentMethodsRetrievedDate"]
+- ["s28CustomDebugStringConvertibleP", "retrieveCustomer"]
+- !private ["s28CustomDebugStringConvertibleP", "retrieveLastSelectedPaymentMethodIDForCustomer"]
+- !private ["s28CustomDebugStringConvertibleP", "saveLastSelectedPaymentMethodID"]
+- !private ["s28CustomDebugStringConvertibleP", "set"]
+- !private ["s28CustomDebugStringConvertibleP", "shared"]
+- !private ["s28CustomDebugStringConvertibleP", "sharedClient"]
+- !private ["s28CustomDebugStringConvertibleP", "shippingInfoForCharge"]
+- !private ["s28CustomDebugStringConvertibleP", "shouldUseCachedCustomer"]
+- !private ["s28CustomDebugStringConvertibleP", "shouldUseCachedPaymentMethods"]
+- !private ["s28CustomDebugStringConvertibleP", "standard"]
+- !private ["s28CustomDebugStringConvertibleP", "stpDispatchToMainThreadIfNecessary"]
+- !private ["s28CustomDebugStringConvertibleP", "stripeId"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "timeIntervalSince"]
+- !private ["s28CustomDebugStringConvertibleP", "type"]
+- ["s28CustomDebugStringConvertibleP", "updateCustomer"]
+- !private ["s28CustomDebugStringConvertibleP", "updateSources"]
+- !private ["s28CustomDebugStringConvertibleP", "wallet"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "applePay"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "timeIntervalSince"]
+- !private ["s23CustomStringConvertibleP", "CachedCustomerMaxAge"]
+- !private ["s23CustomStringConvertibleP", "Date"]
+- !private ["s23CustomStringConvertibleP", "STPAPIClient"]
+- !private ["s23CustomStringConvertibleP", "STPAddress"]
+- !private ["s23CustomStringConvertibleP", "STPAnalyticsClient"]
+- !private ["s23CustomStringConvertibleP", "STPCustomerContext"]
+- !private ["s23CustomStringConvertibleP", "STPEphemeralKeyManager"]
+- !private ["s23CustomStringConvertibleP", "UserDefaults"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_customer"]
+- !private ["s23CustomStringConvertibleP", "_includeApplePayPaymentMethods"]
+- !private ["s23CustomStringConvertibleP", "_paymentMethods"]
+- !private ["s23CustomStringConvertibleP", "addClass"]
+- !private ["s23CustomStringConvertibleP", "apiClient"]
+- !private ["s23CustomStringConvertibleP", "apiVersion"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- ["s23CustomStringConvertibleP", "attachPaymentMethod"]
+- !private ["s23CustomStringConvertibleP", "card"]
+- !private ["s23CustomStringConvertibleP", "clearCache"]
+- !private ["s23CustomStringConvertibleP", "clearCachedCustomer"]
+- !private ["s23CustomStringConvertibleP", "clearCachedPaymentMethods"]
+- !private ["s23CustomStringConvertibleP", "customer"]
+- !private ["s23CustomStringConvertibleP", "customerID"]
+- !private ["s23CustomStringConvertibleP", "customerRetrievedDate"]
+- ["s23CustomStringConvertibleP", "detachPaymentMethod"]
+- !private ["s23CustomStringConvertibleP", "dictionary"]
+- !private ["s23CustomStringConvertibleP", "getOrCreateKey"]
+- !private ["s23CustomStringConvertibleP", "includeApplePayPaymentMethods"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "kLastSelectedPaymentMethodDefaultsKey"]
+- !private ["s23CustomStringConvertibleP", "keyManager"]
+- ["s23CustomStringConvertibleP", "listPaymentMethodsForCustomer"]
+- !private ["s23CustomStringConvertibleP", "paymentMethods"]
+- !private ["s23CustomStringConvertibleP", "paymentMethodsRetrievedDate"]
+- ["s23CustomStringConvertibleP", "retrieveCustomer"]
+- !private ["s23CustomStringConvertibleP", "retrieveLastSelectedPaymentMethodIDForCustomer"]
+- !private ["s23CustomStringConvertibleP", "saveLastSelectedPaymentMethodID"]
+- !private ["s23CustomStringConvertibleP", "set"]
+- !private ["s23CustomStringConvertibleP", "shared"]
+- !private ["s23CustomStringConvertibleP", "sharedClient"]
+- !private ["s23CustomStringConvertibleP", "shippingInfoForCharge"]
+- !private ["s23CustomStringConvertibleP", "shouldUseCachedCustomer"]
+- !private ["s23CustomStringConvertibleP", "shouldUseCachedPaymentMethods"]
+- !private ["s23CustomStringConvertibleP", "standard"]
+- !private ["s23CustomStringConvertibleP", "stpDispatchToMainThreadIfNecessary"]
+- !private ["s23CustomStringConvertibleP", "stripeId"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "timeIntervalSince"]
+- !private ["s23CustomStringConvertibleP", "type"]
+- ["s23CustomStringConvertibleP", "updateCustomer"]
+- !private ["s23CustomStringConvertibleP", "updateSources"]
+- !private ["s23CustomStringConvertibleP", "wallet"]
+- !private ["10Foundation12DataProtocolP", ""]
+- !private ["10Foundation12DataProtocolP", "append"]
+- !private ["10Foundation4DateV", "init"]
+- !private ["10Foundation4DateV", "timeIntervalSince"]
+- !private ["Se", "append"]
+- !private ["Se", "applePay"]
+- !private ["Se", "init"]
+- !private ["Se", "subscript"]
+- !private ["Se", "timeIntervalSince"]
+- !private ["SD", "subscript"]
+- !private ["SE", "append"]
+- !private ["SE", "applePay"]
+- !private ["SE", "init"]
+- !private ["SE", "subscript"]
+- !private ["SE", "timeIntervalSince"]
+- !private ["SQ", "=="]
+- !private ["SQ", "CachedCustomerMaxAge"]
+- !private ["SQ", "Date"]
+- !private ["SQ", "STPAPIClient"]
+- !private ["SQ", "STPAddress"]
+- !private ["SQ", "STPAnalyticsClient"]
+- !private ["SQ", "STPCustomerContext"]
+- !private ["SQ", "STPEphemeralKeyManager"]
+- !private ["SQ", "UserDefaults"]
+- ["SQ", ""]
+- !private ["SQ", "_customer"]
+- !private ["SQ", "_includeApplePayPaymentMethods"]
+- !private ["SQ", "_paymentMethods"]
+- !private ["SQ", "addClass"]
+- !private ["SQ", "apiClient"]
+- !private ["SQ", "apiVersion"]
+- !private ["SQ", "append"]
+- !private ["SQ", "applePay"]
+- ["SQ", "attachPaymentMethod"]
+- !private ["SQ", "card"]
+- !private ["SQ", "clearCache"]
+- !private ["SQ", "clearCachedCustomer"]
+- !private ["SQ", "clearCachedPaymentMethods"]
+- !private ["SQ", "customer"]
+- !private ["SQ", "customerID"]
+- !private ["SQ", "customerRetrievedDate"]
+- ["SQ", "detachPaymentMethod"]
+- !private ["SQ", "dictionary"]
+- !private ["SQ", "getOrCreateKey"]
+- !private ["SQ", "includeApplePayPaymentMethods"]
+- !private ["SQ", "init"]
+- !private ["SQ", "kLastSelectedPaymentMethodDefaultsKey"]
+- !private ["SQ", "keyManager"]
+- ["SQ", "listPaymentMethodsForCustomer"]
+- !private ["SQ", "paymentMethods"]
+- !private ["SQ", "paymentMethodsRetrievedDate"]
+- ["SQ", "retrieveCustomer"]
+- !private ["SQ", "retrieveLastSelectedPaymentMethodIDForCustomer"]
+- !private ["SQ", "saveLastSelectedPaymentMethodID"]
+- !private ["SQ", "set"]
+- !private ["SQ", "shared"]
+- !private ["SQ", "sharedClient"]
+- !private ["SQ", "shippingInfoForCharge"]
+- !private ["SQ", "shouldUseCachedCustomer"]
+- !private ["SQ", "shouldUseCachedPaymentMethods"]
+- !private ["SQ", "standard"]
+- !private ["SQ", "stpDispatchToMainThreadIfNecessary"]
+- !private ["SQ", "stripeId"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "timeIntervalSince"]
+- !private ["SQ", "type"]
+- ["SQ", "updateCustomer"]
+- !private ["SQ", "updateSources"]
+- !private ["SQ", "wallet"]
+- !private ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Key"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Value"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s23ExpressibleByNilLiteralP", "applePay"]
+- !private ["s23ExpressibleByNilLiteralP", "init"]
+- !private ["SH", "CachedCustomerMaxAge"]
+- !private ["SH", "Date"]
+- !private ["SH", "STPAPIClient"]
+- !private ["SH", "STPAddress"]
+- !private ["SH", "STPAnalyticsClient"]
+- !private ["SH", "STPCustomerContext"]
+- !private ["SH", "STPEphemeralKeyManager"]
+- !private ["SH", "UserDefaults"]
+- ["SH", ""]
+- !private ["SH", "_customer"]
+- !private ["SH", "_includeApplePayPaymentMethods"]
+- !private ["SH", "_paymentMethods"]
+- !private ["SH", "addClass"]
+- !private ["SH", "apiClient"]
+- !private ["SH", "apiVersion"]
+- !private ["SH", "append"]
+- !private ["SH", "applePay"]
+- ["SH", "attachPaymentMethod"]
+- !private ["SH", "card"]
+- !private ["SH", "clearCache"]
+- !private ["SH", "clearCachedCustomer"]
+- !private ["SH", "clearCachedPaymentMethods"]
+- !private ["SH", "customer"]
+- !private ["SH", "customerID"]
+- !private ["SH", "customerRetrievedDate"]
+- ["SH", "detachPaymentMethod"]
+- !private ["SH", "dictionary"]
+- !private ["SH", "getOrCreateKey"]
+- !private ["SH", "includeApplePayPaymentMethods"]
+- !private ["SH", "init"]
+- !private ["SH", "kLastSelectedPaymentMethodDefaultsKey"]
+- !private ["SH", "keyManager"]
+- ["SH", "listPaymentMethodsForCustomer"]
+- !private ["SH", "paymentMethods"]
+- !private ["SH", "paymentMethodsRetrievedDate"]
+- ["SH", "retrieveCustomer"]
+- !private ["SH", "retrieveLastSelectedPaymentMethodIDForCustomer"]
+- !private ["SH", "saveLastSelectedPaymentMethodID"]
+- !private ["SH", "set"]
+- !private ["SH", "shared"]
+- !private ["SH", "sharedClient"]
+- !private ["SH", "shippingInfoForCharge"]
+- !private ["SH", "shouldUseCachedCustomer"]
+- !private ["SH", "shouldUseCachedPaymentMethods"]
+- !private ["SH", "standard"]
+- !private ["SH", "stpDispatchToMainThreadIfNecessary"]
+- !private ["SH", "stripeId"]
+- !private ["SH", "subscript"]
+- !private ["SH", "timeIntervalSince"]
+- !private ["SH", "type"]
+- ["SH", "updateCustomer"]
+- !private ["SH", "updateSources"]
+- !private ["SH", "wallet"]
+- !private ["SM", ""]
+- !private ["SM", "append"]
+- !private ["10Foundation19MutableDataProtocolP", "append"]
+- !private ["So8NSCodingP", ""]
+- !private ["So9NSCopyingP", "shippingInfoForCharge"]
+- ["So8NSObjectC", "Bool"]
+- !private ["So8NSObjectC", "CachedCustomerMaxAge"]
+- ["So8NSObjectC", "Date"]
+- ["So8NSObjectC", "Error"]
+- ["So8NSObjectC", "STPAPIClient"]
+- ["So8NSObjectC", "STPAddress"]
+- !private ["So8NSObjectC", "STPAnalyticsClient"]
+- ["So8NSObjectC", "STPCustomer"]
+- ["So8NSObjectC", "STPCustomerCompletionBlock"]
+- !private ["So8NSObjectC", "STPCustomerContext"]
+- ["So8NSObjectC", "STPCustomerEphemeralKeyProvider"]
+- ["So8NSObjectC", "STPEphemeralKeyManager"]
+- ["So8NSObjectC", "STPErrorBlock"]
+- ["So8NSObjectC", "STPPaymentMethod"]
+- ["So8NSObjectC", "STPPaymentMethodsCompletionBlock"]
+- ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "UserDefaults"]
+- ["So8NSObjectC", "Void"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "_customer"]
+- ["So8NSObjectC", "_includeApplePayPaymentMethods"]
+- ["So8NSObjectC", "_paymentMethods"]
+- !private ["So8NSObjectC", "addClass"]
+- ["So8NSObjectC", "apiClient"]
+- !private ["So8NSObjectC", "apiVersion"]
+- ["So8NSObjectC", "attachPaymentMethod"]
+- !private ["So8NSObjectC", "card"]
+- ["So8NSObjectC", "clearCache"]
+- ["So8NSObjectC", "clearCachedCustomer"]
+- ["So8NSObjectC", "clearCachedPaymentMethods"]
+- ["So8NSObjectC", "customer"]
+- !private ["So8NSObjectC", "customerID"]
+- ["So8NSObjectC", "customerRetrievedDate"]
+- ["So8NSObjectC", "detachPaymentMethod"]
+- !private ["So8NSObjectC", "dictionary"]
+- !private ["So8NSObjectC", "dictionaryForKey"]
+- !private ["So8NSObjectC", "getOrCreateKey"]
+- ["So8NSObjectC", "includeApplePayPaymentMethods"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "kLastSelectedPaymentMethodDefaultsKey"]
+- ["So8NSObjectC", "keyManager"]
+- ["So8NSObjectC", "listPaymentMethodsForCustomer"]
+- ["So8NSObjectC", "paymentMethods"]
+- ["So8NSObjectC", "paymentMethodsRetrievedDate"]
+- ["So8NSObjectC", "retrieveCustomer"]
+- ["So8NSObjectC", "retrieveLastSelectedPaymentMethodIDForCustomer"]
+- ["So8NSObjectC", "saveLastSelectedPaymentMethodID"]
+- !private ["So8NSObjectC", "set"]
+- !private ["So8NSObjectC", "setBool"]
+- !private ["So8NSObjectC", "setDouble"]
+- !private ["So8NSObjectC", "setFloat"]
+- !private ["So8NSObjectC", "setInteger"]
+- !private ["So8NSObjectC", "setObject"]
+- !private ["So8NSObjectC", "setURL"]
+- !private ["So8NSObjectC", "shared"]
+- !private ["So8NSObjectC", "sharedClient"]
+- !private ["So8NSObjectC", "shippingInfoForCharge"]
+- ["So8NSObjectC", "shouldUseCachedCustomer"]
+- ["So8NSObjectC", "shouldUseCachedPaymentMethods"]
+- !private ["So8NSObjectC", "standard"]
+- !private ["So8NSObjectC", "stpDispatchToMainThreadIfNecessary"]
+- !private ["So8NSObjectC", "stripeId"]
+- !private ["So8NSObjectC", "type"]
+- ["So8NSObjectC", "updateCustomer"]
+- !private ["So8NSObjectC", "updateSources"]
+- !private ["So8NSObjectC", "wallet"]
+- !private ["So8NSObjectP", "CachedCustomerMaxAge"]
+- !private ["So8NSObjectP", "Date"]
+- ["So8NSObjectP", "STPAPIClient"]
+- !private ["So8NSObjectP", "STPAddress"]
+- !private ["So8NSObjectP", "STPAnalyticsClient"]
+- ["So8NSObjectP", "STPCustomerCompletionBlock"]
+- !private ["So8NSObjectP", "STPCustomerContext"]
+- ["So8NSObjectP", "STPCustomerEphemeralKeyProvider"]
+- ["So8NSObjectP", "STPEphemeralKeyManager"]
+- ["So8NSObjectP", "STPErrorBlock"]
+- ["So8NSObjectP", "STPPaymentMethod"]
+- ["So8NSObjectP", "STPPaymentMethodsCompletionBlock"]
+- !private ["So8NSObjectP", "UserDefaults"]
+- ["So8NSObjectP", "Void"]
+- ["So8NSObjectP", ""]
+- ["So8NSObjectP", "_customer"]
+- ["So8NSObjectP", "_includeApplePayPaymentMethods"]
+- ["So8NSObjectP", "_paymentMethods"]
+- ["So8NSObjectP", "addClass"]
+- ["So8NSObjectP", "apiClient"]
+- !private ["So8NSObjectP", "apiVersion"]
+- ["So8NSObjectP", "attachPaymentMethod"]
+- !private ["So8NSObjectP", "card"]
+- ["So8NSObjectP", "clearCache"]
+- ["So8NSObjectP", "clearCachedCustomer"]
+- ["So8NSObjectP", "clearCachedPaymentMethods"]
+- ["So8NSObjectP", "customer"]
+- !private ["So8NSObjectP", "customerID"]
+- ["So8NSObjectP", "customerRetrievedDate"]
+- ["So8NSObjectP", "detachPaymentMethod"]
+- !private ["So8NSObjectP", "dictionary"]
+- !private ["So8NSObjectP", "dictionaryForKey"]
+- ["So8NSObjectP", "getOrCreateKey"]
+- ["So8NSObjectP", "includeApplePayPaymentMethods"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "kLastSelectedPaymentMethodDefaultsKey"]
+- ["So8NSObjectP", "keyManager"]
+- ["So8NSObjectP", "listPaymentMethodsForCustomer"]
+- ["So8NSObjectP", "paymentMethods"]
+- ["So8NSObjectP", "paymentMethodsRetrievedDate"]
+- ["So8NSObjectP", "retrieveCustomer"]
+- ["So8NSObjectP", "retrieveLastSelectedPaymentMethodIDForCustomer"]
+- ["So8NSObjectP", "saveLastSelectedPaymentMethodID"]
+- !private ["So8NSObjectP", "set"]
+- !private ["So8NSObjectP", "setBool"]
+- !private ["So8NSObjectP", "setDouble"]
+- !private ["So8NSObjectP", "setFloat"]
+- !private ["So8NSObjectP", "setInteger"]
+- !private ["So8NSObjectP", "setObject"]
+- !private ["So8NSObjectP", "setURL"]
+- !private ["So8NSObjectP", "shared"]
+- !private ["So8NSObjectP", "sharedClient"]
+- !private ["So8NSObjectP", "shippingInfoForCharge"]
+- ["So8NSObjectP", "shouldUseCachedCustomer"]
+- ["So8NSObjectP", "shouldUseCachedPaymentMethods"]
+- !private ["So8NSObjectP", "standard"]
+- !private ["So8NSObjectP", "stpDispatchToMainThreadIfNecessary"]
+- !private ["So8NSObjectP", "stripeId"]
+- !private ["So8NSObjectP", "type"]
+- ["So8NSObjectP", "updateCustomer"]
+- !private ["So8NSObjectP", "updateSources"]
+- !private ["So8NSObjectP", "wallet"]
+- !private ["Sq", "applePay"]
+- !private ["Sk", ""]
+- !private ["Sk", "append"]
+- !private ["Sm", ""]
+- !private ["Sm", "append"]
+- !private ["SY", "applePay"]
+- !private ["SY", "card"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "timeIntervalSince"]
+- !private ["6Stripe12STPAPIClientC", "apiVersion"]
+- !private ["6Stripe12STPAPIClientC", "attachPaymentMethod"]
+- !private ["6Stripe12STPAPIClientC", "detachPaymentMethod"]
+- !private ["6Stripe12STPAPIClientC", "listPaymentMethodsForCustomer"]
+- !private ["6Stripe12STPAPIClientC", "retrieveCustomer"]
+- !private ["6Stripe12STPAPIClientC", "shared"]
+- !private ["6Stripe12STPAPIClientC", "updateCustomer"]
+- !private ["6Stripe23STPAPIResponseDecodableP", "card"]
+- !private ["6Stripe23STPAPIResponseDecodableP", "customerID"]
+- !private ["6Stripe23STPAPIResponseDecodableP", "shippingInfoForCharge"]
+- !private ["6Stripe23STPAPIResponseDecodableP", "stripeId"]
+- !private ["6Stripe23STPAPIResponseDecodableP", "type"]
+- !private ["6Stripe23STPAPIResponseDecodableP", "updateSources"]
+- !private ["6Stripe23STPAPIResponseDecodableP", "wallet"]
+- !private ["6Stripe10STPAddressC", "shippingInfoForCharge"]
+- !private ["6Stripe18STPAnalyticsClientC", "addClass"]
+- !private ["6Stripe18STPAnalyticsClientC", "sharedClient"]
+- !private ["6Stripe20STPBackendAPIAdapterP", "CachedCustomerMaxAge"]
+- !private ["6Stripe20STPBackendAPIAdapterP", "Date"]
+- !private ["6Stripe20STPBackendAPIAdapterP", "STPAPIClient"]
+- !private ["6Stripe20STPBackendAPIAdapterP", "STPAddress"]
+- !private ["6Stripe20STPBackendAPIAdapterP", "STPAnalyticsClient"]
+- !private ["6Stripe20STPBackendAPIAdapterP", "STPCustomerContext"]
+- !private ["6Stripe20STPBackendAPIAdapterP", "STPEphemeralKeyManager"]
+- !private ["6Stripe20STPBackendAPIAdapterP", "UserDefaults"]
+- ["6Stripe20STPBackendAPIAdapterP", ""]
+- ["6Stripe20STPBackendAPIAdapterP", "_customer"]
+- ["6Stripe20STPBackendAPIAdapterP", "_includeApplePayPaymentMethods"]
+- ["6Stripe20STPBackendAPIAdapterP", "_paymentMethods"]
+- ["6Stripe20STPBackendAPIAdapterP", "apiClient"]
+- ["6Stripe20STPBackendAPIAdapterP", "attachPaymentMethod"]
+- ["6Stripe20STPBackendAPIAdapterP", "clearCache"]
+- ["6Stripe20STPBackendAPIAdapterP", "clearCachedCustomer"]
+- ["6Stripe20STPBackendAPIAdapterP", "clearCachedPaymentMethods"]
+- ["6Stripe20STPBackendAPIAdapterP", "customer"]
+- ["6Stripe20STPBackendAPIAdapterP", "customerRetrievedDate"]
+- ["6Stripe20STPBackendAPIAdapterP", "detachPaymentMethod"]
+- ["6Stripe20STPBackendAPIAdapterP", "includeApplePayPaymentMethods"]
+- ["6Stripe20STPBackendAPIAdapterP", "init"]
+- !private ["6Stripe20STPBackendAPIAdapterP", "kLastSelectedPaymentMethodDefaultsKey"]
+- ["6Stripe20STPBackendAPIAdapterP", "keyManager"]
+- ["6Stripe20STPBackendAPIAdapterP", "listPaymentMethodsForCustomer"]
+- ["6Stripe20STPBackendAPIAdapterP", "paymentMethods"]
+- ["6Stripe20STPBackendAPIAdapterP", "paymentMethodsRetrievedDate"]
+- ["6Stripe20STPBackendAPIAdapterP", "retrieveCustomer"]
+- ["6Stripe20STPBackendAPIAdapterP", "retrieveLastSelectedPaymentMethodIDForCustomer"]
+- ["6Stripe20STPBackendAPIAdapterP", "saveLastSelectedPaymentMethodID"]
+- ["6Stripe20STPBackendAPIAdapterP", "shouldUseCachedCustomer"]
+- ["6Stripe20STPBackendAPIAdapterP", "shouldUseCachedPaymentMethods"]
+- !private ["6Stripe20STPBackendAPIAdapterP", "stpDispatchToMainThreadIfNecessary"]
+- ["6Stripe20STPBackendAPIAdapterP", "updateCustomer"]
+- !private ["6Stripe11STPCustomerC", ""]
+- !private ["6Stripe11STPCustomerC", "updateSources"]
+- ["6Stripe18STPCustomerContextC", "Bool"]
+- !private ["6Stripe18STPCustomerContextC", "CachedCustomerMaxAge"]
+- ["6Stripe18STPCustomerContextC", "Date"]
+- ["6Stripe18STPCustomerContextC", "Error"]
+- ["6Stripe18STPCustomerContextC", "STPAPIClient"]
+- ["6Stripe18STPCustomerContextC", "STPAddress"]
+- !private ["6Stripe18STPCustomerContextC", "STPAnalyticsClient"]
+- ["6Stripe18STPCustomerContextC", "STPCustomer"]
+- ["6Stripe18STPCustomerContextC", "STPCustomerCompletionBlock"]
+- !private ["6Stripe18STPCustomerContextC", "STPCustomerContext"]
+- ["6Stripe18STPCustomerContextC", "STPCustomerEphemeralKeyProvider"]
+- ["6Stripe18STPCustomerContextC", "STPEphemeralKeyManager"]
+- ["6Stripe18STPCustomerContextC", "STPErrorBlock"]
+- ["6Stripe18STPCustomerContextC", "STPPaymentMethod"]
+- ["6Stripe18STPCustomerContextC", "STPPaymentMethodsCompletionBlock"]
+- ["6Stripe18STPCustomerContextC", "String"]
+- !private ["6Stripe18STPCustomerContextC", "UserDefaults"]
+- ["6Stripe18STPCustomerContextC", "Void"]
+- ["6Stripe18STPCustomerContextC", ""]
+- !private ["6Stripe18STPCustomerContextC", "_customer"]
+- !private ["6Stripe18STPCustomerContextC", "_includeApplePayPaymentMethods"]
+- !private ["6Stripe18STPCustomerContextC", "_paymentMethods"]
+- !private ["6Stripe18STPCustomerContextC", "apiClient"]
+- ["6Stripe18STPCustomerContextC", "attachPaymentMethod"]
+- ["6Stripe18STPCustomerContextC", "clearCache"]
+- ["6Stripe18STPCustomerContextC", "clearCachedCustomer"]
+- ["6Stripe18STPCustomerContextC", "clearCachedPaymentMethods"]
+- !private ["6Stripe18STPCustomerContextC", "customer"]
+- ["6Stripe18STPCustomerContextC", "customerRetrievedDate"]
+- ["6Stripe18STPCustomerContextC", "deinit"]
+- ["6Stripe18STPCustomerContextC", "detachPaymentMethod"]
+- ["6Stripe18STPCustomerContextC", "includeApplePayPaymentMethods"]
+- ["6Stripe18STPCustomerContextC", "init"]
+- !private ["6Stripe18STPCustomerContextC", "kLastSelectedPaymentMethodDefaultsKey"]
+- !private ["6Stripe18STPCustomerContextC", "keyManager"]
+- ["6Stripe18STPCustomerContextC", "listPaymentMethodsForCustomer"]
+- !private ["6Stripe18STPCustomerContextC", "paymentMethods"]
+- ["6Stripe18STPCustomerContextC", "paymentMethodsRetrievedDate"]
+- ["6Stripe18STPCustomerContextC", "retrieveCustomer"]
+- ["6Stripe18STPCustomerContextC", "retrieveLastSelectedPaymentMethodIDForCustomer"]
+- ["6Stripe18STPCustomerContextC", "saveLastSelectedPaymentMethodID"]
+- ["6Stripe18STPCustomerContextC", "shouldUseCachedCustomer"]
+- ["6Stripe18STPCustomerContextC", "shouldUseCachedPaymentMethods"]
+- !private ["6Stripe18STPCustomerContextC", "stpDispatchToMainThreadIfNecessary"]
+- ["6Stripe18STPCustomerContextC", "updateCustomer"]
+- !private ["6Stripe15STPEphemeralKeyC", "customerID"]
+- !private ["6Stripe22STPEphemeralKeyManagerC", "getOrCreateKey"]
+- !private ["6Stripe22STPEphemeralKeyManagerC", "init"]
+- !private ["6Stripe16STPFormEncodableP", "shippingInfoForCharge"]
+- !private ["6Stripe16STPPaymentMethodC", ""]
+- !private ["6Stripe16STPPaymentMethodC", "card"]
+- !private ["6Stripe16STPPaymentMethodC", "stripeId"]
+- !private ["6Stripe16STPPaymentMethodC", "type"]
+- !private ["6Stripe20STPPaymentMethodCardC", "wallet"]
+- !private ["6Stripe26STPPaymentMethodCardWalletC", "type"]
+- !private ["6Stripe30STPPaymentMethodCardWalletTypeO", ""]
+- !private ["6Stripe30STPPaymentMethodCardWalletTypeO", "applePay"]
+- !private ["6Stripe20STPPaymentMethodTypeO", "RawValue"]
+- !private ["6Stripe20STPPaymentMethodTypeO", ""]
+- !private ["6Stripe20STPPaymentMethodTypeO", "card"]
+- !private ["6Stripe16STPPaymentOptionP", "card"]
+- !private ["6Stripe16STPPaymentOptionP", "stripeId"]
+- !private ["6Stripe16STPPaymentOptionP", "type"]
+- !private ["ST", "Element"]
+- !private ["ST", "Iterator"]
+- !private ["ST", ""]
+- !private ["ST", "append"]
+- !private ["ST", "subscript"]
+- !private ["So14NSUserDefaultsC", "dictionary"]
+- !private ["So14NSUserDefaultsC", "set"]
+- !private ["So14NSUserDefaultsC", "standard"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "timeIntervalSince"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s19_HasContiguousBytesP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CachedCustomerMaxAge"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Date"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPAPIClient"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPAddress"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPAnalyticsClient"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPCustomerContext"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPEphemeralKeyManager"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UserDefaults"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_customer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_includeApplePayPaymentMethods"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_paymentMethods"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addClass"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "apiClient"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "apiVersion"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "attachPaymentMethod"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "card"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "clearCache"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "clearCachedCustomer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "clearCachedPaymentMethods"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "customer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "customerID"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "customerRetrievedDate"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "detachPaymentMethod"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dictionary"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getOrCreateKey"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "includeApplePayPaymentMethods"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "kLastSelectedPaymentMethodDefaultsKey"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "keyManager"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "listPaymentMethodsForCustomer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "paymentMethods"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "paymentMethodsRetrievedDate"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "retrieveCustomer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "retrieveLastSelectedPaymentMethodIDForCustomer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "saveLastSelectedPaymentMethodID"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "set"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sharedClient"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shippingInfoForCharge"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shouldUseCachedCustomer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shouldUseCachedPaymentMethods"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "standard"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stpDispatchToMainThreadIfNecessary"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stripeId"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "type"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "updateCustomer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "updateSources"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "wallet"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CachedCustomerMaxAge"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Date"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPAPIClient"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPAddress"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPAnalyticsClient"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPCustomerContext"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPEphemeralKeyManager"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UserDefaults"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_customer"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_includeApplePayPaymentMethods"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_paymentMethods"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addClass"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "apiClient"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "apiVersion"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "attachPaymentMethod"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "card"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "clearCache"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "clearCachedCustomer"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "clearCachedPaymentMethods"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "customer"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "customerID"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "customerRetrievedDate"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "detachPaymentMethod"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dictionary"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getOrCreateKey"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "includeApplePayPaymentMethods"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "kLastSelectedPaymentMethodDefaultsKey"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "keyManager"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "listPaymentMethodsForCustomer"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "paymentMethods"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "paymentMethodsRetrievedDate"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "retrieveCustomer"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "retrieveLastSelectedPaymentMethodIDForCustomer"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "saveLastSelectedPaymentMethodID"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "set"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sharedClient"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shippingInfoForCharge"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shouldUseCachedCustomer"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shouldUseCachedPaymentMethods"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "standard"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stpDispatchToMainThreadIfNecessary"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stripeId"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "type"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "updateCustomer"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "updateSources"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "wallet"]
+- !private ["s21_ObjectiveCBridgeableP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "applePay"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "timeIntervalSince"]
+- !private ["s26_OptionalNilComparisonTypeV", "applePay"]
+depends-nominal:
+- !private "Sa"
+- !private "SK"
+- "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "10Foundation4DateV"
+- !private "Se"
+- !private "SD"
+- !private "SE"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- "SH"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "Sq"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "6Stripe12STPAPIClientC"
+- !private "6Stripe23STPAPIResponseDecodableP"
+- !private "6Stripe10STPAddressC"
+- !private "6Stripe18STPAnalyticsClientC"
+- "6Stripe20STPBackendAPIAdapterP"
+- !private "6Stripe11STPCustomerC"
+- "6Stripe18STPCustomerContextC"
+- !private "6Stripe15STPEphemeralKeyC"
+- !private "6Stripe22STPEphemeralKeyManagerC"
+- !private "6Stripe16STPFormEncodableP"
+- !private "6Stripe16STPPaymentMethodC"
+- !private "6Stripe20STPPaymentMethodCardC"
+- !private "6Stripe26STPPaymentMethodCardWalletC"
+- !private "6Stripe30STPPaymentMethodCardWalletTypeO"
+- !private "6Stripe20STPPaymentMethodTypeO"
+- !private "6Stripe16STPPaymentOptionP"
+- !private "ST"
+- !private "So14NSUserDefaultsC"
+- !private "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s26_OptionalNilComparisonTypeV"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Vision.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/AVFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Pods/Target Support Files/Stripe/Stripe-umbrella.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Stripe.build/unextended-module.modulemap"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "875dfcae11aa0336afe35bba774cc2af"

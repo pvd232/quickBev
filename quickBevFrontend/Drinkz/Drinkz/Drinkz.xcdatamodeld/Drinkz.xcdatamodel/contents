@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Bar" representedClassName=".Bar" syncable="YES">
+        <attribute name="address" attributeType="String"/>
+        <attribute name="coordinateString" attributeType="String" defaultValueString=""/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="salesTaxRate" attributeType="Double" defaultValueString="0.0"/>
+        <relationship name="barsToCheckoutCart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CheckoutCart" inverseName="bars" inverseEntity="CheckoutCart"/>
+        <relationship name="drinks" toMany="YES" deletionRule="Cascade" destinationEntity="Drink" inverseName="bar" inverseEntity="Drink"/>
+        <relationship name="userBarToCheckoutCart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CheckoutCart" inverseName="userBar" inverseEntity="CheckoutCart"/>
+    </entity>
+    <entity name="CheckoutCart" representedClassName=".CheckoutCart" syncable="YES">
+        <attribute name="barId" attributeType="String" defaultValueString=""/>
+        <attribute name="cost" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="orderingProcessViewControllerIndex" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="salesTax" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="stripeId" optional="YES" attributeType="String"/>
+        <attribute name="subtotal" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="tipAmount" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="tipPercentage" attributeType="Double" defaultValueString="0.1" usesScalarValueType="YES"/>
+        <attribute name="userId" attributeType="String" defaultValueString=""/>
+        <relationship name="bars" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Bar" inverseName="barsToCheckoutCart" inverseEntity="Bar"/>
+        <relationship name="drinks" toMany="YES" deletionRule="Nullify" destinationEntity="Drink" inverseName="relationship" inverseEntity="Drink"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="relationship" inverseEntity="User"/>
+        <relationship name="userBar" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bar" inverseName="userBarToCheckoutCart" inverseEntity="Bar"/>
+    </entity>
+    <entity name="Drink" representedClassName=".Drink" syncable="YES">
+        <attribute name="barId" attributeType="String"/>
+        <attribute name="detail" attributeType="String"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="price" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="quantity" attributeType="Integer 16" defaultValueString="1" usesScalarValueType="YES"/>
+        <relationship name="bar" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Bar" inverseName="drinks" inverseEntity="Bar"/>
+        <relationship name="drinkToOrder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Order" inverseName="orderDrink" inverseEntity="Order"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CheckoutCart" inverseName="drinks" inverseEntity="CheckoutCart"/>
+    </entity>
+    <entity name="Order" representedClassName=".Order" syncable="YES">
+        <attribute name="barId" attributeType="String"/>
+        <attribute name="cost" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="dateTime" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="salesTax" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="subtotal" attributeType="Double" usesScalarValueType="YES"/>
+        <attribute name="tipAmount" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="tipPercentage" optional="YES" attributeType="Double" usesScalarValueType="YES"/>
+        <relationship name="orderDrink" toMany="YES" deletionRule="Nullify" destinationEntity="Drink" inverseName="drinkToOrder" inverseEntity="Drink"/>
+        <relationship name="user" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="userToOrder" inverseEntity="User"/>
+    </entity>
+    <entity name="Tab" representedClassName=".Tab" syncable="YES">
+        <attribute name="address" attributeType="String"/>
+        <attribute name="barId" attributeType="String"/>
+        <attribute name="dateTime" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="detail" attributeType="String"/>
+        <attribute name="fundraisingGoal" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="minimumContribution" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="userId" attributeType="String"/>
+        <relationship name="tabToUser" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="userToTab" inverseEntity="User"/>
+    </entity>
+    <entity name="User" representedClassName=".User" syncable="YES">
+        <attribute name="email" attributeType="String"/>
+        <attribute name="firstName" attributeType="String"/>
+        <attribute name="lastName" attributeType="String"/>
+        <attribute name="password" attributeType="String"/>
+        <attribute name="stripeId" attributeType="String" defaultValueString=""/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CheckoutCart" inverseName="user" inverseEntity="CheckoutCart"/>
+        <relationship name="userToOrder" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Order" inverseName="user" inverseEntity="Order"/>
+        <relationship name="userToTab" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tab" inverseName="tabToUser" inverseEntity="Tab"/>
+    </entity>
+    <elements>
+        <element name="Bar" positionX="0" positionY="81" width="128" height="149"/>
+        <element name="CheckoutCart" positionX="27" positionY="126" width="128" height="224"/>
+        <element name="Drink" positionX="-36" positionY="9" width="128" height="164"/>
+        <element name="Order" positionX="18" positionY="162" width="128" height="179"/>
+        <element name="Tab" positionX="9" positionY="135" width="128" height="179"/>
+        <element name="User" positionX="54" positionY="162" width="128" height="149"/>
+    </elements>
+</model>

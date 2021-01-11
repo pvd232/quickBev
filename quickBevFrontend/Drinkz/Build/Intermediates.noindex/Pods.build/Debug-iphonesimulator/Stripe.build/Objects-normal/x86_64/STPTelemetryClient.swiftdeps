@@ -1,0 +1,1091 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "STPTelemetryClient"
+provides-nominal:
+- "6Stripe18STPTelemetryClientC"
+provides-member:
+- ["6Stripe18STPTelemetryClientC", ""]
+provides-dynamic-lookup:
+- "$__lazy_storage_$_platform"
+- "addTelemetryFields"
+- "deviceModel"
+- "encodeValue"
+- "language"
+- "muid"
+- "osVersion"
+- "paramsByAddingTelemetryFields"
+- "payload"
+- "platform"
+- "screenSize"
+- "sendTelemetryData"
+- "shared"
+- "shouldSendTelemetry"
+- "timeZoneOffset"
+- "urlSession"
+depends-top-level:
+- !private "*"
+- !private "/"
+- "??"
+- "AnyHashable"
+- "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- !private "Bundle"
+- "CChar"
+- "CastingPrecedence"
+- "Data"
+- !private "Dictionary"
+- !private "Double"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- !private "JSONSerialization"
+- "Locale"
+- !private "NSMutableURLRequest"
+- !private "NSNumber"
+- "NSObject"
+- "NSTimeZone"
+- "STPAPIClient"
+- "STPTelemetryClient"
+- "String"
+- "StringLiteralType"
+- !private "StripeAPI"
+- "UIDevice"
+- !private "UIScreen"
+- !private "URL"
+- "URLRequest"
+- "URLSession"
+- "URLSessionConfiguration"
+- "UnicodeScalarType"
+- "deviceModel"
+- !private "encodeValue"
+- !private "language"
+- !private "muid"
+- "osVersion"
+- !private "platform"
+- !private "screenSize"
+- !private "timeZoneOffset"
+- "uname"
+- !private "urlSession"
+- "utsname"
+- "withUnsafePointer"
+depends-member:
+- !private ["s18AdditiveArithmeticP", ""]
+- !private ["s18AdditiveArithmeticP", "init"]
+- ["Sa", "joined"]
+- ["SK", ""]
+- ["SK", "init"]
+- ["SK", "joined"]
+- !private ["SB", "init"]
+- !private ["So8NSBundleC", "stp_applicationName"]
+- !private ["So8NSBundleC", "stp_applicationVersion"]
+- !private ["So6CGRectV", "size"]
+- !private ["So6CGSizeV", "height"]
+- !private ["So6CGSizeV", "width"]
+- !private ["s7CVarArgP", "Bundle"]
+- ["s7CVarArgP", "CChar"]
+- !private ["s7CVarArgP", "Double"]
+- !private ["s7CVarArgP", "JSONSerialization"]
+- ["s7CVarArgP", "Locale"]
+- !private ["s7CVarArgP", "NSMutableURLRequest"]
+- !private ["s7CVarArgP", "NSNumber"]
+- !private ["s7CVarArgP", "NSTimeZone"]
+- ["s7CVarArgP", "STPAPIClient"]
+- !private ["s7CVarArgP", "STPSDKVersion"]
+- ["s7CVarArgP", "STPTelemetryClient"]
+- ["s7CVarArgP", "String"]
+- !private ["s7CVarArgP", "StripeAPI"]
+- ["s7CVarArgP", "UIDevice"]
+- !private ["s7CVarArgP", "UIScreen"]
+- !private ["s7CVarArgP", "URL"]
+- !private ["s7CVarArgP", "URLSession"]
+- !private ["s7CVarArgP", "WritingOptions"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "addTelemetryFields"]
+- !private ["s7CVarArgP", "bounds"]
+- ["s7CVarArgP", "current"]
+- !private ["s7CVarArgP", "data"]
+- !private ["s7CVarArgP", "dataTask"]
+- ["s7CVarArgP", "deviceModel"]
+- !private ["s7CVarArgP", "deviceSupportsApplePay"]
+- !private ["s7CVarArgP", "encodeValue"]
+- !private ["s7CVarArgP", "httpBody"]
+- !private ["s7CVarArgP", "httpMethod"]
+- !private ["s7CVarArgP", "identifierForVendor"]
+- ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "joined"]
+- !private ["s7CVarArgP", "language"]
+- !private ["s7CVarArgP", "local"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "muid"]
+- ["s7CVarArgP", "osVersion"]
+- !private ["s7CVarArgP", "payload"]
+- !private ["s7CVarArgP", "platform"]
+- !private ["s7CVarArgP", "resume"]
+- !private ["s7CVarArgP", "scale"]
+- !private ["s7CVarArgP", "screenSize"]
+- !private ["s7CVarArgP", "secondsFromGMT"]
+- !private ["s7CVarArgP", "setValue"]
+- ["s7CVarArgP", "sharedUrlSessionConfiguration"]
+- !private ["s7CVarArgP", "shouldSendTelemetry"]
+- !private ["s7CVarArgP", "stp_applicationName"]
+- !private ["s7CVarArgP", "stp_applicationVersion"]
+- !private ["s7CVarArgP", "subscript"]
+- ["s7CVarArgP", "systemVersion"]
+- !private ["s7CVarArgP", "timeZoneOffset"]
+- ["s7CVarArgP", "uname"]
+- !private ["s7CVarArgP", "urlSession"]
+- ["s7CVarArgP", "utsname"]
+- ["s7CVarArgP", "withMemoryRebound"]
+- ["s7CVarArgP", "withUnsafePointer"]
+- ["Sl", ""]
+- ["Sl", "init"]
+- ["Sl", "joined"]
+- !private ["Sl", "subscript"]
+- ["SL", ""]
+- ["SL", "init"]
+- ["SL", "withMemoryRebound"]
+- ["10Foundation15ContiguousBytesP", "joined"]
+- !private ["s28CustomDebugStringConvertibleP", "Bundle"]
+- ["s28CustomDebugStringConvertibleP", "CChar"]
+- !private ["s28CustomDebugStringConvertibleP", "Double"]
+- !private ["s28CustomDebugStringConvertibleP", "JSONSerialization"]
+- ["s28CustomDebugStringConvertibleP", "Locale"]
+- !private ["s28CustomDebugStringConvertibleP", "NSMutableURLRequest"]
+- !private ["s28CustomDebugStringConvertibleP", "NSNumber"]
+- !private ["s28CustomDebugStringConvertibleP", "NSTimeZone"]
+- ["s28CustomDebugStringConvertibleP", "STPAPIClient"]
+- !private ["s28CustomDebugStringConvertibleP", "STPSDKVersion"]
+- ["s28CustomDebugStringConvertibleP", "STPTelemetryClient"]
+- ["s28CustomDebugStringConvertibleP", "String"]
+- !private ["s28CustomDebugStringConvertibleP", "StripeAPI"]
+- ["s28CustomDebugStringConvertibleP", "UIDevice"]
+- !private ["s28CustomDebugStringConvertibleP", "UIScreen"]
+- !private ["s28CustomDebugStringConvertibleP", "URL"]
+- !private ["s28CustomDebugStringConvertibleP", "URLSession"]
+- !private ["s28CustomDebugStringConvertibleP", "WritingOptions"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "addTelemetryFields"]
+- !private ["s28CustomDebugStringConvertibleP", "appendingPathComponent"]
+- ["s28CustomDebugStringConvertibleP", "autoupdatingCurrent"]
+- !private ["s28CustomDebugStringConvertibleP", "bounds"]
+- ["s28CustomDebugStringConvertibleP", "current"]
+- !private ["s28CustomDebugStringConvertibleP", "data"]
+- !private ["s28CustomDebugStringConvertibleP", "dataTask"]
+- ["s28CustomDebugStringConvertibleP", "deviceModel"]
+- !private ["s28CustomDebugStringConvertibleP", "deviceSupportsApplePay"]
+- !private ["s28CustomDebugStringConvertibleP", "encodeValue"]
+- !private ["s28CustomDebugStringConvertibleP", "height"]
+- !private ["s28CustomDebugStringConvertibleP", "httpBody"]
+- !private ["s28CustomDebugStringConvertibleP", "httpMethod"]
+- ["s28CustomDebugStringConvertibleP", "identifier"]
+- !private ["s28CustomDebugStringConvertibleP", "identifierForVendor"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "joined"]
+- !private ["s28CustomDebugStringConvertibleP", "language"]
+- !private ["s28CustomDebugStringConvertibleP", "local"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "muid"]
+- ["s28CustomDebugStringConvertibleP", "osVersion"]
+- !private ["s28CustomDebugStringConvertibleP", "payload"]
+- !private ["s28CustomDebugStringConvertibleP", "platform"]
+- !private ["s28CustomDebugStringConvertibleP", "resume"]
+- !private ["s28CustomDebugStringConvertibleP", "scale"]
+- !private ["s28CustomDebugStringConvertibleP", "screenSize"]
+- !private ["s28CustomDebugStringConvertibleP", "secondsFromGMT"]
+- !private ["s28CustomDebugStringConvertibleP", "setValue"]
+- ["s28CustomDebugStringConvertibleP", "sharedUrlSessionConfiguration"]
+- !private ["s28CustomDebugStringConvertibleP", "shouldSendTelemetry"]
+- !private ["s28CustomDebugStringConvertibleP", "size"]
+- !private ["s28CustomDebugStringConvertibleP", "stp_applicationName"]
+- !private ["s28CustomDebugStringConvertibleP", "stp_applicationVersion"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- ["s28CustomDebugStringConvertibleP", "systemVersion"]
+- !private ["s28CustomDebugStringConvertibleP", "timeZoneOffset"]
+- ["s28CustomDebugStringConvertibleP", "uname"]
+- !private ["s28CustomDebugStringConvertibleP", "urlSession"]
+- ["s28CustomDebugStringConvertibleP", "utsname"]
+- !private ["s28CustomDebugStringConvertibleP", "uuidString"]
+- !private ["s28CustomDebugStringConvertibleP", "width"]
+- ["s28CustomDebugStringConvertibleP", "withMemoryRebound"]
+- ["s28CustomDebugStringConvertibleP", "withUnsafePointer"]
+- ["s17CustomReflectableP", ""]
+- ["s17CustomReflectableP", "autoupdatingCurrent"]
+- !private ["s17CustomReflectableP", "height"]
+- ["s17CustomReflectableP", "identifier"]
+- ["s17CustomReflectableP", "init"]
+- ["s17CustomReflectableP", "joined"]
+- !private ["s17CustomReflectableP", "size"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "uuidString"]
+- !private ["s17CustomReflectableP", "width"]
+- ["s17CustomReflectableP", "withMemoryRebound"]
+- !private ["s23CustomStringConvertibleP", "Bundle"]
+- ["s23CustomStringConvertibleP", "CChar"]
+- !private ["s23CustomStringConvertibleP", "Double"]
+- !private ["s23CustomStringConvertibleP", "JSONSerialization"]
+- ["s23CustomStringConvertibleP", "Locale"]
+- !private ["s23CustomStringConvertibleP", "NSMutableURLRequest"]
+- !private ["s23CustomStringConvertibleP", "NSNumber"]
+- !private ["s23CustomStringConvertibleP", "NSTimeZone"]
+- ["s23CustomStringConvertibleP", "STPAPIClient"]
+- !private ["s23CustomStringConvertibleP", "STPSDKVersion"]
+- ["s23CustomStringConvertibleP", "STPTelemetryClient"]
+- ["s23CustomStringConvertibleP", "String"]
+- !private ["s23CustomStringConvertibleP", "StripeAPI"]
+- ["s23CustomStringConvertibleP", "UIDevice"]
+- !private ["s23CustomStringConvertibleP", "UIScreen"]
+- !private ["s23CustomStringConvertibleP", "URL"]
+- !private ["s23CustomStringConvertibleP", "URLSession"]
+- !private ["s23CustomStringConvertibleP", "WritingOptions"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "addTelemetryFields"]
+- !private ["s23CustomStringConvertibleP", "appendingPathComponent"]
+- ["s23CustomStringConvertibleP", "autoupdatingCurrent"]
+- !private ["s23CustomStringConvertibleP", "bounds"]
+- ["s23CustomStringConvertibleP", "current"]
+- !private ["s23CustomStringConvertibleP", "data"]
+- !private ["s23CustomStringConvertibleP", "dataTask"]
+- ["s23CustomStringConvertibleP", "deviceModel"]
+- !private ["s23CustomStringConvertibleP", "deviceSupportsApplePay"]
+- !private ["s23CustomStringConvertibleP", "encodeValue"]
+- !private ["s23CustomStringConvertibleP", "httpBody"]
+- !private ["s23CustomStringConvertibleP", "httpMethod"]
+- ["s23CustomStringConvertibleP", "identifier"]
+- !private ["s23CustomStringConvertibleP", "identifierForVendor"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "joined"]
+- !private ["s23CustomStringConvertibleP", "language"]
+- !private ["s23CustomStringConvertibleP", "local"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "muid"]
+- ["s23CustomStringConvertibleP", "osVersion"]
+- !private ["s23CustomStringConvertibleP", "payload"]
+- !private ["s23CustomStringConvertibleP", "platform"]
+- !private ["s23CustomStringConvertibleP", "resume"]
+- !private ["s23CustomStringConvertibleP", "scale"]
+- !private ["s23CustomStringConvertibleP", "screenSize"]
+- !private ["s23CustomStringConvertibleP", "secondsFromGMT"]
+- !private ["s23CustomStringConvertibleP", "setValue"]
+- ["s23CustomStringConvertibleP", "sharedUrlSessionConfiguration"]
+- !private ["s23CustomStringConvertibleP", "shouldSendTelemetry"]
+- !private ["s23CustomStringConvertibleP", "stp_applicationName"]
+- !private ["s23CustomStringConvertibleP", "stp_applicationVersion"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- ["s23CustomStringConvertibleP", "systemVersion"]
+- !private ["s23CustomStringConvertibleP", "timeZoneOffset"]
+- ["s23CustomStringConvertibleP", "uname"]
+- !private ["s23CustomStringConvertibleP", "urlSession"]
+- ["s23CustomStringConvertibleP", "utsname"]
+- !private ["s23CustomStringConvertibleP", "uuidString"]
+- ["s23CustomStringConvertibleP", "withUnsafePointer"]
+- ["10Foundation12DataProtocolP", ""]
+- ["10Foundation12DataProtocolP", "joined"]
+- !private ["Se", "appendingPathComponent"]
+- ["Se", "autoupdatingCurrent"]
+- !private ["Se", "height"]
+- ["Se", "identifier"]
+- ["Se", "init"]
+- ["Se", "joined"]
+- !private ["Se", "size"]
+- !private ["Se", "subscript"]
+- !private ["Se", "uuidString"]
+- !private ["Se", "width"]
+- !private ["SD", "subscript"]
+- !private ["Sd", "init"]
+- !private ["SE", "appendingPathComponent"]
+- ["SE", "autoupdatingCurrent"]
+- !private ["SE", "height"]
+- ["SE", "identifier"]
+- ["SE", "init"]
+- ["SE", "joined"]
+- !private ["SE", "size"]
+- !private ["SE", "subscript"]
+- !private ["SE", "uuidString"]
+- !private ["SE", "width"]
+- !private ["SQ", "ArrayLiteralElement"]
+- !private ["SQ", "Bundle"]
+- ["SQ", "CChar"]
+- !private ["SQ", "Double"]
+- !private ["SQ", "Element"]
+- !private ["SQ", "JSONSerialization"]
+- ["SQ", "Locale"]
+- !private ["SQ", "NSMutableURLRequest"]
+- !private ["SQ", "NSNumber"]
+- !private ["SQ", "NSTimeZone"]
+- !private ["SQ", "RawValue"]
+- ["SQ", "STPAPIClient"]
+- !private ["SQ", "STPSDKVersion"]
+- ["SQ", "STPTelemetryClient"]
+- ["SQ", "String"]
+- !private ["SQ", "StripeAPI"]
+- ["SQ", "UIDevice"]
+- !private ["SQ", "UIScreen"]
+- !private ["SQ", "URL"]
+- !private ["SQ", "URLSession"]
+- !private ["SQ", "WritingOptions"]
+- ["SQ", ""]
+- !private ["SQ", "addTelemetryFields"]
+- !private ["SQ", "appendingPathComponent"]
+- ["SQ", "autoupdatingCurrent"]
+- !private ["SQ", "bounds"]
+- ["SQ", "current"]
+- !private ["SQ", "data"]
+- !private ["SQ", "dataTask"]
+- ["SQ", "deviceModel"]
+- !private ["SQ", "deviceSupportsApplePay"]
+- !private ["SQ", "encodeValue"]
+- !private ["SQ", "height"]
+- !private ["SQ", "httpBody"]
+- !private ["SQ", "httpMethod"]
+- ["SQ", "identifier"]
+- !private ["SQ", "identifierForVendor"]
+- ["SQ", "init"]
+- ["SQ", "joined"]
+- !private ["SQ", "language"]
+- !private ["SQ", "local"]
+- !private ["SQ", "main"]
+- !private ["SQ", "muid"]
+- ["SQ", "osVersion"]
+- !private ["SQ", "payload"]
+- !private ["SQ", "platform"]
+- !private ["SQ", "resume"]
+- !private ["SQ", "scale"]
+- !private ["SQ", "screenSize"]
+- !private ["SQ", "secondsFromGMT"]
+- !private ["SQ", "setValue"]
+- ["SQ", "sharedUrlSessionConfiguration"]
+- !private ["SQ", "shouldSendTelemetry"]
+- !private ["SQ", "size"]
+- !private ["SQ", "stp_applicationName"]
+- !private ["SQ", "stp_applicationVersion"]
+- !private ["SQ", "subscript"]
+- ["SQ", "systemVersion"]
+- !private ["SQ", "timeZoneOffset"]
+- ["SQ", "uname"]
+- !private ["SQ", "urlSession"]
+- ["SQ", "utsname"]
+- !private ["SQ", "uuidString"]
+- !private ["SQ", "width"]
+- ["SQ", "withMemoryRebound"]
+- ["SQ", "withUnsafePointer"]
+- !private ["s25ExpressibleByArrayLiteralP", "ArrayLiteralElement"]
+- !private ["s25ExpressibleByArrayLiteralP", "Element"]
+- !private ["s25ExpressibleByArrayLiteralP", "RawValue"]
+- ["s25ExpressibleByArrayLiteralP", ""]
+- ["s25ExpressibleByArrayLiteralP", "init"]
+- ["s25ExpressibleByArrayLiteralP", "joined"]
+- !private ["s27ExpressibleByBooleanLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Key"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Value"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s25ExpressibleByFloatLiteralP", ""]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", ""]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- ["s32ExpressibleByStringInterpolationP", ""]
+- ["s32ExpressibleByStringInterpolationP", "init"]
+- ["s26ExpressibleByStringLiteralP", ""]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["SF", ""]
+- !private ["SF", "init"]
+- !private ["SH", "Bundle"]
+- ["SH", "CChar"]
+- !private ["SH", "Double"]
+- !private ["SH", "JSONSerialization"]
+- ["SH", "Locale"]
+- !private ["SH", "NSMutableURLRequest"]
+- !private ["SH", "NSNumber"]
+- !private ["SH", "NSTimeZone"]
+- ["SH", "STPAPIClient"]
+- !private ["SH", "STPSDKVersion"]
+- ["SH", "STPTelemetryClient"]
+- ["SH", "String"]
+- !private ["SH", "StripeAPI"]
+- ["SH", "UIDevice"]
+- !private ["SH", "UIScreen"]
+- !private ["SH", "URL"]
+- !private ["SH", "URLSession"]
+- !private ["SH", "WritingOptions"]
+- ["SH", ""]
+- !private ["SH", "addTelemetryFields"]
+- !private ["SH", "appendingPathComponent"]
+- ["SH", "autoupdatingCurrent"]
+- !private ["SH", "bounds"]
+- ["SH", "current"]
+- !private ["SH", "data"]
+- !private ["SH", "dataTask"]
+- ["SH", "deviceModel"]
+- !private ["SH", "deviceSupportsApplePay"]
+- !private ["SH", "encodeValue"]
+- !private ["SH", "httpBody"]
+- !private ["SH", "httpMethod"]
+- ["SH", "identifier"]
+- !private ["SH", "identifierForVendor"]
+- ["SH", "init"]
+- ["SH", "joined"]
+- !private ["SH", "language"]
+- !private ["SH", "local"]
+- !private ["SH", "main"]
+- !private ["SH", "muid"]
+- ["SH", "osVersion"]
+- !private ["SH", "payload"]
+- !private ["SH", "platform"]
+- !private ["SH", "resume"]
+- !private ["SH", "scale"]
+- !private ["SH", "screenSize"]
+- !private ["SH", "secondsFromGMT"]
+- !private ["SH", "setValue"]
+- ["SH", "sharedUrlSessionConfiguration"]
+- !private ["SH", "shouldSendTelemetry"]
+- !private ["SH", "stp_applicationName"]
+- !private ["SH", "stp_applicationVersion"]
+- !private ["SH", "subscript"]
+- ["SH", "systemVersion"]
+- !private ["SH", "timeZoneOffset"]
+- ["SH", "uname"]
+- !private ["SH", "urlSession"]
+- ["SH", "utsname"]
+- !private ["SH", "uuidString"]
+- ["SH", "withMemoryRebound"]
+- ["SH", "withUnsafePointer"]
+- !private ["So19NSJSONSerializationC", "WritingOptions"]
+- !private ["So19NSJSONSerializationC", "data"]
+- ["10Foundation6LocaleV", "autoupdatingCurrent"]
+- ["10Foundation6LocaleV", "identifier"]
+- ["s25LosslessStringConvertibleP", ""]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- ["SM", ""]
+- ["SM", "joined"]
+- ["10Foundation19MutableDataProtocolP", "joined"]
+- !private ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "httpBody"]
+- !private ["So8NSCodingP", "httpMethod"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "local"]
+- !private ["So8NSCodingP", "secondsFromGMT"]
+- !private ["So8NSCodingP", "setValue"]
+- !private ["So9NSCopyingP", ""]
+- !private ["So9NSCopyingP", "httpBody"]
+- !private ["So9NSCopyingP", "httpMethod"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "local"]
+- !private ["So9NSCopyingP", "resume"]
+- !private ["So9NSCopyingP", "secondsFromGMT"]
+- !private ["So9NSCopyingP", "setValue"]
+- !private ["So16NSMutableCopyingP", ""]
+- !private ["So16NSMutableCopyingP", "httpBody"]
+- !private ["So16NSMutableCopyingP", "httpMethod"]
+- !private ["So16NSMutableCopyingP", "init"]
+- !private ["So16NSMutableCopyingP", "setValue"]
+- !private ["So19NSMutableURLRequestC", "httpBody"]
+- !private ["So19NSMutableURLRequestC", "httpMethod"]
+- !private ["So19NSMutableURLRequestC", "init"]
+- !private ["So19NSMutableURLRequestC", "setValue"]
+- !private ["So8NSNumberC", "init"]
+- ["So8NSObjectC", "$__lazy_storage_$_platform"]
+- ["So8NSObjectC", "AnyHashable"]
+- ["So8NSObjectC", "Bool"]
+- !private ["So8NSObjectC", "Bundle"]
+- ["So8NSObjectC", "CChar"]
+- !private ["So8NSObjectC", "Data"]
+- !private ["So8NSObjectC", "Double"]
+- !private ["So8NSObjectC", "JSONSerialization"]
+- ["So8NSObjectC", "Locale"]
+- !private ["So8NSObjectC", "NSMutableURLRequest"]
+- !private ["So8NSObjectC", "NSNumber"]
+- !private ["So8NSObjectC", "NSTimeZone"]
+- ["So8NSObjectC", "STPAPIClient"]
+- !private ["So8NSObjectC", "STPSDKVersion"]
+- ["So8NSObjectC", "STPTelemetryClient"]
+- ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "StripeAPI"]
+- ["So8NSObjectC", "UIDevice"]
+- !private ["So8NSObjectC", "UIScreen"]
+- !private ["So8NSObjectC", "URL"]
+- !private ["So8NSObjectC", "URLRequest"]
+- ["So8NSObjectC", "URLSession"]
+- ["So8NSObjectC", "URLSessionConfiguration"]
+- !private ["So8NSObjectC", "WritingOptions"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "__lazy_storage_$_platform"]
+- ["So8NSObjectC", "addTelemetryFields"]
+- !private ["So8NSObjectC", "bounds"]
+- ["So8NSObjectC", "current"]
+- !private ["So8NSObjectC", "data"]
+- !private ["So8NSObjectC", "dataTask"]
+- !private ["So8NSObjectC", "dataTaskWithRequest"]
+- !private ["So8NSObjectC", "dataTaskWithURL"]
+- !private ["So8NSObjectC", "dataWithJSONObject"]
+- ["So8NSObjectC", "deviceModel"]
+- !private ["So8NSObjectC", "deviceSupportsApplePay"]
+- ["So8NSObjectC", "encodeValue"]
+- !private ["So8NSObjectC", "httpBody"]
+- !private ["So8NSObjectC", "httpMethod"]
+- !private ["So8NSObjectC", "identifierForVendor"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "language"]
+- !private ["So8NSObjectC", "local"]
+- !private ["So8NSObjectC", "main"]
+- ["So8NSObjectC", "muid"]
+- ["So8NSObjectC", "osVersion"]
+- ["So8NSObjectC", "paramsByAddingTelemetryFields"]
+- ["So8NSObjectC", "payload"]
+- ["So8NSObjectC", "platform"]
+- !private ["So8NSObjectC", "requestWithURL"]
+- !private ["So8NSObjectC", "resume"]
+- !private ["So8NSObjectC", "scale"]
+- ["So8NSObjectC", "screenSize"]
+- !private ["So8NSObjectC", "secondsFromGMT"]
+- !private ["So8NSObjectC", "secondsFromGMTForDate"]
+- ["So8NSObjectC", "sendTelemetryData"]
+- !private ["So8NSObjectC", "sessionWithConfiguration"]
+- !private ["So8NSObjectC", "setValue"]
+- ["So8NSObjectC", "shared"]
+- ["So8NSObjectC", "sharedUrlSessionConfiguration"]
+- ["So8NSObjectC", "shouldSendTelemetry"]
+- !private ["So8NSObjectC", "stp_applicationName"]
+- !private ["So8NSObjectC", "stp_applicationVersion"]
+- ["So8NSObjectC", "systemVersion"]
+- ["So8NSObjectC", "timeZoneOffset"]
+- ["So8NSObjectC", "uname"]
+- ["So8NSObjectC", "urlSession"]
+- ["So8NSObjectC", "utsname"]
+- ["So8NSObjectC", "withUnsafePointer"]
+- ["So8NSObjectP", "$__lazy_storage_$_platform"]
+- !private ["So8NSObjectP", "Bundle"]
+- ["So8NSObjectP", "CChar"]
+- !private ["So8NSObjectP", "Data"]
+- !private ["So8NSObjectP", "Double"]
+- !private ["So8NSObjectP", "JSONSerialization"]
+- ["So8NSObjectP", "Locale"]
+- !private ["So8NSObjectP", "NSMutableURLRequest"]
+- !private ["So8NSObjectP", "NSNumber"]
+- !private ["So8NSObjectP", "NSTimeZone"]
+- ["So8NSObjectP", "STPAPIClient"]
+- !private ["So8NSObjectP", "STPSDKVersion"]
+- ["So8NSObjectP", "STPTelemetryClient"]
+- ["So8NSObjectP", "String"]
+- !private ["So8NSObjectP", "StripeAPI"]
+- ["So8NSObjectP", "UIDevice"]
+- !private ["So8NSObjectP", "UIScreen"]
+- !private ["So8NSObjectP", "URL"]
+- !private ["So8NSObjectP", "URLRequest"]
+- ["So8NSObjectP", "URLSession"]
+- ["So8NSObjectP", "URLSessionConfiguration"]
+- !private ["So8NSObjectP", "WritingOptions"]
+- ["So8NSObjectP", ""]
+- ["So8NSObjectP", "__lazy_storage_$_platform"]
+- ["So8NSObjectP", "addTelemetryFields"]
+- !private ["So8NSObjectP", "bounds"]
+- ["So8NSObjectP", "current"]
+- !private ["So8NSObjectP", "data"]
+- !private ["So8NSObjectP", "dataTask"]
+- !private ["So8NSObjectP", "dataTaskWithRequest"]
+- !private ["So8NSObjectP", "dataTaskWithURL"]
+- !private ["So8NSObjectP", "dataWithJSONObject"]
+- ["So8NSObjectP", "deviceModel"]
+- !private ["So8NSObjectP", "deviceSupportsApplePay"]
+- ["So8NSObjectP", "encodeValue"]
+- !private ["So8NSObjectP", "httpBody"]
+- !private ["So8NSObjectP", "httpMethod"]
+- !private ["So8NSObjectP", "identifierForVendor"]
+- ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "language"]
+- !private ["So8NSObjectP", "local"]
+- !private ["So8NSObjectP", "main"]
+- ["So8NSObjectP", "muid"]
+- ["So8NSObjectP", "osVersion"]
+- ["So8NSObjectP", "paramsByAddingTelemetryFields"]
+- ["So8NSObjectP", "payload"]
+- ["So8NSObjectP", "platform"]
+- !private ["So8NSObjectP", "requestWithURL"]
+- !private ["So8NSObjectP", "resume"]
+- !private ["So8NSObjectP", "scale"]
+- ["So8NSObjectP", "screenSize"]
+- !private ["So8NSObjectP", "secondsFromGMT"]
+- !private ["So8NSObjectP", "secondsFromGMTForDate"]
+- ["So8NSObjectP", "sendTelemetryData"]
+- !private ["So8NSObjectP", "sessionWithConfiguration"]
+- !private ["So8NSObjectP", "setValue"]
+- ["So8NSObjectP", "shared"]
+- ["So8NSObjectP", "sharedUrlSessionConfiguration"]
+- ["So8NSObjectP", "shouldSendTelemetry"]
+- !private ["So8NSObjectP", "stp_applicationName"]
+- !private ["So8NSObjectP", "stp_applicationVersion"]
+- ["So8NSObjectP", "systemVersion"]
+- ["So8NSObjectP", "timeZoneOffset"]
+- ["So8NSObjectP", "uname"]
+- ["So8NSObjectP", "urlSession"]
+- ["So8NSObjectP", "utsname"]
+- ["So8NSObjectP", "withUnsafePointer"]
+- !private ["So14NSSecureCodingP", ""]
+- !private ["So14NSSecureCodingP", "httpBody"]
+- !private ["So14NSSecureCodingP", "httpMethod"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "local"]
+- !private ["So14NSSecureCodingP", "secondsFromGMT"]
+- !private ["So14NSSecureCodingP", "setValue"]
+- !private ["So10NSTimeZoneC", "local"]
+- !private ["So10NSTimeZoneC", "secondsFromGMT"]
+- ["So12NSURLRequestC", ""]
+- !private ["So12NSURLRequestC", "httpBody"]
+- !private ["So12NSURLRequestC", "httpMethod"]
+- !private ["So12NSURLRequestC", "init"]
+- !private ["So12NSURLRequestC", "setValue"]
+- ["So7NSValueC", ""]
+- !private ["So7NSValueC", "init"]
+- !private ["Sj", ""]
+- !private ["Sj", "init"]
+- !private ["s9OptionSetP", "ArrayLiteralElement"]
+- !private ["s9OptionSetP", "Element"]
+- !private ["s9OptionSetP", "RawValue"]
+- !private ["s9OptionSetP", "init"]
+- !private ["So19NSProgressReportingP", "resume"]
+- ["Sk", ""]
+- ["Sk", "joined"]
+- ["Sm", ""]
+- ["Sm", "init"]
+- ["Sm", "joined"]
+- !private ["SY", "ArrayLiteralElement"]
+- !private ["SY", "Element"]
+- !private ["SY", "RawValue"]
+- !private ["SY", ""]
+- !private ["SY", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "appendingPathComponent"]
+- ["10Foundation20ReferenceConvertibleP", "autoupdatingCurrent"]
+- ["10Foundation20ReferenceConvertibleP", "identifier"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "uuidString"]
+- !private ["s10SIMDScalarP", "init"]
+- !private ["6Stripe12STPAPIClientC", "STPSDKVersion"]
+- ["6Stripe12STPAPIClientC", "sharedUrlSessionConfiguration"]
+- !private ["6Stripe18STPTelemetryClientC", "$__lazy_storage_$_platform"]
+- ["6Stripe18STPTelemetryClientC", "AnyHashable"]
+- ["6Stripe18STPTelemetryClientC", "Bool"]
+- !private ["6Stripe18STPTelemetryClientC", "Bundle"]
+- ["6Stripe18STPTelemetryClientC", "CChar"]
+- !private ["6Stripe18STPTelemetryClientC", "Data"]
+- !private ["6Stripe18STPTelemetryClientC", "Double"]
+- !private ["6Stripe18STPTelemetryClientC", "JSONSerialization"]
+- ["6Stripe18STPTelemetryClientC", "Locale"]
+- !private ["6Stripe18STPTelemetryClientC", "NSMutableURLRequest"]
+- !private ["6Stripe18STPTelemetryClientC", "NSNumber"]
+- !private ["6Stripe18STPTelemetryClientC", "NSTimeZone"]
+- ["6Stripe18STPTelemetryClientC", "STPAPIClient"]
+- ["6Stripe18STPTelemetryClientC", "STPTelemetryClient"]
+- ["6Stripe18STPTelemetryClientC", "String"]
+- !private ["6Stripe18STPTelemetryClientC", "StripeAPI"]
+- ["6Stripe18STPTelemetryClientC", "UIDevice"]
+- !private ["6Stripe18STPTelemetryClientC", "UIScreen"]
+- !private ["6Stripe18STPTelemetryClientC", "URL"]
+- !private ["6Stripe18STPTelemetryClientC", "URLRequest"]
+- ["6Stripe18STPTelemetryClientC", "URLSession"]
+- ["6Stripe18STPTelemetryClientC", "URLSessionConfiguration"]
+- ["6Stripe18STPTelemetryClientC", ""]
+- ["6Stripe18STPTelemetryClientC", "addTelemetryFields"]
+- ["6Stripe18STPTelemetryClientC", "deinit"]
+- ["6Stripe18STPTelemetryClientC", "deviceModel"]
+- !private ["6Stripe18STPTelemetryClientC", "encodeValue"]
+- ["6Stripe18STPTelemetryClientC", "init"]
+- !private ["6Stripe18STPTelemetryClientC", "language"]
+- !private ["6Stripe18STPTelemetryClientC", "muid"]
+- ["6Stripe18STPTelemetryClientC", "osVersion"]
+- ["6Stripe18STPTelemetryClientC", "paramsByAddingTelemetryFields"]
+- !private ["6Stripe18STPTelemetryClientC", "payload"]
+- !private ["6Stripe18STPTelemetryClientC", "platform"]
+- !private ["6Stripe18STPTelemetryClientC", "screenSize"]
+- ["6Stripe18STPTelemetryClientC", "sendTelemetryData"]
+- ["6Stripe18STPTelemetryClientC", "shared"]
+- ["6Stripe18STPTelemetryClientC", "shouldSendTelemetry"]
+- !private ["6Stripe18STPTelemetryClientC", "timeZoneOffset"]
+- ["6Stripe18STPTelemetryClientC", "uname"]
+- !private ["6Stripe18STPTelemetryClientC", "urlSession"]
+- ["6Stripe18STPTelemetryClientC", "utsname"]
+- ["6Stripe18STPTelemetryClientC", "withUnsafePointer"]
+- !private ["ST", "Element"]
+- ["ST", ""]
+- ["ST", "init"]
+- ["ST", "joined"]
+- !private ["ST", "subscript"]
+- !private ["s10SetAlgebraP", "ArrayLiteralElement"]
+- !private ["s10SetAlgebraP", "Element"]
+- !private ["s10SetAlgebraP", "RawValue"]
+- !private ["s10SetAlgebraP", ""]
+- !private ["s10SetAlgebraP", "init"]
+- !private ["s13SignedNumericP", ""]
+- !private ["s13SignedNumericP", "init"]
+- ["Sx", ""]
+- !private ["Sx", "init"]
+- ["Sx", "withMemoryRebound"]
+- ["SS", "init"]
+- ["Sy", "init"]
+- !private ["6Stripe0A3APIC", "deviceSupportsApplePay"]
+- ["s16TextOutputStreamP", ""]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", ""]
+- ["s20TextOutputStreamableP", "init"]
+- ["So8UIDeviceC", "current"]
+- !private ["So8UIDeviceC", "identifierForVendor"]
+- ["So8UIDeviceC", "systemVersion"]
+- !private ["So8UIScreenC", "bounds"]
+- !private ["So8UIScreenC", "main"]
+- !private ["So8UIScreenC", "scale"]
+- !private ["So18UITraitEnvironmentP", "bounds"]
+- !private ["So18UITraitEnvironmentP", "main"]
+- !private ["So18UITraitEnvironmentP", "scale"]
+- !private ["10Foundation3URLV", "appendingPathComponent"]
+- !private ["10Foundation3URLV", "init"]
+- !private ["So12NSURLSessionC", "dataTask"]
+- !private ["So12NSURLSessionC", "init"]
+- !private ["So20NSURLSessionDataTaskC", "resume"]
+- ["So16NSURLSessionTaskC", ""]
+- !private ["So16NSURLSessionTaskC", "resume"]
+- !private ["10Foundation4UUIDV", "uuidString"]
+- ["SP", "withMemoryRebound"]
+- !private ["So20NSJSONWritingOptionsV", "ArrayLiteralElement"]
+- !private ["So20NSJSONWritingOptionsV", "Element"]
+- !private ["So20NSJSONWritingOptionsV", "RawValue"]
+- !private ["So20NSJSONWritingOptionsV", "init"]
+- ["s14_ArrayProtocolP", "joined"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "appendingPathComponent"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "height"]
+- ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "size"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "width"]
+- ["s30_CustomPlaygroundQuickLookableP", "withMemoryRebound"]
+- ["s24_DestructorSafeContainerP", "joined"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "appendingPathComponent"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
+- ["s19_HasContiguousBytesP", "init"]
+- ["s19_HasContiguousBytesP", "joined"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "httpBody"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "httpMethod"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- ["s35_HasCustomAnyHashableRepresentationP", "joined"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "local"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "secondsFromGMT"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "setValue"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Bundle"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CChar"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Double"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "JSONSerialization"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Locale"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSMutableURLRequest"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSNumber"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSTimeZone"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "STPAPIClient"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPSDKVersion"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "STPTelemetryClient"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "String"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "StripeAPI"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "UIDevice"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIScreen"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "URL"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "URLSession"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "WritingOptions"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addTelemetryFields"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "bounds"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "current"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "data"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dataTask"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "deviceModel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "deviceSupportsApplePay"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "encodeValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "httpBody"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "httpMethod"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "identifierForVendor"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "language"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "local"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "muid"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "osVersion"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "payload"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "platform"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "resume"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "scale"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "screenSize"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "secondsFromGMT"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setValue"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "sharedUrlSessionConfiguration"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shouldSendTelemetry"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stp_applicationName"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stp_applicationVersion"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "systemVersion"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "timeZoneOffset"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "uname"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "urlSession"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "utsname"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "withUnsafePointer"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Bundle"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CChar"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Double"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "JSONSerialization"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Locale"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSMutableURLRequest"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSNumber"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSTimeZone"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPAPIClient"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPSDKVersion"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPTelemetryClient"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "String"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "StripeAPI"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIDevice"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIScreen"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "URL"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "URLSession"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "WritingOptions"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addTelemetryFields"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bounds"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "current"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "data"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dataTask"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "deviceModel"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "deviceSupportsApplePay"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "encodeValue"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "httpBody"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "httpMethod"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "identifierForVendor"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "language"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "local"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "main"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "muid"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "osVersion"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "payload"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "platform"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "resume"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "scale"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "screenSize"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "secondsFromGMT"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setValue"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sharedUrlSessionConfiguration"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shouldSendTelemetry"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stp_applicationName"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stp_applicationVersion"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "systemVersion"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "timeZoneOffset"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "uname"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "urlSession"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "utsname"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "withUnsafePointer"]
+- ["s21_ObjectiveCBridgeableP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
+- !private ["s21_ObjectiveCBridgeableP", "appendingPathComponent"]
+- ["s21_ObjectiveCBridgeableP", "autoupdatingCurrent"]
+- !private ["s21_ObjectiveCBridgeableP", "height"]
+- ["s21_ObjectiveCBridgeableP", "identifier"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s21_ObjectiveCBridgeableP", "joined"]
+- !private ["s21_ObjectiveCBridgeableP", "size"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "uuidString"]
+- !private ["s21_ObjectiveCBridgeableP", "width"]
+- ["s8_PointerP", "withMemoryRebound"]
+- ["So7utsnameV", "init"]
+- ["So7utsnameV", "machine"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- "Sa"
+- "SK"
+- !private "SB"
+- !private "So8NSBundleC"
+- !private "So6CGRectV"
+- !private "So6CGSizeV"
+- "s7CVarArgP"
+- "Sl"
+- "SL"
+- "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "10Foundation12DataProtocolP"
+- "Se"
+- !private "SD"
+- !private "Sd"
+- "SE"
+- "SQ"
+- "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- "s32ExpressibleByStringInterpolationP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "SF"
+- "SH"
+- !private "So19NSJSONSerializationC"
+- "10Foundation6LocaleV"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- "SM"
+- "10Foundation19MutableDataProtocolP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So16NSMutableCopyingP"
+- !private "So19NSMutableURLRequestC"
+- !private "So8NSNumberC"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So10NSTimeZoneC"
+- "So12NSURLRequestC"
+- "So7NSValueC"
+- !private "Sj"
+- !private "s9OptionSetP"
+- !private "So19NSProgressReportingP"
+- "Sk"
+- "Sm"
+- !private "SY"
+- "10Foundation20ReferenceConvertibleP"
+- !private "s10SIMDScalarP"
+- "6Stripe12STPAPIClientC"
+- "6Stripe18STPTelemetryClientC"
+- "ST"
+- !private "s10SetAlgebraP"
+- !private "s13SignedNumericP"
+- "Sx"
+- "SS"
+- "Sy"
+- !private "6Stripe0A3APIC"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- "So8UIDeviceC"
+- !private "So8UIScreenC"
+- !private "So18UITraitEnvironmentP"
+- !private "10Foundation3URLV"
+- !private "So12NSURLSessionC"
+- !private "So20NSURLSessionDataTaskC"
+- "So16NSURLSessionTaskC"
+- !private "10Foundation4UUIDV"
+- "SP"
+- !private "So20NSJSONWritingOptionsV"
+- "s14_ArrayProtocolP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- "s30_CustomPlaygroundQuickLookableP"
+- "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s34_ExpressibleByFileReferenceLiteralP"
+- "s19_HasContiguousBytesP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- "s21_ObjectiveCBridgeableP"
+- "s8_PointerP"
+- "So7utsnameV"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Vision.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/AVFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Pods/Target Support Files/Stripe/Stripe-umbrella.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Stripe.build/unextended-module.modulemap"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "000eab0f0f953cfbadacac4537d35baa"

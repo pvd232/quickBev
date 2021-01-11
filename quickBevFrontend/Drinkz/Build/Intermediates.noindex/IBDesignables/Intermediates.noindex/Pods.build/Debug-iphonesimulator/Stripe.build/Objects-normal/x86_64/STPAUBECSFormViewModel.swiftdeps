@@ -1,0 +1,521 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "STPAUBECSFormViewField"
+- "STPAUBECSFormViewModel"
+provides-nominal:
+- "6Stripe22STPAUBECSFormViewFieldO"
+- "6Stripe22STPAUBECSFormViewModelC"
+provides-member:
+- ["6Stripe22STPAUBECSFormViewFieldO", ""]
+- ["6Stripe22STPAUBECSFormViewModelC", ""]
+provides-dynamic-lookup:
+- "accountNumber"
+- "areFieldsComplete"
+- "bankIcon"
+- "becsDebitParams"
+- "bsbLabel"
+- "bsbNumber"
+- "email"
+- "formattedString"
+- "isFieldComplete"
+- "isInputValid"
+- "name"
+- "paymentMethodParams"
+depends-top-level:
+- !private "!"
+- !private "!="
+- !private "&&"
+- "=="
+- !private ">"
+- !private "??"
+- !private "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- "FloatLiteralType"
+- "Int"
+- "IntegerLiteralType"
+- "STPAUBECSFormViewField"
+- "STPAUBECSFormViewModel"
+- !private "STPBECSDebitAccountNumberValidator"
+- !private "STPBSBNumberValidator"
+- !private "STPEmailAddressValidator"
+- !private "STPLocalizedString"
+- "STPPaymentMethodAUBECSDebitParams"
+- !private "STPPaymentMethodBillingDetails"
+- "STPPaymentMethodParams"
+- "String"
+- !private "StringLiteralType"
+- "UIImage"
+- "UnsafeMutablePointer"
+- !private "accountNumber"
+- !private "areFieldsComplete"
+- !private "becsDebitParams"
+- !private "bsbNumber"
+- !private "email"
+- !private "isFieldComplete"
+- !private "name"
+- !private "||"
+- !private "~="
+depends-member:
+- !private ["SK", ""]
+- !private ["SK", "count"]
+- !private ["So15CNKeyDescriptorP", "count"]
+- !private ["s7CVarArgP", "accountNumber"]
+- !private ["s7CVarArgP", "bsbNumber"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "email"]
+- !private ["s7CVarArgP", "formattedSanitizedText"]
+- !private ["s7CVarArgP", "icon"]
+- !private ["s7CVarArgP", "identity"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "name"]
+- !private ["s7CVarArgP", "pointee"]
+- !private ["s7CVarArgP", "sanitizedNumericString"]
+- !private ["s7CVarArgP", "stringIsValidEmailAddress"]
+- !private ["s7CVarArgP", "stringIsValidPartialEmailAddress"]
+- !private ["s7CVarArgP", "validationState"]
+- !private ["Sl", ""]
+- !private ["Sl", "count"]
+- !private ["SL", ""]
+- !private ["SL", "count"]
+- !private ["SL", "pointee"]
+- !private ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "accountNumber"]
+- !private ["s28CustomDebugStringConvertibleP", "bsbNumber"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "email"]
+- !private ["s28CustomDebugStringConvertibleP", "formattedSanitizedText"]
+- !private ["s28CustomDebugStringConvertibleP", "icon"]
+- !private ["s28CustomDebugStringConvertibleP", "identity"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "name"]
+- !private ["s28CustomDebugStringConvertibleP", "pointee"]
+- !private ["s28CustomDebugStringConvertibleP", "sanitizedNumericString"]
+- !private ["s28CustomDebugStringConvertibleP", "stringIsValidEmailAddress"]
+- !private ["s28CustomDebugStringConvertibleP", "stringIsValidPartialEmailAddress"]
+- !private ["s28CustomDebugStringConvertibleP", "validationState"]
+- !private ["s17CustomReflectableP", ""]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "pointee"]
+- !private ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "accountNumber"]
+- !private ["s23CustomStringConvertibleP", "bsbNumber"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "email"]
+- !private ["s23CustomStringConvertibleP", "formattedSanitizedText"]
+- !private ["s23CustomStringConvertibleP", "icon"]
+- !private ["s23CustomStringConvertibleP", "identity"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "name"]
+- !private ["s23CustomStringConvertibleP", "sanitizedNumericString"]
+- !private ["s23CustomStringConvertibleP", "stringIsValidEmailAddress"]
+- !private ["s23CustomStringConvertibleP", "stringIsValidPartialEmailAddress"]
+- !private ["s23CustomStringConvertibleP", "validationState"]
+- !private ["Se", "count"]
+- !private ["SE", "count"]
+- ["SQ", "=="]
+- ["SQ", "BSBNumber"]
+- ["SQ", "Default_RawValue"]
+- ["SQ", "RawValue"]
+- ["SQ", ""]
+- ["SQ", "_Default_RawValue"]
+- ["SQ", "_rawHashValue"]
+- ["SQ", "accountNumber"]
+- !private ["SQ", "bsbNumber"]
+- !private ["SQ", "complete"]
+- !private ["SQ", "count"]
+- ["SQ", "email"]
+- !private ["SQ", "formattedSanitizedText"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- !private ["SQ", "icon"]
+- !private ["SQ", "identity"]
+- !private ["SQ", "incomplete"]
+- ["SQ", "init"]
+- !private ["SQ", "invalid"]
+- ["SQ", "name"]
+- !private ["SQ", "pointee"]
+- ["SQ", "rawValue"]
+- !private ["SQ", "sanitizedNumericString"]
+- !private ["SQ", "stringIsValidEmailAddress"]
+- !private ["SQ", "stringIsValidPartialEmailAddress"]
+- !private ["SQ", "validationState"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "count"]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", "count"]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s26ExpressibleByStringLiteralP", "count"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "count"]
+- ["SH", "=="]
+- ["SH", "BSBNumber"]
+- ["SH", "Default_RawValue"]
+- ["SH", "RawValue"]
+- ["SH", ""]
+- ["SH", "_Default_RawValue"]
+- ["SH", "_rawHashValue"]
+- ["SH", "accountNumber"]
+- !private ["SH", "bsbNumber"]
+- !private ["SH", "complete"]
+- !private ["SH", "count"]
+- ["SH", "email"]
+- !private ["SH", "formattedSanitizedText"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- !private ["SH", "icon"]
+- !private ["SH", "identity"]
+- !private ["SH", "incomplete"]
+- ["SH", "init"]
+- !private ["SH", "invalid"]
+- ["SH", "name"]
+- !private ["SH", "pointee"]
+- ["SH", "rawValue"]
+- !private ["SH", "sanitizedNumericString"]
+- !private ["SH", "stringIsValidEmailAddress"]
+- !private ["SH", "stringIsValidPartialEmailAddress"]
+- !private ["SH", "validationState"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", "count"]
+- !private ["s10MirrorPathP", "count"]
+- !private ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "count"]
+- !private ["So9NSCopyingP", ""]
+- !private ["So9NSCopyingP", "count"]
+- !private ["So21NSItemProviderReadingP", "count"]
+- !private ["So21NSItemProviderWritingP", "count"]
+- !private ["So16NSMutableCopyingP", "count"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "accountNumber"]
+- !private ["So8NSObjectC", "bsbNumber"]
+- !private ["So8NSObjectC", "count"]
+- !private ["So8NSObjectC", "email"]
+- !private ["So8NSObjectC", "formattedSanitizedText"]
+- !private ["So8NSObjectC", "icon"]
+- !private ["So8NSObjectC", "identity"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "name"]
+- !private ["So8NSObjectC", "sanitizedNumericString"]
+- !private ["So8NSObjectC", "stringIsValidEmailAddress"]
+- !private ["So8NSObjectC", "stringIsValidPartialEmailAddress"]
+- !private ["So8NSObjectC", "validationState"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "accountNumber"]
+- !private ["So8NSObjectP", "bsbNumber"]
+- !private ["So8NSObjectP", "count"]
+- !private ["So8NSObjectP", "email"]
+- !private ["So8NSObjectP", "formattedSanitizedText"]
+- !private ["So8NSObjectP", "icon"]
+- !private ["So8NSObjectP", "identity"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "name"]
+- !private ["So8NSObjectP", "sanitizedNumericString"]
+- !private ["So8NSObjectP", "stringIsValidEmailAddress"]
+- !private ["So8NSObjectP", "stringIsValidPartialEmailAddress"]
+- !private ["So8NSObjectP", "validationState"]
+- !private ["So14NSSecureCodingP", ""]
+- !private ["So14NSSecureCodingP", "count"]
+- !private ["So8NSStringC", "count"]
+- !private ["Sm", "count"]
+- ["SY", "=="]
+- ["SY", "BSBNumber"]
+- ["SY", "Default_RawValue"]
+- ["SY", "RawValue"]
+- ["SY", ""]
+- ["SY", "_Default_RawValue"]
+- ["SY", "_rawHashValue"]
+- ["SY", "accountNumber"]
+- !private ["SY", "complete"]
+- ["SY", "email"]
+- ["SY", "hash"]
+- ["SY", "hashValue"]
+- !private ["SY", "incomplete"]
+- ["SY", "init"]
+- !private ["SY", "invalid"]
+- ["SY", "name"]
+- ["SY", "rawValue"]
+- !private ["6Stripe23STPAPIResponseDecodableP", "email"]
+- !private ["6Stripe23STPAPIResponseDecodableP", "init"]
+- !private ["6Stripe23STPAPIResponseDecodableP", "name"]
+- ["6Stripe22STPAUBECSFormViewFieldO", "=="]
+- ["6Stripe22STPAUBECSFormViewFieldO", "BSBNumber"]
+- ["6Stripe22STPAUBECSFormViewFieldO", "Default_RawValue"]
+- ["6Stripe22STPAUBECSFormViewFieldO", "RawValue"]
+- ["6Stripe22STPAUBECSFormViewFieldO", ""]
+- ["6Stripe22STPAUBECSFormViewFieldO", "_Default_RawValue"]
+- ["6Stripe22STPAUBECSFormViewFieldO", "_rawHashValue"]
+- ["6Stripe22STPAUBECSFormViewFieldO", "accountNumber"]
+- ["6Stripe22STPAUBECSFormViewFieldO", "email"]
+- ["6Stripe22STPAUBECSFormViewFieldO", "hash"]
+- ["6Stripe22STPAUBECSFormViewFieldO", "hashValue"]
+- ["6Stripe22STPAUBECSFormViewFieldO", "init"]
+- ["6Stripe22STPAUBECSFormViewFieldO", "name"]
+- ["6Stripe22STPAUBECSFormViewFieldO", "rawValue"]
+- ["6Stripe22STPAUBECSFormViewModelC", "Bool"]
+- ["6Stripe22STPAUBECSFormViewModelC", "STPAUBECSFormViewField"]
+- !private ["6Stripe22STPAUBECSFormViewModelC", "STPBECSDebitAccountNumberValidator"]
+- !private ["6Stripe22STPAUBECSFormViewModelC", "STPBSBNumberValidator"]
+- !private ["6Stripe22STPAUBECSFormViewModelC", "STPEmailAddressValidator"]
+- !private ["6Stripe22STPAUBECSFormViewModelC", "STPLocalizedString"]
+- ["6Stripe22STPAUBECSFormViewModelC", "STPPaymentMethodAUBECSDebitParams"]
+- !private ["6Stripe22STPAUBECSFormViewModelC", "STPPaymentMethodBillingDetails"]
+- ["6Stripe22STPAUBECSFormViewModelC", "STPPaymentMethodParams"]
+- ["6Stripe22STPAUBECSFormViewModelC", "String"]
+- ["6Stripe22STPAUBECSFormViewModelC", "UIImage"]
+- ["6Stripe22STPAUBECSFormViewModelC", "UnsafeMutablePointer"]
+- ["6Stripe22STPAUBECSFormViewModelC", "accountNumber"]
+- !private ["6Stripe22STPAUBECSFormViewModelC", "areFieldsComplete"]
+- ["6Stripe22STPAUBECSFormViewModelC", "bankIcon"]
+- ["6Stripe22STPAUBECSFormViewModelC", "becsDebitParams"]
+- ["6Stripe22STPAUBECSFormViewModelC", "bsbLabel"]
+- ["6Stripe22STPAUBECSFormViewModelC", "bsbNumber"]
+- ["6Stripe22STPAUBECSFormViewModelC", "deinit"]
+- ["6Stripe22STPAUBECSFormViewModelC", "email"]
+- ["6Stripe22STPAUBECSFormViewModelC", "formattedString"]
+- ["6Stripe22STPAUBECSFormViewModelC", "init"]
+- ["6Stripe22STPAUBECSFormViewModelC", "isFieldComplete"]
+- ["6Stripe22STPAUBECSFormViewModelC", "isInputValid"]
+- ["6Stripe22STPAUBECSFormViewModelC", "name"]
+- ["6Stripe22STPAUBECSFormViewModelC", "paymentMethodParams"]
+- !private ["6Stripe34STPBECSDebitAccountNumberValidatorC", "formattedSanitizedText"]
+- !private ["6Stripe34STPBECSDebitAccountNumberValidatorC", "sanitizedNumericString"]
+- !private ["6Stripe34STPBECSDebitAccountNumberValidatorC", "validationState"]
+- !private ["6Stripe21STPBSBNumberValidatorC", "formattedSanitizedText"]
+- !private ["6Stripe21STPBSBNumberValidatorC", "icon"]
+- !private ["6Stripe21STPBSBNumberValidatorC", "identity"]
+- !private ["6Stripe21STPBSBNumberValidatorC", "sanitizedNumericString"]
+- !private ["6Stripe21STPBSBNumberValidatorC", "validationState"]
+- !private ["6Stripe24STPEmailAddressValidatorC", "stringIsValidEmailAddress"]
+- !private ["6Stripe24STPEmailAddressValidatorC", "stringIsValidPartialEmailAddress"]
+- !private ["6Stripe16STPFormEncodableP", "accountNumber"]
+- !private ["6Stripe16STPFormEncodableP", "bsbNumber"]
+- !private ["6Stripe16STPFormEncodableP", "email"]
+- !private ["6Stripe16STPFormEncodableP", "init"]
+- !private ["6Stripe16STPFormEncodableP", "name"]
+- ["6Stripe25STPNumericStringValidatorC", ""]
+- !private ["6Stripe25STPNumericStringValidatorC", "formattedSanitizedText"]
+- !private ["6Stripe25STPNumericStringValidatorC", "icon"]
+- !private ["6Stripe25STPNumericStringValidatorC", "identity"]
+- !private ["6Stripe25STPNumericStringValidatorC", "sanitizedNumericString"]
+- !private ["6Stripe25STPNumericStringValidatorC", "validationState"]
+- !private ["6Stripe33STPPaymentMethodAUBECSDebitParamsC", "accountNumber"]
+- !private ["6Stripe33STPPaymentMethodAUBECSDebitParamsC", "bsbNumber"]
+- !private ["6Stripe33STPPaymentMethodAUBECSDebitParamsC", "init"]
+- !private ["6Stripe30STPPaymentMethodBillingDetailsC", "email"]
+- !private ["6Stripe30STPPaymentMethodBillingDetailsC", "init"]
+- !private ["6Stripe30STPPaymentMethodBillingDetailsC", "name"]
+- !private ["6Stripe22STPPaymentMethodParamsC", "init"]
+- !private ["6Stripe16STPPaymentOptionP", "init"]
+- !private ["6Stripe22STPTextValidationStateO", "RawValue"]
+- !private ["6Stripe22STPTextValidationStateO", ""]
+- !private ["6Stripe22STPTextValidationStateO", "complete"]
+- !private ["6Stripe22STPTextValidationStateO", "incomplete"]
+- !private ["6Stripe22STPTextValidationStateO", "invalid"]
+- !private ["ST", "Element"]
+- !private ["ST", "Iterator"]
+- !private ["ST", ""]
+- !private ["ST", "count"]
+- !private ["ST", "makeIterator"]
+- !private ["Sx", ""]
+- !private ["Sx", "pointee"]
+- !private ["SS", "count"]
+- !private ["Sy", "count"]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", "count"]
+- !private ["s20TextOutputStreamableP", ""]
+- !private ["s20TextOutputStreamableP", "count"]
+- !private ["Sp", "pointee"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "count"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "pointee"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "count"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "count"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "count"]
+- !private ["s19_HasContiguousBytesP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "accountNumber"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "bsbNumber"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "count"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "email"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "formattedSanitizedText"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "icon"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "identity"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sanitizedNumericString"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stringIsValidEmailAddress"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stringIsValidPartialEmailAddress"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "validationState"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "accountNumber"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bsbNumber"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "count"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "email"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "formattedSanitizedText"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "icon"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "identity"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "name"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sanitizedNumericString"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stringIsValidEmailAddress"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stringIsValidPartialEmailAddress"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "validationState"]
+- !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s8_PointerP", "pointee"]
+depends-nominal:
+- !private "SK"
+- !private "So15CNKeyDescriptorP"
+- !private "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "SH"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "Sm"
+- "SY"
+- !private "6Stripe23STPAPIResponseDecodableP"
+- "6Stripe22STPAUBECSFormViewFieldO"
+- "6Stripe22STPAUBECSFormViewModelC"
+- !private "6Stripe34STPBECSDebitAccountNumberValidatorC"
+- !private "6Stripe21STPBSBNumberValidatorC"
+- !private "6Stripe24STPEmailAddressValidatorC"
+- !private "6Stripe16STPFormEncodableP"
+- "6Stripe25STPNumericStringValidatorC"
+- !private "6Stripe33STPPaymentMethodAUBECSDebitParamsC"
+- !private "6Stripe30STPPaymentMethodBillingDetailsC"
+- !private "6Stripe22STPPaymentMethodParamsC"
+- !private "6Stripe16STPPaymentOptionP"
+- !private "6Stripe22STPTextValidationStateO"
+- !private "ST"
+- !private "Sx"
+- !private "SS"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "Sp"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s8_PointerP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Vision.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/AVFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Pods/Target Support Files/Stripe/Stripe-umbrella.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Stripe.build/unextended-module.modulemap"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "ea8ef5578b3a7013f54e4c6d2557a4af"
