@@ -1,0 +1,527 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "STPEphemeralKey"
+provides-nominal:
+- "6Stripe15STPEphemeralKeyC"
+provides-member:
+- ["6Stripe15STPEphemeralKeyC", ""]
+provides-dynamic-lookup:
+- "allResponseFields"
+- "created"
+- "customerID"
+- "decodedObject"
+- "expires"
+- "hash"
+- "isEqual"
+- "issuingCardID"
+- "livemode"
+- "secret"
+- "stripeID"
+depends-top-level:
+- !private "!"
+- !private "!="
+- !private "&&"
+- !private "=="
+- !private "==="
+- "AnyHashable"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- "CastingPrecedence"
+- "Date"
+- "Int"
+- "NSDictionary"
+- "NSObject"
+- "STPAPIResponseDecodable"
+- "STPEphemeralKey"
+- "Self"
+- "String"
+- !private "StringLiteralType"
+- !private "isEqual"
+- !private "stripeID"
+- !private "||"
+depends-member:
+- !private ["SK", ""]
+- !private ["SK", "hash"]
+- !private ["So15CNKeyDescriptorP", "hash"]
+- ["s7CVarArgP", "Self"]
+- ["s7CVarArgP", ""]
+- ["s7CVarArgP", "allResponseFields"]
+- !private ["s7CVarArgP", "created"]
+- !private ["s7CVarArgP", "customerID"]
+- ["s7CVarArgP", "decodedObject"]
+- !private ["s7CVarArgP", "expires"]
+- !private ["s7CVarArgP", "hash"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isEqual"]
+- !private ["s7CVarArgP", "issuingCardID"]
+- !private ["s7CVarArgP", "livemode"]
+- !private ["s7CVarArgP", "secret"]
+- !private ["s7CVarArgP", "stp_array"]
+- !private ["s7CVarArgP", "stp_bool"]
+- !private ["s7CVarArgP", "stp_date"]
+- !private ["s7CVarArgP", "stp_dictionaryByRemovingNulls"]
+- !private ["s7CVarArgP", "stp_string"]
+- !private ["s7CVarArgP", "stripeID"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["Sl", ""]
+- !private ["Sl", "hash"]
+- !private ["SL", ""]
+- !private ["SL", "hash"]
+- ["s28CustomDebugStringConvertibleP", "Self"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- ["s28CustomDebugStringConvertibleP", "allResponseFields"]
+- !private ["s28CustomDebugStringConvertibleP", "created"]
+- !private ["s28CustomDebugStringConvertibleP", "customerID"]
+- ["s28CustomDebugStringConvertibleP", "decodedObject"]
+- !private ["s28CustomDebugStringConvertibleP", "expires"]
+- !private ["s28CustomDebugStringConvertibleP", "hash"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isEqual"]
+- !private ["s28CustomDebugStringConvertibleP", "issuingCardID"]
+- !private ["s28CustomDebugStringConvertibleP", "livemode"]
+- !private ["s28CustomDebugStringConvertibleP", "secret"]
+- !private ["s28CustomDebugStringConvertibleP", "stp_array"]
+- !private ["s28CustomDebugStringConvertibleP", "stp_bool"]
+- !private ["s28CustomDebugStringConvertibleP", "stp_date"]
+- !private ["s28CustomDebugStringConvertibleP", "stp_dictionaryByRemovingNulls"]
+- !private ["s28CustomDebugStringConvertibleP", "stp_string"]
+- !private ["s28CustomDebugStringConvertibleP", "stripeID"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s17CustomReflectableP", "hash"]
+- !private ["s17CustomReflectableP", "stp_array"]
+- !private ["s17CustomReflectableP", "stp_bool"]
+- !private ["s17CustomReflectableP", "stp_date"]
+- !private ["s17CustomReflectableP", "stp_dictionaryByRemovingNulls"]
+- !private ["s17CustomReflectableP", "stp_string"]
+- !private ["s17CustomReflectableP", "subscript"]
+- ["s23CustomStringConvertibleP", "Self"]
+- ["s23CustomStringConvertibleP", ""]
+- ["s23CustomStringConvertibleP", "allResponseFields"]
+- !private ["s23CustomStringConvertibleP", "created"]
+- !private ["s23CustomStringConvertibleP", "customerID"]
+- ["s23CustomStringConvertibleP", "decodedObject"]
+- !private ["s23CustomStringConvertibleP", "expires"]
+- !private ["s23CustomStringConvertibleP", "hash"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isEqual"]
+- !private ["s23CustomStringConvertibleP", "issuingCardID"]
+- !private ["s23CustomStringConvertibleP", "livemode"]
+- !private ["s23CustomStringConvertibleP", "secret"]
+- !private ["s23CustomStringConvertibleP", "stp_array"]
+- !private ["s23CustomStringConvertibleP", "stp_bool"]
+- !private ["s23CustomStringConvertibleP", "stp_date"]
+- !private ["s23CustomStringConvertibleP", "stp_dictionaryByRemovingNulls"]
+- !private ["s23CustomStringConvertibleP", "stp_string"]
+- !private ["s23CustomStringConvertibleP", "stripeID"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["Se", "hash"]
+- !private ["SE", "hash"]
+- ["SQ", "Self"]
+- ["SQ", ""]
+- ["SQ", "allResponseFields"]
+- !private ["SQ", "created"]
+- !private ["SQ", "customerID"]
+- ["SQ", "decodedObject"]
+- !private ["SQ", "expires"]
+- !private ["SQ", "hash"]
+- !private ["SQ", "init"]
+- !private ["SQ", "isEqual"]
+- !private ["SQ", "issuingCardID"]
+- !private ["SQ", "livemode"]
+- !private ["SQ", "secret"]
+- !private ["SQ", "stp_array"]
+- !private ["SQ", "stp_bool"]
+- !private ["SQ", "stp_date"]
+- !private ["SQ", "stp_dictionaryByRemovingNulls"]
+- !private ["SQ", "stp_string"]
+- !private ["SQ", "stripeID"]
+- !private ["SQ", "subscript"]
+- ["s30ExpressibleByDictionaryLiteralP", "Key"]
+- ["s30ExpressibleByDictionaryLiteralP", "Value"]
+- ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "stp_array"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "stp_bool"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "stp_date"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "stp_dictionaryByRemovingNulls"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "stp_string"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "hash"]
+- !private ["s23ExpressibleByNilLiteralP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", "hash"]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s26ExpressibleByStringLiteralP", "hash"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "hash"]
+- ["SH", "Self"]
+- ["SH", ""]
+- !private ["SH", "_rawHashValue"]
+- ["SH", "allResponseFields"]
+- !private ["SH", "created"]
+- !private ["SH", "customerID"]
+- ["SH", "decodedObject"]
+- !private ["SH", "expires"]
+- !private ["SH", "hash"]
+- !private ["SH", "hashValue"]
+- !private ["SH", "init"]
+- !private ["SH", "isEqual"]
+- !private ["SH", "issuingCardID"]
+- !private ["SH", "livemode"]
+- !private ["SH", "secret"]
+- !private ["SH", "stp_array"]
+- !private ["SH", "stp_bool"]
+- !private ["SH", "stp_date"]
+- !private ["SH", "stp_dictionaryByRemovingNulls"]
+- !private ["SH", "stp_string"]
+- !private ["SH", "stripeID"]
+- !private ["SH", "subscript"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", "hash"]
+- !private ["s10MirrorPathP", "hash"]
+- !private ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "hash"]
+- ["So8NSCodingP", "stp_array"]
+- ["So8NSCodingP", "stp_bool"]
+- ["So8NSCodingP", "stp_date"]
+- ["So8NSCodingP", "stp_dictionaryByRemovingNulls"]
+- ["So8NSCodingP", "stp_string"]
+- !private ["So8NSCodingP", "subscript"]
+- !private ["So9NSCopyingP", ""]
+- !private ["So9NSCopyingP", "hash"]
+- ["So9NSCopyingP", "stp_array"]
+- ["So9NSCopyingP", "stp_bool"]
+- ["So9NSCopyingP", "stp_date"]
+- ["So9NSCopyingP", "stp_dictionaryByRemovingNulls"]
+- ["So9NSCopyingP", "stp_string"]
+- !private ["So9NSCopyingP", "subscript"]
+- !private ["So12NSDictionaryC", "stp_array"]
+- !private ["So12NSDictionaryC", "stp_bool"]
+- !private ["So12NSDictionaryC", "stp_date"]
+- !private ["So12NSDictionaryC", "stp_dictionaryByRemovingNulls"]
+- !private ["So12NSDictionaryC", "stp_string"]
+- !private ["So12NSDictionaryC", "subscript"]
+- ["So17NSFastEnumerationP", "stp_array"]
+- ["So17NSFastEnumerationP", "stp_bool"]
+- ["So17NSFastEnumerationP", "stp_date"]
+- ["So17NSFastEnumerationP", "stp_dictionaryByRemovingNulls"]
+- ["So17NSFastEnumerationP", "stp_string"]
+- !private ["So17NSFastEnumerationP", "subscript"]
+- !private ["So21NSItemProviderReadingP", "hash"]
+- !private ["So21NSItemProviderWritingP", "hash"]
+- !private ["So16NSMutableCopyingP", "hash"]
+- ["So16NSMutableCopyingP", "stp_array"]
+- ["So16NSMutableCopyingP", "stp_bool"]
+- ["So16NSMutableCopyingP", "stp_date"]
+- ["So16NSMutableCopyingP", "stp_dictionaryByRemovingNulls"]
+- ["So16NSMutableCopyingP", "stp_string"]
+- !private ["So16NSMutableCopyingP", "subscript"]
+- ["So8NSObjectC", "AnyHashable"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "Date"]
+- ["So8NSObjectC", "Int"]
+- !private ["So8NSObjectC", "NSDictionary"]
+- ["So8NSObjectC", "STPEphemeralKey"]
+- ["So8NSObjectC", "Self"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "allResponseFields"]
+- ["So8NSObjectC", "created"]
+- ["So8NSObjectC", "customerID"]
+- ["So8NSObjectC", "decodedObject"]
+- ["So8NSObjectC", "expires"]
+- ["So8NSObjectC", "hash"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "isEqual"]
+- ["So8NSObjectC", "issuingCardID"]
+- ["So8NSObjectC", "livemode"]
+- !private ["So8NSObjectC", "objectForKeyedSubscript"]
+- ["So8NSObjectC", "secret"]
+- !private ["So8NSObjectC", "stp_array"]
+- !private ["So8NSObjectC", "stp_bool"]
+- !private ["So8NSObjectC", "stp_date"]
+- !private ["So8NSObjectC", "stp_dictionaryByRemovingNulls"]
+- !private ["So8NSObjectC", "stp_string"]
+- ["So8NSObjectC", "stripeID"]
+- !private ["So8NSObjectC", "subscript"]
+- !private ["So8NSObjectP", "NSDictionary"]
+- ["So8NSObjectP", "Self"]
+- ["So8NSObjectP", ""]
+- ["So8NSObjectP", "allResponseFields"]
+- ["So8NSObjectP", "created"]
+- ["So8NSObjectP", "customerID"]
+- ["So8NSObjectP", "decodedObject"]
+- ["So8NSObjectP", "expires"]
+- ["So8NSObjectP", "hash"]
+- ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "isEqual"]
+- ["So8NSObjectP", "issuingCardID"]
+- ["So8NSObjectP", "livemode"]
+- !private ["So8NSObjectP", "objectForKeyedSubscript"]
+- ["So8NSObjectP", "secret"]
+- ["So8NSObjectP", "stp_array"]
+- ["So8NSObjectP", "stp_bool"]
+- ["So8NSObjectP", "stp_date"]
+- ["So8NSObjectP", "stp_dictionaryByRemovingNulls"]
+- ["So8NSObjectP", "stp_string"]
+- ["So8NSObjectP", "stripeID"]
+- !private ["So8NSObjectP", "subscript"]
+- !private ["So14NSSecureCodingP", ""]
+- !private ["So14NSSecureCodingP", "hash"]
+- ["So14NSSecureCodingP", "stp_array"]
+- ["So14NSSecureCodingP", "stp_bool"]
+- ["So14NSSecureCodingP", "stp_date"]
+- ["So14NSSecureCodingP", "stp_dictionaryByRemovingNulls"]
+- ["So14NSSecureCodingP", "stp_string"]
+- !private ["So14NSSecureCodingP", "subscript"]
+- !private ["So8NSStringC", "hash"]
+- !private ["Sm", "hash"]
+- ["6Stripe23STPAPIResponseDecodableP", "Self"]
+- ["6Stripe23STPAPIResponseDecodableP", ""]
+- ["6Stripe23STPAPIResponseDecodableP", "allResponseFields"]
+- ["6Stripe23STPAPIResponseDecodableP", "created"]
+- ["6Stripe23STPAPIResponseDecodableP", "customerID"]
+- ["6Stripe23STPAPIResponseDecodableP", "decodedObject"]
+- ["6Stripe23STPAPIResponseDecodableP", "expires"]
+- ["6Stripe23STPAPIResponseDecodableP", "hash"]
+- ["6Stripe23STPAPIResponseDecodableP", "init"]
+- ["6Stripe23STPAPIResponseDecodableP", "isEqual"]
+- ["6Stripe23STPAPIResponseDecodableP", "issuingCardID"]
+- ["6Stripe23STPAPIResponseDecodableP", "livemode"]
+- ["6Stripe23STPAPIResponseDecodableP", "secret"]
+- ["6Stripe23STPAPIResponseDecodableP", "stripeID"]
+- ["6Stripe15STPEphemeralKeyC", "AnyHashable"]
+- ["6Stripe15STPEphemeralKeyC", "Bool"]
+- ["6Stripe15STPEphemeralKeyC", "Date"]
+- ["6Stripe15STPEphemeralKeyC", "Int"]
+- !private ["6Stripe15STPEphemeralKeyC", "NSDictionary"]
+- ["6Stripe15STPEphemeralKeyC", "STPEphemeralKey"]
+- ["6Stripe15STPEphemeralKeyC", "Self"]
+- ["6Stripe15STPEphemeralKeyC", "String"]
+- ["6Stripe15STPEphemeralKeyC", ""]
+- ["6Stripe15STPEphemeralKeyC", "allResponseFields"]
+- ["6Stripe15STPEphemeralKeyC", "created"]
+- ["6Stripe15STPEphemeralKeyC", "customerID"]
+- ["6Stripe15STPEphemeralKeyC", "decodedObject"]
+- ["6Stripe15STPEphemeralKeyC", "deinit"]
+- ["6Stripe15STPEphemeralKeyC", "expires"]
+- ["6Stripe15STPEphemeralKeyC", "hash"]
+- ["6Stripe15STPEphemeralKeyC", "init"]
+- ["6Stripe15STPEphemeralKeyC", "isEqual"]
+- ["6Stripe15STPEphemeralKeyC", "issuingCardID"]
+- ["6Stripe15STPEphemeralKeyC", "livemode"]
+- ["6Stripe15STPEphemeralKeyC", "secret"]
+- ["6Stripe15STPEphemeralKeyC", "stripeID"]
+- !private ["ST", "Element"]
+- !private ["ST", "Iterator"]
+- !private ["ST", ""]
+- !private ["ST", "hash"]
+- !private ["ST", "stp_array"]
+- !private ["ST", "stp_bool"]
+- !private ["ST", "stp_date"]
+- !private ["ST", "stp_dictionaryByRemovingNulls"]
+- !private ["ST", "stp_string"]
+- !private ["ST", "subscript"]
+- !private ["SS", "hash"]
+- !private ["Sy", "hash"]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", "hash"]
+- !private ["s20TextOutputStreamableP", ""]
+- !private ["s20TextOutputStreamableP", "hash"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "hash"]
+- ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "hash"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "hash"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "hash"]
+- !private ["s19_HasContiguousBytesP", "hash"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "hash"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "stp_array"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "stp_bool"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "stp_date"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "stp_dictionaryByRemovingNulls"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "stp_string"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Self"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- ["10Foundation27_KeyValueCodingAndObservingP", "allResponseFields"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "created"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "customerID"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "decodedObject"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "expires"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "hash"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isEqual"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "issuingCardID"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "livemode"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "secret"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stp_array"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stp_bool"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stp_date"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stp_dictionaryByRemovingNulls"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stp_string"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stripeID"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "subscript"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Self"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "allResponseFields"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "created"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "customerID"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "decodedObject"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "expires"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "hash"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isEqual"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "issuingCardID"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "livemode"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "secret"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stp_array"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stp_bool"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stp_date"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stp_dictionaryByRemovingNulls"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stp_string"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stripeID"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
+- !private ["s21_ObjectiveCBridgeableP", "hash"]
+depends-nominal:
+- !private "SK"
+- !private "So15CNKeyDescriptorP"
+- "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "SH"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- !private "So12NSDictionaryC"
+- "So17NSFastEnumerationP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "Sm"
+- "6Stripe23STPAPIResponseDecodableP"
+- "6Stripe15STPEphemeralKeyC"
+- !private "ST"
+- !private "SS"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Vision.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/AVFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Pods/Target Support Files/Stripe/Stripe-umbrella.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Stripe.build/unextended-module.modulemap"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "d0a21a2d8f91c7d72325a08c93ac27b2"

@@ -1,0 +1,981 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Drink"
+provides-nominal:
+- "6Drinkz5DrinkC"
+- "6Drinkz5DrinkC10CodingKeysO"
+provides-member:
+- ["6Drinkz5DrinkC", ""]
+- ["6Drinkz5DrinkC10CodingKeysO", ""]
+- ["6Drinkz5DrinkC", "cost"]
+- ["6Drinkz5DrinkC", "init"]
+provides-dynamic-lookup:
+- "copy"
+- "cost"
+- "encode"
+- "getDrinks"
+depends-top-level:
+- !private "*"
+- "=="
+- !private "AF"
+- !private "Array"
+- "AssignmentPrecedence"
+- !private "CastingPrecedence"
+- "Codable"
+- "CodingKey"
+- !private "CodingKeys"
+- !private "CoreDataManager"
+- "Decoder"
+- "Double"
+- "Drink"
+- "Encoder"
+- !private "FloatLiteralType"
+- !private "Int16"
+- !private "IntegerLiteralType"
+- "JSONDecoder"
+- "JSONSerialization"
+- "NSCopying"
+- "NSDictionary"
+- "NSManagedObject"
+- "NSZone"
+- "String"
+- "StringLiteralType"
+- "UUID"
+- "Void"
+- !private "_findStringSwitchCase"
+- "os_log"
+- !private "price"
+- "print"
+- !private "quantity"
+- !private "~="
+depends-member:
+- !private ["s18AdditiveArithmeticP", ""]
+- !private ["s18AdditiveArithmeticP", "init"]
+- !private ["SB", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["s7CVarArgP", "AF"]
+- !private ["s7CVarArgP", "CodingKeys"]
+- !private ["s7CVarArgP", "CoreDataManager"]
+- !private ["s7CVarArgP", "Double"]
+- !private ["s7CVarArgP", "Drink"]
+- !private ["s7CVarArgP", "Int16"]
+- !private ["s7CVarArgP", "JSONDecoder"]
+- !private ["s7CVarArgP", "JSONSerialization"]
+- !private ["s7CVarArgP", "String"]
+- !private ["s7CVarArgP", "UUID"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_findStringSwitchCase"]
+- !private ["s7CVarArgP", "barId"]
+- ["s7CVarArgP", "copy"]
+- ["s7CVarArgP", "copyWithZone"]
+- !private ["s7CVarArgP", "data"]
+- !private ["s7CVarArgP", "detail"]
+- ["s7CVarArgP", "encode"]
+- !private ["s7CVarArgP", "findStringSwitchCase"]
+- !private ["s7CVarArgP", "getDrinks"]
+- !private ["s7CVarArgP", "id"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "jsonObject"]
+- !private ["s7CVarArgP", "name"]
+- !private ["s7CVarArgP", "os_log"]
+- !private ["s7CVarArgP", "price"]
+- !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "quantity"]
+- !private ["s7CVarArgP", "value"]
+- !private ["s7CVarArgP", "viewContext"]
+- ["s9CodingKeyP", "=="]
+- ["s9CodingKeyP", "Default_RawValue"]
+- ["s9CodingKeyP", "RawValue"]
+- ["s9CodingKeyP", ""]
+- ["s9CodingKeyP", "_Default_RawValue"]
+- !private ["s9CodingKeyP", "_findStringSwitchCase"]
+- ["s9CodingKeyP", "_rawHashValue"]
+- !private ["s9CodingKeyP", "barId"]
+- ["s9CodingKeyP", "debugDescription"]
+- ["s9CodingKeyP", "description"]
+- !private ["s9CodingKeyP", "detail"]
+- !private ["s9CodingKeyP", "drinkResponse"]
+- !private ["s9CodingKeyP", "findStringSwitchCase"]
+- ["s9CodingKeyP", "hash"]
+- ["s9CodingKeyP", "hashValue"]
+- !private ["s9CodingKeyP", "id"]
+- ["s9CodingKeyP", "init"]
+- ["s9CodingKeyP", "intValue"]
+- !private ["s9CodingKeyP", "name"]
+- !private ["s9CodingKeyP", "price"]
+- !private ["s9CodingKeyP", "quantity"]
+- ["s9CodingKeyP", "rawValue"]
+- ["s9CodingKeyP", "stringValue"]
+- ["6Drinkz5DrinkC10CodingKeysO", "=="]
+- ["6Drinkz5DrinkC10CodingKeysO", "Default_RawValue"]
+- ["6Drinkz5DrinkC10CodingKeysO", "RawValue"]
+- ["6Drinkz5DrinkC10CodingKeysO", ""]
+- ["6Drinkz5DrinkC10CodingKeysO", "_Default_RawValue"]
+- !private ["6Drinkz5DrinkC10CodingKeysO", "_findStringSwitchCase"]
+- ["6Drinkz5DrinkC10CodingKeysO", "_rawHashValue"]
+- ["6Drinkz5DrinkC10CodingKeysO", "barId"]
+- ["6Drinkz5DrinkC10CodingKeysO", "cost"]
+- ["6Drinkz5DrinkC10CodingKeysO", "debugDescription"]
+- ["6Drinkz5DrinkC10CodingKeysO", "description"]
+- ["6Drinkz5DrinkC10CodingKeysO", "detail"]
+- ["6Drinkz5DrinkC10CodingKeysO", "drinkResponse"]
+- !private ["6Drinkz5DrinkC10CodingKeysO", "findStringSwitchCase"]
+- ["6Drinkz5DrinkC10CodingKeysO", "hash"]
+- ["6Drinkz5DrinkC10CodingKeysO", "hashValue"]
+- ["6Drinkz5DrinkC10CodingKeysO", "id"]
+- ["6Drinkz5DrinkC10CodingKeysO", "init"]
+- ["6Drinkz5DrinkC10CodingKeysO", "intValue"]
+- ["6Drinkz5DrinkC10CodingKeysO", "name"]
+- ["6Drinkz5DrinkC10CodingKeysO", "price"]
+- ["6Drinkz5DrinkC10CodingKeysO", "quantity"]
+- ["6Drinkz5DrinkC10CodingKeysO", "rawValue"]
+- ["6Drinkz5DrinkC10CodingKeysO", "stringValue"]
+- !private ["SL", ""]
+- !private ["SL", "init"]
+- !private ["6Drinkz15CoreDataManagerC", "persistentContainer"]
+- !private ["6Drinkz15CoreDataManagerC", "sharedManager"]
+- ["s28CustomDebugStringConvertibleP", "=="]
+- !private ["s28CustomDebugStringConvertibleP", "AF"]
+- !private ["s28CustomDebugStringConvertibleP", "CodingKeys"]
+- !private ["s28CustomDebugStringConvertibleP", "CoreDataManager"]
+- ["s28CustomDebugStringConvertibleP", "Default_RawValue"]
+- !private ["s28CustomDebugStringConvertibleP", "Double"]
+- !private ["s28CustomDebugStringConvertibleP", "Drink"]
+- !private ["s28CustomDebugStringConvertibleP", "Int16"]
+- !private ["s28CustomDebugStringConvertibleP", "JSONDecoder"]
+- !private ["s28CustomDebugStringConvertibleP", "JSONSerialization"]
+- ["s28CustomDebugStringConvertibleP", "RawValue"]
+- !private ["s28CustomDebugStringConvertibleP", "String"]
+- !private ["s28CustomDebugStringConvertibleP", "UUID"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- ["s28CustomDebugStringConvertibleP", "_Default_RawValue"]
+- !private ["s28CustomDebugStringConvertibleP", "_findStringSwitchCase"]
+- ["s28CustomDebugStringConvertibleP", "_rawHashValue"]
+- !private ["s28CustomDebugStringConvertibleP", "barId"]
+- !private ["s28CustomDebugStringConvertibleP", "callAsFunction"]
+- ["s28CustomDebugStringConvertibleP", "copy"]
+- ["s28CustomDebugStringConvertibleP", "copyWithZone"]
+- !private ["s28CustomDebugStringConvertibleP", "data"]
+- ["s28CustomDebugStringConvertibleP", "debugDescription"]
+- ["s28CustomDebugStringConvertibleP", "description"]
+- !private ["s28CustomDebugStringConvertibleP", "detail"]
+- !private ["s28CustomDebugStringConvertibleP", "drinkResponse"]
+- ["s28CustomDebugStringConvertibleP", "encode"]
+- !private ["s28CustomDebugStringConvertibleP", "findStringSwitchCase"]
+- !private ["s28CustomDebugStringConvertibleP", "getDrinks"]
+- ["s28CustomDebugStringConvertibleP", "hash"]
+- ["s28CustomDebugStringConvertibleP", "hashValue"]
+- !private ["s28CustomDebugStringConvertibleP", "id"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "intValue"]
+- !private ["s28CustomDebugStringConvertibleP", "jsonObject"]
+- !private ["s28CustomDebugStringConvertibleP", "name"]
+- !private ["s28CustomDebugStringConvertibleP", "os_log"]
+- !private ["s28CustomDebugStringConvertibleP", "price"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "quantity"]
+- ["s28CustomDebugStringConvertibleP", "rawValue"]
+- !private ["s28CustomDebugStringConvertibleP", "result"]
+- ["s28CustomDebugStringConvertibleP", "stringValue"]
+- !private ["s28CustomDebugStringConvertibleP", "value"]
+- !private ["s28CustomDebugStringConvertibleP", "viewContext"]
+- !private ["s17CustomReflectableP", "callAsFunction"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "value"]
+- ["s23CustomStringConvertibleP", "=="]
+- !private ["s23CustomStringConvertibleP", "AF"]
+- !private ["s23CustomStringConvertibleP", "CodingKeys"]
+- !private ["s23CustomStringConvertibleP", "CoreDataManager"]
+- ["s23CustomStringConvertibleP", "Default_RawValue"]
+- !private ["s23CustomStringConvertibleP", "Double"]
+- !private ["s23CustomStringConvertibleP", "Drink"]
+- !private ["s23CustomStringConvertibleP", "Int16"]
+- !private ["s23CustomStringConvertibleP", "JSONDecoder"]
+- !private ["s23CustomStringConvertibleP", "JSONSerialization"]
+- ["s23CustomStringConvertibleP", "RawValue"]
+- !private ["s23CustomStringConvertibleP", "String"]
+- !private ["s23CustomStringConvertibleP", "UUID"]
+- ["s23CustomStringConvertibleP", ""]
+- ["s23CustomStringConvertibleP", "_Default_RawValue"]
+- !private ["s23CustomStringConvertibleP", "_findStringSwitchCase"]
+- ["s23CustomStringConvertibleP", "_rawHashValue"]
+- !private ["s23CustomStringConvertibleP", "barId"]
+- ["s23CustomStringConvertibleP", "copy"]
+- ["s23CustomStringConvertibleP", "copyWithZone"]
+- !private ["s23CustomStringConvertibleP", "data"]
+- ["s23CustomStringConvertibleP", "debugDescription"]
+- ["s23CustomStringConvertibleP", "description"]
+- !private ["s23CustomStringConvertibleP", "detail"]
+- !private ["s23CustomStringConvertibleP", "drinkResponse"]
+- ["s23CustomStringConvertibleP", "encode"]
+- !private ["s23CustomStringConvertibleP", "findStringSwitchCase"]
+- !private ["s23CustomStringConvertibleP", "getDrinks"]
+- ["s23CustomStringConvertibleP", "hash"]
+- ["s23CustomStringConvertibleP", "hashValue"]
+- !private ["s23CustomStringConvertibleP", "id"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "intValue"]
+- !private ["s23CustomStringConvertibleP", "jsonObject"]
+- !private ["s23CustomStringConvertibleP", "name"]
+- !private ["s23CustomStringConvertibleP", "os_log"]
+- !private ["s23CustomStringConvertibleP", "price"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "quantity"]
+- ["s23CustomStringConvertibleP", "rawValue"]
+- !private ["s23CustomStringConvertibleP", "response"]
+- !private ["s23CustomStringConvertibleP", "result"]
+- ["s23CustomStringConvertibleP", "stringValue"]
+- !private ["s23CustomStringConvertibleP", "validate"]
+- !private ["s23CustomStringConvertibleP", "value"]
+- !private ["s23CustomStringConvertibleP", "viewContext"]
+- !private ["9Alamofire11DataDecoderP", "decode"]
+- !private ["9Alamofire11DataDecoderP", "init"]
+- !private ["9Alamofire11DataRequestC", "response"]
+- !private ["9Alamofire11DataRequestC", "validate"]
+- !private ["9Alamofire12DataResponseV", "result"]
+- !private ["9Alamofire12DataResponseV", "value"]
+- !private ["Se", "AF"]
+- !private ["Se", "CodingKeys"]
+- !private ["Se", "CoreDataManager"]
+- !private ["Se", "Double"]
+- !private ["Se", "Drink"]
+- !private ["Se", "Int16"]
+- !private ["Se", "JSONDecoder"]
+- !private ["Se", "JSONSerialization"]
+- !private ["Se", "String"]
+- !private ["Se", "UUID"]
+- ["Se", ""]
+- !private ["Se", "_findStringSwitchCase"]
+- !private ["Se", "barId"]
+- !private ["Se", "callAsFunction"]
+- ["Se", "copy"]
+- ["Se", "copyWithZone"]
+- !private ["Se", "detail"]
+- ["Se", "encode"]
+- !private ["Se", "findStringSwitchCase"]
+- !private ["Se", "getDrinks"]
+- !private ["Se", "id"]
+- ["Se", "init"]
+- !private ["Se", "name"]
+- !private ["Se", "os_log"]
+- !private ["Se", "price"]
+- !private ["Se", "print"]
+- !private ["Se", "quantity"]
+- !private ["s7DecoderP", "container"]
+- !private ["Sd", "init"]
+- !private ["6Drinkz5DrinkC", "AF"]
+- ["6Drinkz5DrinkC", "CodingKey"]
+- ["6Drinkz5DrinkC", "CodingKeys"]
+- !private ["6Drinkz5DrinkC", "CoreDataManager"]
+- ["6Drinkz5DrinkC", "Decoder"]
+- ["6Drinkz5DrinkC", "Double"]
+- ["6Drinkz5DrinkC", "Drink"]
+- ["6Drinkz5DrinkC", "Encoder"]
+- !private ["6Drinkz5DrinkC", "Int16"]
+- !private ["6Drinkz5DrinkC", "JSONDecoder"]
+- !private ["6Drinkz5DrinkC", "JSONSerialization"]
+- !private ["6Drinkz5DrinkC", "NSDictionary"]
+- ["6Drinkz5DrinkC", "NSZone"]
+- ["6Drinkz5DrinkC", "String"]
+- ["6Drinkz5DrinkC", "UUID"]
+- ["6Drinkz5DrinkC", "Void"]
+- ["6Drinkz5DrinkC", ""]
+- !private ["6Drinkz5DrinkC", "_findStringSwitchCase"]
+- !private ["6Drinkz5DrinkC", "barId"]
+- ["6Drinkz5DrinkC", "copy"]
+- ["6Drinkz5DrinkC", "copyWithZone"]
+- ["6Drinkz5DrinkC", "cost"]
+- ["6Drinkz5DrinkC", "deinit"]
+- !private ["6Drinkz5DrinkC", "detail"]
+- ["6Drinkz5DrinkC", "encode"]
+- !private ["6Drinkz5DrinkC", "findStringSwitchCase"]
+- ["6Drinkz5DrinkC", "getDrinks"]
+- !private ["6Drinkz5DrinkC", "id"]
+- ["6Drinkz5DrinkC", "init"]
+- !private ["6Drinkz5DrinkC", "name"]
+- !private ["6Drinkz5DrinkC", "os_log"]
+- !private ["6Drinkz5DrinkC", "price"]
+- !private ["6Drinkz5DrinkC", "print"]
+- !private ["6Drinkz5DrinkC", "quantity"]
+- !private ["SE", "AF"]
+- !private ["SE", "CodingKeys"]
+- !private ["SE", "CoreDataManager"]
+- !private ["SE", "Double"]
+- !private ["SE", "Drink"]
+- !private ["SE", "Int16"]
+- !private ["SE", "JSONDecoder"]
+- !private ["SE", "JSONSerialization"]
+- !private ["SE", "String"]
+- !private ["SE", "UUID"]
+- ["SE", ""]
+- !private ["SE", "_findStringSwitchCase"]
+- !private ["SE", "barId"]
+- !private ["SE", "callAsFunction"]
+- ["SE", "copy"]
+- ["SE", "copyWithZone"]
+- !private ["SE", "detail"]
+- ["SE", "encode"]
+- !private ["SE", "findStringSwitchCase"]
+- !private ["SE", "getDrinks"]
+- !private ["SE", "id"]
+- ["SE", "init"]
+- !private ["SE", "name"]
+- !private ["SE", "os_log"]
+- !private ["SE", "price"]
+- !private ["SE", "print"]
+- !private ["SE", "quantity"]
+- !private ["s7EncoderP", "container"]
+- ["SQ", "=="]
+- !private ["SQ", "AF"]
+- !private ["SQ", "ArrayLiteralElement"]
+- !private ["SQ", "CodingKeys"]
+- !private ["SQ", "CoreDataManager"]
+- ["SQ", "Default_RawValue"]
+- !private ["SQ", "Double"]
+- !private ["SQ", "Drink"]
+- !private ["SQ", "Element"]
+- !private ["SQ", "Int16"]
+- !private ["SQ", "JSONDecoder"]
+- !private ["SQ", "JSONSerialization"]
+- ["SQ", "RawValue"]
+- !private ["SQ", "String"]
+- !private ["SQ", "UUID"]
+- ["SQ", ""]
+- ["SQ", "_Default_RawValue"]
+- !private ["SQ", "_findStringSwitchCase"]
+- ["SQ", "_rawHashValue"]
+- !private ["SQ", "barId"]
+- !private ["SQ", "callAsFunction"]
+- ["SQ", "copy"]
+- ["SQ", "copyWithZone"]
+- !private ["SQ", "data"]
+- ["SQ", "debugDescription"]
+- ["SQ", "description"]
+- !private ["SQ", "detail"]
+- !private ["SQ", "drinkResponse"]
+- ["SQ", "encode"]
+- !private ["SQ", "failure"]
+- !private ["SQ", "findStringSwitchCase"]
+- !private ["SQ", "get"]
+- !private ["SQ", "getDrinks"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- !private ["SQ", "id"]
+- ["SQ", "init"]
+- ["SQ", "intValue"]
+- !private ["SQ", "jsonObject"]
+- !private ["SQ", "name"]
+- !private ["SQ", "os_log"]
+- !private ["SQ", "price"]
+- !private ["SQ", "print"]
+- !private ["SQ", "quantity"]
+- ["SQ", "rawValue"]
+- !private ["SQ", "response"]
+- ["SQ", "stringValue"]
+- !private ["SQ", "success"]
+- !private ["SQ", "validate"]
+- !private ["SQ", "value"]
+- !private ["SQ", "viewContext"]
+- !private ["s25ExpressibleByArrayLiteralP", "ArrayLiteralElement"]
+- !private ["s25ExpressibleByArrayLiteralP", "Element"]
+- !private ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "value"]
+- !private ["s25ExpressibleByFloatLiteralP", ""]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", ""]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "callAsFunction"]
+- !private ["SF", ""]
+- !private ["SF", "init"]
+- !private ["9Alamofire10HTTPMethodV", "get"]
+- ["SH", "=="]
+- !private ["SH", "AF"]
+- !private ["SH", "CodingKeys"]
+- !private ["SH", "CoreDataManager"]
+- ["SH", "Default_RawValue"]
+- !private ["SH", "Double"]
+- !private ["SH", "Drink"]
+- !private ["SH", "Int16"]
+- !private ["SH", "JSONDecoder"]
+- !private ["SH", "JSONSerialization"]
+- ["SH", "RawValue"]
+- !private ["SH", "String"]
+- !private ["SH", "UUID"]
+- ["SH", ""]
+- ["SH", "_Default_RawValue"]
+- !private ["SH", "_findStringSwitchCase"]
+- ["SH", "_rawHashValue"]
+- !private ["SH", "barId"]
+- !private ["SH", "callAsFunction"]
+- ["SH", "copy"]
+- ["SH", "copyWithZone"]
+- !private ["SH", "data"]
+- ["SH", "debugDescription"]
+- ["SH", "description"]
+- !private ["SH", "detail"]
+- !private ["SH", "drinkResponse"]
+- ["SH", "encode"]
+- !private ["SH", "failure"]
+- !private ["SH", "findStringSwitchCase"]
+- !private ["SH", "get"]
+- !private ["SH", "getDrinks"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- !private ["SH", "id"]
+- ["SH", "init"]
+- ["SH", "intValue"]
+- !private ["SH", "jsonObject"]
+- !private ["SH", "name"]
+- !private ["SH", "os_log"]
+- !private ["SH", "price"]
+- !private ["SH", "print"]
+- !private ["SH", "quantity"]
+- ["SH", "rawValue"]
+- !private ["SH", "response"]
+- ["SH", "stringValue"]
+- !private ["SH", "success"]
+- !private ["SH", "validate"]
+- !private ["SH", "value"]
+- !private ["SH", "viewContext"]
+- !private ["s12IdentifiableP", "AF"]
+- !private ["s12IdentifiableP", "CodingKeys"]
+- !private ["s12IdentifiableP", "CoreDataManager"]
+- !private ["s12IdentifiableP", "Double"]
+- !private ["s12IdentifiableP", "Drink"]
+- !private ["s12IdentifiableP", "Int16"]
+- !private ["s12IdentifiableP", "JSONDecoder"]
+- !private ["s12IdentifiableP", "JSONSerialization"]
+- !private ["s12IdentifiableP", "String"]
+- !private ["s12IdentifiableP", "UUID"]
+- !private ["s12IdentifiableP", "_findStringSwitchCase"]
+- !private ["s12IdentifiableP", "barId"]
+- ["s12IdentifiableP", "copy"]
+- ["s12IdentifiableP", "copyWithZone"]
+- !private ["s12IdentifiableP", "detail"]
+- ["s12IdentifiableP", "encode"]
+- !private ["s12IdentifiableP", "findStringSwitchCase"]
+- !private ["s12IdentifiableP", "id"]
+- ["s12IdentifiableP", "init"]
+- !private ["s12IdentifiableP", "name"]
+- !private ["s12IdentifiableP", "os_log"]
+- !private ["s12IdentifiableP", "price"]
+- !private ["s12IdentifiableP", "print"]
+- !private ["s12IdentifiableP", "quantity"]
+- !private ["10Foundation11JSONDecoderC", "decode"]
+- !private ["10Foundation11JSONDecoderC", "init"]
+- !private ["So19NSJSONSerializationC", "data"]
+- !private ["So19NSJSONSerializationC", "jsonObject"]
+- !private ["s22KeyedDecodingContainerV", "decode"]
+- !private ["s22KeyedDecodingContainerV", "nestedContainer"]
+- !private ["s30KeyedDecodingContainerProtocolP", "decode"]
+- !private ["s30KeyedDecodingContainerProtocolP", "nestedContainer"]
+- !private ["s22KeyedEncodingContainerV", "encode"]
+- !private ["s22KeyedEncodingContainerV", "nestedContainer"]
+- !private ["s30KeyedEncodingContainerProtocolP", "encode"]
+- !private ["s30KeyedEncodingContainerProtocolP", "nestedContainer"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "value"]
+- !private ["So9NSCopyingP", "AF"]
+- !private ["So9NSCopyingP", "CodingKeys"]
+- !private ["So9NSCopyingP", "CoreDataManager"]
+- !private ["So9NSCopyingP", "Double"]
+- !private ["So9NSCopyingP", "Drink"]
+- !private ["So9NSCopyingP", "Int16"]
+- !private ["So9NSCopyingP", "JSONDecoder"]
+- !private ["So9NSCopyingP", "JSONSerialization"]
+- !private ["So9NSCopyingP", "String"]
+- !private ["So9NSCopyingP", "UUID"]
+- ["So9NSCopyingP", ""]
+- !private ["So9NSCopyingP", "_findStringSwitchCase"]
+- !private ["So9NSCopyingP", "barId"]
+- ["So9NSCopyingP", "copy"]
+- ["So9NSCopyingP", "copyWithZone"]
+- ["So9NSCopyingP", "cost"]
+- !private ["So9NSCopyingP", "detail"]
+- ["So9NSCopyingP", "encode"]
+- !private ["So9NSCopyingP", "findStringSwitchCase"]
+- ["So9NSCopyingP", "getDrinks"]
+- !private ["So9NSCopyingP", "id"]
+- ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "name"]
+- !private ["So9NSCopyingP", "os_log"]
+- !private ["So9NSCopyingP", "price"]
+- !private ["So9NSCopyingP", "print"]
+- !private ["So9NSCopyingP", "quantity"]
+- !private ["So9NSCopyingP", "value"]
+- !private ["So12NSDictionaryC", "value"]
+- !private ["So17NSFastEnumerationP", "value"]
+- !private ["So20NSFetchRequestResultP", "AF"]
+- !private ["So20NSFetchRequestResultP", "CodingKeys"]
+- !private ["So20NSFetchRequestResultP", "CoreDataManager"]
+- !private ["So20NSFetchRequestResultP", "Double"]
+- !private ["So20NSFetchRequestResultP", "Drink"]
+- !private ["So20NSFetchRequestResultP", "Int16"]
+- !private ["So20NSFetchRequestResultP", "JSONDecoder"]
+- !private ["So20NSFetchRequestResultP", "JSONSerialization"]
+- !private ["So20NSFetchRequestResultP", "NSDictionary"]
+- ["So20NSFetchRequestResultP", "NSZone"]
+- !private ["So20NSFetchRequestResultP", "String"]
+- !private ["So20NSFetchRequestResultP", "UUID"]
+- ["So20NSFetchRequestResultP", "Void"]
+- ["So20NSFetchRequestResultP", ""]
+- !private ["So20NSFetchRequestResultP", "_findStringSwitchCase"]
+- !private ["So20NSFetchRequestResultP", "barId"]
+- ["So20NSFetchRequestResultP", "copy"]
+- ["So20NSFetchRequestResultP", "copyWithZone"]
+- ["So20NSFetchRequestResultP", "cost"]
+- !private ["So20NSFetchRequestResultP", "detail"]
+- ["So20NSFetchRequestResultP", "encode"]
+- !private ["So20NSFetchRequestResultP", "findStringSwitchCase"]
+- ["So20NSFetchRequestResultP", "getDrinks"]
+- !private ["So20NSFetchRequestResultP", "id"]
+- ["So20NSFetchRequestResultP", "init"]
+- !private ["So20NSFetchRequestResultP", "name"]
+- !private ["So20NSFetchRequestResultP", "os_log"]
+- !private ["So20NSFetchRequestResultP", "price"]
+- !private ["So20NSFetchRequestResultP", "print"]
+- !private ["So20NSFetchRequestResultP", "quantity"]
+- !private ["So20NSFetchRequestResultP", "value"]
+- !private ["So15NSManagedObjectC", "AF"]
+- ["So15NSManagedObjectC", "CodingKey"]
+- !private ["So15NSManagedObjectC", "CodingKeys"]
+- !private ["So15NSManagedObjectC", "CoreDataManager"]
+- ["So15NSManagedObjectC", "Decoder"]
+- ["So15NSManagedObjectC", "Double"]
+- ["So15NSManagedObjectC", "Drink"]
+- ["So15NSManagedObjectC", "Encoder"]
+- !private ["So15NSManagedObjectC", "Int16"]
+- !private ["So15NSManagedObjectC", "JSONDecoder"]
+- !private ["So15NSManagedObjectC", "JSONSerialization"]
+- !private ["So15NSManagedObjectC", "NSDictionary"]
+- ["So15NSManagedObjectC", "NSZone"]
+- ["So15NSManagedObjectC", "String"]
+- ["So15NSManagedObjectC", "UUID"]
+- ["So15NSManagedObjectC", "Void"]
+- ["So15NSManagedObjectC", ""]
+- !private ["So15NSManagedObjectC", "_findStringSwitchCase"]
+- !private ["So15NSManagedObjectC", "barId"]
+- ["So15NSManagedObjectC", "copy"]
+- ["So15NSManagedObjectC", "copyWithZone"]
+- ["So15NSManagedObjectC", "cost"]
+- !private ["So15NSManagedObjectC", "detail"]
+- ["So15NSManagedObjectC", "encode"]
+- !private ["So15NSManagedObjectC", "findStringSwitchCase"]
+- ["So15NSManagedObjectC", "getDrinks"]
+- !private ["So15NSManagedObjectC", "id"]
+- ["So15NSManagedObjectC", "init"]
+- !private ["So15NSManagedObjectC", "name"]
+- !private ["So15NSManagedObjectC", "os_log"]
+- !private ["So15NSManagedObjectC", "price"]
+- !private ["So15NSManagedObjectC", "print"]
+- !private ["So15NSManagedObjectC", "quantity"]
+- !private ["So16NSMutableCopyingP", "value"]
+- !private ["So8NSObjectC", "AF"]
+- ["So8NSObjectC", "CodingKey"]
+- !private ["So8NSObjectC", "CodingKeys"]
+- !private ["So8NSObjectC", "CoreDataManager"]
+- ["So8NSObjectC", "Decoder"]
+- ["So8NSObjectC", "Double"]
+- ["So8NSObjectC", "Drink"]
+- ["So8NSObjectC", "Encoder"]
+- !private ["So8NSObjectC", "Int16"]
+- !private ["So8NSObjectC", "JSONDecoder"]
+- !private ["So8NSObjectC", "JSONSerialization"]
+- !private ["So8NSObjectC", "NSDictionary"]
+- ["So8NSObjectC", "NSZone"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "UUID"]
+- ["So8NSObjectC", "Void"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "_findStringSwitchCase"]
+- !private ["So8NSObjectC", "barId"]
+- ["So8NSObjectC", "copy"]
+- ["So8NSObjectC", "copyWithZone"]
+- ["So8NSObjectC", "cost"]
+- !private ["So8NSObjectC", "data"]
+- !private ["So8NSObjectC", "dataWithJSONObject"]
+- !private ["So8NSObjectC", "detail"]
+- ["So8NSObjectC", "encode"]
+- !private ["So8NSObjectC", "findStringSwitchCase"]
+- ["So8NSObjectC", "getDrinks"]
+- !private ["So8NSObjectC", "id"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "jsonObject"]
+- !private ["So8NSObjectC", "name"]
+- !private ["So8NSObjectC", "os_log"]
+- !private ["So8NSObjectC", "price"]
+- !private ["So8NSObjectC", "print"]
+- !private ["So8NSObjectC", "quantity"]
+- !private ["So8NSObjectC", "value"]
+- !private ["So8NSObjectC", "valueForKey"]
+- !private ["So8NSObjectC", "viewContext"]
+- !private ["So8NSObjectP", "AF"]
+- !private ["So8NSObjectP", "CodingKeys"]
+- !private ["So8NSObjectP", "CoreDataManager"]
+- !private ["So8NSObjectP", "Double"]
+- !private ["So8NSObjectP", "Drink"]
+- !private ["So8NSObjectP", "Int16"]
+- !private ["So8NSObjectP", "JSONDecoder"]
+- !private ["So8NSObjectP", "JSONSerialization"]
+- ["So8NSObjectP", "NSZone"]
+- !private ["So8NSObjectP", "String"]
+- !private ["So8NSObjectP", "UUID"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "_findStringSwitchCase"]
+- !private ["So8NSObjectP", "barId"]
+- ["So8NSObjectP", "copy"]
+- ["So8NSObjectP", "copyWithZone"]
+- ["So8NSObjectP", "cost"]
+- !private ["So8NSObjectP", "data"]
+- !private ["So8NSObjectP", "dataWithJSONObject"]
+- !private ["So8NSObjectP", "detail"]
+- ["So8NSObjectP", "encode"]
+- !private ["So8NSObjectP", "findStringSwitchCase"]
+- ["So8NSObjectP", "getDrinks"]
+- !private ["So8NSObjectP", "id"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "jsonObject"]
+- !private ["So8NSObjectP", "name"]
+- !private ["So8NSObjectP", "os_log"]
+- !private ["So8NSObjectP", "price"]
+- !private ["So8NSObjectP", "print"]
+- !private ["So8NSObjectP", "quantity"]
+- !private ["So8NSObjectP", "value"]
+- !private ["So8NSObjectP", "valueForKey"]
+- !private ["So8NSObjectP", "viewContext"]
+- !private ["So21NSPersistentContainerC", "viewContext"]
+- !private ["So14NSSecureCodingP", "value"]
+- !private ["Sj", ""]
+- !private ["Sj", "init"]
+- !private ["7Combine16ObservableObjectP", "AF"]
+- !private ["7Combine16ObservableObjectP", "CodingKeys"]
+- !private ["7Combine16ObservableObjectP", "CoreDataManager"]
+- !private ["7Combine16ObservableObjectP", "Double"]
+- !private ["7Combine16ObservableObjectP", "Drink"]
+- !private ["7Combine16ObservableObjectP", "Int16"]
+- !private ["7Combine16ObservableObjectP", "JSONDecoder"]
+- !private ["7Combine16ObservableObjectP", "JSONSerialization"]
+- !private ["7Combine16ObservableObjectP", "String"]
+- !private ["7Combine16ObservableObjectP", "UUID"]
+- ["7Combine16ObservableObjectP", ""]
+- !private ["7Combine16ObservableObjectP", "_findStringSwitchCase"]
+- !private ["7Combine16ObservableObjectP", "barId"]
+- ["7Combine16ObservableObjectP", "copy"]
+- ["7Combine16ObservableObjectP", "copyWithZone"]
+- !private ["7Combine16ObservableObjectP", "detail"]
+- ["7Combine16ObservableObjectP", "encode"]
+- !private ["7Combine16ObservableObjectP", "findStringSwitchCase"]
+- !private ["7Combine16ObservableObjectP", "getDrinks"]
+- !private ["7Combine16ObservableObjectP", "id"]
+- ["7Combine16ObservableObjectP", "init"]
+- !private ["7Combine16ObservableObjectP", "name"]
+- !private ["7Combine16ObservableObjectP", "os_log"]
+- !private ["7Combine16ObservableObjectP", "price"]
+- !private ["7Combine16ObservableObjectP", "print"]
+- !private ["7Combine16ObservableObjectP", "quantity"]
+- !private ["s9OptionSetP", "ArrayLiteralElement"]
+- !private ["s9OptionSetP", "Element"]
+- !private ["s9OptionSetP", "init"]
+- !private ["Sq", "callAsFunction"]
+- ["SY", "=="]
+- !private ["SY", "ArrayLiteralElement"]
+- ["SY", "Default_RawValue"]
+- !private ["SY", "Element"]
+- ["SY", "RawValue"]
+- ["SY", ""]
+- ["SY", "_Default_RawValue"]
+- !private ["SY", "_findStringSwitchCase"]
+- ["SY", "_rawHashValue"]
+- !private ["SY", "barId"]
+- ["SY", "debugDescription"]
+- ["SY", "description"]
+- !private ["SY", "detail"]
+- !private ["SY", "drinkResponse"]
+- !private ["SY", "findStringSwitchCase"]
+- !private ["SY", "get"]
+- ["SY", "hash"]
+- ["SY", "hashValue"]
+- !private ["SY", "id"]
+- ["SY", "init"]
+- ["SY", "intValue"]
+- !private ["SY", "name"]
+- !private ["SY", "price"]
+- !private ["SY", "quantity"]
+- ["SY", "rawValue"]
+- ["SY", "stringValue"]
+- ["9Alamofire7RequestC", ""]
+- !private ["9Alamofire7RequestC", "response"]
+- !private ["9Alamofire7RequestC", "validate"]
+- !private ["9Alamofire15RequestDelegateP", "request"]
+- !private ["s6ResultO", "failure"]
+- !private ["s6ResultO", "success"]
+- !private ["s10SIMDScalarP", "init"]
+- !private ["ST", "value"]
+- !private ["9Alamofire7SessionC", "request"]
+- !private ["9Alamofire20SessionStateProviderP", "request"]
+- !private ["s10SetAlgebraP", "ArrayLiteralElement"]
+- !private ["s10SetAlgebraP", "Element"]
+- !private ["s10SetAlgebraP", ""]
+- !private ["s10SetAlgebraP", "init"]
+- !private ["s13SignedNumericP", ""]
+- !private ["s13SignedNumericP", "init"]
+- !private ["Sx", ""]
+- !private ["Sx", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["7Combine15TopLevelDecoderP", "decode"]
+- !private ["7Combine15TopLevelDecoderP", "init"]
+- !private ["So20NSJSONWritingOptionsV", "ArrayLiteralElement"]
+- !private ["So20NSJSONWritingOptionsV", "Element"]
+- !private ["So20NSJSONWritingOptionsV", "init"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "value"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "AF"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CodingKeys"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CoreDataManager"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Double"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Drink"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Int16"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "JSONDecoder"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "JSONSerialization"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "String"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UUID"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_findStringSwitchCase"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "barId"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "copy"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "copyWithZone"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "data"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "detail"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "encode"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "findStringSwitchCase"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getDrinks"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "id"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "jsonObject"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "os_log"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "price"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "quantity"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "value"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewContext"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "AF"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CodingKeys"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CoreDataManager"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Double"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Drink"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Int16"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "JSONDecoder"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "JSONSerialization"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "String"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UUID"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_findStringSwitchCase"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "barId"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "copy"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "copyWithZone"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "data"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "detail"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "encode"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "findStringSwitchCase"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getDrinks"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "id"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "jsonObject"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "name"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "os_log"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "price"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "print"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "quantity"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "value"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewContext"]
+- !private ["s21_ObjectiveCBridgeableP", "callAsFunction"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- !private "SB"
+- !private "8CloudKit21CKRecordValueProtocolP"
+- "s7CVarArgP"
+- "s9CodingKeyP"
+- "6Drinkz5DrinkC10CodingKeysO"
+- !private "SL"
+- !private "6Drinkz15CoreDataManagerC"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "9Alamofire11DataDecoderP"
+- !private "9Alamofire11DataRequestC"
+- !private "9Alamofire12DataResponseV"
+- "Se"
+- !private "s7DecoderP"
+- !private "Sd"
+- "6Drinkz5DrinkC"
+- "SE"
+- !private "s7EncoderP"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "SF"
+- !private "9Alamofire10HTTPMethodV"
+- "SH"
+- "s12IdentifiableP"
+- !private "10Foundation11JSONDecoderC"
+- !private "So19NSJSONSerializationC"
+- !private "s22KeyedDecodingContainerV"
+- !private "s30KeyedDecodingContainerProtocolP"
+- !private "s22KeyedEncodingContainerV"
+- !private "s30KeyedEncodingContainerProtocolP"
+- !private "s25LosslessStringConvertibleP"
+- !private "So8NSCodingP"
+- "So9NSCopyingP"
+- !private "So12NSDictionaryC"
+- !private "So17NSFastEnumerationP"
+- "So20NSFetchRequestResultP"
+- "So15NSManagedObjectC"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So21NSPersistentContainerC"
+- !private "So14NSSecureCodingP"
+- !private "Sj"
+- "7Combine16ObservableObjectP"
+- !private "s9OptionSetP"
+- !private "Sq"
+- "SY"
+- "9Alamofire7RequestC"
+- !private "9Alamofire15RequestDelegateP"
+- !private "s6ResultO"
+- !private "s10SIMDScalarP"
+- !private "ST"
+- !private "9Alamofire7SessionC"
+- !private "9Alamofire20SessionStateProviderP"
+- !private "s10SetAlgebraP"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "s20TextOutputStreamableP"
+- !private "7Combine15TopLevelDecoderP"
+- !private "So20NSJSONWritingOptionsV"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Vision.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/AVFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/os.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/MapKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Pods/TweetNacl/Sources/module.map"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "f498cd153359adac509eb84d137285b1"

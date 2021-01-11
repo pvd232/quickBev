@@ -113,6 +113,7 @@ class ReviewOrderViewController: UIViewController {
         
         changePaymentMethodButton.refreshColor(color: UIColor.themeColor)
         changePaymentMethodButton.refreshTitle(newTitle: "change")
+        changePaymentMethodButton.titleLabel?.font = UIFont.init(name: "Charter-Black", size: 20.0)
         
         addPaymentMethodButton.refreshColor(color: UIColor.themeColor)
         addPaymentMethodButton.titleLabel?.font = UIFont.init(name: "Charter-Black", size: 20.0)
@@ -130,12 +131,27 @@ class ReviewOrderViewController: UIViewController {
             orderSummaryStackView.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.90),
             orderSummaryStackView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 20.0),
             orderSummaryStackView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
-            defaultPaymentMethodView.heightAnchor.constraint(equalTo: safeArea.heightAnchor, multiplier: 0.90),
+            defaultPaymentMethodView.heightAnchor.constraint(equalTo: safeArea.heightAnchor, multiplier: 0.0841584),
             defaultPaymentMethodView.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.90),
             defaultPaymentMethodView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
-            defaultPaymentMethodView.topAnchor.constraint(equalTo: orderSummaryStackView.bottomAnchor, constant: 20.0),
+            defaultPaymentMethodView.topAnchor.constraint(equalTo: orderSummaryStackView.bottomAnchor, constant: 35.0),
             addPaymentMethodButton.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 10.0),
-            addPaymentMethodButton.widthAnchor.constraint(equalTo: addPaymentMethodButton.heightAnchor, multiplier: (373/60))
+            addPaymentMethodButton.widthAnchor.constraint(equalTo: addPaymentMethodButton.heightAnchor, multiplier: (373/60)),
+            
+            // default method subview constraints
+            cardLogoImageView.centerYAnchor.constraint(equalTo: cardLogoImageView.superview!.centerYAnchor),
+            cardLogoImageView.widthAnchor.constraint(equalTo: cardLogoImageView.superview!.widthAnchor, multiplier: 0.15),
+            cardLogoImageView.heightAnchor.constraint(equalTo: cardLogoImageView.superview!.heightAnchor, multiplier: 0.529412),
+            cardLogoImageView.leadingAnchor.constraint(equalTo: cardLogoImageView.superview!.leadingAnchor),
+            cardCompanyName.widthAnchor.constraint(equalTo: cardCompanyName.superview!.widthAnchor, multiplier: 0.365517),
+            cardCompanyName.leadingAnchor.constraint(equalTo: cardLogoImageView.trailingAnchor, constant: 20.0),
+            cardCompanyName.centerYAnchor.constraint(equalTo: cardCompanyName.superview!.centerYAnchor),
+            changePaymentMethodButton.heightAnchor.constraint(equalTo: changePaymentMethodButton.superview!.heightAnchor, multiplier: 0.497059),
+            changePaymentMethodButton.trailingAnchor.constraint(equalTo: changePaymentMethodButton.superview!.trailingAnchor),
+//            changePaymentMethodButton.leadingAnchor.constraint(equalTo: cardCompanyName.trailingAnchor, constant: 37.0),
+            changePaymentMethodButton.widthAnchor.constraint(greaterThanOrEqualTo: changePaymentMethodButton.superview!.widthAnchor, multiplier: 0.25),
+//            changePaymentMethodButton.widthAnchor.constraint(lessThanOrEqualTo: changePaymentMethodButton.superview!.widthAnchor, multiplier: 0.24),
+            changePaymentMethodButton.centerYAnchor.constraint(equalTo: changePaymentMethodButton.superview!.centerYAnchor)
         ])
         paymentContextDidChange(paymentContext!)
         addPaymentMethodButton.addTarget(self, action: #selector(choosePaymentButtonTapped), for: .touchUpInside)
