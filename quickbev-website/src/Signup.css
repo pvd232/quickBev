@@ -21,7 +21,7 @@
 } */
 /*form styles*/
 #msform {
-  width: 400px;
+  width: 30vw;
   margin-left: auto;
   margin-right: auto;
   padding-top: 10vh;
@@ -44,6 +44,7 @@
 
 /*inputs*/
 #msform input,
+.custom-select,
 #msform textarea {
   padding: 15px;
   border: 1px solid #ccc;
@@ -54,10 +55,11 @@
   font-family: montserrat;
   color: #2c3e50;
   font-size: 13px;
+  height: 5vh;
 }
 /*buttons*/
 #msform .action-button {
-  width: 100px;
+  width: 5vw;
   background: #27ae60;
   font-weight: bold;
   color: white;
@@ -66,6 +68,7 @@
   cursor: pointer;
   padding: 10px 5px;
   margin: 10px 5px;
+  font-size: 16px;
 }
 #msform .action-button:hover,
 #msform .action-button:focus {
@@ -73,10 +76,11 @@
 }
 /*headings*/
 .fs-title {
-  font-size: 17px;
+  font-size: 20px;
   text-transform: uppercase;
   color: #2c3e50;
-  margin-bottom: 10px;
+  margin-bottom: 3vh;
+  margin-top: 1vh;
 }
 .fs-subtitle {
   font-weight: normal;
