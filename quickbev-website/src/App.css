@@ -1,4 +1,4 @@
-* {
+/* * {
   margin-top: 0;
   padding: 0;
   border: 0;
@@ -6,7 +6,7 @@
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
-}
+} */
 .App {
   text-align: center;
 }
@@ -48,9 +48,14 @@
   }
 }
 .body {
-  font-family: 14px "Century Gothic";
-  height: 100vh;
-  /* margin: 20px; */
+  min-height: 100%;
+}
+html,
+body {
+  height: 100%;
+}
+#root {
+  min-height: 100%;
 }
 .navbar-link-size {
   color: white;
@@ -60,35 +65,3 @@
   color: white;
   font-size: calc(2px + 4vmin);
 }
-.nav-container {
-  display: flex;
-}
-/* ol,
-ul {
-  padding-left: 30px;
-} */
-
-/* .board-row:after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
-.status {
-  margin-bottom: 10px;
-}
-
-.square {
-  background: #fff;
-  border: 1px solid #999;
-  float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
-  text-align: center;
-  width: 34px;
-} */

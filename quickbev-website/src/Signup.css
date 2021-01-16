@@ -13,7 +13,10 @@
   /*background = gradient + image pattern combo*/
   /* font-family: montserrat, arial, verdana; */
   background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
-  height: 100vh;
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: 14px "Century Gothic";
+  position: absolute;
 }
 
 /* body {
@@ -21,10 +24,13 @@
 } */
 /*form styles*/
 #msform {
-  width: 30vw;
+  min-width: 360px;
+  width: 35vmax;
+  max-width: 450px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 10vh;
+  margin-bottom: 10vh;
   text-align: center;
   position: relative;
 }
@@ -55,11 +61,12 @@
   font-family: montserrat;
   color: #2c3e50;
   font-size: 13px;
-  height: 5vh;
+  /* i have to make this based on view height because some inputs are inside nested containers */
+  height: 6vh;
 }
 /*buttons*/
 #msform .action-button {
-  width: 5vw;
+  width: 30%;
   background: #27ae60;
   font-weight: bold;
   color: white;
@@ -79,8 +86,8 @@
   font-size: 20px;
   text-transform: uppercase;
   color: #2c3e50;
-  margin-bottom: 3vh;
-  margin-top: 1vh;
+  margin-bottom: 5%;
+  margin-top: 2%;
 }
 .fs-subtitle {
   font-weight: normal;

@@ -64,7 +64,7 @@ def register_new_user():
     user_service = User_Service()
     new_user = json.loads(request.data)  # load JSON data from request
     response = user_service.register_new_user(new_user)
-    print('response',response)
+    print('response', response)
     if response:
         return jsonify(response), 200
     else:
@@ -99,10 +99,11 @@ def tabs():
             response['msg'] = 'something broke'
             return Response(status=500, response=json.dumps(response))
 
-@app.route('/create-ephemeral-keys', methods = ['POST'])
+
+@app.route('/create-ephemeral-keys', methods=['POST'])
 def ephemeral_keys():
     request_data = json.loads(request.data)
-    print('request_data',request_data)
+    print('request_data', request_data)
     order_service = Order_Service()
     key, header = order_service.stripe_ephemeral_key(request_data)
     if key and header:
@@ -111,17 +112,27 @@ def ephemeral_keys():
         return Response(status=200, response=json.dumps(key))
 
 
-@app.route('/create-payment-intent', methods = ['POST'])
+@app.route('/create-payment-intent', methods=['POST'])
 def create_payment_intent():
     response = {}
     request_data = json.loads(request.data)
-    print('request_data payment intent',request_data)
+    print('request_data payment intent', request_data)
     order_service = Order_Service()
     client_secret = order_service.stripe_payment_intent(request_data)
-    print('client_secret',client_secret)
+    print('client_secret', client_secret)
     response["secret"] = client_secret
     print("r", response)
     return Response(status=200, response=json.dumps(response))
+
+
+@app.route('/signup', methods=['POST'])
+def signup():
+    response = {"msg": "booyah bitch"}
+    request_json = json.loads(request.data)
+    print('request_json', request_json)
+    return Response(status=200, response=json.dumps(response))
+
+
 if __name__ == '__main__':
     app.debug = True
     app.run()

@@ -8,9 +8,7 @@ const App = () => {
   return (
     <>
       <Navbar src={logo} />
-      <div className="body">
-        <Main />
-      </div>
+      <Main />
     </>
     // <div className="App">
     //   <header className="App-header">
