@@ -1,13 +1,12 @@
 // import { v4 as uuidv4 } from "uuid";
 export const makeApiRequest = (url, requestType, payload, cfunc) => {
-  // code for IE7+, Firefox, Chrome, Opera, Safari
   const xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = cfunc;
   xmlhttp.open(requestType, url, true);
   xmlhttp.send(payload);
 };
 export class Merchant {
-  constructor(merchantObject) {
+  constructor(merchantObject = null, merchantStateObject = null) {
     if (merchantObject) {
       this._id = merchantObject.id;
       // will fill in the stripe ID later
@@ -15,6 +14,14 @@ export class Merchant {
       this._firstName = merchantObject.firstName;
       this._lastName = merchantObject.lastName;
       this._phoneNumber = merchantObject.phoneNumber;
+    } else if (merchantStateObject) {
+      console.log("merchantStateObject", merchantStateObject);
+      this._id = merchantStateObject._id;
+      // will fill in the stripe ID later
+      this._stripeId = null;
+      this._firstName = merchantStateObject._firstName;
+      this._lastName = merchantStateObject._lastName;
+      this._phoneNumber = merchantStateObject._phoneNumber;
     } else {
       this._id = null;
       this._stripeId = null;
@@ -65,7 +72,7 @@ export class Merchant {
     return data;
   }
   fromJSON(json) {
-    const data = json;
+    const data = JSON.parse(json);
     this._id = data.id;
     this.stripeId = data.stripeId;
     this._firstName = data.firstName;
@@ -79,7 +86,8 @@ export class Business {
       this._id = businessObject.id;
       // will fill in the stripe ID later
       this._merchantId = null;
-      this._street = businessObject.address;
+      this._address = businessObject.address;
+      this._street = businessObject.street;
       this._city = businessObject.city;
       this._state = businessObject.state;
       this._zipcode = businessObject.zip;
@@ -87,6 +95,7 @@ export class Business {
     } else {
       this._id = null;
       this._merchantId = null;
+      this._address = null;
       this._street = null;
       this._city = null;
       this._state = null;
@@ -100,6 +109,9 @@ export class Business {
   }
   get merchantId() {
     return this._merchantId;
+  }
+  get address() {
+    return this._address;
   }
   get street() {
     return this._street;
@@ -122,6 +134,9 @@ export class Business {
   set merchantId(value) {
     this._merchantId = value;
   }
+  set address(value) {
+    this._address = value;
+  }
   set street(value) {
     this._street = value;
   }
@@ -141,6 +156,7 @@ export class Business {
     const data = {
       id: this._id,
       merchantId: this._merchantId,
+      address: this._address,
       street: this._street,
       city: this._city,
       state: this._state,
@@ -150,9 +166,10 @@ export class Business {
     return data;
   }
   fromJSON(json) {
-    const data = json;
+    const data = JSON.parse(json);
     this._id = data.id;
-    this.merchantId = data.merchantId;
+    this._merchantId = data.merchantId;
+    this._address = data.address;
     this._street = data.street;
     this._city = data.city;
     this._state = data.state;

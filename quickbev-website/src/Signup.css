@@ -12,20 +12,28 @@
 
   /*background = gradient + image pattern combo*/
   /* font-family: montserrat, arial, verdana; */
-  background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+  /* background: linear-gradient(rgba(196, 102, 70, 0.6), rgba(155, 89, 182, 0.6)); */
   min-height: 100vh;
   min-width: 100vw;
   font-family: 14px "Century Gothic";
-  position: absolute;
+  position: relative;
 }
 
 /* body {
 	font-family: montserrat, arial, verdana;
 } */
 /*form styles*/
+.col-6,
+.col-12 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 1);
+}
 #msform {
   min-width: 360px;
-  width: 35vmax;
+  width: 45vmax;
   max-width: 450px;
   margin-left: auto;
   margin-right: auto;
@@ -60,9 +68,9 @@
   box-sizing: border-box;
   font-family: montserrat;
   color: #2c3e50;
-  font-size: 13px;
+  font-size: 14px;
   /* i have to make this based on view height because some inputs are inside nested containers */
-  height: 6vh;
+  height: 4vh;
 }
 /*buttons*/
 #msform .action-button {
@@ -101,6 +109,7 @@
   overflow: hidden;
   /*CSS counters to number the steps*/
   counter-reset: step;
+  padding-left: 0;
 }
 #progressbar li {
   list-style-type: none;

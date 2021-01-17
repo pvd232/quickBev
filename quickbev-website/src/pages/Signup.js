@@ -1,8 +1,15 @@
-import React, { useState, useReducer } from "react";
+import React, { useState, useReducer, useEffect } from "react";
 import { Redirect } from "react-router-dom";
 import { Merchant, Business, makeApiRequest } from "../Models.js";
+import Navbar from "../Navbar.js";
+import logo from "../qbLogo.png";
+import SearchLocationInput from "../SearchLocationInput.js";
 const ProgressBar = (props) => {
-  const statusValues = ["Account Setup", "Personal Details", "Your Business"];
+  const statusValues = [
+    "Account setup",
+    "Your menu and ordering",
+    "Start getting paid",
+  ];
   return (
     <ul id="progressbar">
       {statusValues.map((item, i) => {
@@ -26,6 +33,9 @@ const CreateYourAccountFieldset = (props) => {
   const [formValue, setFormValue] = useReducer(
     (state, newState) => ({ ...state, ...newState }),
     {
+      firstName: "",
+      lastName: "",
+      phoneNumber: "",
       email: "",
       password: "",
       confirmPassword: "",
@@ -63,9 +73,13 @@ const CreateYourAccountFieldset = (props) => {
         setErrorMsg(newErrorMsgState);
         return false;
       } else {
-        props.merchant.id = formValue.email;
-        props.merchant.password = formValue.password;
-        props.onClick("next");
+        const newMerchant = {};
+        newMerchant._firstName = formValue.firstName;
+        newMerchant._lastName = formValue.lastName;
+        newMerchant._phoneNumber = formValue.phoneNumber;
+        newMerchant._id = formValue.email;
+        newMerchant._password = formValue.password;
+        props.onClick("next", newMerchant);
       }
     } else {
       return false;
@@ -84,40 +98,149 @@ const CreateYourAccountFieldset = (props) => {
       }}
     >
       <fieldset>
-        <h2 className="fs-title">Create your account</h2>
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          required={true}
-          onChange={(e) => {
-            formChangeHandler(e);
-          }}
-          value={formValue.email}
-        />
-        <input
-          type="password"
-          name="password"
-          required={true}
-          placeholder="Password"
-          onChange={(e) => {
-            formChangeHandler(e);
-          }}
-          value={formValue.password}
-        />
-        <div className="invalid-feedback" style={confirmPwdErrorMsgStyle}>
-          {errorMsg.confirmPasswordErrorMsg}
+        <h2 className="fs-title">Your menu and ordering</h2>
+        <div className="row">
+          <div className="col-6">
+            <label
+              htmlFor="firstName"
+              style={{
+                display: "flex",
+                fontSize: "14px",
+                fontWeight: "bolder",
+              }}
+            >
+              First name
+            </label>
+            <input
+              type="text"
+              name="firstName"
+              required={true}
+              onChange={(e) => {
+                formChangeHandler(e);
+              }}
+              value={formValue.firstName}
+            />
+          </div>
+          <div className="col-6">
+            <label
+              htmlFor="lastName"
+              style={{
+                display: "flex",
+                fontSize: "14px",
+                fontWeight: "bolder",
+              }}
+            >
+              Last name
+            </label>
+            <input
+              type="text"
+              name="lastName"
+              required={true}
+              onChange={(e) => {
+                formChangeHandler(e);
+              }}
+              value={formValue.lastName}
+            />
+          </div>
         </div>
-        <input
-          type="password"
-          name="confirmPassword"
-          required={true}
-          placeholder="Confirm Password"
-          onChange={(e) => {
-            formChangeHandler(e);
-          }}
-          value={formValue.confirmPassword}
-        />
+        <div className="row">
+          <div className="col-12">
+            <label
+              htmlFor="email"
+              style={{
+                display: "flex",
+                fontSize: "14px",
+                fontWeight: "bolder",
+              }}
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              required={true}
+              onChange={(e) => {
+                formChangeHandler(e);
+              }}
+              value={formValue.email}
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12">
+            <label
+              htmlFor="phoneNumber"
+              style={{
+                display: "flex",
+                fontSize: "14px",
+                fontWeight: "bolder",
+              }}
+            >
+              Phone number
+            </label>
+            <input
+              type="tel"
+              name="phoneNumber"
+              required={true}
+              pattern="[0-9]{10}"
+              onChange={(e) => {
+                formChangeHandler(e);
+              }}
+              value={formValue.phoneNumber}
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12">
+            <label
+              htmlFor="password"
+              style={{
+                display: "flex",
+                fontSize: "14px",
+                fontWeight: "bolder",
+              }}
+            >
+              Password
+            </label>
+            <input
+              type="password"
+              name="password"
+              required={true}
+              onChange={(e) => {
+                formChangeHandler(e);
+              }}
+              value={formValue.password}
+            />
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col-12">
+            <div className="invalid-feedback" style={confirmPwdErrorMsgStyle}>
+              {errorMsg.confirmPasswordErrorMsg}
+            </div>
+            <label
+              htmlFor="confirmPassword"
+              style={{
+                display: "flex",
+                fontSize: "14px",
+                fontWeight: "bolder",
+              }}
+            >
+              Confirm password
+            </label>
+            <input
+              type="password"
+              name="confirmPassword"
+              required={true}
+              onChange={(e) => {
+                formChangeHandler(e);
+              }}
+              value={formValue.confirmPassword}
+            />
+          </div>
+        </div>
+
         <input
           type="submit"
           name="next"
@@ -138,18 +261,11 @@ const PersonalDetailsFieldset = (props) => {
     }
   );
   const formChangeHandler = (event) => {
-    console.log("formValue.firstName", formValue.firstName);
-
     let name = event.target.name;
-    console.log("name", name);
     let value = event.target.value;
-    console.log("value", value);
     setFormValue({ [name]: value });
   };
   const validate = (form) => {
-    console.log("form.checkValidity()", form.checkValidity());
-
-    console.log("formValue.firstName", formValue.firstName);
     if (form.checkValidity()) {
       form.classList.add("was-validated");
       return true;
@@ -157,17 +273,18 @@ const PersonalDetailsFieldset = (props) => {
       return false;
     }
   };
+
   const handleNext = (event) => {
     event.preventDefault();
     const form = event.target;
-    console.log("validate(form)", validate(form));
-    console.log("form.checkValidity()", form.checkValidity());
 
     if (validate(form)) {
-      props.merchant.firstName = formValue.firstName;
-      props.merchant.lastName = formValue.lastName;
-      props.merchant.phoneNumber = formValue.phoneNumber;
-      props.onClick("next");
+      const newMerchant = {};
+      newMerchant._firstName = formValue.firstName;
+      newMerchant._lastName = formValue.lastName;
+      newMerchant._phoneNumber = formValue.phoneNumber;
+      console.log("newMerchant", newMerchant);
+      props.onClick("next", newMerchant);
     } else {
       return false;
     }
@@ -204,14 +321,13 @@ const PersonalDetailsFieldset = (props) => {
           type="tel"
           name="phoneNumber"
           required={true}
-          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-          placeholder="Phone Number"
+          pattern="[0-9]{10}"
+          placeholder="512-899-9160"
           onChange={(e) => {
             formChangeHandler(e);
           }}
           value={formValue.phoneNumber}
         />
-        {/* <textarea name="address" placeholder="Address"></textarea> */}
         <input
           type="button"
           name="previous"
@@ -239,6 +355,7 @@ const BusinessFieldset = (props) => {
     {
       name: "",
       phoneNumber: "",
+      address: "",
       street: "",
       suite: "",
       city: "",
@@ -246,10 +363,27 @@ const BusinessFieldset = (props) => {
       zipcode: "",
     }
   );
-
+  const setAddress = (address) => {
+    if (address.split(",").length === 4) {
+      const addressObject = {};
+      addressObject["address"] = address;
+      const addressArray = address.split(",");
+      addressObject["street"] = addressArray[0];
+      addressObject["city"] = addressArray[1];
+      const stateZipcodeArray = addressArray[2].split(" ");
+      addressObject["state"] = stateZipcodeArray[1];
+      addressObject["zipcode"] = stateZipcodeArray[2];
+      console.log("addressObject", addressObject);
+      setFormValue(addressObject);
+    }
+  };
   const formChangeHandler = (event) => {
+    console.log("formValue", formValue);
+
     let name = event.target.name;
+    console.log("name", name);
     let value = event.target.value;
+    console.log("value", value);
     setFormValue({ [name]: value });
   };
 
@@ -260,14 +394,16 @@ const BusinessFieldset = (props) => {
     if (validate(form)) {
       // set all the values for the business
       // if the user comes back to this page before submitting to change stuff it will reset the values
-      props.business.id = formValue.name;
-      props.business.phoneNumber = formValue.phoneNumber;
-      props.business.street = formValue.street;
-      props.business.suite = formValue.suite;
-      props.business.city = formValue.city;
-      props.business.state = formValue.state;
-      props.business.zipcode = formValue.zipcode;
-      props.onSubmit();
+      const newBusiness = new Business();
+      newBusiness.id = formValue.name;
+      newBusiness.phoneNumber = formValue.phoneNumber;
+      newBusiness.address = formValue.address;
+      newBusiness.street = formValue.street;
+      newBusiness.suite = formValue.suite;
+      newBusiness.city = formValue.city;
+      newBusiness.state = formValue.state;
+      newBusiness.zipcode = formValue.zipcode;
+      props.onSubmit(newBusiness);
     } else {
       return false;
     }
@@ -281,11 +417,12 @@ const BusinessFieldset = (props) => {
       onSubmit={(e) => {
         handleSubmit(e);
       }}
+      autoComplete="off"
     >
       <fieldset>
         <h2 className="fs-title">Your Business</h2>
         <label htmlFor="name" style={{ display: "flex" }}>
-          Business Name
+          Name
         </label>
         <input
           type="text"
@@ -299,156 +436,24 @@ const BusinessFieldset = (props) => {
           }}
         />
         <label htmlFor="phoneNumber" style={{ display: "flex" }}>
-          Business Phone Number
+          Phone Number
         </label>
         <input
           type="tel"
           name="phoneNumber"
           className="mb-3"
-          placeholder="123-456-7891"
           required={true}
-          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          pattern="[0-9]{10}"
+          placeholder="5128999160"
           value={formValue.phoneNumber}
           onChange={(e) => {
             formChangeHandler(e);
           }}
         />
-        <div className="col-12">
-          <div className="row mb-3">
-            <label htmlFor="street">Street</label>
-            <input
-              type="text"
-              className="form-control"
-              name="street"
-              placeholder="1234 Main St"
-              value={formValue.street}
-              onChange={(e) => {
-                formChangeHandler(e);
-              }}
-              required={true}
-            />
-          </div>
-        </div>
-
-        <div className="row mb-3">
-          <div className="col-6">
-            <label htmlFor="suite" style={{ display: "flex" }}>
-              Suite
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              name="suite"
-              placeholder="Apartment or suite"
-              value={formValue.suite}
-              onChange={(e) => {
-                formChangeHandler(e);
-              }}
-            />
-          </div>
-          <div className="col-6">
-            <label htmlFor="city" style={{ display: "flex" }}>
-              City
-            </label>
-
-            <input
-              type="text"
-              name="city"
-              className="form-control"
-              placeholder="Los Angleles"
-              required={true}
-              value={formValue.city}
-              onChange={(e) => {
-                formChangeHandler(e);
-              }}
-            />
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col-6">
-            <label htmlFor="state" style={{ display: "flex" }}>
-              State
-            </label>
-            <select
-              className="custom-select d-block w-100"
-              name="state"
-              required={true}
-              value={formValue.state}
-              onChange={(e) => {
-                formChangeHandler(e);
-              }}
-            >
-              <option value="">Choose...</option>
-              <option>Alabama</option>
-              <option>Alaska</option>
-              <option>Arizona</option>
-              <option>Arkansas</option>
-              <option>California</option>
-              <option>Colorado</option>
-              <option>Connecticut</option>
-              <option>Delaware</option>
-              <option>Florida</option>
-              <option>Georgia</option>
-              <option>Hawaii</option>
-              <option>Idaho</option>
-              <option>Illinois</option>
-              <option>Indiana</option>
-              <option>Iowa</option>
-              <option>Kansas</option>
-              <option>Kentucky</option>
-              <option>Louisiana</option>
-              <option>Maine</option>
-              <option>Maryland</option>
-              <option>Massachusettes</option>
-              <option>Michigan</option>
-              <option>Minnesota</option>
-              <option>Mississippi</option>
-              <option>Missouri</option>
-              <option>Montana</option>
-              <option>Nebraska</option>
-              <option>Nevada</option>
-              <option>New Hamshire</option>
-              <option>New Jersey</option>
-              <option>New Mexico</option>
-              <option>New York</option>
-              <option>North Carolina</option>
-              <option>Ohio</option>
-              <option>Oklahoma</option>
-              <option>Oregon</option>
-              <option>Pennsylvania</option>
-              <option>Rhode Island</option>
-              <option>South Carolina</option>
-              <option>South Dakota</option>
-              <option>Tennessee</option>
-              <option>Texas</option>
-              <option>Utah</option>
-              <option>Vermont</option>
-              <option>Virginia</option>
-              <option>Washington</option>
-              <option>West Virginia</option>
-              <option>Wisconsin</option>
-              <option>Wyoming</option>
-            </select>
-          </div>
-          <div className="col-6">
-            <label htmlFor="zipcode" style={{ display: "flex" }}>
-              Zipcode
-            </label>
-            <input
-              type="text"
-              pattern="[0-9]{5}"
-              name="zipcode"
-              className="form-control"
-              placeholder=""
-              required={true}
-              value={formValue.zipcode}
-              onChange={(e) => {
-                formChangeHandler(e);
-              }}
-            />
-          </div>
-        </div>
+        <label htmlFor="address" style={{ display: "flex" }}>
+          Address
+        </label>
+        <SearchLocationInput onUpdate={(address) => setAddress(address)} />
         <div className="row" style={{ justifyContent: "space-around" }}>
           <input
             type="button"
@@ -474,47 +479,55 @@ const BusinessFieldset = (props) => {
 
 const Signup = () => {
   const [redirect, setRedirect] = useState(null);
-  const newMerchant = new Merchant();
-  const newBusiness = new Business();
+  const [dataBool, setDataBool] = useState(null);
+  const [merchant, setMerchant] = useState(new Merchant());
 
-  const handleClick = (buttonType) => {
+  const handleClick = (buttonType, newMerchant) => {
+    if (newMerchant) {
+      setMerchant({ ...merchant, ...newMerchant });
+    }
+
     if (buttonType === "previous") {
       if (currentFieldsetIndex > 0) {
         setCurrentFieldsetIndex(currentFieldsetIndex - 1);
       }
     } else if (buttonType === "next") {
-      console.log("newMerchant", newMerchant);
-      console.log("newBusiness", newBusiness);
-
       if (currentFieldsetIndex < 2) {
         setCurrentFieldsetIndex(currentFieldsetIndex + 1);
       }
     }
   };
-  const onSubmit = () => {
+  useEffect(() => {
+    //had to do this because memory leak due to component not unmounting properly
+    let mount = true;
+    if (dataBool && mount) {
+      setRedirect("/home");
+    }
+
+    return () => (mount = false);
+  }, [dataBool]);
+  const onSubmit = (newBusiness) => {
     const data = {};
-    data["merchant"] = newMerchant;
+    // the merchant in state was being converted back to a regular object
+    const formattedMerchant = new Merchant(null, merchant);
+    data["merchant"] = formattedMerchant;
     data["business"] = newBusiness;
     const json = JSON.stringify(data);
-    console.log("json", json);
-    localStorage.setItem("merchant", newMerchant);
+    localStorage.setItem("merchant", merchant);
     localStorage.setItem("business", newBusiness);
     makeApiRequest("http://127.0.0.1:5000/signup", "POST", json, function () {
-      setRedirect("/home");
+      setDataBool(true);
     });
   };
   const fieldSets = [
     <CreateYourAccountFieldset
-      merchant={newMerchant}
-      onClick={(buttonType) => handleClick(buttonType)}
+      onClick={(buttonType, merchant) => handleClick(buttonType, merchant)}
     ></CreateYourAccountFieldset>,
     <PersonalDetailsFieldset
-      merchant={newMerchant}
-      onClick={(buttonType) => handleClick(buttonType)}
+      onClick={(buttonType, merchant) => handleClick(buttonType, merchant)}
     ></PersonalDetailsFieldset>,
     <BusinessFieldset
-      onSubmit={() => onSubmit()}
-      business={newBusiness}
+      onSubmit={(newBusiness) => onSubmit(newBusiness)}
       onClick={(buttonType) => handleClick(buttonType)}
     ></BusinessFieldset>,
   ];
@@ -523,15 +536,18 @@ const Signup = () => {
     return <Redirect to={redirect} />;
   } else {
     return (
-      // <!-- multistep form -->
-      <div className="signupBody">
-        <div id="msform">
-          {/* <!-- progressbar --> */}
-          <ProgressBar i={currentFieldsetIndex}></ProgressBar>
-          {/* <!-- fieldsets --> */}
-          {fieldSets[currentFieldsetIndex]}
+      <>
+        <Navbar src={logo} />
+        {/* <!-- multistep form -->*/}
+        <div className="signupBody">
+          <div id="msform">
+            {/* <!-- progressbar --> */}
+            <ProgressBar i={currentFieldsetIndex}></ProgressBar>
+            {/* <!-- fieldsets --> */}
+            {fieldSets[currentFieldsetIndex]}
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 };
