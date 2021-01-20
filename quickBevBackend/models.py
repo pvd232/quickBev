@@ -68,7 +68,7 @@ class Bar(db.Model):
     administrator = relationship('Administrator', lazy=True)
     order = relationship('Order', lazy=True)
     tab = relationship('Tab', lazy=True)
-
+# TODO: change Bar class to Business, change Administrator to Merchant, create a new associative table BusinessLocation that links busnesses with their different locations
     @property
     def serialize(self):
         attribute_names = list(self.__dict__.keys())
