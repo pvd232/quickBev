@@ -8,6 +8,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from contextlib import contextmanager
 
+
 @contextmanager
 def session_scope():
     username = os.environ.get("USER", "")
@@ -36,10 +37,12 @@ def session_scope():
         session.close()
     # now all calls to Session() will create a thread-local session
 
+
 class Drink_Service(object):
     def __init__(self):
         self.drink_repository = Drink_Repository()
         self.drinks = self.get_drinks()
+
     def get_drinks(self):
         response = []
         with session_scope() as session:
@@ -65,27 +68,27 @@ class Order_Service(object):
         response = []
         with session_scope() as session:
             for order in self.order_repository.get_orders(session):
-                order_domain = Order_Domain(order_obhect = order)
+                order_domain = Order_Domain(order_object=order)
                 response.append(order_domain)
             return response
-    
+
     def stripe_ephemeral_key(self, request):
         with session_scope() as session:
             return self.order_repository.stripe_ephemeral_key(session, request)
-
 
     def stripe_payment_intent(self, request):
         with session_scope() as session:
             return self.order_repository.stripe_payment_intent(session, request)
 
 
-
 class User_Service(object):
     def __init__(self):
         self.user_repository = User_Repository()
+
     def authenticate_user(self, email, password):
         with session_scope() as session:
-            user_serialized = self.user_repository.authenticate_user(session,email, password)
+            user_serialized = self.user_repository.authenticate_user(
+                session, email, password)
             if user_serialized:
                 user_domain = User_Domain(user_object=user_serialized)
                 return user_domain
@@ -95,19 +98,23 @@ class User_Service(object):
     def register_new_user(self, user):
         with session_scope() as session:
             requested_new_user = User_Domain(user_json=user)
-            registered_user_status = self.user_repository.register_new_user(session, requested_new_user)
+            registered_user_status = self.user_repository.register_new_user(
+                session, requested_new_user)
             return registered_user_status
 
-class Bar_Service(object):
+
+class Business_Service(object):
     def __init__(self):
-        self.bar_repository = Bar_Repository()
-    def get_bars(self):
+        self.business_repository = Business_Repository()
+
+    def get_businesss(self):
         with session_scope() as session:
             response = []
-            for bar in self.bar_repository.get_bars(session):
-                bar_domain = Bar_Domain(bar_object=bar)
-                response.append(bar_domain)
+            for business in self.business_repository.get_businesss(session):
+                business_domain = Business_Domain(business_object=business)
+                response.append(business_domain)
             return response
+
 
 class Tab_Service(object):
     def __init__(self):
@@ -117,4 +124,3 @@ class Tab_Service(object):
         with session_scope() as session:
             new_tab_domain = Tab_Domain(tab_json=tab)
             return self.tab_repository.post_tab(session, new_tab_domain)
-            

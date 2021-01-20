@@ -82,18 +82,18 @@ def register_new_user():
         return jsonify(response), 400
 
 
-@app.route('/getBars', methods=['GET'])
-def get_bars():
+@app.route('/getBusinesss', methods=['GET'])
+def get_businesss():
     response = {}
-    bar_list = []
-    bar_service = Bar_Service()
-    bars = bar_service.get_bars()
-    for bar in bars:
+    business_list = []
+    business_service = Business_Service()
+    businesss = business_service.get_businesss()
+    for business in businesss:
         # turn into dictionaries
-        barDTO = {}
-        barDTO['bar'] = bar.serialize()
-        bar_list.append(barDTO)
-    response['bars'] = bar_list
+        businessDTO = {}
+        businessDTO['business'] = business.serialize()
+        business_list.append(businessDTO)
+    response['businesss'] = business_list
     return jsonify(response)
 
 

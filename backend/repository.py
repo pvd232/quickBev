@@ -2,7 +2,7 @@
 
 import uuid
 import os
-from models import Drink, Order, OrderDrink, UserTable, Bar, Tab, Stripe
+from models import Drink, Order, OrderDrink, UserTable, Business, Tab, Stripe
 import stripe
 
 
@@ -16,16 +16,18 @@ class Order_Repository(object):
     def post_order(self, session, order):
         print("order_repository, order.serialize()", order.serialize())
         new_order = Order(id=order.id, user_id=order.user_id,
-                          bar_id=order.bar_id, cost=order.cost, subtotal = order.subtotal, tip_percentage = order.tip_percentage, tip_amount = order.tip_amount, sales_tax = order.sales_tax, date_time = order.date_time)
+                          business_address_id=order.business_address_id, cost=order.cost, subtotal=order.subtotal, tip_percentage=order.tip_percentage, tip_amount=order.tip_amount, sales_tax=order.sales_tax, date_time=order.date_time)
         session.add(new_order)
 
         for each_order_drink in order.order_drink.order_drink:
             print()
-            print('each_order_drink',each_order_drink.serialize())
+            print('each_order_drink', each_order_drink.serialize())
             print()
-            new_order_drink = OrderDrink(
-            order_id=new_order.id, drink_id=each_order_drink.id, quantity=each_order_drink.quantity)
-            session.add(new_order_drink)
+            # create a unique instance of Order_Drink for the number of each type of drink that were ordered. the UUID for the Order_Drink is generated in the database
+            for i in range(each_order_drink.quantity):
+                new_order_drink = OrderDrink(
+                    order_id=new_order.id, drink_id=each_order_drink.id)
+                session.add(new_order_drink)
         return True
 
     def get_orders(self, session):
@@ -34,13 +36,14 @@ class Order_Repository(object):
 
     def stripe_ephemeral_key(self, session, request):
         customer = request['stripe_id']
-        print('request',request)
+        print('request', request)
         if customer:
-            confirm_customer_existence = session.query(Stripe).filter(                
+            confirm_customer_existence = session.query(Stripe).filter(
                 Stripe.id == customer).first()
-            # Lookup the saved card (you can store multiple PaymentMethods on a Customer)
+            # Lookup the customer in the database so that if they exist we can attach their stripe id to the Ephermeral key such that later when they create the payment intent it will include their payment methods
             if confirm_customer_existence:
-                key = stripe.EphemeralKey.create(customer=customer, stripe_version=request['api_version'])
+                key = stripe.EphemeralKey.create(
+                    customer=customer, stripe_version=request['api_version'])
                 header = None
                 return key, header
         else:
@@ -48,16 +51,14 @@ class Order_Repository(object):
             new_stripe = Stripe(id=new_customer.id)
             session.add(new_stripe)
             stripe_header = {"stripe_id": new_customer.id}
-            key = stripe.EphemeralKey.create(customer=new_customer.id, stripe_version=request['api_version'])
+            key = stripe.EphemeralKey.create(
+                customer=new_customer.id, stripe_version=request['api_version'])
             return key, stripe_header
 
     def stripe_payment_intent(self, session, request):
-        amount = int(round(request["order"]["cost"], 2) *100)
-        payment_methods = stripe.PaymentMethod.list(                    
-                    customer=request["order"]["user"]["stripe_id"],
-                    type='card'
-                )
-        payment_intent = stripe.PaymentIntent.create(                
+        amount = int(round(request["order"]["cost"], 2) * 100)
+        # when the user lands on the checkout page we create a payment intent for them and send it back. this includes their payment methods
+        payment_intent = stripe.PaymentIntent.create(
             amount=amount,
             customer=request["order"]["user"]["stripe_id"],
             setup_future_usage='on_session',
@@ -93,12 +94,12 @@ class User_Repository(object):
             UserTable.id == user.id).first()
         test_stripe_id = session.query(Stripe).filter(
             Stripe.id == user.stripe_id).first()
-        print('test_stripe_id',test_stripe_id)
-        print('test_user',test_user)
+        print('test_stripe_id', test_stripe_id)
+        print('test_user', test_user)
 
         if not test_user and test_stripe_id:
             new_user = UserTable(id=user.id, password=user.password,
-                                 first_name=user.first_name, last_name=user.last_name, stripe_id = test_stripe_id.id)
+                                 first_name=user.first_name, last_name=user.last_name, stripe_id=test_stripe_id.id)
             session.add(new_user)
             return True
         elif not test_user and not test_stripe_id:
@@ -106,20 +107,22 @@ class User_Repository(object):
             new_stripe = Stripe(id=new_customer.id)
             session.add(new_stripe)
             new_user = UserTable(id=user.id, password=user.password,
-                                 first_name=user.first_name, last_name=user.last_name, stripe_id = new_stripe.id)
+                                 first_name=user.first_name, last_name=user.last_name, stripe_id=new_stripe.id)
             session.add(new_user)
             return {"stripe_id": new_stripe.id}
         else:
             return False
 
 
-class Bar_Repository(object):
-    def get_bars(self, session):
-        bars = session.query(Bar)
-        return bars
+class Business_Repository(object):
+    def get_businesss(self, session):
+        businesss = session.query(Business)
+        return businesss
+
 
 class Tab_Repository(object):
     def post_tab(self, session, tab):
-        new_tab = Tab(id=tab.id, name=tab.name, bar_id=tab.bar_id, user_id=tab.user_id, address=tab.address, street = tab.street, city = tab.city, state=tab.state, zipcode = tab.zipcode, date_time = tab.date_time, description = tab.description, minimum_contribution = tab.minimum_contribution, fundraising_goal = tab.fundraising_goal )
+        new_tab = Tab(id=tab.id, name=tab.name, business_address_id=tab.business_address_id, user_id=tab.user_id, address=tab.address, street=tab.street, city=tab.city, state=tab.state,
+                      zipcode=tab.zipcode, suite=tab.suite, date_time=tab.date_time, description=tab.description, minimum_contribution=tab.minimum_contribution, fundraising_goal=tab.fundraising_goal)
         session.add(new_tab)
         return True
