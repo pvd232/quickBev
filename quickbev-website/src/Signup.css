@@ -23,6 +23,19 @@
 	font-family: montserrat, arial, verdana;
 } */
 /*form styles*/
+.row {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#msform label {
+  display: flex !important;
+  font-size: 14px;
+  font-weight: bolder;
+  text-align: left !important;
+}
+#custom-switch-col label {
+  color: rgb(39, 179, 4);
+}
 .col-6,
 .col-12 {
   padding-left: 5px;
@@ -33,11 +46,11 @@
 }
 #msform {
   min-width: 360px;
-  width: 45vmax;
-  max-width: 450px;
+  width: 50vmax;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 10vh;
+  padding-top: 5vh;
   margin-bottom: 10vh;
   text-align: center;
   position: relative;
@@ -57,13 +70,12 @@
 }
 
 /*inputs*/
-#msform input,
-.custom-select,
+#msform .custom-select,
+#msform .form-control,
 #msform textarea {
   padding: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid rgba(146, 146, 146, 0.555);
   border-radius: 3px;
-  margin-bottom: 10px;
   width: 100%;
   box-sizing: border-box;
   font-family: montserrat;
@@ -71,6 +83,11 @@
   font-size: 14px;
   /* i have to make this based on view height because some inputs are inside nested containers */
   height: 4vh;
+}
+/*cards*/
+.card {
+  width: 100%;
+  border: 1px solid rgba(146, 146, 146, 0.555);
 }
 /*buttons*/
 #msform .action-button {
@@ -82,7 +99,8 @@
   border-radius: 1px;
   cursor: pointer;
   padding: 10px 5px;
-  margin: 10px 5px;
+  margin: 10px;
+  height: fit-content;
   font-size: 16px;
 }
 #msform .action-button:hover,
@@ -91,17 +109,19 @@
 }
 /*headings*/
 .fs-title {
-  font-size: 20px;
-  text-transform: uppercase;
-  color: #2c3e50;
-  margin-bottom: 5%;
-  margin-top: 2%;
+  font-size: 18px;
+  /* text-transform: uppercase; */
+  color: black;
+  margin-bottom: 4%;
+  font-weight: bold;
 }
 .fs-subtitle {
-  font-weight: normal;
-  font-size: 15px;
+  font-weight: 500;
+  font-size: 14px;
   color: #666;
   margin-bottom: 20px;
+  text-align: left;
+  line-height: 1.5em;
 }
 /*progressbar*/
 #progressbar {

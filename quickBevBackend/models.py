@@ -22,7 +22,8 @@ username = os.environ.get("USER", "")
 password = os.environ.get("PASSWORD", "")
 connection_string_beginning = "postgres://"
 connection_string_end = "@localhost:5432/quickbevdb"
-connection_string = connection_string_beginning + username + ":" + password + connection_string_end
+connection_string = connection_string_beginning + \
+    username + ":" + password + connection_string_end
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get(
     "DB_STRING", connection_string)
 
@@ -58,7 +59,8 @@ class Bar(db.Model):
     street = db.Column(db.String(80), nullable=False)
     city = db.Column(db.String(80), nullable=False)
     state = db.Column(db.String(80), nullable=False)
-    address = db.Column(db.String(80), unique=True, nullable=False)
+    address = db.Column(db.String(80), primary_key=True,
+                        unique=True, nullable=False)
     zipcode = db.Column(db.Integer, nullable=False)
     date_joined = db.Column(db.Date, nullable=False)
     sales_tax_rate = db.Column(db.Float(), nullable=False)
@@ -92,7 +94,7 @@ class UserTable(db.Model):
     id = db.Column(db.String(80), primary_key=True,
                    unique=True, nullable=False)
     stripe_id = db.Column(db.String(80), db.ForeignKey('stripe.id'),
-                  nullable=False)
+                          nullable=False)
     password = db.Column(db.String(80), nullable=False)
     first_name = db.Column(db.String(80), nullable=False)
     last_name = db.Column(db.String(80), nullable=False)
@@ -109,8 +111,10 @@ class UserTable(db.Model):
 
 
 class Order(db.Model):
-    id = db.Column(UUID(as_uuid=True), primary_key=True,unique=True, nullable=False)
-    user_id = db.Column(db.String(80), db.ForeignKey('user_table.id'), nullable=False)
+    id = db.Column(UUID(as_uuid=True), primary_key=True,
+                   unique=True, nullable=False)
+    user_id = db.Column(db.String(80), db.ForeignKey(
+        'user_table.id'), nullable=False)
     bar_id = db.Column(db.String(80), db.ForeignKey('bar.id'), nullable=False)
     cost = db.Column(db.Float(), nullable=False)
     subtotal = db.Column(db.Float(), nullable=False)
@@ -137,8 +141,10 @@ class OrderDrink(db.Model):
         'drink.id'), nullable=False, primary_key=True)
     quantity = db.Column(db.Integer, nullable=False, primary_key=True)
 
+
 class Tab (db.Model):
-    id = db.Column(UUID(as_uuid=True), primary_key=True, unique=True, nullable=False)
+    id = db.Column(UUID(as_uuid=True), primary_key=True,
+                   unique=True, nullable=False)
     name = db.Column(db.String(80), nullable=False)
     bar_id = db.Column(db.String(80), nullable=False)
     user_id = db.Column(db.String(80), nullable=False)
@@ -146,7 +152,8 @@ class Tab (db.Model):
     city = db.Column(db.String(80), nullable=False)
     state = db.Column(db.String(80),  nullable=False)
     zipcode = db.Column(db.Integer, nullable=False)
-    address = db.Column(db.String(80), db.ForeignKey('bar.address'), nullable=False)
+    address = db.Column(db.String(80), db.ForeignKey(
+        'bar.address'), nullable=False)
     date_time = db.Column(db.DateTime(), nullable=False)
     description = db.Column(db.String(280), nullable=False)
     minimum_contribution = db.Column(db.Integer, nullable=False)
@@ -161,6 +168,7 @@ class Tab (db.Model):
             serialized_attributes[attribute_names[i]] = attributes[i]
         return serialized_attributes
 
+
 class Stripe(db.Model):
     id = db.Column(db.String(80), primary_key=True,
                    unique=True, nullable=False)
@@ -174,6 +182,7 @@ class Stripe(db.Model):
         for i in range(len(attributes)):
             serialized_attributes[attribute_names[i]] = attributes[i]
         return serialized_attributes
+
 
 def load_json(filename):
 
@@ -222,7 +231,7 @@ def create_bar():
         sales_tax_rate = bar["sales_tax_rate"]
 
         new_bar = Bar(id=id, name=name, street=street, city=city,
-                      state=state, zipcode=zipcode, address=address, date_joined=date_joined, sales_tax_rate = sales_tax_rate)
+                      state=state, zipcode=zipcode, address=address, date_joined=date_joined, sales_tax_rate=sales_tax_rate)
 
         # After I create the drink, I can then add it to my session.
         db.session.add(new_bar)
@@ -230,6 +239,7 @@ def create_bar():
     # db.session.add(me)
     # commit the session to my DB.
     db.session.commit()
+
 
 def create_everything():
     db.drop_all()

@@ -3,6 +3,9 @@ export const makeApiRequest = (url, requestType, payload, cfunc) => {
   const xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = cfunc;
   xmlhttp.open(requestType, url, true);
+  console.log("payload", payload);
+  console.log("payload JSON", JSON.stringify(payload));
+
   xmlhttp.send(payload);
 };
 export class Merchant {

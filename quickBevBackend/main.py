@@ -1,12 +1,23 @@
-from flask import Flask, jsonify, Response, request
+from flask import Flask, jsonify, Response, request, redirect, url_for
+import requests
 from models import app
 from service import *
 import json
 import time
 import uuid
 import stripe
+import os
+from werkzeug.utils import secure_filename
+
+UPLOAD_FOLDER = os.getcwd() + "/files"
+ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+
+app = Flask(__name__)
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 stripe.api_key = "sk_test_51I0xFxFseFjpsgWvh9b1munh6nIea6f5Z8bYlIDfmKyNq6zzrgg8iqeKEHwmRi5PqIelVkx4XWcYHAYc1omtD7wz00JiwbEKzj"
+
+
 @app.route('/login', methods=['GET'])
 def login():
     # grab the username and password values from a custom header that was sent as a part of the request from the frontend
@@ -125,12 +136,37 @@ def create_payment_intent():
     return Response(status=200, response=json.dumps(response))
 
 
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+
 @app.route('/signup', methods=['POST'])
-def signup():
-    response = {"msg": "booyah bitch"}
-    request_json = json.loads(request.data)
-    print('request_json', request_json)
-    return Response(status=200, response=json.dumps(response))
+def upload_file():
+    response = {"msg": ""}
+    # check if the post request has the file part
+    requestJson = json.loads(request.data)
+    print('requestJson', requestJson)
+    requestedMerchant = requestJson["merchant"]
+    print('requestedMerchant', requestedMerchant)
+    requestedBusiness = requestJson["business"]
+    print('requestedBusiness', requestedBusiness)
+
+    if 'file' not in request.files:
+        response["msg"] = "No file part in request"
+        return Response(status=200, response=json.dumps(response))
+    file = request.files['file']
+    # if user does not select file, browser also
+    # submit an empty part without filename
+    if file.filename == '':
+        response["msg"] = "No file file uploaded"
+        return Response(status=200, response=json.dumps(response))
+    if file and allowed_file(file.filename):
+        filename = secure_filename(file.filename)
+        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+
+        response["msg"] = "File successfully uploaded!"
+        return Response(status=200, response=json.dumps(response))
 
 
 if __name__ == '__main__':
