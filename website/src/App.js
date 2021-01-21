@@ -1,5 +1,5 @@
-import "./App.css";
-import "./Signup.css";
+import "./css/App.css";
+import "./css/Signup.css";
 import Main from "./Main.js";
 
 const App = () => {

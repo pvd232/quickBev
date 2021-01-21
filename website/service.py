@@ -103,6 +103,15 @@ class User_Service(object):
             return registered_user_status
 
 
+class Merchant_Service(object):
+    def __init__(self):
+        self.merchant_repository = Merchant_Repository()
+
+    def create_stripe_account(self):
+        with session_scope() as session:
+            return self.merchant_repository.create_stripe_account(session)
+
+
 class Business_Service(object):
     def __init__(self):
         self.business_repository = Business_Repository()

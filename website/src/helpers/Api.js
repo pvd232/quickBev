@@ -1,4 +1,4 @@
-export class Client {
+export class API {
   // constructor() {
   //   this.token = "";
   //   this.context = null;
@@ -22,7 +22,6 @@ export class Client {
     // console.log("APIclient.makeRequest.requestUrl", requestUrl);
     try {
       const response = await fetch(url, {
-        credentials: "include",
         headers: {
           "content-type": method === "post" ? "application/json" : "",
         },

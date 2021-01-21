@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
-import API from "../helpers/Api.js";
+import { API } from "../helpers/Api.js";
 import { Redirect } from "react-router-dom";
+import bankIcon from "../static/icon-bank.svg";
 
-const PayoutSetup = () => {
+const PayoutSetup = (props) => {
+  const [redirect, setRedirect] = useState(null);
+  const [data, setData] = useState(false);
+  const localAPI = new API();
   const getRedirectInfo = async () => {
-    return API.makeRequest(
+    return localAPI.makeRequest(
       "post",
       `http://127.0.0.1:5000/create-stripe-account`
     );
   };
-  const [redirect, setRedirect] = useState(null);
-  const [data, setData] = useState(false);
+
   const handleConnect = async () => {
     let response = await getRedirectInfo();
     let url = response.location;
@@ -34,7 +37,7 @@ const PayoutSetup = () => {
     return (
       <>
         <div className="text-center box">
-          <img src="/static/icon-bank.svg" alt="" className="icon" />
+          <img src={bankIcon} alt="" className="icon" />
           <h3>Set up payouts to list on Kavholm</h3>
           <p>
             Kavholm partners with Stripe to transfer earnings to your bank
@@ -43,7 +46,9 @@ const PayoutSetup = () => {
 
           <Button
             className="btn btn-primary text-center"
-            onClick={handleConnect()}
+            onClick={() => {
+              handleConnect();
+            }}
           >
             Set up payouts
           </Button>
@@ -52,34 +57,6 @@ const PayoutSetup = () => {
             You'll be redirected to Stripe to complete the onboarding proces.
           </p>
         </div>
-        <style jsx>{`
-          .icon {
-            margin-bottom: 30px;
-            height: 32px;
-          }
-          .box {
-            max-width: 300px;
-            max-height: 400px;
-          }
-          h3 {
-            font-weight: 600;
-          }
-          p {
-            line-height: 22px;
-          }
-          .box .btn {
-            width: 100%;
-            margin-bottom: 20px;
-            margin-top: 16px;
-          }
-          .box .notice {
-            font-size: 12px;
-            line-height: 1.5;
-          }
-          .box h3 {
-            margin-bottom: 20px;
-          }
-        `}</style>
       </>
     );
   }

@@ -118,7 +118,6 @@ class User_Table(db.Model):
     order = relationship('Order', lazy=True)
     tab = relationship('Tab', lazy=True)
 
-
     @property
     def serialize(self):
         attribute_names = list(self.__dict__.keys())
@@ -191,10 +190,25 @@ class Tab (db.Model):
         return serialized_attributes
 
 
-class Stripe(db.Model):
+class Stripe_Customer(db.Model):
     id = db.Column(db.String(80), primary_key=True,
                    unique=True, nullable=False)
     user_table = relationship('User_Table', lazy=True)
+
+    @property
+    def serialize(self):
+        attribute_names = list(self.__dict__.keys())
+        attributes = list(self.__dict__.values())
+        serialized_attributes = {}
+        for i in range(len(attributes)):
+            serialized_attributes[attribute_names[i]] = attributes[i]
+        return serialized_attributes
+
+
+class Stripe_Account(db.Model):
+    id = db.Column(db.String(80), primary_key=True,
+                   unique=True, nullable=False)
+    merchant = relationship('Merchant', lazy=True)
 
     @property
     def serialize(self):

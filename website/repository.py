@@ -2,7 +2,7 @@
 
 import uuid
 import os
-from models import Drink, Order, OrderDrink, UserTable, Business, Tab, Stripe
+from models import Drink, Order, Order_Drink, User_Table, Business, Tab, Stripe
 import stripe
 
 
@@ -25,7 +25,7 @@ class Order_Repository(object):
             print()
             # create a unique instance of Order_Drink for the number of each type of drink that were ordered. the UUID for the Order_Drink is generated in the database
             for i in range(each_order_drink.quantity):
-                new_order_drink = OrderDrink(
+                new_order_drink = Order_Drink(
                     order_id=new_order.id, drink_id=each_order_drink.id)
                 session.add(new_order_drink)
         return True
@@ -71,8 +71,8 @@ class User_Repository(object):
     def authenticate_user(self, session, email, password):
       # check to see if the user exists in the database by querying the User_Info table for the giver username and password
       # if they don't exist this will return a null value for user which i check for in line 80
-        user = session.query(UserTable).filter(
-            UserTable.id == email, UserTable.password == password).first()
+        user = session.query(User_Table).filter(
+            User_Table.id == email, User_Table.password == password).first()
         if user:
             # user = user.serialize
             return user
@@ -90,24 +90,24 @@ class User_Repository(object):
             return False
 
     def register_new_user(self, session, user):
-        test_user = session.query(UserTable).filter(
-            UserTable.id == user.id).first()
+        test_user = session.query(User_Table).filter(
+            User_Table.id == user.id).first()
         test_stripe_id = session.query(Stripe).filter(
             Stripe.id == user.stripe_id).first()
         print('test_stripe_id', test_stripe_id)
         print('test_user', test_user)
 
         if not test_user and test_stripe_id:
-            new_user = UserTable(id=user.id, password=user.password,
-                                 first_name=user.first_name, last_name=user.last_name, stripe_id=test_stripe_id.id)
+            new_user = User_Table(id=user.id, password=user.password,
+                                  first_name=user.first_name, last_name=user.last_name, stripe_id=test_stripe_id.id)
             session.add(new_user)
             return True
         elif not test_user and not test_stripe_id:
             new_customer = stripe.Customer.create()
             new_stripe = Stripe(id=new_customer.id)
             session.add(new_stripe)
-            new_user = UserTable(id=user.id, password=user.password,
-                                 first_name=user.first_name, last_name=user.last_name, stripe_id=new_stripe.id)
+            new_user = User_Table(id=user.id, password=user.password,
+                                  first_name=user.first_name, last_name=user.last_name, stripe_id=new_stripe.id)
             session.add(new_user)
             return {"stripe_id": new_stripe.id}
         else:
@@ -126,3 +126,17 @@ class Tab_Repository(object):
                       zipcode=tab.zipcode, suite=tab.suite, date_time=tab.date_time, description=tab.description, minimum_contribution=tab.minimum_contribution, fundraising_goal=tab.fundraising_goal)
         session.add(new_tab)
         return True
+
+
+class Merchant_Repository(object):
+    def create_stripe_account(self, session):
+        new_account = stripe.Account.create(
+            type="custom",
+            country="US",
+            capabilities={
+                "card_payments": {"requested": True},
+                "transfers": {"requested": True},
+            },
+            charges_enabled=True
+        )
+        return new_account

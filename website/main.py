@@ -169,6 +169,16 @@ def upload_file():
         return Response(status=200, response=json.dumps(response))
 
 
+@app.route('/create-stripe-account', methods=['POST'])
+def create_stripe_account():
+    merchant_service = Merchant_Service()
+    new_account = merchant_service.create_stripe_account()
+    print('new_account', new_account)
+    response = {'id', new_account.id}
+
+    return Response(status=200, response=json.dumps(response))
+
+
 if __name__ == '__main__':
     app.debug = True
     app.run()

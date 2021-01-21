@@ -1,9 +1,10 @@
 import React, { useState, useReducer, useEffect } from "react";
 import { Redirect } from "react-router-dom";
-import { Merchant, Business, makeApiRequest } from "../Models.js";
+import { Merchant, Business } from "../Models.js";
 import Navbar from "../Navbar.js";
-import logo from "../qbLogo.png";
+import logo from "../static/qbLogo.png";
 import SearchLocationInput from "../SearchLocationInput.js";
+import PayoutSetup from "./PayoutSetup";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
@@ -763,6 +764,15 @@ const BusinessFieldset = (props) => {
         />
         <Form.Label>Address</Form.Label>
         <SearchLocationInput onUpdate={(address) => setAddress(address)} />
+        <Row style={{ marginTop: "15%", marginBottom: "15%" }}>
+          <Col
+            sm={12}
+            id="payoutSetup"
+            style={{ justifyContent: "center", display: "flex" }}
+          >
+            <PayoutSetup></PayoutSetup>
+          </Col>
+        </Row>
         <Row style={{ justifyContent: "space-around" }}>
           <Form.Control
             type="button"
@@ -826,9 +836,18 @@ const Signup = () => {
     const json = JSON.stringify(data);
     localStorage.setItem("merchant", merchant);
     localStorage.setItem("business", newBusiness);
-    makeApiRequest("http://127.0.0.1:5000/signup", "POST", json, function () {
-      setDataBool(true);
-    });
+    fetch("http://127.0.0.1:5000/signup", {
+      method: "POST",
+      body: json,
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        console.log("Success:", result);
+        setDataBool(true);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   };
   const fieldSets = [
     <CreateYourAccountFieldset
