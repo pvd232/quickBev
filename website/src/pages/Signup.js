@@ -9,6 +9,7 @@ import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
+
 const ProgressBar = (props) => {
   const statusValues = [
     "Account setup",
@@ -655,6 +656,7 @@ const BusinessFieldset = (props) => {
     {
       name: "",
       phoneNumber: "",
+      email: "",
       address: "",
       street: "",
       suite: "",
@@ -696,6 +698,7 @@ const BusinessFieldset = (props) => {
       // if the user comes back to this page before submitting to change stuff it will reset the values
       const newBusiness = new Business();
       newBusiness.id = formValue.name;
+      newBusiness.email = formValue.email;
       newBusiness.phoneNumber = formValue.phoneNumber;
       newBusiness.address = formValue.address;
       newBusiness.street = formValue.street;
@@ -721,9 +724,7 @@ const BusinessFieldset = (props) => {
     >
       <fieldset>
         <h2 className="fs-title">Your Business</h2>
-        <label htmlFor="name" style={{ display: "flex" }}>
-          Name
-        </label>
+        <Form.Label>Name</Form.Label>
         <Form.Control
           type="text"
           className="mb-3"
@@ -735,9 +736,7 @@ const BusinessFieldset = (props) => {
             formChangeHandler(e);
           }}
         />
-        <label htmlFor="phoneNumber" style={{ display: "flex" }}>
-          Phone Number
-        </label>
+        <Form.Label>Phone Number</Form.Label>
         <Form.Control
           type="tel"
           name="phoneNumber"
@@ -750,9 +749,19 @@ const BusinessFieldset = (props) => {
             formChangeHandler(e);
           }}
         />
-        <label htmlFor="address" style={{ display: "flex" }}>
-          Address
-        </label>
+        <Form.Label>Email</Form.Label>
+        <Form.Control
+          type="email"
+          name="email"
+          className="mb-3"
+          required
+          placeholder="yourbusiness@gmail.com"
+          value={formValue.phoneNumber}
+          onChange={(e) => {
+            formChangeHandler(e);
+          }}
+        />
+        <Form.Label>Address</Form.Label>
         <SearchLocationInput onUpdate={(address) => setAddress(address)} />
         <Row style={{ justifyContent: "space-around" }}>
           <Form.Control

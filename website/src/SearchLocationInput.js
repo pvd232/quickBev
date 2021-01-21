@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-
+import Form from "react-bootstrap/Form";
 let autoComplete;
 
 const loadScript = (url, callback) => {
@@ -51,7 +51,7 @@ function SearchLocationInput(props) {
   }, [props]);
 
   return (
-    <input
+    <Form.Control
       type="search"
       name="address"
       ref={autoCompleteRef}

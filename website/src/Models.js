@@ -1,13 +1,3 @@
-// import { v4 as uuidv4 } from "uuid";
-export const makeApiRequest = (url, requestType, payload, cfunc) => {
-  const xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = cfunc;
-  xmlhttp.open(requestType, url, true);
-  console.log("payload", payload);
-  console.log("payload JSON", JSON.stringify(payload));
-
-  xmlhttp.send(payload);
-};
 export class Merchant {
   constructor(merchantObject = null, merchantStateObject = null) {
     if (merchantObject) {
@@ -89,6 +79,7 @@ export class Business {
       this._id = businessObject.id;
       // will fill in the stripe ID later
       this._merchantId = null;
+      this._email = businessObject.email;
       this._address = businessObject.address;
       this._street = businessObject.street;
       this._city = businessObject.city;
@@ -97,6 +88,7 @@ export class Business {
       this._phoneNumber = businessObject.phoneNumber;
     } else {
       this._id = null;
+      this._email = null;
       this._merchantId = null;
       this._address = null;
       this._street = null;
@@ -109,6 +101,9 @@ export class Business {
 
   get id() {
     return this._id;
+  }
+  get email() {
+    return this._email;
   }
   get merchantId() {
     return this._merchantId;
@@ -134,6 +129,9 @@ export class Business {
   set id(value) {
     this._id = value;
   }
+  set email(value) {
+    this._email = value;
+  }
   set merchantId(value) {
     this._merchantId = value;
   }
@@ -158,6 +156,7 @@ export class Business {
   toJSON() {
     const data = {
       id: this._id,
+      email: this._email,
       merchantId: this._merchantId,
       address: this._address,
       street: this._street,
@@ -171,6 +170,7 @@ export class Business {
   fromJSON(json) {
     const data = JSON.parse(json);
     this._id = data.id;
+    this._email = data.email;
     this._merchantId = data.merchantId;
     this._address = data.address;
     this._street = data.street;
