@@ -62,6 +62,7 @@ class Business(db.Model):
     sales_tax_rate = db.Column(db.Float(), nullable=False)
     merchant_id = db.Column(db.String(80), db.ForeignKey(
         'merchant.id'), nullable=False)
+    numberOfLocations = db.Column(db.BigInteger(), nullable=False)
     business_address = relationship("Business_Address", lazy=True)
 
 
@@ -82,6 +83,7 @@ class Business_Address(db.Model):
                    unique=True, nullable=False)
     business_id = db.Column(db.String(80), db.ForeignKey('business.id'),
                             nullable=False)
+    tablet = db.Column(db.Boolean(), nullable=False)
     street = db.Column(db.String(80), nullable=False)
     city = db.Column(db.String(80), nullable=False)
     state = db.Column(db.String(80), nullable=False)

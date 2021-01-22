@@ -10,7 +10,7 @@ const PayoutSetup = (props) => {
   const localAPI = new API();
   const getRedirectInfo = async () => {
     return localAPI.makeRequest(
-      "post",
+      "GET",
       `http://127.0.0.1:5000/create-stripe-account`
     );
   };
@@ -26,66 +26,63 @@ const PayoutSetup = (props) => {
   useEffect(() => {
     //had to do this because memory leak due to component not unmounting properly
     let mount = true;
-    if (data && mount) {
-      setData(true);
+    if (mount && redirect) {
+      window.location.assign(redirect);
     }
 
     return () => (mount = false);
-  }, [data]);
-  if (data) {
-    return <Redirect to={redirect} />;
+  }, [redirect]);
+
+  if (props) {
+    return (
+      <>
+        <div className="text-center box">
+          <img src={bankIcon} alt="" className="icon" />
+          <h5 style={{ marginTop: "5%", marginBottom: "5%" }}>
+            Stripe account onboarding incomplete
+          </h5>
+          <p>
+            Please click the button below to be redirected to Stripe to complete
+            the onboarding proces
+          </p>
+
+          <Button
+            className="btn btn-primary text-center"
+            onClick={() => {
+              handleConnect();
+            }}
+          >
+            Set up payouts
+          </Button>
+        </div>
+      </>
+    );
   } else {
-    if (props) {
-      return (
-        <>
-          <div className="text-center box">
-            <img src={bankIcon} alt="" className="icon" />
-            <h5 style={{ marginTop: "5%", marginBottom: "5%" }}>
-              Stripe account onboarding incomplete
-            </h5>
-            <p>
-              Please click the button below to be redirected to Stripe to
-              complete the onboarding proces
-            </p>
+    return (
+      <>
+        <div className="text-center box">
+          <img src={bankIcon} alt="" className="icon" />
+          <h5>Set up payouts to list on Kavholm</h5>
+          <p>
+            Kavholm partners with Stripe to transfer earnings to your bank
+            account.
+          </p>
 
-            <Button
-              className="btn btn-primary text-center"
-              onClick={() => {
-                handleConnect();
-              }}
-            >
-              Set up payouts
-            </Button>
-          </div>
-        </>
-      );
-    } else {
-      return (
-        <>
-          <div className="text-center box">
-            <img src={bankIcon} alt="" className="icon" />
-            <h5>Set up payouts to list on Kavholm</h5>
-            <p>
-              Kavholm partners with Stripe to transfer earnings to your bank
-              account.
-            </p>
+          <Button
+            className="btn btn-primary text-center"
+            onClick={() => {
+              handleConnect();
+            }}
+          >
+            Set up payouts
+          </Button>
 
-            <Button
-              className="btn btn-primary text-center"
-              onClick={() => {
-                handleConnect();
-              }}
-            >
-              Set up payouts
-            </Button>
-
-            <p className="text-center notice">
-              You'll be redirected to Stripe to complete the onboarding proces.
-            </p>
-          </div>
-        </>
-      );
-    }
+          <p className="text-center notice">
+            You'll be redirected to Stripe to complete the onboarding proces.
+          </p>
+        </div>
+      </>
+    );
   }
 };
 

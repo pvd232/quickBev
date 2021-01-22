@@ -507,9 +507,9 @@ const PromoteYourMenuFieldset = (props) => {
             >
               <option value="">Choose...</option>
               <option>1-5</option>
-              <option>Restaurant</option>
-              <option>10-20</option>
-              <option>20-100</option>
+              <option>6-10</option>
+              <option>11-20</option>
+              <option>21-100</option>
               <option>100+</option>
             </Form.Control>
           </Form.Group>
@@ -745,18 +745,6 @@ const BusinessFieldset = (props) => {
           required
           pattern="[0-9]{10}"
           placeholder="5128999160"
-          value={formValue.phoneNumber}
-          onChange={(e) => {
-            formChangeHandler(e);
-          }}
-        />
-        <Form.Label>Email</Form.Label>
-        <Form.Control
-          type="email"
-          name="email"
-          className="mb-3"
-          required
-          placeholder="yourbusiness@gmail.com"
           value={formValue.phoneNumber}
           onChange={(e) => {
             formChangeHandler(e);
