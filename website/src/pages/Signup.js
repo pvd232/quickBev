@@ -1,6 +1,7 @@
 import React, { useState, useReducer, useEffect } from "react";
 import { Redirect } from "react-router-dom";
 import { Merchant, Business } from "../Models.js";
+import API from "../helpers/Api.js";
 import Navbar from "../Navbar.js";
 import logo from "../static/qbLogo.png";
 import SearchLocationInput from "../SearchLocationInput.js";
@@ -300,34 +301,6 @@ const PromoteYourMenuFieldset = (props) => {
     setSelectedFileName(event.target.files[0].name);
   };
 
-  // On file upload (click the upload button)
-  const onFileUpload = (event) => {
-    // Create an object of formData
-    event.preventDefault();
-    const formData = new FormData();
-    // Update the formData object
-    formData.append("file", selectedFile, selectedFile.name);
-    for (var key of formData.entries()) {
-      console.log(key[0] + ", " + key[1]);
-    }
-
-    // Details of the uploaded file
-    // return false;
-    // Request made to the backend api
-    // Send formData object
-    fetch("http://127.0.0.1:5000/signup", {
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => response.json())
-      .then((result) => {
-        console.log("Success:", result);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  };
-
   const formChangeHandler = (event) => {
     let name = event.target.name;
     console.log("formValue.typeOfBusiness", formValue.typeOfBusiness);
@@ -348,9 +321,11 @@ const PromoteYourMenuFieldset = (props) => {
   const handleNext = (event) => {
     event.preventDefault();
     const form = event.target;
+    console.log(selectedFile);
+    console.log(selectedFileName);
 
     if (validate(form)) {
-      if (!(formValue.menuUrl || formValue.selectedFile)) {
+      if (!(formValue.menuUrl || selectedFile)) {
         const newErrorMsgState = {};
         newErrorMsgState["menuSubmittedErrorMsg"] =
           "* Please upload your menu and or submit a link to it";
@@ -358,20 +333,22 @@ const PromoteYourMenuFieldset = (props) => {
         setErrorMsg(newErrorMsgState);
         return false;
       }
-      const formData = new FormData();
+      const formDataObject = {};
       // Update the formData object
-      formData.append("numberOfLocations", formData.numberOfLocations);
-      formData.append("typeOfBusiness", formData.typeOfBusiness);
-      formData.append("tablet", formData.tablet);
+      formDataObject["numberOfLocations"] = formValue.numberOfLocations;
+      formDataObject["typeOfBusiness"] = formValue.typeOfBusiness;
+      formDataObject["tablet"] = tablet;
+      console.log("formDataObject", formDataObject);
 
       if (formValue.menuUrl) {
-        formData.append("menuUrl", formValue.menuUrl);
+        formDataObject["menuUrl"] = formValue.menuUrl;
       }
-      if (formValue.selectedFile) {
-        formData.append("menuFile", selectedFile, selectedFile.name);
+      if (selectedFile) {
+        formDataObject["menuFile"] = selectedFile;
+        formDataObject["menuFileName"] = selectedFileName;
       }
-
-      props.onClick("next", formData);
+      console.log("formDataObject", formDataObject);
+      props.onClick("next", "formDataObject", formDataObject);
     } else {
       return false;
     }
@@ -551,7 +528,9 @@ const PromoteYourMenuFieldset = (props) => {
                     label=""
                     name="tablet"
                     id="formHorizontalRadios2"
-                    onChange={(e) => {
+                    onClick={() => {
+                      console.log("tablet true");
+
                       setTablet(true);
                     }}
                   />
@@ -598,7 +577,8 @@ const PromoteYourMenuFieldset = (props) => {
                     label=""
                     name="tablet"
                     id="formHorizontalRadios2"
-                    onChange={(e) => {
+                    onClick={() => {
+                      console.log("tablet false");
                       setTablet(false);
                     }}
                   />
@@ -691,9 +671,10 @@ const BusinessFieldset = (props) => {
   };
 
   const handleSubmit = (event) => {
+    console.log("event.currentTarget", event.currentTarget);
     event.preventDefault();
-    const form = event.target;
-
+    // the event target is the button that was clicked inside the payout setup component inside the business fieldset
+    const form = event.target.closest("form");
     if (validate(form)) {
       // set all the values for the business
       // if the user comes back to this page before submitting to change stuff it will reset the values
@@ -717,12 +698,7 @@ const BusinessFieldset = (props) => {
     return form.checkValidity();
   };
   return (
-    <Form
-      onSubmit={(e) => {
-        handleSubmit(e);
-      }}
-      autoComplete="off"
-    >
+    <Form autoComplete="off">
       <fieldset>
         <h2 className="fs-title">Your Business</h2>
         <Form.Label>Name</Form.Label>
@@ -758,7 +734,9 @@ const BusinessFieldset = (props) => {
             id="payoutSetup"
             style={{ justifyContent: "center", display: "flex" }}
           >
-            <PayoutSetup></PayoutSetup>
+            <PayoutSetup
+              onSubmit={(event) => handleSubmit(event)}
+            ></PayoutSetup>
           </Col>
         </Row>
         <Row style={{ justifyContent: "space-around" }}>
@@ -771,13 +749,6 @@ const BusinessFieldset = (props) => {
               props.onClick("previous");
             }}
           />
-          <Form.Control
-            type="submit"
-            name="submit"
-            className="submit action-button"
-            style={{ background: "blue" }}
-            value="Submit"
-          />
         </Row>
       </fieldset>
     </Form>
@@ -785,17 +756,18 @@ const BusinessFieldset = (props) => {
 };
 
 const Signup = () => {
-  const [redirect, setRedirect] = useState(null);
-  const [dataBool, setDataBool] = useState(null);
   const [merchant, setMerchant] = useState(null);
-  const [formData, setFormData] = useState(null);
+  const [formDataObject, setformDataObject] = useState(null);
 
-  const handleClick = (buttonType, objectType, objectData) => {
+  const handleClick = (buttonType, objectType = null, objectData = null) => {
     if (objectType === "merchant") {
       setMerchant({ ...merchant, ...objectData });
     }
     // TODO: modify models class to allow a business to have a list of possible locations in step three of the form filling ? or maybe do this after the account has already been created. probably do this because we dont want to make this form too complicated and combersome to complete
-    else if (objectType === "formData") {
+    else if (objectType === "formDataObject") {
+      console.log("formDataObject", formDataObject);
+
+      setformDataObject({ ...formDataObject, ...objectData });
     }
     if (buttonType === "previous") {
       if (currentFieldsetIndex > 0) {
@@ -807,31 +779,40 @@ const Signup = () => {
       }
     }
   };
-  useEffect(() => {
-    //had to do this because memory leak due to component not unmounting properly
-    let mount = true;
-    if (dataBool && mount) {
-      setRedirect("/home");
+
+  const onSubmit = (newBusiness) => {
+    const newForm = new FormData();
+    console.log("formDataObject", formDataObject);
+
+    // set values from formDataObject into business object
+    newBusiness.numberOfLocations = formDataObject["numberOfLocations"];
+    newBusiness.tablet = formDataObject["tablet"];
+    if (formDataObject["menuUrl"]) {
+      console.log("h");
+      newBusiness.menuUrl = formDataObject["menuUrl"];
+    }
+    if (formDataObject["menuFile"]) {
+      console.log("r");
+      newForm.append(
+        "file",
+        formDataObject["menuFile"],
+        formDataObject["menuFileName"]
+      );
     }
 
-    return () => (mount = false);
-  }, [dataBool]);
-  const onSubmit = (newBusiness) => {
-    const data = {};
     // the merchant in state was being converted back to a regular object
-    data["merchant"] = merchant;
-    data["business"] = newBusiness;
-    const json = JSON.stringify(data);
+    console.log("merchant", merchant);
+    console.log("formDataObject", formDataObject);
+
+    const newMerchant = new Merchant(null, merchant);
+    newForm.append("merchant", JSON.stringify(newMerchant));
+    newForm.append("business", JSON.stringify(newBusiness));
+
     localStorage.setItem("merchant", merchant);
     localStorage.setItem("business", newBusiness);
-    fetch("http://127.0.0.1:5000/signup", {
-      method: "POST",
-      body: json,
-    })
-      .then((response) => response.json())
+    API.makeRequest("POST", "http://127.0.0.1:5000/signup", newForm, true)
       .then((result) => {
         console.log("Success:", result);
-        setDataBool(true);
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -839,10 +820,14 @@ const Signup = () => {
   };
   const fieldSets = [
     <CreateYourAccountFieldset
-      onClick={(buttonType, merchant) => handleClick(buttonType, merchant)}
+      onClick={(buttonType, objectType, merchant) =>
+        handleClick(buttonType, objectType, merchant)
+      }
     ></CreateYourAccountFieldset>,
     <PromoteYourMenuFieldset
-      onClick={(buttonType, merchant) => handleClick(buttonType, merchant)}
+      onClick={(buttonType, objectType, merchant) =>
+        handleClick(buttonType, objectType, merchant)
+      }
     ></PromoteYourMenuFieldset>,
     <BusinessFieldset
       onSubmit={(newBusiness) => onSubmit(newBusiness)}
@@ -850,23 +835,19 @@ const Signup = () => {
     ></BusinessFieldset>,
   ];
   const [currentFieldsetIndex, setCurrentFieldsetIndex] = useState(0);
-  if (redirect) {
-    return <Redirect to={redirect} />;
-  } else {
-    return (
-      <>
-        <Navbar src={logo} />
-        {/* <!-- multistep form -->*/}
-        <div className="signupBody">
-          <div id="msform">
-            {/* <!-- progressbar --> */}
-            <ProgressBar i={currentFieldsetIndex}></ProgressBar>
-            {/* <!-- fieldsets --> */}
-            {fieldSets[currentFieldsetIndex]}
-          </div>
+  return (
+    <>
+      <Navbar src={logo} />
+      {/* <!-- multistep form -->*/}
+      <div className="signupBody">
+        <div id="msform">
+          {/* <!-- progressbar --> */}
+          <ProgressBar i={currentFieldsetIndex}></ProgressBar>
+          {/* <!-- fieldsets --> */}
+          {fieldSets[currentFieldsetIndex]}
         </div>
-      </>
-    );
-  }
+      </div>
+    </>
+  );
 };
 export default Signup;

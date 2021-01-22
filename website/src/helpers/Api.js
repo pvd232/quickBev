@@ -1,32 +1,15 @@
-export class API {
-  // constructor() {
-  //   this.token = "";
-  //   this.context = null;
-  //   this.protocol = "http:";
-  //   this.port = null;
-  // }
-
-  // detectContext() {
-  //   if (window) {
-  //     this.host = window.location.hostname;
-  //     this.protocol = window.location.protocol;
-  //     this.port = window.location.port;
-  //   }
-  // }
-
-  async makeRequest(method, url, data) {
+class Client {
+  async makeRequest(method, url, data, isForm = false) {
     let requestData = data || {};
-    // let baseUrl = this.getBaseUrl();
-    // let requestUrl = baseUrl + url;
-
-    // console.log("APIclient.makeRequest.requestUrl", requestUrl);
     try {
       const response = await fetch(url, {
-        headers: {
-          "content-type": method === "post" ? "application/json" : "",
-        },
         method: method,
-        body: method === "post" ? JSON.stringify(requestData) : null,
+        body:
+          method === "POST" && !isForm
+            ? JSON.stringify(requestData)
+            : method === "POST" && isForm
+            ? requestData
+            : null,
       });
 
       if (response.ok) {
@@ -42,11 +25,7 @@ export class API {
       }
     } catch (err) {
       console.log("APIclient.makeRequest.error", err);
-      // throw new Error(err);
     }
   }
-
-  // getBaseUrl() {
-  //   return `${this.protocol}//${this.host}${this.port ? ":" + this.port : ""}`;
-  // }
 }
+export default new Client();

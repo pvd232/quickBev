@@ -148,16 +148,18 @@ def allowed_file(filename):
 def upload_file():
     response = {"msg": ""}
     # check if the post request has the file part
-    requestJson = json.loads(request.data)
-    print('requestJson', requestJson)
-    requestedMerchant = requestJson["merchant"]
-    print('requestedMerchant', requestedMerchant)
-    requestedBusiness = requestJson["business"]
-    print('requestedBusiness', requestedBusiness)
+    print('request.form', request.form)
+
+    requestedMerchant = json.loads(request.form.get("merchant"))
+    requestedBusiness = json.loads(request.form.get("business"))
 
     if 'file' not in request.files:
         response["msg"] = "No file part in request"
         return Response(status=200, response=json.dumps(response))
+    # if 'file' not in requestJson['files'].files:
+    #     response["msg"] = "No nested file in request"
+    #     return Response(status=200, response=json.dumps(response))
+
     file = request.files['file']
     # if user does not select file, browser also
     # submit an empty part without filename

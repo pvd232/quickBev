@@ -1,25 +1,24 @@
 import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
-import { API } from "../helpers/Api.js";
-import { Redirect } from "react-router-dom";
+import API from "../helpers/Api.js";
 import bankIcon from "../static/icon-bank.svg";
 
 const PayoutSetup = (props) => {
   const [redirect, setRedirect] = useState(null);
-  const [data, setData] = useState(false);
-  const localAPI = new API();
   const getRedirectInfo = async () => {
-    return localAPI.makeRequest(
+    return API.makeRequest(
       "GET",
       `http://127.0.0.1:5000/create-stripe-account`
     );
   };
 
   const handleConnect = async () => {
+    // event.preventDefault()
     let response = await getRedirectInfo();
     console.log("response", response);
     let url = response.url;
     if (url) {
+      console.log("url", url);
       setRedirect(url);
     }
   };
@@ -33,7 +32,7 @@ const PayoutSetup = (props) => {
     return () => (mount = false);
   }, [redirect]);
 
-  if (props) {
+  if (props.callBack) {
     return (
       <>
         <div className="text-center box">
@@ -49,6 +48,7 @@ const PayoutSetup = (props) => {
           <Button
             className="btn btn-primary text-center"
             onClick={() => {
+              props.onSubmit();
               handleConnect();
             }}
           >
@@ -70,9 +70,11 @@ const PayoutSetup = (props) => {
 
           <Button
             className="btn btn-primary text-center"
-            onClick={() => {
+            onClick={(event) => {
+              props.onSubmit(event);
               handleConnect();
             }}
+            type="submit"
           >
             Set up payouts
           </Button>

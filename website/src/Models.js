@@ -79,16 +79,17 @@ export class Business {
       this._id = businessObject.id;
       // will fill in the stripe ID later
       this._merchantId = null;
-      this._email = businessObject.email;
       this._address = businessObject.address;
       this._street = businessObject.street;
       this._city = businessObject.city;
       this._state = businessObject.state;
       this._zipcode = businessObject.zip;
       this._phoneNumber = businessObject.phoneNumber;
+      this._numberOfLocations = businessObject.numberOfLocations;
+      this._tablet = businessObject.tablet;
+      this._menuUrl = businessObject.menuUrl;
     } else {
       this._id = null;
-      this._email = null;
       this._merchantId = null;
       this._address = null;
       this._street = null;
@@ -96,15 +97,16 @@ export class Business {
       this._state = null;
       this._zipcode = null;
       this._phoneNumber = null;
+      this._numberOfLocations = null;
+      this._tablet = null;
+      this._menuUrl = null;
     }
   }
 
   get id() {
     return this._id;
   }
-  get email() {
-    return this._email;
-  }
+
   get merchantId() {
     return this._merchantId;
   }
@@ -126,11 +128,17 @@ export class Business {
   get phoneNumber() {
     return this._phoneNumber;
   }
+  get numberOfLocations() {
+    return this._numberOfLocations;
+  }
+  get tablet() {
+    return this._tablet;
+  }
+  get menuUrl() {
+    return this._menuUrl;
+  }
   set id(value) {
     this._id = value;
-  }
-  set email(value) {
-    this._email = value;
   }
   set merchantId(value) {
     this._merchantId = value;
@@ -153,10 +161,18 @@ export class Business {
   set phoneNumber(value) {
     this._phoneNumber = value;
   }
+  set numberOfLocations(value) {
+    this._numberOfLocations = value;
+  }
+  set tablet(value) {
+    this._tablet = value;
+  }
+  set menuUrl(value) {
+    this._menuUrl = value;
+  }
   toJSON() {
     const data = {
       id: this._id,
-      email: this._email,
       merchantId: this._merchantId,
       address: this._address,
       street: this._street,
@@ -164,18 +180,23 @@ export class Business {
       state: this._state,
       zipcode: this._zipcode,
       phoneNumber: this._phoneNumber,
+      numberOfLocations: this._numberOfLocations,
+      tablet: this._tablet,
+      menuUrl: this._menuUrl,
     };
     return data;
   }
   fromJSON(json) {
     const data = JSON.parse(json);
     this._id = data.id;
-    this._email = data.email;
     this._merchantId = data.merchantId;
     this._address = data.address;
     this._street = data.street;
     this._city = data.city;
     this._state = data.state;
     this._phoneNumber = data.phoneNumber;
+    this._numberOfLocations = data.numberOfLocations;
+    this._tablet = data.tablet;
+    this._menuUrl = data.menuUrl;
   }
 }
