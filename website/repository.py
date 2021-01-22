@@ -2,7 +2,7 @@
 
 import uuid
 import os
-from models import Drink, Order, Order_Drink, User_Table, Business, Tab, Stripe
+from models import Drink, Order, Order_Drink, User_Table, Business, Tab, Stripe_Customer, Stripe_Account
 import stripe
 
 
@@ -38,8 +38,8 @@ class Order_Repository(object):
         customer = request['stripe_id']
         print('request', request)
         if customer:
-            confirm_customer_existence = session.query(Stripe).filter(
-                Stripe.id == customer).first()
+            confirm_customer_existence = session.query(Stripe_Customer).filter(
+                Stripe_Customer.id == customer).first()
             # Lookup the customer in the database so that if they exist we can attach their stripe id to the Ephermeral key such that later when they create the payment intent it will include their payment methods
             if confirm_customer_existence:
                 key = stripe.EphemeralKey.create(
@@ -48,7 +48,7 @@ class Order_Repository(object):
                 return key, header
         else:
             new_customer = stripe.Customer.create()
-            new_stripe = Stripe(id=new_customer.id)
+            new_stripe = Stripe_Customer(id=new_customer.id)
             session.add(new_stripe)
             stripe_header = {"stripe_id": new_customer.id}
             key = stripe.EphemeralKey.create(
@@ -92,8 +92,8 @@ class User_Repository(object):
     def register_new_user(self, session, user):
         test_user = session.query(User_Table).filter(
             User_Table.id == user.id).first()
-        test_stripe_id = session.query(Stripe).filter(
-            Stripe.id == user.stripe_id).first()
+        test_stripe_id = session.query(Stripe_Customer).filter(
+            Stripe_Customer.id == user.stripe_id).first()
         print('test_stripe_id', test_stripe_id)
         print('test_user', test_user)
 
@@ -104,7 +104,7 @@ class User_Repository(object):
             return True
         elif not test_user and not test_stripe_id:
             new_customer = stripe.Customer.create()
-            new_stripe = Stripe(id=new_customer.id)
+            new_stripe = Stripe_Customer(id=new_customer.id)
             session.add(new_stripe)
             new_user = User_Table(id=user.id, password=user.password,
                                   first_name=user.first_name, last_name=user.last_name, stripe_id=new_stripe.id)
@@ -131,12 +131,9 @@ class Tab_Repository(object):
 class Merchant_Repository(object):
     def create_stripe_account(self, session):
         new_account = stripe.Account.create(
-            type="custom",
-            country="US",
-            capabilities={
-                "card_payments": {"requested": True},
-                "transfers": {"requested": True},
-            },
-            charges_enabled=True
+            type="express",
+            country="US"
         )
+        new_stripe_account_id = Stripe_Account(id=new_account.id)
+        session.add(new_stripe_account_id)
         return new_account

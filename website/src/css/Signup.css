@@ -1,11 +1,16 @@
 /*custom font*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Barlow);
 
 /*basic reset*/
-/* * {
+* {
   margin: 0;
   padding: 0;
-} */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+  box-sizing: border-box;
+}
 #payoutSetup .icon {
   margin-bottom: 30px;
   height: 32px;
@@ -41,7 +46,7 @@
   /* background: linear-gradient(rgba(196, 102, 70, 0.6), rgba(155, 89, 182, 0.6)); */
   min-height: 100vh;
   min-width: 100vw;
-  font-family: 14px "Century Gothic";
+  font-family: 14px;
   position: relative;
 }
 
@@ -136,10 +141,12 @@
 /*headings*/
 .fs-title {
   font-size: 18px;
+  font-family: "Barlow";
   /* text-transform: uppercase; */
   color: black;
   margin-bottom: 4%;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 36px;
 }
 .fs-subtitle {
   font-weight: 500;

@@ -17,7 +17,8 @@ const PayoutSetup = (props) => {
 
   const handleConnect = async () => {
     let response = await getRedirectInfo();
-    let url = response.location;
+    console.log("response", response);
+    let url = response.url;
     if (url) {
       setRedirect(url);
     }
@@ -34,31 +35,57 @@ const PayoutSetup = (props) => {
   if (data) {
     return <Redirect to={redirect} />;
   } else {
-    return (
-      <>
-        <div className="text-center box">
-          <img src={bankIcon} alt="" className="icon" />
-          <h3>Set up payouts to list on Kavholm</h3>
-          <p>
-            Kavholm partners with Stripe to transfer earnings to your bank
-            account.
-          </p>
+    if (props) {
+      return (
+        <>
+          <div className="text-center box">
+            <img src={bankIcon} alt="" className="icon" />
+            <h5 style={{ marginTop: "5%", marginBottom: "5%" }}>
+              Stripe account onboarding incomplete
+            </h5>
+            <p>
+              Please click the button below to be redirected to Stripe to
+              complete the onboarding proces
+            </p>
 
-          <Button
-            className="btn btn-primary text-center"
-            onClick={() => {
-              handleConnect();
-            }}
-          >
-            Set up payouts
-          </Button>
+            <Button
+              className="btn btn-primary text-center"
+              onClick={() => {
+                handleConnect();
+              }}
+            >
+              Set up payouts
+            </Button>
+          </div>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <div className="text-center box">
+            <img src={bankIcon} alt="" className="icon" />
+            <h5>Set up payouts to list on Kavholm</h5>
+            <p>
+              Kavholm partners with Stripe to transfer earnings to your bank
+              account.
+            </p>
 
-          <p className="text-center notice">
-            You'll be redirected to Stripe to complete the onboarding proces.
-          </p>
-        </div>
-      </>
-    );
+            <Button
+              className="btn btn-primary text-center"
+              onClick={() => {
+                handleConnect();
+              }}
+            >
+              Set up payouts
+            </Button>
+
+            <p className="text-center notice">
+              You'll be redirected to Stripe to complete the onboarding proces.
+            </p>
+          </div>
+        </>
+      );
+    }
   }
 };
 

@@ -105,7 +105,7 @@ const CreateYourAccountFieldset = (props) => {
       }}
     >
       <fieldset>
-        <h2 className="fs-title">Your menu and ordering</h2>
+        <h2 className="fs-title">Create your account</h2>
         <Row>
           <Col>
             <Form.Label

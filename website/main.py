@@ -16,6 +16,9 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 stripe.api_key = "sk_test_51I0xFxFseFjpsgWvh9b1munh6nIea6f5Z8bYlIDfmKyNq6zzrgg8iqeKEHwmRi5PqIelVkx4XWcYHAYc1omtD7wz00JiwbEKzj"
+# publicly accessible local host URL!!! - http://machina-8c11dd2e.localhost.run/
+# theme color RGB = rgb(134,130,230), hex = #8682E6
+# TODO: Need to setup a seperate stripe_account table and integrate it to the creation of a new stripe account, then integrate the id from that with the merchant table, then return that to the front end
 
 
 @app.route('/login', methods=['GET'])
@@ -169,14 +172,17 @@ def upload_file():
         return Response(status=200, response=json.dumps(response))
 
 
-@app.route('/create-stripe-account', methods=['POST'])
+@app.route('/create-stripe-account', methods=['GET'])
 def create_stripe_account():
     merchant_service = Merchant_Service()
     new_account = merchant_service.create_stripe_account()
-    print('new_account', new_account)
-    response = {'id', new_account.id}
-
-    return Response(status=200, response=json.dumps(response))
+    account_links = stripe.AccountLink.create(
+        account=new_account.id,
+        refresh_url='http://machina-8c11dd2e.localhost.run/payout-setup-callback',
+        return_url='http://machina-8c11dd2e.localhost.run/home',
+        type='account_onboarding',
+    )
+    return Response(status=200, response=json.dumps(account_links))
 
 
 if __name__ == '__main__':
