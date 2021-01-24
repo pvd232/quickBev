@@ -162,8 +162,7 @@ def upload_file():
         return Response(status=200, response=json.dumps(response))
 
     file = request.files['file']
-    # if user does not select file, browser also
-    # submit an empty part without filename
+    # if user does not select file
     if file.filename == '':
         response["msg"] = "No file file uploaded"
         return Response(status=200, response=json.dumps(response))
