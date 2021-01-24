@@ -85,7 +85,7 @@ class Business_Address(db.Model):
                             nullable=False)
     tablet = db.Column(db.Boolean(), nullable=False)
     phone_number = db.Column(db.BigInteger(), nullable=False)
-    # not all businesses will have a menu URl, but they could be specific to each business
+    # not all businesses will have a menu URL or file upload, but they could be specific to each business
     menu_url = db.Column(db.String(80), nullable=True)
     menu_file_path = db.Column(db.String(180), nullable=True)
     street = db.Column(db.String(80), nullable=False)
