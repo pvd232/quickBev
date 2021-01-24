@@ -141,12 +141,20 @@ class Merchant_Repository(object):
         return new_account
 
     def validate_merchant(self, session, requested_merchant):
-        print('requested', requested_merchant.serialize())
         merchant = session.query(Merchant).filter(
             Merchant.id == requested_merchant.id).first()
-        print('merchant', merchant)
-
         if merchant:
             return False
         else:
             return True
+
+    def add_merchant(self, session, requested_merchant):
+        try:
+            new_merchant = Merchant(id=requested_merchant.id, password=requested_merchant.password, first_name=requested_merchant.first_name,
+                                    last_name=requested_merchant.last_name, phone_number=requested_merchant.phone_number, stripe_id=requested_merchant.stripe_id)
+            db.session.add(requested_merchant)
+            db.session.commit()
+            return True
+        except:
+            print("an error occured while adding the new merchant")
+            return False

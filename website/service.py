@@ -118,6 +118,12 @@ class Merchant_Service(object):
                 session, requested_new_merchant)
             return registered_merchant_status
 
+    def add_merchant(self, merchant):
+        with session_scope() as session:
+            requested_new_merchant = Merchant_Domain(merchant_json=merchant)
+            return self.merchant_repository.add_merchant(
+                session, requested_new_merchant)
+
 
 class Business_Service(object):
     def __init__(self):

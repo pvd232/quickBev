@@ -152,11 +152,18 @@ def upload_file():
     response = {"msg": ""}
     # check if the post request has the file part
     requested_merchant = json.loads(request.form.get("merchant"))
+
     print('requested_merchant', requested_merchant)
+
     requested_business = json.loads(request.form.get("business"))
+
     print('requested_business', requested_business)
+
+    merchant_service = Merchant_Service()
     business_service = Business_Service()
+    merchant_service.add_merchant(requested_merchant)
     business_service.add_business(requested_business)
+
     if 'file' not in request.files:
         response["msg"] = "No file part in request"
         return Response(status=200, response=json.dumps(response))
@@ -180,7 +187,6 @@ def validate_merchant():
     request_data = json.loads(request.data)
     requested_merchant = request_data['merchant']
     response = merchant_service.validate_merchant(requested_merchant)
-    print('response', response)
     # if the merchant exists it will return False, if it doesn't it will return True
     if response:
         return jsonify(response), 200
