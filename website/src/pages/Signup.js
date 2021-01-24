@@ -1,5 +1,4 @@
-import React, { useState, useReducer, useEffect } from "react";
-import { Redirect } from "react-router-dom";
+import React, { useState, useReducer } from "react";
 import { Merchant, Business } from "../Models.js";
 import API from "../helpers/Api.js";
 import Navbar from "../Navbar.js";
@@ -53,6 +52,7 @@ const CreateYourAccountFieldset = (props) => {
     (state, newState) => ({ ...state, ...newState }),
     {
       confirmPwdDisplay: "none",
+      emailDisplay: "none",
     }
   );
   const formChangeHandler = (event) => {
@@ -87,7 +87,24 @@ const CreateYourAccountFieldset = (props) => {
         newMerchant.phoneNumber = formValue.phoneNumber;
         newMerchant.id = formValue.email;
         newMerchant.password = formValue.password;
-        props.onClick("next", "merchant", newMerchant);
+        const merchantData = { merchant: newMerchant };
+        API.makeRequest(
+          "POST",
+          "http://127.0.0.1:5000/validate-merchant",
+          merchantData,
+          false
+        ).then((response) => {
+          if (response) {
+            // if the username is available the response from the API will be true
+            props.onClick("next", "merchant", newMerchant);
+          } else {
+            // otherwise it will be false
+            newErrorMsgState["emailErrorMsg"] = "* Username already claimed";
+            newErrorMsgState["emailDisplay"] = "inline-block";
+            setErrorMsg(newErrorMsgState);
+            return false;
+          }
+        });
       }
     } else {
       return false;
@@ -95,6 +112,11 @@ const CreateYourAccountFieldset = (props) => {
   };
   const confirmPwdErrorMsgStyle = {
     display: errorMsg.confirmPwdDisplay,
+    textAlign: "left",
+    marginTop: "0",
+  };
+  const emailErrorMsgStyle = {
+    display: errorMsg.emailDisplay,
     textAlign: "left",
     marginTop: "0",
   };
@@ -135,6 +157,9 @@ const CreateYourAccountFieldset = (props) => {
         </Row>
         <Row>
           <Col>
+            <div className="invalid-feedback" style={emailErrorMsgStyle}>
+              {errorMsg.emailErrorMsg}
+            </div>
             <Form.Label>Email</Form.Label>
             <Form.Control
               type="email"
@@ -287,18 +312,18 @@ const PromoteYourMenuFieldset = (props) => {
       }
       const formDataObject = {};
       // Update the formData object
-      formDataObject["numberOfLocations"] = formValue.numberOfLocations;
-      formDataObject["classification"] = formValue.typeOfBusiness;
-      formDataObject["tablet"] = tablet;
-      formDataObject["multipleBusinesses"] = isSwitchOn;
+      formDataObject.numberOfLocations = formValue.numberOfLocations;
+      formDataObject.classification = formValue.typeOfBusiness;
+      formDataObject.tablet = tablet;
+      formDataObject.multipleBusinesses = isSwitchOn;
       console.log("formDataObject", formDataObject);
 
       if (formValue.menuUrl) {
-        formDataObject["menuUrl"] = formValue.menuUrl;
+        formDataObject.menuUrl = formValue.menuUrl;
       }
       if (selectedFile) {
-        formDataObject["menuFile"] = selectedFile;
-        formDataObject["menuFileName"] = selectedFileName;
+        formDataObject.menuFile = selectedFile;
+        formDataObject.menuFileName = selectedFileName;
       }
       console.log("formDataObject", formDataObject);
       props.onClick("next", "formDataObject", formDataObject);
@@ -602,13 +627,13 @@ const BusinessFieldset = (props) => {
   const setAddress = (address) => {
     if (address.split(",").length === 4) {
       const addressObject = {};
-      addressObject["address"] = address;
+      addressObject.address = address;
       const addressArray = address.split(",");
-      addressObject["street"] = addressArray[0];
-      addressObject["city"] = addressArray[1];
+      addressObject.street = addressArray[0];
+      addressObject.city = addressArray[1];
       const stateZipcodeArray = addressArray[2].split(" ");
-      addressObject["state"] = stateZipcodeArray[1];
-      addressObject["zipcode"] = stateZipcodeArray[2];
+      addressObject.state = stateZipcodeArray[1];
+      addressObject.zipcode = stateZipcodeArray[2];
       console.log("addressObject", addressObject);
       setFormValue(addressObject);
     }
@@ -738,19 +763,19 @@ const Signup = () => {
     console.log("formDataObject", formDataObject);
 
     // set values from formDataObject into business object
-    newBusiness.numberOfLocations = formDataObject["numberOfLocations"];
-    newBusiness.tablet = formDataObject["tablet"];
-    newBusiness.classification = formDataObject["classification"];
-    if (formDataObject["menuUrl"]) {
+    newBusiness.numberOfLocations = formDataObject.numberOfLocations;
+    newBusiness.tablet = formDataObject.tablet;
+    newBusiness.classification = formDataObject.classification;
+    if (formDataObject.menuUrl) {
       console.log("h");
-      newBusiness.menuUrl = formDataObject["menuUrl"];
+      newBusiness.menuUrl = formDataObject.menuUrl;
     }
-    if (formDataObject["menuFile"]) {
+    if (formDataObject.menuFile) {
       console.log("r");
       newForm.append(
         "file",
-        formDataObject["menuFile"],
-        formDataObject["menuFileName"]
+        formDataObject.menuFile,
+        formDataObject.menuFileName
       );
     }
 

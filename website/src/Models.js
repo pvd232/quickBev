@@ -3,6 +3,7 @@ export class Merchant {
     if (merchantObject) {
       this._id = merchantObject.id;
       // will fill in the stripe ID later
+      this._password = merchantObject.password;
       this._stripeId = null;
       this._firstName = merchantObject.firstName;
       this._lastName = merchantObject.lastName;
@@ -10,6 +11,7 @@ export class Merchant {
     } else if (merchantStateObject) {
       console.log("merchantStateObject", merchantStateObject);
       this._id = merchantStateObject._id;
+      this._password = merchantStateObject._password;
       // will fill in the stripe ID later
       this._stripeId = null;
       this._firstName = merchantStateObject._firstName;
@@ -17,6 +19,7 @@ export class Merchant {
       this._phoneNumber = merchantStateObject._phoneNumber;
     } else {
       this._id = null;
+      this._password = null;
       this._stripeId = null;
       this._firstName = null;
       this._lastName = null;
@@ -26,6 +29,9 @@ export class Merchant {
 
   get id() {
     return this._id;
+  }
+  get password() {
+    return this.password;
   }
   get stripeId() {
     return this._stripeId;
@@ -42,6 +48,9 @@ export class Merchant {
   set id(value) {
     this._id = value;
   }
+  set password(value) {
+    this._password = value;
+  }
   set stripeId(value) {
     this._stripeId = value;
   }
@@ -57,6 +66,7 @@ export class Merchant {
   toJSON() {
     const data = {
       id: this._id,
+      password: this._password,
       stripe_id: this._stripeId,
       first_name: this._firstName,
       last_name: this._lastName,
@@ -67,6 +77,7 @@ export class Merchant {
   fromJSON(json) {
     const data = JSON.parse(json);
     this._id = data.id;
+    this._password = data.password;
     this._stripeId = data.stripe_id;
     this._firstName = data.first_name;
     this._lastName = data.last_name;
@@ -77,6 +88,7 @@ export class Business {
   constructor(businessObject) {
     if (businessObject) {
       this._id = businessObject.id;
+      this._name = businessObject.name;
       // will fill in the stripe ID later
       this._merchantId = null;
       this._address = businessObject.address;
@@ -90,6 +102,7 @@ export class Business {
       this._menuUrl = businessObject.menu_url;
     } else {
       this._id = null;
+      this._name = null;
       this._merchantId = null;
       this._address = null;
       this._street = null;
@@ -106,7 +119,9 @@ export class Business {
   get id() {
     return this._id;
   }
-
+  get name() {
+    return this._name;
+  }
   get merchantId() {
     return this._merchantId;
   }
@@ -139,6 +154,9 @@ export class Business {
   }
   set id(value) {
     this._id = value;
+  }
+  set name(value) {
+    this._name = value;
   }
   set merchantId(value) {
     this._merchantId = value;
@@ -173,6 +191,7 @@ export class Business {
   toJSON() {
     const data = {
       id: this._id,
+      name: this._name,
       merchantId: this._merchantId,
       address: this._address,
       street: this._street,
@@ -189,6 +208,7 @@ export class Business {
   fromJSON(json) {
     const data = JSON.parse(json);
     this._id = data.id;
+    this._name = data.name;
     this._merchantId = data.merchantId;
     this._address = data.address;
     this._street = data.street;

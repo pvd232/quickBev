@@ -2,7 +2,8 @@
 
 import uuid
 import os
-from models import Drink, Order, Order_Drink, User_Table, Business, Tab, Stripe_Customer, Stripe_Account
+# from models import Drink, Order, Order_Drink, User_Table, Business, Tab, Stripe_Customer, Stripe_Account
+from models import *
 import stripe
 from datetime import date
 import requests
@@ -77,18 +78,7 @@ class User_Repository(object):
         user = session.query(User_Table).filter(
             User_Table.id == email, User_Table.password == password).first()
         if user:
-            # user = user.serialize
             return user
-            # TODO add authentication of administrator
-            # check to see if the user exists in the database by querying the Administrator table for the giver username and password
-            # if they don't exist this will throw an error which if caught by the except block on line 28
-            # try:
-            #     administrator = db.session.query(Administrator).filter(
-            #         Administrator.id == username,
-            #         Administrator.password == password).first().serialize
-            #     response['administrator'] = administrator
-            #     return jsonify(response)
-
         else:
             return False
 
@@ -126,7 +116,7 @@ class Business_Repository(object):
         print('business', business)
         # will have to plug in an API here to dynamically pull information (avalara probs if i can get the freaking credentials to work)
         texas_sales_tax_rate = 0.0625
-        new_business = Business(id=business["id"], classification=business["classification"], date_joined=date.today(
+        new_business = Business(name=business["name"], classification=business["classification"], date_joined=date.today(
         ), sales_tax_rate=texas_sales_tax_rate, merchant_id=business["merchant_id"], number_of_locations=business["number_of_locations"])
         # new_business_address =
         return
@@ -149,3 +139,14 @@ class Merchant_Repository(object):
         new_stripe_account_id = Stripe_Account(id=new_account.id)
         session.add(new_stripe_account_id)
         return new_account
+
+    def validate_merchant(self, session, requested_merchant):
+        print('requested', requested_merchant.serialize())
+        merchant = session.query(Merchant).filter(
+            Merchant.id == requested_merchant.id).first()
+        print('merchant', merchant)
+
+        if merchant:
+            return False
+        else:
+            return True

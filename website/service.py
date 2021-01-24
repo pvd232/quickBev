@@ -111,6 +111,13 @@ class Merchant_Service(object):
         with session_scope() as session:
             return self.merchant_repository.create_stripe_account(session)
 
+    def validate_merchant(self, merchant):
+        with session_scope() as session:
+            requested_new_merchant = Merchant_Domain(merchant_json=merchant)
+            registered_merchant_status = self.merchant_repository.validate_merchant(
+                session, requested_new_merchant)
+            return registered_merchant_status
+
 
 class Business_Service(object):
     def __init__(self):

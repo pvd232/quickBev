@@ -13,7 +13,8 @@ class Client {
       });
 
       if (response.ok) {
-        return await response.json();
+        console.log(await response.json());
+        return true;
       } else {
         let body = await response.text();
         console.log(
@@ -21,7 +22,7 @@ class Client {
           response.statusText,
           body
         );
-        throw new Error(response.statusText);
+        return false;
       }
     } catch (err) {
       console.log("APIclient.makeRequest.error", err);

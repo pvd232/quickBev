@@ -54,13 +54,15 @@ class Drink(db.Model):
 
 
 class Business(db.Model):
-    id = db.Column(db.String(80), primary_key=True,  # this is the business name
-                   unique=True, nullable=False)
+    id = db.Column(UUID(as_uuid=True),
+                   primary_key=True, unique=True, nullable=False)
+    name = db.Column(db.String(80), primary_key=True,
+                     unique=True, nullable=False)
     classification = db.Column(db.String(80), nullable=False)
     date_joined = db.Column(db.Date, nullable=False)
     sales_tax_rate = db.Column(db.Float(), nullable=False)
     merchant_id = db.Column(db.String(80), db.ForeignKey(  # composite primary key because there might be multiple businesses with the same name
-        'merchant.id'), primary_key=True,  nullable=False)
+        'merchant.id'), nullable=False)
     number_of_locations = db.Column(db.Integer(), nullable=False)
 
     business_address = relationship("Business_Address", lazy=True)
@@ -248,7 +250,7 @@ def create_business():
 
     test_business = load_json("test_business.json")
     for business in test_business:
-        id = business['id']
+        new_business_id = uuid.uuid4()
         merchant_id = business["merchant_id"]
         name = business['name']
         date_joined = date.today()
@@ -262,7 +264,7 @@ def create_business():
         state = business['state']
         zipcode = business['zipcode']
         address = f"{street}, {city}, {state}, {zipcode}"
-        new_business_address = Business_Address(business_id=business['id'], street=street, city=city,
+        new_business_address = Business_Address(business_id=new_business_id, street=street, city=city,
                                                 state=state, zipcode=zipcode, address=address)
         # After I create the drink, I can then add it to my session.
         db.session.add(new_business)

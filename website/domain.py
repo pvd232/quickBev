@@ -121,6 +121,33 @@ class User_Domain(object):
         return serialized_attributes
 
 
+class Merchant_Domain(object):
+    def __init__(self, merchant_object=None, merchant_json=None):
+        if merchant_object:
+            self.id = merchant_object.id
+            self.password = merchant_object.password
+            self.first_name = merchant_object.first_name
+            self.last_name = merchant_object.last_name
+            self.phone_number = merchant_object.phone_number
+            self.stripe_id = merchant_object.stripe_id
+        elif merchant_json:
+            print('merchant_json', merchant_json)
+            self.id = merchant_json["id"]
+            self.password = merchant_json["password"]
+            self.first_name = merchant_json["first_name"]
+            self.last_name = merchant_json["last_name"]
+            self.phone_number = merchant_json["phone_number"]
+            self.stripe_id = merchant_json["stripe_id"]
+
+    def serialize(self):
+        attribute_names = list(self.__dict__.keys())
+        attributes = list(self.__dict__.values())
+        serialized_attributes = {}
+        for i in range(len(attributes)):
+            serialized_attributes[attribute_names[i]] = attributes[i]
+        return serialized_attributes
+
+
 class Business_Domain(object):
     def __init__(self, business_object=None, business_json=None):
         if business_object:

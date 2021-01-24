@@ -175,6 +175,20 @@ def upload_file():
         return Response(status=200, response=json.dumps(response))
 
 
+@app.route('/validate-merchant', methods=['POST'])
+def validate_merchant():
+    merchant_service = Merchant_Service()
+    request_data = json.loads(request.data)
+    requested_merchant = request_data['merchant']
+    response = merchant_service.validate_merchant(requested_merchant)
+    print('response', response)
+    # if the merchant exists it will return False, if it doesn't it will return True
+    if response:
+        return jsonify(response), 200
+    else:
+        return jsonify(response), 400
+
+
 @app.route('/create-stripe-account', methods=['GET'])
 def create_stripe_account():
     merchant_service = Merchant_Service()
