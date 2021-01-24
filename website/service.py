@@ -124,6 +124,10 @@ class Business_Service(object):
                 response.append(business_domain)
             return response
 
+    def add_business(self, business):
+        with session_scope() as session:
+            return self.business_repository.add_business(session, business)
+
 
 class Tab_Service(object):
     def __init__(self):

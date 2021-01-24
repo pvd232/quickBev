@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-
-const Navbar = (props) => {
+import { ReactComponent as Logo } from "./static/landscapelogo.svg";
+const Navbar = () => {
   const navbarCenteredStyle = {
     // background:
     //   "linear-gradient(rgba(155, 89, 182, 0.6),rgba(196, 102, 70, 0.6) )",
@@ -43,31 +43,45 @@ const Navbar = (props) => {
         >
           <li className="nav-item px-3">
             <Link to="/" className="nav-link navbar-link-size-lg">
-              <img
-                className="App-logo"
-                src={props.src}
-                // style={navbarCenteredImageStyle}
-                alt=""
-                // style={{ marginRight: ".5vw" }}
-              />
+              {/* <div
+                style={{
+                  position: "absolute",
+                  // top: "50%",
+                  // left: "50%",
+                  transform: "scale(1.0814606741573036)",
+                  width: "388px",
+                  height: "135px",
+                }}
+              > */}
+              <Logo />
+              {/* <img
+                  className="App-logo"
+                  src={logo}
+                  // style={navbarCenteredImageStyle}
+                  alt="NA"
+                  // style={{ marginRight: ".5vw" }}
+                /> */}
+              {/* </div> */}
+
+              {/* <Logo className="App-logo" /> */}
             </Link>
           </li>
-          <li className="nav-item px-3">
+          {/* <li className="nav-item px-3">
             <Link
               to="/"
               className="nav-link navbar-link-size-lg"
-              style={{ fontFamily: "Century Gothic" }}
+              // style={{ fontFamily: "Century Gothic" }}
             >
               QuickBev
             </Link>
-          </li>
+          </li> */}
         </ul>
         <ul className="navbar-nav ml-auto" style={{ alignItems: "center" }}>
           <li className="nav-item px-3">
             <Link
               to="/signin"
               className="nav-link navbar-link-size"
-              style={{ fontFamily: "Century Gothic" }}
+              // style={{ fontFamily: "Century Gothic" }}
             >
               Sign in
             </Link>
@@ -76,7 +90,7 @@ const Navbar = (props) => {
             <Link
               to="/signup"
               className="nav-link navbar-link-size"
-              style={{ fontFamily: "Century Gothic" }}
+              // style={{ fontFamily: "Century Gothic" }}
             >
               Sign up
             </Link>

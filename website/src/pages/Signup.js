@@ -3,7 +3,7 @@ import { Redirect } from "react-router-dom";
 import { Merchant, Business } from "../Models.js";
 import API from "../helpers/Api.js";
 import Navbar from "../Navbar.js";
-import logo from "../static/qbLogo.png";
+// import logo from "../static/landscapeLogo.svg";
 import SearchLocationInput from "../SearchLocationInput.js";
 import PayoutSetup from "./PayoutSetup";
 import Form from "react-bootstrap/Form";
@@ -109,15 +109,7 @@ const CreateYourAccountFieldset = (props) => {
         <h2 className="fs-title">Create your account</h2>
         <Row>
           <Col>
-            <Form.Label
-              style={{
-                display: "flex",
-                fontSize: "14px",
-                fontWeight: "bolder",
-              }}
-            >
-              First name
-            </Form.Label>
+            <Form.Label>First name</Form.Label>
             <Form.Control
               type="text"
               name="firstName"
@@ -129,15 +121,7 @@ const CreateYourAccountFieldset = (props) => {
             />
           </Col>
           <Col>
-            <Form.Label
-              style={{
-                display: "flex",
-                fontSize: "14px",
-                fontWeight: "bolder",
-              }}
-            >
-              Last name
-            </Form.Label>
+            <Form.Label>Last name</Form.Label>
             <Form.Control
               type="text"
               name="lastName"
@@ -151,15 +135,7 @@ const CreateYourAccountFieldset = (props) => {
         </Row>
         <Row>
           <Col>
-            <Form.Label
-              style={{
-                display: "flex",
-                fontSize: "14px",
-                fontWeight: "bolder",
-              }}
-            >
-              Email
-            </Form.Label>
+            <Form.Label>Email</Form.Label>
             <Form.Control
               type="email"
               name="email"
@@ -173,15 +149,7 @@ const CreateYourAccountFieldset = (props) => {
         </Row>
         <Row>
           <Col>
-            <Form.Label
-              style={{
-                display: "flex",
-                fontSize: "14px",
-                fontWeight: "bolder",
-              }}
-            >
-              Phone number
-            </Form.Label>
+            <Form.Label>Phone number</Form.Label>
             <Form.Control
               type="tel"
               name="phoneNumber"
@@ -196,15 +164,7 @@ const CreateYourAccountFieldset = (props) => {
         </Row>
         <Row>
           <Col>
-            <Form.Label
-              style={{
-                display: "flex",
-                fontSize: "14px",
-                fontWeight: "bolder",
-              }}
-            >
-              Password
-            </Form.Label>
+            <Form.Label>Password</Form.Label>
             <Form.Control
               type="password"
               name="password"
@@ -222,15 +182,7 @@ const CreateYourAccountFieldset = (props) => {
             <div className="invalid-feedback" style={confirmPwdErrorMsgStyle}>
               {errorMsg.confirmPasswordErrorMsg}
             </div>
-            <Form.Label
-              style={{
-                display: "flex",
-                fontSize: "14px",
-                fontWeight: "bolder",
-              }}
-            >
-              Confirm password
-            </Form.Label>
+            <Form.Label>Confirm password</Form.Label>
             <Form.Control
               type="password"
               name="confirmPassword"
@@ -336,8 +288,9 @@ const PromoteYourMenuFieldset = (props) => {
       const formDataObject = {};
       // Update the formData object
       formDataObject["numberOfLocations"] = formValue.numberOfLocations;
-      formDataObject["typeOfBusiness"] = formValue.typeOfBusiness;
+      formDataObject["classification"] = formValue.typeOfBusiness;
       formDataObject["tablet"] = tablet;
+      formDataObject["multipleBusinesses"] = isSwitchOn;
       console.log("formDataObject", formDataObject);
 
       if (formValue.menuUrl) {
@@ -491,7 +444,7 @@ const PromoteYourMenuFieldset = (props) => {
             </Form.Control>
           </Form.Group>
         </Row>
-        <Row>
+        <Row style={{ marginTop: "40px" }}>
           <Col sm={12} id={isSwitchOn ? "custom-switch-col" : ""}>
             <Form.Check
               type="switch"
@@ -522,7 +475,7 @@ const PromoteYourMenuFieldset = (props) => {
           <Card>
             <Card.Body>
               <Row>
-                <Col xs={1}>
+                <Col xs={2}>
                   <Form.Check
                     type="radio"
                     label=""
@@ -535,7 +488,7 @@ const PromoteYourMenuFieldset = (props) => {
                     }}
                   />
                 </Col>
-                <Col xs={11}>
+                <Col xs={10}>
                   <Form.Label>Tablet (Highly Reccomended)</Form.Label>
                   <Card.Text
                     className="text-muted"
@@ -571,7 +524,7 @@ const PromoteYourMenuFieldset = (props) => {
           <Card>
             <Card.Body>
               <Row>
-                <Col xs={1}>
+                <Col xs={2}>
                   <Form.Check
                     type="radio"
                     label=""
@@ -583,7 +536,7 @@ const PromoteYourMenuFieldset = (props) => {
                     }}
                   />
                 </Col>
-                <Col xs={11}>
+                <Col xs={10}>
                   <Form.Label>Email + Phone Confirmation</Form.Label>
                   <Card.Text
                     className="text-muted"
@@ -728,7 +681,7 @@ const BusinessFieldset = (props) => {
         />
         <Form.Label>Address</Form.Label>
         <SearchLocationInput onUpdate={(address) => setAddress(address)} />
-        <Row style={{ marginTop: "15%", marginBottom: "15%" }}>
+        <Row>
           <Col
             sm={12}
             id="payoutSetup"
@@ -765,7 +718,7 @@ const Signup = () => {
     }
     // TODO: modify models class to allow a business to have a list of possible locations in step three of the form filling ? or maybe do this after the account has already been created. probably do this because we dont want to make this form too complicated and combersome to complete
     else if (objectType === "formDataObject") {
-      console.log("formDataObject", formDataObject);
+      console.log("objectData", objectData);
 
       setformDataObject({ ...formDataObject, ...objectData });
     }
@@ -787,6 +740,7 @@ const Signup = () => {
     // set values from formDataObject into business object
     newBusiness.numberOfLocations = formDataObject["numberOfLocations"];
     newBusiness.tablet = formDataObject["tablet"];
+    newBusiness.classification = formDataObject["classification"];
     if (formDataObject["menuUrl"]) {
       console.log("h");
       newBusiness.menuUrl = formDataObject["menuUrl"];
@@ -806,10 +760,18 @@ const Signup = () => {
 
     const newMerchant = new Merchant(null, merchant);
     newForm.append("merchant", JSON.stringify(newMerchant));
+
+    // set the merchant id in business to be the same as the new merchant
+    newBusiness.merchantId = merchant.id;
     newForm.append("business", JSON.stringify(newBusiness));
 
     localStorage.setItem("merchant", merchant);
     localStorage.setItem("business", newBusiness);
+    // set in local storage if user has multiple businesses so we can display a tab to add more businesses late
+    localStorage.setItem(
+      "multipleBusinesses",
+      formDataObject.multipleBusinesses
+    );
     API.makeRequest("POST", "http://127.0.0.1:5000/signup", newForm, true)
       .then((result) => {
         console.log("Success:", result);
@@ -837,7 +799,7 @@ const Signup = () => {
   const [currentFieldsetIndex, setCurrentFieldsetIndex] = useState(0);
   return (
     <>
-      <Navbar src={logo} />
+      <Navbar />
       {/* <!-- multistep form -->*/}
       <div className="signupBody">
         <div id="msform">

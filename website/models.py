@@ -54,15 +54,15 @@ class Drink(db.Model):
 
 
 class Business(db.Model):
-    id = db.Column(db.String(80), primary_key=True,
+    id = db.Column(db.String(80), primary_key=True,  # this is the business name
                    unique=True, nullable=False)
-    name = db.Column(db.String(80), nullable=False)
     classification = db.Column(db.String(80), nullable=False)
     date_joined = db.Column(db.Date, nullable=False)
     sales_tax_rate = db.Column(db.Float(), nullable=False)
-    merchant_id = db.Column(db.String(80), db.ForeignKey(
-        'merchant.id'), nullable=False)
-    numberOfLocations = db.Column(db.BigInteger(), nullable=False)
+    merchant_id = db.Column(db.String(80), db.ForeignKey(  # composite primary key because there might be multiple businesses with the same name
+        'merchant.id'), primary_key=True,  nullable=False)
+    number_of_locations = db.Column(db.Integer(), nullable=False)
+
     business_address = relationship("Business_Address", lazy=True)
 
 
@@ -84,6 +84,10 @@ class Business_Address(db.Model):
     business_id = db.Column(db.String(80), db.ForeignKey('business.id'),
                             nullable=False)
     tablet = db.Column(db.Boolean(), nullable=False)
+    phone_number = db.Column(db.BigInteger(), nullable=False)
+    # not all businesses will have a menu URl, but they could be specific to each business
+    menu_url = db.Column(db.String(80), nullable=True)
+    menu_file_path = db.Column(db.String(180), nullable=True)
     street = db.Column(db.String(80), nullable=False)
     city = db.Column(db.String(80), nullable=False)
     state = db.Column(db.String(80), nullable=False)

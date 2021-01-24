@@ -32,7 +32,7 @@ const PayoutSetup = (props) => {
     return () => (mount = false);
   }, [redirect]);
 
-  if (props.callBack) {
+  if (props.callback) {
     return (
       <>
         <div className="text-center box">
@@ -48,7 +48,6 @@ const PayoutSetup = (props) => {
           <Button
             className="btn btn-primary text-center"
             onClick={() => {
-              props.onSubmit();
               handleConnect();
             }}
           >
@@ -61,10 +60,13 @@ const PayoutSetup = (props) => {
     return (
       <>
         <div className="text-center box">
+          <div className="fs-title">
+            Input your bank account to recieve payouts
+          </div>
           <img src={bankIcon} alt="" className="icon" />
-          <h5>Set up payouts to list on Kavholm</h5>
+
           <p>
-            Kavholm partners with Stripe to transfer earnings to your bank
+            QuickBev partners with Stripe to transfer earnings to your bank
             account.
           </p>
 

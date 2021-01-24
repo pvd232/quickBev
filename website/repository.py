@@ -4,6 +4,9 @@ import uuid
 import os
 from models import Drink, Order, Order_Drink, User_Table, Business, Tab, Stripe_Customer, Stripe_Account
 import stripe
+from datetime import date
+import requests
+import base64
 
 
 class Drink_Repository(object):
@@ -118,6 +121,15 @@ class Business_Repository(object):
     def get_businesss(self, session):
         businesss = session.query(Business)
         return businesss
+
+    def add_business(self, session, business):
+        print('business', business)
+        # will have to plug in an API here to dynamically pull information (avalara probs if i can get the freaking credentials to work)
+        texas_sales_tax_rate = 0.0625
+        new_business = Business(id=business["id"], classification=business["classification"], date_joined=date.today(
+        ), sales_tax_rate=texas_sales_tax_rate, merchant_id=business["merchant_id"], number_of_locations=business["number_of_locations"])
+        # new_business_address =
+        return
 
 
 class Tab_Repository(object):

@@ -57,20 +57,20 @@ export class Merchant {
   toJSON() {
     const data = {
       id: this._id,
-      stripeId: this._stripeId,
-      firstName: this._firstName,
-      lastName: this._lastName,
-      phoneNumber: this._phoneNumber,
+      stripe_id: this._stripeId,
+      first_name: this._firstName,
+      last_name: this._lastName,
+      phone_number: this._phoneNumber,
     };
     return data;
   }
   fromJSON(json) {
     const data = JSON.parse(json);
     this._id = data.id;
-    this.stripeId = data.stripeId;
-    this._firstName = data.firstName;
-    this._lastName = data.lastName;
-    this._phoneNumber = data.phoneNumber;
+    this._stripeId = data.stripe_id;
+    this._firstName = data.first_name;
+    this._lastName = data.last_name;
+    this._phoneNumber = data.phone_number;
   }
 }
 export class Business {
@@ -84,10 +84,10 @@ export class Business {
       this._city = businessObject.city;
       this._state = businessObject.state;
       this._zipcode = businessObject.zip;
-      this._phoneNumber = businessObject.phoneNumber;
-      this._numberOfLocations = businessObject.numberOfLocations;
+      this._phoneNumber = businessObject.phone_number;
+      this._numberOfLocations = businessObject.number_of_locations;
       this._tablet = businessObject.tablet;
-      this._menuUrl = businessObject.menuUrl;
+      this._menuUrl = businessObject.menu_url;
     } else {
       this._id = null;
       this._merchantId = null;

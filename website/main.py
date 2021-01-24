@@ -19,6 +19,9 @@ stripe.api_key = "sk_test_51I0xFxFseFjpsgWvh9b1munh6nIea6f5Z8bYlIDfmKyNq6zzrgg8i
 # publicly accessible local host URL!!! - http://machina-8c11dd2e.localhost.run/
 # theme color RGB = rgb(134,130,230), hex = #8682E6
 # TODO: Need to setup a seperate stripe_account table and integrate it to the creation of a new stripe account, then integrate the id from that with the merchant table, then return that to the front end
+# TODO: need to finish the add_business function by adding the new business address and returning the unique identifier to main.py so i can dynamically set the files path of the new image using the UUID of the business address
+# TODO: also need to make the number of locations a discreet value in the front end
+# TODO: need to finish adding the merchant object in the backend
 
 
 @app.route('/login', methods=['GET'])
@@ -148,17 +151,15 @@ def allowed_file(filename):
 def upload_file():
     response = {"msg": ""}
     # check if the post request has the file part
-    print('request.form', request.form)
-
-    requestedMerchant = json.loads(request.form.get("merchant"))
-    requestedBusiness = json.loads(request.form.get("business"))
-
+    requested_merchant = json.loads(request.form.get("merchant"))
+    print('requested_merchant', requested_merchant)
+    requested_business = json.loads(request.form.get("business"))
+    print('requested_business', requested_business)
+    business_service = Business_Service()
+    business_service.add_business(requested_business)
     if 'file' not in request.files:
         response["msg"] = "No file part in request"
         return Response(status=200, response=json.dumps(response))
-    # if 'file' not in requestJson['files'].files:
-    #     response["msg"] = "No nested file in request"
-    #     return Response(status=200, response=json.dumps(response))
 
     file = request.files['file']
     # if user does not select file, browser also
@@ -180,8 +181,8 @@ def create_stripe_account():
     new_account = merchant_service.create_stripe_account()
     account_links = stripe.AccountLink.create(
         account=new_account.id,
-        refresh_url='http://machina-8c11dd2e.localhost.run/payout-setup-callback',
-        return_url='http://machina-8c11dd2e.localhost.run/home',
+        refresh_url='http://localhost:3000/payout-setup-callback',
+        return_url='http://localhost:3000/home',
         type='account_onboarding',
     )
     return Response(status=200, response=json.dumps(account_links))
