@@ -13,8 +13,9 @@ class Client {
       });
 
       if (response.ok) {
-        console.log(await response.json());
-        return true;
+        let responseContent = await response.json();
+        console.log("responseContent", responseContent);
+        return [responseContent, response];
       } else {
         let body = await response.text();
         console.log(

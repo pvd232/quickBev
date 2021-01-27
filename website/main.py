@@ -18,10 +18,10 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 stripe.api_key = "sk_test_51I0xFxFseFjpsgWvh9b1munh6nIea6f5Z8bYlIDfmKyNq6zzrgg8iqeKEHwmRi5PqIelVkx4XWcYHAYc1omtD7wz00JiwbEKzj"
 # publicly accessible local host URL!!! - http://machina-8c11dd2e.localhost.run/
 # theme color RGB = rgb(134,130,230), hex = #8682E6
-# TODO: Need to setup a seperate stripe_account table and integrate it to the creation of a new stripe account, then integrate the id from that with the merchant table, then return that to the front end
 # TODO: need to finish the add_business function by adding the new business address and returning the unique identifier to main.py so i can dynamically set the files path of the new image using the UUID of the business address
-# TODO: also need to make the number of locations a discreet value in the front end
-# TODO: need to finish adding the merchant object in the backend
+# TODO: finish full integration of live stripe business id with a charge created in the front end, while subtracting quick bev fee, calculate order total on the server
+# TODO: move stripe ID from merchant to business
+# TODO: allow merchant to switch between their stripe accounts/different businesses in the home page dashboard
 
 
 @app.route('/login', methods=['GET'])
@@ -148,7 +148,7 @@ def allowed_file(filename):
 
 
 @app.route('/signup', methods=['POST'])
-def upload_file():
+def signup():
     response = {"msg": ""}
     # check if the post request has the file part
     requested_merchant = json.loads(request.form.get("merchant"))
@@ -161,24 +161,49 @@ def upload_file():
 
     merchant_service = Merchant_Service()
     business_service = Business_Service()
-    merchant_service.add_merchant(requested_merchant)
-    business_service.add_business(requested_business)
 
-    if 'file' not in request.files:
-        response["msg"] = "No file part in request"
-        return Response(status=200, response=json.dumps(response))
+    # requested_business["id"] = "abc"
+    # response = {"confirmed_new_business": requested_business}
+    # response["msg"] = "wee"
+    # return Response(status=200, response=json.dumps(response))
+    new_merchant = merchant_service.add_merchant(requested_merchant)
+    new_business = business_service.add_business(requested_business)
+    if new_merchant and new_business:
+        response['confirmed_new_business'] = new_business.serialize()
 
-    file = request.files['file']
-    # if user does not select file
-    if file.filename == '':
-        response["msg"] = "No file file uploaded"
-        return Response(status=200, response=json.dumps(response))
-    if file and allowed_file(file.filename):
-        filename = secure_filename(file.filename)
-        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        if 'file' not in request.files:
+            response["msg"] = "No file part in request"
+            return Response(status=200, response=json.dumps(response))
 
-        response["msg"] = "File successfully uploaded!"
+        file = request.files['file']
+        # if user does not select file
+        if file.filename == '':
+            response["msg"] = "No file file uploaded"
+            return Response(status=200, response=json.dumps(response))
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+
+            response["msg"] = "File successfully uploaded!"
+            return Response(status=200, response=json.dumps(response))
+    else:
+        response["msg"] = "An unknown internal server error occured"
+        return Response(status=500, response=json.dumps(response))
+
+
+@app.route('/signup-redirect', methods=['POST'])
+def signup_redirect():
+    response = {"msg": ""}
+    business_service = Business_Service()
+    request_json = json.loads(request.data)
+    business_to_update = request_json["business"]
+    print('business_to_update', business_to_update)
+    if business_service.update_business(business_to_update):
+        response["msg"] = "Business sucessfully updated"
         return Response(status=200, response=json.dumps(response))
+    else:
+        response["msg"] = "Failed to update business"
+        return Response(status=500, response=json.dumps(response))
 
 
 @app.route('/validate-merchant', methods=['POST'])
@@ -204,7 +229,12 @@ def create_stripe_account():
         return_url='http://localhost:3000/home',
         type='account_onboarding',
     )
-    return Response(status=200, response=json.dumps(account_links))
+    header = {}
+    header["Access-Control-Expose-Headers"] = "*"
+    header["stripe_id"] = new_account.id
+    response = Response(status=200, response=json.dumps(
+        account_links), headers=header)
+    return response
 
 
 if __name__ == '__main__':

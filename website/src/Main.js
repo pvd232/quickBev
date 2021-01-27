@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 
 import Home from "./pages/Home.js";
 import Signup from "./pages/Signup.js";
+import Splash from "./pages/Splash.js";
 import PayoutSetupCallback from "./pages/PayoutSetupCallback.js";
 
 const Main = () => {
@@ -16,6 +17,7 @@ const Main = () => {
         path="/payout-setup-callback"
         component={PayoutSetupCallback}
       ></Route>
+      <Route exact path="/" component={Splash}></Route>
     </Switch>
   );
 };

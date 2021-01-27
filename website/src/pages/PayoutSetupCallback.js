@@ -1,5 +1,7 @@
 import Form from "react-bootstrap/Form";
 import PayoutSetup from "./PayoutSetup.js";
+import "../css/Signup.css";
+
 const payoutSetupCallback = () => {
   return (
     <div className="signupBody">

@@ -115,11 +115,29 @@ class Business_Repository(object):
     def add_business(self, session, business):
         print('business', business)
         # will have to plug in an API here to dynamically pull information (avalara probs if i can get the freaking credentials to work)
-        texas_sales_tax_rate = 0.0625
-        new_business = Business(name=business["name"], classification=business["classification"], date_joined=date.today(
-        ), sales_tax_rate=texas_sales_tax_rate, merchant_id=business["merchant_id"], number_of_locations=business["number_of_locations"])
+
         # new_business_address =
-        return
+        new_business = Business(id=uuid.uuid4().hex, name=business.name, classification=business.classification, date_joined=date.today(
+        ), sales_tax_rate=business.sales_tax_rate, merchant_id=business.merchant_id, stripe_id=business.stripe_id, number_of_locations=business.number_of_locations)
+        new_business_address = Business_Address(business_id=new_business.id, street=business.street, city=business.city,
+                                                state=business.state, zipcode=business.zipcode, address=business.address, tablet=business.tablet, phone_number=business.phone_number)
+        session.add(new_business)
+        session.add(new_business_address)
+        return new_business
+
+    def update_business(self, session, business):
+        print('requested business to update', business.serialize())
+        business_database_object_to_update = session.query(
+            Business).filter(Business.id == business.id).first()
+        if business_database_object_to_update:
+            print('business_database_object_to_update.stripe_id',
+                  business_database_object_to_update.stripe_id)
+            business_database_object_to_update.stripe_id = business.stripe_id
+            print('business_database_object_to_update.stripe_id',
+                  business_database_object_to_update.stripe_id)
+            return True
+        else:
+            return False
 
 
 class Tab_Repository(object):
@@ -149,12 +167,7 @@ class Merchant_Repository(object):
             return True
 
     def add_merchant(self, session, requested_merchant):
-        try:
-            new_merchant = Merchant(id=requested_merchant.id, password=requested_merchant.password, first_name=requested_merchant.first_name,
-                                    last_name=requested_merchant.last_name, phone_number=requested_merchant.phone_number, stripe_id=requested_merchant.stripe_id)
-            db.session.add(requested_merchant)
-            db.session.commit()
-            return True
-        except:
-            print("an error occured while adding the new merchant")
-            return False
+        new_merchant = Merchant(id=requested_merchant.id, password=requested_merchant.password, first_name=requested_merchant.first_name,
+                                last_name=requested_merchant.last_name, phone_number=requested_merchant.phone_number)
+        session.add(new_merchant)
+        return True

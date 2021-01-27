@@ -1,5 +1,5 @@
 import React, { useState, useReducer } from "react";
-import { Merchant, Business } from "../Models.js";
+import { Merchant, Business, setLocalStorage } from "../Models.js";
 import API from "../helpers/Api.js";
 import Navbar from "../Navbar.js";
 // import logo from "../static/landscapeLogo.svg";
@@ -10,6 +10,7 @@ import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
+import "../css/Signup.css";
 
 const ProgressBar = (props) => {
   const statusValues = [
@@ -448,25 +449,14 @@ const PromoteYourMenuFieldset = (props) => {
           <Form.Group as={Col} controlId="numberOfLocations">
             <Form.Label>Number of locations</Form.Label>
             <Form.Control
-              as="select"
-              required
-              custom
+              type="text"
               name="numberOfLocations"
-              onChange={(event) => formChangeHandler(event)}
-              style={{
-                paddingLeft: "15px",
-                paddingRight: "0",
-                paddingTop: "0",
-                paddingBottom: "0",
+              required
+              onChange={(e) => {
+                formChangeHandler(e);
               }}
-            >
-              <option value="">Choose...</option>
-              <option>1-5</option>
-              <option>6-10</option>
-              <option>11-20</option>
-              <option>21-100</option>
-              <option>100+</option>
-            </Form.Control>
+              value={formValue.numberOfLocations}
+            />
           </Form.Group>
         </Row>
         <Row style={{ marginTop: "40px" }}>
@@ -634,22 +624,16 @@ const BusinessFieldset = (props) => {
       const stateZipcodeArray = addressArray[2].split(" ");
       addressObject.state = stateZipcodeArray[1];
       addressObject.zipcode = stateZipcodeArray[2];
-      console.log("addressObject", addressObject);
       setFormValue(addressObject);
     }
   };
   const formChangeHandler = (event) => {
-    console.log("formValue", formValue);
-
     let name = event.target.name;
-    console.log("name", name);
     let value = event.target.value;
-    console.log("value", value);
     setFormValue({ [name]: value });
   };
 
-  const handleSubmit = (event) => {
-    console.log("event.currentTarget", event.currentTarget);
+  const handleSubmit = async (event, businessStripeId, redirect) => {
     event.preventDefault();
     // the event target is the button that was clicked inside the payout setup component inside the business fieldset
     const form = event.target.closest("form");
@@ -657,7 +641,7 @@ const BusinessFieldset = (props) => {
       // set all the values for the business
       // if the user comes back to this page before submitting to change stuff it will reset the values
       const newBusiness = new Business();
-      newBusiness.id = formValue.name;
+      newBusiness.name = formValue.name;
       newBusiness.email = formValue.email;
       newBusiness.phoneNumber = formValue.phoneNumber;
       newBusiness.address = formValue.address;
@@ -666,7 +650,9 @@ const BusinessFieldset = (props) => {
       newBusiness.city = formValue.city;
       newBusiness.state = formValue.state;
       newBusiness.zipcode = formValue.zipcode;
-      props.onSubmit(newBusiness);
+      const result = await props.onSubmit(newBusiness, businessStripeId);
+      console.log("result", result);
+      return result;
     } else {
       return false;
     }
@@ -713,7 +699,9 @@ const BusinessFieldset = (props) => {
             style={{ justifyContent: "center", display: "flex" }}
           >
             <PayoutSetup
-              onSubmit={(event) => handleSubmit(event)}
+              onSubmit={(event, businessStripeId, redirect) =>
+                handleSubmit(event, businessStripeId, redirect)
+              }
             ></PayoutSetup>
           </Col>
         </Row>
@@ -743,8 +731,6 @@ const Signup = () => {
     }
     // TODO: modify models class to allow a business to have a list of possible locations in step three of the form filling ? or maybe do this after the account has already been created. probably do this because we dont want to make this form too complicated and combersome to complete
     else if (objectType === "formDataObject") {
-      console.log("objectData", objectData);
-
       setformDataObject({ ...formDataObject, ...objectData });
     }
     if (buttonType === "previous") {
@@ -758,20 +744,18 @@ const Signup = () => {
     }
   };
 
-  const onSubmit = (newBusiness) => {
+  const onSubmit = async (newBusiness, businessStripeId, redirect) => {
     const newForm = new FormData();
-    console.log("formDataObject", formDataObject);
-
     // set values from formDataObject into business object
     newBusiness.numberOfLocations = formDataObject.numberOfLocations;
     newBusiness.tablet = formDataObject.tablet;
-    newBusiness.classification = formDataObject.classification;
+    newBusiness.classification = formDataObject.classification.toLowerCase();
+    newBusiness.stripeId = businessStripeId;
+
     if (formDataObject.menuUrl) {
-      console.log("h");
       newBusiness.menuUrl = formDataObject.menuUrl;
     }
     if (formDataObject.menuFile) {
-      console.log("r");
       newForm.append(
         "file",
         formDataObject.menuFile,
@@ -780,30 +764,40 @@ const Signup = () => {
     }
 
     // the merchant in state was being converted back to a regular object
-    console.log("merchant", merchant);
-    console.log("formDataObject", formDataObject);
-
     const newMerchant = new Merchant(null, merchant);
+    // set the stripe ID returned from the backend
     newForm.append("merchant", JSON.stringify(newMerchant));
 
     // set the merchant id in business to be the same as the new merchant
-    newBusiness.merchantId = merchant.id;
+    newBusiness.merchantId = newMerchant.id;
+    console.log("newBusiness", newBusiness);
     newForm.append("business", JSON.stringify(newBusiness));
 
-    localStorage.setItem("merchant", merchant);
-    localStorage.setItem("business", newBusiness);
+    setLocalStorage("merchant", merchant);
+    setLocalStorage("business", newBusiness);
+
     // set in local storage if user has multiple businesses so we can display a tab to add more businesses late
     localStorage.setItem(
       "multipleBusinesses",
       formDataObject.multipleBusinesses
     );
-    API.makeRequest("POST", "http://127.0.0.1:5000/signup", newForm, true)
-      .then((result) => {
-        console.log("Success:", result);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+    let response = await API.makeRequest(
+      "POST",
+      "http://127.0.0.1:5000/signup",
+      newForm,
+      true
+    );
+    const responseBody = response[0];
+    console.log(
+      "responseBody.confirmed_new_business",
+      responseBody.confirmed_new_business
+    );
+    const confirmed_new_business = new Business(
+      responseBody.confirmed_new_business,
+      false
+    );
+    setLocalStorage("business", confirmed_new_business);
+    return true;
   };
   const fieldSets = [
     <CreateYourAccountFieldset
@@ -817,7 +811,9 @@ const Signup = () => {
       }
     ></PromoteYourMenuFieldset>,
     <BusinessFieldset
-      onSubmit={(newBusiness) => onSubmit(newBusiness)}
+      onSubmit={(newBusiness, businessStripeId) =>
+        onSubmit(newBusiness, businessStripeId)
+      }
       onClick={(buttonType) => handleClick(buttonType)}
     ></BusinessFieldset>,
   ];

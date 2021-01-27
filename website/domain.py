@@ -11,7 +11,6 @@ class Drink_Domain(object):
             self.price = drink_object.price
             self.business_address_id = drink_object.business_address_id
         elif drink_json:
-            print('drink_json', drink_json)
             self.id = drink_json["id"]
             self.name = drink_json["name"]
             self.description = drink_json["description"]
@@ -79,7 +78,6 @@ class Order_Drink_Domain(object):
                 drink_domain = Drink_Domain(drink_json=user_drink["drink"])
                 if drink_domain.id not in drink_id_list:
                     drink_id_list.append(drink_domain.id)
-                    print('drink_domain', drink_domain.serialize())
                     self.order_drink.append(drink_domain)
                 else:
                     for drink in self.order_drink:
@@ -104,8 +102,6 @@ class User_Domain(object):
             self.last_name = user_object.last_name
             self.stripe_id = user_object.stripe_id
         elif user_json:
-            print('user_json', user_json)
-
             self.id = user_json["id"]
             self.password = user_json["password"]
             self.first_name = user_json["first_name"]
@@ -129,7 +125,6 @@ class Merchant_Domain(object):
             self.first_name = merchant_object.first_name
             self.last_name = merchant_object.last_name
             self.phone_number = merchant_object.phone_number
-            self.stripe_id = merchant_object.stripe_id
         elif merchant_json:
             print('merchant_json', merchant_json)
             self.id = merchant_json["id"]
@@ -137,7 +132,6 @@ class Merchant_Domain(object):
             self.first_name = merchant_json["first_name"]
             self.last_name = merchant_json["last_name"]
             self.phone_number = merchant_json["phone_number"]
-            self.stripe_id = merchant_json["stripe_id"]
 
     def serialize(self):
         attribute_names = list(self.__dict__.keys())
@@ -150,22 +144,52 @@ class Merchant_Domain(object):
 
 class Business_Domain(object):
     def __init__(self, business_object=None, business_json=None):
+        self.sales_tax_rate = 0.0625
         if business_object:
             self.id = business_object.id
-            self.business_address_id = business_object.business_address_id
+            self.merchant_id = business_object.merchant_id
+            self.stripe_id = business_object.stripe_id
+            if business_object.business_address_id:
+                self.business_address_id = business_object.business_address_id
             self.name = business_object.name
-            self.address = f"{business_object.street}, {business_object.city}, {business_object.state}, {business_object.zipcode}"
+            self.address = f"{business_object.street}, {business_object.city}, {business_object.state} {business_object.zipcode}"
             self.sales_tax_rate = business_object.sales_tax_rate
+            self.classification = business_object.classification
+            self.number_of_locations = business_object.number_of_locations
+            self.menu_file = business_object.menu_file
+            self.menu_url = business_object.menu_url
+            self.number_of_locations = business_object.number_of_locations
+            self.tablet = business_object.tablet
+            self.phone_number = business_object.phone_number
         if business_json:
             self.id = business_json["id"]
+            self.merchant_id = business_json["merchant_id"]
+            self.stripe_id = business_json["stripe_id"]
             self.name = business_json["name"]
-            self.business_address_id = business_json["business_address_id"]
+            self.classification = business_json["classification"]
+            self.address = business_json["address"]
+
             address_list = business_json["address"].split(",")
+
             self.street = address_list[0]
             self.city = address_list[1]
-            self.state = address_list[2]
-            self.zipcode = address_list[3]
-            self.sales_tax_rate = business_json["sales_tax_rate"]
+
+            state_and_zipcode = address_list[2].split(" ")
+
+            self.state = state_and_zipcode[1]
+            self.zipcode = state_and_zipcode[2]
+            self.number_of_locations = business_json["number_of_locations"]
+            if "menu_file" in business_json:
+                self.menu_file = business_json["menu_file"]
+            else:
+                self.menu_file = None
+            if "menu_url" in business_json:
+                self.menu_url = business_json["menu_url"]
+            else:
+                self.menu_url = None
+            self.number_of_locations = business_json["number_of_locations"]
+            self.tablet = business_json["tablet"]
+            self.phone_number = business_json["phone_number"]
 
     def serialize(self):
         attribute_names = list(self.__dict__.keys())

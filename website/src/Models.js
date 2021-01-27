@@ -1,26 +1,23 @@
+export const setLocalStorage = (key, object) => {
+  localStorage.setItem(key, JSON.stringify(object));
+};
 export class Merchant {
   constructor(merchantObject = null, merchantStateObject = null) {
     if (merchantObject) {
       this._id = merchantObject.id;
-      // will fill in the stripe ID later
       this._password = merchantObject.password;
-      this._stripeId = null;
       this._firstName = merchantObject.firstName;
       this._lastName = merchantObject.lastName;
       this._phoneNumber = merchantObject.phoneNumber;
     } else if (merchantStateObject) {
-      console.log("merchantStateObject", merchantStateObject);
       this._id = merchantStateObject._id;
       this._password = merchantStateObject._password;
-      // will fill in the stripe ID later
-      this._stripeId = null;
       this._firstName = merchantStateObject._firstName;
       this._lastName = merchantStateObject._lastName;
       this._phoneNumber = merchantStateObject._phoneNumber;
     } else {
       this._id = null;
       this._password = null;
-      this._stripeId = null;
       this._firstName = null;
       this._lastName = null;
       this._phoneNumber = null;
@@ -33,9 +30,7 @@ export class Merchant {
   get password() {
     return this.password;
   }
-  get stripeId() {
-    return this._stripeId;
-  }
+
   get firstName() {
     return this._firstName;
   }
@@ -51,9 +46,7 @@ export class Merchant {
   set password(value) {
     this._password = value;
   }
-  set stripeId(value) {
-    this._stripeId = value;
-  }
+
   set firstName(value) {
     this._firstName = value;
   }
@@ -67,7 +60,6 @@ export class Merchant {
     const data = {
       id: this._id,
       password: this._password,
-      stripe_id: this._stripeId,
       first_name: this._firstName,
       last_name: this._lastName,
       phone_number: this._phoneNumber,
@@ -78,19 +70,18 @@ export class Merchant {
     const data = JSON.parse(json);
     this._id = data.id;
     this._password = data.password;
-    this._stripeId = data.stripe_id;
     this._firstName = data.first_name;
     this._lastName = data.last_name;
     this._phoneNumber = data.phone_number;
   }
 }
 export class Business {
-  constructor(businessObject) {
-    if (businessObject) {
+  constructor(businessObject, isLocalStorage = false) {
+    if (businessObject && !isLocalStorage) {
       this._id = businessObject.id;
       this._name = businessObject.name;
-      // will fill in the stripe ID later
-      this._merchantId = null;
+      this._stripeId = businessObject.stripe_id;
+      this._merchantId = businessObject.merchant_id;
       this._address = businessObject.address;
       this._street = businessObject.street;
       this._city = businessObject.city;
@@ -100,10 +91,28 @@ export class Business {
       this._numberOfLocations = businessObject.number_of_locations;
       this._tablet = businessObject.tablet;
       this._menuUrl = businessObject.menu_url;
+      this._classification = businessObject.classification;
+    } else if (businessObject && isLocalStorage) {
+      const businessJson = JSON.parse(businessObject);
+      this._id = businessJson.id;
+      this._name = businessJson.name;
+      this._stripeId = businessJson.stripe_id;
+      this._merchantId = businessJson.merchant_id;
+      this._address = businessJson.address;
+      this._street = businessJson.street;
+      this._city = businessJson.city;
+      this._state = businessJson.state;
+      this._zipcode = businessJson.zip;
+      this._phoneNumber = businessJson.phone_number;
+      this._numberOfLocations = businessJson.number_of_locations;
+      this._tablet = businessJson.tablet;
+      this._menuUrl = businessJson.menu_url;
+      this._classification = businessJson.classification;
     } else {
       this._id = null;
       this._name = null;
       this._merchantId = null;
+      this._stripeId = null;
       this._address = null;
       this._street = null;
       this._city = null;
@@ -113,6 +122,7 @@ export class Business {
       this._numberOfLocations = null;
       this._tablet = null;
       this._menuUrl = null;
+      this._classification = null;
     }
   }
 
@@ -146,11 +156,17 @@ export class Business {
   get numberOfLocations() {
     return this._numberOfLocations;
   }
+  get stripeId() {
+    return this._stripeId;
+  }
   get tablet() {
     return this._tablet;
   }
   get menuUrl() {
     return this._menuUrl;
+  }
+  get classification() {
+    return this._classification;
   }
   set id(value) {
     this._id = value;
@@ -182,41 +198,36 @@ export class Business {
   set numberOfLocations(value) {
     this._numberOfLocations = value;
   }
+  set stripeId(value) {
+    this._stripeId = value;
+  }
   set tablet(value) {
     this._tablet = value;
   }
   set menuUrl(value) {
     this._menuUrl = value;
   }
+  set classification(value) {
+    this._classification = value;
+  }
+
   toJSON() {
     const data = {
       id: this._id,
       name: this._name,
-      merchantId: this._merchantId,
+      merchant_id: this._merchantId,
+      stripe_id: this._stripeId,
       address: this._address,
       street: this._street,
       city: this._city,
       state: this._state,
       zipcode: this._zipcode,
-      phoneNumber: this._phoneNumber,
-      numberOfLocations: this._numberOfLocations,
+      phone_number: this._phoneNumber,
+      number_of_locations: this._numberOfLocations,
       tablet: this._tablet,
-      menuUrl: this._menuUrl,
+      menu_url: this._menuUrl,
+      classification: this._classification,
     };
     return data;
-  }
-  fromJSON(json) {
-    const data = JSON.parse(json);
-    this._id = data.id;
-    this._name = data.name;
-    this._merchantId = data.merchantId;
-    this._address = data.address;
-    this._street = data.street;
-    this._city = data.city;
-    this._state = data.state;
-    this._phoneNumber = data.phoneNumber;
-    this._numberOfLocations = data.numberOfLocations;
-    this._tablet = data.tablet;
-    this._menuUrl = data.menuUrl;
   }
 }

@@ -30,11 +30,13 @@ def session_scope():
     try:
         yield session
         session.commit()
-    except:
+    except Exception as e:
+        print("service exception", e)
         session.rollback()
-        raise
+        raise e
     finally:
         session.close()
+
     # now all calls to Session() will create a thread-local session
 
 
@@ -139,7 +141,17 @@ class Business_Service(object):
 
     def add_business(self, business):
         with session_scope() as session:
-            return self.business_repository.add_business(session, business)
+            business_domain = Business_Domain(business_json=business)
+            business_database_object = self.business_repository.add_business(
+                session, business_domain)
+            # update the business domain id with the uuid that was created
+            business_domain.id = business_database_object.id
+            return business_domain
+
+    def update_business(self, business):
+        with session_scope() as session:
+            business_domain = Business_Domain(business_json=business)
+            return self.business_repository.update_business(session, business_domain)
 
 
 class Tab_Service(object):

@@ -1,6 +1,5 @@
 /*custom font*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-@import url(https://fonts.googleapis.com/css?family=Barlow);
 
 /*basic reset*/
 * {
@@ -47,6 +46,7 @@
   min-height: 100vh;
   min-width: 100vw;
   position: relative;
+  font-family: "Barlow";
 }
 
 /* body {
@@ -60,7 +60,6 @@
 #msform label {
   display: flex !important;
   font-size: 14px;
-  font-family: "Barlow";
   font-weight: 700;
   text-align: left !important;
 }
@@ -81,7 +80,6 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  font-family: "Barlow";
   padding-top: 5vh;
   margin-bottom: 10vh;
   text-align: center;
@@ -141,7 +139,6 @@
 }
 /*headings*/
 .fs-title {
-  font-family: "Barlow";
   color: black;
   margin-bottom: 20px;
   margin-top: 20px;
