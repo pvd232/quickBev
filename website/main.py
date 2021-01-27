@@ -197,7 +197,6 @@ def signup_redirect():
     business_service = Business_Service()
     request_json = json.loads(request.data)
     business_to_update = request_json["business"]
-    print('business_to_update', business_to_update)
     if business_service.update_business(business_to_update):
         response["msg"] = "Business sucessfully updated"
         return Response(status=200, response=json.dumps(response))
