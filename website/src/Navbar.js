@@ -38,19 +38,23 @@ const Navbar = (props) => {
       </button>
       <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul
-          className="nav navbar-nav ml-auto"
+          className="navbar-nav"
           style={{
-            width: "50%",
+            position: "relative",
+            marginLeft: "50vw",
+            transform: "translateX(-50%)",
+            marginBottom: "20px",
             marginTop: "40px",
+            alignItems: "center",
           }}
         >
-          <li className="nav-item px-3 ml-auto">
+          <li className="nav-item px-3">
             <Link to="/">
               <Logo />
             </Link>
           </li>
         </ul>
-        <ul className="nav navbar-nav ml-auto">
+        <ul className="navbar-nav ml-auto" style={{ alignItems: "center" }}>
           <li className="nav-item px-3">
             <Link to="/signin" className="nav-link navbar-link-size">
               Sign in

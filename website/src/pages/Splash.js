@@ -1,6 +1,7 @@
 import Navbar from "../Navbar.js";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import "../css/Splash.css";
@@ -37,7 +38,9 @@ const SplashHeader = () => {
           </Row>
           <Row>
             <Col sm={12}>
-              <Button className="action-button">Become a Merchant</Button>
+              <Link to="/signup">
+                <Button className="action-button">Become a Merchant</Button>
+              </Link>
             </Col>
           </Row>
         </Col>

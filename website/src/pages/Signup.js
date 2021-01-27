@@ -633,7 +633,7 @@ const BusinessFieldset = (props) => {
     setFormValue({ [name]: value });
   };
 
-  const handleSubmit = async (event, businessStripeId, redirect) => {
+  const handleSubmit = async (event, businessStripeId) => {
     event.preventDefault();
     // the event target is the button that was clicked inside the payout setup component inside the business fieldset
     const form = event.target.closest("form");
@@ -744,7 +744,7 @@ const Signup = () => {
     }
   };
 
-  const onSubmit = async (newBusiness, businessStripeId, redirect) => {
+  const onSubmit = async (newBusiness, businessStripeId) => {
     const newForm = new FormData();
     // set values from formDataObject into business object
     newBusiness.numberOfLocations = formDataObject.numberOfLocations;
