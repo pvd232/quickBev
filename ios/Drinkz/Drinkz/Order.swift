@@ -12,7 +12,7 @@ public class Order: NSManagedObject, Codable {
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case user = "user"
-        case barId = "bar_id"
+        case businessAddressId = "business_address_id"
         case orderDrink = "order_drink"
         case dateTime = "date_time"
         case cost = "cost"
@@ -25,9 +25,9 @@ public class Order: NSManagedObject, Codable {
         let context = CoreDataManager.sharedManager.persistentContainer.viewContext
         self.init(context: context)
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decode(String.self, forKey: .id)
+        self.id = try container.decode(UUID.self, forKey: .id)
         self.user = try container.decode(User.self, forKey: .user)
-        self.barId = try container.decode(String.self, forKey: .barId)
+        self.businessAddressId = try container.decode(UUID.self, forKey: .businessAddressId)
         self.cost = try container.decode(Double.self, forKey: .cost)
         self.orderDrink = NSSet.init(array: try container.decode([Drink].self, forKey: .orderDrink))
         self.dateTime = try container.decode(Date.self, forKey: .dateTime)
@@ -38,7 +38,7 @@ public class Order: NSManagedObject, Codable {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(self.id, forKey: .id)
         try container.encode(self.user, forKey: .user)
-        try container.encode(self.barId, forKey: .barId)
+        try container.encode(self.businessAddressId, forKey: .businessAddressId)
         try container.encode(self.orderDrinkArray, forKey: .orderDrink)
         try container.encode(self.dateTime!.timeIntervalSince1970, forKey: .dateTime)
         try container.encode(self.cost, forKey: .cost)
@@ -58,9 +58,9 @@ extension Order {
     convenience init(checkoutCart: CheckoutCart) {
         let context = CoreDataManager.sharedManager.persistentContainer.viewContext
         self.init(context: context)
-        self.id = UUID().uuidString
+        self.id = UUID()
         self.user = checkoutCart.user!
-        self.barId = checkoutCart.barId!
+        self.businessAddressId = checkoutCart.businessAddressId!
         self.orderDrink = NSSet.init(array:checkoutCart.cart)
         self.dateTime = Date()
         self.cost = checkoutCart.cost

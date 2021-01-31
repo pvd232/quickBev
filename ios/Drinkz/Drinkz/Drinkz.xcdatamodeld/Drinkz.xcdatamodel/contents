@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Bar" representedClassName=".Bar" syncable="YES">
+    <entity name="Business" representedClassName=".Business" syncable="YES">
         <attribute name="address" attributeType="String"/>
+        <attribute name="businessAddressId" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="coordinateString" attributeType="String" defaultValueString=""/>
-        <attribute name="id" attributeType="String"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="salesTaxRate" attributeType="Double" defaultValueString="0.0"/>
-        <relationship name="barsToCheckoutCart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CheckoutCart" inverseName="bars" inverseEntity="CheckoutCart"/>
-        <relationship name="drinks" toMany="YES" deletionRule="Cascade" destinationEntity="Drink" inverseName="bar" inverseEntity="Drink"/>
-        <relationship name="userBarToCheckoutCart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CheckoutCart" inverseName="userBar" inverseEntity="CheckoutCart"/>
+        <attribute name="stripeId" attributeType="String" defaultValueString=""/>
+        <relationship name="businessToCheckoutCart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CheckoutCart" inverseName="business" inverseEntity="CheckoutCart"/>
+        <relationship name="drinks" toMany="YES" deletionRule="Cascade" destinationEntity="Drink" inverseName="drinkToBusiness" inverseEntity="Drink"/>
+        <relationship name="userBusinessToCheckoutCart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CheckoutCart" inverseName="userBusiness" inverseEntity="CheckoutCart"/>
     </entity>
     <entity name="CheckoutCart" representedClassName=".CheckoutCart" syncable="YES">
-        <attribute name="barId" attributeType="String" defaultValueString=""/>
+        <attribute name="businessAddressId" optional="YES" attributeType="UUID" defaultValueString="" usesScalarValueType="NO"/>
         <attribute name="cost" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="currentOrderId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="orderingProcessViewControllerIndex" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="salesTax" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="stripeId" optional="YES" attributeType="String"/>
@@ -20,27 +23,27 @@
         <attribute name="tipAmount" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="tipPercentage" attributeType="Double" defaultValueString="0.1" usesScalarValueType="YES"/>
         <attribute name="userId" attributeType="String" defaultValueString=""/>
-        <relationship name="bars" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Bar" inverseName="barsToCheckoutCart" inverseEntity="Bar"/>
+        <relationship name="business" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Business" inverseName="businessToCheckoutCart" inverseEntity="Business"/>
         <relationship name="drinks" toMany="YES" deletionRule="Nullify" destinationEntity="Drink" inverseName="relationship" inverseEntity="Drink"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="relationship" inverseEntity="User"/>
-        <relationship name="userBar" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bar" inverseName="userBarToCheckoutCart" inverseEntity="Bar"/>
+        <relationship name="userBusiness" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Business" inverseName="userBusinessToCheckoutCart" inverseEntity="Business"/>
     </entity>
     <entity name="Drink" representedClassName=".Drink" syncable="YES">
-        <attribute name="barId" attributeType="String"/>
+        <attribute name="businessAddressId" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="detail" attributeType="String"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="price" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="quantity" attributeType="Integer 16" defaultValueString="1" usesScalarValueType="YES"/>
-        <relationship name="bar" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Bar" inverseName="drinks" inverseEntity="Bar"/>
+        <relationship name="drinkToBusiness" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Business" inverseName="drinks" inverseEntity="Business"/>
         <relationship name="drinkToOrder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Order" inverseName="orderDrink" inverseEntity="Order"/>
         <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CheckoutCart" inverseName="drinks" inverseEntity="CheckoutCart"/>
     </entity>
     <entity name="Order" representedClassName=".Order" syncable="YES">
-        <attribute name="barId" attributeType="String"/>
+        <attribute name="businessAddressId" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="cost" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="dateTime" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="id" attributeType="String"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="salesTax" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="subtotal" attributeType="Double" usesScalarValueType="YES"/>
         <attribute name="tipAmount" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
@@ -50,11 +53,11 @@
     </entity>
     <entity name="Tab" representedClassName=".Tab" syncable="YES">
         <attribute name="address" attributeType="String"/>
-        <attribute name="barId" attributeType="String"/>
+        <attribute name="businessId" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="dateTime" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="detail" attributeType="String"/>
         <attribute name="fundraisingGoal" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="id" attributeType="String"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="minimumContribution" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="userId" attributeType="String"/>
@@ -71,8 +74,8 @@
         <relationship name="userToTab" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tab" inverseName="tabToUser" inverseEntity="Tab"/>
     </entity>
     <elements>
-        <element name="Bar" positionX="0" positionY="81" width="128" height="149"/>
-        <element name="CheckoutCart" positionX="27" positionY="126" width="128" height="224"/>
+        <element name="Business" positionX="0" positionY="81" width="128" height="179"/>
+        <element name="CheckoutCart" positionX="27" positionY="126" width="128" height="239"/>
         <element name="Drink" positionX="-36" positionY="9" width="128" height="164"/>
         <element name="Order" positionX="18" positionY="162" width="128" height="179"/>
         <element name="Tab" positionX="9" positionY="135" width="128" height="179"/>

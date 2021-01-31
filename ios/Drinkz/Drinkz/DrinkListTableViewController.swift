@@ -15,6 +15,10 @@ class DrinkListTableViewController: UITableViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
         self.view.backgroundColor = .systemBackground
+        for drink in CheckoutCart.shared.userBusiness!.drinks!.allObjects{
+            print("drink",drink)
+        }
+
     }
     
     required init?(coder: NSCoder) {
@@ -33,14 +37,15 @@ class DrinkListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return CheckoutCart.shared.userBarDrinks.count
+        return CheckoutCart.shared.userBusinessDrinks.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! DrinkTableViewCell
-        cell.name.text = CheckoutCart.shared.userBarDrinks[indexPath.row].name
-        cell.drinkImageView.image = UIImage(named: CheckoutCart.shared.userBarDrinks[indexPath.row].name!.lowercased())
-        cell.miscellaneousText.text = CheckoutCart.shared.userBarDrinks[indexPath.row].detail
+        cell.name.text = CheckoutCart.shared.userBusinessDrinks[indexPath.row].name
+        print("CheckoutCart.shared.userBusinessDrinks[indexPath.row]", CheckoutCart.shared.userBusinessDrinks[indexPath.row])
+        cell.drinkImageView.image = UIImage(named: CheckoutCart.shared.userBusinessDrinks[indexPath.row].name!.lowercased())
+        cell.miscellaneousText.text = CheckoutCart.shared.userBusinessDrinks[indexPath.row].detail
         return cell
     }
     
@@ -49,7 +54,7 @@ class DrinkListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedDrink = CheckoutCart.shared.userBarDrinks[indexPath.row].copy() as! Drink
+        let selectedDrink = CheckoutCart.shared.userBusinessDrinks[indexPath.row].copy() as! Drink
             navigationController!.pushViewController(DrinkViewController(drink:selectedDrink), animated: true)
     }
 }

@@ -71,6 +71,7 @@ depends-top-level:
 - "NSCoder"
 - !private "NSLayoutConstraint"
 - !private "Order"
+- "OrderConfirmationViewController"
 - "Parameters"
 - "ReviewOrderViewController"
 - "RoundButton"
@@ -92,6 +93,7 @@ depends-top-level:
 - "UILabel"
 - !private "UILayoutPriority"
 - "UIStackView"
+- "UIStoryboard"
 - "UIView"
 - "UIViewController"
 - !private "UnicodeScalarType"
@@ -128,7 +130,7 @@ depends-member:
 - !private ["s18AdditiveArithmeticP", "rounded"]
 - !private ["So22UILayoutConstraintAxisV", "horizontal"]
 - !private ["So22UILayoutConstraintAxisV", "vertical"]
-- ["SK", ""]
+- !private ["SK", ""]
 - !private ["SK", "init"]
 - !private ["SB", "rounded"]
 - !private ["Sz", ""]
@@ -184,6 +186,7 @@ depends-member:
 - ["s7CVarArgP", "UILabel"]
 - !private ["s7CVarArgP", "UILayoutPriority"]
 - ["s7CVarArgP", "UIStackView"]
+- !private ["s7CVarArgP", "UIStoryboard"]
 - ["s7CVarArgP", "UIView"]
 - ["s7CVarArgP", "UsesAutoLayout"]
 - ["s7CVarArgP", ""]
@@ -251,7 +254,6 @@ depends-member:
 - !private ["s7CVarArgP", "shared"]
 - !private ["s7CVarArgP", "sharedAPIClient"]
 - !private ["s7CVarArgP", "spacing"]
-- !private ["s7CVarArgP", "storyboard"]
 - !private ["s7CVarArgP", "stripeId"]
 - !private ["s7CVarArgP", "subtotal"]
 - !private ["s7CVarArgP", "subtotalHeaderLabel"]
@@ -280,10 +282,10 @@ depends-member:
 - !private ["6Drinkz12CheckoutCartC", "shared"]
 - !private ["6Drinkz12CheckoutCartC", "subtotal"]
 - !private ["6Drinkz12CheckoutCartC", "tipAmount"]
-- ["Sl", ""]
+- !private ["Sl", ""]
 - !private ["Sl", "init"]
 - !private ["SL", "RawValue"]
-- ["SL", ""]
+- !private ["SL", ""]
 - !private ["SL", "init"]
 - !private ["SL", "rounded"]
 - !private ["s28CustomDebugStringConvertibleP", "AF"]
@@ -308,6 +310,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "UILabel"]
 - !private ["s28CustomDebugStringConvertibleP", "UILayoutPriority"]
 - ["s28CustomDebugStringConvertibleP", "UIStackView"]
+- !private ["s28CustomDebugStringConvertibleP", "UIStoryboard"]
 - ["s28CustomDebugStringConvertibleP", "UIView"]
 - ["s28CustomDebugStringConvertibleP", "UsesAutoLayout"]
 - ["s28CustomDebugStringConvertibleP", ""]
@@ -376,7 +379,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "shared"]
 - !private ["s28CustomDebugStringConvertibleP", "sharedAPIClient"]
 - !private ["s28CustomDebugStringConvertibleP", "spacing"]
-- !private ["s28CustomDebugStringConvertibleP", "storyboard"]
 - !private ["s28CustomDebugStringConvertibleP", "stripeId"]
 - !private ["s28CustomDebugStringConvertibleP", "subtotal"]
 - !private ["s28CustomDebugStringConvertibleP", "subtotalHeaderLabel"]
@@ -425,6 +427,7 @@ depends-member:
 - ["s23CustomStringConvertibleP", "UILabel"]
 - !private ["s23CustomStringConvertibleP", "UILayoutPriority"]
 - ["s23CustomStringConvertibleP", "UIStackView"]
+- !private ["s23CustomStringConvertibleP", "UIStoryboard"]
 - ["s23CustomStringConvertibleP", "UIView"]
 - ["s23CustomStringConvertibleP", "UsesAutoLayout"]
 - ["s23CustomStringConvertibleP", ""]
@@ -494,7 +497,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "shared"]
 - !private ["s23CustomStringConvertibleP", "sharedAPIClient"]
 - !private ["s23CustomStringConvertibleP", "spacing"]
-- !private ["s23CustomStringConvertibleP", "storyboard"]
 - !private ["s23CustomStringConvertibleP", "stripeId"]
 - !private ["s23CustomStringConvertibleP", "subtotal"]
 - !private ["s23CustomStringConvertibleP", "subtotalHeaderLabel"]
@@ -557,6 +559,7 @@ depends-member:
 - ["SQ", "UILabel"]
 - !private ["SQ", "UILayoutPriority"]
 - ["SQ", "UIStackView"]
+- !private ["SQ", "UIStoryboard"]
 - ["SQ", "UIView"]
 - ["SQ", "UsesAutoLayout"]
 - ["SQ", ""]
@@ -633,7 +636,6 @@ depends-member:
 - !private ["SQ", "shared"]
 - !private ["SQ", "sharedAPIClient"]
 - !private ["SQ", "spacing"]
-- !private ["SQ", "storyboard"]
 - !private ["SQ", "stripeId"]
 - !private ["SQ", "subtotal"]
 - !private ["SQ", "subtotalHeaderLabel"]
@@ -667,7 +669,7 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", ""]
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "touchUpInside"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
 - !private ["s25ExpressibleByFloatLiteralP", ""]
@@ -682,11 +684,11 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "safeAreaLayoutGuide"]
 - !private ["s23ExpressibleByNilLiteralP", "systemBackground"]
-- ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
 - !private ["s32ExpressibleByStringInterpolationP", "init"]
-- ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s26ExpressibleByStringLiteralP", ""]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
-- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s17FixedWidthIntegerP", "init"]
 - !private ["s17FixedWidthIntegerP", "rounded"]
@@ -716,6 +718,7 @@ depends-member:
 - ["SH", "UILabel"]
 - !private ["SH", "UILayoutPriority"]
 - ["SH", "UIStackView"]
+- !private ["SH", "UIStoryboard"]
 - ["SH", "UIView"]
 - ["SH", "UsesAutoLayout"]
 - ["SH", ""]
@@ -792,7 +795,6 @@ depends-member:
 - !private ["SH", "shared"]
 - !private ["SH", "sharedAPIClient"]
 - !private ["SH", "spacing"]
-- !private ["SH", "storyboard"]
 - !private ["SH", "stripeId"]
 - !private ["SH", "subtotal"]
 - !private ["SH", "subtotalHeaderLabel"]
@@ -833,7 +835,7 @@ depends-member:
 - !private ["10Foundation11JSONEncoderC", "init"]
 - !private ["9Alamofire12JSONEncodingV", "default"]
 - !private ["So19NSJSONSerializationC", "jsonObject"]
-- ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", ""]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s25LosslessStringConvertibleP", "rounded"]
 - !private ["10Foundation11MeasurementV", "rounded"]
@@ -849,6 +851,7 @@ depends-member:
 - ["So8NSCodingP", "NSCoder"]
 - !private ["So8NSCodingP", "NSLayoutConstraint"]
 - !private ["So8NSCodingP", "Order"]
+- !private ["So8NSCodingP", "OrderConfirmationViewController"]
 - !private ["So8NSCodingP", "Parameters"]
 - ["So8NSCodingP", "RoundButton"]
 - ["So8NSCodingP", "STPPaymentContext"]
@@ -867,6 +870,7 @@ depends-member:
 - ["So8NSCodingP", "UILabel"]
 - !private ["So8NSCodingP", "UILayoutPriority"]
 - ["So8NSCodingP", "UIStackView"]
+- !private ["So8NSCodingP", "UIStoryboard"]
 - ["So8NSCodingP", "UIView"]
 - ["So8NSCodingP", "UsesAutoLayout"]
 - ["So8NSCodingP", ""]
@@ -951,7 +955,6 @@ depends-member:
 - !private ["So8NSCodingP", "setContentHuggingPriority"]
 - !private ["So8NSCodingP", "setViewControllers"]
 - !private ["So8NSCodingP", "spacing"]
-- !private ["So8NSCodingP", "storyboard"]
 - ["So8NSCodingP", "subtotalHeaderLabel"]
 - ["So8NSCodingP", "subtotalStackView"]
 - !private ["So8NSCodingP", "superview"]
@@ -1002,6 +1005,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "NSCoder"]
 - !private ["So26NSExtensionRequestHandlingP", "NSLayoutConstraint"]
 - !private ["So26NSExtensionRequestHandlingP", "Order"]
+- !private ["So26NSExtensionRequestHandlingP", "OrderConfirmationViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "Parameters"]
 - ["So26NSExtensionRequestHandlingP", "RoundButton"]
 - ["So26NSExtensionRequestHandlingP", "STPPaymentContext"]
@@ -1020,6 +1024,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "UILabel"]
 - !private ["So26NSExtensionRequestHandlingP", "UILayoutPriority"]
 - ["So26NSExtensionRequestHandlingP", "UIStackView"]
+- !private ["So26NSExtensionRequestHandlingP", "UIStoryboard"]
 - ["So26NSExtensionRequestHandlingP", "UIView"]
 - ["So26NSExtensionRequestHandlingP", "UsesAutoLayout"]
 - ["So26NSExtensionRequestHandlingP", ""]
@@ -1067,7 +1072,6 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "salesTaxLabel"]
 - ["So26NSExtensionRequestHandlingP", "salesTaxStackView"]
 - !private ["So26NSExtensionRequestHandlingP", "setViewControllers"]
-- !private ["So26NSExtensionRequestHandlingP", "storyboard"]
 - ["So26NSExtensionRequestHandlingP", "subtotalHeaderLabel"]
 - ["So26NSExtensionRequestHandlingP", "subtotalStackView"]
 - ["So26NSExtensionRequestHandlingP", "tipAmountLabel"]
@@ -1136,6 +1140,7 @@ depends-member:
 - ["So8NSObjectC", "NSCoder"]
 - !private ["So8NSObjectC", "NSLayoutConstraint"]
 - !private ["So8NSObjectC", "Order"]
+- !private ["So8NSObjectC", "OrderConfirmationViewController"]
 - !private ["So8NSObjectC", "Parameters"]
 - ["So8NSObjectC", "RoundButton"]
 - ["So8NSObjectC", "STPPaymentContext"]
@@ -1154,6 +1159,7 @@ depends-member:
 - ["So8NSObjectC", "UILabel"]
 - !private ["So8NSObjectC", "UILayoutPriority"]
 - ["So8NSObjectC", "UIStackView"]
+- !private ["So8NSObjectC", "UIStoryboard"]
 - ["So8NSObjectC", "UIView"]
 - ["So8NSObjectC", "UsesAutoLayout"]
 - ["So8NSObjectC", ""]
@@ -1264,7 +1270,7 @@ depends-member:
 - !private ["So8NSObjectC", "shared"]
 - !private ["So8NSObjectC", "sharedAPIClient"]
 - !private ["So8NSObjectC", "spacing"]
-- !private ["So8NSObjectC", "storyboard"]
+- !private ["So8NSObjectC", "storyboardWithName"]
 - !private ["So8NSObjectC", "stripeId"]
 - !private ["So8NSObjectC", "subtotal"]
 - ["So8NSObjectC", "subtotalHeaderLabel"]
@@ -1296,6 +1302,7 @@ depends-member:
 - !private ["So8NSObjectP", "JSONSerialization"]
 - !private ["So8NSObjectP", "NSLayoutConstraint"]
 - !private ["So8NSObjectP", "Order"]
+- !private ["So8NSObjectP", "OrderConfirmationViewController"]
 - !private ["So8NSObjectP", "Parameters"]
 - ["So8NSObjectP", "RoundButton"]
 - ["So8NSObjectP", "STPPaymentContext"]
@@ -1314,6 +1321,7 @@ depends-member:
 - ["So8NSObjectP", "UILabel"]
 - !private ["So8NSObjectP", "UILayoutPriority"]
 - ["So8NSObjectP", "UIStackView"]
+- !private ["So8NSObjectP", "UIStoryboard"]
 - ["So8NSObjectP", "UIView"]
 - ["So8NSObjectP", "UsesAutoLayout"]
 - ["So8NSObjectP", ""]
@@ -1425,7 +1433,7 @@ depends-member:
 - !private ["So8NSObjectP", "shared"]
 - !private ["So8NSObjectP", "sharedAPIClient"]
 - !private ["So8NSObjectP", "spacing"]
-- !private ["So8NSObjectP", "storyboard"]
+- !private ["So8NSObjectP", "storyboardWithName"]
 - !private ["So8NSObjectP", "stripeId"]
 - !private ["So8NSObjectP", "subtotal"]
 - ["So8NSObjectP", "subtotalHeaderLabel"]
@@ -1510,6 +1518,7 @@ depends-member:
 - ["6Drinkz25ReviewOrderViewControllerC", "NSCoder"]
 - !private ["6Drinkz25ReviewOrderViewControllerC", "NSLayoutConstraint"]
 - !private ["6Drinkz25ReviewOrderViewControllerC", "Order"]
+- !private ["6Drinkz25ReviewOrderViewControllerC", "OrderConfirmationViewController"]
 - !private ["6Drinkz25ReviewOrderViewControllerC", "Parameters"]
 - ["6Drinkz25ReviewOrderViewControllerC", "RoundButton"]
 - ["6Drinkz25ReviewOrderViewControllerC", "STPPaymentContext"]
@@ -1528,6 +1537,7 @@ depends-member:
 - ["6Drinkz25ReviewOrderViewControllerC", "UILabel"]
 - !private ["6Drinkz25ReviewOrderViewControllerC", "UILayoutPriority"]
 - ["6Drinkz25ReviewOrderViewControllerC", "UIStackView"]
+- !private ["6Drinkz25ReviewOrderViewControllerC", "UIStoryboard"]
 - ["6Drinkz25ReviewOrderViewControllerC", "UIView"]
 - ["6Drinkz25ReviewOrderViewControllerC", "UsesAutoLayout"]
 - ["6Drinkz25ReviewOrderViewControllerC", ""]
@@ -1573,7 +1583,6 @@ depends-member:
 - ["6Drinkz25ReviewOrderViewControllerC", "salesTaxHeaderLabel"]
 - ["6Drinkz25ReviewOrderViewControllerC", "salesTaxLabel"]
 - ["6Drinkz25ReviewOrderViewControllerC", "salesTaxStackView"]
-- !private ["6Drinkz25ReviewOrderViewControllerC", "storyboard"]
 - ["6Drinkz25ReviewOrderViewControllerC", "subtotalHeaderLabel"]
 - ["6Drinkz25ReviewOrderViewControllerC", "subtotalStackView"]
 - ["6Drinkz25ReviewOrderViewControllerC", "tipAmountLabel"]
@@ -1641,6 +1650,7 @@ depends-member:
 - ["6Stripe25STPPaymentContextDelegateP", "UILabel"]
 - !private ["6Stripe25STPPaymentContextDelegateP", "UILayoutPriority"]
 - ["6Stripe25STPPaymentContextDelegateP", "UIStackView"]
+- !private ["6Stripe25STPPaymentContextDelegateP", "UIStoryboard"]
 - ["6Stripe25STPPaymentContextDelegateP", "UIView"]
 - ["6Stripe25STPPaymentContextDelegateP", "UsesAutoLayout"]
 - ["6Stripe25STPPaymentContextDelegateP", ""]
@@ -1685,7 +1695,6 @@ depends-member:
 - ["6Stripe25STPPaymentContextDelegateP", "salesTaxHeaderLabel"]
 - ["6Stripe25STPPaymentContextDelegateP", "salesTaxLabel"]
 - ["6Stripe25STPPaymentContextDelegateP", "salesTaxStackView"]
-- !private ["6Stripe25STPPaymentContextDelegateP", "storyboard"]
 - ["6Stripe25STPPaymentContextDelegateP", "subtotalHeaderLabel"]
 - ["6Stripe25STPPaymentContextDelegateP", "subtotalStackView"]
 - ["6Stripe25STPPaymentContextDelegateP", "tipAmountLabel"]
@@ -1726,7 +1735,7 @@ depends-member:
 - !private ["6Stripe40STPShippingAddressViewControllerDelegateP", "selectedPaymentOption"]
 - !private ["6Stripe22STPURLCallbackListenerP", "confirmPayment"]
 - !private ["6Stripe22STPURLCallbackListenerP", "shared"]
-- ["ST", ""]
+- !private ["ST", ""]
 - !private ["ST", "init"]
 - !private ["9Alamofire7SessionC", "request"]
 - !private ["9Alamofire20SessionStateProviderP", "request"]
@@ -1749,9 +1758,9 @@ depends-member:
 - !private ["6Drinkz15StripeAPIClientC", "sharedAPIClient"]
 - !private ["So22UIAlertControllerStyleV", "alert"]
 - !private ["So18UIAlertActionStyleV", "cancel"]
-- ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", ""]
 - !private ["s16TextOutputStreamP", "init"]
-- ["s20TextOutputStreamableP", ""]
+- !private ["s20TextOutputStreamableP", ""]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "rounded"]
 - !private ["7Combine15TopLevelEncoderP", "encode"]
@@ -1834,6 +1843,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "NSCoder"]
 - !private ["So21UIAppearanceContainerP", "NSLayoutConstraint"]
 - !private ["So21UIAppearanceContainerP", "Order"]
+- !private ["So21UIAppearanceContainerP", "OrderConfirmationViewController"]
 - !private ["So21UIAppearanceContainerP", "Parameters"]
 - ["So21UIAppearanceContainerP", "RoundButton"]
 - ["So21UIAppearanceContainerP", "STPPaymentContext"]
@@ -1852,6 +1862,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "UILabel"]
 - !private ["So21UIAppearanceContainerP", "UILayoutPriority"]
 - ["So21UIAppearanceContainerP", "UIStackView"]
+- !private ["So21UIAppearanceContainerP", "UIStoryboard"]
 - ["So21UIAppearanceContainerP", "UIView"]
 - ["So21UIAppearanceContainerP", "UsesAutoLayout"]
 - ["So21UIAppearanceContainerP", ""]
@@ -1917,7 +1928,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "setContentHuggingPriority"]
 - !private ["So21UIAppearanceContainerP", "setViewControllers"]
 - !private ["So21UIAppearanceContainerP", "spacing"]
-- !private ["So21UIAppearanceContainerP", "storyboard"]
 - ["So21UIAppearanceContainerP", "subtotalHeaderLabel"]
 - ["So21UIAppearanceContainerP", "subtotalStackView"]
 - !private ["So21UIAppearanceContainerP", "superview"]
@@ -1958,6 +1968,7 @@ depends-member:
 - ["So18UIContentContainerP", "NSCoder"]
 - !private ["So18UIContentContainerP", "NSLayoutConstraint"]
 - !private ["So18UIContentContainerP", "Order"]
+- !private ["So18UIContentContainerP", "OrderConfirmationViewController"]
 - !private ["So18UIContentContainerP", "Parameters"]
 - ["So18UIContentContainerP", "RoundButton"]
 - ["So18UIContentContainerP", "STPPaymentContext"]
@@ -1976,6 +1987,7 @@ depends-member:
 - ["So18UIContentContainerP", "UILabel"]
 - !private ["So18UIContentContainerP", "UILayoutPriority"]
 - ["So18UIContentContainerP", "UIStackView"]
+- !private ["So18UIContentContainerP", "UIStoryboard"]
 - ["So18UIContentContainerP", "UIView"]
 - ["So18UIContentContainerP", "UsesAutoLayout"]
 - ["So18UIContentContainerP", ""]
@@ -2023,7 +2035,6 @@ depends-member:
 - ["So18UIContentContainerP", "salesTaxLabel"]
 - ["So18UIContentContainerP", "salesTaxStackView"]
 - !private ["So18UIContentContainerP", "setViewControllers"]
-- !private ["So18UIContentContainerP", "storyboard"]
 - ["So18UIContentContainerP", "subtotalHeaderLabel"]
 - ["So18UIContentContainerP", "subtotalStackView"]
 - ["So18UIContentContainerP", "tipAmountLabel"]
@@ -2129,6 +2140,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "NSCoder"]
 - !private ["So18UIFocusEnvironmentP", "NSLayoutConstraint"]
 - !private ["So18UIFocusEnvironmentP", "Order"]
+- !private ["So18UIFocusEnvironmentP", "OrderConfirmationViewController"]
 - !private ["So18UIFocusEnvironmentP", "Parameters"]
 - ["So18UIFocusEnvironmentP", "RoundButton"]
 - ["So18UIFocusEnvironmentP", "STPPaymentContext"]
@@ -2147,6 +2159,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "UILabel"]
 - !private ["So18UIFocusEnvironmentP", "UILayoutPriority"]
 - ["So18UIFocusEnvironmentP", "UIStackView"]
+- !private ["So18UIFocusEnvironmentP", "UIStoryboard"]
 - ["So18UIFocusEnvironmentP", "UIView"]
 - ["So18UIFocusEnvironmentP", "UsesAutoLayout"]
 - ["So18UIFocusEnvironmentP", ""]
@@ -2212,7 +2225,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "setContentHuggingPriority"]
 - !private ["So18UIFocusEnvironmentP", "setViewControllers"]
 - !private ["So18UIFocusEnvironmentP", "spacing"]
-- !private ["So18UIFocusEnvironmentP", "storyboard"]
 - ["So18UIFocusEnvironmentP", "subtotalHeaderLabel"]
 - ["So18UIFocusEnvironmentP", "subtotalStackView"]
 - !private ["So18UIFocusEnvironmentP", "superview"]
@@ -2342,6 +2354,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "JSONSerialization"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSLayoutConstraint"]
 - !private ["So30UIPasteConfigurationSupportingP", "Order"]
+- !private ["So30UIPasteConfigurationSupportingP", "OrderConfirmationViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "Parameters"]
 - ["So30UIPasteConfigurationSupportingP", "RoundButton"]
 - ["So30UIPasteConfigurationSupportingP", "STPPaymentContext"]
@@ -2360,6 +2373,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "UILabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "UILayoutPriority"]
 - ["So30UIPasteConfigurationSupportingP", "UIStackView"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIStoryboard"]
 - ["So30UIPasteConfigurationSupportingP", "UIView"]
 - ["So30UIPasteConfigurationSupportingP", "UsesAutoLayout"]
 - ["So30UIPasteConfigurationSupportingP", ""]
@@ -2426,7 +2440,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "setContentHuggingPriority"]
 - !private ["So30UIPasteConfigurationSupportingP", "setViewControllers"]
 - !private ["So30UIPasteConfigurationSupportingP", "spacing"]
-- !private ["So30UIPasteConfigurationSupportingP", "storyboard"]
 - ["So30UIPasteConfigurationSupportingP", "subtotalHeaderLabel"]
 - ["So30UIPasteConfigurationSupportingP", "subtotalStackView"]
 - !private ["So30UIPasteConfigurationSupportingP", "superview"]
@@ -2452,6 +2465,7 @@ depends-member:
 - ["So11UIResponderC", "NSCoder"]
 - !private ["So11UIResponderC", "NSLayoutConstraint"]
 - !private ["So11UIResponderC", "Order"]
+- !private ["So11UIResponderC", "OrderConfirmationViewController"]
 - !private ["So11UIResponderC", "Parameters"]
 - ["So11UIResponderC", "RoundButton"]
 - ["So11UIResponderC", "STPPaymentContext"]
@@ -2470,6 +2484,7 @@ depends-member:
 - ["So11UIResponderC", "UILabel"]
 - !private ["So11UIResponderC", "UILayoutPriority"]
 - ["So11UIResponderC", "UIStackView"]
+- !private ["So11UIResponderC", "UIStoryboard"]
 - ["So11UIResponderC", "UIView"]
 - ["So11UIResponderC", "UsesAutoLayout"]
 - ["So11UIResponderC", ""]
@@ -2536,7 +2551,6 @@ depends-member:
 - !private ["So11UIResponderC", "setContentHuggingPriority"]
 - !private ["So11UIResponderC", "setViewControllers"]
 - !private ["So11UIResponderC", "spacing"]
-- !private ["So11UIResponderC", "storyboard"]
 - ["So11UIResponderC", "subtotalHeaderLabel"]
 - ["So11UIResponderC", "subtotalStackView"]
 - !private ["So11UIResponderC", "superview"]
@@ -2561,6 +2575,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "JSONSerialization"]
 - !private ["So30UIResponderStandardEditActionsP", "NSLayoutConstraint"]
 - !private ["So30UIResponderStandardEditActionsP", "Order"]
+- !private ["So30UIResponderStandardEditActionsP", "OrderConfirmationViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "Parameters"]
 - ["So30UIResponderStandardEditActionsP", "RoundButton"]
 - ["So30UIResponderStandardEditActionsP", "STPPaymentContext"]
@@ -2579,6 +2594,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "UILabel"]
 - !private ["So30UIResponderStandardEditActionsP", "UILayoutPriority"]
 - ["So30UIResponderStandardEditActionsP", "UIStackView"]
+- !private ["So30UIResponderStandardEditActionsP", "UIStoryboard"]
 - ["So30UIResponderStandardEditActionsP", "UIView"]
 - ["So30UIResponderStandardEditActionsP", "UsesAutoLayout"]
 - ["So30UIResponderStandardEditActionsP", ""]
@@ -2645,7 +2661,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "setContentHuggingPriority"]
 - !private ["So30UIResponderStandardEditActionsP", "setViewControllers"]
 - !private ["So30UIResponderStandardEditActionsP", "spacing"]
-- !private ["So30UIResponderStandardEditActionsP", "storyboard"]
 - ["So30UIResponderStandardEditActionsP", "subtotalHeaderLabel"]
 - ["So30UIResponderStandardEditActionsP", "subtotalStackView"]
 - !private ["So30UIResponderStandardEditActionsP", "superview"]
@@ -2693,6 +2708,7 @@ depends-member:
 - ["So16UIStateRestoringP", "NSCoder"]
 - !private ["So16UIStateRestoringP", "NSLayoutConstraint"]
 - !private ["So16UIStateRestoringP", "Order"]
+- !private ["So16UIStateRestoringP", "OrderConfirmationViewController"]
 - !private ["So16UIStateRestoringP", "Parameters"]
 - ["So16UIStateRestoringP", "RoundButton"]
 - ["So16UIStateRestoringP", "STPPaymentContext"]
@@ -2711,6 +2727,7 @@ depends-member:
 - ["So16UIStateRestoringP", "UILabel"]
 - !private ["So16UIStateRestoringP", "UILayoutPriority"]
 - ["So16UIStateRestoringP", "UIStackView"]
+- !private ["So16UIStateRestoringP", "UIStoryboard"]
 - ["So16UIStateRestoringP", "UIView"]
 - ["So16UIStateRestoringP", "UsesAutoLayout"]
 - ["So16UIStateRestoringP", ""]
@@ -2758,7 +2775,6 @@ depends-member:
 - ["So16UIStateRestoringP", "salesTaxLabel"]
 - ["So16UIStateRestoringP", "salesTaxStackView"]
 - !private ["So16UIStateRestoringP", "setViewControllers"]
-- !private ["So16UIStateRestoringP", "storyboard"]
 - ["So16UIStateRestoringP", "subtotalHeaderLabel"]
 - ["So16UIStateRestoringP", "subtotalStackView"]
 - ["So16UIStateRestoringP", "tipAmountLabel"]
@@ -2768,6 +2784,7 @@ depends-member:
 - ["So16UIStateRestoringP", "totalStackView"]
 - !private ["So16UIStateRestoringP", "view"]
 - ["So16UIStateRestoringP", "viewDidLoad"]
+- !private ["So12UIStoryboardC", "init"]
 - !private ["So12UIStoryboardC", "instantiateViewController"]
 - !private ["So18UITraitEnvironmentP", "AF"]
 - !private ["So18UITraitEnvironmentP", "CheckoutCart"]
@@ -2779,6 +2796,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "NSCoder"]
 - !private ["So18UITraitEnvironmentP", "NSLayoutConstraint"]
 - !private ["So18UITraitEnvironmentP", "Order"]
+- !private ["So18UITraitEnvironmentP", "OrderConfirmationViewController"]
 - !private ["So18UITraitEnvironmentP", "Parameters"]
 - ["So18UITraitEnvironmentP", "RoundButton"]
 - ["So18UITraitEnvironmentP", "STPPaymentContext"]
@@ -2797,6 +2815,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "UILabel"]
 - !private ["So18UITraitEnvironmentP", "UILayoutPriority"]
 - ["So18UITraitEnvironmentP", "UIStackView"]
+- !private ["So18UITraitEnvironmentP", "UIStoryboard"]
 - ["So18UITraitEnvironmentP", "UIView"]
 - ["So18UITraitEnvironmentP", "UsesAutoLayout"]
 - ["So18UITraitEnvironmentP", ""]
@@ -2862,7 +2881,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "setContentHuggingPriority"]
 - !private ["So18UITraitEnvironmentP", "setViewControllers"]
 - !private ["So18UITraitEnvironmentP", "spacing"]
-- !private ["So18UITraitEnvironmentP", "storyboard"]
 - ["So18UITraitEnvironmentP", "subtotalHeaderLabel"]
 - ["So18UITraitEnvironmentP", "subtotalStackView"]
 - !private ["So18UITraitEnvironmentP", "superview"]
@@ -2887,6 +2905,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "JSONSerialization"]
 - !private ["So23UIUserActivityRestoringP", "NSLayoutConstraint"]
 - !private ["So23UIUserActivityRestoringP", "Order"]
+- !private ["So23UIUserActivityRestoringP", "OrderConfirmationViewController"]
 - !private ["So23UIUserActivityRestoringP", "Parameters"]
 - ["So23UIUserActivityRestoringP", "RoundButton"]
 - ["So23UIUserActivityRestoringP", "STPPaymentContext"]
@@ -2905,6 +2924,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "UILabel"]
 - !private ["So23UIUserActivityRestoringP", "UILayoutPriority"]
 - ["So23UIUserActivityRestoringP", "UIStackView"]
+- !private ["So23UIUserActivityRestoringP", "UIStoryboard"]
 - ["So23UIUserActivityRestoringP", "UIView"]
 - ["So23UIUserActivityRestoringP", "UsesAutoLayout"]
 - ["So23UIUserActivityRestoringP", ""]
@@ -2971,7 +2991,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "setContentHuggingPriority"]
 - !private ["So23UIUserActivityRestoringP", "setViewControllers"]
 - !private ["So23UIUserActivityRestoringP", "spacing"]
-- !private ["So23UIUserActivityRestoringP", "storyboard"]
 - ["So23UIUserActivityRestoringP", "subtotalHeaderLabel"]
 - ["So23UIUserActivityRestoringP", "subtotalStackView"]
 - !private ["So23UIUserActivityRestoringP", "superview"]
@@ -3023,6 +3042,7 @@ depends-member:
 - ["So16UIViewControllerC", "NSCoder"]
 - !private ["So16UIViewControllerC", "NSLayoutConstraint"]
 - !private ["So16UIViewControllerC", "Order"]
+- !private ["So16UIViewControllerC", "OrderConfirmationViewController"]
 - !private ["So16UIViewControllerC", "Parameters"]
 - ["So16UIViewControllerC", "RoundButton"]
 - ["So16UIViewControllerC", "STPPaymentContext"]
@@ -3041,6 +3061,7 @@ depends-member:
 - ["So16UIViewControllerC", "UILabel"]
 - !private ["So16UIViewControllerC", "UILayoutPriority"]
 - ["So16UIViewControllerC", "UIStackView"]
+- !private ["So16UIViewControllerC", "UIStoryboard"]
 - ["So16UIViewControllerC", "UIView"]
 - ["So16UIViewControllerC", "UsesAutoLayout"]
 - ["So16UIViewControllerC", ""]
@@ -3088,7 +3109,6 @@ depends-member:
 - ["So16UIViewControllerC", "salesTaxLabel"]
 - ["So16UIViewControllerC", "salesTaxStackView"]
 - !private ["So16UIViewControllerC", "setViewControllers"]
-- !private ["So16UIViewControllerC", "storyboard"]
 - ["So16UIViewControllerC", "subtotalHeaderLabel"]
 - ["So16UIViewControllerC", "subtotalStackView"]
 - ["So16UIViewControllerC", "tipAmountLabel"]
@@ -3107,14 +3127,14 @@ depends-member:
 - !private ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "rounded"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "rounded"]
 - ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "rounded"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s26_ExpressibleByColorLiteralP", "systemBackground"]
 - !private ["s26_ExpressibleByColorLiteralP", "themeColor"]
@@ -3145,6 +3165,7 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "UILabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UILayoutPriority"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UIStackView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIStoryboard"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UIView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UsesAutoLayout"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
@@ -3211,7 +3232,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "sharedAPIClient"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "spacing"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "storyboard"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "stripeId"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "subtotal"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "subtotalHeaderLabel"]
@@ -3254,6 +3274,7 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UILabel"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UILayoutPriority"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIStackView"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIStoryboard"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIView"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UsesAutoLayout"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
@@ -3320,7 +3341,6 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sharedAPIClient"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "spacing"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "storyboard"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stripeId"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "subtotal"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "subtotalHeaderLabel"]
@@ -3381,15 +3401,15 @@ depends-member:
 depends-nominal:
 - !private "s18AdditiveArithmeticP"
 - !private "So22UILayoutConstraintAxisV"
-- "SK"
+- !private "SK"
 - !private "SB"
 - !private "Sz"
 - "So15CALayerDelegateP"
 - !private "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
 - !private "6Drinkz12CheckoutCartC"
-- "Sl"
-- "SL"
+- !private "Sl"
+- !private "SL"
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
@@ -3402,13 +3422,13 @@ depends-nominal:
 - !private "s5ErrorP"
 - !private "So15UIControlEventsV"
 - !private "s25ExpressibleByArrayLiteralP"
-- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- "s32ExpressibleByStringInterpolationP"
-- "s26ExpressibleByStringLiteralP"
-- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "s17FixedWidthIntegerP"
 - !private "SF"
 - !private "9Alamofire10HTTPMethodV"
@@ -3418,7 +3438,7 @@ depends-nominal:
 - !private "10Foundation11JSONEncoderC"
 - !private "9Alamofire12JSONEncodingV"
 - !private "So19NSJSONSerializationC"
-- "s25LosslessStringConvertibleP"
+- !private "s25LosslessStringConvertibleP"
 - !private "10Foundation11MeasurementV"
 - !private "s10MirrorPathP"
 - "So8NSCodingP"
@@ -3469,7 +3489,7 @@ depends-nominal:
 - "6Stripe16STPPaymentStatusO"
 - !private "6Stripe40STPShippingAddressViewControllerDelegateP"
 - !private "6Stripe22STPURLCallbackListenerP"
-- "ST"
+- !private "ST"
 - !private "9Alamofire7SessionC"
 - !private "9Alamofire20SessionStateProviderP"
 - !private "s10SetAlgebraP"
@@ -3481,8 +3501,8 @@ depends-nominal:
 - !private "6Drinkz15StripeAPIClientC"
 - !private "So22UIAlertControllerStyleV"
 - !private "So18UIAlertActionStyleV"
-- "s16TextOutputStreamP"
-- "s20TextOutputStreamableP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
 - !private "7Combine15TopLevelEncoderP"
 - "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - "So29UIAccessibilityIdentificationP"
@@ -3525,11 +3545,11 @@ depends-nominal:
 - !private "s22_CVarArgPassedAsDoubleP"
 - !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
-- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
-- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
@@ -3549,8 +3569,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -3570,47 +3590,47 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/MapKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Pods/TweetNacl/Sources/module.map"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/TweetNacl/Sources/module.map"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"

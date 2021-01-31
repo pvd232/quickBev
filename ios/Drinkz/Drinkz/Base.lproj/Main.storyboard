@@ -27,14 +27,14 @@
                                         </constraints>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="754" verticalCompressionResistancePriority="753" text="The tasty Heifenweizen will delight your tatstebuds!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q0B-fp-2st">
-                                        <rect key="frame" x="0.0" y="320" width="290" height="74"/>
+                                        <rect key="frame" x="0.0" y="320" width="290" height="50"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="$8.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azp-uE-agL">
-                                        <rect key="frame" x="0.0" y="424" width="290" height="79"/>
+                                        <rect key="frame" x="0.0" y="400" width="290" height="103"/>
                                         <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -422,7 +422,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bar Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLF-Ez-OJR">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLF-Ez-OJR">
                                         <rect key="frame" x="0.0" y="110" width="373" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -440,7 +440,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go to the second floor to the end of the bar and tell the bartender your name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exU-Dz-iJX">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go to the second floor to the end of the business and tell business your name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exU-Dz-iJX">
                                         <rect key="frame" x="0.0" y="232" width="373" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -679,10 +679,10 @@
             </objects>
             <point key="canvasLocation" x="560.86956521739137" y="113.83928571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Registration Splash Page View Controller-->
         <scene sceneID="L0y-tN-mQr">
             <objects>
-                <viewController storyboardIdentifier="RegistrationSplashPageViewController" id="L6H-c0-quu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegistrationSplashPageViewController" id="L6H-c0-quu" customClass="RegistrationSplashPageViewController" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ARx-sr-8zN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -764,6 +764,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="clickContinueAsGuestButton:" destination="mgx-Q2-vnD" eventType="touchUpInside" id="J0f-Wo-QzU"/>
+                                            <segue destination="5Q7-Sc-zjd" kind="show" id="Sgy-BF-JOI"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -790,9 +791,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hjj-FY-1md"/>
-                    <connections>
-                        <segue destination="5Q7-Sc-zjd" kind="show" id="VwT-1l-wfR"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6xy-0e-x4R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -916,7 +914,7 @@
         <!--View Controller-->
         <scene sceneID="TlC-rN-dGv">
             <objects>
-                <viewController storyboardIdentifier="BarMapViewController" id="x1b-71-fHm" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BusinessMapViewController" id="x1b-71-fHm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVX-qf-iCc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <subviews>
@@ -942,10 +940,10 @@
             </objects>
             <point key="canvasLocation" x="2874" y="-1391"/>
         </scene>
-        <!--Drink List Table View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="IK9-5j-fJl">
             <objects>
-                <tableViewController storyboardIdentifier="DrinkListTableViewController" id="sP0-yr-ibm" customClass="DrinkListTableViewController" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DrinkListTableViewController" id="sP0-yr-ibm" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="B9U-l2-bgc"/>
                     <connections>
                         <segue destination="wiS-nk-Gbf" kind="show" id="J9j-48-yHc"/>
@@ -1199,7 +1197,7 @@
                                     <constraint firstAttribute="width" secondItem="EDN-d6-l6r" secondAttribute="height" multiplier="197:25" id="4hf-Jr-Y6b"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Charter-Black" family="Charter" pointSize="20"/>
-                                <state key="normal" title="Choose a bar">
+                                <state key="normal" title="Choose a venue">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1564,7 +1562,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Create your tab" largeTitleDisplayMode="always" id="a3G-G6-twM"/>
                     <connections>
-                        <outlet property="barTextField" destination="9G6-J6-Dcf" id="CtH-tg-bse"/>
+                        <outlet property="businessTextField" destination="9G6-J6-Dcf" id="CtH-tg-bse"/>
                         <outlet property="createYourTabStackView" destination="HVg-VM-8td" id="wmS-ad-cLV"/>
                         <outlet property="dateAndTimeTextField" destination="38v-nq-MLZ" id="pjQ-Yf-NO2"/>
                         <outlet property="descriptionTextField" destination="9hy-dE-Y5c" id="g7I-mX-ShR"/>
@@ -1578,10 +1576,10 @@
             </objects>
             <point key="canvasLocation" x="3924.6376811594205" y="-1381.4732142857142"/>
         </scene>
-        <!--Bar Array View Controller-->
+        <!--Business Array View Controller-->
         <scene sceneID="cBG-CS-53T">
             <objects>
-                <viewController storyboardIdentifier="BarArrayViewController" id="ZXX-I4-kay" customClass="BarArrayViewController" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BusinessArrayViewController" id="ZXX-I4-kay" customClass="BusinessArrayViewController" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="coI-TK-oQh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1692,7 +1690,7 @@
             <size key="intrinsicContentSize" width="183" height="25"/>
         </designable>
         <designable name="EDN-d6-l6r">
-            <size key="intrinsicContentSize" width="136" height="25"/>
+            <size key="intrinsicContentSize" width="163" height="25"/>
         </designable>
         <designable name="Gel-tx-aLf">
             <size key="intrinsicContentSize" width="74" height="25"/>

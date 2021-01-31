@@ -5,37 +5,39 @@ provides-nominal:
 provides-member:
 - ["6Drinkz12CheckoutCartC", ""]
 - ["6Drinkz12CheckoutCartC", "fetchRequest"]
-- ["6Drinkz12CheckoutCartC", "barId"]
+- ["6Drinkz12CheckoutCartC", "currentOrderId"]
+- ["6Drinkz12CheckoutCartC", "businessAddressId"]
 - ["6Drinkz12CheckoutCartC", "cost"]
-- ["6Drinkz12CheckoutCartC", "subtotal"]
-- ["6Drinkz12CheckoutCartC", "tipPercentage"]
-- ["6Drinkz12CheckoutCartC", "tipAmount"]
-- ["6Drinkz12CheckoutCartC", "userId"]
-- ["6Drinkz12CheckoutCartC", "stripeId"]
-- ["6Drinkz12CheckoutCartC", "salesTax"]
 - ["6Drinkz12CheckoutCartC", "orderingProcessViewControllerIndex"]
-- ["6Drinkz12CheckoutCartC", "bars"]
+- ["6Drinkz12CheckoutCartC", "salesTax"]
+- ["6Drinkz12CheckoutCartC", "stripeId"]
+- ["6Drinkz12CheckoutCartC", "subtotal"]
+- ["6Drinkz12CheckoutCartC", "tipAmount"]
+- ["6Drinkz12CheckoutCartC", "tipPercentage"]
+- ["6Drinkz12CheckoutCartC", "userId"]
+- ["6Drinkz12CheckoutCartC", "business"]
 - ["6Drinkz12CheckoutCartC", "drinks"]
 - ["6Drinkz12CheckoutCartC", "user"]
-- ["6Drinkz12CheckoutCartC", "userBar"]
-- ["6Drinkz12CheckoutCartC", "addToBars"]
-- ["6Drinkz12CheckoutCartC", "removeFromBars"]
-- ["6Drinkz12CheckoutCartC", "addToBars"]
-- ["6Drinkz12CheckoutCartC", "removeFromBars"]
+- ["6Drinkz12CheckoutCartC", "userBusiness"]
+- ["6Drinkz12CheckoutCartC", "addToBusiness"]
+- ["6Drinkz12CheckoutCartC", "removeFromBusiness"]
+- ["6Drinkz12CheckoutCartC", "addToBusiness"]
+- ["6Drinkz12CheckoutCartC", "removeFromBusiness"]
 - ["6Drinkz12CheckoutCartC", "addToDrinks"]
 - ["6Drinkz12CheckoutCartC", "removeFromDrinks"]
 - ["6Drinkz12CheckoutCartC", "addToDrinks"]
 - ["6Drinkz12CheckoutCartC", "removeFromDrinks"]
 provides-dynamic-lookup:
-- "addToBars"
+- "addToBusiness"
 - "addToDrinks"
-- "barId"
-- "bars"
+- "business"
+- "businessAddressId"
 - "cost"
+- "currentOrderId"
 - "drinks"
 - "fetchRequest"
 - "orderingProcessViewControllerIndex"
-- "removeFromBars"
+- "removeFromBusiness"
 - "removeFromDrinks"
 - "salesTax"
 - "stripeId"
@@ -43,18 +45,20 @@ provides-dynamic-lookup:
 - "tipAmount"
 - "tipPercentage"
 - "user"
-- "userBar"
+- "userBusiness"
 - "userId"
 depends-top-level:
-- "Bar"
+- "Business"
 - "CheckoutCart"
 - "Double"
 - "Drink"
 - "Identifiable"
+- "Int16"
 - "NSFetchRequest"
 - "NSSet"
 - "String"
 - !private "StringLiteralType"
+- "UUID"
 - "User"
 depends-member:
 - ["s7CVarArgP", "Default_ID"]
@@ -63,28 +67,31 @@ depends-member:
 - ["s7CVarArgP", "_Default_ID"]
 - ["s7CVarArgP", "id"]
 - !private ["s7CVarArgP", "init"]
-- ["6Drinkz12CheckoutCartC", "Bar"]
+- ["6Drinkz12CheckoutCartC", "Business"]
 - ["6Drinkz12CheckoutCartC", "CheckoutCart"]
 - ["6Drinkz12CheckoutCartC", "Default_ID"]
 - ["6Drinkz12CheckoutCartC", "Double"]
 - ["6Drinkz12CheckoutCartC", "Drink"]
 - ["6Drinkz12CheckoutCartC", "ID"]
+- ["6Drinkz12CheckoutCartC", "Int16"]
 - ["6Drinkz12CheckoutCartC", "NSFetchRequest"]
 - ["6Drinkz12CheckoutCartC", "NSSet"]
 - ["6Drinkz12CheckoutCartC", "String"]
+- ["6Drinkz12CheckoutCartC", "UUID"]
 - ["6Drinkz12CheckoutCartC", "User"]
 - ["6Drinkz12CheckoutCartC", ""]
 - ["6Drinkz12CheckoutCartC", "_Default_ID"]
-- ["6Drinkz12CheckoutCartC", "addToBars"]
+- ["6Drinkz12CheckoutCartC", "addToBusiness"]
 - ["6Drinkz12CheckoutCartC", "addToDrinks"]
-- ["6Drinkz12CheckoutCartC", "barId"]
-- ["6Drinkz12CheckoutCartC", "bars"]
+- ["6Drinkz12CheckoutCartC", "business"]
+- ["6Drinkz12CheckoutCartC", "businessAddressId"]
 - ["6Drinkz12CheckoutCartC", "cost"]
+- ["6Drinkz12CheckoutCartC", "currentOrderId"]
 - ["6Drinkz12CheckoutCartC", "drinks"]
 - ["6Drinkz12CheckoutCartC", "fetchRequest"]
 - ["6Drinkz12CheckoutCartC", "id"]
 - ["6Drinkz12CheckoutCartC", "orderingProcessViewControllerIndex"]
-- ["6Drinkz12CheckoutCartC", "removeFromBars"]
+- ["6Drinkz12CheckoutCartC", "removeFromBusiness"]
 - ["6Drinkz12CheckoutCartC", "removeFromDrinks"]
 - ["6Drinkz12CheckoutCartC", "salesTax"]
 - ["6Drinkz12CheckoutCartC", "stripeId"]
@@ -92,7 +99,7 @@ depends-member:
 - ["6Drinkz12CheckoutCartC", "tipAmount"]
 - ["6Drinkz12CheckoutCartC", "tipPercentage"]
 - ["6Drinkz12CheckoutCartC", "user"]
-- ["6Drinkz12CheckoutCartC", "userBar"]
+- ["6Drinkz12CheckoutCartC", "userBusiness"]
 - ["6Drinkz12CheckoutCartC", "userId"]
 - ["s28CustomDebugStringConvertibleP", "Default_ID"]
 - ["s28CustomDebugStringConvertibleP", "ID"]
@@ -125,24 +132,35 @@ depends-member:
 - ["s12IdentifiableP", ""]
 - ["s12IdentifiableP", "_Default_ID"]
 - ["s12IdentifiableP", "id"]
+- ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "init"]
+- !private ["So9NSCopyingP", "fetchRequestWithEntityName"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So14NSFetchRequestC", "init"]
-- ["So20NSFetchRequestResultP", "Bar"]
+- ["So20NSFetchRequestResultP", "Business"]
+- ["So20NSFetchRequestResultP", "CheckoutCart"]
 - ["So20NSFetchRequestResultP", "Default_ID"]
 - ["So20NSFetchRequestResultP", "Double"]
+- ["So20NSFetchRequestResultP", "Drink"]
 - ["So20NSFetchRequestResultP", "ID"]
-- !private ["So20NSFetchRequestResultP", "NSFetchRequest"]
+- ["So20NSFetchRequestResultP", "Int16"]
+- ["So20NSFetchRequestResultP", "NSFetchRequest"]
+- ["So20NSFetchRequestResultP", "NSSet"]
+- ["So20NSFetchRequestResultP", "String"]
+- ["So20NSFetchRequestResultP", "UUID"]
+- ["So20NSFetchRequestResultP", "User"]
 - ["So20NSFetchRequestResultP", "_Default_ID"]
-- ["So20NSFetchRequestResultP", "addToBars"]
+- ["So20NSFetchRequestResultP", "addToBusiness"]
 - ["So20NSFetchRequestResultP", "addToDrinks"]
-- ["So20NSFetchRequestResultP", "barId"]
-- ["So20NSFetchRequestResultP", "bars"]
+- ["So20NSFetchRequestResultP", "business"]
+- ["So20NSFetchRequestResultP", "businessAddressId"]
 - ["So20NSFetchRequestResultP", "cost"]
+- ["So20NSFetchRequestResultP", "currentOrderId"]
 - ["So20NSFetchRequestResultP", "drinks"]
+- ["So20NSFetchRequestResultP", "fetchRequest"]
 - ["So20NSFetchRequestResultP", "id"]
 - ["So20NSFetchRequestResultP", "orderingProcessViewControllerIndex"]
-- ["So20NSFetchRequestResultP", "removeFromBars"]
+- ["So20NSFetchRequestResultP", "removeFromBusiness"]
 - ["So20NSFetchRequestResultP", "removeFromDrinks"]
 - ["So20NSFetchRequestResultP", "salesTax"]
 - ["So20NSFetchRequestResultP", "stripeId"]
@@ -150,30 +168,33 @@ depends-member:
 - ["So20NSFetchRequestResultP", "tipAmount"]
 - ["So20NSFetchRequestResultP", "tipPercentage"]
 - ["So20NSFetchRequestResultP", "user"]
-- ["So20NSFetchRequestResultP", "userBar"]
+- ["So20NSFetchRequestResultP", "userBusiness"]
 - ["So20NSFetchRequestResultP", "userId"]
-- ["So15NSManagedObjectC", "Bar"]
+- ["So15NSManagedObjectC", "Business"]
 - ["So15NSManagedObjectC", "CheckoutCart"]
 - ["So15NSManagedObjectC", "Default_ID"]
 - ["So15NSManagedObjectC", "Double"]
 - ["So15NSManagedObjectC", "Drink"]
 - ["So15NSManagedObjectC", "ID"]
+- ["So15NSManagedObjectC", "Int16"]
 - ["So15NSManagedObjectC", "NSFetchRequest"]
 - ["So15NSManagedObjectC", "NSSet"]
 - ["So15NSManagedObjectC", "String"]
+- ["So15NSManagedObjectC", "UUID"]
 - ["So15NSManagedObjectC", "User"]
 - ["So15NSManagedObjectC", ""]
 - ["So15NSManagedObjectC", "_Default_ID"]
-- ["So15NSManagedObjectC", "addToBars"]
+- ["So15NSManagedObjectC", "addToBusiness"]
 - ["So15NSManagedObjectC", "addToDrinks"]
-- ["So15NSManagedObjectC", "barId"]
-- ["So15NSManagedObjectC", "bars"]
+- ["So15NSManagedObjectC", "business"]
+- ["So15NSManagedObjectC", "businessAddressId"]
 - ["So15NSManagedObjectC", "cost"]
+- ["So15NSManagedObjectC", "currentOrderId"]
 - ["So15NSManagedObjectC", "drinks"]
 - ["So15NSManagedObjectC", "fetchRequest"]
 - ["So15NSManagedObjectC", "id"]
 - ["So15NSManagedObjectC", "orderingProcessViewControllerIndex"]
-- ["So15NSManagedObjectC", "removeFromBars"]
+- ["So15NSManagedObjectC", "removeFromBusiness"]
 - ["So15NSManagedObjectC", "removeFromDrinks"]
 - ["So15NSManagedObjectC", "salesTax"]
 - ["So15NSManagedObjectC", "stripeId"]
@@ -181,31 +202,35 @@ depends-member:
 - ["So15NSManagedObjectC", "tipAmount"]
 - ["So15NSManagedObjectC", "tipPercentage"]
 - ["So15NSManagedObjectC", "user"]
-- ["So15NSManagedObjectC", "userBar"]
+- ["So15NSManagedObjectC", "userBusiness"]
 - ["So15NSManagedObjectC", "userId"]
-- ["So8NSObjectC", "Bar"]
+- ["So8NSObjectC", "Business"]
 - ["So8NSObjectC", "CheckoutCart"]
 - ["So8NSObjectC", "Default_ID"]
 - ["So8NSObjectC", "Double"]
 - ["So8NSObjectC", "Drink"]
 - ["So8NSObjectC", "ID"]
+- ["So8NSObjectC", "Int16"]
 - ["So8NSObjectC", "NSFetchRequest"]
 - ["So8NSObjectC", "NSSet"]
 - ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "UUID"]
 - ["So8NSObjectC", "User"]
 - ["So8NSObjectC", ""]
 - ["So8NSObjectC", "_Default_ID"]
-- ["So8NSObjectC", "addToBars"]
+- ["So8NSObjectC", "addToBusiness"]
 - ["So8NSObjectC", "addToDrinks"]
-- ["So8NSObjectC", "barId"]
-- ["So8NSObjectC", "bars"]
+- ["So8NSObjectC", "business"]
+- ["So8NSObjectC", "businessAddressId"]
 - ["So8NSObjectC", "cost"]
+- ["So8NSObjectC", "currentOrderId"]
 - ["So8NSObjectC", "drinks"]
 - ["So8NSObjectC", "fetchRequest"]
+- !private ["So8NSObjectC", "fetchRequestWithEntityName"]
 - ["So8NSObjectC", "id"]
 - !private ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "orderingProcessViewControllerIndex"]
-- ["So8NSObjectC", "removeFromBars"]
+- ["So8NSObjectC", "removeFromBusiness"]
 - ["So8NSObjectC", "removeFromDrinks"]
 - ["So8NSObjectC", "salesTax"]
 - ["So8NSObjectC", "stripeId"]
@@ -213,24 +238,34 @@ depends-member:
 - ["So8NSObjectC", "tipAmount"]
 - ["So8NSObjectC", "tipPercentage"]
 - ["So8NSObjectC", "user"]
-- ["So8NSObjectC", "userBar"]
+- ["So8NSObjectC", "userBusiness"]
 - ["So8NSObjectC", "userId"]
+- ["So8NSObjectP", "Business"]
+- ["So8NSObjectP", "CheckoutCart"]
 - ["So8NSObjectP", "Default_ID"]
 - ["So8NSObjectP", "Double"]
+- ["So8NSObjectP", "Drink"]
 - ["So8NSObjectP", "ID"]
-- !private ["So8NSObjectP", "NSFetchRequest"]
+- ["So8NSObjectP", "Int16"]
+- ["So8NSObjectP", "NSFetchRequest"]
+- ["So8NSObjectP", "NSSet"]
+- ["So8NSObjectP", "UUID"]
+- ["So8NSObjectP", "User"]
 - ["So8NSObjectP", ""]
 - ["So8NSObjectP", "_Default_ID"]
-- ["So8NSObjectP", "addToBars"]
+- ["So8NSObjectP", "addToBusiness"]
 - ["So8NSObjectP", "addToDrinks"]
-- ["So8NSObjectP", "barId"]
-- ["So8NSObjectP", "bars"]
+- ["So8NSObjectP", "business"]
+- ["So8NSObjectP", "businessAddressId"]
 - ["So8NSObjectP", "cost"]
+- ["So8NSObjectP", "currentOrderId"]
 - ["So8NSObjectP", "drinks"]
+- ["So8NSObjectP", "fetchRequest"]
+- !private ["So8NSObjectP", "fetchRequestWithEntityName"]
 - ["So8NSObjectP", "id"]
 - !private ["So8NSObjectP", "init"]
 - ["So8NSObjectP", "orderingProcessViewControllerIndex"]
-- ["So8NSObjectP", "removeFromBars"]
+- ["So8NSObjectP", "removeFromBusiness"]
 - ["So8NSObjectP", "removeFromDrinks"]
 - ["So8NSObjectP", "salesTax"]
 - ["So8NSObjectP", "stripeId"]
@@ -238,9 +273,10 @@ depends-member:
 - ["So8NSObjectP", "tipAmount"]
 - ["So8NSObjectP", "tipPercentage"]
 - ["So8NSObjectP", "user"]
-- ["So8NSObjectP", "userBar"]
+- ["So8NSObjectP", "userBusiness"]
 - ["So8NSObjectP", "userId"]
 - ["So24NSPersistentStoreRequestC", ""]
+- !private ["So24NSPersistentStoreRequestC", "fetchRequestWithEntityName"]
 - !private ["So24NSPersistentStoreRequestC", "init"]
 - ["7Combine16ObservableObjectP", "Default_ID"]
 - ["7Combine16ObservableObjectP", "ID"]
@@ -268,7 +304,7 @@ depends-nominal:
 - "SQ"
 - "SH"
 - "s12IdentifiableP"
-- !private "So8NSCodingP"
+- "So8NSCodingP"
 - !private "So9NSCopyingP"
 - !private "So14NSFetchRequestC"
 - "So20NSFetchRequestResultP"
@@ -290,8 +326,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -311,47 +347,47 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/MapKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Pods/TweetNacl/Sources/module.map"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/TweetNacl/Sources/module.map"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
@@ -382,4 +418,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "a05f7becae9776ea4b0aaa677482c74c"
+interface-hash: "78bbcd5d5de00be75bed1323f142bce1"

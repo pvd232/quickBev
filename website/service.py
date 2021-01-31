@@ -66,17 +66,17 @@ class Order_Service(object):
             self.order_repository.post_order(session, new_order_domain)
             return
 
-    def get_orders(self):
+    def get_orders(self, username):
         response = []
         with session_scope() as session:
-            for order in self.order_repository.get_orders(session):
+            for order in self.order_repository.get_orders(session, username):
                 order_domain = Order_Domain(order_object=order)
                 response.append(order_domain)
             return response
 
-    def stripe_ephemeral_key(self, request):
+    def get_stripe_ephemeral_key(self, request):
         with session_scope() as session:
-            return self.order_repository.stripe_ephemeral_key(session, request)
+            return self.order_repository.get_stripe_ephemeral_key(session, request)
 
     def stripe_payment_intent(self, request):
         with session_scope() as session:

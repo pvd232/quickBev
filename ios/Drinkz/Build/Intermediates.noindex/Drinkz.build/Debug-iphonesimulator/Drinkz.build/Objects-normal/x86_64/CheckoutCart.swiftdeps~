@@ -7,21 +7,21 @@ provides-member:
 - ["6Drinkz12CheckoutCartC", ""]
 - ["Sd", ""]
 - ["6Drinkz12CheckoutCartC", "cart"]
-- ["6Drinkz12CheckoutCartC", "barArray"]
-- ["6Drinkz12CheckoutCartC", "userBarDrinks"]
+- ["6Drinkz12CheckoutCartC", "businessArray"]
+- ["6Drinkz12CheckoutCartC", "userBusinessDrinks"]
 - ["6Drinkz12CheckoutCartC", "canPay"]
 - ["6Drinkz12CheckoutCartC", "calculateCost"]
 - ["6Drinkz12CheckoutCartC", "emptyCart"]
 - ["Sd", "rounded"]
 provides-dynamic-lookup:
-- "barArray"
+- "businessArray"
 - "calculateCost"
 - "canPay"
 - "cart"
 - "customerContext"
 - "emptyCart"
 - "shared"
-- "userBarDrinks"
+- "userBusinessDrinks"
 depends-top-level:
 - !private "!"
 - !private "*"
@@ -32,8 +32,8 @@ depends-top-level:
 - !private "??"
 - !private "Array"
 - "AssignmentPrecedence"
-- "Bar"
 - "Bool"
+- "Business"
 - "CastingPrecedence"
 - "CheckoutCart"
 - !private "CoreDataManager"
@@ -49,11 +49,11 @@ depends-top-level:
 - "Set"
 - !private "StringLiteralType"
 - "StripeAPIClient"
-- !private "bars"
+- !private "business"
 - !private "cart"
 - !private "drinks"
 - !private "pow"
-- !private "userBar"
+- !private "userBusiness"
 depends-member:
 - !private ["s18AdditiveArithmeticP", "Darwin"]
 - !private ["s18AdditiveArithmeticP", "Double"]
@@ -71,10 +71,6 @@ depends-member:
 - !private ["Sa", "isEmpty"]
 - !private ["Sa", "reduce"]
 - !private ["Sa", "subscript"]
-- !private ["6Drinkz3BarC", ""]
-- !private ["6Drinkz3BarC", "drinks"]
-- !private ["6Drinkz3BarC", "name"]
-- !private ["6Drinkz3BarC", "salesTaxRate"]
 - !private ["SK", ""]
 - !private ["SK", "count"]
 - !private ["SK", "init"]
@@ -86,6 +82,10 @@ depends-member:
 - !private ["SB", "init"]
 - !private ["SB", "pow"]
 - !private ["SB", "rounded"]
+- !private ["6Drinkz8BusinessC", ""]
+- !private ["6Drinkz8BusinessC", "drinks"]
+- !private ["6Drinkz8BusinessC", "name"]
+- !private ["6Drinkz8BusinessC", "salesTaxRate"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "Darwin"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "Double"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "count"]
@@ -104,8 +104,8 @@ depends-member:
 - ["s7CVarArgP", "STPCustomerContext"]
 - ["s7CVarArgP", "StripeAPIClient"]
 - ["s7CVarArgP", ""]
-- !private ["s7CVarArgP", "barId"]
-- !private ["s7CVarArgP", "bars"]
+- !private ["s7CVarArgP", "business"]
+- !private ["s7CVarArgP", "businessAddressId"]
 - !private ["s7CVarArgP", "cart"]
 - !private ["s7CVarArgP", "cost"]
 - !private ["s7CVarArgP", "count"]
@@ -124,11 +124,11 @@ depends-member:
 - !private ["s7CVarArgP", "subtotal"]
 - !private ["s7CVarArgP", "tipAmount"]
 - !private ["s7CVarArgP", "tipPercentage"]
-- !private ["s7CVarArgP", "userBar"]
+- !private ["s7CVarArgP", "userBusiness"]
 - !private ["s7CVarArgP", "userId"]
 - !private ["s7CVarArgP", "viewContext"]
-- ["6Drinkz12CheckoutCartC", "Bar"]
 - ["6Drinkz12CheckoutCartC", "Bool"]
+- ["6Drinkz12CheckoutCartC", "Business"]
 - ["6Drinkz12CheckoutCartC", "CheckoutCart"]
 - !private ["6Drinkz12CheckoutCartC", "CoreDataManager"]
 - !private ["6Drinkz12CheckoutCartC", "Double"]
@@ -138,9 +138,9 @@ depends-member:
 - !private ["6Drinkz12CheckoutCartC", "Set"]
 - ["6Drinkz12CheckoutCartC", "StripeAPIClient"]
 - ["6Drinkz12CheckoutCartC", ""]
-- ["6Drinkz12CheckoutCartC", "barArray"]
-- !private ["6Drinkz12CheckoutCartC", "barId"]
-- !private ["6Drinkz12CheckoutCartC", "bars"]
+- !private ["6Drinkz12CheckoutCartC", "business"]
+- !private ["6Drinkz12CheckoutCartC", "businessAddressId"]
+- ["6Drinkz12CheckoutCartC", "businessArray"]
 - ["6Drinkz12CheckoutCartC", "calculateCost"]
 - ["6Drinkz12CheckoutCartC", "canPay"]
 - ["6Drinkz12CheckoutCartC", "cart"]
@@ -155,8 +155,8 @@ depends-member:
 - !private ["6Drinkz12CheckoutCartC", "subtotal"]
 - !private ["6Drinkz12CheckoutCartC", "tipAmount"]
 - !private ["6Drinkz12CheckoutCartC", "tipPercentage"]
-- !private ["6Drinkz12CheckoutCartC", "userBar"]
-- ["6Drinkz12CheckoutCartC", "userBarDrinks"]
+- !private ["6Drinkz12CheckoutCartC", "userBusiness"]
+- ["6Drinkz12CheckoutCartC", "userBusinessDrinks"]
 - !private ["6Drinkz12CheckoutCartC", "userId"]
 - !private ["Sl", ""]
 - !private ["Sl", "count"]
@@ -188,8 +188,8 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "STPCustomerContext"]
 - ["s28CustomDebugStringConvertibleP", "StripeAPIClient"]
 - ["s28CustomDebugStringConvertibleP", ""]
-- !private ["s28CustomDebugStringConvertibleP", "barId"]
-- !private ["s28CustomDebugStringConvertibleP", "bars"]
+- !private ["s28CustomDebugStringConvertibleP", "business"]
+- !private ["s28CustomDebugStringConvertibleP", "businessAddressId"]
 - !private ["s28CustomDebugStringConvertibleP", "cart"]
 - !private ["s28CustomDebugStringConvertibleP", "cost"]
 - !private ["s28CustomDebugStringConvertibleP", "count"]
@@ -208,7 +208,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "subtotal"]
 - !private ["s28CustomDebugStringConvertibleP", "tipAmount"]
 - !private ["s28CustomDebugStringConvertibleP", "tipPercentage"]
-- !private ["s28CustomDebugStringConvertibleP", "userBar"]
+- !private ["s28CustomDebugStringConvertibleP", "userBusiness"]
 - !private ["s28CustomDebugStringConvertibleP", "userId"]
 - !private ["s28CustomDebugStringConvertibleP", "viewContext"]
 - !private ["s17CustomReflectableP", "Darwin"]
@@ -230,8 +230,8 @@ depends-member:
 - ["s23CustomStringConvertibleP", "STPCustomerContext"]
 - ["s23CustomStringConvertibleP", "StripeAPIClient"]
 - ["s23CustomStringConvertibleP", ""]
-- !private ["s23CustomStringConvertibleP", "barId"]
-- !private ["s23CustomStringConvertibleP", "bars"]
+- !private ["s23CustomStringConvertibleP", "business"]
+- !private ["s23CustomStringConvertibleP", "businessAddressId"]
 - !private ["s23CustomStringConvertibleP", "cart"]
 - !private ["s23CustomStringConvertibleP", "cost"]
 - !private ["s23CustomStringConvertibleP", "count"]
@@ -250,7 +250,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "subtotal"]
 - !private ["s23CustomStringConvertibleP", "tipAmount"]
 - !private ["s23CustomStringConvertibleP", "tipPercentage"]
-- !private ["s23CustomStringConvertibleP", "userBar"]
+- !private ["s23CustomStringConvertibleP", "userBusiness"]
 - !private ["s23CustomStringConvertibleP", "userId"]
 - !private ["s23CustomStringConvertibleP", "viewContext"]
 - !private ["10Foundation12DataProtocolP", ""]
@@ -306,8 +306,8 @@ depends-member:
 - ["SQ", "STPCustomerContext"]
 - ["SQ", "StripeAPIClient"]
 - ["SQ", ""]
-- !private ["SQ", "barId"]
-- !private ["SQ", "bars"]
+- !private ["SQ", "business"]
+- !private ["SQ", "businessAddressId"]
 - !private ["SQ", "cart"]
 - !private ["SQ", "cost"]
 - !private ["SQ", "count"]
@@ -326,7 +326,7 @@ depends-member:
 - !private ["SQ", "subtotal"]
 - !private ["SQ", "tipAmount"]
 - !private ["SQ", "tipPercentage"]
-- !private ["SQ", "userBar"]
+- !private ["SQ", "userBusiness"]
 - !private ["SQ", "userId"]
 - !private ["SQ", "viewContext"]
 - !private ["s25ExpressibleByArrayLiteralP", ""]
@@ -336,7 +336,6 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "reduce"]
 - !private ["s25ExpressibleByArrayLiteralP", "sorted"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
-- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "Darwin"]
 - !private ["s25ExpressibleByFloatLiteralP", "Double"]
 - !private ["s25ExpressibleByFloatLiteralP", ""]
@@ -349,9 +348,6 @@ depends-member:
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "pow"]
 - !private ["s27ExpressibleByIntegerLiteralP", "rounded"]
-- !private ["s32ExpressibleByStringInterpolationP", ""]
-- !private ["s26ExpressibleByStringLiteralP", ""]
-- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["SF", "Darwin"]
 - !private ["SF", "Double"]
 - !private ["SF", ""]
@@ -367,8 +363,8 @@ depends-member:
 - ["SH", "STPCustomerContext"]
 - ["SH", "StripeAPIClient"]
 - ["SH", ""]
-- !private ["SH", "barId"]
-- !private ["SH", "bars"]
+- !private ["SH", "business"]
+- !private ["SH", "businessAddressId"]
 - !private ["SH", "cart"]
 - !private ["SH", "cost"]
 - !private ["SH", "count"]
@@ -387,7 +383,7 @@ depends-member:
 - !private ["SH", "subtotal"]
 - !private ["SH", "tipAmount"]
 - !private ["SH", "tipPercentage"]
-- !private ["SH", "userBar"]
+- !private ["SH", "userBusiness"]
 - !private ["SH", "userId"]
 - !private ["SH", "viewContext"]
 - !private ["s12IdentifiableP", "CheckoutCart"]
@@ -396,8 +392,8 @@ depends-member:
 - !private ["s12IdentifiableP", "NSSet"]
 - ["s12IdentifiableP", "STPCustomerContext"]
 - ["s12IdentifiableP", "StripeAPIClient"]
-- !private ["s12IdentifiableP", "barId"]
-- !private ["s12IdentifiableP", "bars"]
+- !private ["s12IdentifiableP", "business"]
+- !private ["s12IdentifiableP", "businessAddressId"]
 - !private ["s12IdentifiableP", "cart"]
 - !private ["s12IdentifiableP", "cost"]
 - !private ["s12IdentifiableP", "drinks"]
@@ -408,11 +404,10 @@ depends-member:
 - !private ["s12IdentifiableP", "subtotal"]
 - !private ["s12IdentifiableP", "tipAmount"]
 - !private ["s12IdentifiableP", "tipPercentage"]
-- !private ["s12IdentifiableP", "userBar"]
+- !private ["s12IdentifiableP", "userBusiness"]
 - !private ["s12IdentifiableP", "userId"]
 - !private ["s25LosslessStringConvertibleP", "Darwin"]
 - !private ["s25LosslessStringConvertibleP", "Double"]
-- !private ["s25LosslessStringConvertibleP", ""]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s25LosslessStringConvertibleP", "pow"]
 - !private ["s25LosslessStringConvertibleP", "rounded"]
@@ -427,26 +422,25 @@ depends-member:
 - !private ["10Foundation19MutableDataProtocolP", "isEmpty"]
 - !private ["10Foundation19MutableDataProtocolP", "reduce"]
 - !private ["10Foundation19MutableDataProtocolP", "subscript"]
-- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "init"]
 - !private ["So9NSCopyingP", "cost"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "name"]
 - !private ["So17NSFastEnumerationP", "init"]
-- ["So20NSFetchRequestResultP", "Bar"]
 - ["So20NSFetchRequestResultP", "Bool"]
-- ["So20NSFetchRequestResultP", "CheckoutCart"]
+- ["So20NSFetchRequestResultP", "Business"]
+- !private ["So20NSFetchRequestResultP", "CheckoutCart"]
 - !private ["So20NSFetchRequestResultP", "CoreDataManager"]
-- !private ["So20NSFetchRequestResultP", "Double"]
-- ["So20NSFetchRequestResultP", "Drink"]
+- !private ["So20NSFetchRequestResultP", "Drink"]
 - !private ["So20NSFetchRequestResultP", "NSSet"]
 - ["So20NSFetchRequestResultP", "STPCustomerContext"]
 - !private ["So20NSFetchRequestResultP", "Set"]
 - ["So20NSFetchRequestResultP", "StripeAPIClient"]
 - ["So20NSFetchRequestResultP", ""]
-- ["So20NSFetchRequestResultP", "barArray"]
-- !private ["So20NSFetchRequestResultP", "barId"]
-- !private ["So20NSFetchRequestResultP", "bars"]
+- !private ["So20NSFetchRequestResultP", "business"]
+- !private ["So20NSFetchRequestResultP", "businessAddressId"]
+- ["So20NSFetchRequestResultP", "businessArray"]
 - ["So20NSFetchRequestResultP", "calculateCost"]
 - ["So20NSFetchRequestResultP", "canPay"]
 - ["So20NSFetchRequestResultP", "cart"]
@@ -462,11 +456,11 @@ depends-member:
 - !private ["So20NSFetchRequestResultP", "subtotal"]
 - !private ["So20NSFetchRequestResultP", "tipAmount"]
 - !private ["So20NSFetchRequestResultP", "tipPercentage"]
-- !private ["So20NSFetchRequestResultP", "userBar"]
-- ["So20NSFetchRequestResultP", "userBarDrinks"]
+- !private ["So20NSFetchRequestResultP", "userBusiness"]
+- ["So20NSFetchRequestResultP", "userBusinessDrinks"]
 - !private ["So20NSFetchRequestResultP", "userId"]
-- ["So15NSManagedObjectC", "Bar"]
 - ["So15NSManagedObjectC", "Bool"]
+- ["So15NSManagedObjectC", "Business"]
 - ["So15NSManagedObjectC", "CheckoutCart"]
 - !private ["So15NSManagedObjectC", "CoreDataManager"]
 - !private ["So15NSManagedObjectC", "Double"]
@@ -476,9 +470,9 @@ depends-member:
 - !private ["So15NSManagedObjectC", "Set"]
 - ["So15NSManagedObjectC", "StripeAPIClient"]
 - ["So15NSManagedObjectC", ""]
-- ["So15NSManagedObjectC", "barArray"]
-- !private ["So15NSManagedObjectC", "barId"]
-- !private ["So15NSManagedObjectC", "bars"]
+- !private ["So15NSManagedObjectC", "business"]
+- !private ["So15NSManagedObjectC", "businessAddressId"]
+- ["So15NSManagedObjectC", "businessArray"]
 - ["So15NSManagedObjectC", "calculateCost"]
 - ["So15NSManagedObjectC", "canPay"]
 - ["So15NSManagedObjectC", "cart"]
@@ -494,12 +488,12 @@ depends-member:
 - !private ["So15NSManagedObjectC", "subtotal"]
 - !private ["So15NSManagedObjectC", "tipAmount"]
 - !private ["So15NSManagedObjectC", "tipPercentage"]
-- !private ["So15NSManagedObjectC", "userBar"]
-- ["So15NSManagedObjectC", "userBarDrinks"]
+- !private ["So15NSManagedObjectC", "userBusiness"]
+- ["So15NSManagedObjectC", "userBusinessDrinks"]
 - !private ["So15NSManagedObjectC", "userId"]
 - !private ["So16NSMutableCopyingP", "init"]
-- ["So8NSObjectC", "Bar"]
 - ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "Business"]
 - ["So8NSObjectC", "CheckoutCart"]
 - !private ["So8NSObjectC", "CoreDataManager"]
 - !private ["So8NSObjectC", "Double"]
@@ -509,9 +503,9 @@ depends-member:
 - !private ["So8NSObjectC", "Set"]
 - ["So8NSObjectC", "StripeAPIClient"]
 - ["So8NSObjectC", ""]
-- ["So8NSObjectC", "barArray"]
-- !private ["So8NSObjectC", "barId"]
-- !private ["So8NSObjectC", "bars"]
+- !private ["So8NSObjectC", "business"]
+- !private ["So8NSObjectC", "businessAddressId"]
+- ["So8NSObjectC", "businessArray"]
 - ["So8NSObjectC", "calculateCost"]
 - ["So8NSObjectC", "canPay"]
 - ["So8NSObjectC", "cart"]
@@ -533,24 +527,22 @@ depends-member:
 - !private ["So8NSObjectC", "subtotal"]
 - !private ["So8NSObjectC", "tipAmount"]
 - !private ["So8NSObjectC", "tipPercentage"]
-- !private ["So8NSObjectC", "userBar"]
-- ["So8NSObjectC", "userBarDrinks"]
+- !private ["So8NSObjectC", "userBusiness"]
+- ["So8NSObjectC", "userBusinessDrinks"]
 - !private ["So8NSObjectC", "userId"]
 - !private ["So8NSObjectC", "viewContext"]
-- ["So8NSObjectP", "Bar"]
-- ["So8NSObjectP", "Bool"]
-- ["So8NSObjectP", "CheckoutCart"]
+- ["So8NSObjectP", "Business"]
+- !private ["So8NSObjectP", "CheckoutCart"]
 - !private ["So8NSObjectP", "CoreDataManager"]
-- !private ["So8NSObjectP", "Double"]
-- ["So8NSObjectP", "Drink"]
+- !private ["So8NSObjectP", "Drink"]
 - !private ["So8NSObjectP", "NSSet"]
 - ["So8NSObjectP", "STPCustomerContext"]
 - !private ["So8NSObjectP", "Set"]
 - ["So8NSObjectP", "StripeAPIClient"]
 - ["So8NSObjectP", ""]
-- ["So8NSObjectP", "barArray"]
-- !private ["So8NSObjectP", "barId"]
-- !private ["So8NSObjectP", "bars"]
+- !private ["So8NSObjectP", "business"]
+- !private ["So8NSObjectP", "businessAddressId"]
+- ["So8NSObjectP", "businessArray"]
 - ["So8NSObjectP", "calculateCost"]
 - ["So8NSObjectP", "canPay"]
 - ["So8NSObjectP", "cart"]
@@ -572,8 +564,8 @@ depends-member:
 - !private ["So8NSObjectP", "subtotal"]
 - !private ["So8NSObjectP", "tipAmount"]
 - !private ["So8NSObjectP", "tipPercentage"]
-- !private ["So8NSObjectP", "userBar"]
-- ["So8NSObjectP", "userBarDrinks"]
+- !private ["So8NSObjectP", "userBusiness"]
+- ["So8NSObjectP", "userBusinessDrinks"]
 - !private ["So8NSObjectP", "userId"]
 - !private ["So8NSObjectP", "viewContext"]
 - !private ["So21NSPersistentContainerC", "viewContext"]
@@ -592,8 +584,8 @@ depends-member:
 - ["7Combine16ObservableObjectP", "STPCustomerContext"]
 - ["7Combine16ObservableObjectP", "StripeAPIClient"]
 - ["7Combine16ObservableObjectP", ""]
-- !private ["7Combine16ObservableObjectP", "barId"]
-- !private ["7Combine16ObservableObjectP", "bars"]
+- !private ["7Combine16ObservableObjectP", "business"]
+- !private ["7Combine16ObservableObjectP", "businessAddressId"]
 - !private ["7Combine16ObservableObjectP", "cart"]
 - !private ["7Combine16ObservableObjectP", "cost"]
 - !private ["7Combine16ObservableObjectP", "drinks"]
@@ -604,7 +596,7 @@ depends-member:
 - !private ["7Combine16ObservableObjectP", "subtotal"]
 - !private ["7Combine16ObservableObjectP", "tipAmount"]
 - !private ["7Combine16ObservableObjectP", "tipPercentage"]
-- !private ["7Combine16ObservableObjectP", "userBar"]
+- !private ["7Combine16ObservableObjectP", "userBusiness"]
 - !private ["7Combine16ObservableObjectP", "userId"]
 - !private ["Sk", ""]
 - !private ["Sk", "count"]
@@ -649,10 +641,8 @@ depends-member:
 - !private ["Sx", "rounded"]
 - ["6Drinkz15StripeAPIClientC", ""]
 - ["6Drinkz15StripeAPIClientC", "sharedAPIClient"]
-- !private ["s16TextOutputStreamP", ""]
 - !private ["s20TextOutputStreamableP", "Darwin"]
 - !private ["s20TextOutputStreamableP", "Double"]
-- !private ["s20TextOutputStreamableP", ""]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "pow"]
 - !private ["s20TextOutputStreamableP", "rounded"]
@@ -681,7 +671,6 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "isEmpty"]
 - !private ["s24_DestructorSafeContainerP", "reduce"]
 - !private ["s24_DestructorSafeContainerP", "subscript"]
-- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "Darwin"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "Double"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
@@ -693,7 +682,6 @@ depends-member:
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "pow"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "rounded"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s19_HasContiguousBytesP", "count"]
 - !private ["s19_HasContiguousBytesP", "init"]
 - !private ["s19_HasContiguousBytesP", "isEmpty"]
@@ -716,8 +704,8 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "STPCustomerContext"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "StripeAPIClient"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "barId"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "bars"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "business"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "businessAddressId"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cart"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cost"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "drinks"]
@@ -729,7 +717,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "subtotal"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tipAmount"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tipPercentage"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "userBar"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "userBusiness"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "userId"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewContext"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CheckoutCart"]
@@ -739,8 +727,8 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPCustomerContext"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "StripeAPIClient"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "barId"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bars"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "business"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "businessAddressId"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cart"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cost"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "drinks"]
@@ -752,16 +740,12 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "subtotal"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "tipAmount"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "tipPercentage"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "userBar"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "userBusiness"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "userId"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewContext"]
 - !private ["s21_ObjectiveCBridgeableP", "Darwin"]
 - !private ["s21_ObjectiveCBridgeableP", "Double"]
 - !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
-- !private ["s21_ObjectiveCBridgeableP", "_bridgeToObjectiveC"]
-- !private ["s21_ObjectiveCBridgeableP", "_conditionallyBridgeFromObjectiveC"]
-- !private ["s21_ObjectiveCBridgeableP", "_forceBridgeFromObjectiveC"]
-- !private ["s21_ObjectiveCBridgeableP", "_unconditionallyBridgeFromObjectiveC"]
 - !private ["s21_ObjectiveCBridgeableP", "count"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
@@ -774,9 +758,9 @@ depends-nominal:
 - !private "s18AdditiveArithmeticP"
 - !private "9Alamofire0A8ExtendedP"
 - !private "Sa"
-- !private "6Drinkz3BarC"
 - !private "SK"
 - !private "SB"
+- !private "6Drinkz8BusinessC"
 - !private "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
 - "6Drinkz12CheckoutCartC"
@@ -794,19 +778,15 @@ depends-nominal:
 - !private "SE"
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
-- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
-- !private "s32ExpressibleByStringInterpolationP"
-- !private "s26ExpressibleByStringLiteralP"
-- !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "SF"
 - "SH"
 - "s12IdentifiableP"
 - !private "s25LosslessStringConvertibleP"
 - !private "SM"
 - !private "10Foundation19MutableDataProtocolP"
-- "So8NSCodingP"
+- !private "So8NSCodingP"
 - !private "So9NSCopyingP"
 - !private "So17NSFastEnumerationP"
 - "So20NSFetchRequestResultP"
@@ -831,18 +811,15 @@ depends-nominal:
 - !private "s13SignedNumericP"
 - !private "Sx"
 - "6Drinkz15StripeAPIClientC"
-- !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - !private "s14_ArrayProtocolP"
 - !private "s15_CVarArgAlignedP"
 - !private "s22_CVarArgPassedAsDoubleP"
 - !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
-- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
-- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
@@ -858,8 +835,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -879,47 +856,47 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/MapKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Pods/TweetNacl/Sources/module.map"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/TweetNacl/Sources/module.map"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
@@ -950,4 +927,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "a62e074a0bf929fdbb379d6ba90b17a1"
+interface-hash: "5d1742da1f7cbf1afb6d12fa49774ce0"

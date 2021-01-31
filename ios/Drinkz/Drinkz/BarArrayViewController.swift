@@ -1,5 +1,5 @@
 //
-//  BarArrayViewController.swift
+//  BusinessArrayViewController.swift
 //  Drinkz
 //
 //  Created by Peter Vail Driscoll II on 12/17/20.
@@ -9,16 +9,16 @@
 import UIKit
 import Alamofire
 
-protocol BarPickerProtocol {
-    func selectedBarHandler (_ selectedBar: Bar)
+protocol BusinessPickerProtocol {
+    func selectedBusinessHandler (_ selectedBusiness: Business)
 }
 
-class BarArrayViewController: UIViewController, UIGestureRecognizerDelegate{
+class BusinessArrayViewController: UIViewController, UIGestureRecognizerDelegate{
     let tableView = UITableView()
-    var filteredBars = [Bar]()
+    var filteredBusinesses = [Business]()
     let searchController = UISearchController(searchResultsController: nil)
     
-    var barPickerDelegate: BarPickerProtocol? = nil
+    var businessPickerDelegate: BusinessPickerProtocol? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class BarArrayViewController: UIViewController, UIGestureRecognizerDelegate{
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
         // 3
-        searchController.searchBar.placeholder = "Search our partner bars"
+        searchController.searchBar.placeholder = "Search our partner venues"
         
         // 4
         navigationItem.searchController = searchController
@@ -53,7 +53,7 @@ class BarArrayViewController: UIViewController, UIGestureRecognizerDelegate{
         tableView.dataSource = self
         tableView.backgroundColor = UIColor.clear
         tableView.tableFooterView = UIView()
-        tableView.register(BarArrayTableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(BusinessArrayTableViewCell.self, forCellReuseIdentifier: "cell")
     }
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
@@ -67,8 +67,8 @@ class BarArrayViewController: UIViewController, UIGestureRecognizerDelegate{
     }
     
     func filterContentForSearchText(_ searchText: String) {
-        filteredBars = CheckoutCart.shared.barArray.filter { (bar: Bar) -> Bool in
-            for (letter1, letter2) in  zip(searchText.lowercased(), bar.name!.lowercased()){
+        filteredBusinesses = CheckoutCart.shared.businessArray.filter { (business: Business) -> Bool in
+            for (letter1, letter2) in  zip(searchText.lowercased(), business.name!.lowercased()){
                 if letter1 != letter2 {
                     return false
                 }
@@ -87,7 +87,7 @@ class BarArrayViewController: UIViewController, UIGestureRecognizerDelegate{
         return searchController.isActive && (!isSearchBarEmpty || searchBarScopeIsFiltering)
     }
 }
-extension BarArrayViewController: UITableViewDataSource, UITableViewDelegate {
+extension BusinessArrayViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
         // custom height- TODO: set this based on screen size
         return 80
@@ -95,21 +95,21 @@ extension BarArrayViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering {
-            return filteredBars.count
+            return filteredBusinesses.count
         }
-        return CheckoutCart.shared.barArray.count
+        return CheckoutCart.shared.businessArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! BarArrayTableViewCell
-        let bar: Bar
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! BusinessArrayTableViewCell
+        let business: Business
         if isFiltering {
-            bar = filteredBars[indexPath.row]
+            business = filteredBusinesses[indexPath.row]
         } else {
-            bar = CheckoutCart.shared.barArray[indexPath.row]
+            business = CheckoutCart.shared.businessArray[indexPath.row]
         }
-        cell.name.text = "\(bar.name!)"
-        cell.address.text = "\(bar.address!)"
+        cell.name.text = "\(business.name!)"
+        cell.address.text = "\(business.address!)"
         return cell
     }
     
@@ -118,13 +118,13 @@ extension BarArrayViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedBar: Bar
+        let selectedBusiness: Business
         if isFiltering {
-            selectedBar = filteredBars[indexPath.row]
+            selectedBusiness = filteredBusinesses[indexPath.row]
         } else {
-            selectedBar = CheckoutCart.shared.barArray[indexPath.row]
+            selectedBusiness = CheckoutCart.shared.businessArray[indexPath.row]
         }
-        barPickerDelegate?.selectedBarHandler(selectedBar)
+        businessPickerDelegate?.selectedBusinessHandler(selectedBusiness)
         let transition:CATransition = CATransition()
         transition.duration = 0.65
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.default)
@@ -134,7 +134,7 @@ extension BarArrayViewController: UITableViewDataSource, UITableViewDelegate {
         navigationController?.popViewController(animated: true)
     }
 }
-extension BarArrayViewController: UISearchResultsUpdating {
+extension BusinessArrayViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let searchBar = searchController.searchBar
         filterContentForSearchText(searchBar.text!)

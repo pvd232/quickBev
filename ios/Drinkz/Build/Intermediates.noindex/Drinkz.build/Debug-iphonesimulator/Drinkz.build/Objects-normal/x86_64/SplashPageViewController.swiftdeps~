@@ -1,12 +1,9 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
-- "UsesAutoLayout"
 - "SplashPageViewController"
 provides-nominal:
-- "6Drinkz14UsesAutoLayoutV"
 - "6Drinkz24SplashPageViewControllerC"
 provides-member:
-- ["6Drinkz14UsesAutoLayoutV", ""]
 - ["6Drinkz24SplashPageViewControllerC", ""]
 - ["So18NSLayoutConstraintC", ""]
 - ["So18NSLayoutConstraintC", "usingPriority"]
@@ -50,7 +47,6 @@ depends-top-level:
 - !private "SignInSplashPageViewController"
 - "SplashPageViewController"
 - "StringLiteralType"
-- "T"
 - !private "UIColor"
 - "UIFont"
 - "UIImage"
@@ -59,7 +55,7 @@ depends-top-level:
 - "UILayoutPriority"
 - "UIScreen"
 - "UIStackView"
-- "UIView"
+- !private "UIStoryboard"
 - "UIViewController"
 - "UsesAutoLayout"
 - !private "continueAsGuestButton"
@@ -76,8 +72,6 @@ depends-top-level:
 - "screenSize"
 - !private "signInButton"
 - !private "signInButtonTouchup"
-- !private "storyboard"
-- !private "wrappedValue"
 depends-member:
 - ["s18AdditiveArithmeticP", ""]
 - !private ["So22UILayoutConstraintAxisV", "horizontal"]
@@ -107,7 +101,6 @@ depends-member:
 - !private ["So15CALayerDelegateP", "titleLabel"]
 - !private ["So15CALayerDelegateP", "topAnchor"]
 - !private ["So15CALayerDelegateP", "trailingAnchor"]
-- !private ["So15CALayerDelegateP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So15CALayerDelegateP", "widthAnchor"]
 - ["So6CGRectV", "height"]
 - !private ["s7CVarArgP", "HomePageViewController"]
@@ -122,6 +115,7 @@ depends-member:
 - !private ["s7CVarArgP", "UILayoutPriority"]
 - ["s7CVarArgP", "UIScreen"]
 - ["s7CVarArgP", "UIStackView"]
+- !private ["s7CVarArgP", "UIStoryboard"]
 - ["s7CVarArgP", "UsesAutoLayout"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "activate"]
@@ -165,14 +159,12 @@ depends-member:
 - !private ["s7CVarArgP", "signInButton"]
 - !private ["s7CVarArgP", "signInButtonTouchup"]
 - !private ["s7CVarArgP", "spacing"]
-- !private ["s7CVarArgP", "storyboard"]
 - !private ["s7CVarArgP", "systemBackground"]
 - !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "textAlignment"]
 - !private ["s7CVarArgP", "titleLabel"]
 - !private ["s7CVarArgP", "topAnchor"]
 - !private ["s7CVarArgP", "trailingAnchor"]
-- !private ["s7CVarArgP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["s7CVarArgP", "usingPriority"]
 - !private ["s7CVarArgP", "view"]
 - !private ["s7CVarArgP", "viewDidLoad"]
@@ -197,6 +189,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "UILayoutPriority"]
 - ["s28CustomDebugStringConvertibleP", "UIScreen"]
 - ["s28CustomDebugStringConvertibleP", "UIStackView"]
+- !private ["s28CustomDebugStringConvertibleP", "UIStoryboard"]
 - ["s28CustomDebugStringConvertibleP", "UsesAutoLayout"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "activate"]
@@ -241,14 +234,12 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "signInButton"]
 - !private ["s28CustomDebugStringConvertibleP", "signInButtonTouchup"]
 - !private ["s28CustomDebugStringConvertibleP", "spacing"]
-- !private ["s28CustomDebugStringConvertibleP", "storyboard"]
 - !private ["s28CustomDebugStringConvertibleP", "systemBackground"]
 - !private ["s28CustomDebugStringConvertibleP", "text"]
 - !private ["s28CustomDebugStringConvertibleP", "textAlignment"]
 - !private ["s28CustomDebugStringConvertibleP", "titleLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "topAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "trailingAnchor"]
-- !private ["s28CustomDebugStringConvertibleP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["s28CustomDebugStringConvertibleP", "usingPriority"]
 - !private ["s28CustomDebugStringConvertibleP", "view"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
@@ -270,6 +261,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "UILayoutPriority"]
 - ["s23CustomStringConvertibleP", "UIScreen"]
 - ["s23CustomStringConvertibleP", "UIStackView"]
+- !private ["s23CustomStringConvertibleP", "UIStoryboard"]
 - ["s23CustomStringConvertibleP", "UsesAutoLayout"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "activate"]
@@ -313,14 +305,12 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "signInButton"]
 - !private ["s23CustomStringConvertibleP", "signInButtonTouchup"]
 - !private ["s23CustomStringConvertibleP", "spacing"]
-- !private ["s23CustomStringConvertibleP", "storyboard"]
 - !private ["s23CustomStringConvertibleP", "systemBackground"]
 - !private ["s23CustomStringConvertibleP", "text"]
 - !private ["s23CustomStringConvertibleP", "textAlignment"]
 - !private ["s23CustomStringConvertibleP", "titleLabel"]
 - !private ["s23CustomStringConvertibleP", "topAnchor"]
 - !private ["s23CustomStringConvertibleP", "trailingAnchor"]
-- !private ["s23CustomStringConvertibleP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["s23CustomStringConvertibleP", "usingPriority"]
 - !private ["s23CustomStringConvertibleP", "view"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
@@ -348,6 +338,7 @@ depends-member:
 - !private ["SQ", "UILayoutPriority"]
 - ["SQ", "UIScreen"]
 - ["SQ", "UIStackView"]
+- !private ["SQ", "UIStoryboard"]
 - ["SQ", "UsesAutoLayout"]
 - ["SQ", ""]
 - !private ["SQ", "activate"]
@@ -394,7 +385,6 @@ depends-member:
 - !private ["SQ", "signInButton"]
 - !private ["SQ", "signInButtonTouchup"]
 - !private ["SQ", "spacing"]
-- !private ["SQ", "storyboard"]
 - !private ["SQ", "systemBackground"]
 - !private ["SQ", "text"]
 - !private ["SQ", "textAlignment"]
@@ -402,7 +392,6 @@ depends-member:
 - !private ["SQ", "topAnchor"]
 - !private ["SQ", "touchUpInside"]
 - !private ["SQ", "trailingAnchor"]
-- !private ["SQ", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["SQ", "usingPriority"]
 - !private ["SQ", "vertical"]
 - !private ["SQ", "view"]
@@ -444,6 +433,7 @@ depends-member:
 - !private ["SH", "UILayoutPriority"]
 - ["SH", "UIScreen"]
 - ["SH", "UIStackView"]
+- !private ["SH", "UIStoryboard"]
 - ["SH", "UsesAutoLayout"]
 - ["SH", ""]
 - !private ["SH", "activate"]
@@ -489,14 +479,12 @@ depends-member:
 - !private ["SH", "signInButton"]
 - !private ["SH", "signInButtonTouchup"]
 - !private ["SH", "spacing"]
-- !private ["SH", "storyboard"]
 - !private ["SH", "systemBackground"]
 - !private ["SH", "text"]
 - !private ["SH", "textAlignment"]
 - !private ["SH", "titleLabel"]
 - !private ["SH", "topAnchor"]
 - !private ["SH", "trailingAnchor"]
-- !private ["SH", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["SH", "usingPriority"]
 - !private ["SH", "vertical"]
 - !private ["SH", "view"]
@@ -519,6 +507,7 @@ depends-member:
 - !private ["So8NSCodingP", "UILayoutPriority"]
 - ["So8NSCodingP", "UIScreen"]
 - ["So8NSCodingP", "UIStackView"]
+- !private ["So8NSCodingP", "UIStoryboard"]
 - ["So8NSCodingP", "UsesAutoLayout"]
 - ["So8NSCodingP", ""]
 - ["So8NSCodingP", "_continueAsGuestButton"]
@@ -582,14 +571,12 @@ depends-member:
 - ["So8NSCodingP", "signInButton"]
 - ["So8NSCodingP", "signInButtonTouchup"]
 - !private ["So8NSCodingP", "spacing"]
-- !private ["So8NSCodingP", "storyboard"]
 - !private ["So8NSCodingP", "systemBackground"]
 - !private ["So8NSCodingP", "text"]
 - !private ["So8NSCodingP", "textAlignment"]
 - !private ["So8NSCodingP", "titleLabel"]
 - !private ["So8NSCodingP", "topAnchor"]
 - !private ["So8NSCodingP", "trailingAnchor"]
-- !private ["So8NSCodingP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So8NSCodingP", "view"]
 - ["So8NSCodingP", "viewDidLoad"]
 - !private ["So8NSCodingP", "widthAnchor"]
@@ -628,6 +615,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "UILayoutPriority"]
 - ["So26NSExtensionRequestHandlingP", "UIScreen"]
 - ["So26NSExtensionRequestHandlingP", "UIStackView"]
+- !private ["So26NSExtensionRequestHandlingP", "UIStoryboard"]
 - ["So26NSExtensionRequestHandlingP", "UsesAutoLayout"]
 - ["So26NSExtensionRequestHandlingP", ""]
 - ["So26NSExtensionRequestHandlingP", "_continueAsGuestButton"]
@@ -654,7 +642,6 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "screenSize"]
 - ["So26NSExtensionRequestHandlingP", "signInButton"]
 - ["So26NSExtensionRequestHandlingP", "signInButtonTouchup"]
-- !private ["So26NSExtensionRequestHandlingP", "storyboard"]
 - !private ["So26NSExtensionRequestHandlingP", "view"]
 - ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - ["So21NSItemProviderReadingP", "init"]
@@ -705,6 +692,7 @@ depends-member:
 - ["So8NSObjectC", "UILayoutPriority"]
 - ["So8NSObjectC", "UIScreen"]
 - ["So8NSObjectC", "UIStackView"]
+- !private ["So8NSObjectC", "UIStoryboard"]
 - ["So8NSObjectC", "UsesAutoLayout"]
 - ["So8NSObjectC", ""]
 - ["So8NSObjectC", "_continueAsGuestButton"]
@@ -784,7 +772,7 @@ depends-member:
 - ["So8NSObjectC", "signInButton"]
 - ["So8NSObjectC", "signInButtonTouchup"]
 - !private ["So8NSObjectC", "spacing"]
-- !private ["So8NSObjectC", "storyboard"]
+- !private ["So8NSObjectC", "storyboardWithName"]
 - !private ["So8NSObjectC", "systemBackground"]
 - ["So8NSObjectC", "systemImageNamed"]
 - !private ["So8NSObjectC", "text"]
@@ -792,7 +780,6 @@ depends-member:
 - !private ["So8NSObjectC", "titleLabel"]
 - !private ["So8NSObjectC", "topAnchor"]
 - !private ["So8NSObjectC", "trailingAnchor"]
-- !private ["So8NSObjectC", "translatesAutoresizingMaskIntoConstraints"]
 - ["So8NSObjectC", "usingPriority"]
 - !private ["So8NSObjectC", "view"]
 - ["So8NSObjectC", "viewDidLoad"]
@@ -811,6 +798,7 @@ depends-member:
 - ["So8NSObjectP", "UILayoutPriority"]
 - ["So8NSObjectP", "UIScreen"]
 - ["So8NSObjectP", "UIStackView"]
+- !private ["So8NSObjectP", "UIStoryboard"]
 - ["So8NSObjectP", "UsesAutoLayout"]
 - ["So8NSObjectP", ""]
 - ["So8NSObjectP", "_continueAsGuestButton"]
@@ -890,7 +878,7 @@ depends-member:
 - ["So8NSObjectP", "signInButton"]
 - ["So8NSObjectP", "signInButtonTouchup"]
 - !private ["So8NSObjectP", "spacing"]
-- !private ["So8NSObjectP", "storyboard"]
+- !private ["So8NSObjectP", "storyboardWithName"]
 - !private ["So8NSObjectP", "systemBackground"]
 - ["So8NSObjectP", "systemImageNamed"]
 - !private ["So8NSObjectP", "text"]
@@ -898,7 +886,6 @@ depends-member:
 - !private ["So8NSObjectP", "titleLabel"]
 - !private ["So8NSObjectP", "topAnchor"]
 - !private ["So8NSObjectP", "trailingAnchor"]
-- !private ["So8NSObjectP", "translatesAutoresizingMaskIntoConstraints"]
 - ["So8NSObjectP", "usingPriority"]
 - !private ["So8NSObjectP", "view"]
 - ["So8NSObjectP", "viewDidLoad"]
@@ -906,7 +893,7 @@ depends-member:
 - ["So14NSSecureCodingP", "init"]
 - !private ["So14NSSecureCodingP", "systemBackground"]
 - !private ["So15NSTextAlignmentV", "center"]
-- !private ["6Drinkz20NewBarPickedProtocolP", "init"]
+- !private ["6Drinkz25NewBusinessPickedProtocolP", "init"]
 - ["Sj", ""]
 - !private ["s9OptionSetP", "touchUpInside"]
 - !private ["Sq", "addSubview"]
@@ -949,6 +936,7 @@ depends-member:
 - !private ["6Drinkz24SplashPageViewControllerC", "UILayoutPriority"]
 - ["6Drinkz24SplashPageViewControllerC", "UIScreen"]
 - ["6Drinkz24SplashPageViewControllerC", "UIStackView"]
+- !private ["6Drinkz24SplashPageViewControllerC", "UIStoryboard"]
 - ["6Drinkz24SplashPageViewControllerC", "UsesAutoLayout"]
 - ["6Drinkz24SplashPageViewControllerC", ""]
 - !private ["6Drinkz24SplashPageViewControllerC", "_continueAsGuestButton"]
@@ -975,7 +963,6 @@ depends-member:
 - ["6Drinkz24SplashPageViewControllerC", "screenSize"]
 - ["6Drinkz24SplashPageViewControllerC", "signInButton"]
 - ["6Drinkz24SplashPageViewControllerC", "signInButtonTouchup"]
-- !private ["6Drinkz24SplashPageViewControllerC", "storyboard"]
 - !private ["6Drinkz24SplashPageViewControllerC", "view"]
 - ["6Drinkz24SplashPageViewControllerC", "viewDidLoad"]
 - ["Sx", ""]
@@ -1018,7 +1005,6 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "titleLabel"]
 - !private ["So29UIAccessibilityIdentificationP", "topAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "trailingAnchor"]
-- !private ["So29UIAccessibilityIdentificationP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So29UIAccessibilityIdentificationP", "widthAnchor"]
 - !private ["So40UIAdaptivePresentationControllerDelegateP", ""]
 - ["So40UIAdaptivePresentationControllerDelegateP", "init"]
@@ -1046,7 +1032,6 @@ depends-member:
 - !private ["So12UIAppearanceP", "titleLabel"]
 - !private ["So12UIAppearanceP", "topAnchor"]
 - !private ["So12UIAppearanceP", "trailingAnchor"]
-- !private ["So12UIAppearanceP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So12UIAppearanceP", "widthAnchor"]
 - ["So21UIAppearanceContainerP", "CGRect"]
 - !private ["So21UIAppearanceContainerP", "HomePageViewController"]
@@ -1062,6 +1047,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "UILayoutPriority"]
 - ["So21UIAppearanceContainerP", "UIScreen"]
 - ["So21UIAppearanceContainerP", "UIStackView"]
+- !private ["So21UIAppearanceContainerP", "UIStoryboard"]
 - ["So21UIAppearanceContainerP", "UsesAutoLayout"]
 - ["So21UIAppearanceContainerP", ""]
 - ["So21UIAppearanceContainerP", "_continueAsGuestButton"]
@@ -1106,13 +1092,11 @@ depends-member:
 - ["So21UIAppearanceContainerP", "signInButton"]
 - ["So21UIAppearanceContainerP", "signInButtonTouchup"]
 - !private ["So21UIAppearanceContainerP", "spacing"]
-- !private ["So21UIAppearanceContainerP", "storyboard"]
 - !private ["So21UIAppearanceContainerP", "text"]
 - !private ["So21UIAppearanceContainerP", "textAlignment"]
 - !private ["So21UIAppearanceContainerP", "titleLabel"]
 - !private ["So21UIAppearanceContainerP", "topAnchor"]
 - !private ["So21UIAppearanceContainerP", "trailingAnchor"]
-- !private ["So21UIAppearanceContainerP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So21UIAppearanceContainerP", "view"]
 - ["So21UIAppearanceContainerP", "viewDidLoad"]
 - !private ["So21UIAppearanceContainerP", "widthAnchor"]
@@ -1140,6 +1124,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "UILayoutPriority"]
 - ["So18UIContentContainerP", "UIScreen"]
 - ["So18UIContentContainerP", "UIStackView"]
+- !private ["So18UIContentContainerP", "UIStoryboard"]
 - ["So18UIContentContainerP", "UsesAutoLayout"]
 - ["So18UIContentContainerP", ""]
 - ["So18UIContentContainerP", "_continueAsGuestButton"]
@@ -1166,7 +1151,6 @@ depends-member:
 - ["So18UIContentContainerP", "screenSize"]
 - ["So18UIContentContainerP", "signInButton"]
 - ["So18UIContentContainerP", "signInButtonTouchup"]
-- !private ["So18UIContentContainerP", "storyboard"]
 - !private ["So18UIContentContainerP", "view"]
 - ["So18UIContentContainerP", "viewDidLoad"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "centerXAnchor"]
@@ -1219,7 +1203,6 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "titleLabel"]
 - !private ["So17UICoordinateSpaceP", "topAnchor"]
 - !private ["So17UICoordinateSpaceP", "trailingAnchor"]
-- !private ["So17UICoordinateSpaceP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So17UICoordinateSpaceP", "widthAnchor"]
 - !private ["So13UIDynamicItemP", "addArrangedSubview"]
 - !private ["So13UIDynamicItemP", "addSubview"]
@@ -1245,7 +1228,6 @@ depends-member:
 - !private ["So13UIDynamicItemP", "titleLabel"]
 - !private ["So13UIDynamicItemP", "topAnchor"]
 - !private ["So13UIDynamicItemP", "trailingAnchor"]
-- !private ["So13UIDynamicItemP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So13UIDynamicItemP", "widthAnchor"]
 - ["So18UIFocusEnvironmentP", "CGRect"]
 - !private ["So18UIFocusEnvironmentP", "HomePageViewController"]
@@ -1261,6 +1243,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "UILayoutPriority"]
 - ["So18UIFocusEnvironmentP", "UIScreen"]
 - ["So18UIFocusEnvironmentP", "UIStackView"]
+- !private ["So18UIFocusEnvironmentP", "UIStoryboard"]
 - ["So18UIFocusEnvironmentP", "UsesAutoLayout"]
 - ["So18UIFocusEnvironmentP", ""]
 - ["So18UIFocusEnvironmentP", "_continueAsGuestButton"]
@@ -1305,13 +1288,11 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "signInButton"]
 - ["So18UIFocusEnvironmentP", "signInButtonTouchup"]
 - !private ["So18UIFocusEnvironmentP", "spacing"]
-- !private ["So18UIFocusEnvironmentP", "storyboard"]
 - !private ["So18UIFocusEnvironmentP", "text"]
 - !private ["So18UIFocusEnvironmentP", "textAlignment"]
 - !private ["So18UIFocusEnvironmentP", "titleLabel"]
 - !private ["So18UIFocusEnvironmentP", "topAnchor"]
 - !private ["So18UIFocusEnvironmentP", "trailingAnchor"]
-- !private ["So18UIFocusEnvironmentP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So18UIFocusEnvironmentP", "view"]
 - ["So18UIFocusEnvironmentP", "viewDidLoad"]
 - !private ["So18UIFocusEnvironmentP", "widthAnchor"]
@@ -1339,7 +1320,6 @@ depends-member:
 - !private ["So11UIFocusItemP", "titleLabel"]
 - !private ["So11UIFocusItemP", "topAnchor"]
 - !private ["So11UIFocusItemP", "trailingAnchor"]
-- !private ["So11UIFocusItemP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So11UIFocusItemP", "widthAnchor"]
 - !private ["So20UIFocusItemContainerP", "addArrangedSubview"]
 - !private ["So20UIFocusItemContainerP", "addSubview"]
@@ -1365,7 +1345,6 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "titleLabel"]
 - !private ["So20UIFocusItemContainerP", "topAnchor"]
 - !private ["So20UIFocusItemContainerP", "trailingAnchor"]
-- !private ["So20UIFocusItemContainerP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So20UIFocusItemContainerP", "widthAnchor"]
 - ["So6UIFontC", "init"]
 - ["So7UIImageC", "init"]
@@ -1413,7 +1392,6 @@ depends-member:
 - !private ["So24UILargeContentViewerItemP", "titleLabel"]
 - !private ["So24UILargeContentViewerItemP", "topAnchor"]
 - !private ["So24UILargeContentViewerItemP", "trailingAnchor"]
-- !private ["So24UILargeContentViewerItemP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So24UILargeContentViewerItemP", "widthAnchor"]
 - !private ["So13UILayoutGuideC", "bottomAnchor"]
 - !private ["So13UILayoutGuideC", "centerXAnchor"]
@@ -1439,6 +1417,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "UILayoutPriority"]
 - ["So30UIPasteConfigurationSupportingP", "UIScreen"]
 - ["So30UIPasteConfigurationSupportingP", "UIStackView"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIStoryboard"]
 - ["So30UIPasteConfigurationSupportingP", "UsesAutoLayout"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - ["So30UIPasteConfigurationSupportingP", "_continueAsGuestButton"]
@@ -1483,13 +1462,11 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "signInButton"]
 - ["So30UIPasteConfigurationSupportingP", "signInButtonTouchup"]
 - !private ["So30UIPasteConfigurationSupportingP", "spacing"]
-- !private ["So30UIPasteConfigurationSupportingP", "storyboard"]
 - !private ["So30UIPasteConfigurationSupportingP", "text"]
 - !private ["So30UIPasteConfigurationSupportingP", "textAlignment"]
 - !private ["So30UIPasteConfigurationSupportingP", "titleLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "topAnchor"]
 - !private ["So30UIPasteConfigurationSupportingP", "trailingAnchor"]
-- !private ["So30UIPasteConfigurationSupportingP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So30UIPasteConfigurationSupportingP", "view"]
 - ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - !private ["So30UIPasteConfigurationSupportingP", "widthAnchor"]
@@ -1509,6 +1486,7 @@ depends-member:
 - !private ["So11UIResponderC", "UILayoutPriority"]
 - ["So11UIResponderC", "UIScreen"]
 - ["So11UIResponderC", "UIStackView"]
+- !private ["So11UIResponderC", "UIStoryboard"]
 - ["So11UIResponderC", "UsesAutoLayout"]
 - ["So11UIResponderC", ""]
 - ["So11UIResponderC", "_continueAsGuestButton"]
@@ -1553,13 +1531,11 @@ depends-member:
 - ["So11UIResponderC", "signInButton"]
 - ["So11UIResponderC", "signInButtonTouchup"]
 - !private ["So11UIResponderC", "spacing"]
-- !private ["So11UIResponderC", "storyboard"]
 - !private ["So11UIResponderC", "text"]
 - !private ["So11UIResponderC", "textAlignment"]
 - !private ["So11UIResponderC", "titleLabel"]
 - !private ["So11UIResponderC", "topAnchor"]
 - !private ["So11UIResponderC", "trailingAnchor"]
-- !private ["So11UIResponderC", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So11UIResponderC", "view"]
 - ["So11UIResponderC", "viewDidLoad"]
 - !private ["So11UIResponderC", "widthAnchor"]
@@ -1577,6 +1553,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "UILayoutPriority"]
 - ["So30UIResponderStandardEditActionsP", "UIScreen"]
 - ["So30UIResponderStandardEditActionsP", "UIStackView"]
+- !private ["So30UIResponderStandardEditActionsP", "UIStoryboard"]
 - ["So30UIResponderStandardEditActionsP", "UsesAutoLayout"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - ["So30UIResponderStandardEditActionsP", "_continueAsGuestButton"]
@@ -1621,13 +1598,11 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "signInButton"]
 - ["So30UIResponderStandardEditActionsP", "signInButtonTouchup"]
 - !private ["So30UIResponderStandardEditActionsP", "spacing"]
-- !private ["So30UIResponderStandardEditActionsP", "storyboard"]
 - !private ["So30UIResponderStandardEditActionsP", "text"]
 - !private ["So30UIResponderStandardEditActionsP", "textAlignment"]
 - !private ["So30UIResponderStandardEditActionsP", "titleLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "topAnchor"]
 - !private ["So30UIResponderStandardEditActionsP", "trailingAnchor"]
-- !private ["So30UIResponderStandardEditActionsP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So30UIResponderStandardEditActionsP", "view"]
 - ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
 - !private ["So30UIResponderStandardEditActionsP", "widthAnchor"]
@@ -1662,6 +1637,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "UILayoutPriority"]
 - ["So16UIStateRestoringP", "UIScreen"]
 - ["So16UIStateRestoringP", "UIStackView"]
+- !private ["So16UIStateRestoringP", "UIStoryboard"]
 - ["So16UIStateRestoringP", "UsesAutoLayout"]
 - ["So16UIStateRestoringP", ""]
 - ["So16UIStateRestoringP", "_continueAsGuestButton"]
@@ -1688,9 +1664,9 @@ depends-member:
 - ["So16UIStateRestoringP", "screenSize"]
 - ["So16UIStateRestoringP", "signInButton"]
 - ["So16UIStateRestoringP", "signInButtonTouchup"]
-- !private ["So16UIStateRestoringP", "storyboard"]
 - !private ["So16UIStateRestoringP", "view"]
 - ["So16UIStateRestoringP", "viewDidLoad"]
+- !private ["So12UIStoryboardC", "init"]
 - !private ["So12UIStoryboardC", "instantiateViewController"]
 - ["So18UITraitEnvironmentP", "CGRect"]
 - !private ["So18UITraitEnvironmentP", "HomePageViewController"]
@@ -1706,6 +1682,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "UILayoutPriority"]
 - ["So18UITraitEnvironmentP", "UIScreen"]
 - ["So18UITraitEnvironmentP", "UIStackView"]
+- !private ["So18UITraitEnvironmentP", "UIStoryboard"]
 - ["So18UITraitEnvironmentP", "UsesAutoLayout"]
 - ["So18UITraitEnvironmentP", ""]
 - ["So18UITraitEnvironmentP", "_continueAsGuestButton"]
@@ -1752,13 +1729,11 @@ depends-member:
 - ["So18UITraitEnvironmentP", "signInButton"]
 - ["So18UITraitEnvironmentP", "signInButtonTouchup"]
 - !private ["So18UITraitEnvironmentP", "spacing"]
-- !private ["So18UITraitEnvironmentP", "storyboard"]
 - !private ["So18UITraitEnvironmentP", "text"]
 - !private ["So18UITraitEnvironmentP", "textAlignment"]
 - !private ["So18UITraitEnvironmentP", "titleLabel"]
 - !private ["So18UITraitEnvironmentP", "topAnchor"]
 - !private ["So18UITraitEnvironmentP", "trailingAnchor"]
-- !private ["So18UITraitEnvironmentP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So18UITraitEnvironmentP", "view"]
 - ["So18UITraitEnvironmentP", "viewDidLoad"]
 - !private ["So18UITraitEnvironmentP", "widthAnchor"]
@@ -1776,6 +1751,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "UILayoutPriority"]
 - ["So23UIUserActivityRestoringP", "UIScreen"]
 - ["So23UIUserActivityRestoringP", "UIStackView"]
+- !private ["So23UIUserActivityRestoringP", "UIStoryboard"]
 - ["So23UIUserActivityRestoringP", "UsesAutoLayout"]
 - ["So23UIUserActivityRestoringP", ""]
 - ["So23UIUserActivityRestoringP", "_continueAsGuestButton"]
@@ -1820,13 +1796,11 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "signInButton"]
 - ["So23UIUserActivityRestoringP", "signInButtonTouchup"]
 - !private ["So23UIUserActivityRestoringP", "spacing"]
-- !private ["So23UIUserActivityRestoringP", "storyboard"]
 - !private ["So23UIUserActivityRestoringP", "text"]
 - !private ["So23UIUserActivityRestoringP", "textAlignment"]
 - !private ["So23UIUserActivityRestoringP", "titleLabel"]
 - !private ["So23UIUserActivityRestoringP", "topAnchor"]
 - !private ["So23UIUserActivityRestoringP", "trailingAnchor"]
-- !private ["So23UIUserActivityRestoringP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So23UIUserActivityRestoringP", "view"]
 - ["So23UIUserActivityRestoringP", "viewDidLoad"]
 - !private ["So23UIUserActivityRestoringP", "widthAnchor"]
@@ -1855,7 +1829,6 @@ depends-member:
 - !private ["So6UIViewC", "titleLabel"]
 - !private ["So6UIViewC", "topAnchor"]
 - !private ["So6UIViewC", "trailingAnchor"]
-- !private ["So6UIViewC", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So6UIViewC", "widthAnchor"]
 - ["So16UIViewControllerC", "CGRect"]
 - !private ["So16UIViewControllerC", "HomePageViewController"]
@@ -1872,6 +1845,7 @@ depends-member:
 - !private ["So16UIViewControllerC", "UILayoutPriority"]
 - ["So16UIViewControllerC", "UIScreen"]
 - ["So16UIViewControllerC", "UIStackView"]
+- !private ["So16UIViewControllerC", "UIStoryboard"]
 - ["So16UIViewControllerC", "UsesAutoLayout"]
 - ["So16UIViewControllerC", ""]
 - ["So16UIViewControllerC", "_continueAsGuestButton"]
@@ -1898,14 +1872,11 @@ depends-member:
 - ["So16UIViewControllerC", "screenSize"]
 - ["So16UIViewControllerC", "signInButton"]
 - ["So16UIViewControllerC", "signInButtonTouchup"]
-- !private ["So16UIViewControllerC", "storyboard"]
 - !private ["So16UIViewControllerC", "view"]
 - ["So16UIViewControllerC", "viewDidLoad"]
 - ["6Drinkz14UsesAutoLayoutV", "init"]
-- ["6Drinkz14UsesAutoLayoutV", "projectedValue"]
 - ["6Drinkz14UsesAutoLayoutV", "subscript"]
 - ["6Drinkz14UsesAutoLayoutV", "wrappedValue"]
-- ["6Drinkz14UsesAutoLayoutV", "wrapperValue"]
 - ["s30_CustomPlaygroundQuickLookableP", "height"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
@@ -1931,6 +1902,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UILayoutPriority"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UIScreen"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UIStackView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIStoryboard"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UsesAutoLayout"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "activate"]
@@ -1974,14 +1946,12 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "signInButton"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "signInButtonTouchup"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "spacing"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "storyboard"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "systemBackground"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "textAlignment"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "titleLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "topAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "trailingAnchor"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "usingPriority"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "view"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
@@ -1998,6 +1968,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UILayoutPriority"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIScreen"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIStackView"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIStoryboard"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UsesAutoLayout"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "activate"]
@@ -2041,14 +2012,12 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "signInButton"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "signInButtonTouchup"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "spacing"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "storyboard"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "systemBackground"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "text"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "textAlignment"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "titleLabel"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "topAnchor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "trailingAnchor"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "usingPriority"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "view"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewDidLoad"]
@@ -2088,7 +2057,6 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "titleLabel"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "topAnchor"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "trailingAnchor"]
-- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "widthAnchor"]
 depends-nominal:
 - "s18AdditiveArithmeticP"
@@ -2132,7 +2100,7 @@ depends-nominal:
 - "So8NSObjectP"
 - "So14NSSecureCodingP"
 - !private "So15NSTextAlignmentV"
-- !private "6Drinkz20NewBarPickedProtocolP"
+- !private "6Drinkz25NewBusinessPickedProtocolP"
 - "Sj"
 - !private "s9OptionSetP"
 - !private "Sq"
@@ -2211,8 +2179,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -2232,47 +2200,47 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/MapKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Pods/TweetNacl/Sources/module.map"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/TweetNacl/Sources/module.map"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
@@ -2303,4 +2271,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "5656e26d1f729c0c7cdbe9c974fafaf0"
+interface-hash: "d8240c3fb6d16fa643a226937f816cc0"

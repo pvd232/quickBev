@@ -9,19 +9,6 @@
 import UIKit
 import Stripe
 
-@propertyWrapper
-public struct UsesAutoLayout<T: UIView> {
-    public var wrappedValue: T {
-        didSet {
-            wrappedValue.translatesAutoresizingMaskIntoConstraints = false
-        }
-    }
-    
-    public init(wrappedValue: T) {
-        self.wrappedValue = wrappedValue
-        wrappedValue.translatesAutoresizingMaskIntoConstraints = false
-    }
-}
 
 class SplashPageViewController: UIViewController {
     static let screenSize: CGRect = UIScreen.main.bounds
@@ -132,7 +119,8 @@ class SplashPageViewController: UIViewController {
     }
     
     @objc func createAQuickBevAccountButtonTouchup() {
-        if let nextViewController = storyboard?.instantiateViewController(identifier: "RegistrationSplashPageViewController") as? RegistrationSplashPageViewController {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        if let nextViewController = storyboard.instantiateViewController(identifier: "RegistrationSplashPageViewController") as? RegistrationSplashPageViewController {
             self.navigationController!.pushViewController(nextViewController, animated: true)
         }
     }

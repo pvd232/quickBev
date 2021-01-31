@@ -102,10 +102,8 @@ class RegistrationWithEmailViewController: UIViewController {
         }
         else if alertType == "accountCreation" {
             alertCtrl.addAction(UIAlertAction(title: "Okay", style: .cancel) { action in
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomePageViewController") as! HomePageViewController
-            let navigationController = self.navigationController!
-            navigationController.setViewControllers([nextViewController], animated: true)
+                SceneDelegate.shared.rootViewController.switchToHomePage()
+//            navigationController.setViewControllers([HomePageViewController()], animated: true)
             })
         }
         present(alertCtrl, animated: true, completion: nil)

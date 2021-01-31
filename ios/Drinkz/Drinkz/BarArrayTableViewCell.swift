@@ -1,5 +1,5 @@
 //
-//  BarArrayTableViewCell.swift
+//  BusinessArrayTableViewCell.swift
 //  Drinkz
 //
 //  Created by Peter Vail Driscoll II on 12/17/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BarArrayTableViewCell: UITableViewCell {
+class BusinessArrayTableViewCell: UITableViewCell {
     let name = UILabel()
     let address = UILabel()
     override func awakeFromNib() {

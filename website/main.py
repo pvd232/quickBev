@@ -8,6 +8,25 @@ import uuid
 import stripe
 import os
 from werkzeug.utils import secure_filename
+from flask_httpauth import HTTPBasicAuth
+from werkzeug.security import generate_password_hash, check_password_hash
+import base64
+
+app = Flask(__name__)
+auth = HTTPBasicAuth()
+
+users = {
+    "john": generate_password_hash("hello"),
+    "susan": generate_password_hash("bye")
+}
+
+
+@auth.verify_password
+def verify_password(username, password):
+    if username in users and \
+            check_password_hash(users.get(username), password):
+        return username
+
 
 UPLOAD_FOLDER = os.getcwd() + "/files"
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
@@ -20,7 +39,6 @@ stripe.api_key = "sk_test_51I0xFxFseFjpsgWvh9b1munh6nIea6f5Z8bYlIDfmKyNq6zzrgg8i
 # theme color RGB = rgb(134,130,230), hex = #8682E6
 # TODO: need to finish the add_business function by adding the new business address and returning the unique identifier to main.py so i can dynamically set the files path of the new image using the UUID of the business address
 # TODO: finish full integration of live stripe business id with a charge created in the front end, while subtracting quick bev fee, calculate order total on the server
-# TODO: move stripe ID from merchant to business
 # TODO: allow merchant to switch between their stripe accounts/different businesses in the home page dashboard
 
 
@@ -56,24 +74,32 @@ def inventory():
     return jsonify(response)
 
 
-@app.route('/orders', methods=['POST', 'GET'])
+@app.route('/orders', methods=['POST', 'GET', 'OPTIONS'])
 def orders():
+    response = {}
+    order_service = Order_Service()
     if request.method == 'POST':
-        response = {}
         new_order = request.json
         order_service = Order_Service()
         order_service.create_order(new_order)
         response['msg'] = 'you good bruh'
         return Response(status=200, response=json.dumps(response))
-    if request.method == 'GET':
+    if request.method == 'OPTIONS':
+        header = {}
+        header["Access-Control-Allow-Credentials"] = 'true'
+        return Response(status=200, headers=header)
+    if request.method == "GET":
+        header = {}
+        header["Access-Control-Expose-Headers"] = "authorization"
+        # header["Access-Control-Allow-Origin"] = "http://localhost:3000"
+        header["Access-Control-Allow-Credentials"] = 'true'
+        username = base64.b64decode(
+            request.headers.get(
+                "Authorization").split(" ")[1]).decode("utf-8").split(":")[0]
+        user_orders = order_service.get_orders(username=username)
         order_list = []
-        response = {}
-        order_service = Order_Service()
-        orders = order_service.get_orders()
-        for order in orders:
-            order_list.append(order.serialize())
-        response['orders'] = order_list
-        return jsonify(response['orders'])
+        response = {"orders": ""}
+        return Response(status=200, response=json.dumps(response), headers=header)
 
 
 @app.route('/registerNewUser', methods=['POST'])
@@ -88,7 +114,7 @@ def register_new_user():
         return jsonify(response), 400
 
 
-@app.route('/getBusinesss', methods=['GET'])
+@app.route('/business', methods=['GET'])
 def get_businesss():
     response = {}
     business_list = []
@@ -98,8 +124,9 @@ def get_businesss():
         # turn into dictionaries
         businessDTO = {}
         businessDTO['business'] = business.serialize()
+        print('business.serialize()', business.serialize())
         business_list.append(businessDTO)
-    response['businesss'] = business_list
+    response['businesses'] = business_list
     return jsonify(response)
 
 
@@ -122,7 +149,7 @@ def ephemeral_keys():
     request_data = json.loads(request.data)
     print('request_data', request_data)
     order_service = Order_Service()
-    key, header = order_service.stripe_ephemeral_key(request_data)
+    key, header = order_service.get_stripe_ephemeral_key(request_data)
     if key and header:
         return Response(status=200, response=json.dumps(key), headers=header)
     else:

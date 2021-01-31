@@ -764,7 +764,7 @@ const Signup = () => {
     }
 
     // the merchant in state was being converted back to a regular object
-    const newMerchant = new Merchant(null, merchant);
+    const newMerchant = new Merchant("merchantStateObject", merchant);
     // set the stripe ID returned from the backend
     newForm.append("merchant", JSON.stringify(newMerchant));
 
@@ -773,9 +773,9 @@ const Signup = () => {
     console.log("newBusiness", newBusiness);
     newForm.append("business", JSON.stringify(newBusiness));
 
-    setLocalStorage("merchant", merchant);
+    setLocalStorage("merchant", newMerchant);
     setLocalStorage("business", newBusiness);
-
+    console.log("localStorageMerchant", localStorage.getItem("merchant"));
     // set in local storage if user has multiple businesses so we can display a tab to add more businesses late
     localStorage.setItem(
       "multipleBusinesses",

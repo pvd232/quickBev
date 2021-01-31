@@ -257,8 +257,8 @@ SWIFT_CLASS("_TtC6Drinkz11AppDelegate")
 @class NSEntityDescription;
 @class NSManagedObjectContext;
 
-SWIFT_CLASS("_TtC6Drinkz3Bar")
-@interface Bar : NSManagedObject
+SWIFT_CLASS("_TtC6Drinkz8Business")
+@interface Business : NSManagedObject
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -266,7 +266,7 @@ SWIFT_CLASS("_TtC6Drinkz3Bar")
 @class Drink;
 @class NSSet;
 
-@interface Bar (SWIFT_EXTENSION(Drinkz))
+@interface Business (SWIFT_EXTENSION(Drinkz))
 - (void)addDrinksObject:(Drink * _Nonnull)value;
 - (void)removeDrinksObject:(Drink * _Nonnull)value;
 - (void)addDrinks:(NSSet * _Nonnull)values;
@@ -275,20 +275,22 @@ SWIFT_CLASS("_TtC6Drinkz3Bar")
 
 @class CheckoutCart;
 
-@interface Bar (SWIFT_EXTENSION(Drinkz))
+@interface Business (SWIFT_EXTENSION(Drinkz))
 @property (nonatomic, copy) NSString * _Nullable address;
-@property (nonatomic, copy) NSString * _Nullable id;
-@property (nonatomic, copy) NSString * _Nullable name;
-@property (nonatomic, strong) NSSet * _Nullable drinks;
-@property (nonatomic) double salesTaxRate;
 @property (nonatomic, copy) NSString * _Nullable coordinateString;
-@property (nonatomic, strong) CheckoutCart * _Nullable userBarToCheckoutCart;
-@property (nonatomic, strong) CheckoutCart * _Nullable barsToCheckoutCart;
+@property (nonatomic, copy) NSUUID * _Nullable id;
+@property (nonatomic, copy) NSString * _Nullable name;
+@property (nonatomic) double salesTaxRate;
+@property (nonatomic, copy) NSString * _Nullable stripeId;
+@property (nonatomic, strong) CheckoutCart * _Nullable businessToCheckoutCart;
+@property (nonatomic, copy) NSUUID * _Nullable businessAddressId;
+@property (nonatomic, strong) NSSet * _Nullable drinks;
+@property (nonatomic, strong) CheckoutCart * _Nullable userBusinessToCheckoutCart;
 @end
 
 
-SWIFT_CLASS("_TtC6Drinkz21BarArrayTableViewCell")
-@interface BarArrayTableViewCell : UITableViewCell
+SWIFT_CLASS("_TtC6Drinkz26BusinessArrayTableViewCell")
+@interface BusinessArrayTableViewCell : UITableViewCell
 - (void)awakeFromNib;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -296,8 +298,8 @@ SWIFT_CLASS("_TtC6Drinkz21BarArrayTableViewCell")
 @end
 
 
-SWIFT_CLASS("_TtC6Drinkz22BarArrayViewController")
-@interface BarArrayViewController : UIViewController <UIGestureRecognizerDelegate>
+SWIFT_CLASS("_TtC6Drinkz27BusinessArrayViewController")
+@interface BusinessArrayViewController : UIViewController <UIGestureRecognizerDelegate>
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)viewWillDisappear:(BOOL)animated;
@@ -307,12 +309,12 @@ SWIFT_CLASS("_TtC6Drinkz22BarArrayViewController")
 
 @class UISearchController;
 
-@interface BarArrayViewController (SWIFT_EXTENSION(Drinkz)) <UISearchResultsUpdating>
+@interface BusinessArrayViewController (SWIFT_EXTENSION(Drinkz)) <UISearchResultsUpdating>
 - (void)updateSearchResultsForSearchController:(UISearchController * _Nonnull)searchController;
 @end
 
 
-@interface BarArrayViewController (SWIFT_EXTENSION(Drinkz)) <UITableViewDataSource, UITableViewDelegate>
+@interface BusinessArrayViewController (SWIFT_EXTENSION(Drinkz)) <UITableViewDataSource, UITableViewDelegate>
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
@@ -327,8 +329,8 @@ SWIFT_CLASS("_TtC6Drinkz22BarArrayViewController")
 @class MKAnnotationView;
 @class RoundButton;
 
-SWIFT_CLASS("_TtC6Drinkz20BarMapViewController")
-@interface BarMapViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate, UIGestureRecognizerDelegate>
+SWIFT_CLASS("_TtC6Drinkz25BusinessMapViewController")
+@interface BusinessMapViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate, UIGestureRecognizerDelegate>
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidLoad;
@@ -352,10 +354,10 @@ SWIFT_CLASS("_TtC6Drinkz12CheckoutCart")
 
 
 @interface CheckoutCart (SWIFT_EXTENSION(Drinkz))
-- (void)addBarsObject:(Bar * _Nonnull)value;
-- (void)removeBarsObject:(Bar * _Nonnull)value;
-- (void)addBars:(NSSet * _Nonnull)values;
-- (void)removeBars:(NSSet * _Nonnull)values;
+- (void)addBusinessObject:(Business * _Nonnull)value;
+- (void)removeBusinessObject:(Business * _Nonnull)value;
+- (void)addBusiness:(NSSet * _Nonnull)values;
+- (void)removeBusiness:(NSSet * _Nonnull)values;
 @end
 
 
@@ -370,19 +372,20 @@ SWIFT_CLASS("_TtC6Drinkz12CheckoutCart")
 @class User;
 
 @interface CheckoutCart (SWIFT_EXTENSION(Drinkz))
-@property (nonatomic, copy) NSString * _Nullable barId;
+@property (nonatomic, copy) NSUUID * _Nullable currentOrderId;
+@property (nonatomic, copy) NSUUID * _Nullable businessAddressId;
 @property (nonatomic) double cost;
-@property (nonatomic) double subtotal;
-@property (nonatomic) double tipPercentage;
-@property (nonatomic) double tipAmount;
-@property (nonatomic, copy) NSString * _Nullable userId;
-@property (nonatomic, copy) NSString * _Nullable stripeId;
+@property (nonatomic) int16_t orderingProcessViewControllerIndex;
 @property (nonatomic) double salesTax;
-@property (nonatomic) double orderingProcessViewControllerIndex;
-@property (nonatomic, strong) NSSet * _Nullable bars;
+@property (nonatomic, copy) NSString * _Nullable stripeId;
+@property (nonatomic) double subtotal;
+@property (nonatomic) double tipAmount;
+@property (nonatomic) double tipPercentage;
+@property (nonatomic, copy) NSString * _Nullable userId;
+@property (nonatomic, strong) NSSet * _Nullable business;
 @property (nonatomic, strong) NSSet * _Nullable drinks;
 @property (nonatomic, strong) User * _Nullable user;
-@property (nonatomic, strong) Bar * _Nullable userBar;
+@property (nonatomic, strong) Business * _Nullable userBusiness;
 @end
 
 
@@ -431,15 +434,15 @@ SWIFT_CLASS("_TtC6Drinkz5Drink")
 @class Order;
 
 @interface Drink (SWIFT_EXTENSION(Drinkz))
-@property (nonatomic, copy) NSString * _Nullable barId;
+@property (nonatomic, copy) NSUUID * _Nullable businessAddressId;
 @property (nonatomic, copy) NSString * _Nullable detail;
 @property (nonatomic, copy) NSUUID * _Nullable id;
 @property (nonatomic, copy) NSString * _Nullable name;
 @property (nonatomic) double price;
 @property (nonatomic) int16_t quantity;
-@property (nonatomic, strong) Bar * _Nullable bar;
-@property (nonatomic, strong) CheckoutCart * _Nullable relationship;
+@property (nonatomic, strong) Business * _Nullable drinkToBusiness;
 @property (nonatomic, strong) Order * _Nullable drinkToOrder;
+@property (nonatomic, strong) CheckoutCart * _Nullable relationship;
 @end
 
 
@@ -486,7 +489,7 @@ SWIFT_CLASS("_TtC6Drinkz22HomePageViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidLoad;
 - (void)launchAccountViewController;
-- (void)launchBarViewController;
+- (void)launchBusinessViewController;
 - (void)launchCheckoutViewController;
 - (void)centerButtonTouchup:(RoundButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
@@ -526,16 +529,16 @@ SWIFT_CLASS("_TtC6Drinkz5Order")
 
 
 @interface Order (SWIFT_EXTENSION(Drinkz))
-@property (nonatomic, copy) NSString * _Nullable id;
-@property (nonatomic, copy) NSString * _Nullable barId;
+@property (nonatomic, copy) NSUUID * _Nullable businessAddressId;
 @property (nonatomic) double cost;
-@property (nonatomic) double subtotal;
-@property (nonatomic) double tipPercentage;
-@property (nonatomic) double tipAmount;
-@property (nonatomic, strong) User * _Nullable user;
-@property (nonatomic, strong) NSSet * _Nullable orderDrink;
 @property (nonatomic, copy) NSDate * _Nullable dateTime;
+@property (nonatomic, copy) NSUUID * _Nullable id;
 @property (nonatomic) double salesTax;
+@property (nonatomic) double subtotal;
+@property (nonatomic) double tipAmount;
+@property (nonatomic) double tipPercentage;
+@property (nonatomic, strong) NSSet * _Nullable orderDrink;
+@property (nonatomic, strong) User * _Nullable user;
 @end
 
 
@@ -699,9 +702,9 @@ SWIFT_CLASS("_TtC6Drinkz3Tab")
 
 
 @interface Tab (SWIFT_EXTENSION(Drinkz))
-@property (nonatomic, copy) NSString * _Nullable id;
+@property (nonatomic, copy) NSUUID * _Nullable id;
 @property (nonatomic, copy) NSString * _Nullable name;
-@property (nonatomic, copy) NSString * _Nullable barId;
+@property (nonatomic, copy) NSUUID * _Nullable businessId;
 @property (nonatomic, copy) NSString * _Nullable userId;
 @property (nonatomic, copy) NSString * _Nullable address;
 @property (nonatomic, copy) NSDate * _Nullable dateTime;
@@ -717,7 +720,7 @@ SWIFT_CLASS("_TtC6Drinkz3Tab")
 SWIFT_CLASS("_TtC6Drinkz25TabCreationViewController")
 @interface TabCreationViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified nameTextField;
-@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified barTextField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified businessTextField;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified dateAndTimeTextField;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified fundraisingGoalTextField;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified minimumContributionTextField;
@@ -727,7 +730,7 @@ SWIFT_CLASS("_TtC6Drinkz25TabCreationViewController")
 - (IBAction)nextButtonTapped:(id _Nonnull)sender;
 - (void)submitTab:(RoundButton * _Nonnull)sender;
 - (void)viewWillAppear:(BOOL)animated;
-- (void)launchBarArrayViewController;
+- (void)launchBusinessArrayViewController;
 - (void)tapDone;
 - (void)viewWillDisappear:(BOOL)animated;
 - (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
@@ -801,18 +804,18 @@ SWIFT_CLASS("_TtC6Drinkz4User")
 
 
 @interface User (SWIFT_EXTENSION(Drinkz))
-- (void)addUserToTabObject:(Tab * _Nonnull)value;
-- (void)removeUserToTabObject:(Tab * _Nonnull)value;
-- (void)addUserToTab:(NSSet * _Nonnull)values;
-- (void)removeUserToTab:(NSSet * _Nonnull)values;
-@end
-
-
-@interface User (SWIFT_EXTENSION(Drinkz))
 - (void)addUserToOrderObject:(Order * _Nonnull)value;
 - (void)removeUserToOrderObject:(Order * _Nonnull)value;
 - (void)addUserToOrder:(NSSet * _Nonnull)values;
 - (void)removeUserToOrder:(NSSet * _Nonnull)values;
+@end
+
+
+@interface User (SWIFT_EXTENSION(Drinkz))
+- (void)addUserToTabObject:(Tab * _Nonnull)value;
+- (void)removeUserToTabObject:(Tab * _Nonnull)value;
+- (void)addUserToTab:(NSSet * _Nonnull)values;
+- (void)removeUserToTab:(NSSet * _Nonnull)values;
 @end
 
 
@@ -823,8 +826,8 @@ SWIFT_CLASS("_TtC6Drinkz4User")
 @property (nonatomic, copy) NSString * _Nullable password;
 @property (nonatomic, copy) NSString * _Nullable stripeId;
 @property (nonatomic, strong) CheckoutCart * _Nullable relationship;
-@property (nonatomic, strong) NSSet * _Nullable userToTab;
 @property (nonatomic, strong) NSSet * _Nullable userToOrder;
+@property (nonatomic, strong) NSSet * _Nullable userToTab;
 @end
 
 #if __has_attribute(external_source_symbol)

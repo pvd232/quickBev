@@ -17,9 +17,9 @@ extension Tab {
         return NSFetchRequest<Tab>(entityName: "Tab")
     }
     
-    @NSManaged public var id: String?
+    @NSManaged public var id: UUID?
     @NSManaged public var name: String?
-    @NSManaged public var barId: String?
+    @NSManaged public var businessId: UUID?
     @NSManaged public var userId: String?
     @NSManaged public var address: String?
     @NSManaged public var dateTime: Date?

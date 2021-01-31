@@ -32,7 +32,7 @@ class ReviewOrderViewController: UIViewController {
     @UsesAutoLayout var changePaymentMethodButton = RoundButton()
     @UsesAutoLayout var orderTotalLabel = UILabel()
     
-    // need to dynamically apply this based on bar location the user is at, should probably store a list of states and associated sales taxes in core data when first loading the app
+    // need to dynamically apply this based on business location the user is at, should probably store a list of states and associated sales taxes in core data when first loading the app
     var paymentContext: STPPaymentContext?
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -254,7 +254,8 @@ extension ReviewOrderViewController: STPPaymentContextDelegate {
         }
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Okay", style: .cancel) { action in
-            let nextViewController = self.storyboard?.instantiateViewController(identifier: "OrderConfirmationViewController")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let nextViewController = storyboard.instantiateViewController(identifier: "OrderConfirmationViewController") as? OrderConfirmationViewController
             self.navigationController?.setViewControllers([nextViewController!], animated: true)
         })
         self.present(alertController, animated: true, completion: nil)

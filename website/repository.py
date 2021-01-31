@@ -8,6 +8,7 @@ import stripe
 from datetime import date
 import requests
 import base64
+from sqlalchemy.sql import text
 
 
 class Drink_Repository(object):
@@ -34,23 +35,34 @@ class Order_Repository(object):
                 session.add(new_order_drink)
         return True
 
-    def get_orders(self, session):
-        orders = session.query(Order)
+    def get_orders(self, session, username):
+        print('username', username)
+
+        orders_query = session.query(Order.cost, Order.subtotal, Order.sales_tax, Order.tip_percentage, Order.tip_amount, Order.sales_tax, Order.date_time, Order.user_id,
+                                     Business_Address.address, Business.name).join(Business_Address, Order.business_address_id == Business_Address.id).join(Business, Business_Address.business_id == Business.id).filter(Order.user_id == username)
+        print('orders query', orders_query)
+        orders = session.query(Order.cost, Order.subtotal, Order.sales_tax, Order.tip_percentage, Order.tip_amount, Order.sales_tax, Order.date_time, Order.user_id,
+                               Business_Address.address, Business.name).join(Business_Address, Order.business_address_id == Business_Address.id).join(Business, Business_Address.business_id == Business.id).filter(Order.user_id == username).all()
+        print("orders", orders)
+
         return orders
 
-    def stripe_ephemeral_key(self, session, request):
+    def get_stripe_ephemeral_key(self, session, request):
         customer = request['stripe_id']
+        customer_bool = False
         print('request', request)
         if customer:
             confirm_customer_existence = session.query(Stripe_Customer).filter(
                 Stripe_Customer.id == customer).first()
             # Lookup the customer in the database so that if they exist we can attach their stripe id to the Ephermeral key such that later when they create the payment intent it will include their payment methods
             if confirm_customer_existence:
+                customer_bool = True
                 key = stripe.EphemeralKey.create(
                     customer=customer, stripe_version=request['api_version'])
                 header = None
                 return key, header
-        else:
+
+        if not customer_bool:
             new_customer = stripe.Customer.create()
             new_stripe = Stripe_Customer(id=new_customer.id)
             session.add(new_stripe)
@@ -109,8 +121,18 @@ class User_Repository(object):
 
 class Business_Repository(object):
     def get_businesss(self, session):
-        businesss = session.query(Business)
-        return businesss
+        businesses = session.query(Business, Business_Address.address, Business_Address.id.label("business_address_id")).select_from(
+            Business).join(Business_Address, Business.id == Business_Address.business_id).all()
+
+        print('businesses', businesses)
+        for business in businesses:
+            for key, val in business._asdict().items():
+                print('key', key)
+                print('val', val)
+                if key == "Business":
+                    print(val.serialize)
+
+        return businesses
 
     def add_business(self, session, business):
         print('business', business)

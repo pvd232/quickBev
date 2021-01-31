@@ -73,7 +73,7 @@ const PayoutSetup = (props) => {
             onClick={(event) => {
               handleConnect().then((businessStripeId) =>
                 onSubmit(event, businessStripeId).then((result) => {
-                  setRedirect(redirectUrl);
+                  // setRedirect(redirectUrl);
                 })
               );
             }}
@@ -104,7 +104,7 @@ const PayoutSetup = (props) => {
                 props
                   .onSubmit(event, businessStripeId, false)
                   .then((result) => {
-                    setRedirect(redirectUrl);
+                    // setRedirect(redirectUrl);
                   })
               );
             }}

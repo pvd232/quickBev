@@ -129,12 +129,12 @@ class DrinkViewController: UIViewController {
     @objc func buyButtonPressed(_ sender: RoundButton) {
         //        let encoder = JSONEncoder()
         if CheckoutCart.shared.user == nil {
-            CheckoutCart.shared.barId = CheckoutCart.shared.userBar!.id!
+            CheckoutCart.shared.businessAddressId = CheckoutCart.shared.userBusiness!.businessAddressId!
             self.alertError()
         }
         else {
             CheckoutCart.shared.userId = CheckoutCart.shared.user!.email
-            CheckoutCart.shared.barId = CheckoutCart.shared.userBar!.id!
+            CheckoutCart.shared.businessAddressId = CheckoutCart.shared.userBusiness!.businessAddressId!
             CheckoutCart.shared.addToDrinks(drink!)
             alertSuccess()
             

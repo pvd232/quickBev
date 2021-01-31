@@ -1,3 +1,5 @@
+import { Merchant } from "../Models.js";
+
 class Client {
   async makeRequest(method, url, data, isForm = false) {
     let requestData = data || {};
@@ -29,5 +31,22 @@ class Client {
       console.log("APIclient.makeRequest.error", err);
     }
   }
+  getOrders = async () => {
+    var headers = new Headers();
+    const currentUser = new Merchant(
+      "localStorage",
+      localStorage.getItem("merchant")
+    );
+    console.log("currentUser", currentUser);
+    headers.set(
+      "Authorization",
+      "Basic " + btoa(currentUser.id + ":" + currentUser.password)
+    );
+    // headers.set("")
+    return fetch("http://127.0.0.1:5000/orders", {
+      credentials: "include",
+      headers: headers,
+    }).then((data) => data.json());
+  };
 }
 export default new Client();

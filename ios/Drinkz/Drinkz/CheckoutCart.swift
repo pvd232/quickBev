@@ -27,14 +27,14 @@ extension CheckoutCart {
             $0.name! < $1.name!
         }
     }
-    public var barArray: [Bar] {
-        let set = bars as? Set<Bar> ?? []
+    public var businessArray: [Business] {
+        let set = business as? Set<Business> ?? []
         return set.sorted {
             $0.name! < $1.name!
         }
     }
-    public var userBarDrinks: [Drink] {
-        let set = userBar!.drinks as? Set<Drink> ?? []
+    public var userBusinessDrinks: [Drink] {
+        let set = userBusiness!.drinks as? Set<Drink> ?? []
         return set.sorted {
             $0.name! < $1.name!
         }
@@ -47,13 +47,13 @@ extension CheckoutCart {
         self.subtotal = (cart.reduce(0) { (currentCheckoutCartTotal, drink) -> Double in
             return currentCheckoutCartTotal + drink.cost
         }).rounded(digits:2)
-        self.salesTax = (self.cost * userBar!.salesTaxRate).rounded(digits:2)
+        self.salesTax = (self.cost * userBusiness!.salesTaxRate).rounded(digits:2)
         self.tipAmount = (self.tipPercentage * self.subtotal).rounded(digits: 2)
         self.cost = (self.subtotal + self.salesTax + self.tipAmount).rounded(digits: 2)
     }
     public func emptyCart () {
         self.userId = ""
-        self.barId = ""
+        self.businessAddressId = nil
         self.cost = 0.0
         self.drinks = NSSet.init(array: [Drink]())
     }

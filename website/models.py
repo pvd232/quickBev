@@ -12,6 +12,8 @@ import json
 from datetime import date
 
 #   https://stackoverflow.com/questions/38678336/sqlalchemy-how-to-implement-drop-table-cascade
+
+
 @compiles(DropTable, "postgresql")
 def _compile_drop_table(element, compiler, **kwargs):
     return compiler.visit_drop_table(element) + " CASCADE"
@@ -66,10 +68,12 @@ class Business(db.Model):
     merchant_id = db.Column(db.String(80), db.ForeignKey(  # composite primary key because there might be multiple businesses with the same name
         'merchant.id'), nullable=False)
     number_of_locations = db.Column(db.Integer(), nullable=False)
-    business_address = relationship("Business_Address", lazy=True)
+    business_address = relationship(
+        "Business_Address", lazy=True, backref="business")
 
 
 # TODO: change Bar class to Business, change Administrator to Merchant, create a new associative table BusinessLocation that links busnesses with their different locations
+
     @property
     def serialize(self):
         attribute_names = list(self.__dict__.keys())
@@ -97,9 +101,9 @@ class Business_Address(db.Model):
     zipcode = db.Column(db.Integer, nullable=False)
     suite = db.Column(db.String(80), nullable=True)
     address = db.Column(db.String(80), nullable=False)
-    drink = relationship('Drink', lazy=True)
-    order = relationship('Order', lazy=True)
-    tab = relationship('Tab', lazy=True)
+    drink = relationship('Drink', lazy=True, backref="business_address")
+    order = relationship('Order', lazy=True, backref="business_address")
+    tab = relationship('Tab', lazy=True, backref="business_address")
 
 
 class Merchant(db.Model):
@@ -109,7 +113,7 @@ class Merchant(db.Model):
     first_name = db.Column(db.String(80), nullable=False)
     last_name = db.Column(db.String(80), nullable=False)
     phone_number = db.Column(db.BigInteger(), nullable=False)
-    business = relationship("Business", lazy=True)
+    business = relationship("Business", lazy=True, backref="merchant")
 
 
 class User_Table(db.Model):
@@ -121,8 +125,8 @@ class User_Table(db.Model):
     password = db.Column(db.String(80), nullable=False)
     first_name = db.Column(db.String(80), nullable=False)
     last_name = db.Column(db.String(80), nullable=False)
-    order = relationship('Order', lazy=True)
-    tab = relationship('Tab', lazy=True)
+    order = relationship('Order', lazy=True, backref="order")
+    tab = relationship('Tab', lazy=True, backref="tab")
 
     @property
     def serialize(self):
@@ -147,7 +151,7 @@ class Order(db.Model):
     tip_percentage = db.Column(db.Float(), nullable=False)
     tip_amount = db.Column(db.Float(), nullable=False)
     date_time = db.Column(db.Date, nullable=False)
-    orderDrink = relationship('Order_Drink', lazy=True)
+    orderDrink = relationship('Order_Drink', lazy=True, backref="order")
 
     @property
     def serialize(self):
@@ -265,7 +269,7 @@ def create_business():
         city = business['city']
         state = business['state']
         zipcode = business['zipcode']
-        address = f"{street}, {city}, {state}, {zipcode}"
+        address = f"{street}, {city}, {state} {zipcode}"
         new_business_address = Business_Address(business_id=new_business_id, street=street, city=city,
                                                 state=state, zipcode=zipcode, address=address, tablet=tablet, phone_number=phone_number)
         # After I create the drink, I can then add it to my session.
@@ -309,4 +313,4 @@ def create_everything():
     create_drink()
 
 
-create_everything()
+# create_everything()

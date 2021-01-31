@@ -146,21 +146,17 @@ class Business_Domain(object):
     def __init__(self, business_object=None, business_json=None):
         self.sales_tax_rate = 0.0625
         if business_object:
-            self.id = business_object.id
-            self.merchant_id = business_object.merchant_id
-            self.stripe_id = business_object.stripe_id
-            if business_object.business_address_id:
-                self.business_address_id = business_object.business_address_id
-            self.name = business_object.name
-            self.address = f"{business_object.street}, {business_object.city}, {business_object.state} {business_object.zipcode}"
-            self.sales_tax_rate = business_object.sales_tax_rate
-            self.classification = business_object.classification
-            self.number_of_locations = business_object.number_of_locations
-            self.menu_file = business_object.menu_file
-            self.menu_url = business_object.menu_url
-            self.number_of_locations = business_object.number_of_locations
-            self.tablet = business_object.tablet
-            self.phone_number = business_object.phone_number
+            # query result object embeds the business object inside a business key, with the business address attributes exposed at the top level
+            nested_business_object = business_object.Business
+            self.id = nested_business_object.id
+            self.merchant_id = nested_business_object.merchant_id
+            self.stripe_id = nested_business_object.stripe_id
+            self.business_address_id = business_object.business_address_id
+            self.name = nested_business_object.name
+            self.address = business_object.address
+            self.sales_tax_rate = nested_business_object.sales_tax_rate
+            self.classification = nested_business_object.classification
+            self.number_of_locations = nested_business_object.number_of_locations
         if business_json:
             self.id = business_json["id"]
             self.merchant_id = business_json["merchant_id"]

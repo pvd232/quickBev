@@ -156,8 +156,10 @@ class LoginViewController: UIViewController {
                 print("user value is nil")
                 return
             }
-            let nextViewController =  HomePageViewController()
-            self.navigationController!.setViewControllers([nextViewController], animated: true)
+//            let nextViewController =  HomePageViewController()
+//            self.navigationController!.setViewControllers([nextViewController], animated: true)
+            SceneDelegate.shared.rootViewController.switchToHomePage()
+
             self.activityIndicator.stopAnimating()
         }
     }

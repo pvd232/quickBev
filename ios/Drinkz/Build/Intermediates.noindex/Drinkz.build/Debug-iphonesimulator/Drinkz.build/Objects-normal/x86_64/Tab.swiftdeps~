@@ -29,7 +29,7 @@ depends-top-level:
 - "String"
 - "StringLiteralType"
 - "Tab"
-- !private "UUID"
+- "UUID"
 - !private "_findStringSwitchCase"
 - !private "~="
 depends-member:
@@ -44,7 +44,7 @@ depends-member:
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "_findStringSwitchCase"]
 - !private ["s7CVarArgP", "address"]
-- !private ["s7CVarArgP", "barId"]
+- !private ["s7CVarArgP", "businessId"]
 - !private ["s7CVarArgP", "dateTime"]
 - !private ["s7CVarArgP", "detail"]
 - ["s7CVarArgP", "encode"]
@@ -64,7 +64,7 @@ depends-member:
 - !private ["s9CodingKeyP", "_findStringSwitchCase"]
 - ["s9CodingKeyP", "_rawHashValue"]
 - !private ["s9CodingKeyP", "address"]
-- !private ["s9CodingKeyP", "barId"]
+- !private ["s9CodingKeyP", "businessId"]
 - !private ["s9CodingKeyP", "dateTime"]
 - ["s9CodingKeyP", "debugDescription"]
 - ["s9CodingKeyP", "description"]
@@ -90,7 +90,7 @@ depends-member:
 - !private ["6Drinkz3TabC10CodingKeysO", "_findStringSwitchCase"]
 - ["6Drinkz3TabC10CodingKeysO", "_rawHashValue"]
 - ["6Drinkz3TabC10CodingKeysO", "address"]
-- ["6Drinkz3TabC10CodingKeysO", "barId"]
+- ["6Drinkz3TabC10CodingKeysO", "businessId"]
 - ["6Drinkz3TabC10CodingKeysO", "dateTime"]
 - ["6Drinkz3TabC10CodingKeysO", "debugDescription"]
 - ["6Drinkz3TabC10CodingKeysO", "description"]
@@ -126,7 +126,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "_findStringSwitchCase"]
 - ["s28CustomDebugStringConvertibleP", "_rawHashValue"]
 - !private ["s28CustomDebugStringConvertibleP", "address"]
-- !private ["s28CustomDebugStringConvertibleP", "barId"]
+- !private ["s28CustomDebugStringConvertibleP", "businessId"]
 - !private ["s28CustomDebugStringConvertibleP", "dateTime"]
 - ["s28CustomDebugStringConvertibleP", "debugDescription"]
 - ["s28CustomDebugStringConvertibleP", "description"]
@@ -146,11 +146,9 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "tabResponse"]
 - !private ["s28CustomDebugStringConvertibleP", "timeIntervalSince1970"]
 - !private ["s28CustomDebugStringConvertibleP", "userId"]
-- !private ["s28CustomDebugStringConvertibleP", "uuidString"]
 - !private ["s28CustomDebugStringConvertibleP", "viewContext"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "timeIntervalSince1970"]
-- !private ["s17CustomReflectableP", "uuidString"]
 - ["s23CustomStringConvertibleP", "=="]
 - !private ["s23CustomStringConvertibleP", "CodingKeys"]
 - !private ["s23CustomStringConvertibleP", "CoreDataManager"]
@@ -165,7 +163,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "_findStringSwitchCase"]
 - ["s23CustomStringConvertibleP", "_rawHashValue"]
 - !private ["s23CustomStringConvertibleP", "address"]
-- !private ["s23CustomStringConvertibleP", "barId"]
+- !private ["s23CustomStringConvertibleP", "businessId"]
 - !private ["s23CustomStringConvertibleP", "dateTime"]
 - ["s23CustomStringConvertibleP", "debugDescription"]
 - ["s23CustomStringConvertibleP", "description"]
@@ -185,7 +183,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "tabResponse"]
 - !private ["s23CustomStringConvertibleP", "timeIntervalSince1970"]
 - !private ["s23CustomStringConvertibleP", "userId"]
-- !private ["s23CustomStringConvertibleP", "uuidString"]
 - !private ["s23CustomStringConvertibleP", "viewContext"]
 - !private ["10Foundation4DateV", "init"]
 - !private ["10Foundation4DateV", "timeIntervalSince1970"]
@@ -198,7 +195,7 @@ depends-member:
 - ["Se", ""]
 - !private ["Se", "_findStringSwitchCase"]
 - !private ["Se", "address"]
-- !private ["Se", "barId"]
+- !private ["Se", "businessId"]
 - !private ["Se", "dateTime"]
 - !private ["Se", "detail"]
 - ["Se", "encode"]
@@ -210,7 +207,6 @@ depends-member:
 - !private ["Se", "name"]
 - !private ["Se", "timeIntervalSince1970"]
 - !private ["Se", "userId"]
-- !private ["Se", "uuidString"]
 - !private ["s7DecoderP", "container"]
 - !private ["SE", "CodingKeys"]
 - !private ["SE", "CoreDataManager"]
@@ -221,7 +217,7 @@ depends-member:
 - ["SE", ""]
 - !private ["SE", "_findStringSwitchCase"]
 - !private ["SE", "address"]
-- !private ["SE", "barId"]
+- !private ["SE", "businessId"]
 - !private ["SE", "dateTime"]
 - !private ["SE", "detail"]
 - ["SE", "encode"]
@@ -233,7 +229,6 @@ depends-member:
 - !private ["SE", "name"]
 - !private ["SE", "timeIntervalSince1970"]
 - !private ["SE", "userId"]
-- !private ["SE", "uuidString"]
 - !private ["s7EncoderP", "container"]
 - ["SQ", "=="]
 - !private ["SQ", "CodingKeys"]
@@ -249,7 +244,7 @@ depends-member:
 - !private ["SQ", "_findStringSwitchCase"]
 - ["SQ", "_rawHashValue"]
 - !private ["SQ", "address"]
-- !private ["SQ", "barId"]
+- !private ["SQ", "businessId"]
 - !private ["SQ", "dateTime"]
 - ["SQ", "debugDescription"]
 - ["SQ", "description"]
@@ -269,7 +264,6 @@ depends-member:
 - !private ["SQ", "tabResponse"]
 - !private ["SQ", "timeIntervalSince1970"]
 - !private ["SQ", "userId"]
-- !private ["SQ", "uuidString"]
 - !private ["SQ", "viewContext"]
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
 - ["SH", "=="]
@@ -286,7 +280,7 @@ depends-member:
 - !private ["SH", "_findStringSwitchCase"]
 - ["SH", "_rawHashValue"]
 - !private ["SH", "address"]
-- !private ["SH", "barId"]
+- !private ["SH", "businessId"]
 - !private ["SH", "dateTime"]
 - ["SH", "debugDescription"]
 - ["SH", "description"]
@@ -306,7 +300,6 @@ depends-member:
 - !private ["SH", "tabResponse"]
 - !private ["SH", "timeIntervalSince1970"]
 - !private ["SH", "userId"]
-- !private ["SH", "uuidString"]
 - !private ["SH", "viewContext"]
 - !private ["s12IdentifiableP", "CodingKeys"]
 - !private ["s12IdentifiableP", "CoreDataManager"]
@@ -316,7 +309,7 @@ depends-member:
 - !private ["s12IdentifiableP", "UUID"]
 - !private ["s12IdentifiableP", "_findStringSwitchCase"]
 - !private ["s12IdentifiableP", "address"]
-- !private ["s12IdentifiableP", "barId"]
+- !private ["s12IdentifiableP", "businessId"]
 - !private ["s12IdentifiableP", "dateTime"]
 - !private ["s12IdentifiableP", "detail"]
 - ["s12IdentifiableP", "encode"]
@@ -342,11 +335,11 @@ depends-member:
 - ["So20NSFetchRequestResultP", "Encoder"]
 - ["So20NSFetchRequestResultP", "Int64"]
 - !private ["So20NSFetchRequestResultP", "String"]
-- !private ["So20NSFetchRequestResultP", "UUID"]
+- ["So20NSFetchRequestResultP", "UUID"]
 - ["So20NSFetchRequestResultP", ""]
 - !private ["So20NSFetchRequestResultP", "_findStringSwitchCase"]
 - !private ["So20NSFetchRequestResultP", "address"]
-- !private ["So20NSFetchRequestResultP", "barId"]
+- !private ["So20NSFetchRequestResultP", "businessId"]
 - !private ["So20NSFetchRequestResultP", "dateTime"]
 - !private ["So20NSFetchRequestResultP", "detail"]
 - ["So20NSFetchRequestResultP", "encode"]
@@ -365,11 +358,11 @@ depends-member:
 - ["So15NSManagedObjectC", "Encoder"]
 - ["So15NSManagedObjectC", "Int64"]
 - ["So15NSManagedObjectC", "String"]
-- !private ["So15NSManagedObjectC", "UUID"]
+- ["So15NSManagedObjectC", "UUID"]
 - ["So15NSManagedObjectC", ""]
 - !private ["So15NSManagedObjectC", "_findStringSwitchCase"]
 - !private ["So15NSManagedObjectC", "address"]
-- !private ["So15NSManagedObjectC", "barId"]
+- !private ["So15NSManagedObjectC", "businessId"]
 - !private ["So15NSManagedObjectC", "dateTime"]
 - !private ["So15NSManagedObjectC", "detail"]
 - ["So15NSManagedObjectC", "encode"]
@@ -388,11 +381,11 @@ depends-member:
 - ["So8NSObjectC", "Encoder"]
 - ["So8NSObjectC", "Int64"]
 - ["So8NSObjectC", "String"]
-- !private ["So8NSObjectC", "UUID"]
+- ["So8NSObjectC", "UUID"]
 - ["So8NSObjectC", ""]
 - !private ["So8NSObjectC", "_findStringSwitchCase"]
 - !private ["So8NSObjectC", "address"]
-- !private ["So8NSObjectC", "barId"]
+- !private ["So8NSObjectC", "businessId"]
 - !private ["So8NSObjectC", "dateTime"]
 - !private ["So8NSObjectC", "detail"]
 - ["So8NSObjectC", "encode"]
@@ -411,11 +404,11 @@ depends-member:
 - ["So8NSObjectP", "Encoder"]
 - ["So8NSObjectP", "Int64"]
 - !private ["So8NSObjectP", "String"]
-- !private ["So8NSObjectP", "UUID"]
+- ["So8NSObjectP", "UUID"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "_findStringSwitchCase"]
 - !private ["So8NSObjectP", "address"]
-- !private ["So8NSObjectP", "barId"]
+- !private ["So8NSObjectP", "businessId"]
 - !private ["So8NSObjectP", "dateTime"]
 - !private ["So8NSObjectP", "detail"]
 - ["So8NSObjectP", "encode"]
@@ -437,7 +430,7 @@ depends-member:
 - ["7Combine16ObservableObjectP", ""]
 - !private ["7Combine16ObservableObjectP", "_findStringSwitchCase"]
 - !private ["7Combine16ObservableObjectP", "address"]
-- !private ["7Combine16ObservableObjectP", "barId"]
+- !private ["7Combine16ObservableObjectP", "businessId"]
 - !private ["7Combine16ObservableObjectP", "dateTime"]
 - !private ["7Combine16ObservableObjectP", "detail"]
 - ["7Combine16ObservableObjectP", "encode"]
@@ -456,7 +449,7 @@ depends-member:
 - !private ["SY", "_findStringSwitchCase"]
 - ["SY", "_rawHashValue"]
 - !private ["SY", "address"]
-- !private ["SY", "barId"]
+- !private ["SY", "businessId"]
 - !private ["SY", "dateTime"]
 - ["SY", "debugDescription"]
 - ["SY", "description"]
@@ -476,7 +469,6 @@ depends-member:
 - !private ["SY", "userId"]
 - !private ["10Foundation20ReferenceConvertibleP", "init"]
 - !private ["10Foundation20ReferenceConvertibleP", "timeIntervalSince1970"]
-- !private ["10Foundation20ReferenceConvertibleP", "uuidString"]
 - ["6Drinkz3TabC", "CodingKey"]
 - ["6Drinkz3TabC", "CodingKeys"]
 - !private ["6Drinkz3TabC", "CoreDataManager"]
@@ -485,11 +477,11 @@ depends-member:
 - ["6Drinkz3TabC", "Encoder"]
 - ["6Drinkz3TabC", "Int64"]
 - ["6Drinkz3TabC", "String"]
-- !private ["6Drinkz3TabC", "UUID"]
+- ["6Drinkz3TabC", "UUID"]
 - ["6Drinkz3TabC", ""]
 - !private ["6Drinkz3TabC", "_findStringSwitchCase"]
 - !private ["6Drinkz3TabC", "address"]
-- !private ["6Drinkz3TabC", "barId"]
+- !private ["6Drinkz3TabC", "businessId"]
 - !private ["6Drinkz3TabC", "dateTime"]
 - ["6Drinkz3TabC", "deinit"]
 - !private ["6Drinkz3TabC", "detail"]
@@ -502,7 +494,6 @@ depends-member:
 - !private ["6Drinkz3TabC", "name"]
 - !private ["6Drinkz3TabC", "userId"]
 - !private ["10Foundation4UUIDV", "init"]
-- !private ["10Foundation4UUIDV", "uuidString"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "timeIntervalSince1970"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
@@ -516,7 +507,7 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "_findStringSwitchCase"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "address"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "barId"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "businessId"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dateTime"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "detail"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "encode"]
@@ -537,7 +528,7 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_findStringSwitchCase"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "address"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "barId"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "businessId"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dateTime"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "detail"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "encode"]
@@ -552,7 +543,6 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", ""]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "timeIntervalSince1970"]
-- !private ["s21_ObjectiveCBridgeableP", "uuidString"]
 depends-nominal:
 - !private "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
@@ -602,8 +592,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -623,47 +613,47 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/MapKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Pods/TweetNacl/Sources/module.map"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/TweetNacl/Sources/module.map"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
@@ -694,4 +684,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "fb7b4a97fcdd1858db8452f5521a5a9c"
+interface-hash: "9960b22633ba779bec479f7cde7bb07a"

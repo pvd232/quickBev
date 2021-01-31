@@ -13,7 +13,7 @@ class RootViewController:  UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     init() {
-        if CheckoutCart.shared.userId != nil {
+        if CheckoutCart.shared.userId != "" {
             current = TemplateNavigationController(rootViewController: HomePageViewController())
         }
         else {
@@ -31,12 +31,12 @@ class RootViewController:  UIViewController {
     }
     
     func switchToHomePage() {
-        let mainScreen = UINavigationController(rootViewController: HomePageViewController())
+        let mainScreen = TemplateNavigationController(rootViewController: HomePageViewController())
         animateFadeTransition(to: mainScreen)
     }
     
     func showLoginScreen() {
-        let new = UINavigationController(rootViewController: LoginViewController())
+        let new = TemplateNavigationController(rootViewController: LoginViewController())
         addChild(new)
         new.view.frame = self.view.bounds
         self.view.addSubview(new.view)

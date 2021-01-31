@@ -15,7 +15,7 @@ public class Tab: NSManagedObject,Codable {
         case tabResponse = "tab"
         case id = "id"
         case name = "name"
-        case barId = "bar_id"
+        case businessId = "business_id"
         case userId = "user_id"
         case address = "address"
         case dateTime = "date_time"
@@ -30,9 +30,9 @@ public class Tab: NSManagedObject,Codable {
         
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let nestedContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .tabResponse)
-        self.id = try nestedContainer.decode(String.self, forKey: .id)
+        self.id = try nestedContainer.decode(UUID.self, forKey: .id)
         self.name = try nestedContainer.decode(String.self, forKey: .name)
-        self.barId = try nestedContainer.decode(String.self, forKey: .barId)
+        self.businessId = try nestedContainer.decode(UUID.self, forKey: .businessId)
         self.userId = try nestedContainer.decode(String.self, forKey: .userId)
         self.address = try nestedContainer.decode(String.self, forKey: .address)
         self.dateTime = try nestedContainer.decode(Date.self, forKey: .dateTime)
@@ -45,7 +45,7 @@ public class Tab: NSManagedObject,Codable {
         var nestedContainer = container.nestedContainer(keyedBy: CodingKeys.self, forKey: .tabResponse)
         try nestedContainer.encode(self.id, forKey: .id)
         try nestedContainer.encode(self.name!, forKey: .name)
-        try nestedContainer.encode(self.barId!, forKey: .barId)
+        try nestedContainer.encode(self.businessId!, forKey: .businessId)
         try nestedContainer.encode(self.userId!, forKey: .userId)
         try nestedContainer.encode(self.address!, forKey: .address)
         try nestedContainer.encode(self.detail!, forKey: .detail)
@@ -58,9 +58,9 @@ extension Tab {
     convenience init () {
         let context = CoreDataManager.sharedManager.persistentContainer.viewContext
         self.init(context: context)
-        self.id = UUID().uuidString
+        self.id = UUID()
         self.name = nil
-        self.barId = nil
+        self.businessId = nil
         self.userId = nil
         self.address = nil
         self.dateTime = Date.init()
@@ -68,12 +68,12 @@ extension Tab {
         self.minimumContribution = 0
         self.fundraisingGoal = 0
     }
-    convenience init (Name: String?, BarId: String?, UserId: String?, Address:String?, DateTime: Date, Detail: String?, MinimumContribution: Int64?, FundraisingGoal: Int64?) {
+    convenience init (Name: String?, BusinessId: UUID?, UserId: String?, Address:String?, DateTime: Date, Detail: String?, MinimumContribution: Int64?, FundraisingGoal: Int64?) {
         let context = CoreDataManager.sharedManager.persistentContainer.viewContext
         self.init(context: context)
-        self.id = UUID().uuidString
+        self.id = UUID()
         self.name = Name
-        self.barId = BarId
+        self.businessId = BusinessId
         self.userId = UserId
         self.address = Address
         self.dateTime = DateTime

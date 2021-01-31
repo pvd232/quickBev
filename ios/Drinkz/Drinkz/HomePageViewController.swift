@@ -9,7 +9,7 @@
 import UIKit
 import Stripe
 
-class HomePageViewController: UIViewController, NewBarPickedProtocol{
+class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
     
     let moonImage = UIImage(named:"moon")
     @UsesAutoLayout var moonImageView = UIImageView()
@@ -32,7 +32,7 @@ class HomePageViewController: UIViewController, NewBarPickedProtocol{
     @UsesAutoLayout var navigationBarStackView = UIStackView()
     @UsesAutoLayout var navigationBarLabel = UILabel()
     
-    var bars = [Bar]()
+    var businesses = [Business]()
     var drinks = [Drink]()
     
     init() {
@@ -144,46 +144,46 @@ class HomePageViewController: UIViewController, NewBarPickedProtocol{
         orderButton.addTarget(self, action: #selector(launchCheckoutViewController), for: .touchUpInside)
         
         centerButton.addTarget(self, action: #selector(centerButtonTouchup), for: .touchUpInside)
-        navigationBarStackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(launchBarViewController)))
+        navigationBarStackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(launchBusinessViewController)))
         
         // initialize checkout cart
         let _ = CheckoutCart.customerContext
         if CheckoutCart.shared.user == nil {
-            centerButton.refreshTitle(newTitle: "Choose a bar")
+            centerButton.refreshTitle(newTitle: "Choose a venue")
             goodEveningLabel.text = "Good evening"
             bottomButtonsStackView.isHidden = true
         } else {
             goodEveningLabel.text = "Good evening, \(CheckoutCart.shared.user!.firstName!.capitalizingFirstLetter())"
             bottomButtonsStackView.isHidden = false
         }
-        if CheckoutCart.shared.userBar == nil {
-            centerButton.refreshTitle(newTitle: "Choose your bar")
+        if CheckoutCart.shared.userBusiness == nil {
+            centerButton.refreshTitle(newTitle: "Choose your venue")
             navigationBarStackView.isHidden = true
         }
         else {
             navigationBarStackView.isHidden = false
             navigationBarStackView.isUserInteractionEnabled = true
-            centerButton.refreshTitle(newTitle: "Order from \(CheckoutCart.shared.userBar!.name!)")
-            navigationBarLabel.text = CheckoutCart.shared.userBar!.name
+            centerButton.refreshTitle(newTitle: "Order from \(CheckoutCart.shared.userBusiness!.name!)")
+            navigationBarLabel.text = CheckoutCart.shared.userBusiness!.name
         }
         bottomButtonsViewContainer.backgroundColor = UIColor.init(red: 134/255, green: 130/255, blue: 230/255, alpha: 1.0)
         let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
         
-        var fetchedDrinksOrBarsBool = false
+        var fetchedDrinksOrBusinessesBool = false
         
         let group = DispatchGroup()
         group.enter()
-        if let fetchedBars = CoreDataManager.sharedManager.fetchEntities(entityName: "Bar", context:managedContext) as? [Bar], fetchedBars.count > 0 {
-            bars = fetchedBars
+        if let fetchedBusinesses = CoreDataManager.sharedManager.fetchEntities(entityName: "Business", context:managedContext) as? [Business], fetchedBusinesses.count > 0 {
+            businesses = fetchedBusinesses
             group.leave()
         } else {
-            Bar.getBars() {
-                barsFromAPICall in
-                guard barsFromAPICall != nil else {
+            Business.getBusinesses() {
+                businessesFromAPICall in
+                guard businessesFromAPICall != nil else {
                     return
                 }
-                self.bars = barsFromAPICall!
-                fetchedDrinksOrBarsBool = true
+                self.businesses = businessesFromAPICall!
+                fetchedDrinksOrBusinessesBool = true
                 group.leave()
             }
         }
@@ -197,24 +197,24 @@ class HomePageViewController: UIViewController, NewBarPickedProtocol{
                     return
                 }
                 self.drinks = drinksFromAPICall!
-                fetchedDrinksOrBarsBool = true
+                fetchedDrinksOrBusinessesBool = true
                 group.leave()
             }
         }
         group.notify(queue: .main, execute: {
             // executed after all async calls in for loop finish
-            if fetchedDrinksOrBarsBool == true {
-                for bar in self.bars{
-                    var barDrinks = [Drink]()
+            if fetchedDrinksOrBusinessesBool == true {
+                for business in self.businesses{
+                    var businessDrinks = [Drink]()
                     for drink in self.drinks {
-                        if drink.barId == bar.id {
-                            barDrinks.append(drink)
-                            drink.bar = bar
+                        if drink.businessAddressId == business.businessAddressId {
+                            businessDrinks.append(drink)
+                            drink.drinkToBusiness = business
                         }
                     }
-                    bar.drinks = NSSet.init(array: barDrinks)
+                    business.drinks = NSSet.init(array: businessDrinks)
                 }
-                CheckoutCart.shared.bars = NSSet.init(array: self.bars)
+                CheckoutCart.shared.business = NSSet.init(array: self.businesses)
                 CoreDataManager.sharedManager.saveContext(context: managedContext)
             }
         })
@@ -228,8 +228,8 @@ class HomePageViewController: UIViewController, NewBarPickedProtocol{
         navigationController?.pushViewController(AccountViewController(), animated: true)
     }
     
-    @objc func launchBarViewController () {
-        let popoverContent = BarMapViewController()
+    @objc func launchBusinessViewController () {
+        let popoverContent = BusinessMapViewController()
         popoverContent.modalPresentationStyle = .popover
         let popover = popoverContent.popoverPresentationController
         popover!.sourceView = navigationBarStackView
@@ -239,7 +239,7 @@ class HomePageViewController: UIViewController, NewBarPickedProtocol{
         
         // the size you want to display
         popoverContent.preferredContentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height)
-        popoverContent.barPickerDelegate = self
+        popoverContent.businessPickerDelegate = self
         popover!.delegate = self
         self.present(popoverContent, animated: true, completion: nil)
     }
@@ -249,18 +249,18 @@ class HomePageViewController: UIViewController, NewBarPickedProtocol{
             navigationController?.pushViewController(viewController, animated: true)
     }
     
-    func barPicked() {
-        centerButton.refreshTitle(newTitle: "Order from \(CheckoutCart.shared.userBar!.name!)")
-        navigationBarLabel.text = CheckoutCart.shared.userBar!.name
+    func businessPicked() {
+        centerButton.refreshTitle(newTitle: "Order from \(CheckoutCart.shared.userBusiness!.name!)")
+        navigationBarLabel.text = CheckoutCart.shared.userBusiness!.name
         navigationBarStackView.isHidden = false
     }
     @objc func centerButtonTouchup(_ sender: RoundButton) {
-        if CheckoutCart.shared.userBar != nil {
+        if CheckoutCart.shared.userBusiness != nil {
             let drinkListTableViewController = DrinkListTableViewController()
             navigationController?.pushViewController(drinkListTableViewController, animated: true)
         }
         else {
-            launchBarViewController()
+            launchBusinessViewController()
         }
     }
 }
@@ -298,3 +298,17 @@ extension UIFont {
         return UIFont.init(name: "Charter-Roman", size: 14.0)!
     }
 }
+@propertyWrapper
+public struct UsesAutoLayout<T: UIView> {
+    public var wrappedValue: T {
+        didSet {
+            wrappedValue.translatesAutoresizingMaskIntoConstraints = false
+        }
+    }
+    
+    public init(wrappedValue: T) {
+        self.wrappedValue = wrappedValue
+        wrappedValue.translatesAutoresizingMaskIntoConstraints = false
+    }
+}
+

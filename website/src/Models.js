@@ -2,19 +2,28 @@ export const setLocalStorage = (key, object) => {
   localStorage.setItem(key, JSON.stringify(object));
 };
 export class Merchant {
-  constructor(merchantObject = null, merchantStateObject = null) {
-    if (merchantObject) {
-      this._id = merchantObject.id;
-      this._password = merchantObject.password;
-      this._firstName = merchantObject.firstName;
-      this._lastName = merchantObject.lastName;
-      this._phoneNumber = merchantObject.phoneNumber;
-    } else if (merchantStateObject) {
-      this._id = merchantStateObject._id;
-      this._password = merchantStateObject._password;
-      this._firstName = merchantStateObject._firstName;
-      this._lastName = merchantStateObject._lastName;
-      this._phoneNumber = merchantStateObject._phoneNumber;
+  constructor(objectType, object) {
+    if (objectType === "merchantObject") {
+      this._id = object.id;
+      this._password = object.password;
+      this._firstName = object.firstName;
+      this._lastName = object.lastName;
+      this._phoneNumber = object.phoneNumber;
+    } else if (objectType === "merchantStateObject") {
+      this._id = object._id;
+      this._password = object._password;
+      this._firstName = object._firstName;
+      this._lastName = object._lastName;
+      this._phoneNumber = object._phoneNumber;
+    } else if (objectType === "localStorage") {
+      const data = JSON.parse(object);
+      console.log("object", object);
+      console.log("data", data);
+      this._id = data.id;
+      this._password = data.password;
+      this._firstName = data.first_name;
+      this._lastName = data.last_name;
+      this._phoneNumber = data.phone_number;
     } else {
       this._id = null;
       this._password = null;
@@ -28,7 +37,7 @@ export class Merchant {
     return this._id;
   }
   get password() {
-    return this.password;
+    return this._password;
   }
 
   get firstName() {
@@ -65,14 +74,6 @@ export class Merchant {
       phone_number: this._phoneNumber,
     };
     return data;
-  }
-  fromJSON(json) {
-    const data = JSON.parse(json);
-    this._id = data.id;
-    this._password = data.password;
-    this._firstName = data.first_name;
-    this._lastName = data.last_name;
-    this._phoneNumber = data.phone_number;
   }
 }
 export class Business {

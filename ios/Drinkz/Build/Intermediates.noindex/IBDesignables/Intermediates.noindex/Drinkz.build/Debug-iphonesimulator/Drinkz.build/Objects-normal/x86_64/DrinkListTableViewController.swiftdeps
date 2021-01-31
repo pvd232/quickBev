@@ -32,6 +32,7 @@ depends-top-level:
 - "UITableViewController"
 - !private "fatalError"
 - !private "navigationController"
+- !private "print"
 depends-member:
 - !private ["9Alamofire0A8ExtendedP", "count"]
 - !private ["9Alamofire0A8ExtendedP", "subscript"]
@@ -48,6 +49,7 @@ depends-member:
 - !private ["SK", "name"]
 - !private ["SK", "row"]
 - !private ["SK", "subscript"]
+- !private ["6Drinkz8BusinessC", "drinks"]
 - !private ["So15CALayerDelegateP", "backgroundColor"]
 - !private ["So15CALayerDelegateP", "dequeueReusableCell"]
 - !private ["So15CALayerDelegateP", "drinkImageView"]
@@ -70,12 +72,14 @@ depends-member:
 - !private ["s7CVarArgP", "DrinkViewController"]
 - !private ["s7CVarArgP", "UIImage"]
 - ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "allObjects"]
 - !private ["s7CVarArgP", "backgroundColor"]
 - !private ["s7CVarArgP", "copy"]
 - !private ["s7CVarArgP", "count"]
 - !private ["s7CVarArgP", "dequeueReusableCell"]
 - !private ["s7CVarArgP", "detail"]
 - !private ["s7CVarArgP", "drinkImageView"]
+- !private ["s7CVarArgP", "drinks"]
 - !private ["s7CVarArgP", "fatalError"]
 - !private ["s7CVarArgP", "frame"]
 - !private ["s7CVarArgP", "image"]
@@ -85,6 +89,7 @@ depends-member:
 - !private ["s7CVarArgP", "name"]
 - !private ["s7CVarArgP", "navigationController"]
 - !private ["s7CVarArgP", "navigationItem"]
+- !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "pushViewController"]
 - !private ["s7CVarArgP", "register"]
 - !private ["s7CVarArgP", "setHidesBackButton"]
@@ -94,11 +99,13 @@ depends-member:
 - !private ["s7CVarArgP", "tableView"]
 - !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "translatesAutoresizingMaskIntoConstraints"]
-- !private ["s7CVarArgP", "userBarDrinks"]
+- !private ["s7CVarArgP", "userBusiness"]
+- !private ["s7CVarArgP", "userBusinessDrinks"]
 - !private ["s7CVarArgP", "view"]
 - !private ["s7CVarArgP", "viewDidLoad"]
 - !private ["6Drinkz12CheckoutCartC", "shared"]
-- !private ["6Drinkz12CheckoutCartC", "userBarDrinks"]
+- !private ["6Drinkz12CheckoutCartC", "userBusiness"]
+- !private ["6Drinkz12CheckoutCartC", "userBusinessDrinks"]
 - !private ["Sl", ""]
 - !private ["Sl", "copy"]
 - !private ["Sl", "count"]
@@ -120,12 +127,14 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "DrinkViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "UIImage"]
 - ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "allObjects"]
 - !private ["s28CustomDebugStringConvertibleP", "backgroundColor"]
 - !private ["s28CustomDebugStringConvertibleP", "copy"]
 - !private ["s28CustomDebugStringConvertibleP", "count"]
 - !private ["s28CustomDebugStringConvertibleP", "dequeueReusableCell"]
 - !private ["s28CustomDebugStringConvertibleP", "detail"]
 - !private ["s28CustomDebugStringConvertibleP", "drinkImageView"]
+- !private ["s28CustomDebugStringConvertibleP", "drinks"]
 - !private ["s28CustomDebugStringConvertibleP", "fatalError"]
 - !private ["s28CustomDebugStringConvertibleP", "frame"]
 - !private ["s28CustomDebugStringConvertibleP", "height"]
@@ -136,6 +145,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "name"]
 - !private ["s28CustomDebugStringConvertibleP", "navigationController"]
 - !private ["s28CustomDebugStringConvertibleP", "navigationItem"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "pushViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "register"]
 - !private ["s28CustomDebugStringConvertibleP", "row"]
@@ -146,9 +156,11 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "tableView"]
 - !private ["s28CustomDebugStringConvertibleP", "text"]
 - !private ["s28CustomDebugStringConvertibleP", "translatesAutoresizingMaskIntoConstraints"]
-- !private ["s28CustomDebugStringConvertibleP", "userBarDrinks"]
+- !private ["s28CustomDebugStringConvertibleP", "userBusiness"]
+- !private ["s28CustomDebugStringConvertibleP", "userBusinessDrinks"]
 - !private ["s28CustomDebugStringConvertibleP", "view"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- !private ["s17CustomReflectableP", "allObjects"]
 - !private ["s17CustomReflectableP", "backgroundColor"]
 - !private ["s17CustomReflectableP", "copy"]
 - !private ["s17CustomReflectableP", "count"]
@@ -166,12 +178,14 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "DrinkViewController"]
 - !private ["s23CustomStringConvertibleP", "UIImage"]
 - ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "allObjects"]
 - !private ["s23CustomStringConvertibleP", "backgroundColor"]
 - !private ["s23CustomStringConvertibleP", "copy"]
 - !private ["s23CustomStringConvertibleP", "count"]
 - !private ["s23CustomStringConvertibleP", "dequeueReusableCell"]
 - !private ["s23CustomStringConvertibleP", "detail"]
 - !private ["s23CustomStringConvertibleP", "drinkImageView"]
+- !private ["s23CustomStringConvertibleP", "drinks"]
 - !private ["s23CustomStringConvertibleP", "fatalError"]
 - !private ["s23CustomStringConvertibleP", "frame"]
 - !private ["s23CustomStringConvertibleP", "image"]
@@ -181,6 +195,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "name"]
 - !private ["s23CustomStringConvertibleP", "navigationController"]
 - !private ["s23CustomStringConvertibleP", "navigationItem"]
+- !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "pushViewController"]
 - !private ["s23CustomStringConvertibleP", "register"]
 - !private ["s23CustomStringConvertibleP", "row"]
@@ -191,7 +206,8 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "tableView"]
 - !private ["s23CustomStringConvertibleP", "text"]
 - !private ["s23CustomStringConvertibleP", "translatesAutoresizingMaskIntoConstraints"]
-- !private ["s23CustomStringConvertibleP", "userBarDrinks"]
+- !private ["s23CustomStringConvertibleP", "userBusiness"]
+- !private ["s23CustomStringConvertibleP", "userBusinessDrinks"]
 - !private ["s23CustomStringConvertibleP", "view"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
 - !private ["10Foundation12DataProtocolP", ""]
@@ -204,6 +220,7 @@ depends-member:
 - !private ["Se", "copy"]
 - !private ["Se", "count"]
 - !private ["Se", "detail"]
+- !private ["Se", "drinks"]
 - !private ["Se", "height"]
 - !private ["Se", "lowercased"]
 - !private ["Se", "name"]
@@ -234,6 +251,7 @@ depends-member:
 - !private ["6Drinkz28DrinkListTableViewControllerC", "navigationController"]
 - !private ["6Drinkz28DrinkListTableViewControllerC", "navigationItem"]
 - ["6Drinkz28DrinkListTableViewControllerC", "numberOfSections"]
+- !private ["6Drinkz28DrinkListTableViewControllerC", "print"]
 - ["6Drinkz28DrinkListTableViewControllerC", "tableView"]
 - !private ["6Drinkz28DrinkListTableViewControllerC", "view"]
 - ["6Drinkz28DrinkListTableViewControllerC", "viewDidLoad"]
@@ -246,6 +264,7 @@ depends-member:
 - !private ["SE", "copy"]
 - !private ["SE", "count"]
 - !private ["SE", "detail"]
+- !private ["SE", "drinks"]
 - !private ["SE", "height"]
 - !private ["SE", "lowercased"]
 - !private ["SE", "name"]
@@ -259,12 +278,14 @@ depends-member:
 - !private ["SQ", "DrinkViewController"]
 - !private ["SQ", "UIImage"]
 - ["SQ", ""]
+- !private ["SQ", "allObjects"]
 - !private ["SQ", "backgroundColor"]
 - !private ["SQ", "copy"]
 - !private ["SQ", "count"]
 - !private ["SQ", "dequeueReusableCell"]
 - !private ["SQ", "detail"]
 - !private ["SQ", "drinkImageView"]
+- !private ["SQ", "drinks"]
 - !private ["SQ", "fatalError"]
 - !private ["SQ", "frame"]
 - !private ["SQ", "height"]
@@ -275,6 +296,7 @@ depends-member:
 - !private ["SQ", "name"]
 - !private ["SQ", "navigationController"]
 - !private ["SQ", "navigationItem"]
+- !private ["SQ", "print"]
 - !private ["SQ", "pushViewController"]
 - !private ["SQ", "register"]
 - !private ["SQ", "row"]
@@ -285,10 +307,12 @@ depends-member:
 - !private ["SQ", "tableView"]
 - !private ["SQ", "text"]
 - !private ["SQ", "translatesAutoresizingMaskIntoConstraints"]
-- !private ["SQ", "userBarDrinks"]
+- !private ["SQ", "userBusiness"]
+- !private ["SQ", "userBusinessDrinks"]
 - !private ["SQ", "view"]
 - !private ["SQ", "viewDidLoad"]
 - !private ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "allObjects"]
 - !private ["s25ExpressibleByArrayLiteralP", "copy"]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
 - !private ["s25ExpressibleByArrayLiteralP", "detail"]
@@ -314,12 +338,14 @@ depends-member:
 - !private ["SH", "DrinkViewController"]
 - !private ["SH", "UIImage"]
 - ["SH", ""]
+- !private ["SH", "allObjects"]
 - !private ["SH", "backgroundColor"]
 - !private ["SH", "copy"]
 - !private ["SH", "count"]
 - !private ["SH", "dequeueReusableCell"]
 - !private ["SH", "detail"]
 - !private ["SH", "drinkImageView"]
+- !private ["SH", "drinks"]
 - !private ["SH", "fatalError"]
 - !private ["SH", "frame"]
 - !private ["SH", "image"]
@@ -329,6 +355,7 @@ depends-member:
 - !private ["SH", "name"]
 - !private ["SH", "navigationController"]
 - !private ["SH", "navigationItem"]
+- !private ["SH", "print"]
 - !private ["SH", "pushViewController"]
 - !private ["SH", "register"]
 - !private ["SH", "row"]
@@ -339,14 +366,17 @@ depends-member:
 - !private ["SH", "tableView"]
 - !private ["SH", "text"]
 - !private ["SH", "translatesAutoresizingMaskIntoConstraints"]
-- !private ["SH", "userBarDrinks"]
+- !private ["SH", "userBusiness"]
+- !private ["SH", "userBusinessDrinks"]
 - !private ["SH", "view"]
 - !private ["SH", "viewDidLoad"]
 - !private ["s12IdentifiableP", "copy"]
 - !private ["s12IdentifiableP", "detail"]
+- !private ["s12IdentifiableP", "drinks"]
 - !private ["s12IdentifiableP", "name"]
 - !private ["s12IdentifiableP", "shared"]
-- !private ["s12IdentifiableP", "userBarDrinks"]
+- !private ["s12IdentifiableP", "userBusiness"]
+- !private ["s12IdentifiableP", "userBusinessDrinks"]
 - !private ["10Foundation9IndexPathV", "row"]
 - !private ["s25LosslessStringConvertibleP", ""]
 - !private ["s25LosslessStringConvertibleP", "lowercased"]
@@ -365,10 +395,10 @@ depends-member:
 - !private ["So8NSCodingP", "Drink"]
 - !private ["So8NSCodingP", "DrinkTableViewCell"]
 - !private ["So8NSCodingP", "DrinkViewController"]
-- ["So8NSCodingP", "NSCoder"]
 - !private ["So8NSCodingP", "UIImage"]
 - ["So8NSCodingP", "UITableViewCell"]
 - ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "allObjects"]
 - !private ["So8NSCodingP", "backgroundColor"]
 - !private ["So8NSCodingP", "dequeueReusableCell"]
 - !private ["So8NSCodingP", "drinkImageView"]
@@ -382,6 +412,7 @@ depends-member:
 - !private ["So8NSCodingP", "navigationController"]
 - !private ["So8NSCodingP", "navigationItem"]
 - ["So8NSCodingP", "numberOfSections"]
+- !private ["So8NSCodingP", "print"]
 - !private ["So8NSCodingP", "pushViewController"]
 - !private ["So8NSCodingP", "register"]
 - !private ["So8NSCodingP", "registerClass"]
@@ -394,6 +425,7 @@ depends-member:
 - !private ["So8NSCodingP", "view"]
 - ["So8NSCodingP", "viewDidLoad"]
 - !private ["So9NSCopyingP", ""]
+- !private ["So9NSCopyingP", "allObjects"]
 - !private ["So9NSCopyingP", "copy"]
 - !private ["So9NSCopyingP", "detail"]
 - !private ["So9NSCopyingP", "lowercased"]
@@ -404,7 +436,6 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "Drink"]
 - !private ["So26NSExtensionRequestHandlingP", "DrinkTableViewCell"]
 - !private ["So26NSExtensionRequestHandlingP", "DrinkViewController"]
-- ["So26NSExtensionRequestHandlingP", "NSCoder"]
 - !private ["So26NSExtensionRequestHandlingP", "UIImage"]
 - ["So26NSExtensionRequestHandlingP", "UITableViewCell"]
 - ["So26NSExtensionRequestHandlingP", ""]
@@ -413,15 +444,19 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "navigationController"]
 - !private ["So26NSExtensionRequestHandlingP", "navigationItem"]
 - ["So26NSExtensionRequestHandlingP", "numberOfSections"]
+- !private ["So26NSExtensionRequestHandlingP", "print"]
 - !private ["So26NSExtensionRequestHandlingP", "pushViewController"]
 - ["So26NSExtensionRequestHandlingP", "tableView"]
 - !private ["So26NSExtensionRequestHandlingP", "view"]
 - ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- !private ["So17NSFastEnumerationP", "allObjects"]
 - !private ["So20NSFetchRequestResultP", "copy"]
 - !private ["So20NSFetchRequestResultP", "detail"]
+- !private ["So20NSFetchRequestResultP", "drinks"]
 - !private ["So20NSFetchRequestResultP", "name"]
 - !private ["So20NSFetchRequestResultP", "shared"]
-- !private ["So20NSFetchRequestResultP", "userBarDrinks"]
+- !private ["So20NSFetchRequestResultP", "userBusiness"]
+- !private ["So20NSFetchRequestResultP", "userBusinessDrinks"]
 - !private ["So21NSItemProviderReadingP", "init"]
 - !private ["So21NSItemProviderReadingP", "lowercased"]
 - !private ["So21NSItemProviderReadingP", "systemBackground"]
@@ -431,9 +466,12 @@ depends-member:
 - ["So15NSManagedObjectC", ""]
 - !private ["So15NSManagedObjectC", "copy"]
 - !private ["So15NSManagedObjectC", "detail"]
+- !private ["So15NSManagedObjectC", "drinks"]
 - !private ["So15NSManagedObjectC", "name"]
 - !private ["So15NSManagedObjectC", "shared"]
-- !private ["So15NSManagedObjectC", "userBarDrinks"]
+- !private ["So15NSManagedObjectC", "userBusiness"]
+- !private ["So15NSManagedObjectC", "userBusinessDrinks"]
+- !private ["So16NSMutableCopyingP", "allObjects"]
 - !private ["So16NSMutableCopyingP", "lowercased"]
 - ["So8NSObjectC", "CGFloat"]
 - !private ["So8NSObjectC", "CheckoutCart"]
@@ -447,22 +485,17 @@ depends-member:
 - ["So8NSObjectC", "UITableView"]
 - ["So8NSObjectC", "UITableViewCell"]
 - ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "allObjects"]
 - !private ["So8NSObjectC", "backgroundColor"]
 - !private ["So8NSObjectC", "copy"]
 - !private ["So8NSObjectC", "dequeueReusableCell"]
 - !private ["So8NSObjectC", "detail"]
 - !private ["So8NSObjectC", "drinkImageView"]
+- !private ["So8NSObjectC", "drinks"]
 - !private ["So8NSObjectC", "fatalError"]
 - !private ["So8NSObjectC", "frame"]
-- !private ["So8NSObjectC", "frameForAlignmentRect"]
 - !private ["So8NSObjectC", "image"]
-- !private ["So8NSObjectC", "imageNamed"]
-- !private ["So8NSObjectC", "imageWithCGImage"]
-- !private ["So8NSObjectC", "imageWithCIImage"]
-- !private ["So8NSObjectC", "imageWithContentsOfFile"]
-- !private ["So8NSObjectC", "imageWithData"]
 - ["So8NSObjectC", "init"]
-- !private ["So8NSObjectC", "jpegData"]
 - !private ["So8NSObjectC", "lowercaseStringWithLocale"]
 - !private ["So8NSObjectC", "lowercased"]
 - !private ["So8NSObjectC", "miscellaneousText"]
@@ -470,7 +503,7 @@ depends-member:
 - !private ["So8NSObjectC", "navigationController"]
 - !private ["So8NSObjectC", "navigationItem"]
 - ["So8NSObjectC", "numberOfSections"]
-- !private ["So8NSObjectC", "pngData"]
+- !private ["So8NSObjectC", "print"]
 - !private ["So8NSObjectC", "pushViewController"]
 - !private ["So8NSObjectC", "register"]
 - !private ["So8NSObjectC", "registerClass"]
@@ -478,37 +511,30 @@ depends-member:
 - !private ["So8NSObjectC", "setHidesBackButton"]
 - !private ["So8NSObjectC", "shared"]
 - !private ["So8NSObjectC", "systemBackground"]
-- !private ["So8NSObjectC", "systemImageNamed"]
 - ["So8NSObjectC", "tableView"]
 - !private ["So8NSObjectC", "text"]
 - !private ["So8NSObjectC", "translatesAutoresizingMaskIntoConstraints"]
-- !private ["So8NSObjectC", "userBarDrinks"]
+- !private ["So8NSObjectC", "userBusiness"]
+- !private ["So8NSObjectC", "userBusinessDrinks"]
 - !private ["So8NSObjectC", "view"]
 - ["So8NSObjectC", "viewDidLoad"]
 - ["So8NSObjectP", "CGFloat"]
 - !private ["So8NSObjectP", "CheckoutCart"]
 - !private ["So8NSObjectP", "DrinkTableViewCell"]
 - !private ["So8NSObjectP", "DrinkViewController"]
-- ["So8NSObjectP", "NSCoder"]
 - !private ["So8NSObjectP", "UIImage"]
-- ["So8NSObjectP", "UITableViewCell"]
 - ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "allObjects"]
 - !private ["So8NSObjectP", "backgroundColor"]
 - !private ["So8NSObjectP", "copy"]
 - !private ["So8NSObjectP", "dequeueReusableCell"]
 - !private ["So8NSObjectP", "detail"]
 - !private ["So8NSObjectP", "drinkImageView"]
+- !private ["So8NSObjectP", "drinks"]
 - !private ["So8NSObjectP", "fatalError"]
 - !private ["So8NSObjectP", "frame"]
-- !private ["So8NSObjectP", "frameForAlignmentRect"]
 - !private ["So8NSObjectP", "image"]
-- !private ["So8NSObjectP", "imageNamed"]
-- !private ["So8NSObjectP", "imageWithCGImage"]
-- !private ["So8NSObjectP", "imageWithCIImage"]
-- !private ["So8NSObjectP", "imageWithContentsOfFile"]
-- !private ["So8NSObjectP", "imageWithData"]
 - ["So8NSObjectP", "init"]
-- !private ["So8NSObjectP", "jpegData"]
 - !private ["So8NSObjectP", "lowercaseStringWithLocale"]
 - !private ["So8NSObjectP", "lowercased"]
 - !private ["So8NSObjectP", "miscellaneousText"]
@@ -516,7 +542,7 @@ depends-member:
 - !private ["So8NSObjectP", "navigationController"]
 - !private ["So8NSObjectP", "navigationItem"]
 - ["So8NSObjectP", "numberOfSections"]
-- !private ["So8NSObjectP", "pngData"]
+- !private ["So8NSObjectP", "print"]
 - !private ["So8NSObjectP", "pushViewController"]
 - !private ["So8NSObjectP", "register"]
 - !private ["So8NSObjectP", "registerClass"]
@@ -524,23 +550,27 @@ depends-member:
 - !private ["So8NSObjectP", "setHidesBackButton"]
 - !private ["So8NSObjectP", "shared"]
 - !private ["So8NSObjectP", "systemBackground"]
-- !private ["So8NSObjectP", "systemImageNamed"]
 - ["So8NSObjectP", "tableView"]
 - !private ["So8NSObjectP", "text"]
 - !private ["So8NSObjectP", "translatesAutoresizingMaskIntoConstraints"]
-- !private ["So8NSObjectP", "userBarDrinks"]
+- !private ["So8NSObjectP", "userBusiness"]
+- !private ["So8NSObjectP", "userBusinessDrinks"]
 - !private ["So8NSObjectP", "view"]
 - ["So8NSObjectP", "viewDidLoad"]
 - !private ["So14NSSecureCodingP", ""]
+- !private ["So14NSSecureCodingP", "allObjects"]
 - !private ["So14NSSecureCodingP", "init"]
 - !private ["So14NSSecureCodingP", "lowercased"]
 - !private ["So14NSSecureCodingP", "systemBackground"]
+- !private ["So5NSSetC", "allObjects"]
 - !private ["So8NSStringC", "lowercased"]
 - !private ["7Combine16ObservableObjectP", "copy"]
 - !private ["7Combine16ObservableObjectP", "detail"]
+- !private ["7Combine16ObservableObjectP", "drinks"]
 - !private ["7Combine16ObservableObjectP", "name"]
 - !private ["7Combine16ObservableObjectP", "shared"]
-- !private ["7Combine16ObservableObjectP", "userBarDrinks"]
+- !private ["7Combine16ObservableObjectP", "userBusiness"]
+- !private ["7Combine16ObservableObjectP", "userBusinessDrinks"]
 - !private ["Sq", "backgroundColor"]
 - !private ["Sq", "register"]
 - !private ["Sq", "systemBackground"]
@@ -561,7 +591,10 @@ depends-member:
 - !private ["Sm", "subscript"]
 - !private ["10Foundation20ReferenceConvertibleP", "row"]
 - !private ["6Drinkz11RoundButtonC", ""]
+- !private ["ST", "Element"]
+- !private ["ST", "Iterator"]
 - !private ["ST", ""]
+- !private ["ST", "allObjects"]
 - !private ["ST", "copy"]
 - !private ["ST", "count"]
 - !private ["ST", "detail"]
@@ -606,7 +639,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "Drink"]
 - !private ["So21UIAppearanceContainerP", "DrinkTableViewCell"]
 - !private ["So21UIAppearanceContainerP", "DrinkViewController"]
-- ["So21UIAppearanceContainerP", "NSCoder"]
 - !private ["So21UIAppearanceContainerP", "UIImage"]
 - ["So21UIAppearanceContainerP", "UITableViewCell"]
 - ["So21UIAppearanceContainerP", ""]
@@ -622,6 +654,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "navigationController"]
 - !private ["So21UIAppearanceContainerP", "navigationItem"]
 - ["So21UIAppearanceContainerP", "numberOfSections"]
+- !private ["So21UIAppearanceContainerP", "print"]
 - !private ["So21UIAppearanceContainerP", "pushViewController"]
 - !private ["So21UIAppearanceContainerP", "register"]
 - !private ["So21UIAppearanceContainerP", "registerClass"]
@@ -638,7 +671,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "Drink"]
 - !private ["So18UIContentContainerP", "DrinkTableViewCell"]
 - !private ["So18UIContentContainerP", "DrinkViewController"]
-- ["So18UIContentContainerP", "NSCoder"]
 - !private ["So18UIContentContainerP", "UIImage"]
 - ["So18UIContentContainerP", "UITableViewCell"]
 - ["So18UIContentContainerP", ""]
@@ -647,6 +679,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "navigationController"]
 - !private ["So18UIContentContainerP", "navigationItem"]
 - ["So18UIContentContainerP", "numberOfSections"]
+- !private ["So18UIContentContainerP", "print"]
 - !private ["So18UIContentContainerP", "pushViewController"]
 - ["So18UIContentContainerP", "tableView"]
 - !private ["So18UIContentContainerP", "view"]
@@ -686,7 +719,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "Drink"]
 - !private ["So18UIFocusEnvironmentP", "DrinkTableViewCell"]
 - !private ["So18UIFocusEnvironmentP", "DrinkViewController"]
-- ["So18UIFocusEnvironmentP", "NSCoder"]
 - !private ["So18UIFocusEnvironmentP", "UIImage"]
 - ["So18UIFocusEnvironmentP", "UITableViewCell"]
 - ["So18UIFocusEnvironmentP", ""]
@@ -702,6 +734,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "navigationController"]
 - !private ["So18UIFocusEnvironmentP", "navigationItem"]
 - ["So18UIFocusEnvironmentP", "numberOfSections"]
+- !private ["So18UIFocusEnvironmentP", "print"]
 - !private ["So18UIFocusEnvironmentP", "pushViewController"]
 - !private ["So18UIFocusEnvironmentP", "register"]
 - !private ["So18UIFocusEnvironmentP", "registerClass"]
@@ -769,16 +802,13 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "Drink"]
 - !private ["So30UIPasteConfigurationSupportingP", "DrinkTableViewCell"]
 - !private ["So30UIPasteConfigurationSupportingP", "DrinkViewController"]
-- ["So30UIPasteConfigurationSupportingP", "NSCoder"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIImage"]
-- ["So30UIPasteConfigurationSupportingP", "UITableViewCell"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "backgroundColor"]
 - !private ["So30UIPasteConfigurationSupportingP", "dequeueReusableCell"]
 - !private ["So30UIPasteConfigurationSupportingP", "drinkImageView"]
 - !private ["So30UIPasteConfigurationSupportingP", "fatalError"]
 - !private ["So30UIPasteConfigurationSupportingP", "frame"]
-- !private ["So30UIPasteConfigurationSupportingP", "frameForAlignmentRect"]
 - !private ["So30UIPasteConfigurationSupportingP", "image"]
 - ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "miscellaneousText"]
@@ -786,6 +816,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "navigationController"]
 - !private ["So30UIPasteConfigurationSupportingP", "navigationItem"]
 - ["So30UIPasteConfigurationSupportingP", "numberOfSections"]
+- !private ["So30UIPasteConfigurationSupportingP", "print"]
 - !private ["So30UIPasteConfigurationSupportingP", "pushViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "register"]
 - !private ["So30UIPasteConfigurationSupportingP", "registerClass"]
@@ -812,7 +843,6 @@ depends-member:
 - !private ["So11UIResponderC", "drinkImageView"]
 - !private ["So11UIResponderC", "fatalError"]
 - !private ["So11UIResponderC", "frame"]
-- !private ["So11UIResponderC", "frameForAlignmentRect"]
 - !private ["So11UIResponderC", "image"]
 - ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "miscellaneousText"]
@@ -820,6 +850,7 @@ depends-member:
 - !private ["So11UIResponderC", "navigationController"]
 - !private ["So11UIResponderC", "navigationItem"]
 - ["So11UIResponderC", "numberOfSections"]
+- !private ["So11UIResponderC", "print"]
 - !private ["So11UIResponderC", "pushViewController"]
 - !private ["So11UIResponderC", "register"]
 - !private ["So11UIResponderC", "registerClass"]
@@ -834,16 +865,13 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "Drink"]
 - !private ["So30UIResponderStandardEditActionsP", "DrinkTableViewCell"]
 - !private ["So30UIResponderStandardEditActionsP", "DrinkViewController"]
-- ["So30UIResponderStandardEditActionsP", "NSCoder"]
 - !private ["So30UIResponderStandardEditActionsP", "UIImage"]
-- ["So30UIResponderStandardEditActionsP", "UITableViewCell"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "backgroundColor"]
 - !private ["So30UIResponderStandardEditActionsP", "dequeueReusableCell"]
 - !private ["So30UIResponderStandardEditActionsP", "drinkImageView"]
 - !private ["So30UIResponderStandardEditActionsP", "fatalError"]
 - !private ["So30UIResponderStandardEditActionsP", "frame"]
-- !private ["So30UIResponderStandardEditActionsP", "frameForAlignmentRect"]
 - !private ["So30UIResponderStandardEditActionsP", "image"]
 - ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "miscellaneousText"]
@@ -851,6 +879,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "navigationController"]
 - !private ["So30UIResponderStandardEditActionsP", "navigationItem"]
 - ["So30UIResponderStandardEditActionsP", "numberOfSections"]
+- !private ["So30UIResponderStandardEditActionsP", "print"]
 - !private ["So30UIResponderStandardEditActionsP", "pushViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "register"]
 - !private ["So30UIResponderStandardEditActionsP", "registerClass"]
@@ -881,6 +910,7 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "navigationController"]
 - !private ["So20UIScrollViewDelegateP", "navigationItem"]
 - ["So20UIScrollViewDelegateP", "numberOfSections"]
+- !private ["So20UIScrollViewDelegateP", "print"]
 - ["So20UIScrollViewDelegateP", "tableView"]
 - !private ["So20UIScrollViewDelegateP", "view"]
 - ["So20UIScrollViewDelegateP", "viewDidLoad"]
@@ -893,7 +923,6 @@ depends-member:
 - !private ["So16UIStateRestoringP", "Drink"]
 - !private ["So16UIStateRestoringP", "DrinkTableViewCell"]
 - !private ["So16UIStateRestoringP", "DrinkViewController"]
-- ["So16UIStateRestoringP", "NSCoder"]
 - !private ["So16UIStateRestoringP", "UIImage"]
 - ["So16UIStateRestoringP", "UITableViewCell"]
 - ["So16UIStateRestoringP", ""]
@@ -902,6 +931,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "navigationController"]
 - !private ["So16UIStateRestoringP", "navigationItem"]
 - ["So16UIStateRestoringP", "numberOfSections"]
+- !private ["So16UIStateRestoringP", "print"]
 - !private ["So16UIStateRestoringP", "pushViewController"]
 - ["So16UIStateRestoringP", "tableView"]
 - !private ["So16UIStateRestoringP", "view"]
@@ -931,6 +961,7 @@ depends-member:
 - !private ["So21UITableViewControllerC", "navigationController"]
 - !private ["So21UITableViewControllerC", "navigationItem"]
 - ["So21UITableViewControllerC", "numberOfSections"]
+- !private ["So21UITableViewControllerC", "print"]
 - ["So21UITableViewControllerC", "tableView"]
 - !private ["So21UITableViewControllerC", "view"]
 - ["So21UITableViewControllerC", "viewDidLoad"]
@@ -948,6 +979,7 @@ depends-member:
 - !private ["So21UITableViewDataSourceP", "navigationController"]
 - !private ["So21UITableViewDataSourceP", "navigationItem"]
 - ["So21UITableViewDataSourceP", "numberOfSections"]
+- !private ["So21UITableViewDataSourceP", "print"]
 - ["So21UITableViewDataSourceP", "tableView"]
 - !private ["So21UITableViewDataSourceP", "view"]
 - ["So21UITableViewDataSourceP", "viewDidLoad"]
@@ -965,6 +997,7 @@ depends-member:
 - !private ["So19UITableViewDelegateP", "navigationController"]
 - !private ["So19UITableViewDelegateP", "navigationItem"]
 - ["So19UITableViewDelegateP", "numberOfSections"]
+- !private ["So19UITableViewDelegateP", "print"]
 - ["So19UITableViewDelegateP", "tableView"]
 - !private ["So19UITableViewDelegateP", "view"]
 - ["So19UITableViewDelegateP", "viewDidLoad"]
@@ -976,7 +1009,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "Drink"]
 - !private ["So18UITraitEnvironmentP", "DrinkTableViewCell"]
 - !private ["So18UITraitEnvironmentP", "DrinkViewController"]
-- ["So18UITraitEnvironmentP", "NSCoder"]
 - !private ["So18UITraitEnvironmentP", "UIImage"]
 - ["So18UITraitEnvironmentP", "UITableViewCell"]
 - ["So18UITraitEnvironmentP", ""]
@@ -992,6 +1024,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "navigationController"]
 - !private ["So18UITraitEnvironmentP", "navigationItem"]
 - ["So18UITraitEnvironmentP", "numberOfSections"]
+- !private ["So18UITraitEnvironmentP", "print"]
 - !private ["So18UITraitEnvironmentP", "pushViewController"]
 - !private ["So18UITraitEnvironmentP", "register"]
 - !private ["So18UITraitEnvironmentP", "registerClass"]
@@ -1006,16 +1039,13 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "Drink"]
 - !private ["So23UIUserActivityRestoringP", "DrinkTableViewCell"]
 - !private ["So23UIUserActivityRestoringP", "DrinkViewController"]
-- ["So23UIUserActivityRestoringP", "NSCoder"]
 - !private ["So23UIUserActivityRestoringP", "UIImage"]
-- ["So23UIUserActivityRestoringP", "UITableViewCell"]
 - ["So23UIUserActivityRestoringP", ""]
 - !private ["So23UIUserActivityRestoringP", "backgroundColor"]
 - !private ["So23UIUserActivityRestoringP", "dequeueReusableCell"]
 - !private ["So23UIUserActivityRestoringP", "drinkImageView"]
 - !private ["So23UIUserActivityRestoringP", "fatalError"]
 - !private ["So23UIUserActivityRestoringP", "frame"]
-- !private ["So23UIUserActivityRestoringP", "frameForAlignmentRect"]
 - !private ["So23UIUserActivityRestoringP", "image"]
 - ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "miscellaneousText"]
@@ -1023,6 +1053,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "navigationController"]
 - !private ["So23UIUserActivityRestoringP", "navigationItem"]
 - ["So23UIUserActivityRestoringP", "numberOfSections"]
+- !private ["So23UIUserActivityRestoringP", "print"]
 - !private ["So23UIUserActivityRestoringP", "pushViewController"]
 - !private ["So23UIUserActivityRestoringP", "register"]
 - !private ["So23UIUserActivityRestoringP", "registerClass"]
@@ -1062,12 +1093,12 @@ depends-member:
 - !private ["So16UIViewControllerC", "navigationController"]
 - !private ["So16UIViewControllerC", "navigationItem"]
 - ["So16UIViewControllerC", "numberOfSections"]
+- !private ["So16UIViewControllerC", "print"]
 - !private ["So16UIViewControllerC", "pushViewController"]
 - ["So16UIViewControllerC", "tableView"]
 - !private ["So16UIViewControllerC", "view"]
 - ["So16UIViewControllerC", "viewDidLoad"]
 - !private ["9Alamofire14URLConvertibleP", "lowercased"]
-- !private ["6Drinkz14UsesAutoLayoutV", "subscript"]
 - !private ["s14_ArrayProtocolP", "copy"]
 - !private ["s14_ArrayProtocolP", "count"]
 - !private ["s14_ArrayProtocolP", "detail"]
@@ -1093,6 +1124,7 @@ depends-member:
 - !private ["s19_HasContiguousBytesP", "count"]
 - !private ["s19_HasContiguousBytesP", "lowercased"]
 - !private ["s19_HasContiguousBytesP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "allObjects"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "lowercased"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
@@ -1101,11 +1133,13 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DrinkViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIImage"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "allObjects"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "backgroundColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "copy"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dequeueReusableCell"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "detail"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "drinkImageView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "drinks"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "frame"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "image"]
@@ -1115,6 +1149,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationItem"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "pushViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "register"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setHidesBackButton"]
@@ -1123,7 +1158,8 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tableView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "translatesAutoresizingMaskIntoConstraints"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "userBarDrinks"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "userBusiness"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "userBusinessDrinks"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "view"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CheckoutCart"]
@@ -1131,11 +1167,13 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "DrinkViewController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIImage"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "allObjects"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "backgroundColor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "copy"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dequeueReusableCell"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "detail"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "drinkImageView"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "drinks"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "fatalError"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "frame"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "image"]
@@ -1145,6 +1183,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "name"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "navigationController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "navigationItem"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "print"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "pushViewController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "register"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setHidesBackButton"]
@@ -1153,7 +1192,8 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "tableView"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "text"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "translatesAutoresizingMaskIntoConstraints"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "userBarDrinks"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "userBusiness"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "userBusinessDrinks"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "view"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewDidLoad"]
 - !private ["s21_ObjectiveCBridgeableP", ""]
@@ -1183,6 +1223,7 @@ depends-nominal:
 - !private "Sa"
 - !private "s10ArraySliceV"
 - !private "SK"
+- !private "6Drinkz8BusinessC"
 - !private "So15CALayerDelegateP"
 - !private "So6CGRectV"
 - !private "8CloudKit21CKRecordValueProtocolP"
@@ -1220,6 +1261,7 @@ depends-nominal:
 - "So8NSCodingP"
 - !private "So9NSCopyingP"
 - "So26NSExtensionRequestHandlingP"
+- !private "So17NSFastEnumerationP"
 - !private "So20NSFetchRequestResultP"
 - !private "So21NSItemProviderReadingP"
 - !private "So21NSItemProviderWritingP"
@@ -1228,6 +1270,7 @@ depends-nominal:
 - "So8NSObjectC"
 - "So8NSObjectP"
 - !private "So14NSSecureCodingP"
+- !private "So5NSSetC"
 - !private "So8NSStringC"
 - !private "7Combine16ObservableObjectP"
 - !private "Sq"
@@ -1285,7 +1328,6 @@ depends-nominal:
 - "So6UIViewC"
 - "So16UIViewControllerC"
 - !private "9Alamofire14URLConvertibleP"
-- !private "6Drinkz14UsesAutoLayoutV"
 - !private "s14_ArrayProtocolP"
 - !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
@@ -1313,8 +1355,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -1334,47 +1376,47 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/MapKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Pods/TweetNacl/Sources/module.map"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/TweetNacl/Sources/module.map"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
-- "/Users/machina/Desktop/CodingProjects/quickBev/quickBevFrontend/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"

@@ -12,7 +12,7 @@ import Alamofire
 class TabCreationViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate{
     
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var barTextField: UITextField!
+    @IBOutlet weak var businessTextField: UITextField!
     @IBOutlet weak var dateAndTimeTextField: UITextField!
     @IBOutlet weak var fundraisingGoalTextField: UITextField!
     @IBOutlet weak var minimumContributionTextField: UITextField!
@@ -25,7 +25,7 @@ class TabCreationViewController: UIViewController, UITextFieldDelegate, UITextVi
         super.viewDidLoad()
         let attributes = [NSAttributedString.Key.font: UIFont(name: "Charter-Roman", size: 20)!]
         self.navigationController!.navigationBar.standardAppearance.titleTextAttributes  = attributes
-        barTextField.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(launchBarArrayViewController)))
+        businessTextField.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(launchBusinessArrayViewController)))
         
         descriptionTextField.addLeftBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
         descriptionTextField.addRightBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
@@ -46,7 +46,7 @@ class TabCreationViewController: UIViewController, UITextFieldDelegate, UITextVi
     }
     
     @objc func submitTab(_ sender: RoundButton) {
-        if nameTextField.text! == "" || barTextField.text! == "" || dateAndTimeTextField.text! == "" || fundraisingGoalTextField.text! == "" || fundraisingGoalTextField.text! == "" || minimumContributionTextField.text! == "" || descriptionTextField.text! == ""  {
+        if nameTextField.text! == "" || businessTextField.text! == "" || dateAndTimeTextField.text! == "" || fundraisingGoalTextField.text! == "" || fundraisingGoalTextField.text! == "" || minimumContributionTextField.text! == "" || descriptionTextField.text! == ""  {
             self.alertError()
         }
         else {
@@ -81,9 +81,9 @@ class TabCreationViewController: UIViewController, UITextFieldDelegate, UITextVi
         navigationController?.navigationBar.isHidden = false
         self.createYourTabStackView.isHidden = false
     }
-    @objc func launchBarArrayViewController () {
-        if let viewController = storyboard?.instantiateViewController(identifier: "BarArrayViewController") as? BarArrayViewController {
-            viewController.barPickerDelegate = self
+    @objc func launchBusinessArrayViewController () {
+        if let viewController = storyboard?.instantiateViewController(identifier: "BusinessArrayViewController") as? BusinessArrayViewController {
+            viewController.businessPickerDelegate = self
             let transition:CATransition = CATransition()
             transition.duration = 0.65
             transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.default)
@@ -165,7 +165,8 @@ extension UITextField {
         }
         self.inputView = datePicker //3
         
-        // Create a toolbar and assign it to inputAccessoryView
+        // Create a toolBar and assign it to inputAccessoryView
+        
         let toolBar = UIToolbar(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: 44.0)) //4
         let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil) //5
         let cancel = UIBarButtonItem(title: "Cancel", style: .plain, target: nil, action: #selector(tapCancel)) // 6
@@ -193,10 +194,10 @@ extension TabCreationViewController {
         present(alertCtrl, animated: true, completion: nil)
     }
 }
-extension TabCreationViewController:BarPickerProtocol {
-    func selectedBarHandler(_ selectedBar: Bar) {
-        tab!.barId = selectedBar.id
-        tab!.address = selectedBar.address
-        self.barTextField.text! = selectedBar.name!
+extension TabCreationViewController:BusinessPickerProtocol {
+    func selectedBusinessHandler(_ selectedBusiness: Business) {
+        tab!.businessId = selectedBusiness.id
+        tab!.address = selectedBusiness.address
+        self.businessTextField.text! = selectedBusiness.name!
     }
 }

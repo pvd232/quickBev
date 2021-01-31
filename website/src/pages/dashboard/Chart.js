@@ -10,32 +10,32 @@ import {
 } from "recharts";
 import Title from "./Title";
 
-// Generate Sales Data
-function createData(time, amount) {
-  return { time, amount };
-}
-
-const data = [
-  createData("00:00", 0),
-  createData("03:00", 300),
-  createData("06:00", 600),
-  createData("09:00", 800),
-  createData("12:00", 1500),
-  createData("15:00", 2000),
-  createData("18:00", 2400),
-  createData("21:00", 2400),
-  createData("24:00", undefined),
-];
-
-export default function Chart() {
+export default function Chart(props) {
   const theme = useTheme();
+  const data = props.data;
+  console.log("data", data);
+  // Generate Sales Data
+  const createData = (time, amount) => {
+    return { time, amount };
+  };
+  const dataFormatted = [
+    createData(`${new Date().getMonth()}/${new Date().getDate()}`, 0),
+    // createData("03:00", 300),
+    // createData("06:00", 600),
+    // createData("09:00", 800),
+    // createData("12:00", 1500),
+    // createData("15:00", 2000),
+    // createData("18:00", 2400),
+    // createData("21:00", 2400),
+    createData("24:00", undefined),
+  ];
 
   return (
     <React.Fragment>
       <Title>Today</Title>
       <ResponsiveContainer>
         <LineChart
-          data={data}
+          data={dataFormatted}
           margin={{
             top: 16,
             right: 16,
@@ -43,8 +43,8 @@ export default function Chart() {
             left: 24,
           }}
         >
-          <XAxis dataKey="time" stroke={theme.palette.text.secondary} />
-          <YAxis stroke={theme.palette.text.secondary}>
+          <XAxis dataKey="time" stroke={theme.palette.text.secondary} dy={10} />
+          <YAxis stroke={theme.palette.text.secondary} dx={-5}>
             <Label
               angle={270}
               position="left"
