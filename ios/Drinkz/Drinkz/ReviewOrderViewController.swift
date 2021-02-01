@@ -254,9 +254,10 @@ extension ReviewOrderViewController: STPPaymentContextDelegate {
         }
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Okay", style: .cancel) { action in
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let nextViewController = storyboard.instantiateViewController(identifier: "OrderConfirmationViewController") as? OrderConfirmationViewController
-            self.navigationController?.setViewControllers([nextViewController!], animated: true)
+            self.navigationController?.setViewControllers([HomePageViewController()], animated: true)
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let nextViewController = storyboard.instantiateViewController(identifier: "OrderConfirmationViewController") as? OrderConfirmationViewController
+//            self.navigationController?.setViewControllers([nextViewController!], animated: true)
         })
         self.present(alertController, animated: true, completion: nil)
         }

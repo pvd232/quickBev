@@ -406,21 +406,23 @@ depends-member:
 - !private ["s30KeyedDecodingContainerProtocolP", "decode"]
 - !private ["s22KeyedEncodingContainerV", "encode"]
 - !private ["s30KeyedEncodingContainerProtocolP", "encode"]
-- !private ["So8NSCodingP", ""]
+- ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "init"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "name"]
 - !private ["So17NSFastEnumerationP", "init"]
+- ["So20NSFetchRequestResultP", "CheckoutCart"]
 - ["So20NSFetchRequestResultP", "CodingKey"]
 - !private ["So20NSFetchRequestResultP", "CodingKeys"]
 - !private ["So20NSFetchRequestResultP", "CoreDataManager"]
 - !private ["So20NSFetchRequestResultP", "Date"]
 - ["So20NSFetchRequestResultP", "Decoder"]
 - !private ["So20NSFetchRequestResultP", "Double"]
-- !private ["So20NSFetchRequestResultP", "Drink"]
+- ["So20NSFetchRequestResultP", "Drink"]
 - ["So20NSFetchRequestResultP", "Encoder"]
 - !private ["So20NSFetchRequestResultP", "NSSet"]
 - !private ["So20NSFetchRequestResultP", "Set"]
+- ["So20NSFetchRequestResultP", "String"]
 - !private ["So20NSFetchRequestResultP", "UUID"]
 - !private ["So20NSFetchRequestResultP", "User"]
 - ["So20NSFetchRequestResultP", ""]
@@ -515,16 +517,18 @@ depends-member:
 - !private ["So8NSObjectC", "tipPercentage"]
 - !private ["So8NSObjectC", "user"]
 - !private ["So8NSObjectC", "viewContext"]
+- ["So8NSObjectP", "CheckoutCart"]
 - ["So8NSObjectP", "CodingKey"]
 - !private ["So8NSObjectP", "CodingKeys"]
 - !private ["So8NSObjectP", "CoreDataManager"]
 - !private ["So8NSObjectP", "Date"]
 - ["So8NSObjectP", "Decoder"]
 - !private ["So8NSObjectP", "Double"]
-- !private ["So8NSObjectP", "Drink"]
+- ["So8NSObjectP", "Drink"]
 - ["So8NSObjectP", "Encoder"]
 - !private ["So8NSObjectP", "NSSet"]
 - !private ["So8NSObjectP", "Set"]
+- ["So8NSObjectP", "String"]
 - !private ["So8NSObjectP", "UUID"]
 - !private ["So8NSObjectP", "User"]
 - ["So8NSObjectP", ""]
@@ -749,7 +753,7 @@ depends-nominal:
 - !private "s30KeyedDecodingContainerProtocolP"
 - !private "s22KeyedEncodingContainerV"
 - !private "s30KeyedEncodingContainerProtocolP"
-- !private "So8NSCodingP"
+- "So8NSCodingP"
 - !private "So9NSCopyingP"
 - !private "So17NSFastEnumerationP"
 - "So20NSFetchRequestResultP"

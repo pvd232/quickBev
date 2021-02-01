@@ -7,13 +7,13 @@ provides-member:
 - ["6Drinkz12CheckoutCartC", "fetchRequest"]
 - ["6Drinkz12CheckoutCartC", "businessAddressId"]
 - ["6Drinkz12CheckoutCartC", "cost"]
-- ["6Drinkz12CheckoutCartC", "subtotal"]
-- ["6Drinkz12CheckoutCartC", "tipPercentage"]
-- ["6Drinkz12CheckoutCartC", "tipAmount"]
-- ["6Drinkz12CheckoutCartC", "userId"]
-- ["6Drinkz12CheckoutCartC", "stripeId"]
-- ["6Drinkz12CheckoutCartC", "salesTax"]
 - ["6Drinkz12CheckoutCartC", "orderingProcessViewControllerIndex"]
+- ["6Drinkz12CheckoutCartC", "salesTax"]
+- ["6Drinkz12CheckoutCartC", "stripeId"]
+- ["6Drinkz12CheckoutCartC", "subtotal"]
+- ["6Drinkz12CheckoutCartC", "tipAmount"]
+- ["6Drinkz12CheckoutCartC", "tipPercentage"]
+- ["6Drinkz12CheckoutCartC", "userId"]
 - ["6Drinkz12CheckoutCartC", "business"]
 - ["6Drinkz12CheckoutCartC", "drinks"]
 - ["6Drinkz12CheckoutCartC", "user"]
@@ -51,6 +51,7 @@ depends-top-level:
 - "Double"
 - "Drink"
 - "Identifiable"
+- "Int16"
 - "NSFetchRequest"
 - "NSSet"
 - "String"
@@ -69,6 +70,7 @@ depends-member:
 - ["6Drinkz12CheckoutCartC", "Double"]
 - ["6Drinkz12CheckoutCartC", "Drink"]
 - ["6Drinkz12CheckoutCartC", "ID"]
+- ["6Drinkz12CheckoutCartC", "Int16"]
 - ["6Drinkz12CheckoutCartC", "NSFetchRequest"]
 - ["6Drinkz12CheckoutCartC", "NSSet"]
 - ["6Drinkz12CheckoutCartC", "String"]
@@ -125,6 +127,7 @@ depends-member:
 - ["s12IdentifiableP", ""]
 - ["s12IdentifiableP", "_Default_ID"]
 - ["s12IdentifiableP", "id"]
+- ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "init"]
 - !private ["So9NSCopyingP", "fetchRequestWithEntityName"]
 - !private ["So9NSCopyingP", "init"]
@@ -132,8 +135,12 @@ depends-member:
 - ["So20NSFetchRequestResultP", "Business"]
 - ["So20NSFetchRequestResultP", "Default_ID"]
 - ["So20NSFetchRequestResultP", "Double"]
+- ["So20NSFetchRequestResultP", "Drink"]
 - ["So20NSFetchRequestResultP", "ID"]
+- ["So20NSFetchRequestResultP", "Int16"]
 - ["So20NSFetchRequestResultP", "NSFetchRequest"]
+- ["So20NSFetchRequestResultP", "NSSet"]
+- ["So20NSFetchRequestResultP", "String"]
 - ["So20NSFetchRequestResultP", "User"]
 - ["So20NSFetchRequestResultP", "_Default_ID"]
 - ["So20NSFetchRequestResultP", "addToBusiness"]
@@ -161,6 +168,7 @@ depends-member:
 - ["So15NSManagedObjectC", "Double"]
 - ["So15NSManagedObjectC", "Drink"]
 - ["So15NSManagedObjectC", "ID"]
+- ["So15NSManagedObjectC", "Int16"]
 - ["So15NSManagedObjectC", "NSFetchRequest"]
 - ["So15NSManagedObjectC", "NSSet"]
 - ["So15NSManagedObjectC", "String"]
@@ -192,6 +200,7 @@ depends-member:
 - ["So8NSObjectC", "Double"]
 - ["So8NSObjectC", "Drink"]
 - ["So8NSObjectC", "ID"]
+- ["So8NSObjectC", "Int16"]
 - ["So8NSObjectC", "NSFetchRequest"]
 - ["So8NSObjectC", "NSSet"]
 - ["So8NSObjectC", "String"]
@@ -219,11 +228,14 @@ depends-member:
 - ["So8NSObjectC", "user"]
 - ["So8NSObjectC", "userBusiness"]
 - ["So8NSObjectC", "userId"]
+- ["So8NSObjectP", "Business"]
 - ["So8NSObjectP", "Default_ID"]
 - ["So8NSObjectP", "Double"]
+- ["So8NSObjectP", "Drink"]
 - ["So8NSObjectP", "ID"]
+- ["So8NSObjectP", "Int16"]
 - ["So8NSObjectP", "NSFetchRequest"]
-- ["So8NSObjectP", "User"]
+- ["So8NSObjectP", "NSSet"]
 - ["So8NSObjectP", ""]
 - ["So8NSObjectP", "_Default_ID"]
 - ["So8NSObjectP", "addToBusiness"]
@@ -276,7 +288,7 @@ depends-nominal:
 - "SQ"
 - "SH"
 - "s12IdentifiableP"
-- !private "So8NSCodingP"
+- "So8NSCodingP"
 - !private "So9NSCopyingP"
 - !private "So14NSFetchRequestC"
 - "So20NSFetchRequestResultP"
@@ -390,4 +402,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "ec97164848e81d4f6102f3ce2451107a"
+interface-hash: "5bdc2a7865f255a374840d3cf8e45b1e"

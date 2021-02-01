@@ -1,5 +1,5 @@
-import React from "react";
-import { useTheme } from "@material-ui/core/styles";
+import { React, useState } from "react";
+import { useTheme, makeStyles } from "@material-ui/core/styles";
 import {
   LineChart,
   Line,
@@ -10,9 +10,24 @@ import {
 } from "recharts";
 import Title from "./Title";
 import { Order } from "../../Models";
-
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormHelperText from "@material-ui/core/FormHelperText";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
+const useStyles = makeStyles((theme) => ({
+  formControl: {
+    margin: theme.spacing(1),
+    width: "250px",
+  },
+  formButton: {
+    height: "fit-content",
+  },
+}));
 export default function Chart(props) {
   const theme = useTheme();
+  const [business, setBusiness] = useState("all");
+
   console.log("props.data", props.data);
   // Generate Sales Data
   var orders;
@@ -22,7 +37,11 @@ export default function Chart(props) {
   for (var i in orders) {
     console.log("order", orders[i]);
   }
-
+  const handleBusiness = (event) => {
+    const value = event.target.value;
+    console.log("value", value);
+    setBusiness(value);
+  };
   const createData = (order) => {
     console.log("order", order);
     const time = order.dateTime;
@@ -30,11 +49,31 @@ export default function Chart(props) {
     const amount = order.cost;
     return { time, amount };
   };
+
+  const classes = useStyles();
+
   const dataFormatted = orders.map((order) => createData(order));
   console.log("dataFormatted", dataFormatted);
   return (
-    <React.Fragment>
+    <>
       <Title>Today</Title>
+      <FormControl variant="outlined" className={classes.formControl}>
+        <InputLabel id="demo-simple-select-outlined-label">Business</InputLabel>
+        <Select
+          labelId="demo-simple-select-outlined-label"
+          id="demo-simple-select-outlined"
+          value={business}
+          className={classes.formButton}
+          onChange={handleBusiness}
+          label="Business"
+          displayEmpty
+        >
+          <MenuItem value={"all"}>All Businesses</MenuItem>
+          <MenuItem value={10}>Ten</MenuItem>
+          <MenuItem value={20}>Twenty</MenuItem>
+          <MenuItem value={30}>Thirty</MenuItem>
+        </Select>
+      </FormControl>
       <ResponsiveContainer>
         <LineChart
           data={dataFormatted}
@@ -63,6 +102,6 @@ export default function Chart(props) {
           />
         </LineChart>
       </ResponsiveContainer>
-    </React.Fragment>
+    </>
   );
 }

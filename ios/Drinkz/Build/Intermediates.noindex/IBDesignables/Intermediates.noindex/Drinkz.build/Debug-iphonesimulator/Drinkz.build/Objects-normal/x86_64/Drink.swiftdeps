@@ -475,7 +475,7 @@ depends-member:
 - !private ["s30KeyedEncodingContainerProtocolP", "encode"]
 - !private ["s30KeyedEncodingContainerProtocolP", "nestedContainer"]
 - !private ["s25LosslessStringConvertibleP", "init"]
-- !private ["So8NSCodingP", ""]
+- ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "value"]
 - !private ["So9NSCopyingP", "AF"]
 - !private ["So9NSCopyingP", "CodingKeys"]
@@ -511,7 +511,7 @@ depends-member:
 - !private ["So20NSFetchRequestResultP", "CodingKeys"]
 - !private ["So20NSFetchRequestResultP", "CoreDataManager"]
 - ["So20NSFetchRequestResultP", "Double"]
-- !private ["So20NSFetchRequestResultP", "Drink"]
+- ["So20NSFetchRequestResultP", "Drink"]
 - !private ["So20NSFetchRequestResultP", "Int16"]
 - !private ["So20NSFetchRequestResultP", "JSONDecoder"]
 - !private ["So20NSFetchRequestResultP", "JSONSerialization"]
@@ -582,6 +582,8 @@ depends-member:
 - ["So8NSObjectC", "Encoder"]
 - !private ["So8NSObjectC", "Int16"]
 - !private ["So8NSObjectC", "JSONDecoder"]
+- !private ["So8NSObjectC", "JSONObjectWithData"]
+- !private ["So8NSObjectC", "JSONObjectWithStream"]
 - !private ["So8NSObjectC", "JSONSerialization"]
 - !private ["So8NSObjectC", "NSDictionary"]
 - ["So8NSObjectC", "NSZone"]
@@ -615,13 +617,17 @@ depends-member:
 - !private ["So8NSObjectP", "CodingKeys"]
 - !private ["So8NSObjectP", "CoreDataManager"]
 - ["So8NSObjectP", "Double"]
-- !private ["So8NSObjectP", "Drink"]
+- ["So8NSObjectP", "Drink"]
 - !private ["So8NSObjectP", "Int16"]
 - !private ["So8NSObjectP", "JSONDecoder"]
+- !private ["So8NSObjectP", "JSONObjectWithData"]
+- !private ["So8NSObjectP", "JSONObjectWithStream"]
 - !private ["So8NSObjectP", "JSONSerialization"]
+- !private ["So8NSObjectP", "NSDictionary"]
 - ["So8NSObjectP", "NSZone"]
 - !private ["So8NSObjectP", "String"]
 - !private ["So8NSObjectP", "UUID"]
+- ["So8NSObjectP", "Void"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "_findStringSwitchCase"]
 - !private ["So8NSObjectP", "businessAddressId"]
@@ -705,6 +711,9 @@ depends-member:
 - !private ["SY", "quantity"]
 - ["SY", "rawValue"]
 - ["SY", "stringValue"]
+- !private ["So20NSJSONReadingOptionsV", "ArrayLiteralElement"]
+- !private ["So20NSJSONReadingOptionsV", "Element"]
+- !private ["So20NSJSONReadingOptionsV", "init"]
 - ["9Alamofire7RequestC", ""]
 - !private ["9Alamofire7RequestC", "response"]
 - !private ["9Alamofire7RequestC", "validate"]
@@ -837,7 +846,7 @@ depends-nominal:
 - !private "s22KeyedEncodingContainerV"
 - !private "s30KeyedEncodingContainerProtocolP"
 - !private "s25LosslessStringConvertibleP"
-- !private "So8NSCodingP"
+- "So8NSCodingP"
 - "So9NSCopyingP"
 - !private "So12NSDictionaryC"
 - !private "So17NSFastEnumerationP"
@@ -853,6 +862,7 @@ depends-nominal:
 - !private "s9OptionSetP"
 - !private "Sq"
 - "SY"
+- !private "So20NSJSONReadingOptionsV"
 - "9Alamofire7RequestC"
 - !private "9Alamofire15RequestDelegateP"
 - !private "s6ResultO"
@@ -978,4 +988,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "1662b2c9bfb4e49642e7b1226ac96565"
+interface-hash: "99fb0e6757f41a3086ee7e801c52b3ea"

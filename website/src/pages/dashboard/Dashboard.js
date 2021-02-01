@@ -18,11 +18,6 @@ import Link from "@material-ui/core/Link";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
-import InputLabel from "@material-ui/core/InputLabel";
-import MenuItem from "@material-ui/core/MenuItem";
-import FormHelperText from "@material-ui/core/FormHelperText";
-import FormControl from "@material-ui/core/FormControl";
-import Select from "@material-ui/core/Select";
 
 // import { mainListItems, secondaryListItems } from "./listItems";
 import { mainListItems } from "./listItems";
@@ -123,22 +118,11 @@ const useStyles = makeStyles((theme) => ({
   fixedHeight: {
     height: "60vh",
   },
-  formControl: {
-    margin: theme.spacing(1),
-    width: "250px",
-  },
-  formButton: {
-    height: "fit-content",
-  },
-  selectEmpty: {
-    marginTop: theme.spacing(2),
-  },
 }));
 
 const Dashboard = (props) => {
   const classes = useStyles();
   const [open, setOpen] = useState(true);
-  const [business, setBusiness] = useState("all");
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -147,15 +131,6 @@ const Dashboard = (props) => {
   };
   // i think this creates one CSS class by combining other CSS classes into multple properies within one unifying class
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
-  const fixedWidthAndHeightButton = clsx(
-    classes.formButton,
-    classes.formControl
-  );
-  const handleBusiness = (event) => {
-    const value = event.target.value;
-    console.log("value", value);
-    setBusiness(value);
-  };
 
   return (
     <div className={classes.root}>
@@ -217,25 +192,6 @@ const Dashboard = (props) => {
             {/* Chart */}
             <Grid item xs={12} md={12} lg={12}>
               <Paper className={fixedHeightPaper}>
-                <FormControl variant="outlined" className={classes.formControl}>
-                  <InputLabel id="demo-simple-select-outlined-label">
-                    Business
-                  </InputLabel>
-                  <Select
-                    labelId="demo-simple-select-outlined-label"
-                    id="demo-simple-select-outlined"
-                    value={business}
-                    className={classes.formButton}
-                    onChange={handleBusiness}
-                    label="Business"
-                    displayEmpty
-                  >
-                    <MenuItem value={"all"}>All Businesses</MenuItem>
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
-                  </Select>
-                </FormControl>
                 <Chart data={props.orderArray} />
               </Paper>
             </Grid>

@@ -11,16 +11,16 @@ provides-member:
 - ["6Drinkz4UserC", "password"]
 - ["6Drinkz4UserC", "stripeId"]
 - ["6Drinkz4UserC", "relationship"]
-- ["6Drinkz4UserC", "userToTab"]
 - ["6Drinkz4UserC", "userToOrder"]
-- ["6Drinkz4UserC", "addToUserToTab"]
-- ["6Drinkz4UserC", "removeFromUserToTab"]
-- ["6Drinkz4UserC", "addToUserToTab"]
-- ["6Drinkz4UserC", "removeFromUserToTab"]
+- ["6Drinkz4UserC", "userToTab"]
 - ["6Drinkz4UserC", "addToUserToOrder"]
 - ["6Drinkz4UserC", "removeFromUserToOrder"]
 - ["6Drinkz4UserC", "addToUserToOrder"]
 - ["6Drinkz4UserC", "removeFromUserToOrder"]
+- ["6Drinkz4UserC", "addToUserToTab"]
+- ["6Drinkz4UserC", "removeFromUserToTab"]
+- ["6Drinkz4UserC", "addToUserToTab"]
+- ["6Drinkz4UserC", "removeFromUserToTab"]
 provides-dynamic-lookup:
 - "addToUserToOrder"
 - "addToUserToTab"
@@ -96,6 +96,7 @@ depends-member:
 - !private ["So8NSCodingP", "init"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So14NSFetchRequestC", "init"]
+- ["So20NSFetchRequestResultP", "CheckoutCart"]
 - ["So20NSFetchRequestResultP", "Default_ID"]
 - ["So20NSFetchRequestResultP", "ID"]
 - !private ["So20NSFetchRequestResultP", "NSFetchRequest"]
@@ -165,6 +166,7 @@ depends-member:
 - ["So8NSObjectC", "stripeId"]
 - ["So8NSObjectC", "userToOrder"]
 - ["So8NSObjectC", "userToTab"]
+- ["So8NSObjectP", "CheckoutCart"]
 - ["So8NSObjectP", "Default_ID"]
 - ["So8NSObjectP", "ID"]
 - !private ["So8NSObjectP", "NSFetchRequest"]
@@ -354,4 +356,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "1959afd3519dc5f34db20fc5ab17064f"
+interface-hash: "2ab8fb8b7f0316fc7e482125d9fdaf69"

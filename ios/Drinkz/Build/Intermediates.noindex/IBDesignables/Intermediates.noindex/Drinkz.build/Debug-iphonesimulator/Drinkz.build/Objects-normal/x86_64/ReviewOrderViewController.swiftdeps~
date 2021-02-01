@@ -71,6 +71,7 @@ depends-top-level:
 - "NSCoder"
 - !private "NSLayoutConstraint"
 - !private "Order"
+- "OrderConfirmationViewController"
 - "Parameters"
 - "ReviewOrderViewController"
 - "RoundButton"
@@ -128,12 +129,13 @@ depends-member:
 - !private ["s18AdditiveArithmeticP", "rounded"]
 - !private ["So22UILayoutConstraintAxisV", "horizontal"]
 - !private ["So22UILayoutConstraintAxisV", "vertical"]
-- !private ["SK", ""]
+- ["SK", ""]
 - !private ["SK", "init"]
 - !private ["SB", "rounded"]
 - !private ["Sz", ""]
 - !private ["Sz", "init"]
 - !private ["Sz", "rounded"]
+- !private ["So15CALayerDelegateP", ""]
 - !private ["So15CALayerDelegateP", "addArrangedSubview"]
 - !private ["So15CALayerDelegateP", "addSubview"]
 - !private ["So15CALayerDelegateP", "addTarget"]
@@ -279,10 +281,10 @@ depends-member:
 - !private ["6Drinkz12CheckoutCartC", "shared"]
 - !private ["6Drinkz12CheckoutCartC", "subtotal"]
 - !private ["6Drinkz12CheckoutCartC", "tipAmount"]
-- !private ["Sl", ""]
+- ["Sl", ""]
 - !private ["Sl", "init"]
 - !private ["SL", "RawValue"]
-- !private ["SL", ""]
+- ["SL", ""]
 - !private ["SL", "init"]
 - !private ["SL", "rounded"]
 - !private ["s28CustomDebugStringConvertibleP", "AF"]
@@ -666,7 +668,7 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", ""]
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "touchUpInside"]
-- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
 - !private ["s25ExpressibleByFloatLiteralP", ""]
@@ -681,11 +683,11 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "safeAreaLayoutGuide"]
 - !private ["s23ExpressibleByNilLiteralP", "systemBackground"]
-- !private ["s32ExpressibleByStringInterpolationP", ""]
+- ["s32ExpressibleByStringInterpolationP", ""]
 - !private ["s32ExpressibleByStringInterpolationP", "init"]
-- !private ["s26ExpressibleByStringLiteralP", ""]
+- ["s26ExpressibleByStringLiteralP", ""]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
-- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s17FixedWidthIntegerP", "init"]
 - !private ["s17FixedWidthIntegerP", "rounded"]
@@ -832,7 +834,7 @@ depends-member:
 - !private ["10Foundation11JSONEncoderC", "init"]
 - !private ["9Alamofire12JSONEncodingV", "default"]
 - !private ["So19NSJSONSerializationC", "jsonObject"]
-- !private ["s25LosslessStringConvertibleP", ""]
+- ["s25LosslessStringConvertibleP", ""]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s25LosslessStringConvertibleP", "rounded"]
 - !private ["10Foundation11MeasurementV", "rounded"]
@@ -848,6 +850,7 @@ depends-member:
 - ["So8NSCodingP", "NSCoder"]
 - !private ["So8NSCodingP", "NSLayoutConstraint"]
 - !private ["So8NSCodingP", "Order"]
+- !private ["So8NSCodingP", "OrderConfirmationViewController"]
 - !private ["So8NSCodingP", "Parameters"]
 - ["So8NSCodingP", "RoundButton"]
 - ["So8NSCodingP", "STPPaymentContext"]
@@ -1001,6 +1004,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "NSCoder"]
 - !private ["So26NSExtensionRequestHandlingP", "NSLayoutConstraint"]
 - !private ["So26NSExtensionRequestHandlingP", "Order"]
+- !private ["So26NSExtensionRequestHandlingP", "OrderConfirmationViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "Parameters"]
 - ["So26NSExtensionRequestHandlingP", "RoundButton"]
 - ["So26NSExtensionRequestHandlingP", "STPPaymentContext"]
@@ -1135,6 +1139,7 @@ depends-member:
 - ["So8NSObjectC", "NSCoder"]
 - !private ["So8NSObjectC", "NSLayoutConstraint"]
 - !private ["So8NSObjectC", "Order"]
+- !private ["So8NSObjectC", "OrderConfirmationViewController"]
 - !private ["So8NSObjectC", "Parameters"]
 - ["So8NSObjectC", "RoundButton"]
 - ["So8NSObjectC", "STPPaymentContext"]
@@ -1295,6 +1300,7 @@ depends-member:
 - !private ["So8NSObjectP", "JSONSerialization"]
 - !private ["So8NSObjectP", "NSLayoutConstraint"]
 - !private ["So8NSObjectP", "Order"]
+- !private ["So8NSObjectP", "OrderConfirmationViewController"]
 - !private ["So8NSObjectP", "Parameters"]
 - ["So8NSObjectP", "RoundButton"]
 - ["So8NSObjectP", "STPPaymentContext"]
@@ -1509,6 +1515,7 @@ depends-member:
 - ["6Drinkz25ReviewOrderViewControllerC", "NSCoder"]
 - !private ["6Drinkz25ReviewOrderViewControllerC", "NSLayoutConstraint"]
 - !private ["6Drinkz25ReviewOrderViewControllerC", "Order"]
+- !private ["6Drinkz25ReviewOrderViewControllerC", "OrderConfirmationViewController"]
 - !private ["6Drinkz25ReviewOrderViewControllerC", "Parameters"]
 - ["6Drinkz25ReviewOrderViewControllerC", "RoundButton"]
 - ["6Drinkz25ReviewOrderViewControllerC", "STPPaymentContext"]
@@ -1725,7 +1732,7 @@ depends-member:
 - !private ["6Stripe40STPShippingAddressViewControllerDelegateP", "selectedPaymentOption"]
 - !private ["6Stripe22STPURLCallbackListenerP", "confirmPayment"]
 - !private ["6Stripe22STPURLCallbackListenerP", "shared"]
-- !private ["ST", ""]
+- ["ST", ""]
 - !private ["ST", "init"]
 - !private ["9Alamofire7SessionC", "request"]
 - !private ["9Alamofire20SessionStateProviderP", "request"]
@@ -1748,9 +1755,9 @@ depends-member:
 - !private ["6Drinkz15StripeAPIClientC", "sharedAPIClient"]
 - !private ["So22UIAlertControllerStyleV", "alert"]
 - !private ["So18UIAlertActionStyleV", "cancel"]
-- !private ["s16TextOutputStreamP", ""]
+- ["s16TextOutputStreamP", ""]
 - !private ["s16TextOutputStreamP", "init"]
-- !private ["s20TextOutputStreamableP", ""]
+- ["s20TextOutputStreamableP", ""]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "rounded"]
 - !private ["7Combine15TopLevelEncoderP", "encode"]
@@ -1768,6 +1775,7 @@ depends-member:
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "titleLabel"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "trailingAnchor"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "widthAnchor"]
+- !private ["So29UIAccessibilityIdentificationP", ""]
 - !private ["So29UIAccessibilityIdentificationP", "addArrangedSubview"]
 - !private ["So29UIAccessibilityIdentificationP", "addSubview"]
 - !private ["So29UIAccessibilityIdentificationP", "addTarget"]
@@ -1796,6 +1804,7 @@ depends-member:
 - !private ["So13UIAlertActionC", "init"]
 - !private ["So17UIAlertControllerC", "addAction"]
 - !private ["So17UIAlertControllerC", "init"]
+- !private ["So12UIAppearanceP", ""]
 - !private ["So12UIAppearanceP", "addArrangedSubview"]
 - !private ["So12UIAppearanceP", "addSubview"]
 - !private ["So12UIAppearanceP", "addTarget"]
@@ -1831,6 +1840,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "NSCoder"]
 - !private ["So21UIAppearanceContainerP", "NSLayoutConstraint"]
 - !private ["So21UIAppearanceContainerP", "Order"]
+- !private ["So21UIAppearanceContainerP", "OrderConfirmationViewController"]
 - !private ["So21UIAppearanceContainerP", "Parameters"]
 - ["So21UIAppearanceContainerP", "RoundButton"]
 - ["So21UIAppearanceContainerP", "STPPaymentContext"]
@@ -1955,6 +1965,7 @@ depends-member:
 - ["So18UIContentContainerP", "NSCoder"]
 - !private ["So18UIContentContainerP", "NSLayoutConstraint"]
 - !private ["So18UIContentContainerP", "Order"]
+- !private ["So18UIContentContainerP", "OrderConfirmationViewController"]
 - !private ["So18UIContentContainerP", "Parameters"]
 - ["So18UIContentContainerP", "RoundButton"]
 - ["So18UIContentContainerP", "STPPaymentContext"]
@@ -2064,6 +2075,7 @@ depends-member:
 - !private ["So9UIControlC", "titleLabel"]
 - !private ["So9UIControlC", "trailingAnchor"]
 - !private ["So9UIControlC", "widthAnchor"]
+- !private ["So17UICoordinateSpaceP", ""]
 - !private ["So17UICoordinateSpaceP", "addArrangedSubview"]
 - !private ["So17UICoordinateSpaceP", "addSubview"]
 - !private ["So17UICoordinateSpaceP", "addTarget"]
@@ -2089,6 +2101,7 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "topAnchor"]
 - !private ["So17UICoordinateSpaceP", "trailingAnchor"]
 - !private ["So17UICoordinateSpaceP", "widthAnchor"]
+- !private ["So13UIDynamicItemP", ""]
 - !private ["So13UIDynamicItemP", "addArrangedSubview"]
 - !private ["So13UIDynamicItemP", "addSubview"]
 - !private ["So13UIDynamicItemP", "addTarget"]
@@ -2124,6 +2137,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "NSCoder"]
 - !private ["So18UIFocusEnvironmentP", "NSLayoutConstraint"]
 - !private ["So18UIFocusEnvironmentP", "Order"]
+- !private ["So18UIFocusEnvironmentP", "OrderConfirmationViewController"]
 - !private ["So18UIFocusEnvironmentP", "Parameters"]
 - ["So18UIFocusEnvironmentP", "RoundButton"]
 - ["So18UIFocusEnvironmentP", "STPPaymentContext"]
@@ -2223,6 +2237,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "view"]
 - ["So18UIFocusEnvironmentP", "viewDidLoad"]
 - !private ["So18UIFocusEnvironmentP", "widthAnchor"]
+- !private ["So11UIFocusItemP", ""]
 - !private ["So11UIFocusItemP", "addArrangedSubview"]
 - !private ["So11UIFocusItemP", "addSubview"]
 - !private ["So11UIFocusItemP", "addTarget"]
@@ -2248,6 +2263,7 @@ depends-member:
 - !private ["So11UIFocusItemP", "topAnchor"]
 - !private ["So11UIFocusItemP", "trailingAnchor"]
 - !private ["So11UIFocusItemP", "widthAnchor"]
+- !private ["So20UIFocusItemContainerP", ""]
 - !private ["So20UIFocusItemContainerP", "addArrangedSubview"]
 - !private ["So20UIFocusItemContainerP", "addSubview"]
 - !private ["So20UIFocusItemContainerP", "addTarget"]
@@ -2290,6 +2306,7 @@ depends-member:
 - !private ["So7UILabelC", "superview"]
 - !private ["So7UILabelC", "text"]
 - !private ["So7UILabelC", "widthAnchor"]
+- !private ["So24UILargeContentViewerItemP", ""]
 - !private ["So24UILargeContentViewerItemP", "addArrangedSubview"]
 - !private ["So24UILargeContentViewerItemP", "addSubview"]
 - !private ["So24UILargeContentViewerItemP", "addTarget"]
@@ -2334,6 +2351,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "JSONSerialization"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSLayoutConstraint"]
 - !private ["So30UIPasteConfigurationSupportingP", "Order"]
+- !private ["So30UIPasteConfigurationSupportingP", "OrderConfirmationViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "Parameters"]
 - ["So30UIPasteConfigurationSupportingP", "RoundButton"]
 - ["So30UIPasteConfigurationSupportingP", "STPPaymentContext"]
@@ -2444,6 +2462,7 @@ depends-member:
 - ["So11UIResponderC", "NSCoder"]
 - !private ["So11UIResponderC", "NSLayoutConstraint"]
 - !private ["So11UIResponderC", "Order"]
+- !private ["So11UIResponderC", "OrderConfirmationViewController"]
 - !private ["So11UIResponderC", "Parameters"]
 - ["So11UIResponderC", "RoundButton"]
 - ["So11UIResponderC", "STPPaymentContext"]
@@ -2553,6 +2572,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "JSONSerialization"]
 - !private ["So30UIResponderStandardEditActionsP", "NSLayoutConstraint"]
 - !private ["So30UIResponderStandardEditActionsP", "Order"]
+- !private ["So30UIResponderStandardEditActionsP", "OrderConfirmationViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "Parameters"]
 - ["So30UIResponderStandardEditActionsP", "RoundButton"]
 - ["So30UIResponderStandardEditActionsP", "STPPaymentContext"]
@@ -2685,6 +2705,7 @@ depends-member:
 - ["So16UIStateRestoringP", "NSCoder"]
 - !private ["So16UIStateRestoringP", "NSLayoutConstraint"]
 - !private ["So16UIStateRestoringP", "Order"]
+- !private ["So16UIStateRestoringP", "OrderConfirmationViewController"]
 - !private ["So16UIStateRestoringP", "Parameters"]
 - ["So16UIStateRestoringP", "RoundButton"]
 - ["So16UIStateRestoringP", "STPPaymentContext"]
@@ -2771,6 +2792,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "NSCoder"]
 - !private ["So18UITraitEnvironmentP", "NSLayoutConstraint"]
 - !private ["So18UITraitEnvironmentP", "Order"]
+- !private ["So18UITraitEnvironmentP", "OrderConfirmationViewController"]
 - !private ["So18UITraitEnvironmentP", "Parameters"]
 - ["So18UITraitEnvironmentP", "RoundButton"]
 - ["So18UITraitEnvironmentP", "STPPaymentContext"]
@@ -2879,6 +2901,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "JSONSerialization"]
 - !private ["So23UIUserActivityRestoringP", "NSLayoutConstraint"]
 - !private ["So23UIUserActivityRestoringP", "Order"]
+- !private ["So23UIUserActivityRestoringP", "OrderConfirmationViewController"]
 - !private ["So23UIUserActivityRestoringP", "Parameters"]
 - ["So23UIUserActivityRestoringP", "RoundButton"]
 - ["So23UIUserActivityRestoringP", "STPPaymentContext"]
@@ -3015,6 +3038,7 @@ depends-member:
 - ["So16UIViewControllerC", "NSCoder"]
 - !private ["So16UIViewControllerC", "NSLayoutConstraint"]
 - !private ["So16UIViewControllerC", "Order"]
+- !private ["So16UIViewControllerC", "OrderConfirmationViewController"]
 - !private ["So16UIViewControllerC", "Parameters"]
 - ["So16UIViewControllerC", "RoundButton"]
 - ["So16UIViewControllerC", "STPPaymentContext"]
@@ -3099,14 +3123,14 @@ depends-member:
 - !private ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "rounded"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
-- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "rounded"]
-- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "rounded"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s26_ExpressibleByColorLiteralP", "systemBackground"]
 - !private ["s26_ExpressibleByColorLiteralP", "themeColor"]
@@ -3373,15 +3397,15 @@ depends-member:
 depends-nominal:
 - !private "s18AdditiveArithmeticP"
 - !private "So22UILayoutConstraintAxisV"
-- !private "SK"
+- "SK"
 - !private "SB"
 - !private "Sz"
 - "So15CALayerDelegateP"
 - !private "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
 - !private "6Drinkz12CheckoutCartC"
-- !private "Sl"
-- !private "SL"
+- "Sl"
+- "SL"
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
@@ -3394,13 +3418,13 @@ depends-nominal:
 - !private "s5ErrorP"
 - !private "So15UIControlEventsV"
 - !private "s25ExpressibleByArrayLiteralP"
-- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- !private "s32ExpressibleByStringInterpolationP"
-- !private "s26ExpressibleByStringLiteralP"
-- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s32ExpressibleByStringInterpolationP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "s17FixedWidthIntegerP"
 - !private "SF"
 - !private "9Alamofire10HTTPMethodV"
@@ -3410,7 +3434,7 @@ depends-nominal:
 - !private "10Foundation11JSONEncoderC"
 - !private "9Alamofire12JSONEncodingV"
 - !private "So19NSJSONSerializationC"
-- !private "s25LosslessStringConvertibleP"
+- "s25LosslessStringConvertibleP"
 - !private "10Foundation11MeasurementV"
 - !private "s10MirrorPathP"
 - "So8NSCodingP"
@@ -3461,7 +3485,7 @@ depends-nominal:
 - "6Stripe16STPPaymentStatusO"
 - !private "6Stripe40STPShippingAddressViewControllerDelegateP"
 - !private "6Stripe22STPURLCallbackListenerP"
-- !private "ST"
+- "ST"
 - !private "9Alamofire7SessionC"
 - !private "9Alamofire20SessionStateProviderP"
 - !private "s10SetAlgebraP"
@@ -3473,8 +3497,8 @@ depends-nominal:
 - !private "6Drinkz15StripeAPIClientC"
 - !private "So22UIAlertControllerStyleV"
 - !private "So18UIAlertActionStyleV"
-- !private "s16TextOutputStreamP"
-- !private "s20TextOutputStreamableP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
 - !private "7Combine15TopLevelEncoderP"
 - "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - "So29UIAccessibilityIdentificationP"
@@ -3517,11 +3541,11 @@ depends-nominal:
 - !private "s22_CVarArgPassedAsDoubleP"
 - !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
-- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
-- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
-- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"

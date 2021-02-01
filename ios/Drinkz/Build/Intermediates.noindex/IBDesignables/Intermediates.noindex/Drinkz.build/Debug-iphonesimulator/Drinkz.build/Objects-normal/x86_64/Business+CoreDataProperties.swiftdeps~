@@ -6,14 +6,15 @@ provides-member:
 - ["6Drinkz8BusinessC", ""]
 - ["6Drinkz8BusinessC", "fetchRequest"]
 - ["6Drinkz8BusinessC", "address"]
-- ["6Drinkz8BusinessC", "id"]
-- ["6Drinkz8BusinessC", "stripeId"]
-- ["6Drinkz8BusinessC", "name"]
-- ["6Drinkz8BusinessC", "drinks"]
-- ["6Drinkz8BusinessC", "salesTaxRate"]
 - ["6Drinkz8BusinessC", "coordinateString"]
-- ["6Drinkz8BusinessC", "userBusinessToCheckoutCart"]
+- ["6Drinkz8BusinessC", "id"]
+- ["6Drinkz8BusinessC", "name"]
+- ["6Drinkz8BusinessC", "salesTaxRate"]
+- ["6Drinkz8BusinessC", "stripeId"]
 - ["6Drinkz8BusinessC", "businessToCheckoutCart"]
+- ["6Drinkz8BusinessC", "businessAddressId"]
+- ["6Drinkz8BusinessC", "drinks"]
+- ["6Drinkz8BusinessC", "userBusinessToCheckoutCart"]
 - ["6Drinkz8BusinessC", "addToDrinks"]
 - ["6Drinkz8BusinessC", "removeFromDrinks"]
 - ["6Drinkz8BusinessC", "addToDrinks"]
@@ -21,6 +22,7 @@ provides-member:
 provides-dynamic-lookup:
 - "addToDrinks"
 - "address"
+- "businessAddressId"
 - "businessToCheckoutCart"
 - "coordinateString"
 - "drinks"
@@ -55,6 +57,7 @@ depends-member:
 - ["6Drinkz8BusinessC", "_Default_ID"]
 - ["6Drinkz8BusinessC", "addToDrinks"]
 - ["6Drinkz8BusinessC", "address"]
+- ["6Drinkz8BusinessC", "businessAddressId"]
 - ["6Drinkz8BusinessC", "businessToCheckoutCart"]
 - ["6Drinkz8BusinessC", "coordinateString"]
 - ["6Drinkz8BusinessC", "drinks"]
@@ -112,23 +115,22 @@ depends-member:
 - ["s12IdentifiableP", ""]
 - ["s12IdentifiableP", "_Default_ID"]
 - ["s12IdentifiableP", "id"]
-- ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "init"]
+- !private ["So9NSCopyingP", "fetchRequestWithEntityName"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So14NSFetchRequestC", "init"]
-- ["So20NSFetchRequestResultP", "Business"]
 - ["So20NSFetchRequestResultP", "Default_ID"]
-- ["So20NSFetchRequestResultP", "Double"]
-- ["So20NSFetchRequestResultP", "Drink"]
 - ["So20NSFetchRequestResultP", "ID"]
-- !private ["So20NSFetchRequestResultP", "NSFetchRequest"]
+- ["So20NSFetchRequestResultP", "NSFetchRequest"]
 - ["So20NSFetchRequestResultP", "NSSet"]
 - ["So20NSFetchRequestResultP", "_Default_ID"]
 - ["So20NSFetchRequestResultP", "addToDrinks"]
 - ["So20NSFetchRequestResultP", "address"]
+- ["So20NSFetchRequestResultP", "businessAddressId"]
 - ["So20NSFetchRequestResultP", "businessToCheckoutCart"]
 - ["So20NSFetchRequestResultP", "coordinateString"]
 - ["So20NSFetchRequestResultP", "drinks"]
+- ["So20NSFetchRequestResultP", "fetchRequest"]
 - ["So20NSFetchRequestResultP", "id"]
 - ["So20NSFetchRequestResultP", "name"]
 - ["So20NSFetchRequestResultP", "removeFromDrinks"]
@@ -148,6 +150,7 @@ depends-member:
 - ["So15NSManagedObjectC", "_Default_ID"]
 - ["So15NSManagedObjectC", "addToDrinks"]
 - ["So15NSManagedObjectC", "address"]
+- ["So15NSManagedObjectC", "businessAddressId"]
 - ["So15NSManagedObjectC", "businessToCheckoutCart"]
 - ["So15NSManagedObjectC", "coordinateString"]
 - ["So15NSManagedObjectC", "drinks"]
@@ -171,10 +174,12 @@ depends-member:
 - ["So8NSObjectC", "_Default_ID"]
 - ["So8NSObjectC", "addToDrinks"]
 - ["So8NSObjectC", "address"]
+- ["So8NSObjectC", "businessAddressId"]
 - ["So8NSObjectC", "businessToCheckoutCart"]
 - ["So8NSObjectC", "coordinateString"]
 - ["So8NSObjectC", "drinks"]
 - ["So8NSObjectC", "fetchRequest"]
+- !private ["So8NSObjectC", "fetchRequestWithEntityName"]
 - ["So8NSObjectC", "id"]
 - !private ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "name"]
@@ -182,20 +187,19 @@ depends-member:
 - ["So8NSObjectC", "salesTaxRate"]
 - ["So8NSObjectC", "stripeId"]
 - ["So8NSObjectC", "userBusinessToCheckoutCart"]
-- ["So8NSObjectP", "Business"]
 - ["So8NSObjectP", "Default_ID"]
-- ["So8NSObjectP", "Double"]
-- ["So8NSObjectP", "Drink"]
 - ["So8NSObjectP", "ID"]
-- !private ["So8NSObjectP", "NSFetchRequest"]
-- ["So8NSObjectP", "NSSet"]
+- ["So8NSObjectP", "NSFetchRequest"]
 - ["So8NSObjectP", ""]
 - ["So8NSObjectP", "_Default_ID"]
 - ["So8NSObjectP", "addToDrinks"]
 - ["So8NSObjectP", "address"]
+- ["So8NSObjectP", "businessAddressId"]
 - ["So8NSObjectP", "businessToCheckoutCart"]
 - ["So8NSObjectP", "coordinateString"]
 - ["So8NSObjectP", "drinks"]
+- ["So8NSObjectP", "fetchRequest"]
+- !private ["So8NSObjectP", "fetchRequestWithEntityName"]
 - ["So8NSObjectP", "id"]
 - !private ["So8NSObjectP", "init"]
 - ["So8NSObjectP", "name"]
@@ -204,6 +208,7 @@ depends-member:
 - ["So8NSObjectP", "stripeId"]
 - ["So8NSObjectP", "userBusinessToCheckoutCart"]
 - ["So24NSPersistentStoreRequestC", ""]
+- !private ["So24NSPersistentStoreRequestC", "fetchRequestWithEntityName"]
 - !private ["So24NSPersistentStoreRequestC", "init"]
 - ["7Combine16ObservableObjectP", "Default_ID"]
 - ["7Combine16ObservableObjectP", "ID"]
@@ -233,7 +238,7 @@ depends-nominal:
 - "SQ"
 - "SH"
 - "s12IdentifiableP"
-- "So8NSCodingP"
+- !private "So8NSCodingP"
 - !private "So9NSCopyingP"
 - !private "So14NSFetchRequestC"
 - "So20NSFetchRequestResultP"
@@ -347,4 +352,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "e176a357e3f461c57512d533552a3080"
+interface-hash: "f08004bc0c54fdd35d6e9a9bafea78be"

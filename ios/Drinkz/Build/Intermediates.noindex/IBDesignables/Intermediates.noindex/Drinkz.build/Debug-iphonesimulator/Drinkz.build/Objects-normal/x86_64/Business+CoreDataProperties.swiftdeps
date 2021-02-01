@@ -43,6 +43,7 @@ depends-top-level:
 - "NSSet"
 - "String"
 - !private "StringLiteralType"
+- "UUID"
 depends-member:
 - ["6Drinkz8BusinessC", "Business"]
 - ["6Drinkz8BusinessC", "CheckoutCart"]
@@ -53,6 +54,7 @@ depends-member:
 - ["6Drinkz8BusinessC", "NSFetchRequest"]
 - ["6Drinkz8BusinessC", "NSSet"]
 - ["6Drinkz8BusinessC", "String"]
+- ["6Drinkz8BusinessC", "UUID"]
 - ["6Drinkz8BusinessC", ""]
 - ["6Drinkz8BusinessC", "_Default_ID"]
 - ["6Drinkz8BusinessC", "addToDrinks"]
@@ -120,6 +122,7 @@ depends-member:
 - !private ["So9NSCopyingP", "init"]
 - !private ["So14NSFetchRequestC", "init"]
 - ["So20NSFetchRequestResultP", "Default_ID"]
+- ["So20NSFetchRequestResultP", "Double"]
 - ["So20NSFetchRequestResultP", "ID"]
 - ["So20NSFetchRequestResultP", "NSFetchRequest"]
 - ["So20NSFetchRequestResultP", "NSSet"]
@@ -146,6 +149,7 @@ depends-member:
 - ["So15NSManagedObjectC", "NSFetchRequest"]
 - ["So15NSManagedObjectC", "NSSet"]
 - ["So15NSManagedObjectC", "String"]
+- ["So15NSManagedObjectC", "UUID"]
 - ["So15NSManagedObjectC", ""]
 - ["So15NSManagedObjectC", "_Default_ID"]
 - ["So15NSManagedObjectC", "addToDrinks"]
@@ -170,6 +174,7 @@ depends-member:
 - ["So8NSObjectC", "NSFetchRequest"]
 - ["So8NSObjectC", "NSSet"]
 - ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "UUID"]
 - ["So8NSObjectC", ""]
 - ["So8NSObjectC", "_Default_ID"]
 - ["So8NSObjectC", "addToDrinks"]
@@ -188,6 +193,7 @@ depends-member:
 - ["So8NSObjectC", "stripeId"]
 - ["So8NSObjectC", "userBusinessToCheckoutCart"]
 - ["So8NSObjectP", "Default_ID"]
+- ["So8NSObjectP", "Double"]
 - ["So8NSObjectP", "ID"]
 - ["So8NSObjectP", "NSFetchRequest"]
 - ["So8NSObjectP", ""]
@@ -352,4 +358,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "f08004bc0c54fdd35d6e9a9bafea78be"
+interface-hash: "b5c43b9a58c5b24f3eaa199d8cf8e056"

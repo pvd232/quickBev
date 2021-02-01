@@ -278,12 +278,12 @@ SWIFT_CLASS("_TtC6Drinkz8Business")
 @interface Business (SWIFT_EXTENSION(Drinkz))
 @property (nonatomic, copy) NSString * _Nullable address;
 @property (nonatomic, copy) NSString * _Nullable coordinateString;
-@property (nonatomic, copy) NSString * _Nullable id;
+@property (nonatomic, copy) NSUUID * _Nullable id;
 @property (nonatomic, copy) NSString * _Nullable name;
 @property (nonatomic) double salesTaxRate;
 @property (nonatomic, copy) NSString * _Nullable stripeId;
 @property (nonatomic, strong) CheckoutCart * _Nullable businessToCheckoutCart;
-@property (nonatomic, copy) NSString * _Nullable businessAddressId;
+@property (nonatomic, copy) NSUUID * _Nullable businessAddressId;
 @property (nonatomic, strong) NSSet * _Nullable drinks;
 @property (nonatomic, strong) CheckoutCart * _Nullable userBusinessToCheckoutCart;
 @end
@@ -372,7 +372,8 @@ SWIFT_CLASS("_TtC6Drinkz12CheckoutCart")
 @class User;
 
 @interface CheckoutCart (SWIFT_EXTENSION(Drinkz))
-@property (nonatomic, copy) NSString * _Nullable businessAddressId;
+@property (nonatomic, copy) NSUUID * _Nullable currentOrderId;
+@property (nonatomic, copy) NSUUID * _Nullable businessAddressId;
 @property (nonatomic) double cost;
 @property (nonatomic) int16_t orderingProcessViewControllerIndex;
 @property (nonatomic) double salesTax;
@@ -433,7 +434,7 @@ SWIFT_CLASS("_TtC6Drinkz5Drink")
 @class Order;
 
 @interface Drink (SWIFT_EXTENSION(Drinkz))
-@property (nonatomic, copy) NSString * _Nullable businessAddressId;
+@property (nonatomic, copy) NSUUID * _Nullable businessAddressId;
 @property (nonatomic, copy) NSString * _Nullable detail;
 @property (nonatomic, copy) NSUUID * _Nullable id;
 @property (nonatomic, copy) NSString * _Nullable name;
@@ -528,10 +529,10 @@ SWIFT_CLASS("_TtC6Drinkz5Order")
 
 
 @interface Order (SWIFT_EXTENSION(Drinkz))
-@property (nonatomic, copy) NSString * _Nullable businessAddressId;
+@property (nonatomic, copy) NSUUID * _Nullable businessAddressId;
 @property (nonatomic) double cost;
 @property (nonatomic, copy) NSDate * _Nullable dateTime;
-@property (nonatomic, copy) NSString * _Nullable id;
+@property (nonatomic, copy) NSUUID * _Nullable id;
 @property (nonatomic) double salesTax;
 @property (nonatomic) double subtotal;
 @property (nonatomic) double tipAmount;
@@ -701,9 +702,9 @@ SWIFT_CLASS("_TtC6Drinkz3Tab")
 
 
 @interface Tab (SWIFT_EXTENSION(Drinkz))
-@property (nonatomic, copy) NSString * _Nullable id;
+@property (nonatomic, copy) NSUUID * _Nullable id;
 @property (nonatomic, copy) NSString * _Nullable name;
-@property (nonatomic, copy) NSString * _Nullable businessId;
+@property (nonatomic, copy) NSUUID * _Nullable businessId;
 @property (nonatomic, copy) NSString * _Nullable userId;
 @property (nonatomic, copy) NSString * _Nullable address;
 @property (nonatomic, copy) NSDate * _Nullable dateTime;
