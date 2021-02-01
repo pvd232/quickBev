@@ -9,25 +9,26 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import Title from "./Title";
+import { Order } from "../../Models";
 
 export default function Chart(props) {
   const theme = useTheme();
-  const data = props.data;
-  console.log("data", data);
+  console.log("props.data", props.data);
   // Generate Sales Data
+  if (props.data.orders) {
+    const orders = props.data.orders.map((orderObject) => {
+      return new Order(orderObject);
+    });
+    for (var i in orders) {
+      console.log("order", orders[i]);
+    }
+  }
+
   const createData = (time, amount) => {
     return { time, amount };
   };
   const dataFormatted = [
     createData(`${new Date().getMonth()}/${new Date().getDate()}`, 0),
-    // createData("03:00", 300),
-    // createData("06:00", 600),
-    // createData("09:00", 800),
-    // createData("12:00", 1500),
-    // createData("15:00", 2000),
-    // createData("18:00", 2400),
-    // createData("21:00", 2400),
-    createData("24:00", undefined),
   ];
 
   return (

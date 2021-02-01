@@ -38,11 +38,11 @@ class Client {
       localStorage.getItem("merchant")
     );
     console.log("currentUser", currentUser);
-    headers.set(
-      "Authorization",
-      "Basic " + btoa(currentUser.id + ":" + currentUser.password)
-    );
-    // headers.set("")
+    // headers.set(
+    //   "Authorization",
+    //   "Basic " + btoa(currentUser.id + ":" + currentUser.password)
+    // );
+    headers.set("Authorization", "Basic " + btoa("a:" + currentUser.password));
     return fetch("http://127.0.0.1:5000/orders", {
       credentials: "include",
       headers: headers,

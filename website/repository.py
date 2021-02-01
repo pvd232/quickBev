@@ -9,6 +9,7 @@ from datetime import date
 import requests
 import base64
 from sqlalchemy.sql import text
+from sqlalchemy.inspection import inspect
 
 
 class Drink_Repository(object):
@@ -19,7 +20,6 @@ class Drink_Repository(object):
 
 class Order_Repository(object):
     def post_order(self, session, order):
-        print("order_repository, order.serialize()", order.serialize())
         new_order = Order(id=order.id, user_id=order.user_id,
                           business_address_id=order.business_address_id, cost=order.cost, subtotal=order.subtotal, tip_percentage=order.tip_percentage, tip_amount=order.tip_amount, sales_tax=order.sales_tax, date_time=order.date_time)
         session.add(new_order)
@@ -36,16 +36,10 @@ class Order_Repository(object):
         return True
 
     def get_orders(self, session, username):
-        print('username', username)
-
-        orders_query = session.query(Order.cost, Order.subtotal, Order.sales_tax, Order.tip_percentage, Order.tip_amount, Order.sales_tax, Order.date_time, Order.user_id,
-                                     Business_Address.address, Business.name).join(Business_Address, Order.business_address_id == Business_Address.id).join(Business, Business_Address.business_id == Business.id).filter(Order.user_id == username)
-        print('orders query', orders_query)
-        orders = session.query(Order.cost, Order.subtotal, Order.sales_tax, Order.tip_percentage, Order.tip_amount, Order.sales_tax, Order.date_time, Order.user_id,
-                               Business_Address.address, Business.name).join(Business_Address, Order.business_address_id == Business_Address.id).join(Business, Business_Address.business_id == Business.id).filter(Order.user_id == username).all()
-        print("orders", orders)
-
-        return orders
+        orders = session.query(Order, Business_Address.id.label("business_address_id"),
+                               Business_Address.address.label("business_address"), Business.name.label("business_name")).select_from(Order).join(Business_Address, Order.business_address_id == Business_Address.id).join(Business, Business_Address.business_id == Business.id).filter(Order.user_id == username).all()
+        drinks = session.query(Drink)
+        return orders, drinks
 
     def get_stripe_ephemeral_key(self, session, request):
         customer = request['stripe_id']
@@ -123,7 +117,6 @@ class Business_Repository(object):
     def get_businesss(self, session):
         businesses = session.query(Business, Business_Address.address, Business_Address.id.label("business_address_id")).select_from(
             Business).join(Business_Address, Business.id == Business_Address.business_id).all()
-
         print('businesses', businesses)
         for business in businesses:
             for key, val in business._asdict().items():
@@ -131,15 +124,11 @@ class Business_Repository(object):
                 print('val', val)
                 if key == "Business":
                     print(val.serialize)
-
         return businesses
 
     def add_business(self, session, business):
-        print('business', business)
         # will have to plug in an API here to dynamically pull information (avalara probs if i can get the freaking credentials to work)
-
-        # new_business_address =
-        new_business = Business(id=uuid.uuid4().hex, name=business.name, classification=business.classification, date_joined=date.today(
+        new_business = Business(id=uuid.uuid4(), name=business.name, classification=business.classification, date_joined=date.today(
         ), sales_tax_rate=business.sales_tax_rate, merchant_id=business.merchant_id, stripe_id=business.stripe_id, number_of_locations=business.number_of_locations)
         new_business_address = Business_Address(business_id=new_business.id, street=business.street, city=business.city,
                                                 state=business.state, zipcode=business.zipcode, address=business.address, tablet=business.tablet, phone_number=business.phone_number)

@@ -105,6 +105,15 @@ class Business_Address(db.Model):
     order = relationship('Order', lazy=True, backref="business_address")
     tab = relationship('Tab', lazy=True, backref="business_address")
 
+    @property
+    def serialize(self):
+        attribute_names = list(self.__dict__.keys())
+        attributes = list(self.__dict__.values())
+        serialized_attributes = {}
+        for i in range(len(attributes)):
+            serialized_attributes[attribute_names[i]] = attributes[i]
+        return serialized_attributes
+
 
 class Merchant(db.Model):
     id = db.Column(db.String(80), primary_key=True,
@@ -114,6 +123,15 @@ class Merchant(db.Model):
     last_name = db.Column(db.String(80), nullable=False)
     phone_number = db.Column(db.BigInteger(), nullable=False)
     business = relationship("Business", lazy=True, backref="merchant")
+
+    @property
+    def serialize(self):
+        attribute_names = list(self.__dict__.keys())
+        attributes = list(self.__dict__.values())
+        serialized_attributes = {}
+        for i in range(len(attributes)):
+            serialized_attributes[attribute_names[i]] = attributes[i]
+        return serialized_attributes
 
 
 class User_Table(db.Model):
@@ -151,7 +169,7 @@ class Order(db.Model):
     tip_percentage = db.Column(db.Float(), nullable=False)
     tip_amount = db.Column(db.Float(), nullable=False)
     date_time = db.Column(db.Date, nullable=False)
-    orderDrink = relationship('Order_Drink', lazy=True, backref="order")
+    order_drink = relationship('Order_Drink', lazy=True, backref="order")
 
     @property
     def serialize(self):
@@ -168,9 +186,19 @@ class Order_Drink(db.Model):
     id = db.Column(UUID(as_uuid=True), default=uuid.uuid4, primary_key=True,  # https://stackoverflow.com/questions/55917056/how-to-prevent-uuid-primary-key-for-new-sqlalchemy-objects-being-created-with-th
                    unique=True, nullable=False)
     order_id = db.Column(UUID(as_uuid=True), db.ForeignKey(
-        'order.id'), nullable=False, primary_key=True)
+        'order.id'), nullable=False)
     drink_id = db.Column(UUID(as_uuid=True), db.ForeignKey(
-        'drink.id'), nullable=False, primary_key=True)
+        'drink.id'), nullable=False)
+    # did not set foriegn key here because there is no unique constraint on drink name thus i cant identify which drink name i am referecing. however i don't care which drink i am exactly referencing as long as the name exists
+
+    @property
+    def serialize(self):
+        attribute_names = list(self.__dict__.keys())
+        attributes = list(self.__dict__.values())
+        serialized_attributes = {}
+        for i in range(len(attributes)):
+            serialized_attributes[attribute_names[i]] = attributes[i]
+        return serialized_attributes
 
 
 class Tab (db.Model):

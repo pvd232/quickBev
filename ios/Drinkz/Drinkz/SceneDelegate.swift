@@ -10,10 +10,11 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
-    var window: UIWindow?
     static var shared: SceneDelegate {
         return UIApplication.shared.connectedScenes.first?.delegate as! SceneDelegate
     }
+    var window: UIWindow?
+
     var rootViewController: RootViewController {
           return window!.rootViewController as! RootViewController
        }

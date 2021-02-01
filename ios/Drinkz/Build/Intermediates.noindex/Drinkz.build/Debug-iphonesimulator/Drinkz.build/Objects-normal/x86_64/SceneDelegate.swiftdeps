@@ -35,7 +35,8 @@ depends-top-level:
 - !private "window"
 depends-member:
 - !private ["s18AdditiveArithmeticP", ""]
-- !private ["SK", ""]
+- ["SK", ""]
+- !private ["So15CALayerDelegateP", ""]
 - !private ["So15CALayerDelegateP", "init"]
 - !private ["So15CALayerDelegateP", "makeKeyAndVisible"]
 - !private ["So15CALayerDelegateP", "rootViewController"]
@@ -63,9 +64,9 @@ depends-member:
 - !private ["s7CVarArgP", "viewContext"]
 - ["s7CVarArgP", "window"]
 - ["s7CVarArgP", "windowScene"]
-- !private ["Sl", ""]
+- ["Sl", ""]
 - !private ["Sl", "first"]
-- !private ["SL", ""]
+- ["SL", ""]
 - !private ["6Drinkz15CoreDataManagerC", "persistentContainer"]
 - !private ["6Drinkz15CoreDataManagerC", "saveContext"]
 - !private ["6Drinkz15CoreDataManagerC", "sharedManager"]
@@ -146,12 +147,12 @@ depends-member:
 - ["SQ", "windowScene"]
 - !private ["s25ExpressibleByArrayLiteralP", ""]
 - !private ["s25ExpressibleByArrayLiteralP", "first"]
-- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", ""]
-- !private ["s32ExpressibleByStringInterpolationP", ""]
-- !private ["s26ExpressibleByStringLiteralP", ""]
-- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- ["s32ExpressibleByStringInterpolationP", ""]
+- ["s26ExpressibleByStringLiteralP", ""]
+- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["SF", ""]
 - ["SH", "ConnectionOptions"]
 - !private ["SH", "CoreDataManager"]
@@ -177,12 +178,12 @@ depends-member:
 - !private ["SH", "viewContext"]
 - ["SH", "window"]
 - ["SH", "windowScene"]
-- !private ["s25LosslessStringConvertibleP", ""]
+- ["s25LosslessStringConvertibleP", ""]
 - ["So8NSCodingP", ""]
-- !private ["So8NSCodingP", "init"]
+- ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "makeKeyAndVisible"]
 - !private ["So8NSCodingP", "rootViewController"]
-- !private ["So26NSExtensionRequestHandlingP", "init"]
+- ["So26NSExtensionRequestHandlingP", "init"]
 - ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "ConnectionOptions"]
 - !private ["So8NSObjectC", "CoreDataManager"]
@@ -213,12 +214,15 @@ depends-member:
 - !private ["So8NSObjectC", "viewContext"]
 - ["So8NSObjectC", "window"]
 - ["So8NSObjectC", "windowScene"]
+- ["So8NSObjectP", "Bool"]
 - ["So8NSObjectP", "ConnectionOptions"]
 - !private ["So8NSObjectP", "CoreDataManager"]
 - ["So8NSObjectP", "RootViewController"]
+- ["So8NSObjectP", "SceneDelegate"]
 - !private ["So8NSObjectP", "UIApplication"]
 - ["So8NSObjectP", "UIScene"]
 - ["So8NSObjectP", "UISceneSession"]
+- ["So8NSObjectP", "UIViewController"]
 - ["So8NSObjectP", "UIWindow"]
 - !private ["So8NSObjectP", "UIWindowScene"]
 - ["So8NSObjectP", ""]
@@ -271,51 +275,62 @@ depends-member:
 - ["6Drinkz13SceneDelegateC", "stateRestorationActivityForScene"]
 - ["6Drinkz13SceneDelegateC", "window"]
 - ["6Drinkz13SceneDelegateC", "windowScene"]
-- !private ["ST", ""]
+- ["ST", ""]
 - !private ["ST", "first"]
 - !private ["Sh", "first"]
 - !private ["s10SetAlgebraP", "first"]
 - !private ["s13SignedNumericP", ""]
 - !private ["Sx", ""]
-- !private ["s16TextOutputStreamP", ""]
-- !private ["s20TextOutputStreamableP", ""]
+- ["s16TextOutputStreamP", ""]
+- ["s20TextOutputStreamableP", ""]
+- !private ["So29UIAccessibilityIdentificationP", ""]
 - !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "makeKeyAndVisible"]
 - !private ["So29UIAccessibilityIdentificationP", "rootViewController"]
+- !private ["So12UIAppearanceP", ""]
 - !private ["So12UIAppearanceP", "init"]
 - !private ["So12UIAppearanceP", "makeKeyAndVisible"]
 - !private ["So12UIAppearanceP", "rootViewController"]
-- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", ""]
+- ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "makeKeyAndVisible"]
 - !private ["So21UIAppearanceContainerP", "rootViewController"]
 - !private ["So13UIApplicationC", "connectedScenes"]
 - !private ["So13UIApplicationC", "shared"]
-- !private ["So18UIContentContainerP", "init"]
+- ["So18UIContentContainerP", "init"]
+- !private ["So17UICoordinateSpaceP", ""]
 - !private ["So17UICoordinateSpaceP", "init"]
 - !private ["So17UICoordinateSpaceP", "makeKeyAndVisible"]
 - !private ["So17UICoordinateSpaceP", "rootViewController"]
+- !private ["So13UIDynamicItemP", ""]
 - !private ["So13UIDynamicItemP", "init"]
 - !private ["So13UIDynamicItemP", "makeKeyAndVisible"]
 - !private ["So13UIDynamicItemP", "rootViewController"]
 - !private ["So18UIFocusEnvironmentP", ""]
-- !private ["So18UIFocusEnvironmentP", "init"]
+- ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "makeKeyAndVisible"]
 - !private ["So18UIFocusEnvironmentP", "rootViewController"]
+- !private ["So11UIFocusItemP", ""]
 - !private ["So11UIFocusItemP", "init"]
 - !private ["So11UIFocusItemP", "makeKeyAndVisible"]
 - !private ["So11UIFocusItemP", "rootViewController"]
+- !private ["So20UIFocusItemContainerP", ""]
 - !private ["So20UIFocusItemContainerP", "init"]
 - !private ["So20UIFocusItemContainerP", "makeKeyAndVisible"]
 - !private ["So20UIFocusItemContainerP", "rootViewController"]
+- !private ["So24UILargeContentViewerItemP", ""]
 - !private ["So24UILargeContentViewerItemP", "init"]
 - !private ["So24UILargeContentViewerItemP", "makeKeyAndVisible"]
 - !private ["So24UILargeContentViewerItemP", "rootViewController"]
+- ["So30UIPasteConfigurationSupportingP", "Bool"]
 - ["So30UIPasteConfigurationSupportingP", "ConnectionOptions"]
 - !private ["So30UIPasteConfigurationSupportingP", "CoreDataManager"]
 - ["So30UIPasteConfigurationSupportingP", "RootViewController"]
+- ["So30UIPasteConfigurationSupportingP", "SceneDelegate"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIApplication"]
 - ["So30UIPasteConfigurationSupportingP", "UIScene"]
 - ["So30UIPasteConfigurationSupportingP", "UISceneSession"]
+- ["So30UIPasteConfigurationSupportingP", "UIViewController"]
 - ["So30UIPasteConfigurationSupportingP", "UIWindow"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIWindowScene"]
 - ["So30UIPasteConfigurationSupportingP", ""]
@@ -366,12 +381,15 @@ depends-member:
 - ["So11UIResponderC", "stateRestorationActivityForScene"]
 - ["So11UIResponderC", "window"]
 - ["So11UIResponderC", "windowScene"]
+- ["So30UIResponderStandardEditActionsP", "Bool"]
 - ["So30UIResponderStandardEditActionsP", "ConnectionOptions"]
 - !private ["So30UIResponderStandardEditActionsP", "CoreDataManager"]
 - ["So30UIResponderStandardEditActionsP", "RootViewController"]
+- ["So30UIResponderStandardEditActionsP", "SceneDelegate"]
 - !private ["So30UIResponderStandardEditActionsP", "UIApplication"]
 - ["So30UIResponderStandardEditActionsP", "UIScene"]
 - ["So30UIResponderStandardEditActionsP", "UISceneSession"]
+- ["So30UIResponderStandardEditActionsP", "UIViewController"]
 - ["So30UIResponderStandardEditActionsP", "UIWindow"]
 - !private ["So30UIResponderStandardEditActionsP", "UIWindowScene"]
 - ["So30UIResponderStandardEditActionsP", ""]
@@ -416,16 +434,20 @@ depends-member:
 - ["So15UISceneDelegateP", "stateRestorationActivityForScene"]
 - ["So15UISceneDelegateP", "window"]
 - ["So15UISceneDelegateP", "windowScene"]
-- !private ["So16UIStateRestoringP", "init"]
-- !private ["So18UITraitEnvironmentP", "init"]
+- ["So16UIStateRestoringP", "init"]
+- !private ["So18UITraitEnvironmentP", ""]
+- ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "makeKeyAndVisible"]
 - !private ["So18UITraitEnvironmentP", "rootViewController"]
+- ["So23UIUserActivityRestoringP", "Bool"]
 - ["So23UIUserActivityRestoringP", "ConnectionOptions"]
 - !private ["So23UIUserActivityRestoringP", "CoreDataManager"]
 - ["So23UIUserActivityRestoringP", "RootViewController"]
+- ["So23UIUserActivityRestoringP", "SceneDelegate"]
 - !private ["So23UIUserActivityRestoringP", "UIApplication"]
 - ["So23UIUserActivityRestoringP", "UIScene"]
 - ["So23UIUserActivityRestoringP", "UISceneSession"]
+- ["So23UIUserActivityRestoringP", "UIViewController"]
 - ["So23UIUserActivityRestoringP", "UIWindow"]
 - !private ["So23UIUserActivityRestoringP", "UIWindowScene"]
 - ["So23UIUserActivityRestoringP", ""]
@@ -452,6 +474,7 @@ depends-member:
 - !private ["So6UIViewC", "makeKeyAndVisible"]
 - !private ["So6UIViewC", "rootViewController"]
 - ["So16UIViewControllerC", ""]
+- !private ["So16UIViewControllerC", "init"]
 - !private ["So8UIWindowC", "init"]
 - !private ["So8UIWindowC", "makeKeyAndVisible"]
 - !private ["So8UIWindowC", "rootViewController"]
@@ -476,8 +499,9 @@ depends-member:
 - ["So21UIWindowSceneDelegateP", "window"]
 - ["So21UIWindowSceneDelegateP", "windowScene"]
 - ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
-- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
-- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "first"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "ConnectionOptions"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CoreDataManager"]
@@ -531,11 +555,11 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "rootViewController"]
 depends-nominal:
 - !private "s18AdditiveArithmeticP"
-- !private "SK"
+- "SK"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
-- !private "Sl"
-- !private "SL"
+- "Sl"
+- "SL"
 - !private "6Drinkz15CoreDataManagerC"
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
@@ -544,38 +568,38 @@ depends-nominal:
 - !private "SE"
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
-- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
-- !private "s32ExpressibleByStringInterpolationP"
-- !private "s26ExpressibleByStringLiteralP"
-- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s32ExpressibleByStringInterpolationP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "SF"
 - "SH"
-- !private "s25LosslessStringConvertibleP"
+- "s25LosslessStringConvertibleP"
 - "So8NSCodingP"
-- !private "So26NSExtensionRequestHandlingP"
+- "So26NSExtensionRequestHandlingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
 - !private "So21NSPersistentContainerC"
 - !private "Sj"
 - !private "6Drinkz18RootViewControllerC"
 - "6Drinkz13SceneDelegateC"
-- !private "ST"
+- "ST"
 - !private "Sh"
 - !private "s10SetAlgebraP"
 - !private "s13SignedNumericP"
 - !private "Sx"
-- !private "s16TextOutputStreamP"
-- !private "s20TextOutputStreamableP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
-- !private "So21UIAppearanceContainerP"
+- "So21UIAppearanceContainerP"
 - !private "So13UIApplicationC"
-- !private "So18UIContentContainerP"
+- "So18UIContentContainerP"
 - !private "So17UICoordinateSpaceP"
 - !private "So13UIDynamicItemP"
-- !private "So18UIFocusEnvironmentP"
+- "So18UIFocusEnvironmentP"
 - !private "So11UIFocusItemP"
 - !private "So20UIFocusItemContainerP"
 - !private "So24UILargeContentViewerItemP"
@@ -584,16 +608,17 @@ depends-nominal:
 - "So30UIResponderStandardEditActionsP"
 - "So7UISceneC"
 - "So15UISceneDelegateP"
-- !private "So16UIStateRestoringP"
-- !private "So18UITraitEnvironmentP"
+- "So16UIStateRestoringP"
+- "So18UITraitEnvironmentP"
 - "So23UIUserActivityRestoringP"
 - "So6UIViewC"
 - "So16UIViewControllerC"
 - !private "So8UIWindowC"
 - "So21UIWindowSceneDelegateP"
 - "s35_ExpressibleByBuiltinBooleanLiteralP"
-- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"
@@ -701,4 +726,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "a86ea9d82d10b2d947dbe77ef6818ef7"
+interface-hash: "67412ecd3125b61b2fcd44fd425a8a3a"

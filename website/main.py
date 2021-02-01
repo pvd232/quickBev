@@ -97,8 +97,8 @@ def orders():
             request.headers.get(
                 "Authorization").split(" ")[1]).decode("utf-8").split(":")[0]
         user_orders = order_service.get_orders(username=username)
-        order_list = []
-        response = {"orders": ""}
+        print('user_orders', user_orders)
+        response = {"orders": user_orders}
         return Response(status=200, response=json.dumps(response), headers=header)
 
 

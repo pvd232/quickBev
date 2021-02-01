@@ -1,6 +1,180 @@
 export const setLocalStorage = (key, object) => {
   localStorage.setItem(key, JSON.stringify(object));
 };
+
+export class Drink {
+  constructor(drinkObject) {
+    console.log("drinkObject", drinkObject);
+    this._id = drinkObject.id;
+    this._name = drinkObject.name;
+    this._price = drinkObject.price;
+    this._quantity = drinkObject.quantity;
+    this._description = drinkObject.description;
+    this._orderDrinkId = drinkObject.order_drink_id;
+    this._businessAddressId = drinkObject.business_address_id;
+  }
+  get id() {
+    return this._id;
+  }
+  get name() {
+    return this._name;
+  }
+  get price() {
+    return this._price;
+  }
+  get quantity() {
+    return this._quantity;
+  }
+  get description() {
+    return this._description;
+  }
+  get orderDrinkId() {
+    return this._orderDrinkId;
+  }
+  get businessAddressId() {
+    return this._businessAddressId;
+  }
+  set id(value) {
+    this._id = value;
+  }
+  set name(value) {
+    this._name = value;
+  }
+  set price(value) {
+    this._price = value;
+  }
+  set quantity(value) {
+    this._quantity = value;
+  }
+  set description(value) {
+    this._description = value;
+  }
+  set orderDrinkId(value) {
+    this._orderDrinkId = value;
+  }
+  set businessAddressId(value) {
+    this._businessAddressId = value;
+  }
+  toJSON() {
+    const data = {
+      id: this._id,
+      name: this._name,
+      price: this._price,
+      quantity: this._quantity,
+      description: this._description,
+      orderDrinkId: this._orderDrinkId,
+      businessAddressId: this._businessAddressId,
+    };
+    return data;
+  }
+}
+
+export class OrderDrink {
+  constructor(orderDrinkObject) {
+    this._orderDrink = new Array();
+    console.log("orderDrinkObject", orderDrinkObject);
+    for (var i = 0; i < orderDrinkObject.order_drink.length; i++) {
+      console.log(
+        "orderDrinkObject.order_drink[i]",
+        orderDrinkObject.order_drink[i]
+      );
+      const newDrink = new Drink(orderDrinkObject.order_drink[i]);
+      this._orderDrink.push(newDrink);
+    }
+  }
+}
+
+export class Order {
+  constructor(order_object) {
+    this._id = order_object.id;
+    this._userId = order_object.user_id;
+    this._cost = order_object.cost;
+    this._subtotal = order_object.subtotal;
+    this._tipPercentage = order_object.tip_percentage;
+    this._tipAmount = order_object.tip_amount;
+    this._salesTax = order_object.sales_tax;
+    this._businessAddressId = order_object.business_address_id;
+    this._address = order_object.address;
+    this._orderDrink = new OrderDrink(order_object.order_drink);
+    this._orderDrink.orderId = this._id;
+  }
+  get id() {
+    return this._id;
+  }
+  get userId() {
+    return this._userId;
+  }
+  get cost() {
+    return this._cost;
+  }
+  get subtotal() {
+    return this._subtotal;
+  }
+  get tipPercentage() {
+    return this._tipPercentage;
+  }
+  get tipAmount() {
+    return this._tipAmount;
+  }
+  get salesTax() {
+    return this._salesTax;
+  }
+  get businessAddressId() {
+    return this._businessAddressId;
+  }
+  get address() {
+    return this._address;
+  }
+  get orderDrink() {
+    return this._orderDrink;
+  }
+  set id(value) {
+    this._id = value;
+  }
+  set userId(value) {
+    this._userId = value;
+  }
+  set cost(value) {
+    this._cost = value;
+  }
+  set subtotal(value) {
+    this._subtotal = value;
+  }
+  set tipPercentage(value) {
+    this._tipPercentage = value;
+  }
+  set tipAmount(value) {
+    this._tipAmount = value;
+  }
+  set salesTax(value) {
+    this._salesTax = value;
+  }
+  set businessAddressId(value) {
+    this._businessAddressId = value;
+  }
+  set address(value) {
+    this._address = value;
+  }
+  set orderDrink(value) {
+    this._orderDrink = value;
+  }
+  toJSON() {
+    const data = {
+      id: this._id,
+      user_id: this._userId,
+      cost: this._cost,
+      subtotal: this._subtotal,
+      tip_percentage: this._tipPercentage,
+      tip_amount: this._tipAmount,
+      sales_tax: this._salesTax,
+      business_address_id: this._businessAddressId,
+      address: this._address,
+      order_drink: this._orderDrink,
+    };
+    return data;
+  }
+}
+
 export class Merchant {
   constructor(objectType, object) {
     if (objectType === "merchantObject") {

@@ -69,9 +69,12 @@ class Order_Service(object):
     def get_orders(self, username):
         response = []
         with session_scope() as session:
-            for order in self.order_repository.get_orders(session, username):
-                order_domain = Order_Domain(order_object=order)
-                response.append(order_domain)
+            orders, drinks = self.order_repository.get_orders(
+                session, username)
+            for order in orders:
+                order_domain = Order_Domain(order_object=order, drinks=drinks)
+                order_dto = order_domain.dto_serialize()
+                response.append(order_dto)
             return response
 
     def get_stripe_ephemeral_key(self, request):
