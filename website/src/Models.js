@@ -95,6 +95,7 @@ export class Order {
     this._salesTax = order_object.sales_tax;
     this._businessAddressId = order_object.business_address_id;
     this._address = order_object.address;
+    this._dateTime = order_object.date_time;
     this._orderDrink = new OrderDrink(order_object.order_drink);
     this._orderDrink.orderId = this._id;
   }
@@ -128,6 +129,9 @@ export class Order {
   get orderDrink() {
     return this._orderDrink;
   }
+  get dateTime() {
+    return this._dateTime;
+  }
   set id(value) {
     this._id = value;
   }
@@ -158,6 +162,9 @@ export class Order {
   set orderDrink(value) {
     this._orderDrink = value;
   }
+  set dateTime(value) {
+    this._dateTime = value;
+  }
   toJSON() {
     const data = {
       id: this._id,
@@ -170,6 +177,7 @@ export class Order {
       business_address_id: this._businessAddressId,
       address: this._address,
       order_drink: this._orderDrink,
+      date_time: this._dateTime,
     };
     return data;
   }

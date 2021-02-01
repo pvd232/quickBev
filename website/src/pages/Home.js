@@ -4,7 +4,7 @@ import { Merchant, Business, setLocalStorage } from "../Models.js";
 import API from "../helpers/Api.js";
 
 const Home = () => {
-  const [list, setList] = useState([]);
+  const [list, setList] = useState(null);
 
   useEffect(() => {
     let mounted = true;
@@ -16,6 +16,10 @@ const Home = () => {
     });
     return () => (mounted = false);
   }, []);
-  return <Dashboard orderArray={list}></Dashboard>;
+  if (list) {
+    return <Dashboard orderArray={list}></Dashboard>;
+  } else {
+    return <></>;
+  }
 };
 export default Home;

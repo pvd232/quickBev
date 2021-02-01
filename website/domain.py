@@ -73,7 +73,7 @@ class Order_Domain(object):
 
             # formatted date string
             self.date_time = order_object.Order.date_time.strftime(
-                "%m/%d/%Y, %H:%M:%S")
+                "%m/%d/%Y")
             self.order_drink = Order_Drink_Domain(
                 order_id=order_object.Order.id, order_drink_object=order_object.Order.order_drink, drinks=drinks)
         elif order_json:
@@ -86,6 +86,7 @@ class Order_Domain(object):
             self.sales_tax = order_json["sales_tax"]
             self.business_address_id = order_json["business_address_id"]
             self.date_time = datetime.fromtimestamp(order_json["date_time"])
+            print('date_time', datetime.fromtimestamp(order_json["date_time"]))
             self.order_drink = Order_Drink_Domain(
                 order_id=self.id, order_drink_json=order_json['order_drink'])
 

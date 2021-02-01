@@ -40,7 +40,7 @@ export const mainListItems = (
       <ListItemIcon>
         <PinDropIcon />
       </ListItemIcon>
-      <ListItemText primary="Locations" />
+      <ListItemText primary="Businesses" />
     </ListItem>
   </div>
 );

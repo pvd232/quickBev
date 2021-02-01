@@ -15,22 +15,23 @@ export default function Chart(props) {
   const theme = useTheme();
   console.log("props.data", props.data);
   // Generate Sales Data
-  if (props.data.orders) {
-    const orders = props.data.orders.map((orderObject) => {
-      return new Order(orderObject);
-    });
-    for (var i in orders) {
-      console.log("order", orders[i]);
-    }
+  var orders;
+  orders = props.data.orders.map((orderObject) => {
+    return new Order(orderObject);
+  });
+  for (var i in orders) {
+    console.log("order", orders[i]);
   }
 
-  const createData = (time, amount) => {
+  const createData = (order) => {
+    console.log("order", order);
+    const time = order.dateTime;
+    console.log("time", time);
+    const amount = order.cost;
     return { time, amount };
   };
-  const dataFormatted = [
-    createData(`${new Date().getMonth()}/${new Date().getDate()}`, 0),
-  ];
-
+  const dataFormatted = orders.map((order) => createData(order));
+  console.log("dataFormatted", dataFormatted);
   return (
     <React.Fragment>
       <Title>Today</Title>
