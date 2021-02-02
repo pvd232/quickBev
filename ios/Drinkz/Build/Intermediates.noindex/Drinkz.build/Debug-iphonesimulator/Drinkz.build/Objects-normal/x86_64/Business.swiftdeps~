@@ -480,7 +480,6 @@ depends-member:
 - ["So20NSFetchRequestResultP", "CodingKey"]
 - !private ["So20NSFetchRequestResultP", "CodingKeys"]
 - !private ["So20NSFetchRequestResultP", "CoreDataManager"]
-- ["So20NSFetchRequestResultP", "Decoder"]
 - !private ["So20NSFetchRequestResultP", "Double"]
 - ["So20NSFetchRequestResultP", "Encoder"]
 - !private ["So20NSFetchRequestResultP", "JSONDecoder"]
@@ -495,7 +494,7 @@ depends-member:
 - ["So20NSFetchRequestResultP", "coordinate"]
 - ["So20NSFetchRequestResultP", "encode"]
 - !private ["So20NSFetchRequestResultP", "findStringSwitchCase"]
-- ["So20NSFetchRequestResultP", "getBusinesses"]
+- !private ["So20NSFetchRequestResultP", "getBusinesses"]
 - ["So20NSFetchRequestResultP", "getLocation"]
 - !private ["So20NSFetchRequestResultP", "id"]
 - ["So20NSFetchRequestResultP", "init"]
@@ -546,8 +545,6 @@ depends-member:
 - !private ["So8NSObjectC", "Double"]
 - ["So8NSObjectC", "Encoder"]
 - !private ["So8NSObjectC", "JSONDecoder"]
-- !private ["So8NSObjectC", "JSONObjectWithData"]
-- !private ["So8NSObjectC", "JSONObjectWithStream"]
 - !private ["So8NSObjectC", "JSONSerialization"]
 - !private ["So8NSObjectC", "NSDictionary"]
 - ["So8NSObjectC", "String"]
@@ -582,17 +579,13 @@ depends-member:
 - ["So8NSObjectP", "CodingKey"]
 - !private ["So8NSObjectP", "CodingKeys"]
 - !private ["So8NSObjectP", "CoreDataManager"]
-- ["So8NSObjectP", "Decoder"]
 - !private ["So8NSObjectP", "Double"]
 - ["So8NSObjectP", "Encoder"]
 - !private ["So8NSObjectP", "JSONDecoder"]
-- !private ["So8NSObjectP", "JSONObjectWithData"]
-- !private ["So8NSObjectP", "JSONObjectWithStream"]
 - !private ["So8NSObjectP", "JSONSerialization"]
 - !private ["So8NSObjectP", "NSDictionary"]
 - !private ["So8NSObjectP", "String"]
 - !private ["So8NSObjectP", "UUID"]
-- ["So8NSObjectP", "Void"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "_findStringSwitchCase"]
 - !private ["So8NSObjectP", "address"]
@@ -602,7 +595,7 @@ depends-member:
 - ["So8NSObjectP", "encode"]
 - !private ["So8NSObjectP", "findStringSwitchCase"]
 - !private ["So8NSObjectP", "geocodeAddressString"]
-- ["So8NSObjectP", "getBusinesses"]
+- !private ["So8NSObjectP", "getBusinesses"]
 - ["So8NSObjectP", "getLocation"]
 - !private ["So8NSObjectP", "id"]
 - ["So8NSObjectP", "init"]
@@ -675,9 +668,6 @@ depends-member:
 - !private ["SY", "salesTaxRate"]
 - ["SY", "stringValue"]
 - !private ["SY", "stripeId"]
-- !private ["So20NSJSONReadingOptionsV", "ArrayLiteralElement"]
-- !private ["So20NSJSONReadingOptionsV", "Element"]
-- !private ["So20NSJSONReadingOptionsV", "init"]
 - ["9Alamofire7RequestC", ""]
 - !private ["9Alamofire7RequestC", "response"]
 - !private ["9Alamofire7RequestC", "validate"]
@@ -826,7 +816,6 @@ depends-nominal:
 - !private "Sk"
 - !private "Sm"
 - "SY"
-- !private "So20NSJSONReadingOptionsV"
 - "9Alamofire7RequestC"
 - !private "9Alamofire15RequestDelegateP"
 - !private "s6ResultO"

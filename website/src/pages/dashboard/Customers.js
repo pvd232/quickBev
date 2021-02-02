@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -7,54 +7,83 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
+import Title from "./Title";
+import { Customer } from "../../Models";
+import API from "../../helpers/Api";
 
 const useStyles = makeStyles({
   table: {
     width: "100%",
   },
 });
+const capitalize = (word) => {
+  return word.charAt(0).toUpperCase() + word.substring(1);
+};
+const toCapitalizedWords = (name) => {
+  var words = name.match(/[A-Za-z][a-z]*/g) || [];
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-];
-
-export default function BasicTable() {
+  return words.map(capitalize).join(" ");
+};
+const nonCamelCaseWords = (name) => {
+  var words = name.match(/[A-Za-z][a-z]*/g) || [];
+  return words.join(" ");
+};
+const Customers = (props) => {
   const classes = useStyles();
+  const [customers, setCustomers] = useState(null);
+  useEffect(() => {
+    let mounted = true;
+    API.getCustomers().then((items) => {
+      console.log("items", items);
+      if (mounted) {
+        const mappedCustomers = items.customers.map((customerObject) => {
+          return new Customer(customerObject);
+        });
+        setCustomers(mappedCustomers);
+      }
+    });
+    return () => (mounted = false);
+  }, []);
+  if (customers) {
+    return (
+      <TableContainer>
+        <Paper className={props.classes.paper}>
+          <Title>Customers</Title>
+          <Table className={classes.table} aria-label="simple table">
+            <TableHead>
+              <TableRow>
+                {Object.keys(customers[0]).map((key) => (
+                  <TableCell align="left" key={key}>
+                    {toCapitalizedWords(key.replace("_", ""))}
+                  </TableCell>
+                ))}
+              </TableRow>
 
-  return (
-    <TableContainer component={Paper}>
-      <Table className={classes.table} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.name}>
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-  );
-}
+              {/* <TableRow>
+              <TableCell>Dessert (100g serving)</TableCell>
+              <TableCell align="right">Calories</TableCell>
+              <TableCell align="right">Fat&nbsp;(g)</TableCell>
+              <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+              <TableCell align="right">Protein&nbsp;(g)</TableCell>
+            </TableRow> */}
+            </TableHead>
+            <TableBody>
+              {customers.map((row) => (
+                <TableRow key={row.id}>
+                  {Object.values(row).map((key) => (
+                    <TableCell align="left" key={key}>
+                      {nonCamelCaseWords(key.replace("_", ""))}
+                    </TableCell>
+                  ))}
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </Paper>
+      </TableContainer>
+    );
+  } else {
+    return <></>;
+  }
+};
+export default Customers;

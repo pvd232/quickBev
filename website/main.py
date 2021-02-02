@@ -47,14 +47,15 @@ def login():
     # grab the username and password values from a custom header that was sent as a part of the request from the frontend
     email = request.headers.get('email')
     password = request.headers.get('password')
-    response = {"msg": "user not found"}
-    user_service = User_Service()
-    user = user_service.authenticate_user(email, password)
+    response = {"msg": "customer not found"}
+    customer_service = Customer_Service()
+    customer = customer_service.authenticate_customer(email, password)
 
-    if user:
+    if customer:
         # serialize the python object into a python dictionary
-        user = user.serialize()
-        return Response(status=200, response=json.dumps(user))
+        customer = customer.serialize()
+        print('customer', customer)
+        return Response(status=200, response=json.dumps(customer))
     else:
         return Response(status=404, response=json.dumps(response))
 
@@ -74,7 +75,7 @@ def inventory():
     return jsonify(response)
 
 
-@app.route('/orders', methods=['POST', 'GET', 'OPTIONS'])
+@app.route('/order', methods=['POST', 'GET', 'OPTIONS'])
 def orders():
     response = {}
     order_service = Order_Service()
@@ -96,22 +97,41 @@ def orders():
         username = base64.b64decode(
             request.headers.get(
                 "Authorization").split(" ")[1]).decode("utf-8").split(":")[0]
-        user_orders = order_service.get_orders(username=username)
-        print('user_orders', user_orders)
-        response = {"orders": user_orders}
+        merchant_orders = order_service.get_orders(username=username)
+        print('customer_orders', merchant_orders)
+        response = {"orders": merchant_orders}
         return Response(status=200, response=json.dumps(response), headers=header)
 
 
-@app.route('/registerNewUser', methods=['POST'])
-def register_new_user():
-    user_service = User_Service()
-    new_user = json.loads(request.data)  # load JSON data from request
-    response = user_service.register_new_user(new_user)
-    print('response', response)
-    if response:
-        return jsonify(response), 200
-    else:
-        return jsonify(response), 400
+@app.route('/customer', methods=['POST', 'GET', 'OPTIONS'])
+def customer():
+    response = {}
+    customer_service = Customer_Service()
+
+    if request.method == 'POST':
+        new_customer = json.loads(request.data)  # load JSON data from request
+        response = customer_service.register_new_customer(new_customer)
+        print('response', response)
+        if response:
+            return jsonify(response), 200
+        else:
+            return jsonify(response), 400
+    if request.method == 'OPTIONS':
+        header = {}
+        header["Access-Control-Allow-Credentials"] = 'true'
+        return Response(status=200, headers=header)
+    if request.method == "GET":
+        header = {}
+        header["Access-Control-Expose-Headers"] = "authorization"
+        # header["Access-Control-Allow-Origin"] = "http://localhost:3000"
+        header["Access-Control-Allow-Credentials"] = 'true'
+        merchant_id = base64.b64decode(
+            request.headers.get(
+                "Authorization").split(" ")[1]).decode("utf-8")
+        customers = customer_service.get_customers(merchant_id=merchant_id)
+        print('customer', customers)
+        response = {"customers": customers}
+        return Response(status=200, response=json.dumps(response), headers=header)
 
 
 @app.route('/business', methods=['GET'])
@@ -189,10 +209,6 @@ def signup():
     merchant_service = Merchant_Service()
     business_service = Business_Service()
 
-    # requested_business["id"] = "abc"
-    # response = {"confirmed_new_business": requested_business}
-    # response["msg"] = "wee"
-    # return Response(status=200, response=json.dumps(response))
     new_merchant = merchant_service.add_merchant(requested_merchant)
     new_business = business_service.add_business(requested_business)
     if new_merchant and new_business:
@@ -203,7 +219,7 @@ def signup():
             return Response(status=200, response=json.dumps(response))
 
         file = request.files['file']
-        # if user does not select file
+        # merchant does not select file
         if file.filename == '':
             response["msg"] = "No file file uploaded"
             return Response(status=200, response=json.dumps(response))

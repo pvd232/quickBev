@@ -12,7 +12,6 @@ import Title from "./Title";
 import { Order } from "../../Models";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
-import FormHelperText from "@material-ui/core/FormHelperText";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 const useStyles = makeStyles((theme) => ({
@@ -30,8 +29,7 @@ export default function Chart(props) {
 
   console.log("props.data", props.data);
   // Generate Sales Data
-  var orders;
-  orders = props.data.orders.map((orderObject) => {
+  const orders = props.data.orders.map((orderObject) => {
     return new Order(orderObject);
   });
   for (var i in orders) {
@@ -56,7 +54,7 @@ export default function Chart(props) {
   console.log("dataFormatted", dataFormatted);
   return (
     <>
-      <Title>Today</Title>
+      <Title>Sales</Title>
       <FormControl variant="outlined" className={classes.formControl}>
         <InputLabel id="demo-simple-select-outlined-label">Business</InputLabel>
         <Select

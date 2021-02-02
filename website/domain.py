@@ -47,7 +47,7 @@ class Drink_Domain(object):
 class Order_Domain(object):
     def __init__(self, order_object=None, order_json=None, drinks=None):
         self.id = ''
-        self.user_id = ''
+        self.customer_id = ''
         self.cost = 0
         self.subtotal = 0
         self.tip_percentage = 0
@@ -64,7 +64,7 @@ class Order_Domain(object):
             self.business_address = order_object.business_address
             # the order db model object is nested inside the result as "Order"
             self.id = order_object.Order.id
-            self.user_id = order_object.Order.user_id
+            self.customer_id = order_object.Order.customer_id
             self.cost = order_object.Order.cost
             self.subtotal = order_object.Order.subtotal
             self.tip_percentage = order_object.Order.tip_percentage
@@ -78,7 +78,7 @@ class Order_Domain(object):
                 order_id=order_object.Order.id, order_drink_object=order_object.Order.order_drink, drinks=drinks)
         elif order_json:
             self.id = order_json["id"]
-            self.user_id = order_json["user"]["id"]
+            self.customer_id = order_json["customer"]["id"]
             self.cost = order_json["cost"]
             self.subtotal = order_json["subtotal"]
             self.tip_percentage = order_json["tip_percentage"]
@@ -135,8 +135,8 @@ class Order_Drink_Domain(object):
                             drink.quantity += order_drink_instance.quantity
         elif order_drink_json:
             drink_id_list = list()
-            for user_drink in order_drink_json:
-                drink_domain = Drink_Domain(drink_json=user_drink["drink"])
+            for customer_drink in order_drink_json:
+                drink_domain = Drink_Domain(drink_json=customer_drink["drink"])
                 if drink_domain.id not in drink_id_list:
                     drink_id_list.append(drink_domain.id)
                     self.order_drink.append(drink_domain)
@@ -161,20 +161,23 @@ class Order_Drink_Domain(object):
         return serialized_attributes
 
 
-class User_Domain(object):
-    def __init__(self, user_object=None, user_json=None):
-        if user_object:
-            self.id = user_object.id
-            self.password = user_object.password
-            self.first_name = user_object.first_name
-            self.last_name = user_object.last_name
-            self.stripe_id = user_object.stripe_id
-        elif user_json:
-            self.id = user_json["id"]
-            self.password = user_json["password"]
-            self.first_name = user_json["first_name"]
-            self.last_name = user_json["last_name"]
-            self.stripe_id = user_json["stripe_id"]
+class Customer_Domain(object):
+    def __init__(self, customer_object=None, customer_json=None):
+        if customer_object:
+            self.id = customer_object.id
+            self.first_name = customer_object.first_name
+            self.last_name = customer_object.last_name
+            # might not want to send this sensitive information in every request
+            if "password" in customer_object.__dict__.keys():
+                self.password = customer_object.password
+            if "stripe_id" in customer_object.__dict__.keys():
+                self.stripe_id = customer_object.stripe_id
+        elif customer_json:
+            self.id = customer_json["id"]
+            self.password = customer_json["password"]
+            self.first_name = customer_json["first_name"]
+            self.last_name = customer_json["last_name"]
+            self.stripe_id = customer_json["stripe_id"]
 
     def serialize(self):
         attribute_names = list(self.__dict__.keys())
@@ -182,6 +185,17 @@ class User_Domain(object):
         serialized_attributes = {}
         for i in range(len(attributes)):
             serialized_attributes[attribute_names[i]] = attributes[i]
+        return serialized_attributes
+
+    def dto_serialize(self):
+        attribute_names = list(self.__dict__.keys())
+        attributes = list(self.__dict__.values())
+        serialized_attributes = {}
+        for i in range(len(attributes)):
+            if attribute_names[i] == 'id':
+                serialized_attributes['id'] = str(self.id)
+            else:
+                serialized_attributes[attribute_names[i]] = attributes[i]
         return serialized_attributes
 
 
@@ -285,7 +299,7 @@ class Tab_Domain(object):
         self.id = ''
         self.name = ''
         self.business_id = ''
-        self.user_id = ''
+        self.customer_id = ''
         self.address = ''
         self.date_time = ''
         self.description = ''
@@ -295,7 +309,7 @@ class Tab_Domain(object):
             self.id = tab_object.id
             self.name = tab_object.name
             self.business_id = tab_object.business_id
-            self.user_id = tab_object.user_id
+            self.customer_id = tab_object.customer_id
             self.address = tab_object.address
             self.date_time = tab_object.date_time
             self.description = tab_object.description
@@ -305,7 +319,7 @@ class Tab_Domain(object):
             self.id = tab_json["id"]
             self.name = tab_json["name"]
             self.business_id = tab_json["business_id"]
-            self.user_id = tab_json["user_id"]
+            self.customer_id = tab_json["customer_id"]
             self.address = tab_json["address"]
 
             address_list = tab_json["address"].split(",")

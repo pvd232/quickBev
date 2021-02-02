@@ -318,6 +318,7 @@ depends-member:
 - !private ["So9NSCopyingP", "statusCode"]
 - !private ["So20NSFetchRequestResultP", "shared"]
 - !private ["So20NSFetchRequestResultP", "stripeId"]
+- ["So15NSManagedObjectC", ""]
 - !private ["So15NSManagedObjectC", "shared"]
 - !private ["So15NSManagedObjectC", "stripeId"]
 - ["So8NSObjectC", "$__lazy_storage_$_baseURL"]
@@ -373,7 +374,7 @@ depends-member:
 - ["So8NSObjectP", "Order"]
 - ["So8NSObjectP", "Result"]
 - ["So8NSObjectP", "STPJSONResponseCompletionBlock"]
-- !private ["So8NSObjectP", "String"]
+- ["So8NSObjectP", "String"]
 - ["So8NSObjectP", "StripeAPIClient"]
 - ["So8NSObjectP", "URL"]
 - !private ["So8NSObjectP", "URLRequest"]
@@ -510,7 +511,7 @@ depends-member:
 - ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
@@ -612,7 +613,7 @@ depends-nominal:
 - "So8NSCodingP"
 - !private "So9NSCopyingP"
 - !private "So20NSFetchRequestResultP"
-- !private "So15NSManagedObjectC"
+- "So15NSManagedObjectC"
 - "So8NSObjectC"
 - "So8NSObjectP"
 - !private "So21NSPersistentContainerC"
@@ -645,7 +646,7 @@ depends-nominal:
 - "So16NSURLSessionTaskC"
 - "s30_CustomPlaygroundQuickLookableP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
 - "s34_ExpressibleByBuiltinStringLiteralP"
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - "s34_ExpressibleByFileReferenceLiteralP"

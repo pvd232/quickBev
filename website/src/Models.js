@@ -2,6 +2,40 @@ export const setLocalStorage = (key, object) => {
   localStorage.setItem(key, JSON.stringify(object));
 };
 
+export class Customer {
+  constructor(customerObject) {
+    this._id = customerObject.id;
+    this._firstName = customerObject.first_name;
+    this._lastName = customerObject.last_name;
+  }
+
+  get id() {
+    return this._id;
+  }
+  get firstName() {
+    return this._firstName;
+  }
+  get lastName() {
+    return this._lastName;
+  }
+  set id(value) {
+    this._id = value;
+  }
+  set firstName(value) {
+    this._firstName = value;
+  }
+  set lastName(value) {
+    this._lastName = value;
+  }
+  toJSON() {
+    const data = {
+      id: this._id,
+      first_name: this._firstName,
+      last_name: this._lastName,
+    };
+    return data;
+  }
+}
 export class Drink {
   constructor(drinkObject) {
     console.log("drinkObject", drinkObject);
@@ -71,7 +105,7 @@ export class Drink {
 
 export class OrderDrink {
   constructor(orderDrinkObject) {
-    this._orderDrink = new Array();
+    this._orderDrink = [];
     console.log("orderDrinkObject", orderDrinkObject);
     for (var i = 0; i < orderDrinkObject.order_drink.length; i++) {
       console.log(

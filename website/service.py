@@ -86,26 +86,34 @@ class Order_Service(object):
             return self.order_repository.stripe_payment_intent(session, request)
 
 
-class User_Service(object):
+class Customer_Service(object):
     def __init__(self):
-        self.user_repository = User_Repository()
+        self.customer_repository = Customer_Repository()
 
-    def authenticate_user(self, email, password):
+    def authenticate_customer(self, email, password):
         with session_scope() as session:
-            user_serialized = self.user_repository.authenticate_user(
+            customer_object = self.customer_repository.authenticate_customer(
                 session, email, password)
-            if user_serialized:
-                user_domain = User_Domain(user_object=user_serialized)
-                return user_domain
+            if customer_object:
+                customer_domain = Customer_Domain(
+                    customer_object=customer_object)
+                return customer_domain
             else:
                 return False
 
-    def register_new_user(self, user):
+    def register_new_customer(self, customer):
         with session_scope() as session:
-            requested_new_user = User_Domain(user_json=user)
-            registered_user_status = self.user_repository.register_new_user(
-                session, requested_new_user)
-            return registered_user_status
+            requested_new_customer = Customer_Domain(customer_json=customer)
+            registered_customer_status = self.customer_repository.register_new_customer(
+                session, requested_new_customer)
+            return registered_customer_status
+
+    def get_customers(self, merchant_id):
+        with session_scope() as session:
+            # pheew this is sexy. list comprehension while creating a customer dto
+            customers = [Customer_Domain(customer_object=x).dto_serialize() for x in self.customer_repository.get_customers(
+                session, merchant_id)]
+            return customers
 
 
 class Merchant_Service(object):

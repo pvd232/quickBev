@@ -21,6 +21,7 @@ depends-top-level:
 - "Bool"
 - "BooleanLiteralType"
 - "CastingPrecedence"
+- !private "CheckoutCart"
 - !private "CoreDataManager"
 - "RootViewController"
 - "SceneDelegate"
@@ -39,6 +40,7 @@ depends-member:
 - !private ["So15CALayerDelegateP", "init"]
 - !private ["So15CALayerDelegateP", "makeKeyAndVisible"]
 - !private ["So15CALayerDelegateP", "rootViewController"]
+- !private ["s7CVarArgP", "CheckoutCart"]
 - ["s7CVarArgP", "ConnectionOptions"]
 - !private ["s7CVarArgP", "CoreDataManager"]
 - !private ["s7CVarArgP", "RootViewController"]
@@ -63,12 +65,14 @@ depends-member:
 - !private ["s7CVarArgP", "viewContext"]
 - ["s7CVarArgP", "window"]
 - ["s7CVarArgP", "windowScene"]
+- !private ["6Drinkz12CheckoutCartC", "shared"]
 - !private ["Sl", ""]
 - !private ["Sl", "first"]
 - !private ["SL", ""]
 - !private ["6Drinkz15CoreDataManagerC", "persistentContainer"]
 - !private ["6Drinkz15CoreDataManagerC", "saveContext"]
 - !private ["6Drinkz15CoreDataManagerC", "sharedManager"]
+- !private ["s28CustomDebugStringConvertibleP", "CheckoutCart"]
 - ["s28CustomDebugStringConvertibleP", "ConnectionOptions"]
 - !private ["s28CustomDebugStringConvertibleP", "CoreDataManager"]
 - !private ["s28CustomDebugStringConvertibleP", "RootViewController"]
@@ -94,6 +98,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "window"]
 - ["s28CustomDebugStringConvertibleP", "windowScene"]
 - !private ["s17CustomReflectableP", "first"]
+- !private ["s23CustomStringConvertibleP", "CheckoutCart"]
 - ["s23CustomStringConvertibleP", "ConnectionOptions"]
 - !private ["s23CustomStringConvertibleP", "CoreDataManager"]
 - !private ["s23CustomStringConvertibleP", "RootViewController"]
@@ -120,6 +125,7 @@ depends-member:
 - ["s23CustomStringConvertibleP", "windowScene"]
 - !private ["Se", "first"]
 - !private ["SE", "first"]
+- !private ["SQ", "CheckoutCart"]
 - ["SQ", "ConnectionOptions"]
 - !private ["SQ", "CoreDataManager"]
 - !private ["SQ", "RootViewController"]
@@ -153,6 +159,7 @@ depends-member:
 - !private ["s26ExpressibleByStringLiteralP", ""]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["SF", ""]
+- !private ["SH", "CheckoutCart"]
 - ["SH", "ConnectionOptions"]
 - !private ["SH", "CoreDataManager"]
 - !private ["SH", "RootViewController"]
@@ -177,13 +184,17 @@ depends-member:
 - !private ["SH", "viewContext"]
 - ["SH", "window"]
 - ["SH", "windowScene"]
+- !private ["s12IdentifiableP", "shared"]
 - !private ["s25LosslessStringConvertibleP", ""]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "makeKeyAndVisible"]
 - !private ["So8NSCodingP", "rootViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So20NSFetchRequestResultP", "shared"]
+- !private ["So15NSManagedObjectC", "shared"]
 - ["So8NSObjectC", "Bool"]
+- !private ["So8NSObjectC", "CheckoutCart"]
 - ["So8NSObjectC", "ConnectionOptions"]
 - !private ["So8NSObjectC", "CoreDataManager"]
 - ["So8NSObjectC", "RootViewController"]
@@ -213,10 +224,10 @@ depends-member:
 - !private ["So8NSObjectC", "viewContext"]
 - ["So8NSObjectC", "window"]
 - ["So8NSObjectC", "windowScene"]
+- !private ["So8NSObjectP", "CheckoutCart"]
 - ["So8NSObjectP", "ConnectionOptions"]
 - !private ["So8NSObjectP", "CoreDataManager"]
 - ["So8NSObjectP", "RootViewController"]
-- ["So8NSObjectP", "SceneDelegate"]
 - !private ["So8NSObjectP", "UIApplication"]
 - ["So8NSObjectP", "UIScene"]
 - ["So8NSObjectP", "UISceneSession"]
@@ -244,9 +255,11 @@ depends-member:
 - ["So8NSObjectP", "windowScene"]
 - !private ["So21NSPersistentContainerC", "viewContext"]
 - !private ["Sj", ""]
+- !private ["7Combine16ObservableObjectP", "shared"]
 - !private ["6Drinkz18RootViewControllerC", ""]
 - !private ["6Drinkz18RootViewControllerC", "init"]
 - ["6Drinkz13SceneDelegateC", "Bool"]
+- !private ["6Drinkz13SceneDelegateC", "CheckoutCart"]
 - !private ["6Drinkz13SceneDelegateC", "CoreDataManager"]
 - ["6Drinkz13SceneDelegateC", "RootViewController"]
 - ["6Drinkz13SceneDelegateC", "SceneDelegate"]
@@ -311,10 +324,10 @@ depends-member:
 - !private ["So24UILargeContentViewerItemP", "init"]
 - !private ["So24UILargeContentViewerItemP", "makeKeyAndVisible"]
 - !private ["So24UILargeContentViewerItemP", "rootViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "CheckoutCart"]
 - ["So30UIPasteConfigurationSupportingP", "ConnectionOptions"]
 - !private ["So30UIPasteConfigurationSupportingP", "CoreDataManager"]
 - ["So30UIPasteConfigurationSupportingP", "RootViewController"]
-- ["So30UIPasteConfigurationSupportingP", "SceneDelegate"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIApplication"]
 - ["So30UIPasteConfigurationSupportingP", "UIScene"]
 - ["So30UIPasteConfigurationSupportingP", "UISceneSession"]
@@ -340,6 +353,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "window"]
 - ["So30UIPasteConfigurationSupportingP", "windowScene"]
 - ["So11UIResponderC", "Bool"]
+- !private ["So11UIResponderC", "CheckoutCart"]
 - ["So11UIResponderC", "ConnectionOptions"]
 - !private ["So11UIResponderC", "CoreDataManager"]
 - ["So11UIResponderC", "RootViewController"]
@@ -368,10 +382,10 @@ depends-member:
 - ["So11UIResponderC", "stateRestorationActivityForScene"]
 - ["So11UIResponderC", "window"]
 - ["So11UIResponderC", "windowScene"]
+- !private ["So30UIResponderStandardEditActionsP", "CheckoutCart"]
 - ["So30UIResponderStandardEditActionsP", "ConnectionOptions"]
 - !private ["So30UIResponderStandardEditActionsP", "CoreDataManager"]
 - ["So30UIResponderStandardEditActionsP", "RootViewController"]
-- ["So30UIResponderStandardEditActionsP", "SceneDelegate"]
 - !private ["So30UIResponderStandardEditActionsP", "UIApplication"]
 - ["So30UIResponderStandardEditActionsP", "UIScene"]
 - ["So30UIResponderStandardEditActionsP", "UISceneSession"]
@@ -399,6 +413,7 @@ depends-member:
 - ["So7UISceneC", "ConnectionOptions"]
 - ["So7UISceneC", ""]
 - !private ["So7UISceneC", "delegate"]
+- !private ["So15UISceneDelegateP", "CheckoutCart"]
 - !private ["So15UISceneDelegateP", "CoreDataManager"]
 - !private ["So15UISceneDelegateP", "RootViewController"]
 - !private ["So15UISceneDelegateP", "UIApplication"]
@@ -423,10 +438,10 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "makeKeyAndVisible"]
 - !private ["So18UITraitEnvironmentP", "rootViewController"]
+- !private ["So23UIUserActivityRestoringP", "CheckoutCart"]
 - ["So23UIUserActivityRestoringP", "ConnectionOptions"]
 - !private ["So23UIUserActivityRestoringP", "CoreDataManager"]
 - ["So23UIUserActivityRestoringP", "RootViewController"]
-- ["So23UIUserActivityRestoringP", "SceneDelegate"]
 - !private ["So23UIUserActivityRestoringP", "UIApplication"]
 - ["So23UIUserActivityRestoringP", "UIScene"]
 - ["So23UIUserActivityRestoringP", "UISceneSession"]
@@ -459,6 +474,7 @@ depends-member:
 - !private ["So8UIWindowC", "init"]
 - !private ["So8UIWindowC", "makeKeyAndVisible"]
 - !private ["So8UIWindowC", "rootViewController"]
+- !private ["So21UIWindowSceneDelegateP", "CheckoutCart"]
 - !private ["So21UIWindowSceneDelegateP", "CoreDataManager"]
 - !private ["So21UIWindowSceneDelegateP", "RootViewController"]
 - !private ["So21UIWindowSceneDelegateP", "UIApplication"]
@@ -483,6 +499,7 @@ depends-member:
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "first"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CheckoutCart"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "ConnectionOptions"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CoreDataManager"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "RootViewController"]
@@ -506,6 +523,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewContext"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "window"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "windowScene"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CheckoutCart"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ConnectionOptions"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CoreDataManager"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "RootViewController"]
@@ -538,6 +556,7 @@ depends-nominal:
 - !private "SK"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
+- !private "6Drinkz12CheckoutCartC"
 - !private "Sl"
 - !private "SL"
 - !private "6Drinkz15CoreDataManagerC"
@@ -556,13 +575,17 @@ depends-nominal:
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "SF"
 - "SH"
+- !private "s12IdentifiableP"
 - !private "s25LosslessStringConvertibleP"
 - "So8NSCodingP"
 - !private "So26NSExtensionRequestHandlingP"
+- !private "So20NSFetchRequestResultP"
+- !private "So15NSManagedObjectC"
 - "So8NSObjectC"
 - "So8NSObjectP"
 - !private "So21NSPersistentContainerC"
 - !private "Sj"
+- !private "7Combine16ObservableObjectP"
 - !private "6Drinkz18RootViewControllerC"
 - "6Drinkz13SceneDelegateC"
 - !private "ST"

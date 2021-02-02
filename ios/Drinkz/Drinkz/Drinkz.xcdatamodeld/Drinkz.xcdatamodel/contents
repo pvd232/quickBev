@@ -22,10 +22,10 @@
         <attribute name="tipAmount" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="tipPercentage" attributeType="Double" defaultValueString="0.1" usesScalarValueType="YES"/>
         <attribute name="userId" attributeType="String" defaultValueString=""/>
-        <relationship name="business" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Business" inverseName="businessToCheckoutCart" inverseEntity="Business"/>
-        <relationship name="drinks" toMany="YES" deletionRule="Nullify" destinationEntity="Drink" inverseName="relationship" inverseEntity="Drink"/>
-        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="relationship" inverseEntity="User"/>
-        <relationship name="userBusiness" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Business" inverseName="userBusinessToCheckoutCart" inverseEntity="Business"/>
+        <relationship name="business" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Business" inverseName="businessToCheckoutCart" inverseEntity="Business"/>
+        <relationship name="drinks" toMany="YES" deletionRule="Cascade" destinationEntity="Drink" inverseName="relationship" inverseEntity="Drink"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="User" inverseName="relationship" inverseEntity="User"/>
+        <relationship name="userBusiness" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Business" inverseName="userBusinessToCheckoutCart" inverseEntity="Business"/>
     </entity>
     <entity name="Drink" representedClassName=".Drink" syncable="YES">
         <attribute name="businessId" attributeType="UUID" usesScalarValueType="NO"/>

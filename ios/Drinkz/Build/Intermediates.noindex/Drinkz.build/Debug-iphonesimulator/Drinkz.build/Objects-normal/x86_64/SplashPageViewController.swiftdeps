@@ -5,8 +5,6 @@ provides-nominal:
 - "6Drinkz24SplashPageViewControllerC"
 provides-member:
 - ["6Drinkz24SplashPageViewControllerC", ""]
-- ["So18NSLayoutConstraintC", ""]
-- ["So18NSLayoutConstraintC", "usingPriority"]
 provides-dynamic-lookup:
 - "_continueAsGuestButton"
 - "_createAnAccountButton"
@@ -24,10 +22,8 @@ provides-dynamic-lookup:
 - "moonImageView"
 - "optionsStackView"
 - "orLabel"
-- "screenSize"
 - "signInButton"
 - "signInButtonTouchup"
-- "usingPriority"
 - "viewDidLoad"
 depends-top-level:
 - !private "/"
@@ -35,13 +31,12 @@ depends-top-level:
 - !private "Array"
 - "AssignmentPrecedence"
 - !private "BooleanLiteralType"
-- "CGRect"
 - "CastingPrecedence"
 - "FloatLiteralType"
 - !private "HomePageViewController"
 - "IntegerLiteralType"
 - "NSCoder"
-- "NSLayoutConstraint"
+- !private "NSLayoutConstraint"
 - "RegistrationSplashPageViewController"
 - "RoundButton"
 - !private "SignInSplashPageViewController"
@@ -52,8 +47,7 @@ depends-top-level:
 - "UIImage"
 - "UIImageView"
 - "UILabel"
-- "UILayoutPriority"
-- "UIScreen"
+- !private "UILayoutPriority"
 - "UIStackView"
 - !private "UIStoryboard"
 - "UIViewController"
@@ -113,7 +107,6 @@ depends-member:
 - ["s7CVarArgP", "UIImageView"]
 - ["s7CVarArgP", "UILabel"]
 - !private ["s7CVarArgP", "UILayoutPriority"]
-- ["s7CVarArgP", "UIScreen"]
 - ["s7CVarArgP", "UIStackView"]
 - !private ["s7CVarArgP", "UIStoryboard"]
 - ["s7CVarArgP", "UsesAutoLayout"]
@@ -125,7 +118,6 @@ depends-member:
 - !private ["s7CVarArgP", "axis"]
 - !private ["s7CVarArgP", "backgroundColor"]
 - !private ["s7CVarArgP", "bottomAnchor"]
-- ["s7CVarArgP", "bounds"]
 - !private ["s7CVarArgP", "centerXAnchor"]
 - !private ["s7CVarArgP", "centerYAnchor"]
 - !private ["s7CVarArgP", "constraint"]
@@ -141,14 +133,12 @@ depends-member:
 - !private ["s7CVarArgP", "instantiateViewController"]
 - !private ["s7CVarArgP", "leadingAnchor"]
 - !private ["s7CVarArgP", "letsGetStartedLabel"]
-- ["s7CVarArgP", "main"]
 - !private ["s7CVarArgP", "moonImage"]
 - !private ["s7CVarArgP", "moonImageView"]
 - !private ["s7CVarArgP", "navigationController"]
 - !private ["s7CVarArgP", "optionsStackView"]
 - !private ["s7CVarArgP", "orLabel"]
 - ["s7CVarArgP", "print"]
-- !private ["s7CVarArgP", "priority"]
 - !private ["s7CVarArgP", "pushViewController"]
 - !private ["s7CVarArgP", "refreshColor"]
 - !private ["s7CVarArgP", "refreshTitle"]
@@ -187,7 +177,6 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "UIImageView"]
 - ["s28CustomDebugStringConvertibleP", "UILabel"]
 - !private ["s28CustomDebugStringConvertibleP", "UILayoutPriority"]
-- ["s28CustomDebugStringConvertibleP", "UIScreen"]
 - ["s28CustomDebugStringConvertibleP", "UIStackView"]
 - !private ["s28CustomDebugStringConvertibleP", "UIStoryboard"]
 - ["s28CustomDebugStringConvertibleP", "UsesAutoLayout"]
@@ -199,7 +188,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "axis"]
 - !private ["s28CustomDebugStringConvertibleP", "backgroundColor"]
 - !private ["s28CustomDebugStringConvertibleP", "bottomAnchor"]
-- ["s28CustomDebugStringConvertibleP", "bounds"]
 - !private ["s28CustomDebugStringConvertibleP", "centerXAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "centerYAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "constraint"]
@@ -216,14 +204,12 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "instantiateViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "leadingAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "letsGetStartedLabel"]
-- ["s28CustomDebugStringConvertibleP", "main"]
 - !private ["s28CustomDebugStringConvertibleP", "moonImage"]
 - !private ["s28CustomDebugStringConvertibleP", "moonImageView"]
 - !private ["s28CustomDebugStringConvertibleP", "navigationController"]
 - !private ["s28CustomDebugStringConvertibleP", "optionsStackView"]
 - !private ["s28CustomDebugStringConvertibleP", "orLabel"]
 - ["s28CustomDebugStringConvertibleP", "print"]
-- !private ["s28CustomDebugStringConvertibleP", "priority"]
 - !private ["s28CustomDebugStringConvertibleP", "pushViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "refreshColor"]
 - !private ["s28CustomDebugStringConvertibleP", "refreshTitle"]
@@ -259,7 +245,6 @@ depends-member:
 - ["s23CustomStringConvertibleP", "UIImageView"]
 - ["s23CustomStringConvertibleP", "UILabel"]
 - !private ["s23CustomStringConvertibleP", "UILayoutPriority"]
-- ["s23CustomStringConvertibleP", "UIScreen"]
 - ["s23CustomStringConvertibleP", "UIStackView"]
 - !private ["s23CustomStringConvertibleP", "UIStoryboard"]
 - ["s23CustomStringConvertibleP", "UsesAutoLayout"]
@@ -271,7 +256,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "axis"]
 - !private ["s23CustomStringConvertibleP", "backgroundColor"]
 - !private ["s23CustomStringConvertibleP", "bottomAnchor"]
-- ["s23CustomStringConvertibleP", "bounds"]
 - !private ["s23CustomStringConvertibleP", "centerXAnchor"]
 - !private ["s23CustomStringConvertibleP", "centerYAnchor"]
 - !private ["s23CustomStringConvertibleP", "constraint"]
@@ -287,14 +271,12 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "instantiateViewController"]
 - !private ["s23CustomStringConvertibleP", "leadingAnchor"]
 - !private ["s23CustomStringConvertibleP", "letsGetStartedLabel"]
-- ["s23CustomStringConvertibleP", "main"]
 - !private ["s23CustomStringConvertibleP", "moonImage"]
 - !private ["s23CustomStringConvertibleP", "moonImageView"]
 - !private ["s23CustomStringConvertibleP", "navigationController"]
 - !private ["s23CustomStringConvertibleP", "optionsStackView"]
 - !private ["s23CustomStringConvertibleP", "orLabel"]
 - ["s23CustomStringConvertibleP", "print"]
-- !private ["s23CustomStringConvertibleP", "priority"]
 - !private ["s23CustomStringConvertibleP", "pushViewController"]
 - !private ["s23CustomStringConvertibleP", "refreshColor"]
 - !private ["s23CustomStringConvertibleP", "refreshTitle"]
@@ -336,7 +318,6 @@ depends-member:
 - ["SQ", "UIImageView"]
 - ["SQ", "UILabel"]
 - !private ["SQ", "UILayoutPriority"]
-- ["SQ", "UIScreen"]
 - ["SQ", "UIStackView"]
 - !private ["SQ", "UIStoryboard"]
 - ["SQ", "UsesAutoLayout"]
@@ -348,7 +329,6 @@ depends-member:
 - !private ["SQ", "axis"]
 - !private ["SQ", "backgroundColor"]
 - !private ["SQ", "bottomAnchor"]
-- ["SQ", "bounds"]
 - !private ["SQ", "center"]
 - !private ["SQ", "centerXAnchor"]
 - !private ["SQ", "centerYAnchor"]
@@ -367,14 +347,12 @@ depends-member:
 - !private ["SQ", "instantiateViewController"]
 - !private ["SQ", "leadingAnchor"]
 - !private ["SQ", "letsGetStartedLabel"]
-- ["SQ", "main"]
 - !private ["SQ", "moonImage"]
 - !private ["SQ", "moonImageView"]
 - !private ["SQ", "navigationController"]
 - !private ["SQ", "optionsStackView"]
 - !private ["SQ", "orLabel"]
 - ["SQ", "print"]
-- !private ["SQ", "priority"]
 - !private ["SQ", "pushViewController"]
 - !private ["SQ", "refreshColor"]
 - !private ["SQ", "refreshTitle"]
@@ -431,7 +409,6 @@ depends-member:
 - ["SH", "UIImageView"]
 - ["SH", "UILabel"]
 - !private ["SH", "UILayoutPriority"]
-- ["SH", "UIScreen"]
 - ["SH", "UIStackView"]
 - !private ["SH", "UIStoryboard"]
 - ["SH", "UsesAutoLayout"]
@@ -443,7 +420,6 @@ depends-member:
 - !private ["SH", "axis"]
 - !private ["SH", "backgroundColor"]
 - !private ["SH", "bottomAnchor"]
-- ["SH", "bounds"]
 - !private ["SH", "center"]
 - !private ["SH", "centerXAnchor"]
 - !private ["SH", "centerYAnchor"]
@@ -461,14 +437,12 @@ depends-member:
 - !private ["SH", "instantiateViewController"]
 - !private ["SH", "leadingAnchor"]
 - !private ["SH", "letsGetStartedLabel"]
-- ["SH", "main"]
 - !private ["SH", "moonImage"]
 - !private ["SH", "moonImageView"]
 - !private ["SH", "navigationController"]
 - !private ["SH", "optionsStackView"]
 - !private ["SH", "orLabel"]
 - ["SH", "print"]
-- !private ["SH", "priority"]
 - !private ["SH", "pushViewController"]
 - !private ["SH", "refreshColor"]
 - !private ["SH", "refreshTitle"]
@@ -493,7 +467,6 @@ depends-member:
 - !private ["6Drinkz22HomePageViewControllerC", ""]
 - !private ["6Drinkz22HomePageViewControllerC", "init"]
 - ["s25LosslessStringConvertibleP", ""]
-- ["So8NSCodingP", "CGRect"]
 - !private ["So8NSCodingP", "HomePageViewController"]
 - !private ["So8NSCodingP", "NSLayoutConstraint"]
 - !private ["So8NSCodingP", "RegistrationSplashPageViewController"]
@@ -505,7 +478,6 @@ depends-member:
 - ["So8NSCodingP", "UIImageView"]
 - ["So8NSCodingP", "UILabel"]
 - !private ["So8NSCodingP", "UILayoutPriority"]
-- ["So8NSCodingP", "UIScreen"]
 - ["So8NSCodingP", "UIStackView"]
 - !private ["So8NSCodingP", "UIStoryboard"]
 - ["So8NSCodingP", "UsesAutoLayout"]
@@ -601,7 +573,6 @@ depends-member:
 - !private ["So9NSCopyingP", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "systemBackground"]
-- ["So26NSExtensionRequestHandlingP", "CGRect"]
 - !private ["So26NSExtensionRequestHandlingP", "HomePageViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "NSLayoutConstraint"]
 - !private ["So26NSExtensionRequestHandlingP", "RegistrationSplashPageViewController"]
@@ -613,7 +584,6 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "UIImageView"]
 - ["So26NSExtensionRequestHandlingP", "UILabel"]
 - !private ["So26NSExtensionRequestHandlingP", "UILayoutPriority"]
-- ["So26NSExtensionRequestHandlingP", "UIScreen"]
 - ["So26NSExtensionRequestHandlingP", "UIStackView"]
 - !private ["So26NSExtensionRequestHandlingP", "UIStoryboard"]
 - ["So26NSExtensionRequestHandlingP", "UsesAutoLayout"]
@@ -668,19 +638,14 @@ depends-member:
 - !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
 - !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToSystemSpacingBelow"]
 - !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
-- ["So18NSLayoutConstraintC", "NSLayoutConstraint"]
-- ["So18NSLayoutConstraintC", "UILayoutPriority"]
-- ["So18NSLayoutConstraintC", ""]
 - !private ["So18NSLayoutConstraintC", "activate"]
-- !private ["So18NSLayoutConstraintC", "priority"]
-- ["So18NSLayoutConstraintC", "usingPriority"]
+- !private ["So18NSLayoutConstraintC", "usingPriority"]
 - !private ["So17NSLayoutDimensionC", "constraint"]
 - !private ["So19NSLayoutXAxisAnchorC", "constraint"]
 - !private ["So19NSLayoutYAxisAnchorC", "constraint"]
-- ["So8NSObjectC", "CGRect"]
 - !private ["So8NSObjectC", "HomePageViewController"]
 - ["So8NSObjectC", "NSCoder"]
-- ["So8NSObjectC", "NSLayoutConstraint"]
+- !private ["So8NSObjectC", "NSLayoutConstraint"]
 - !private ["So8NSObjectC", "RegistrationSplashPageViewController"]
 - ["So8NSObjectC", "RoundButton"]
 - !private ["So8NSObjectC", "SignInSplashPageViewController"]
@@ -689,8 +654,7 @@ depends-member:
 - ["So8NSObjectC", "UIImage"]
 - ["So8NSObjectC", "UIImageView"]
 - ["So8NSObjectC", "UILabel"]
-- ["So8NSObjectC", "UILayoutPriority"]
-- ["So8NSObjectC", "UIScreen"]
+- !private ["So8NSObjectC", "UILayoutPriority"]
 - ["So8NSObjectC", "UIStackView"]
 - !private ["So8NSObjectC", "UIStoryboard"]
 - ["So8NSObjectC", "UsesAutoLayout"]
@@ -710,7 +674,6 @@ depends-member:
 - !private ["So8NSObjectC", "axis"]
 - !private ["So8NSObjectC", "backgroundColor"]
 - !private ["So8NSObjectC", "bottomAnchor"]
-- ["So8NSObjectC", "bounds"]
 - !private ["So8NSObjectC", "centerXAnchor"]
 - !private ["So8NSObjectC", "centerYAnchor"]
 - !private ["So8NSObjectC", "constraint"]
@@ -753,7 +716,6 @@ depends-member:
 - ["So8NSObjectC", "jpegData"]
 - !private ["So8NSObjectC", "leadingAnchor"]
 - ["So8NSObjectC", "letsGetStartedLabel"]
-- ["So8NSObjectC", "main"]
 - ["So8NSObjectC", "moonImage"]
 - ["So8NSObjectC", "moonImageView"]
 - !private ["So8NSObjectC", "navigationController"]
@@ -761,7 +723,6 @@ depends-member:
 - ["So8NSObjectC", "orLabel"]
 - ["So8NSObjectC", "pngData"]
 - ["So8NSObjectC", "print"]
-- !private ["So8NSObjectC", "priority"]
 - !private ["So8NSObjectC", "pushViewController"]
 - !private ["So8NSObjectC", "refreshColor"]
 - !private ["So8NSObjectC", "refreshTitle"]
@@ -780,13 +741,12 @@ depends-member:
 - !private ["So8NSObjectC", "titleLabel"]
 - !private ["So8NSObjectC", "topAnchor"]
 - !private ["So8NSObjectC", "trailingAnchor"]
-- ["So8NSObjectC", "usingPriority"]
+- !private ["So8NSObjectC", "usingPriority"]
 - !private ["So8NSObjectC", "view"]
 - ["So8NSObjectC", "viewDidLoad"]
 - !private ["So8NSObjectC", "widthAnchor"]
-- ["So8NSObjectP", "CGRect"]
 - !private ["So8NSObjectP", "HomePageViewController"]
-- ["So8NSObjectP", "NSLayoutConstraint"]
+- !private ["So8NSObjectP", "NSLayoutConstraint"]
 - !private ["So8NSObjectP", "RegistrationSplashPageViewController"]
 - ["So8NSObjectP", "RoundButton"]
 - !private ["So8NSObjectP", "SignInSplashPageViewController"]
@@ -795,8 +755,7 @@ depends-member:
 - ["So8NSObjectP", "UIImage"]
 - ["So8NSObjectP", "UIImageView"]
 - ["So8NSObjectP", "UILabel"]
-- ["So8NSObjectP", "UILayoutPriority"]
-- ["So8NSObjectP", "UIScreen"]
+- !private ["So8NSObjectP", "UILayoutPriority"]
 - ["So8NSObjectP", "UIStackView"]
 - !private ["So8NSObjectP", "UIStoryboard"]
 - ["So8NSObjectP", "UsesAutoLayout"]
@@ -816,7 +775,6 @@ depends-member:
 - !private ["So8NSObjectP", "axis"]
 - !private ["So8NSObjectP", "backgroundColor"]
 - !private ["So8NSObjectP", "bottomAnchor"]
-- ["So8NSObjectP", "bounds"]
 - !private ["So8NSObjectP", "centerXAnchor"]
 - !private ["So8NSObjectP", "centerYAnchor"]
 - !private ["So8NSObjectP", "constraint"]
@@ -859,7 +817,6 @@ depends-member:
 - ["So8NSObjectP", "jpegData"]
 - !private ["So8NSObjectP", "leadingAnchor"]
 - ["So8NSObjectP", "letsGetStartedLabel"]
-- ["So8NSObjectP", "main"]
 - ["So8NSObjectP", "moonImage"]
 - ["So8NSObjectP", "moonImageView"]
 - !private ["So8NSObjectP", "navigationController"]
@@ -867,7 +824,6 @@ depends-member:
 - ["So8NSObjectP", "orLabel"]
 - ["So8NSObjectP", "pngData"]
 - ["So8NSObjectP", "print"]
-- !private ["So8NSObjectP", "priority"]
 - !private ["So8NSObjectP", "pushViewController"]
 - ["So8NSObjectP", "refreshColor"]
 - ["So8NSObjectP", "refreshTitle"]
@@ -921,7 +877,6 @@ depends-member:
 - !private ["6Drinkz30SignInSplashPageViewControllerC", ""]
 - !private ["6Drinkz30SignInSplashPageViewControllerC", "init"]
 - ["s13SignedNumericP", ""]
-- ["6Drinkz24SplashPageViewControllerC", "CGRect"]
 - !private ["6Drinkz24SplashPageViewControllerC", "HomePageViewController"]
 - ["6Drinkz24SplashPageViewControllerC", "NSCoder"]
 - !private ["6Drinkz24SplashPageViewControllerC", "NSLayoutConstraint"]
@@ -934,7 +889,6 @@ depends-member:
 - ["6Drinkz24SplashPageViewControllerC", "UIImageView"]
 - ["6Drinkz24SplashPageViewControllerC", "UILabel"]
 - !private ["6Drinkz24SplashPageViewControllerC", "UILayoutPriority"]
-- ["6Drinkz24SplashPageViewControllerC", "UIScreen"]
 - ["6Drinkz24SplashPageViewControllerC", "UIStackView"]
 - !private ["6Drinkz24SplashPageViewControllerC", "UIStoryboard"]
 - ["6Drinkz24SplashPageViewControllerC", "UsesAutoLayout"]
@@ -1033,7 +987,6 @@ depends-member:
 - !private ["So12UIAppearanceP", "topAnchor"]
 - !private ["So12UIAppearanceP", "trailingAnchor"]
 - !private ["So12UIAppearanceP", "widthAnchor"]
-- ["So21UIAppearanceContainerP", "CGRect"]
 - !private ["So21UIAppearanceContainerP", "HomePageViewController"]
 - !private ["So21UIAppearanceContainerP", "NSLayoutConstraint"]
 - !private ["So21UIAppearanceContainerP", "RegistrationSplashPageViewController"]
@@ -1045,7 +998,6 @@ depends-member:
 - ["So21UIAppearanceContainerP", "UIImageView"]
 - ["So21UIAppearanceContainerP", "UILabel"]
 - !private ["So21UIAppearanceContainerP", "UILayoutPriority"]
-- ["So21UIAppearanceContainerP", "UIScreen"]
 - ["So21UIAppearanceContainerP", "UIStackView"]
 - !private ["So21UIAppearanceContainerP", "UIStoryboard"]
 - ["So21UIAppearanceContainerP", "UsesAutoLayout"]
@@ -1110,7 +1062,6 @@ depends-member:
 - !private ["So8UIButtonC", "widthAnchor"]
 - !private ["So7UIColorC", "init"]
 - !private ["So7UIColorC", "systemBackground"]
-- ["So18UIContentContainerP", "CGRect"]
 - !private ["So18UIContentContainerP", "HomePageViewController"]
 - !private ["So18UIContentContainerP", "NSLayoutConstraint"]
 - !private ["So18UIContentContainerP", "RegistrationSplashPageViewController"]
@@ -1122,7 +1073,6 @@ depends-member:
 - ["So18UIContentContainerP", "UIImageView"]
 - ["So18UIContentContainerP", "UILabel"]
 - !private ["So18UIContentContainerP", "UILayoutPriority"]
-- ["So18UIContentContainerP", "UIScreen"]
 - ["So18UIContentContainerP", "UIStackView"]
 - !private ["So18UIContentContainerP", "UIStoryboard"]
 - ["So18UIContentContainerP", "UsesAutoLayout"]
@@ -1229,7 +1179,6 @@ depends-member:
 - !private ["So13UIDynamicItemP", "topAnchor"]
 - !private ["So13UIDynamicItemP", "trailingAnchor"]
 - !private ["So13UIDynamicItemP", "widthAnchor"]
-- ["So18UIFocusEnvironmentP", "CGRect"]
 - !private ["So18UIFocusEnvironmentP", "HomePageViewController"]
 - !private ["So18UIFocusEnvironmentP", "NSLayoutConstraint"]
 - !private ["So18UIFocusEnvironmentP", "RegistrationSplashPageViewController"]
@@ -1241,7 +1190,6 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "UIImageView"]
 - ["So18UIFocusEnvironmentP", "UILabel"]
 - !private ["So18UIFocusEnvironmentP", "UILayoutPriority"]
-- ["So18UIFocusEnvironmentP", "UIScreen"]
 - ["So18UIFocusEnvironmentP", "UIStackView"]
 - !private ["So18UIFocusEnvironmentP", "UIStoryboard"]
 - ["So18UIFocusEnvironmentP", "UsesAutoLayout"]
@@ -1403,7 +1351,6 @@ depends-member:
 - !private ["So16UILayoutPrioritya", "RawValue"]
 - !private ["So16UILayoutPrioritya", "init"]
 - !private ["So22UINavigationControllerC", "pushViewController"]
-- ["So30UIPasteConfigurationSupportingP", "CGRect"]
 - !private ["So30UIPasteConfigurationSupportingP", "HomePageViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSLayoutConstraint"]
 - !private ["So30UIPasteConfigurationSupportingP", "RegistrationSplashPageViewController"]
@@ -1415,7 +1362,6 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "UIImageView"]
 - ["So30UIPasteConfigurationSupportingP", "UILabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "UILayoutPriority"]
-- ["So30UIPasteConfigurationSupportingP", "UIScreen"]
 - ["So30UIPasteConfigurationSupportingP", "UIStackView"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIStoryboard"]
 - ["So30UIPasteConfigurationSupportingP", "UsesAutoLayout"]
@@ -1471,7 +1417,6 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - !private ["So30UIPasteConfigurationSupportingP", "widthAnchor"]
 - ["So39UIPopoverPresentationControllerDelegateP", "init"]
-- ["So11UIResponderC", "CGRect"]
 - !private ["So11UIResponderC", "HomePageViewController"]
 - ["So11UIResponderC", "NSCoder"]
 - !private ["So11UIResponderC", "NSLayoutConstraint"]
@@ -1484,7 +1429,6 @@ depends-member:
 - ["So11UIResponderC", "UIImageView"]
 - ["So11UIResponderC", "UILabel"]
 - !private ["So11UIResponderC", "UILayoutPriority"]
-- ["So11UIResponderC", "UIScreen"]
 - ["So11UIResponderC", "UIStackView"]
 - !private ["So11UIResponderC", "UIStoryboard"]
 - ["So11UIResponderC", "UsesAutoLayout"]
@@ -1539,7 +1483,6 @@ depends-member:
 - !private ["So11UIResponderC", "view"]
 - ["So11UIResponderC", "viewDidLoad"]
 - !private ["So11UIResponderC", "widthAnchor"]
-- ["So30UIResponderStandardEditActionsP", "CGRect"]
 - !private ["So30UIResponderStandardEditActionsP", "HomePageViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "NSLayoutConstraint"]
 - !private ["So30UIResponderStandardEditActionsP", "RegistrationSplashPageViewController"]
@@ -1551,7 +1494,6 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "UIImageView"]
 - ["So30UIResponderStandardEditActionsP", "UILabel"]
 - !private ["So30UIResponderStandardEditActionsP", "UILayoutPriority"]
-- ["So30UIResponderStandardEditActionsP", "UIScreen"]
 - ["So30UIResponderStandardEditActionsP", "UIStackView"]
 - !private ["So30UIResponderStandardEditActionsP", "UIStoryboard"]
 - ["So30UIResponderStandardEditActionsP", "UsesAutoLayout"]
@@ -1606,8 +1548,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "view"]
 - ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
 - !private ["So30UIResponderStandardEditActionsP", "widthAnchor"]
-- ["So8UIScreenC", "bounds"]
-- ["So8UIScreenC", "main"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "addTarget"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "heightAnchor"]
 - ["So35UISpringLoadedInteractionSupportingP", "init"]
@@ -1623,7 +1563,6 @@ depends-member:
 - !private ["So11UIStackViewC", "setContentHuggingPriority"]
 - !private ["So11UIStackViewC", "spacing"]
 - !private ["So11UIStackViewC", "trailingAnchor"]
-- ["So16UIStateRestoringP", "CGRect"]
 - !private ["So16UIStateRestoringP", "HomePageViewController"]
 - !private ["So16UIStateRestoringP", "NSLayoutConstraint"]
 - !private ["So16UIStateRestoringP", "RegistrationSplashPageViewController"]
@@ -1635,7 +1574,6 @@ depends-member:
 - ["So16UIStateRestoringP", "UIImageView"]
 - ["So16UIStateRestoringP", "UILabel"]
 - !private ["So16UIStateRestoringP", "UILayoutPriority"]
-- ["So16UIStateRestoringP", "UIScreen"]
 - ["So16UIStateRestoringP", "UIStackView"]
 - !private ["So16UIStateRestoringP", "UIStoryboard"]
 - ["So16UIStateRestoringP", "UsesAutoLayout"]
@@ -1668,7 +1606,6 @@ depends-member:
 - ["So16UIStateRestoringP", "viewDidLoad"]
 - !private ["So12UIStoryboardC", "init"]
 - !private ["So12UIStoryboardC", "instantiateViewController"]
-- ["So18UITraitEnvironmentP", "CGRect"]
 - !private ["So18UITraitEnvironmentP", "HomePageViewController"]
 - !private ["So18UITraitEnvironmentP", "NSLayoutConstraint"]
 - !private ["So18UITraitEnvironmentP", "RegistrationSplashPageViewController"]
@@ -1680,7 +1617,6 @@ depends-member:
 - ["So18UITraitEnvironmentP", "UIImageView"]
 - ["So18UITraitEnvironmentP", "UILabel"]
 - !private ["So18UITraitEnvironmentP", "UILayoutPriority"]
-- ["So18UITraitEnvironmentP", "UIScreen"]
 - ["So18UITraitEnvironmentP", "UIStackView"]
 - !private ["So18UITraitEnvironmentP", "UIStoryboard"]
 - ["So18UITraitEnvironmentP", "UsesAutoLayout"]
@@ -1698,7 +1634,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "axis"]
 - !private ["So18UITraitEnvironmentP", "backgroundColor"]
 - !private ["So18UITraitEnvironmentP", "bottomAnchor"]
-- ["So18UITraitEnvironmentP", "bounds"]
 - !private ["So18UITraitEnvironmentP", "centerXAnchor"]
 - !private ["So18UITraitEnvironmentP", "centerYAnchor"]
 - ["So18UITraitEnvironmentP", "continueAsGuestButton"]
@@ -1712,7 +1647,6 @@ depends-member:
 - ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "leadingAnchor"]
 - ["So18UITraitEnvironmentP", "letsGetStartedLabel"]
-- ["So18UITraitEnvironmentP", "main"]
 - ["So18UITraitEnvironmentP", "moonImage"]
 - ["So18UITraitEnvironmentP", "moonImageView"]
 - !private ["So18UITraitEnvironmentP", "navigationController"]
@@ -1737,7 +1671,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "view"]
 - ["So18UITraitEnvironmentP", "viewDidLoad"]
 - !private ["So18UITraitEnvironmentP", "widthAnchor"]
-- ["So23UIUserActivityRestoringP", "CGRect"]
 - !private ["So23UIUserActivityRestoringP", "HomePageViewController"]
 - !private ["So23UIUserActivityRestoringP", "NSLayoutConstraint"]
 - !private ["So23UIUserActivityRestoringP", "RegistrationSplashPageViewController"]
@@ -1749,7 +1682,6 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "UIImageView"]
 - ["So23UIUserActivityRestoringP", "UILabel"]
 - !private ["So23UIUserActivityRestoringP", "UILayoutPriority"]
-- ["So23UIUserActivityRestoringP", "UIScreen"]
 - ["So23UIUserActivityRestoringP", "UIStackView"]
 - !private ["So23UIUserActivityRestoringP", "UIStoryboard"]
 - ["So23UIUserActivityRestoringP", "UsesAutoLayout"]
@@ -1830,7 +1762,6 @@ depends-member:
 - !private ["So6UIViewC", "topAnchor"]
 - !private ["So6UIViewC", "trailingAnchor"]
 - !private ["So6UIViewC", "widthAnchor"]
-- ["So16UIViewControllerC", "CGRect"]
 - !private ["So16UIViewControllerC", "HomePageViewController"]
 - ["So16UIViewControllerC", "NSCoder"]
 - !private ["So16UIViewControllerC", "NSLayoutConstraint"]
@@ -1843,7 +1774,6 @@ depends-member:
 - ["So16UIViewControllerC", "UIImageView"]
 - ["So16UIViewControllerC", "UILabel"]
 - !private ["So16UIViewControllerC", "UILayoutPriority"]
-- ["So16UIViewControllerC", "UIScreen"]
 - ["So16UIViewControllerC", "UIStackView"]
 - !private ["So16UIViewControllerC", "UIStoryboard"]
 - ["So16UIViewControllerC", "UsesAutoLayout"]
@@ -1900,7 +1830,6 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "UIImageView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UILabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UILayoutPriority"]
-- ["10Foundation27_KeyValueCodingAndObservingP", "UIScreen"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UIStackView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIStoryboard"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UsesAutoLayout"]
@@ -1912,7 +1841,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "axis"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "backgroundColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "bottomAnchor"]
-- ["10Foundation27_KeyValueCodingAndObservingP", "bounds"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "centerXAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "centerYAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "constraint"]
@@ -1928,14 +1856,12 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "instantiateViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "leadingAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "letsGetStartedLabel"]
-- ["10Foundation27_KeyValueCodingAndObservingP", "main"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "moonImage"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "moonImageView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "optionsStackView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "orLabel"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "print"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "priority"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "pushViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "refreshColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "refreshTitle"]
@@ -1966,7 +1892,6 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIImageView"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UILabel"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UILayoutPriority"]
-- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIScreen"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIStackView"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIStoryboard"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UsesAutoLayout"]
@@ -1978,7 +1903,6 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "axis"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "backgroundColor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bottomAnchor"]
-- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bounds"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "centerXAnchor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "centerYAnchor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "constraint"]
@@ -1994,14 +1918,12 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "instantiateViewController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "leadingAnchor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "letsGetStartedLabel"]
-- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "main"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "moonImage"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "moonImageView"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "navigationController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "optionsStackView"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "orLabel"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "print"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "priority"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "pushViewController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "refreshColor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "refreshTitle"]
@@ -2092,7 +2014,7 @@ depends-nominal:
 - "So21NSItemProviderReadingP"
 - "So21NSItemProviderWritingP"
 - "So14NSLayoutAnchorC"
-- "So18NSLayoutConstraintC"
+- !private "So18NSLayoutConstraintC"
 - !private "So17NSLayoutDimensionC"
 - !private "So19NSLayoutXAxisAnchorC"
 - !private "So19NSLayoutYAxisAnchorC"
@@ -2143,7 +2065,6 @@ depends-nominal:
 - "So39UIPopoverPresentationControllerDelegateP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
-- "So8UIScreenC"
 - "So35UISpringLoadedInteractionSupportingP"
 - "So11UIStackViewC"
 - "So16UIStateRestoringP"
@@ -2271,4 +2192,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "d8240c3fb6d16fa643a226937f816cc0"
+interface-hash: "fab83bc444935f3c30ed0ccfa3242ff7"

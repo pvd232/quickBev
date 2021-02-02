@@ -114,8 +114,8 @@ class Merchant(db.Model):
         return serialized_attributes
 
 
-class User_Table(db.Model):
-    __tablename__ = 'user_table'
+class Customer(db.Model):
+    __tablename__ = 'customer'
     id = db.Column(db.String(80), primary_key=True,
                    unique=True, nullable=False)
     stripe_id = db.Column(db.String(80), db.ForeignKey('stripe_customer.id'),
@@ -139,8 +139,8 @@ class User_Table(db.Model):
 class Order(db.Model):
     id = db.Column(UUID(as_uuid=True), primary_key=True,
                    unique=True, nullable=False)
-    user_id = db.Column(db.String(80), db.ForeignKey(
-        'user_table.id'), nullable=False)
+    customer_id = db.Column(db.String(80), db.ForeignKey(
+        'customer.id'), nullable=False)
     business_id = db.Column(UUID(as_uuid=True), db.ForeignKey(
         'business.id'), nullable=False)
     cost = db.Column(db.Float(), nullable=False)
@@ -187,8 +187,8 @@ class Tab (db.Model):
     name = db.Column(db.String(80), nullable=False)
     business_id = db.Column(UUID(as_uuid=True), db.ForeignKey(
         'business.id'), nullable=False)
-    user_id = db.Column(db.String(80), db.ForeignKey(
-        'user_table.id'), nullable=False)
+    customer_id = db.Column(db.String(80), db.ForeignKey(
+        'customer.id'), nullable=False)
     street = db.Column(db.String(80), nullable=False)
     city = db.Column(db.String(80), nullable=False)
     state = db.Column(db.String(80),  nullable=False)
@@ -214,7 +214,7 @@ class Stripe_Customer(db.Model):
 
     id = db.Column(db.String(80), primary_key=True,
                    unique=True, nullable=False)
-    user_table = relationship('User_Table', lazy=True)
+    customer = relationship('Customer', lazy=True)
 
     @property
     def serialize(self):

@@ -354,14 +354,6 @@ SWIFT_CLASS("_TtC6Drinkz12CheckoutCart")
 
 
 @interface CheckoutCart (SWIFT_EXTENSION(Drinkz))
-- (void)addBusinessObject:(Business * _Nonnull)value;
-- (void)removeBusinessObject:(Business * _Nonnull)value;
-- (void)addBusiness:(NSSet * _Nonnull)values;
-- (void)removeBusiness:(NSSet * _Nonnull)values;
-@end
-
-
-@interface CheckoutCart (SWIFT_EXTENSION(Drinkz))
 - (void)addDrinksObject:(Drink * _Nonnull)value;
 - (void)removeDrinksObject:(Drink * _Nonnull)value;
 - (void)addDrinks:(NSSet * _Nonnull)values;
@@ -369,12 +361,20 @@ SWIFT_CLASS("_TtC6Drinkz12CheckoutCart")
 @end
 
 
+@interface CheckoutCart (SWIFT_EXTENSION(Drinkz))
+- (void)addBusinessObject:(Business * _Nonnull)value;
+- (void)removeBusinessObject:(Business * _Nonnull)value;
+- (void)addBusiness:(NSSet * _Nonnull)values;
+- (void)removeBusiness:(NSSet * _Nonnull)values;
+@end
+
+
 @class User;
 
 @interface CheckoutCart (SWIFT_EXTENSION(Drinkz))
-@property (nonatomic, copy) NSUUID * _Nullable currentOrderId;
 @property (nonatomic, copy) NSUUID * _Nullable businessId;
 @property (nonatomic) double cost;
+@property (nonatomic, copy) NSUUID * _Nullable currentOrderId;
 @property (nonatomic) int16_t orderingProcessViewControllerIndex;
 @property (nonatomic) double salesTax;
 @property (nonatomic, copy) NSString * _Nullable stripeId;
@@ -442,7 +442,7 @@ SWIFT_CLASS("_TtC6Drinkz5Drink")
 @property (nonatomic) int16_t quantity;
 @property (nonatomic, strong) Business * _Nullable drinkToBusiness;
 @property (nonatomic, strong) Order * _Nullable drinkToOrder;
-@property (nonatomic, strong) CheckoutCart * _Nullable relationship;
+@property (nonatomic, strong) CheckoutCart * _Nullable drinkToCheckoutCart;
 @end
 
 
@@ -763,18 +763,13 @@ SWIFT_CLASS("_TtC6Drinkz28TemplateNavigationController")
 @end
 
 
-
-
-SWIFT_AVAILABILITY(ios,introduced=13.0)
-@interface UIResponder (SWIFT_EXTENSION(Drinkz))
-@property (nonatomic, readonly, strong) UIScene * _Nullable scene;
+SWIFT_CLASS("_TtC6Drinkz11ToolbarView")
+@interface ToolbarView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
-SWIFT_AVAILABILITY(ios,introduced=13.0)
-@interface UIScene (SWIFT_EXTENSION(Drinkz))
-@property (nonatomic, readonly, strong) UIScene * _Nullable scene;
-@end
 
 
 @interface UITextField (SWIFT_EXTENSION(Drinkz))
@@ -782,17 +777,6 @@ SWIFT_AVAILABILITY(ios,introduced=13.0)
 @end
 
 
-SWIFT_AVAILABILITY(ios,introduced=13.0)
-@interface UIView (SWIFT_EXTENSION(Drinkz))
-@property (nonatomic, readonly, strong) UIScene * _Nullable scene;
-@end
-
-
-
-SWIFT_AVAILABILITY(ios,introduced=13.0)
-@interface UIViewController (SWIFT_EXTENSION(Drinkz))
-@property (nonatomic, readonly, strong) UIScene * _Nullable scene;
-@end
 
 
 SWIFT_CLASS("_TtC6Drinkz4User")

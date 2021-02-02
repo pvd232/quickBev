@@ -132,7 +132,7 @@ const Dashboard = (props) => {
       fixedHeightPaper={fixedHeightPaper}
       classes={classes}
     />,
-    <Customers />,
+    <Customers fixedHeightPaper={fixedHeightPaper} classes={classes} />,
   ];
   const handleDrawerOpen = () => {
     setOpen(true);

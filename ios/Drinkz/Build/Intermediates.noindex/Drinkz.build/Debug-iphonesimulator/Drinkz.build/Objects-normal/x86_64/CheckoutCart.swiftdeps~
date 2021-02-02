@@ -12,6 +12,7 @@ provides-member:
 - ["6Drinkz12CheckoutCartC", "canPay"]
 - ["6Drinkz12CheckoutCartC", "calculateCost"]
 - ["6Drinkz12CheckoutCartC", "emptyCart"]
+- ["6Drinkz12CheckoutCartC", "destroyCart"]
 - ["Sd", "rounded"]
 provides-dynamic-lookup:
 - "businessArray"
@@ -19,6 +20,7 @@ provides-dynamic-lookup:
 - "canPay"
 - "cart"
 - "customerContext"
+- "destroyCart"
 - "emptyCart"
 - "shared"
 - "userBusinessDrinks"
@@ -52,6 +54,7 @@ depends-top-level:
 - !private "business"
 - !private "cart"
 - !private "drinks"
+- !private "emptyCart"
 - !private "pow"
 - !private "userBusiness"
 depends-member:
@@ -110,6 +113,7 @@ depends-member:
 - !private ["s7CVarArgP", "cost"]
 - !private ["s7CVarArgP", "count"]
 - !private ["s7CVarArgP", "drinks"]
+- !private ["s7CVarArgP", "emptyCart"]
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isEmpty"]
 - !private ["s7CVarArgP", "name"]
@@ -120,10 +124,12 @@ depends-member:
 - !private ["s7CVarArgP", "salesTaxRate"]
 - ["s7CVarArgP", "sharedAPIClient"]
 - !private ["s7CVarArgP", "sorted"]
+- !private ["s7CVarArgP", "stripeId"]
 - !private ["s7CVarArgP", "subscript"]
 - !private ["s7CVarArgP", "subtotal"]
 - !private ["s7CVarArgP", "tipAmount"]
 - !private ["s7CVarArgP", "tipPercentage"]
+- !private ["s7CVarArgP", "user"]
 - !private ["s7CVarArgP", "userBusiness"]
 - !private ["s7CVarArgP", "userId"]
 - !private ["s7CVarArgP", "viewContext"]
@@ -147,14 +153,17 @@ depends-member:
 - !private ["6Drinkz12CheckoutCartC", "cost"]
 - ["6Drinkz12CheckoutCartC", "customerContext"]
 - ["6Drinkz12CheckoutCartC", "deinit"]
+- ["6Drinkz12CheckoutCartC", "destroyCart"]
 - !private ["6Drinkz12CheckoutCartC", "drinks"]
 - ["6Drinkz12CheckoutCartC", "emptyCart"]
 - ["6Drinkz12CheckoutCartC", "init"]
 - !private ["6Drinkz12CheckoutCartC", "salesTax"]
 - ["6Drinkz12CheckoutCartC", "shared"]
+- !private ["6Drinkz12CheckoutCartC", "stripeId"]
 - !private ["6Drinkz12CheckoutCartC", "subtotal"]
 - !private ["6Drinkz12CheckoutCartC", "tipAmount"]
 - !private ["6Drinkz12CheckoutCartC", "tipPercentage"]
+- !private ["6Drinkz12CheckoutCartC", "user"]
 - !private ["6Drinkz12CheckoutCartC", "userBusiness"]
 - ["6Drinkz12CheckoutCartC", "userBusinessDrinks"]
 - !private ["6Drinkz12CheckoutCartC", "userId"]
@@ -194,6 +203,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "cost"]
 - !private ["s28CustomDebugStringConvertibleP", "count"]
 - !private ["s28CustomDebugStringConvertibleP", "drinks"]
+- !private ["s28CustomDebugStringConvertibleP", "emptyCart"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
 - !private ["s28CustomDebugStringConvertibleP", "name"]
@@ -204,10 +214,12 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "salesTaxRate"]
 - ["s28CustomDebugStringConvertibleP", "sharedAPIClient"]
 - !private ["s28CustomDebugStringConvertibleP", "sorted"]
+- !private ["s28CustomDebugStringConvertibleP", "stripeId"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "subtotal"]
 - !private ["s28CustomDebugStringConvertibleP", "tipAmount"]
 - !private ["s28CustomDebugStringConvertibleP", "tipPercentage"]
+- !private ["s28CustomDebugStringConvertibleP", "user"]
 - !private ["s28CustomDebugStringConvertibleP", "userBusiness"]
 - !private ["s28CustomDebugStringConvertibleP", "userId"]
 - !private ["s28CustomDebugStringConvertibleP", "viewContext"]
@@ -236,6 +248,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "cost"]
 - !private ["s23CustomStringConvertibleP", "count"]
 - !private ["s23CustomStringConvertibleP", "drinks"]
+- !private ["s23CustomStringConvertibleP", "emptyCart"]
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isEmpty"]
 - !private ["s23CustomStringConvertibleP", "name"]
@@ -246,10 +259,12 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "salesTaxRate"]
 - ["s23CustomStringConvertibleP", "sharedAPIClient"]
 - !private ["s23CustomStringConvertibleP", "sorted"]
+- !private ["s23CustomStringConvertibleP", "stripeId"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "subtotal"]
 - !private ["s23CustomStringConvertibleP", "tipAmount"]
 - !private ["s23CustomStringConvertibleP", "tipPercentage"]
+- !private ["s23CustomStringConvertibleP", "user"]
 - !private ["s23CustomStringConvertibleP", "userBusiness"]
 - !private ["s23CustomStringConvertibleP", "userId"]
 - !private ["s23CustomStringConvertibleP", "viewContext"]
@@ -312,6 +327,7 @@ depends-member:
 - !private ["SQ", "cost"]
 - !private ["SQ", "count"]
 - !private ["SQ", "drinks"]
+- !private ["SQ", "emptyCart"]
 - ["SQ", "init"]
 - !private ["SQ", "isEmpty"]
 - !private ["SQ", "name"]
@@ -322,10 +338,12 @@ depends-member:
 - !private ["SQ", "salesTaxRate"]
 - ["SQ", "sharedAPIClient"]
 - !private ["SQ", "sorted"]
+- !private ["SQ", "stripeId"]
 - !private ["SQ", "subscript"]
 - !private ["SQ", "subtotal"]
 - !private ["SQ", "tipAmount"]
 - !private ["SQ", "tipPercentage"]
+- !private ["SQ", "user"]
 - !private ["SQ", "userBusiness"]
 - !private ["SQ", "userId"]
 - !private ["SQ", "viewContext"]
@@ -336,7 +354,6 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "reduce"]
 - !private ["s25ExpressibleByArrayLiteralP", "sorted"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
-- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "Darwin"]
 - !private ["s25ExpressibleByFloatLiteralP", "Double"]
 - !private ["s25ExpressibleByFloatLiteralP", ""]
@@ -349,9 +366,6 @@ depends-member:
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "pow"]
 - !private ["s27ExpressibleByIntegerLiteralP", "rounded"]
-- !private ["s32ExpressibleByStringInterpolationP", ""]
-- !private ["s26ExpressibleByStringLiteralP", ""]
-- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["SF", "Darwin"]
 - !private ["SF", "Double"]
 - !private ["SF", ""]
@@ -373,6 +387,7 @@ depends-member:
 - !private ["SH", "cost"]
 - !private ["SH", "count"]
 - !private ["SH", "drinks"]
+- !private ["SH", "emptyCart"]
 - ["SH", "init"]
 - !private ["SH", "isEmpty"]
 - !private ["SH", "name"]
@@ -383,10 +398,12 @@ depends-member:
 - !private ["SH", "salesTaxRate"]
 - ["SH", "sharedAPIClient"]
 - !private ["SH", "sorted"]
+- !private ["SH", "stripeId"]
 - !private ["SH", "subscript"]
 - !private ["SH", "subtotal"]
 - !private ["SH", "tipAmount"]
 - !private ["SH", "tipPercentage"]
+- !private ["SH", "user"]
 - !private ["SH", "userBusiness"]
 - !private ["SH", "userId"]
 - !private ["SH", "viewContext"]
@@ -401,18 +418,20 @@ depends-member:
 - !private ["s12IdentifiableP", "cart"]
 - !private ["s12IdentifiableP", "cost"]
 - !private ["s12IdentifiableP", "drinks"]
+- !private ["s12IdentifiableP", "emptyCart"]
 - !private ["s12IdentifiableP", "init"]
 - !private ["s12IdentifiableP", "name"]
 - !private ["s12IdentifiableP", "salesTax"]
 - !private ["s12IdentifiableP", "salesTaxRate"]
+- !private ["s12IdentifiableP", "stripeId"]
 - !private ["s12IdentifiableP", "subtotal"]
 - !private ["s12IdentifiableP", "tipAmount"]
 - !private ["s12IdentifiableP", "tipPercentage"]
+- !private ["s12IdentifiableP", "user"]
 - !private ["s12IdentifiableP", "userBusiness"]
 - !private ["s12IdentifiableP", "userId"]
 - !private ["s25LosslessStringConvertibleP", "Darwin"]
 - !private ["s25LosslessStringConvertibleP", "Double"]
-- !private ["s25LosslessStringConvertibleP", ""]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s25LosslessStringConvertibleP", "pow"]
 - !private ["s25LosslessStringConvertibleP", "rounded"]
@@ -427,7 +446,7 @@ depends-member:
 - !private ["10Foundation19MutableDataProtocolP", "isEmpty"]
 - !private ["10Foundation19MutableDataProtocolP", "reduce"]
 - !private ["10Foundation19MutableDataProtocolP", "subscript"]
-- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "init"]
 - !private ["So9NSCopyingP", "cost"]
 - !private ["So9NSCopyingP", "init"]
@@ -435,7 +454,7 @@ depends-member:
 - !private ["So17NSFastEnumerationP", "init"]
 - ["So20NSFetchRequestResultP", "Bool"]
 - ["So20NSFetchRequestResultP", "Business"]
-- ["So20NSFetchRequestResultP", "CheckoutCart"]
+- !private ["So20NSFetchRequestResultP", "CheckoutCart"]
 - !private ["So20NSFetchRequestResultP", "CoreDataManager"]
 - !private ["So20NSFetchRequestResultP", "Drink"]
 - !private ["So20NSFetchRequestResultP", "NSSet"]
@@ -451,6 +470,7 @@ depends-member:
 - ["So20NSFetchRequestResultP", "cart"]
 - !private ["So20NSFetchRequestResultP", "cost"]
 - ["So20NSFetchRequestResultP", "customerContext"]
+- ["So20NSFetchRequestResultP", "destroyCart"]
 - !private ["So20NSFetchRequestResultP", "drinks"]
 - ["So20NSFetchRequestResultP", "emptyCart"]
 - ["So20NSFetchRequestResultP", "init"]
@@ -458,9 +478,11 @@ depends-member:
 - !private ["So20NSFetchRequestResultP", "salesTax"]
 - !private ["So20NSFetchRequestResultP", "salesTaxRate"]
 - ["So20NSFetchRequestResultP", "shared"]
+- !private ["So20NSFetchRequestResultP", "stripeId"]
 - !private ["So20NSFetchRequestResultP", "subtotal"]
 - !private ["So20NSFetchRequestResultP", "tipAmount"]
 - !private ["So20NSFetchRequestResultP", "tipPercentage"]
+- !private ["So20NSFetchRequestResultP", "user"]
 - !private ["So20NSFetchRequestResultP", "userBusiness"]
 - ["So20NSFetchRequestResultP", "userBusinessDrinks"]
 - !private ["So20NSFetchRequestResultP", "userId"]
@@ -483,6 +505,7 @@ depends-member:
 - ["So15NSManagedObjectC", "cart"]
 - !private ["So15NSManagedObjectC", "cost"]
 - ["So15NSManagedObjectC", "customerContext"]
+- ["So15NSManagedObjectC", "destroyCart"]
 - !private ["So15NSManagedObjectC", "drinks"]
 - ["So15NSManagedObjectC", "emptyCart"]
 - ["So15NSManagedObjectC", "init"]
@@ -490,9 +513,11 @@ depends-member:
 - !private ["So15NSManagedObjectC", "salesTax"]
 - !private ["So15NSManagedObjectC", "salesTaxRate"]
 - ["So15NSManagedObjectC", "shared"]
+- !private ["So15NSManagedObjectC", "stripeId"]
 - !private ["So15NSManagedObjectC", "subtotal"]
 - !private ["So15NSManagedObjectC", "tipAmount"]
 - !private ["So15NSManagedObjectC", "tipPercentage"]
+- !private ["So15NSManagedObjectC", "user"]
 - !private ["So15NSManagedObjectC", "userBusiness"]
 - ["So15NSManagedObjectC", "userBusinessDrinks"]
 - !private ["So15NSManagedObjectC", "userId"]
@@ -516,6 +541,7 @@ depends-member:
 - ["So8NSObjectC", "cart"]
 - !private ["So8NSObjectC", "cost"]
 - ["So8NSObjectC", "customerContext"]
+- ["So8NSObjectC", "destroyCart"]
 - !private ["So8NSObjectC", "drinks"]
 - ["So8NSObjectC", "emptyCart"]
 - ["So8NSObjectC", "init"]
@@ -529,14 +555,15 @@ depends-member:
 - !private ["So8NSObjectC", "setWithSet"]
 - ["So8NSObjectC", "shared"]
 - ["So8NSObjectC", "sharedAPIClient"]
+- !private ["So8NSObjectC", "stripeId"]
 - !private ["So8NSObjectC", "subtotal"]
 - !private ["So8NSObjectC", "tipAmount"]
 - !private ["So8NSObjectC", "tipPercentage"]
+- !private ["So8NSObjectC", "user"]
 - !private ["So8NSObjectC", "userBusiness"]
 - ["So8NSObjectC", "userBusinessDrinks"]
 - !private ["So8NSObjectC", "userId"]
 - !private ["So8NSObjectC", "viewContext"]
-- ["So8NSObjectP", "Bool"]
 - ["So8NSObjectP", "Business"]
 - !private ["So8NSObjectP", "CheckoutCart"]
 - !private ["So8NSObjectP", "CoreDataManager"]
@@ -554,6 +581,7 @@ depends-member:
 - ["So8NSObjectP", "cart"]
 - !private ["So8NSObjectP", "cost"]
 - ["So8NSObjectP", "customerContext"]
+- ["So8NSObjectP", "destroyCart"]
 - !private ["So8NSObjectP", "drinks"]
 - ["So8NSObjectP", "emptyCart"]
 - ["So8NSObjectP", "init"]
@@ -567,9 +595,11 @@ depends-member:
 - !private ["So8NSObjectP", "setWithSet"]
 - ["So8NSObjectP", "shared"]
 - ["So8NSObjectP", "sharedAPIClient"]
+- !private ["So8NSObjectP", "stripeId"]
 - !private ["So8NSObjectP", "subtotal"]
 - !private ["So8NSObjectP", "tipAmount"]
 - !private ["So8NSObjectP", "tipPercentage"]
+- !private ["So8NSObjectP", "user"]
 - !private ["So8NSObjectP", "userBusiness"]
 - ["So8NSObjectP", "userBusinessDrinks"]
 - !private ["So8NSObjectP", "userId"]
@@ -595,13 +625,16 @@ depends-member:
 - !private ["7Combine16ObservableObjectP", "cart"]
 - !private ["7Combine16ObservableObjectP", "cost"]
 - !private ["7Combine16ObservableObjectP", "drinks"]
+- !private ["7Combine16ObservableObjectP", "emptyCart"]
 - !private ["7Combine16ObservableObjectP", "init"]
 - !private ["7Combine16ObservableObjectP", "name"]
 - !private ["7Combine16ObservableObjectP", "salesTax"]
 - !private ["7Combine16ObservableObjectP", "salesTaxRate"]
+- !private ["7Combine16ObservableObjectP", "stripeId"]
 - !private ["7Combine16ObservableObjectP", "subtotal"]
 - !private ["7Combine16ObservableObjectP", "tipAmount"]
 - !private ["7Combine16ObservableObjectP", "tipPercentage"]
+- !private ["7Combine16ObservableObjectP", "user"]
 - !private ["7Combine16ObservableObjectP", "userBusiness"]
 - !private ["7Combine16ObservableObjectP", "userId"]
 - !private ["Sk", ""]
@@ -647,10 +680,8 @@ depends-member:
 - !private ["Sx", "rounded"]
 - ["6Drinkz15StripeAPIClientC", ""]
 - ["6Drinkz15StripeAPIClientC", "sharedAPIClient"]
-- !private ["s16TextOutputStreamP", ""]
 - !private ["s20TextOutputStreamableP", "Darwin"]
 - !private ["s20TextOutputStreamableP", "Double"]
-- !private ["s20TextOutputStreamableP", ""]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "pow"]
 - !private ["s20TextOutputStreamableP", "rounded"]
@@ -679,7 +710,6 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "isEmpty"]
 - !private ["s24_DestructorSafeContainerP", "reduce"]
 - !private ["s24_DestructorSafeContainerP", "subscript"]
-- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "Darwin"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "Double"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
@@ -691,7 +721,6 @@ depends-member:
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "pow"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "rounded"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s19_HasContiguousBytesP", "count"]
 - !private ["s19_HasContiguousBytesP", "init"]
 - !private ["s19_HasContiguousBytesP", "isEmpty"]
@@ -719,14 +748,17 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cart"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cost"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "drinks"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "emptyCart"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "salesTax"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "salesTaxRate"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "sharedAPIClient"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stripeId"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "subtotal"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tipAmount"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tipPercentage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "user"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "userBusiness"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "userId"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewContext"]
@@ -742,14 +774,17 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cart"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cost"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "drinks"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "emptyCart"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "name"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "salesTax"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "salesTaxRate"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sharedAPIClient"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stripeId"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "subtotal"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "tipAmount"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "tipPercentage"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "user"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "userBusiness"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "userId"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewContext"]
@@ -788,19 +823,15 @@ depends-nominal:
 - !private "SE"
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
-- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
-- !private "s32ExpressibleByStringInterpolationP"
-- !private "s26ExpressibleByStringLiteralP"
-- !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "SF"
 - "SH"
 - "s12IdentifiableP"
 - !private "s25LosslessStringConvertibleP"
 - !private "SM"
 - !private "10Foundation19MutableDataProtocolP"
-- "So8NSCodingP"
+- !private "So8NSCodingP"
 - !private "So9NSCopyingP"
 - !private "So17NSFastEnumerationP"
 - "So20NSFetchRequestResultP"
@@ -825,18 +856,15 @@ depends-nominal:
 - !private "s13SignedNumericP"
 - !private "Sx"
 - "6Drinkz15StripeAPIClientC"
-- !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - !private "s14_ArrayProtocolP"
 - !private "s15_CVarArgAlignedP"
 - !private "s22_CVarArgPassedAsDoubleP"
 - !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
-- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
-- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
@@ -944,4 +972,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "5d1742da1f7cbf1afb6d12fa49774ce0"
+interface-hash: "74acb6527ed990a84e7a34bc7c9d5548"
