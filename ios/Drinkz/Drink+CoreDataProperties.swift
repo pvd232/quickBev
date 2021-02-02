@@ -17,7 +17,8 @@ extension Drink {
         return NSFetchRequest<Drink>(entityName: "Drink")
     }
 
-    @NSManaged public var businessAddressId: UUID?
+    @NSManaged public var businessId: UUID?
+//    @NSManaged public var businessAddressId: UUID?
     @NSManaged public var detail: String?
     @NSManaged public var id: UUID?
     @NSManaged public var name: String?

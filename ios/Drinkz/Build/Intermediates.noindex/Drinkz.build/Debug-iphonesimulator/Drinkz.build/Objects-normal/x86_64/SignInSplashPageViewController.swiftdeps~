@@ -68,6 +68,7 @@ depends-member:
 - ["s18AdditiveArithmeticP", ""]
 - !private ["So22UILayoutConstraintAxisV", "horizontal"]
 - !private ["So22UILayoutConstraintAxisV", "vertical"]
+- ["SK", ""]
 - !private ["So15CALayerDelegateP", "addArrangedSubview"]
 - !private ["So15CALayerDelegateP", "addSubview"]
 - !private ["So15CALayerDelegateP", "addTarget"]
@@ -159,6 +160,7 @@ depends-member:
 - !private ["s7CVarArgP", "viewDidLoad"]
 - !private ["s7CVarArgP", "white"]
 - !private ["s7CVarArgP", "widthAnchor"]
+- ["Sl", ""]
 - ["SL", "<"]
 - ["SL", "<="]
 - ["SL", ">"]
@@ -384,6 +386,7 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "normal"]
 - !private ["s25ExpressibleByArrayLiteralP", "touchUpInside"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
 - ["s25ExpressibleByFloatLiteralP", "init"]
 - ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
@@ -393,6 +396,9 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "backgroundColor"]
 - !private ["s23ExpressibleByNilLiteralP", "safeAreaLayoutGuide"]
 - !private ["s23ExpressibleByNilLiteralP", "systemBackground"]
+- ["s32ExpressibleByStringInterpolationP", ""]
+- ["s26ExpressibleByStringLiteralP", ""]
+- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - ["SF", "<"]
 - ["SF", "<="]
 - ["SF", ">"]
@@ -466,6 +472,7 @@ depends-member:
 - !private ["SH", "widthAnchor"]
 - !private ["6Drinkz19LoginViewControllerC", ""]
 - !private ["6Drinkz19LoginViewControllerC", "init"]
+- ["s25LosslessStringConvertibleP", ""]
 - ["So8NSCodingP", "CGRect"]
 - !private ["So8NSCodingP", "LoginViewController"]
 - !private ["So8NSCodingP", "NSLayoutConstraint"]
@@ -626,12 +633,27 @@ depends-member:
 - ["So8NSObjectC", "bounds"]
 - !private ["So8NSObjectC", "centerXAnchor"]
 - !private ["So8NSObjectC", "centerYAnchor"]
+- !private ["So8NSObjectC", "colorNamed"]
+- !private ["So8NSObjectC", "colorWithCGColor"]
+- !private ["So8NSObjectC", "colorWithCIColor"]
+- !private ["So8NSObjectC", "colorWithDisplayP3Red"]
+- !private ["So8NSObjectC", "colorWithDynamicProvider"]
+- !private ["So8NSObjectC", "colorWithHue"]
+- !private ["So8NSObjectC", "colorWithPatternImage"]
+- !private ["So8NSObjectC", "colorWithRed"]
+- !private ["So8NSObjectC", "colorWithWhite"]
 - !private ["So8NSObjectC", "constraint"]
 - !private ["So8NSObjectC", "fatalError"]
 - ["So8NSObjectC", "font"]
 - !private ["So8NSObjectC", "heightAnchor"]
 - !private ["So8NSObjectC", "image"]
+- ["So8NSObjectC", "imageNamed"]
+- ["So8NSObjectC", "imageWithCGImage"]
+- ["So8NSObjectC", "imageWithCIImage"]
+- ["So8NSObjectC", "imageWithContentsOfFile"]
+- ["So8NSObjectC", "imageWithData"]
 - ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "jpegData"]
 - !private ["So8NSObjectC", "leadingAnchor"]
 - ["So8NSObjectC", "main"]
 - ["So8NSObjectC", "moonImage"]
@@ -639,6 +661,7 @@ depends-member:
 - !private ["So8NSObjectC", "navigationController"]
 - ["So8NSObjectC", "optionsStackView"]
 - ["So8NSObjectC", "orLabel"]
+- ["So8NSObjectC", "pngData"]
 - !private ["So8NSObjectC", "pushViewController"]
 - !private ["So8NSObjectC", "refreshColor"]
 - !private ["So8NSObjectC", "refreshTitle"]
@@ -656,6 +679,7 @@ depends-member:
 - ["So8NSObjectC", "signInWithGoogleButtonTouchup"]
 - !private ["So8NSObjectC", "spacing"]
 - !private ["So8NSObjectC", "systemBackground"]
+- ["So8NSObjectC", "systemImageNamed"]
 - !private ["So8NSObjectC", "text"]
 - !private ["So8NSObjectC", "textAlignment"]
 - !private ["So8NSObjectC", "titleLabel"]
@@ -697,12 +721,27 @@ depends-member:
 - ["So8NSObjectP", "bounds"]
 - !private ["So8NSObjectP", "centerXAnchor"]
 - !private ["So8NSObjectP", "centerYAnchor"]
+- !private ["So8NSObjectP", "colorNamed"]
+- !private ["So8NSObjectP", "colorWithCGColor"]
+- !private ["So8NSObjectP", "colorWithCIColor"]
+- !private ["So8NSObjectP", "colorWithDisplayP3Red"]
+- !private ["So8NSObjectP", "colorWithDynamicProvider"]
+- !private ["So8NSObjectP", "colorWithHue"]
+- !private ["So8NSObjectP", "colorWithPatternImage"]
+- !private ["So8NSObjectP", "colorWithRed"]
+- !private ["So8NSObjectP", "colorWithWhite"]
 - !private ["So8NSObjectP", "constraint"]
 - !private ["So8NSObjectP", "fatalError"]
 - ["So8NSObjectP", "font"]
 - !private ["So8NSObjectP", "heightAnchor"]
 - !private ["So8NSObjectP", "image"]
+- ["So8NSObjectP", "imageNamed"]
+- ["So8NSObjectP", "imageWithCGImage"]
+- ["So8NSObjectP", "imageWithCIImage"]
+- ["So8NSObjectP", "imageWithContentsOfFile"]
+- ["So8NSObjectP", "imageWithData"]
 - ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "jpegData"]
 - !private ["So8NSObjectP", "leadingAnchor"]
 - ["So8NSObjectP", "main"]
 - ["So8NSObjectP", "moonImage"]
@@ -710,6 +749,7 @@ depends-member:
 - !private ["So8NSObjectP", "navigationController"]
 - ["So8NSObjectP", "optionsStackView"]
 - ["So8NSObjectP", "orLabel"]
+- ["So8NSObjectP", "pngData"]
 - !private ["So8NSObjectP", "pushViewController"]
 - !private ["So8NSObjectP", "refreshColor"]
 - !private ["So8NSObjectP", "refreshTitle"]
@@ -727,12 +767,13 @@ depends-member:
 - ["So8NSObjectP", "signInWithGoogleButtonTouchup"]
 - !private ["So8NSObjectP", "spacing"]
 - !private ["So8NSObjectP", "systemBackground"]
+- ["So8NSObjectP", "systemImageNamed"]
 - !private ["So8NSObjectP", "text"]
 - !private ["So8NSObjectP", "textAlignment"]
 - !private ["So8NSObjectP", "titleLabel"]
 - !private ["So8NSObjectP", "topAnchor"]
 - !private ["So8NSObjectP", "trailingAnchor"]
-- !private ["So8NSObjectP", "usingPriority"]
+- ["So8NSObjectP", "usingPriority"]
 - !private ["So8NSObjectP", "view"]
 - ["So8NSObjectP", "viewDidLoad"]
 - !private ["So8NSObjectP", "white"]
@@ -765,6 +806,7 @@ depends-member:
 - !private ["6Drinkz11RoundButtonC", "setTitleColor"]
 - !private ["6Drinkz11RoundButtonC", "titleLabel"]
 - !private ["6Drinkz11RoundButtonC", "widthAnchor"]
+- ["ST", ""]
 - !private ["s10SetAlgebraP", ""]
 - !private ["s10SetAlgebraP", "normal"]
 - !private ["s10SetAlgebraP", "touchUpInside"]
@@ -811,6 +853,8 @@ depends-member:
 - ["s13SignedNumericP", ""]
 - !private ["So14UIControlStateV", "normal"]
 - ["Sx", ""]
+- ["s16TextOutputStreamP", ""]
+- ["s20TextOutputStreamableP", ""]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "addTarget"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "bottomAnchor"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "centerXAnchor"]
@@ -1697,9 +1741,11 @@ depends-member:
 - ["6Drinkz14UsesAutoLayoutV", "wrappedValue"]
 - ["s30_CustomPlaygroundQuickLookableP", "height"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s26_ExpressibleByColorLiteralP", "black"]
 - !private ["s26_ExpressibleByColorLiteralP", "init"]
 - !private ["s26_ExpressibleByColorLiteralP", "systemBackground"]
@@ -1872,9 +1918,11 @@ depends-member:
 depends-nominal:
 - "s18AdditiveArithmeticP"
 - !private "So22UILayoutConstraintAxisV"
+- "SK"
 - "So15CALayerDelegateP"
 - "So6CGRectV"
 - "s7CVarArgP"
+- "Sl"
 - "SL"
 - "s28CustomDebugStringConvertibleP"
 - "s17CustomReflectableP"
@@ -1884,12 +1932,17 @@ depends-nominal:
 - "SQ"
 - !private "So15UIControlEventsV"
 - !private "s25ExpressibleByArrayLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - "s25ExpressibleByFloatLiteralP"
 - "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
+- "s32ExpressibleByStringInterpolationP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
 - "SF"
 - "SH"
 - !private "6Drinkz19LoginViewControllerC"
+- "s25LosslessStringConvertibleP"
 - "So8NSCodingP"
 - "So9NSCopyingP"
 - "So26NSExtensionRequestHandlingP"
@@ -1909,11 +1962,14 @@ depends-nominal:
 - !private "Sq"
 - !private "SY"
 - "6Drinkz11RoundButtonC"
+- "ST"
 - !private "s10SetAlgebraP"
 - "6Drinkz30SignInSplashPageViewControllerC"
 - "s13SignedNumericP"
 - !private "So14UIControlStateV"
 - "Sx"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
 - "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
@@ -1956,9 +2012,11 @@ depends-nominal:
 - "6Drinkz14UsesAutoLayoutV"
 - "s30_CustomPlaygroundQuickLookableP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - "s33_ExpressibleByBuiltinFloatLiteralP"
 - "s35_ExpressibleByBuiltinIntegerLiteralP"
 - "s34_ExpressibleByBuiltinStringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - "s26_ExpressibleByImageLiteralP"
 - !private "s35_HasCustomAnyHashableRepresentationP"

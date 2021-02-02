@@ -11,7 +11,7 @@ export class Drink {
     this._quantity = drinkObject.quantity;
     this._description = drinkObject.description;
     this._orderDrinkId = drinkObject.order_drink_id;
-    this._businessAddressId = drinkObject.business_address_id;
+    this._businessId = drinkObject.business_id;
   }
   get id() {
     return this._id;
@@ -31,8 +31,8 @@ export class Drink {
   get orderDrinkId() {
     return this._orderDrinkId;
   }
-  get businessAddressId() {
-    return this._businessAddressId;
+  get businessId() {
+    return this._businessId;
   }
   set id(value) {
     this._id = value;
@@ -52,8 +52,8 @@ export class Drink {
   set orderDrinkId(value) {
     this._orderDrinkId = value;
   }
-  set businessAddressId(value) {
-    this._businessAddressId = value;
+  set businessId(value) {
+    this._businessId = value;
   }
   toJSON() {
     const data = {
@@ -63,7 +63,7 @@ export class Drink {
       quantity: this._quantity,
       description: this._description,
       orderDrinkId: this._orderDrinkId,
-      businessAddressId: this._businessAddressId,
+      businessId: this._businessId,
     };
     return data;
   }
@@ -93,7 +93,7 @@ export class Order {
     this._tipPercentage = order_object.tip_percentage;
     this._tipAmount = order_object.tip_amount;
     this._salesTax = order_object.sales_tax;
-    this._businessAddressId = order_object.business_address_id;
+    this._businessId = order_object.business_id;
     this._address = order_object.address;
     this._dateTime = order_object.date_time;
     this._orderDrink = new OrderDrink(order_object.order_drink);
@@ -120,8 +120,8 @@ export class Order {
   get salesTax() {
     return this._salesTax;
   }
-  get businessAddressId() {
-    return this._businessAddressId;
+  get businessId() {
+    return this._businessId;
   }
   get address() {
     return this._address;
@@ -153,8 +153,8 @@ export class Order {
   set salesTax(value) {
     this._salesTax = value;
   }
-  set businessAddressId(value) {
-    this._businessAddressId = value;
+  set businessId(value) {
+    this._businessId = value;
   }
   set address(value) {
     this._address = value;
@@ -174,7 +174,7 @@ export class Order {
       tip_percentage: this._tipPercentage,
       tip_amount: this._tipAmount,
       sales_tax: this._salesTax,
-      business_address_id: this._businessAddressId,
+      business_id: this._businessId,
       address: this._address,
       order_drink: this._orderDrink,
       date_time: this._dateTime,
@@ -186,7 +186,7 @@ export class Order {
 export class Merchant {
   constructor(objectType, object) {
     if (objectType === "merchantObject") {
-      this._id = object.id;
+      this._id = object.email;
       this._password = object.password;
       this._firstName = object.firstName;
       this._lastName = object.lastName;
@@ -199,13 +199,12 @@ export class Merchant {
       this._phoneNumber = object._phoneNumber;
     } else if (objectType === "localStorage") {
       const data = JSON.parse(object);
-      console.log("object", object);
-      console.log("data", data);
       this._id = data.id;
       this._password = data.password;
       this._firstName = data.first_name;
       this._lastName = data.last_name;
       this._phoneNumber = data.phone_number;
+      this._numberOfBusinesses = data.numberOfBusinesses;
     } else {
       this._id = null;
       this._password = null;
@@ -221,7 +220,6 @@ export class Merchant {
   get password() {
     return this._password;
   }
-
   get firstName() {
     return this._firstName;
   }
@@ -230,6 +228,9 @@ export class Merchant {
   }
   get phoneNumber() {
     return this._phoneNumber;
+  }
+  get numberOfBusinesses() {
+    return this._numberOfBusinesses;
   }
   set id(value) {
     this._id = value;
@@ -247,6 +248,9 @@ export class Merchant {
   set phoneNumber(value) {
     this._phoneNumber = value;
   }
+  set numberOfBusinesses(value) {
+    this._numberOfBusinesses = value;
+  }
   toJSON() {
     const data = {
       id: this._id,
@@ -254,6 +258,7 @@ export class Merchant {
       first_name: this._firstName,
       last_name: this._lastName,
       phone_number: this._phoneNumber,
+      number_of_businesses: this._numberOfBusinesses,
     };
     return data;
   }
@@ -271,10 +276,10 @@ export class Business {
       this._state = businessObject.state;
       this._zipcode = businessObject.zip;
       this._phoneNumber = businessObject.phone_number;
-      this._numberOfLocations = businessObject.number_of_locations;
       this._tablet = businessObject.tablet;
       this._menuUrl = businessObject.menu_url;
       this._classification = businessObject.classification;
+      this._salesTax = businessObject.salesTax;
     } else if (businessObject && isLocalStorage) {
       const businessJson = JSON.parse(businessObject);
       this._id = businessJson.id;
@@ -287,10 +292,10 @@ export class Business {
       this._state = businessJson.state;
       this._zipcode = businessJson.zip;
       this._phoneNumber = businessJson.phone_number;
-      this._numberOfLocations = businessJson.number_of_locations;
       this._tablet = businessJson.tablet;
       this._menuUrl = businessJson.menu_url;
       this._classification = businessJson.classification;
+      this._salesTax = businessJson.salesTax;
     } else {
       this._id = null;
       this._name = null;
@@ -302,10 +307,11 @@ export class Business {
       this._state = null;
       this._zipcode = null;
       this._phoneNumber = null;
-      this._numberOfLocations = null;
+      this._numberOfBusinesses = null;
       this._tablet = null;
       this._menuUrl = null;
       this._classification = null;
+      this._salesTax = null;
     }
   }
 
@@ -336,9 +342,6 @@ export class Business {
   get phoneNumber() {
     return this._phoneNumber;
   }
-  get numberOfLocations() {
-    return this._numberOfLocations;
-  }
   get stripeId() {
     return this._stripeId;
   }
@@ -350,6 +353,9 @@ export class Business {
   }
   get classification() {
     return this._classification;
+  }
+  get salesTax() {
+    return this._salesTax;
   }
   set id(value) {
     this._id = value;
@@ -378,9 +384,6 @@ export class Business {
   set phoneNumber(value) {
     this._phoneNumber = value;
   }
-  set numberOfLocations(value) {
-    this._numberOfLocations = value;
-  }
   set stripeId(value) {
     this._stripeId = value;
   }
@@ -393,7 +396,9 @@ export class Business {
   set classification(value) {
     this._classification = value;
   }
-
+  set salesTax(value) {
+    this._salesTax = value;
+  }
   toJSON() {
     const data = {
       id: this._id,
@@ -406,10 +411,11 @@ export class Business {
       state: this._state,
       zipcode: this._zipcode,
       phone_number: this._phoneNumber,
-      number_of_locations: this._numberOfLocations,
+      number_of_businesses: this._numberOfBusinesses,
       tablet: this._tablet,
       menu_url: this._menuUrl,
       classification: this._classification,
+      sales_tax: this._salesTax,
     };
     return data;
   }

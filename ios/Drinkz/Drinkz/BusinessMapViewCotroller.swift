@@ -102,7 +102,7 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
         group.notify(queue: .main, execute: {
             for business in CheckoutCart.shared.businessArray {
                 let customCoordinate = business.coordinate
-                let customAnnotation = CustomAnnotation(coordinate: customCoordinate!, title: "\(business.name!)", image: (UIImage(named: "blaise"))!, businessAddressId: business.businessAddressId!)
+                let customAnnotation = CustomAnnotation(coordinate: customCoordinate!, title: "\(business.name!)", image: (UIImage(named: "blaise"))!, businessId: business.id!)
                 self.mapView.addAnnotation(customAnnotation)
             }
             self.activityIndicator.stopAnimating()
@@ -168,7 +168,7 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
         button.backgroundImageColor = .blue
         button.setTitle("Select", for: .normal)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        button.params["businessAddressId"] = customAnnotation.businessAddressId?.uuidString
+        button.params["businessId"] = customAnnotation.businessId?.uuidString
         detailView.addSubview(button)
         annotationView?.detailCalloutAccessoryView = detailView
         return annotationView
@@ -176,7 +176,7 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
     @objc func buttonAction(sender: RoundButton!) {
         //https://stackoverflow.com/questions/24814646/attach-parameter-to-button-addtarget-action-in-swift
         let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
-        if let clickedBusiness = CheckoutCart.shared.business!.first(where: { ($0 as! Business).businessAddressId?.uuidString == sender.params["businessAddressId"] }) as? Business {
+        if let clickedBusiness = CheckoutCart.shared.business!.first(where: { ($0 as! Business).id?.uuidString == sender.params["businessId"] }) as? Business {
             CheckoutCart.shared.userBusiness = clickedBusiness
             CheckoutCart.shared.userBusiness!.drinks =  clickedBusiness.drinks!
             CoreDataManager.sharedManager.saveContext(context: managedContext)

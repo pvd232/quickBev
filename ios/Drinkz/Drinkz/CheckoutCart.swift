@@ -53,7 +53,7 @@ extension CheckoutCart {
     }
     public func emptyCart () {
         self.userId = ""
-        self.businessAddressId = nil
+        self.businessId = nil
         self.cost = 0.0
         self.drinks = NSSet.init(array: [Drink]())
     }

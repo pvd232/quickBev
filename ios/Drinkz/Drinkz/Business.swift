@@ -19,7 +19,7 @@ public class Business: NSManagedObject, Codable {
         case address = "address"
         case salesTaxRate = "sales_tax_rate"
         case stripeId = "stripe_id"
-        case businessAddressId = "business_address_id"
+//        case businessAddressId = "business_address_id"
     }
     required convenience public init(from decoder: Decoder) throws {
         let context = CoreDataManager.sharedManager.persistentContainer.viewContext
@@ -33,8 +33,7 @@ public class Business: NSManagedObject, Codable {
         self.address = try businessResponse.decode(String.self, forKey: .address)
         self.salesTaxRate = try businessResponse.decode(Double.self, forKey: .salesTaxRate)
         self.stripeId = try businessResponse.decode(String.self, forKey: .stripeId)
-        self.businessAddressId = try businessResponse.decode(UUID.self, forKey: .businessAddressId)
-
+//        self.businessAddressId = try businessResponse.decode(UUID.self, forKey: .businessAddressId)
 
     }
     public func encode(to encoder: Encoder) throws {
@@ -44,7 +43,7 @@ public class Business: NSManagedObject, Codable {
         try businessResponse.encode(self.id, forKey: .id)
         try businessResponse.encode(self.address, forKey: .address)
         try businessResponse.encode(self.salesTaxRate, forKey: .salesTaxRate)
-        try businessResponse.encode(self.businessAddressId, forKey: .businessAddressId)
+//        try businessResponse.encode(self.businessAddressId, forKey: .businessAddressId)
         try businessResponse.encode(self.stripeId, forKey: .stripeId)
 
     }

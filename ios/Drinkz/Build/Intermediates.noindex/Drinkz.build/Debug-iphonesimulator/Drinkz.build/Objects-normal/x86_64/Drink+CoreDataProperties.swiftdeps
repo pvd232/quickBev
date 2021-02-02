@@ -5,7 +5,7 @@ provides-nominal:
 provides-member:
 - ["6Drinkz5DrinkC", ""]
 - ["6Drinkz5DrinkC", "fetchRequest"]
-- ["6Drinkz5DrinkC", "businessAddressId"]
+- ["6Drinkz5DrinkC", "businessId"]
 - ["6Drinkz5DrinkC", "detail"]
 - ["6Drinkz5DrinkC", "id"]
 - ["6Drinkz5DrinkC", "name"]
@@ -15,7 +15,7 @@ provides-member:
 - ["6Drinkz5DrinkC", "drinkToOrder"]
 - ["6Drinkz5DrinkC", "relationship"]
 provides-dynamic-lookup:
-- "businessAddressId"
+- "businessId"
 - "detail"
 - "drinkToBusiness"
 - "drinkToOrder"
@@ -74,7 +74,7 @@ depends-member:
 - ["6Drinkz5DrinkC", "UUID"]
 - ["6Drinkz5DrinkC", ""]
 - ["6Drinkz5DrinkC", "_Default_ID"]
-- ["6Drinkz5DrinkC", "businessAddressId"]
+- ["6Drinkz5DrinkC", "businessId"]
 - ["6Drinkz5DrinkC", "detail"]
 - ["6Drinkz5DrinkC", "drinkToBusiness"]
 - ["6Drinkz5DrinkC", "drinkToOrder"]
@@ -113,7 +113,7 @@ depends-member:
 - ["So9NSCopyingP", "ID"]
 - !private ["So9NSCopyingP", "NSFetchRequest"]
 - ["So9NSCopyingP", "_Default_ID"]
-- ["So9NSCopyingP", "businessAddressId"]
+- ["So9NSCopyingP", "businessId"]
 - ["So9NSCopyingP", "detail"]
 - ["So9NSCopyingP", "drinkToBusiness"]
 - ["So9NSCopyingP", "drinkToOrder"]
@@ -129,7 +129,7 @@ depends-member:
 - !private ["So20NSFetchRequestResultP", "NSFetchRequest"]
 - ["So20NSFetchRequestResultP", "Order"]
 - ["So20NSFetchRequestResultP", "_Default_ID"]
-- ["So20NSFetchRequestResultP", "businessAddressId"]
+- ["So20NSFetchRequestResultP", "businessId"]
 - ["So20NSFetchRequestResultP", "detail"]
 - ["So20NSFetchRequestResultP", "drinkToBusiness"]
 - ["So20NSFetchRequestResultP", "drinkToOrder"]
@@ -151,7 +151,7 @@ depends-member:
 - ["So15NSManagedObjectC", "UUID"]
 - ["So15NSManagedObjectC", ""]
 - ["So15NSManagedObjectC", "_Default_ID"]
-- ["So15NSManagedObjectC", "businessAddressId"]
+- ["So15NSManagedObjectC", "businessId"]
 - ["So15NSManagedObjectC", "detail"]
 - ["So15NSManagedObjectC", "drinkToBusiness"]
 - ["So15NSManagedObjectC", "drinkToOrder"]
@@ -174,7 +174,7 @@ depends-member:
 - ["So8NSObjectC", "UUID"]
 - ["So8NSObjectC", ""]
 - ["So8NSObjectC", "_Default_ID"]
-- ["So8NSObjectC", "businessAddressId"]
+- ["So8NSObjectC", "businessId"]
 - ["So8NSObjectC", "detail"]
 - ["So8NSObjectC", "drinkToBusiness"]
 - ["So8NSObjectC", "drinkToOrder"]
@@ -191,7 +191,7 @@ depends-member:
 - ["So8NSObjectP", "Order"]
 - ["So8NSObjectP", ""]
 - ["So8NSObjectP", "_Default_ID"]
-- ["So8NSObjectP", "businessAddressId"]
+- ["So8NSObjectP", "businessId"]
 - ["So8NSObjectP", "detail"]
 - ["So8NSObjectP", "drinkToBusiness"]
 - ["So8NSObjectP", "drinkToOrder"]
@@ -345,4 +345,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "20844951c8e3e46e42ba36636b0a41f6"
+interface-hash: "53daee1fdb4b8aebf692b08a559e50ef"

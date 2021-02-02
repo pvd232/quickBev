@@ -266,6 +266,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "willMove"]
 - !private ["So20NSFetchRequestResultP", "shared"]
 - !private ["So20NSFetchRequestResultP", "userId"]
+- ["So15NSManagedObjectC", ""]
 - !private ["So15NSManagedObjectC", "shared"]
 - !private ["So15NSManagedObjectC", "userId"]
 - !private ["So8NSObjectC", "CheckoutCart"]
@@ -491,6 +492,7 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "bounds"]
 - !private ["So20UIFocusItemContainerP", "frame"]
 - !private ["So20UIFocusItemContainerP", "removeFromSuperview"]
+- !private ["So10UIKeyInputP", ""]
 - !private ["So24UILargeContentViewerItemP", "addSubview"]
 - !private ["So24UILargeContentViewerItemP", "bounds"]
 - !private ["So24UILargeContentViewerItemP", "frame"]
@@ -616,6 +618,9 @@ depends-member:
 - !private ["So16UIStateRestoringP", "view"]
 - ["So16UIStateRestoringP", "viewDidLoad"]
 - !private ["So16UIStateRestoringP", "willMove"]
+- !private ["So11UITextInputP", ""]
+- !private ["So17UITextInputTraitsP", ""]
+- !private ["So34UITextPasteConfigurationSupportingP", ""]
 - !private ["So18UITraitEnvironmentP", "CheckoutCart"]
 - !private ["So18UITraitEnvironmentP", "HomePageViewController"]
 - !private ["So18UITraitEnvironmentP", "LoginViewController"]
@@ -787,7 +792,7 @@ depends-nominal:
 - "So8NSCodingP"
 - "So26NSExtensionRequestHandlingP"
 - !private "So20NSFetchRequestResultP"
-- !private "So15NSManagedObjectC"
+- "So15NSManagedObjectC"
 - "So8NSObjectC"
 - "So8NSObjectP"
 - !private "6Drinkz25NewBusinessPickedProtocolP"
@@ -815,6 +820,7 @@ depends-nominal:
 - "So18UIFocusEnvironmentP"
 - !private "So11UIFocusItemP"
 - !private "So20UIFocusItemContainerP"
+- !private "So10UIKeyInputP"
 - !private "So24UILargeContentViewerItemP"
 - "So22UINavigationControllerC"
 - "So30UIPasteConfigurationSupportingP"
@@ -822,6 +828,9 @@ depends-nominal:
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
 - "So16UIStateRestoringP"
+- !private "So11UITextInputP"
+- !private "So17UITextInputTraitsP"
+- !private "So34UITextPasteConfigurationSupportingP"
 - "So18UITraitEnvironmentP"
 - "So23UIUserActivityRestoringP"
 - "So6UIViewC"

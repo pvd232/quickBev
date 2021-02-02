@@ -9,19 +9,19 @@ class Drink_Domain(object):
         self.description = ''
         self.price = ''
         self.order_drink_id = ''
-        self.business_address_id = ''
+        self.business_id = ''
         if drink_object:
             self.id = drink_object.id
             self.name = drink_object.name
             self.description = drink_object.description
             self.price = drink_object.price
-            self.business_address_id = drink_object.business_address_id
+            self.business_id = drink_object.business_id
         elif drink_json:
             self.id = drink_json["id"]
             self.name = drink_json["name"]
             self.description = drink_json["description"]
             self.price = drink_json["price"]
-            self.business_address_id = drink_json["business_address_id"]
+            self.business_id = drink_json["business_id"]
             self.quantity = drink_json["quantity"]
 
     def serialize(self):
@@ -37,7 +37,7 @@ class Drink_Domain(object):
         attributes = list(self.__dict__.values())
         serialized_attributes = {}
         for i in range(len(attributes)):
-            if attribute_names[i] == 'id' or attribute_names[i] == 'order_drink_id' or attribute_names[i] == 'business_address_id':
+            if attribute_names[i] == 'id' or attribute_names[i] == 'order_drink_id' or attribute_names[i] == 'business_id':
                 serialized_attributes[attribute_names[i]] = str(attributes[i])
             else:
                 serialized_attributes[attribute_names[i]] = attributes[i]
@@ -53,14 +53,14 @@ class Order_Domain(object):
         self.tip_percentage = 0
         self.tip_amount = 0
         self.sales_tax = 0
-        self.business_address_id = ''
+        self.business_id = ''
         self.address = ''
         self.order_drink = ''
         self.date_time = ''
         if order_object:
             # these attributes were from the join and are not nested in the result object
             self.business_name = order_object.business_name
-            self.business_address_id = order_object.business_address
+            self.business_id = order_object.business_id
             self.business_address = order_object.business_address
             # the order db model object is nested inside the result as "Order"
             self.id = order_object.Order.id
@@ -84,7 +84,7 @@ class Order_Domain(object):
             self.tip_percentage = order_json["tip_percentage"]
             self.tip_amount = order_json["tip_amount"]
             self.sales_tax = order_json["sales_tax"]
-            self.business_address_id = order_json["business_address_id"]
+            self.business_id = order_json["business_id"]
             self.date_time = datetime.fromtimestamp(order_json["date_time"])
             print('date_time', datetime.fromtimestamp(order_json["date_time"]))
             self.order_drink = Order_Drink_Domain(
@@ -104,7 +104,7 @@ class Order_Domain(object):
         serialized_attributes = {}
         for i in range(len(attributes)):
             # UUID is not json serializable so i have to stringify it
-            if attribute_names[i] == "id" or attribute_names[i] == "business_address_id":
+            if attribute_names[i] == "id" or attribute_names[i] == "business_id":
                 serialized_attributes[attribute_names[i]] = str(attributes[i])
             elif attribute_names[i] == "order_drink":
                 serialized_attributes[attribute_names[i]
@@ -187,12 +187,20 @@ class User_Domain(object):
 
 class Merchant_Domain(object):
     def __init__(self, merchant_object=None, merchant_json=None):
+        self.id = ''
+        self.password = ''
+        self.first_name = ''
+        self.last_name = ''
+        self.phone_number = ''
+        self.number_of_businesses = ''
         if merchant_object:
             self.id = merchant_object.id
             self.password = merchant_object.password
             self.first_name = merchant_object.first_name
             self.last_name = merchant_object.last_name
             self.phone_number = merchant_object.phone_number
+            self.number_of_businesses = merchant_object.number_of_businesses
+
         elif merchant_json:
             print('merchant_json', merchant_json)
             self.id = merchant_json["id"]
@@ -200,6 +208,9 @@ class Merchant_Domain(object):
             self.first_name = merchant_json["first_name"]
             self.last_name = merchant_json["last_name"]
             self.phone_number = merchant_json["phone_number"]
+            # number of locations is added as a property later in the signup process so it won't be present when checking if the merchant exists at step one
+            if "number_of_businesses" in merchant_json:
+                self.number_of_businesses = merchant_json["number_of_businesses"]
 
     def serialize(self):
         attribute_names = list(self.__dict__.keys())
@@ -213,18 +224,25 @@ class Merchant_Domain(object):
 class Business_Domain(object):
     def __init__(self, business_object=None, business_json=None):
         self.sales_tax_rate = 0.0625
+        self.id = ''
+        self.merchant_id = ''
+        self.stripe_id = ''
+        self.name = ''
+        self.address = ''
+        self.classification = ''
+        self.merchant_id = ''
+        self.stripe_id = ''
         if business_object:
             # query result object embeds the business object inside a business key, with the business address attributes exposed at the top level
-            nested_business_object = business_object.Business
-            self.id = nested_business_object.id
-            self.merchant_id = nested_business_object.merchant_id
-            self.stripe_id = nested_business_object.stripe_id
-            self.business_address_id = business_object.business_address_id
-            self.name = nested_business_object.name
+            self.id = business_object.id
+            self.merchant_id = business_object.merchant_id
+            self.stripe_id = business_object.stripe_id
+            self.name = business_object.name
             self.address = business_object.address
-            self.sales_tax_rate = nested_business_object.sales_tax_rate
-            self.classification = nested_business_object.classification
-            self.number_of_locations = nested_business_object.number_of_locations
+            self.sales_tax_rate = business_object.sales_tax_rate
+            self.classification = business_object.classification
+            self.merchant_id = business_object.merchant_id
+            self.stripe_id = business_object.stripe_id
         if business_json:
             self.id = business_json["id"]
             self.merchant_id = business_json["merchant_id"]
@@ -242,7 +260,6 @@ class Business_Domain(object):
 
             self.state = state_and_zipcode[1]
             self.zipcode = state_and_zipcode[2]
-            self.number_of_locations = business_json["number_of_locations"]
             if "menu_file" in business_json:
                 self.menu_file = business_json["menu_file"]
             else:
@@ -251,7 +268,6 @@ class Business_Domain(object):
                 self.menu_url = business_json["menu_url"]
             else:
                 self.menu_url = None
-            self.number_of_locations = business_json["number_of_locations"]
             self.tablet = business_json["tablet"]
             self.phone_number = business_json["phone_number"]
 
@@ -266,10 +282,19 @@ class Business_Domain(object):
 
 class Tab_Domain(object):
     def __init__(self, tab_object=None, tab_json=None):
+        self.id = ''
+        self.name = ''
+        self.business_id = ''
+        self.user_id = ''
+        self.address = ''
+        self.date_time = ''
+        self.description = ''
+        self.minimum_contribution = ''
+        self.fundraising_goal = ''
         if tab_object:
             self.id = tab_object.id
             self.name = tab_object.name
-            self.business_address_id = tab_object.business_address_id
+            self.business_id = tab_object.business_id
             self.user_id = tab_object.user_id
             self.address = tab_object.address
             self.date_time = tab_object.date_time
@@ -279,7 +304,7 @@ class Tab_Domain(object):
         if tab_json:
             self.id = tab_json["id"]
             self.name = tab_json["name"]
-            self.business_address_id = tab_json["business_address_id"]
+            self.business_id = tab_json["business_id"]
             self.user_id = tab_json["user_id"]
             self.address = tab_json["address"]
 
@@ -288,9 +313,7 @@ class Tab_Domain(object):
             self.city = address_list[1]
             self.state = address_list[2]
             self.zipcode = address_list[3]
-
             self.date_time = datetime.fromtimestamp(tab_json["date_time"])
-
             self.description = tab_json["description"]
             self.minimum_contribution = tab_json["minimum_contribution"]
             self.fundraising_goal = tab_json["fundraising_goal"]

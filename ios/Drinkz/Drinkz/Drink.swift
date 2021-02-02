@@ -18,7 +18,8 @@ public class Drink: NSManagedObject, Codable, NSCopying {
         // couldn't use the word description as a property because it is system reserved
         case detail = "description"
         case price = "price"
-        case businessAddressId = "business_address_id"
+        case businessId = "business_id"
+//        case businessAddressId = "business_address_id"
         case quantity = "quantity"
         case cost = "cost"
     }
@@ -32,7 +33,8 @@ public class Drink: NSManagedObject, Codable, NSCopying {
         self.name = try nestedContainer.decode(String.self, forKey: .name)
         self.detail = try nestedContainer.decode(String.self, forKey: .detail)
         self.price = try nestedContainer.decode(Double.self, forKey: .price)
-        self.businessAddressId = try nestedContainer.decode(UUID.self, forKey: .businessAddressId)
+//        self.businessAddressId = try nestedContainer.decode(UUID.self, forKey: .businessAddressId)
+        self.businessId = try nestedContainer.decode(UUID.self, forKey: .businessId)
         self.quantity = try nestedContainer.decode(Int16.self, forKey: .quantity)
     }
     public func encode(to encoder: Encoder) throws {
@@ -42,7 +44,8 @@ public class Drink: NSManagedObject, Codable, NSCopying {
         try nestedContainer.encode(self.name, forKey: .name)
         try nestedContainer.encode(self.detail, forKey: .detail)
         try nestedContainer.encode(self.price, forKey: .price)
-        try nestedContainer.encode(self.businessAddressId, forKey: .businessAddressId)
+//        try nestedContainer.encode(self.businessAddressId, forKey: .businessAddressId)
+        try nestedContainer.encode(self.businessId, forKey: .businessId)
         try nestedContainer.encode(self.quantity, forKey: .quantity)
     }
     static func getDrinks(completion: @escaping ([Drink]?) -> Void) {
@@ -69,7 +72,8 @@ public class Drink: NSManagedObject, Codable, NSCopying {
             }
     }
     public func copy(with zone: NSZone? = nil) -> Any {
-        let copy = Drink(Id: self.id!, Name: self.name!, Detail: self.detail!, Price: self.price, businessAddressId: self.businessAddressId!)
+//        let copy = Drink(Id: self.id!, Name: self.name!, Detail: self.detail!, Price: self.price, businessAddressId: self.businessAddressId!)
+        let copy = Drink(Id: self.id!, Name: self.name!, Detail: self.detail!, Price: self.price, businessId: self.businessId!)
         return copy
     }
     
@@ -78,13 +82,13 @@ extension Drink {
     public var cost:Double {
         return Double(quantity) * price
     }
-    convenience init(Id:UUID, Name:String, Detail:String, Price:Double, businessAddressId:UUID) {
+    convenience init(Id:UUID, Name:String, Detail:String, Price:Double, businessId:UUID) {
         let context = CoreDataManager.sharedManager.persistentContainer.viewContext
         self.init(context: context)
         self.id = Id
         self.name = Name
         self.detail = Detail
         self.price = Price
-        self.businessAddressId = businessAddressId
+        self.businessId = businessId
     }
 }

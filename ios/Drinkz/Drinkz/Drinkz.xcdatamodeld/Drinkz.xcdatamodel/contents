@@ -2,7 +2,6 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Business" representedClassName=".Business" syncable="YES">
         <attribute name="address" attributeType="String"/>
-        <attribute name="businessAddressId" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="coordinateString" attributeType="String" defaultValueString=""/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String"/>
@@ -13,7 +12,7 @@
         <relationship name="userBusinessToCheckoutCart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CheckoutCart" inverseName="userBusiness" inverseEntity="CheckoutCart"/>
     </entity>
     <entity name="CheckoutCart" representedClassName=".CheckoutCart" syncable="YES">
-        <attribute name="businessAddressId" optional="YES" attributeType="UUID" defaultValueString="" usesScalarValueType="NO"/>
+        <attribute name="businessId" optional="YES" attributeType="UUID" defaultValueString="" usesScalarValueType="NO"/>
         <attribute name="cost" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="currentOrderId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="orderingProcessViewControllerIndex" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
@@ -29,7 +28,7 @@
         <relationship name="userBusiness" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Business" inverseName="userBusinessToCheckoutCart" inverseEntity="Business"/>
     </entity>
     <entity name="Drink" representedClassName=".Drink" syncable="YES">
-        <attribute name="businessAddressId" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="businessId" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="detail" attributeType="String"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String"/>
@@ -40,7 +39,7 @@
         <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CheckoutCart" inverseName="drinks" inverseEntity="CheckoutCart"/>
     </entity>
     <entity name="Order" representedClassName=".Order" syncable="YES">
-        <attribute name="businessAddressId" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="businessId" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="cost" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="dateTime" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
@@ -74,7 +73,7 @@
         <relationship name="userToTab" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tab" inverseName="tabToUser" inverseEntity="Tab"/>
     </entity>
     <elements>
-        <element name="Business" positionX="0" positionY="81" width="128" height="179"/>
+        <element name="Business" positionX="0" positionY="81" width="128" height="164"/>
         <element name="CheckoutCart" positionX="27" positionY="126" width="128" height="239"/>
         <element name="Drink" positionX="-36" positionY="9" width="128" height="164"/>
         <element name="Order" positionX="18" positionY="162" width="128" height="179"/>

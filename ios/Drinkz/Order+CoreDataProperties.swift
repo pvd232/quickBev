@@ -17,7 +17,8 @@ extension Order {
         return NSFetchRequest<Order>(entityName: "Order")
     }
 
-    @NSManaged public var businessAddressId: UUID?
+//    @NSManaged public var businessAddressId: UUID?
+    @NSManaged public var businessId: UUID?
     @NSManaged public var cost: Double
     @NSManaged public var dateTime: Date?
     @NSManaged public var id: UUID?

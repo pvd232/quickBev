@@ -283,7 +283,7 @@ SWIFT_CLASS("_TtC6Drinkz8Business")
 @property (nonatomic) double salesTaxRate;
 @property (nonatomic, copy) NSString * _Nullable stripeId;
 @property (nonatomic, strong) CheckoutCart * _Nullable businessToCheckoutCart;
-@property (nonatomic, copy) NSUUID * _Nullable businessAddressId;
+@property (nonatomic, copy) NSUUID * _Nullable businessId;
 @property (nonatomic, strong) NSSet * _Nullable drinks;
 @property (nonatomic, strong) CheckoutCart * _Nullable userBusinessToCheckoutCart;
 @end
@@ -373,7 +373,7 @@ SWIFT_CLASS("_TtC6Drinkz12CheckoutCart")
 
 @interface CheckoutCart (SWIFT_EXTENSION(Drinkz))
 @property (nonatomic, copy) NSUUID * _Nullable currentOrderId;
-@property (nonatomic, copy) NSUUID * _Nullable businessAddressId;
+@property (nonatomic, copy) NSUUID * _Nullable businessId;
 @property (nonatomic) double cost;
 @property (nonatomic) int16_t orderingProcessViewControllerIndex;
 @property (nonatomic) double salesTax;
@@ -434,7 +434,7 @@ SWIFT_CLASS("_TtC6Drinkz5Drink")
 @class Order;
 
 @interface Drink (SWIFT_EXTENSION(Drinkz))
-@property (nonatomic, copy) NSUUID * _Nullable businessAddressId;
+@property (nonatomic, copy) NSUUID * _Nullable businessId;
 @property (nonatomic, copy) NSString * _Nullable detail;
 @property (nonatomic, copy) NSUUID * _Nullable id;
 @property (nonatomic, copy) NSString * _Nullable name;
@@ -529,7 +529,7 @@ SWIFT_CLASS("_TtC6Drinkz5Order")
 
 
 @interface Order (SWIFT_EXTENSION(Drinkz))
-@property (nonatomic, copy) NSUUID * _Nullable businessAddressId;
+@property (nonatomic, copy) NSUUID * _Nullable businessId;
 @property (nonatomic) double cost;
 @property (nonatomic, copy) NSDate * _Nullable dateTime;
 @property (nonatomic, copy) NSUUID * _Nullable id;

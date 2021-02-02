@@ -41,8 +41,8 @@ class Drink(db.Model):
     name = db.Column(db.String(80), nullable=False)
     description = db.Column(db.String(80), nullable=False)
     price = db.Column(db.Float(), nullable=False)
-    business_address_id = db.Column(UUID(as_uuid=True), db.ForeignKey(
-        'business_address.id'), nullable=False)
+    business_id = db.Column(UUID(as_uuid=True), db.ForeignKey(
+        'business.id'), nullable=False)
     order_drink = relationship('Order_Drink', lazy=True)
 
     @property
@@ -56,8 +56,9 @@ class Drink(db.Model):
 
 
 class Business(db.Model):
-    id = db.Column(UUID(as_uuid=True),
-                   primary_key=True, unique=True, nullable=False)
+    __tablename__ = 'business'
+    id = db.Column(UUID(as_uuid=True), default=uuid.uuid4, primary_key=True,  # https://stackoverflow.com/questions/55917056/how-to-prevent-uuid-primary-key-for-new-sqlalchemy-objects-being-created-with-th
+                   unique=True, nullable=False)
     name = db.Column(db.String(80),
                      nullable=False)
     classification = db.Column(db.String(80), nullable=False)
@@ -67,29 +68,6 @@ class Business(db.Model):
         'stripe_account.id'), nullable=False)
     merchant_id = db.Column(db.String(80), db.ForeignKey(  # composite primary key because there might be multiple businesses with the same name
         'merchant.id'), nullable=False)
-    number_of_locations = db.Column(db.Integer(), nullable=False)
-    business_address = relationship(
-        "Business_Address", lazy=True, backref="business")
-
-
-# TODO: change Bar class to Business, change Administrator to Merchant, create a new associative table BusinessLocation that links busnesses with their different locations
-
-    @property
-    def serialize(self):
-        attribute_names = list(self.__dict__.keys())
-        attributes = list(self.__dict__.values())
-        serialized_attributes = {}
-        for i in range(len(attributes)):
-            serialized_attributes[attribute_names[i]] = attributes[i]
-        return serialized_attributes
-
-
-class Business_Address(db.Model):
-    __tablename__ = 'business_address'
-    id = db.Column(UUID(as_uuid=True), default=uuid.uuid4, primary_key=True,  # https://stackoverflow.com/questions/55917056/how-to-prevent-uuid-primary-key-for-new-sqlalchemy-objects-being-created-with-th
-                   unique=True, nullable=False)
-    business_id = db.Column(UUID(as_uuid=True), db.ForeignKey('business.id'),
-                            nullable=False)
     tablet = db.Column(db.Boolean(), nullable=False)
     phone_number = db.Column(db.BigInteger(), nullable=False)
     # not all businesses will have a menu URL or file upload, but they could be specific to each business
@@ -101,9 +79,9 @@ class Business_Address(db.Model):
     zipcode = db.Column(db.Integer, nullable=False)
     suite = db.Column(db.String(80), nullable=True)
     address = db.Column(db.String(80), nullable=False)
-    drink = relationship('Drink', lazy=True, backref="business_address")
-    order = relationship('Order', lazy=True, backref="business_address")
-    tab = relationship('Tab', lazy=True, backref="business_address")
+    drink = relationship('Drink', lazy=True, backref="business")
+    order = relationship('Order', lazy=True, backref="business")
+    tab = relationship('Tab', lazy=True, backref="business")
 
     @property
     def serialize(self):
@@ -122,7 +100,9 @@ class Merchant(db.Model):
     first_name = db.Column(db.String(80), nullable=False)
     last_name = db.Column(db.String(80), nullable=False)
     phone_number = db.Column(db.BigInteger(), nullable=False)
-    business = relationship("Business", lazy=True, backref="merchant")
+    number_of_businesses = db.Column(db.Integer(), nullable=False)
+    business = relationship(
+        "Business", lazy=True, backref="merchant")
 
     @property
     def serialize(self):
@@ -161,8 +141,8 @@ class Order(db.Model):
                    unique=True, nullable=False)
     user_id = db.Column(db.String(80), db.ForeignKey(
         'user_table.id'), nullable=False)
-    business_address_id = db.Column(UUID(as_uuid=True), db.ForeignKey(
-        'business_address.id'), nullable=False)
+    business_id = db.Column(UUID(as_uuid=True), db.ForeignKey(
+        'business.id'), nullable=False)
     cost = db.Column(db.Float(), nullable=False)
     subtotal = db.Column(db.Float(), nullable=False)
     sales_tax = db.Column(db.Float(), nullable=False)
@@ -205,8 +185,8 @@ class Tab (db.Model):
     id = db.Column(UUID(as_uuid=True), primary_key=True,
                    unique=True, nullable=False)
     name = db.Column(db.String(80), nullable=False)
-    business_address_id = db.Column(UUID(as_uuid=True), db.ForeignKey(
-        'business_address.id'), nullable=False)
+    business_id = db.Column(UUID(as_uuid=True), db.ForeignKey(
+        'business.id'), nullable=False)
     user_id = db.Column(db.String(80), db.ForeignKey(
         'user_table.id'), nullable=False)
     street = db.Column(db.String(80), nullable=False)
@@ -251,7 +231,7 @@ class Stripe_Account(db.Model):
 
     id = db.Column(db.String(80), primary_key=True,
                    unique=True, nullable=False)
-    business = relationship('Business', lazy=True)
+    business_adress = relationship('Business', lazy=True)
 
     @property
     def serialize(self):
@@ -276,21 +256,16 @@ def create_business():
     new_stripe_account = Stripe_Account(id="b")
     db.session.add(new_stripe_account)
     new_merchant = Merchant(id="a", password="a", first_name="peter",
-                            last_name="driscoll", phone_number=5126456898)
+                            last_name="driscoll", phone_number=5126456898, number_of_businesses=2)
     db.session.add(new_merchant)
 
     test_business = load_json("test_business.json")
     for business in test_business:
-        new_business_id = uuid.uuid4().hex
         merchant_id = business["merchant_id"]
         name = business['name']
         date_joined = date.today()
         sales_tax_rate = business["sales_tax_rate"]
         classification = business["classification"]
-        number_of_locations = business["number_of_locations"]
-        new_business = Business(merchant_id=merchant_id,
-                                id=new_business_id, name=name, date_joined=date_joined, sales_tax_rate=sales_tax_rate, classification=classification, number_of_locations=number_of_locations, stripe_id="b")
-
         phone_number = business["phone_number"]
         tablet = business["tablet"]
         street = business['street']
@@ -298,22 +273,22 @@ def create_business():
         state = business['state']
         zipcode = business['zipcode']
         address = f"{street}, {city}, {state} {zipcode}"
-        new_business_address = Business_Address(business_id=new_business_id, street=street, city=city,
-                                                state=state, zipcode=zipcode, address=address, tablet=tablet, phone_number=phone_number)
+        new_business = Business(merchant_id=merchant_id,
+                                name=name, date_joined=date_joined, sales_tax_rate=sales_tax_rate, classification=classification,  stripe_id="b", street=street, city=city,
+                                state=state, zipcode=zipcode, address=address, tablet=tablet, phone_number=phone_number)
         # After I create the drink, I can then add it to my session.
         db.session.add(new_business)
-        db.session.add(new_business_address)
 
     # commit the session to my DB.
     db.session.commit()
 
 
 def create_drink():
-    business_addresses = db.session.query(Business_Address)
+    businesses = db.session.query(Business)
 
     test_drinks = load_json("test_drinks.json")
 
-    business_address_counter = 0
+    business_counter = 0
     for drink in test_drinks:
         id = uuid.uuid4().hex
         name = drink['name']
@@ -321,12 +296,12 @@ def create_drink():
         price = drink['price']
 
         new_drink = Drink(id=id, name=name,
-                          description=description, price=price, business_address_id=business_addresses[business_address_counter].id)
+                          description=description, price=price, business_id=businesses[business_counter].id)
         # alternate between the two business address objects when assingning the drinks a business address id
-        if business_address_counter == 0:
-            business_address_counter = 1
-        elif business_address_counter == 1:
-            business_address_counter = 0
+        if business_counter == 0:
+            business_counter = 1
+        elif business_counter == 1:
+            business_counter = 0
         # After I create the drink, I can then add it to my session.
         db.session.add(new_drink)
 

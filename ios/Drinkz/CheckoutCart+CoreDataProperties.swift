@@ -18,7 +18,8 @@ extension CheckoutCart {
     }
     
     @NSManaged public var currentOrderId: UUID?
-    @NSManaged public var businessAddressId: UUID?
+//    @NSManaged public var businessAddressId: UUID?
+    @NSManaged public var businessId: UUID?
     @NSManaged public var cost: Double
     @NSManaged public var orderingProcessViewControllerIndex: Int16
     @NSManaged public var salesTax: Double

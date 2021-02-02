@@ -82,12 +82,7 @@ const CreateYourAccountFieldset = (props) => {
         setErrorMsg(newErrorMsgState);
         return false;
       } else {
-        const newMerchant = new Merchant();
-        newMerchant.firstName = formValue.firstName;
-        newMerchant.lastName = formValue.lastName;
-        newMerchant.phoneNumber = formValue.phoneNumber;
-        newMerchant.id = formValue.email;
-        newMerchant.password = formValue.password;
+        const newMerchant = new Merchant("merchantObject", formValue);
         const merchantData = { merchant: newMerchant };
         API.makeRequest(
           "POST",
@@ -237,7 +232,7 @@ const PromoteYourMenuFieldset = (props) => {
     {
       menuUrl: "",
       typeOfBusiness: "",
-      numberOfLocations: "",
+      numberOfBusinesses: "",
     }
   );
   const [errorMsg, setErrorMsg] = useReducer(
@@ -250,26 +245,7 @@ const PromoteYourMenuFieldset = (props) => {
   const [selectedFileName, setSelectedFileName] = useState("");
 
   const [tablet, setTablet] = useState(false);
-  const [isSwitchOn, setIsSwitchOn] = useState(false);
-  const [switchLabel, setSwitchLabel] = useState(
-    "Toggle if you have 2+ different businesses to register (not a chain with multiple of the same business, but several completely seperate businesses)"
-  );
 
-  const onSwitchAction = () => {
-    setIsSwitchOn(!isSwitchOn);
-    if (
-      switchLabel ===
-      "Toggle if you have 2+ different businesses to register (not a chain with multiple of the same business, but several completely seperate businesses)"
-    ) {
-      setSwitchLabel(
-        "After your initial registration you can easily add more businesses to your account!"
-      );
-    } else {
-      setSwitchLabel(
-        "Toggle if you have 2+ different businesses to register (not a chain with multiple of the same business, but several completely seperate businesses)"
-      );
-    }
-  };
   const onFileChange = (event) => {
     console.log("event", event);
     // Update the state
@@ -313,10 +289,9 @@ const PromoteYourMenuFieldset = (props) => {
       }
       const formDataObject = {};
       // Update the formData object
-      formDataObject.numberOfLocations = formValue.numberOfLocations;
+      formDataObject.numberOfBusinesses = formValue.numberOfBusinesses;
       formDataObject.classification = formValue.typeOfBusiness;
       formDataObject.tablet = tablet;
-      formDataObject.multipleBusinesses = isSwitchOn;
       console.log("formDataObject", formDataObject);
 
       if (formValue.menuUrl) {
@@ -446,30 +421,18 @@ const PromoteYourMenuFieldset = (props) => {
               <option>Sporting Event</option>
             </Form.Control>
           </Form.Group>
-          <Form.Group as={Col} controlId="numberOfLocations">
-            <Form.Label>Number of locations</Form.Label>
+          <Form.Group as={Col} controlId="numberOfBusinesses">
+            <Form.Label>Number of businesses</Form.Label>
             <Form.Control
               type="text"
-              name="numberOfLocations"
+              name="numberOfBusinesses"
               required
               onChange={(e) => {
                 formChangeHandler(e);
               }}
-              value={formValue.numberOfLocations}
+              value={formValue.numberOfBusinesses}
             />
           </Form.Group>
-        </Row>
-        <Row style={{ marginTop: "40px" }}>
-          <Col sm={12} id={isSwitchOn ? "custom-switch-col" : ""}>
-            <Form.Check
-              type="switch"
-              id="custom-switch"
-              label={switchLabel}
-              onChange={onSwitchAction}
-              checked={isSwitchOn}
-              noValidate
-            />
-          </Col>
         </Row>
 
         <h2 className="fs-title" style={{ marginTop: "40px" }}>
@@ -747,7 +710,6 @@ const Signup = () => {
   const onSubmit = async (newBusiness, businessStripeId) => {
     const newForm = new FormData();
     // set values from formDataObject into business object
-    newBusiness.numberOfLocations = formDataObject.numberOfLocations;
     newBusiness.tablet = formDataObject.tablet;
     newBusiness.classification = formDataObject.classification.toLowerCase();
     newBusiness.stripeId = businessStripeId;
@@ -765,6 +727,8 @@ const Signup = () => {
 
     // the merchant in state was being converted back to a regular object
     const newMerchant = new Merchant("merchantStateObject", merchant);
+    newMerchant.numberOfBusinesses = formDataObject.numberOfBusinesses;
+
     // set the stripe ID returned from the backend
     newForm.append("merchant", JSON.stringify(newMerchant));
 
@@ -777,10 +741,6 @@ const Signup = () => {
     setLocalStorage("business", newBusiness);
     console.log("localStorageMerchant", localStorage.getItem("merchant"));
     // set in local storage if user has multiple businesses so we can display a tab to add more businesses late
-    localStorage.setItem(
-      "multipleBusinesses",
-      formDataObject.multipleBusinesses
-    );
     let response = await API.makeRequest(
       "POST",
       "http://127.0.0.1:5000/signup",

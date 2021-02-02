@@ -13,18 +13,16 @@ import IconButton from "@material-ui/core/IconButton";
 import Badge from "@material-ui/core/Badge";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
 import Link from "@material-ui/core/Link";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 
 // import { mainListItems, secondaryListItems } from "./listItems";
-import { mainListItems } from "./listItems";
-
-import Chart from "./Chart";
+import MainListItems from "./listItems";
+import Customers from "./Customers";
+import HomeSplash from "./HomeSplash";
 // import Deposits from "./Deposits";
-import Orders from "./Orders";
 
 function Copyright() {
   return (
@@ -123,6 +121,19 @@ const useStyles = makeStyles((theme) => ({
 const Dashboard = (props) => {
   const classes = useStyles();
   const [open, setOpen] = useState(true);
+  const [currentPageIndex, setCurrentPageIndex] = useState(0);
+  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+  const handleDashboardButtonClick = (newIndex) => {
+    setCurrentPageIndex(newIndex);
+  };
+  const pages = [
+    <HomeSplash
+      orderArray={props.orderArray}
+      fixedHeightPaper={fixedHeightPaper}
+      classes={classes}
+    />,
+    <Customers />,
+  ];
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -130,7 +141,6 @@ const Dashboard = (props) => {
     setOpen(false);
   };
   // i think this creates one CSS class by combining other CSS classes into multple properies within one unifying class
-  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
     <div className={classes.root}>
@@ -181,7 +191,13 @@ const Dashboard = (props) => {
           </IconButton>
         </div>
         <Divider />
-        <List>{mainListItems}</List>
+        <List>
+          <MainListItems
+            handleDashboardButtonClick={(newIndex) => {
+              handleDashboardButtonClick(newIndex);
+            }}
+          />
+        </List>
         {/* <Divider />
         <List>{secondaryListItems}</List> */}
       </Drawer>
@@ -190,23 +206,7 @@ const Dashboard = (props) => {
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
             {/* Chart */}
-            <Grid item xs={12} md={12} lg={12}>
-              <Paper className={fixedHeightPaper}>
-                <Chart data={props.orderArray} />
-              </Paper>
-            </Grid>
-            {/* Recent Deposits */}
-            {/* <Grid item xs={12} md={4} lg={3}>
-              <Paper className={fixedHeightPaper}>
-                <Deposits />
-              </Paper>
-            </Grid> */}
-            {/* Recent Orders */}
-            <Grid item xs={12}>
-              <Paper className={classes.paper}>
-                <Orders orderArray={props.orderArray} />
-              </Paper>
-            </Grid>
+            {pages[currentPageIndex]}
           </Grid>
           <Box pt={4}>
             <Copyright />

@@ -6,7 +6,7 @@ provides-nominal:
 provides-member:
 - ["6Drinkz16CustomAnnotationC", ""]
 provides-dynamic-lookup:
-- "businessAddressId"
+- "businessId"
 - "coordinate"
 - "image"
 - "title"
@@ -21,7 +21,7 @@ depends-top-level:
 - "UUID"
 depends-member:
 - ["s7CVarArgP", ""]
-- !private ["s7CVarArgP", "businessAddressId"]
+- !private ["s7CVarArgP", "businessId"]
 - ["s7CVarArgP", "coordinate"]
 - !private ["s7CVarArgP", "image"]
 - !private ["s7CVarArgP", "init"]
@@ -32,7 +32,7 @@ depends-member:
 - ["6Drinkz16CustomAnnotationC", "UIImage"]
 - ["6Drinkz16CustomAnnotationC", "UUID"]
 - ["6Drinkz16CustomAnnotationC", ""]
-- ["6Drinkz16CustomAnnotationC", "businessAddressId"]
+- ["6Drinkz16CustomAnnotationC", "businessId"]
 - ["6Drinkz16CustomAnnotationC", "coordinate"]
 - ["6Drinkz16CustomAnnotationC", "deinit"]
 - ["6Drinkz16CustomAnnotationC", "image"]
@@ -40,35 +40,35 @@ depends-member:
 - ["6Drinkz16CustomAnnotationC", "subtitle"]
 - ["6Drinkz16CustomAnnotationC", "title"]
 - ["s28CustomDebugStringConvertibleP", ""]
-- !private ["s28CustomDebugStringConvertibleP", "businessAddressId"]
+- !private ["s28CustomDebugStringConvertibleP", "businessId"]
 - ["s28CustomDebugStringConvertibleP", "coordinate"]
 - !private ["s28CustomDebugStringConvertibleP", "image"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - ["s28CustomDebugStringConvertibleP", "subtitle"]
 - ["s28CustomDebugStringConvertibleP", "title"]
 - ["s23CustomStringConvertibleP", ""]
-- !private ["s23CustomStringConvertibleP", "businessAddressId"]
+- !private ["s23CustomStringConvertibleP", "businessId"]
 - ["s23CustomStringConvertibleP", "coordinate"]
 - !private ["s23CustomStringConvertibleP", "image"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - ["s23CustomStringConvertibleP", "subtitle"]
 - ["s23CustomStringConvertibleP", "title"]
 - ["SQ", ""]
-- !private ["SQ", "businessAddressId"]
+- !private ["SQ", "businessId"]
 - ["SQ", "coordinate"]
 - !private ["SQ", "image"]
 - !private ["SQ", "init"]
 - ["SQ", "subtitle"]
 - ["SQ", "title"]
 - ["SH", ""]
-- !private ["SH", "businessAddressId"]
+- !private ["SH", "businessId"]
 - ["SH", "coordinate"]
 - !private ["SH", "image"]
 - !private ["SH", "init"]
 - ["SH", "subtitle"]
 - ["SH", "title"]
 - ["So12MKAnnotationP", ""]
-- ["So12MKAnnotationP", "businessAddressId"]
+- ["So12MKAnnotationP", "businessId"]
 - ["So12MKAnnotationP", "coordinate"]
 - ["So12MKAnnotationP", "deinit"]
 - ["So12MKAnnotationP", "image"]
@@ -80,7 +80,7 @@ depends-member:
 - ["So8NSObjectC", "UIImage"]
 - ["So8NSObjectC", "UUID"]
 - ["So8NSObjectC", ""]
-- ["So8NSObjectC", "businessAddressId"]
+- ["So8NSObjectC", "businessId"]
 - ["So8NSObjectC", "coordinate"]
 - ["So8NSObjectC", "image"]
 - ["So8NSObjectC", "init"]
@@ -88,7 +88,7 @@ depends-member:
 - ["So8NSObjectC", "title"]
 - ["So8NSObjectP", "CLLocationCoordinate2D"]
 - ["So8NSObjectP", ""]
-- ["So8NSObjectP", "businessAddressId"]
+- ["So8NSObjectP", "businessId"]
 - ["So8NSObjectP", "coordinate"]
 - ["So8NSObjectP", "deinit"]
 - ["So8NSObjectP", "image"]
@@ -96,14 +96,14 @@ depends-member:
 - ["So8NSObjectP", "subtitle"]
 - ["So8NSObjectP", "title"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "businessAddressId"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "businessId"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "coordinate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "image"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "subtitle"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "title"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "businessAddressId"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "businessId"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "coordinate"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "image"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
@@ -223,4 +223,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "4fe4be950be7b0e595fefe85a73a7229"
+interface-hash: "7afd9a0007f132b3ced4a5577c6a148e"

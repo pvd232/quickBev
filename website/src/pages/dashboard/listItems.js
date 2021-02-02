@@ -10,41 +10,68 @@ import PinDropIcon from "@material-ui/icons/PinDrop";
 import RestaurantMenuIcon from "@material-ui/icons/RestaurantMenu";
 // import AssignmentIcon from "@material-ui/icons/Assignment";
 
-export const mainListItems = (
-  <div>
-    <ListItem button>
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary="Dashboard" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <ShoppingCartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Orders" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <PeopleIcon />
-      </ListItemIcon>
-      <ListItemText primary="Customers" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <RestaurantMenuIcon />
-      </ListItemIcon>
-      <ListItemText primary="Menu" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <PinDropIcon />
-      </ListItemIcon>
-      <ListItemText primary="Businesses" />
-    </ListItem>
-  </div>
-);
-
+const MainListItems = (props) => {
+  return (
+    <>
+      <ListItem
+        button
+        onClick={() => {
+          props.handleDashboardButtonClick(0);
+        }}
+      >
+        <ListItemIcon>
+          <DashboardIcon />
+        </ListItemIcon>
+        <ListItemText primary="Dashboard" />
+      </ListItem>
+      <ListItem
+        button
+        onClick={() => {
+          props.handleDashboardButtonClick(1);
+        }}
+      >
+        <ListItemIcon>
+          <PeopleIcon />
+        </ListItemIcon>
+        <ListItemText primary="Customers" />
+      </ListItem>
+      <ListItem
+        button
+        onClick={() => {
+          props.handleDashboardButtonClick(2);
+        }}
+      >
+        <ListItemIcon>
+          <ShoppingCartIcon />
+        </ListItemIcon>
+        <ListItemText primary="Orders" />
+      </ListItem>
+      <ListItem
+        button
+        onClick={() => {
+          props.handleDashboardButtonClick(3);
+        }}
+      >
+        <ListItemIcon>
+          <RestaurantMenuIcon />
+        </ListItemIcon>
+        <ListItemText primary="Menu" />
+      </ListItem>
+      <ListItem
+        button
+        onClick={() => {
+          props.handleDashboardButtonClick(4);
+        }}
+      >
+        <ListItemIcon>
+          <PinDropIcon />
+        </ListItemIcon>
+        <ListItemText primary="Businesses" />
+      </ListItem>
+    </>
+  );
+};
+export default MainListItems;
 // export const secondaryListItems = (
 //   <div>
 //     <ListSubheader inset>Saved reports</ListSubheader>

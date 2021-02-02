@@ -207,7 +207,7 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
                 for business in self.businesses{
                     var businessDrinks = [Drink]()
                     for drink in self.drinks {
-                        if drink.businessAddressId == business.businessAddressId {
+                        if drink.businessId == business.id {
                             businessDrinks.append(drink)
                             drink.drinkToBusiness = business
                         }

@@ -21,7 +21,7 @@ class Drink_Repository(object):
 class Order_Repository(object):
     def post_order(self, session, order):
         new_order = Order(id=order.id, user_id=order.user_id,
-                          business_address_id=order.business_address_id, cost=order.cost, subtotal=order.subtotal, tip_percentage=order.tip_percentage, tip_amount=order.tip_amount, sales_tax=order.sales_tax, date_time=order.date_time)
+                          business_id=order.business_id, cost=order.cost, subtotal=order.subtotal, tip_percentage=order.tip_percentage, tip_amount=order.tip_amount, sales_tax=order.sales_tax, date_time=order.date_time)
         session.add(new_order)
 
         for each_order_drink in order.order_drink.order_drink:
@@ -36,8 +36,8 @@ class Order_Repository(object):
         return True
 
     def get_orders(self, session, username):
-        orders = session.query(Order, Business_Address.id.label("business_address_id"),
-                               Business_Address.address.label("business_address"), Business.name.label("business_name")).select_from(Order).join(Business_Address, Order.business_address_id == Business_Address.id).join(Business, Business_Address.business_id == Business.id).filter(Order.user_id == username).all()
+        orders = session.query(Order, Business.id.label("business_id"),  # select from allows me to pull the entire Order from the database so I can get the Order_Drink relationship values
+                               Business.address.label("business_address"), Business.name.label("business_name")).select_from(Order).join(Business, Order.business_id == Business.id).filter(Order.user_id == username).all()
         drinks = session.query(Drink)
         return orders, drinks
 
@@ -115,25 +115,16 @@ class User_Repository(object):
 
 class Business_Repository(object):
     def get_businesss(self, session):
-        businesses = session.query(Business, Business_Address.address, Business_Address.id.label("business_address_id")).select_from(
-            Business).join(Business_Address, Business.id == Business_Address.business_id).all()
+        businesses = session.query(Business).all()
         print('businesses', businesses)
-        for business in businesses:
-            for key, val in business._asdict().items():
-                print('key', key)
-                print('val', val)
-                if key == "Business":
-                    print(val.serialize)
         return businesses
 
     def add_business(self, session, business):
         # will have to plug in an API here to dynamically pull information (avalara probs if i can get the freaking credentials to work)
-        new_business = Business(id=uuid.uuid4(), name=business.name, classification=business.classification, date_joined=date.today(
-        ), sales_tax_rate=business.sales_tax_rate, merchant_id=business.merchant_id, stripe_id=business.stripe_id, number_of_locations=business.number_of_locations)
-        new_business_address = Business_Address(business_id=new_business.id, street=business.street, city=business.city,
-                                                state=business.state, zipcode=business.zipcode, address=business.address, tablet=business.tablet, phone_number=business.phone_number)
+        new_business = Business(name=business.name, classification=business.classification, date_joined=date.today(
+        ), sales_tax_rate=business.sales_tax_rate, merchant_id=business.merchant_id, stripe_id=business.stripe_id, street=business.street, city=business.city,
+            state=business.state, zipcode=business.zipcode, address=business.address, tablet=business.tablet, phone_number=business.phone_number)
         session.add(new_business)
-        session.add(new_business_address)
         return new_business
 
     def update_business(self, session, business):
@@ -153,7 +144,7 @@ class Business_Repository(object):
 
 class Tab_Repository(object):
     def post_tab(self, session, tab):
-        new_tab = Tab(id=tab.id, name=tab.name, business_address_id=tab.business_address_id, user_id=tab.user_id, address=tab.address, street=tab.street, city=tab.city, state=tab.state,
+        new_tab = Tab(id=tab.id, name=tab.name, business_id=tab.business_id, user_id=tab.user_id, address=tab.address, street=tab.street, city=tab.city, state=tab.state,
                       zipcode=tab.zipcode, suite=tab.suite, date_time=tab.date_time, description=tab.description, minimum_contribution=tab.minimum_contribution, fundraising_goal=tab.fundraising_goal)
         session.add(new_tab)
         return True
@@ -179,6 +170,11 @@ class Merchant_Repository(object):
 
     def add_merchant(self, session, requested_merchant):
         new_merchant = Merchant(id=requested_merchant.id, password=requested_merchant.password, first_name=requested_merchant.first_name,
-                                last_name=requested_merchant.last_name, phone_number=requested_merchant.phone_number)
+                                last_name=requested_merchant.last_name, phone_number=requested_merchant.phone_number, number_of_businesses=requested_merchant.number_of_businesses)
         session.add(new_merchant)
         return True
+
+
+class Customer_Repository(object):
+    def get_customers(self, session, merchantId):
+        customers = session.query(User_Table).join().filter(User_Table)

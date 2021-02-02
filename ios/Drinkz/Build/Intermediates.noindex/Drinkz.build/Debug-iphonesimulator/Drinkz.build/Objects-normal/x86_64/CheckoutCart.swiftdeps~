@@ -105,7 +105,7 @@ depends-member:
 - ["s7CVarArgP", "StripeAPIClient"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "business"]
-- !private ["s7CVarArgP", "businessAddressId"]
+- !private ["s7CVarArgP", "businessId"]
 - !private ["s7CVarArgP", "cart"]
 - !private ["s7CVarArgP", "cost"]
 - !private ["s7CVarArgP", "count"]
@@ -139,8 +139,8 @@ depends-member:
 - ["6Drinkz12CheckoutCartC", "StripeAPIClient"]
 - ["6Drinkz12CheckoutCartC", ""]
 - !private ["6Drinkz12CheckoutCartC", "business"]
-- !private ["6Drinkz12CheckoutCartC", "businessAddressId"]
 - ["6Drinkz12CheckoutCartC", "businessArray"]
+- !private ["6Drinkz12CheckoutCartC", "businessId"]
 - ["6Drinkz12CheckoutCartC", "calculateCost"]
 - ["6Drinkz12CheckoutCartC", "canPay"]
 - ["6Drinkz12CheckoutCartC", "cart"]
@@ -189,7 +189,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "StripeAPIClient"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "business"]
-- !private ["s28CustomDebugStringConvertibleP", "businessAddressId"]
+- !private ["s28CustomDebugStringConvertibleP", "businessId"]
 - !private ["s28CustomDebugStringConvertibleP", "cart"]
 - !private ["s28CustomDebugStringConvertibleP", "cost"]
 - !private ["s28CustomDebugStringConvertibleP", "count"]
@@ -231,7 +231,7 @@ depends-member:
 - ["s23CustomStringConvertibleP", "StripeAPIClient"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "business"]
-- !private ["s23CustomStringConvertibleP", "businessAddressId"]
+- !private ["s23CustomStringConvertibleP", "businessId"]
 - !private ["s23CustomStringConvertibleP", "cart"]
 - !private ["s23CustomStringConvertibleP", "cost"]
 - !private ["s23CustomStringConvertibleP", "count"]
@@ -307,7 +307,7 @@ depends-member:
 - ["SQ", "StripeAPIClient"]
 - ["SQ", ""]
 - !private ["SQ", "business"]
-- !private ["SQ", "businessAddressId"]
+- !private ["SQ", "businessId"]
 - !private ["SQ", "cart"]
 - !private ["SQ", "cost"]
 - !private ["SQ", "count"]
@@ -336,6 +336,7 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "reduce"]
 - !private ["s25ExpressibleByArrayLiteralP", "sorted"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "Darwin"]
 - !private ["s25ExpressibleByFloatLiteralP", "Double"]
 - !private ["s25ExpressibleByFloatLiteralP", ""]
@@ -348,6 +349,9 @@ depends-member:
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "pow"]
 - !private ["s27ExpressibleByIntegerLiteralP", "rounded"]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["SF", "Darwin"]
 - !private ["SF", "Double"]
 - !private ["SF", ""]
@@ -364,7 +368,7 @@ depends-member:
 - ["SH", "StripeAPIClient"]
 - ["SH", ""]
 - !private ["SH", "business"]
-- !private ["SH", "businessAddressId"]
+- !private ["SH", "businessId"]
 - !private ["SH", "cart"]
 - !private ["SH", "cost"]
 - !private ["SH", "count"]
@@ -393,7 +397,7 @@ depends-member:
 - ["s12IdentifiableP", "STPCustomerContext"]
 - ["s12IdentifiableP", "StripeAPIClient"]
 - !private ["s12IdentifiableP", "business"]
-- !private ["s12IdentifiableP", "businessAddressId"]
+- !private ["s12IdentifiableP", "businessId"]
 - !private ["s12IdentifiableP", "cart"]
 - !private ["s12IdentifiableP", "cost"]
 - !private ["s12IdentifiableP", "drinks"]
@@ -408,6 +412,7 @@ depends-member:
 - !private ["s12IdentifiableP", "userId"]
 - !private ["s25LosslessStringConvertibleP", "Darwin"]
 - !private ["s25LosslessStringConvertibleP", "Double"]
+- !private ["s25LosslessStringConvertibleP", ""]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s25LosslessStringConvertibleP", "pow"]
 - !private ["s25LosslessStringConvertibleP", "rounded"]
@@ -422,7 +427,7 @@ depends-member:
 - !private ["10Foundation19MutableDataProtocolP", "isEmpty"]
 - !private ["10Foundation19MutableDataProtocolP", "reduce"]
 - !private ["10Foundation19MutableDataProtocolP", "subscript"]
-- !private ["So8NSCodingP", ""]
+- ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "init"]
 - !private ["So9NSCopyingP", "cost"]
 - !private ["So9NSCopyingP", "init"]
@@ -430,7 +435,7 @@ depends-member:
 - !private ["So17NSFastEnumerationP", "init"]
 - ["So20NSFetchRequestResultP", "Bool"]
 - ["So20NSFetchRequestResultP", "Business"]
-- !private ["So20NSFetchRequestResultP", "CheckoutCart"]
+- ["So20NSFetchRequestResultP", "CheckoutCart"]
 - !private ["So20NSFetchRequestResultP", "CoreDataManager"]
 - !private ["So20NSFetchRequestResultP", "Drink"]
 - !private ["So20NSFetchRequestResultP", "NSSet"]
@@ -439,8 +444,8 @@ depends-member:
 - ["So20NSFetchRequestResultP", "StripeAPIClient"]
 - ["So20NSFetchRequestResultP", ""]
 - !private ["So20NSFetchRequestResultP", "business"]
-- !private ["So20NSFetchRequestResultP", "businessAddressId"]
 - ["So20NSFetchRequestResultP", "businessArray"]
+- !private ["So20NSFetchRequestResultP", "businessId"]
 - ["So20NSFetchRequestResultP", "calculateCost"]
 - ["So20NSFetchRequestResultP", "canPay"]
 - ["So20NSFetchRequestResultP", "cart"]
@@ -471,8 +476,8 @@ depends-member:
 - ["So15NSManagedObjectC", "StripeAPIClient"]
 - ["So15NSManagedObjectC", ""]
 - !private ["So15NSManagedObjectC", "business"]
-- !private ["So15NSManagedObjectC", "businessAddressId"]
 - ["So15NSManagedObjectC", "businessArray"]
+- !private ["So15NSManagedObjectC", "businessId"]
 - ["So15NSManagedObjectC", "calculateCost"]
 - ["So15NSManagedObjectC", "canPay"]
 - ["So15NSManagedObjectC", "cart"]
@@ -504,8 +509,8 @@ depends-member:
 - ["So8NSObjectC", "StripeAPIClient"]
 - ["So8NSObjectC", ""]
 - !private ["So8NSObjectC", "business"]
-- !private ["So8NSObjectC", "businessAddressId"]
 - ["So8NSObjectC", "businessArray"]
+- !private ["So8NSObjectC", "businessId"]
 - ["So8NSObjectC", "calculateCost"]
 - ["So8NSObjectC", "canPay"]
 - ["So8NSObjectC", "cart"]
@@ -531,6 +536,7 @@ depends-member:
 - ["So8NSObjectC", "userBusinessDrinks"]
 - !private ["So8NSObjectC", "userId"]
 - !private ["So8NSObjectC", "viewContext"]
+- ["So8NSObjectP", "Bool"]
 - ["So8NSObjectP", "Business"]
 - !private ["So8NSObjectP", "CheckoutCart"]
 - !private ["So8NSObjectP", "CoreDataManager"]
@@ -541,8 +547,8 @@ depends-member:
 - ["So8NSObjectP", "StripeAPIClient"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "business"]
-- !private ["So8NSObjectP", "businessAddressId"]
 - ["So8NSObjectP", "businessArray"]
+- !private ["So8NSObjectP", "businessId"]
 - ["So8NSObjectP", "calculateCost"]
 - ["So8NSObjectP", "canPay"]
 - ["So8NSObjectP", "cart"]
@@ -585,7 +591,7 @@ depends-member:
 - ["7Combine16ObservableObjectP", "StripeAPIClient"]
 - ["7Combine16ObservableObjectP", ""]
 - !private ["7Combine16ObservableObjectP", "business"]
-- !private ["7Combine16ObservableObjectP", "businessAddressId"]
+- !private ["7Combine16ObservableObjectP", "businessId"]
 - !private ["7Combine16ObservableObjectP", "cart"]
 - !private ["7Combine16ObservableObjectP", "cost"]
 - !private ["7Combine16ObservableObjectP", "drinks"]
@@ -641,8 +647,10 @@ depends-member:
 - !private ["Sx", "rounded"]
 - ["6Drinkz15StripeAPIClientC", ""]
 - ["6Drinkz15StripeAPIClientC", "sharedAPIClient"]
+- !private ["s16TextOutputStreamP", ""]
 - !private ["s20TextOutputStreamableP", "Darwin"]
 - !private ["s20TextOutputStreamableP", "Double"]
+- !private ["s20TextOutputStreamableP", ""]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "pow"]
 - !private ["s20TextOutputStreamableP", "rounded"]
@@ -671,6 +679,7 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "isEmpty"]
 - !private ["s24_DestructorSafeContainerP", "reduce"]
 - !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "Darwin"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "Double"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
@@ -682,6 +691,7 @@ depends-member:
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "pow"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "rounded"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s19_HasContiguousBytesP", "count"]
 - !private ["s19_HasContiguousBytesP", "init"]
 - !private ["s19_HasContiguousBytesP", "isEmpty"]
@@ -705,7 +715,7 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "StripeAPIClient"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "business"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "businessAddressId"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "businessId"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cart"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cost"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "drinks"]
@@ -728,7 +738,7 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "StripeAPIClient"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "business"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "businessAddressId"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "businessId"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cart"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cost"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "drinks"]
@@ -778,15 +788,19 @@ depends-nominal:
 - !private "SE"
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "SF"
 - "SH"
 - "s12IdentifiableP"
 - !private "s25LosslessStringConvertibleP"
 - !private "SM"
 - !private "10Foundation19MutableDataProtocolP"
-- !private "So8NSCodingP"
+- "So8NSCodingP"
 - !private "So9NSCopyingP"
 - !private "So17NSFastEnumerationP"
 - "So20NSFetchRequestResultP"
@@ -811,15 +825,18 @@ depends-nominal:
 - !private "s13SignedNumericP"
 - !private "Sx"
 - "6Drinkz15StripeAPIClientC"
+- !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - !private "s14_ArrayProtocolP"
 - !private "s15_CVarArgAlignedP"
 - !private "s22_CVarArgPassedAsDoubleP"
 - !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"

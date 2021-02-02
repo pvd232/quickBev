@@ -5,7 +5,7 @@ provides-nominal:
 provides-member:
 - ["6Drinkz5OrderC", ""]
 - ["6Drinkz5OrderC", "fetchRequest"]
-- ["6Drinkz5OrderC", "businessAddressId"]
+- ["6Drinkz5OrderC", "businessId"]
 - ["6Drinkz5OrderC", "cost"]
 - ["6Drinkz5OrderC", "dateTime"]
 - ["6Drinkz5OrderC", "id"]
@@ -21,7 +21,7 @@ provides-member:
 - ["6Drinkz5OrderC", "removeFromOrderDrink"]
 provides-dynamic-lookup:
 - "addToOrderDrink"
-- "businessAddressId"
+- "businessId"
 - "cost"
 - "dateTime"
 - "fetchRequest"
@@ -109,7 +109,7 @@ depends-member:
 - ["So20NSFetchRequestResultP", "User"]
 - ["So20NSFetchRequestResultP", "_Default_ID"]
 - ["So20NSFetchRequestResultP", "addToOrderDrink"]
-- ["So20NSFetchRequestResultP", "businessAddressId"]
+- ["So20NSFetchRequestResultP", "businessId"]
 - ["So20NSFetchRequestResultP", "cost"]
 - ["So20NSFetchRequestResultP", "dateTime"]
 - ["So20NSFetchRequestResultP", "fetchRequest"]
@@ -134,7 +134,7 @@ depends-member:
 - ["So15NSManagedObjectC", ""]
 - ["So15NSManagedObjectC", "_Default_ID"]
 - ["So15NSManagedObjectC", "addToOrderDrink"]
-- ["So15NSManagedObjectC", "businessAddressId"]
+- ["So15NSManagedObjectC", "businessId"]
 - ["So15NSManagedObjectC", "cost"]
 - ["So15NSManagedObjectC", "dateTime"]
 - ["So15NSManagedObjectC", "fetchRequest"]
@@ -159,7 +159,7 @@ depends-member:
 - ["So8NSObjectC", ""]
 - ["So8NSObjectC", "_Default_ID"]
 - ["So8NSObjectC", "addToOrderDrink"]
-- ["So8NSObjectC", "businessAddressId"]
+- ["So8NSObjectC", "businessId"]
 - ["So8NSObjectC", "cost"]
 - ["So8NSObjectC", "dateTime"]
 - ["So8NSObjectC", "fetchRequest"]
@@ -186,7 +186,7 @@ depends-member:
 - ["So8NSObjectP", ""]
 - ["So8NSObjectP", "_Default_ID"]
 - ["So8NSObjectP", "addToOrderDrink"]
-- ["So8NSObjectP", "businessAddressId"]
+- ["So8NSObjectP", "businessId"]
 - ["So8NSObjectP", "cost"]
 - ["So8NSObjectP", "dateTime"]
 - ["So8NSObjectP", "fetchRequest"]
@@ -221,7 +221,7 @@ depends-member:
 - ["6Drinkz5OrderC", ""]
 - ["6Drinkz5OrderC", "_Default_ID"]
 - ["6Drinkz5OrderC", "addToOrderDrink"]
-- ["6Drinkz5OrderC", "businessAddressId"]
+- ["6Drinkz5OrderC", "businessId"]
 - ["6Drinkz5OrderC", "cost"]
 - ["6Drinkz5OrderC", "dateTime"]
 - ["6Drinkz5OrderC", "fetchRequest"]
@@ -370,4 +370,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "3afdecd973afcb3e4844bfbbc2348e56"
+interface-hash: "9565d97fe52d2e082c07b16e721a4120"
