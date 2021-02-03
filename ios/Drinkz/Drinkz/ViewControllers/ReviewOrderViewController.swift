@@ -148,9 +148,7 @@ class ReviewOrderViewController: UIViewController {
             cardCompanyName.centerYAnchor.constraint(equalTo: cardCompanyName.superview!.centerYAnchor),
             changePaymentMethodButton.heightAnchor.constraint(equalTo: changePaymentMethodButton.superview!.heightAnchor, multiplier: 0.497059),
             changePaymentMethodButton.trailingAnchor.constraint(equalTo: changePaymentMethodButton.superview!.trailingAnchor),
-//            changePaymentMethodButton.leadingAnchor.constraint(equalTo: cardCompanyName.trailingAnchor, constant: 37.0),
             changePaymentMethodButton.widthAnchor.constraint(greaterThanOrEqualTo: changePaymentMethodButton.superview!.widthAnchor, multiplier: 0.25),
-//            changePaymentMethodButton.widthAnchor.constraint(lessThanOrEqualTo: changePaymentMethodButton.superview!.widthAnchor, multiplier: 0.24),
             changePaymentMethodButton.centerYAnchor.constraint(equalTo: changePaymentMethodButton.superview!.centerYAnchor)
         ])
         paymentContextDidChange(paymentContext!)
@@ -254,10 +252,7 @@ extension ReviewOrderViewController: STPPaymentContextDelegate {
         }
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Okay", style: .cancel) { action in
-            self.navigationController?.setViewControllers([HomePageViewController()], animated: true)
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let nextViewController = storyboard.instantiateViewController(identifier: "OrderConfirmationViewController") as? OrderConfirmationViewController
-//            self.navigationController?.setViewControllers([nextViewController!], animated: true)
+            self.navigationController?.setViewControllers([OrderConfirmationViewController()], animated: true)
         })
         self.present(alertController, animated: true, completion: nil)
         }
