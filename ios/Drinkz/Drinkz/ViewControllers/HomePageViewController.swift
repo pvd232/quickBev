@@ -13,8 +13,7 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
     
     let moonImage = UIImage(named:"moon")
     @UsesAutoLayout var moonImageView = UIImageView()
-    @UsesAutoLayout var bottomButtonsViewContainer = UIView()
-    @UsesAutoLayout var bottomButtonsStackView = UIStackView()
+    @UsesAutoLayout var bottomButtonsViewContainer = ToolbarView()
     
     @UsesAutoLayout var theNightIsYoungStackView = UIStackView()
     @UsesAutoLayout var goodEveningLabel = UILabel()
@@ -22,10 +21,6 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
     @UsesAutoLayout var theNightisYoungLabel = UILabel()
     
     @UsesAutoLayout var centerButton = RoundButton()
-    @UsesAutoLayout var orderButton = UIButton()
-    @UsesAutoLayout var accountButton = UIButton()
-    @UsesAutoLayout var eventsButton = UIButton()
-    @UsesAutoLayout var receiptsButton = UIButton()
     
     @UsesAutoLayout var navigationBarChevronArrowImageView = UIImageView()
     @UsesAutoLayout var navigationBarLocationArrowImageView = UIImageView()
@@ -57,36 +52,12 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
         centerButton.refreshColor(color: UIColor.themeColor)
         centerButton.titleLabel?.font = UIFont.themeButtonFont
         
-        accountButton.setTitle("Account", for: .normal)
-        accountButton.titleLabel?.font = UIFont.themeButtonFont
-        
-        eventsButton.setTitle("Events", for: .normal)
-        eventsButton.titleLabel?.font = UIFont.themeButtonFont
-        
-        receiptsButton.setTitle("Receipts", for: .normal)
-        receiptsButton.titleLabel?.font = UIFont.themeButtonFont
-        
-        orderButton.setTitle("Order", for: .normal)
-        orderButton.titleLabel?.font = UIFont.themeButtonFont
-        
         theNightIsYoungStackView.axis = .vertical
         theNightIsYoungStackView.spacing = 10.0
         theNightIsYoungStackView.alignment = .center
         theNightIsYoungStackView.addArrangedSubview(goodEveningLabel)
         theNightIsYoungStackView.addArrangedSubview(ellipsisLabel)
         theNightIsYoungStackView.addArrangedSubview(theNightisYoungLabel)
-        
-        bottomButtonsViewContainer.addSubview(bottomButtonsStackView)
-        bottomButtonsViewContainer.backgroundColor = UIColor.themeColor
-        
-        bottomButtonsStackView.axis = .horizontal
-        bottomButtonsStackView.distribution = .fillProportionally
-        bottomButtonsStackView.alignment = .top
-        bottomButtonsStackView.spacing = 30
-        bottomButtonsStackView.addArrangedSubview(accountButton)
-        bottomButtonsStackView.addArrangedSubview(receiptsButton)
-        bottomButtonsStackView.addArrangedSubview(orderButton)
-        bottomButtonsStackView.addArrangedSubview(eventsButton)
         
         goodEveningLabel.font = UIFont(name: "Charter-Roman", size: 30.0)
         goodEveningLabel.textAlignment = .center
@@ -122,13 +93,8 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
             centerButton.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
             centerButton.widthAnchor.constraint(equalTo: margins.widthAnchor, multiplier: 0.9),
             centerButton.heightAnchor.constraint(equalTo: centerButton.widthAnchor, multiplier: (25/197)),
-            
-            bottomButtonsStackView.centerXAnchor.constraint(equalTo: bottomButtonsStackView.superview!.centerXAnchor),
-            bottomButtonsStackView.heightAnchor.constraint(equalTo: bottomButtonsStackView.superview!.heightAnchor, multiplier: 0.9),
-            bottomButtonsStackView.widthAnchor.constraint(equalTo: bottomButtonsStackView.superview!.widthAnchor, multiplier: 0.95),
-            bottomButtonsStackView.bottomAnchor.constraint(equalTo: bottomButtonsStackView.superview!.bottomAnchor),
-            
-            bottomButtonsViewContainer.bottomAnchor.constraint(equalTo: bottomButtonsViewContainer.superview!.bottomAnchor, constant: 0.0),
+
+            bottomButtonsViewContainer.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0.0),
             bottomButtonsViewContainer.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
             bottomButtonsViewContainer.topAnchor.constraint(equalTo: centerButton.bottomAnchor, constant: 134),
             bottomButtonsViewContainer.widthAnchor.constraint(equalTo: margins.widthAnchor),
@@ -139,10 +105,7 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
             moonImageView.widthAnchor.constraint(equalTo: moonImageView.heightAnchor),
             moonImageView.centerXAnchor.constraint(equalTo: margins.centerXAnchor)
         ])
-        accountButton.addTarget(self, action: #selector(launchAccountViewController), for: .touchUpInside)
-        
-        orderButton.addTarget(self, action: #selector(launchCheckoutViewController), for: .touchUpInside)
-        
+
         centerButton.addTarget(self, action: #selector(centerButtonTouchup), for: .touchUpInside)
         navigationBarStackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(launchBusinessViewController)))
         
@@ -154,10 +117,8 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
         if CheckoutCart.shared.user == nil {
             centerButton.refreshTitle(newTitle: "Choose a venue")
             goodEveningLabel.text = "Good evening"
-            bottomButtonsStackView.isHidden = true
         } else {
             goodEveningLabel.text = "Good evening, \(CheckoutCart.shared.user!.firstName!.capitalizingFirstLetter())"
-            bottomButtonsStackView.isHidden = false
         }
         if CheckoutCart.shared.userBusiness == nil {
             centerButton.refreshTitle(newTitle: "Choose your venue")
@@ -169,7 +130,6 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
             centerButton.refreshTitle(newTitle: "Order from \(CheckoutCart.shared.userBusiness!.name!)")
             navigationBarLabel.text = CheckoutCart.shared.userBusiness!.name
         }
-        bottomButtonsViewContainer.backgroundColor = UIColor.init(red: 134/255, green: 130/255, blue: 230/255, alpha: 1.0)
         let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
         
         var fetchedDrinksOrBusinessesBool = false
@@ -228,14 +188,6 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
         })
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        self.navigationController?.navigationBar.standardAppearance.backgroundColor = UIColor.init(red: 134/255, green: 130/255, blue: 230/255, alpha: 1.0)
-//    }
-    
-    @objc func launchAccountViewController () {
-        navigationController?.pushViewController(AccountViewController(), animated: true)
-    }
-    
     @objc func launchBusinessViewController () {
         let popoverContent = BusinessMapViewController()
         popoverContent.modalPresentationStyle = .popover
@@ -250,11 +202,6 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
         popoverContent.businessPickerDelegate = self
         popover!.delegate = self
         self.present(popoverContent, animated: true, completion: nil)
-    }
-    
-    @objc func launchCheckoutViewController () {
-        let viewController = CheckoutViewController()
-            navigationController?.pushViewController(viewController, animated: true)
     }
     
     func businessPicked() {
@@ -298,6 +245,9 @@ extension UIColor {
 extension UIFont {
     class var themeButtonFont:UIFont {
         return UIFont.init(name: "Charter-Black", size: 20.0)!
+    }
+    class var smallThemeButtonFont:UIFont {
+        return UIFont.init(name: "Charter-Black", size: 12.0)!
     }
     class var themeLabelFont:UIFont {
         return UIFont.init(name: "Charter-Roman", size: 20.0)!

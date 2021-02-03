@@ -64,6 +64,7 @@ depends-member:
 - ["s18AdditiveArithmeticP", ""]
 - !private ["So22UILayoutConstraintAxisV", "horizontal"]
 - !private ["So22UILayoutConstraintAxisV", "vertical"]
+- ["SK", ""]
 - !private ["So15CALayerDelegateP", "addArrangedSubview"]
 - !private ["So15CALayerDelegateP", "addSubview"]
 - !private ["So15CALayerDelegateP", "addTarget"]
@@ -153,6 +154,7 @@ depends-member:
 - !private ["s7CVarArgP", "viewDidLoad"]
 - !private ["s7CVarArgP", "white"]
 - !private ["s7CVarArgP", "widthAnchor"]
+- ["Sl", ""]
 - ["SL", "<"]
 - ["SL", "<="]
 - ["SL", ">"]
@@ -372,6 +374,7 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "normal"]
 - !private ["s25ExpressibleByArrayLiteralP", "touchUpInside"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
 - ["s25ExpressibleByFloatLiteralP", "init"]
 - ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
@@ -381,6 +384,9 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "backgroundColor"]
 - !private ["s23ExpressibleByNilLiteralP", "safeAreaLayoutGuide"]
 - !private ["s23ExpressibleByNilLiteralP", "systemBackground"]
+- ["s32ExpressibleByStringInterpolationP", ""]
+- ["s26ExpressibleByStringLiteralP", ""]
+- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - ["SF", "<"]
 - ["SF", "<="]
 - ["SF", ">"]
@@ -452,6 +458,7 @@ depends-member:
 - !private ["SH", "widthAnchor"]
 - !private ["6Drinkz19LoginViewControllerC", ""]
 - !private ["6Drinkz19LoginViewControllerC", "init"]
+- ["s25LosslessStringConvertibleP", ""]
 - !private ["So8NSCodingP", "LoginViewController"]
 - !private ["So8NSCodingP", "NSLayoutConstraint"]
 - ["So8NSCodingP", "RoundButton"]
@@ -608,6 +615,15 @@ depends-member:
 - !private ["So8NSObjectC", "bottomAnchor"]
 - !private ["So8NSObjectC", "centerXAnchor"]
 - !private ["So8NSObjectC", "centerYAnchor"]
+- !private ["So8NSObjectC", "colorNamed"]
+- !private ["So8NSObjectC", "colorWithCGColor"]
+- !private ["So8NSObjectC", "colorWithCIColor"]
+- !private ["So8NSObjectC", "colorWithDisplayP3Red"]
+- !private ["So8NSObjectC", "colorWithDynamicProvider"]
+- !private ["So8NSObjectC", "colorWithHue"]
+- !private ["So8NSObjectC", "colorWithPatternImage"]
+- !private ["So8NSObjectC", "colorWithRed"]
+- !private ["So8NSObjectC", "colorWithWhite"]
 - !private ["So8NSObjectC", "constraint"]
 - !private ["So8NSObjectC", "fatalError"]
 - ["So8NSObjectC", "font"]
@@ -677,6 +693,15 @@ depends-member:
 - !private ["So8NSObjectP", "bottomAnchor"]
 - !private ["So8NSObjectP", "centerXAnchor"]
 - !private ["So8NSObjectP", "centerYAnchor"]
+- !private ["So8NSObjectP", "colorNamed"]
+- !private ["So8NSObjectP", "colorWithCGColor"]
+- !private ["So8NSObjectP", "colorWithCIColor"]
+- !private ["So8NSObjectP", "colorWithDisplayP3Red"]
+- !private ["So8NSObjectP", "colorWithDynamicProvider"]
+- !private ["So8NSObjectP", "colorWithHue"]
+- !private ["So8NSObjectP", "colorWithPatternImage"]
+- !private ["So8NSObjectP", "colorWithRed"]
+- !private ["So8NSObjectP", "colorWithWhite"]
 - !private ["So8NSObjectP", "constraint"]
 - !private ["So8NSObjectP", "fatalError"]
 - ["So8NSObjectP", "font"]
@@ -744,6 +769,7 @@ depends-member:
 - !private ["6Drinkz11RoundButtonC", "setTitleColor"]
 - !private ["6Drinkz11RoundButtonC", "titleLabel"]
 - !private ["6Drinkz11RoundButtonC", "widthAnchor"]
+- ["ST", ""]
 - !private ["s10SetAlgebraP", ""]
 - !private ["s10SetAlgebraP", "normal"]
 - !private ["s10SetAlgebraP", "touchUpInside"]
@@ -789,6 +815,8 @@ depends-member:
 - ["s13SignedNumericP", ""]
 - !private ["So14UIControlStateV", "normal"]
 - ["Sx", ""]
+- ["s16TextOutputStreamP", ""]
+- ["s20TextOutputStreamableP", ""]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "addTarget"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "bottomAnchor"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "centerXAnchor"]
@@ -1664,9 +1692,11 @@ depends-member:
 - ["6Drinkz14UsesAutoLayoutV", "wrappedValue"]
 - ["s30_CustomPlaygroundQuickLookableP", "height"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s26_ExpressibleByColorLiteralP", "black"]
 - !private ["s26_ExpressibleByColorLiteralP", "init"]
 - !private ["s26_ExpressibleByColorLiteralP", "systemBackground"]
@@ -1835,9 +1865,11 @@ depends-member:
 depends-nominal:
 - "s18AdditiveArithmeticP"
 - !private "So22UILayoutConstraintAxisV"
+- "SK"
 - "So15CALayerDelegateP"
 - "So6CGRectV"
 - "s7CVarArgP"
+- "Sl"
 - "SL"
 - "s28CustomDebugStringConvertibleP"
 - "s17CustomReflectableP"
@@ -1847,12 +1879,17 @@ depends-nominal:
 - "SQ"
 - !private "So15UIControlEventsV"
 - !private "s25ExpressibleByArrayLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - "s25ExpressibleByFloatLiteralP"
 - "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
+- "s32ExpressibleByStringInterpolationP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
 - "SF"
 - "SH"
 - !private "6Drinkz19LoginViewControllerC"
+- "s25LosslessStringConvertibleP"
 - "So8NSCodingP"
 - "So9NSCopyingP"
 - "So26NSExtensionRequestHandlingP"
@@ -1872,11 +1909,14 @@ depends-nominal:
 - !private "Sq"
 - !private "SY"
 - "6Drinkz11RoundButtonC"
+- "ST"
 - !private "s10SetAlgebraP"
 - "6Drinkz30SignInSplashPageViewControllerC"
 - "s13SignedNumericP"
 - !private "So14UIControlStateV"
 - "Sx"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
 - "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
@@ -1918,9 +1958,11 @@ depends-nominal:
 - "6Drinkz14UsesAutoLayoutV"
 - "s30_CustomPlaygroundQuickLookableP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - "s33_ExpressibleByBuiltinFloatLiteralP"
 - "s35_ExpressibleByBuiltinIntegerLiteralP"
 - "s34_ExpressibleByBuiltinStringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - "s26_ExpressibleByImageLiteralP"
 - !private "s35_HasCustomAnyHashableRepresentationP"

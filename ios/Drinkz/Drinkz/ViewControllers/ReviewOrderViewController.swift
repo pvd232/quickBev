@@ -242,7 +242,9 @@ extension ReviewOrderViewController: STPPaymentContextDelegate {
             title = "Error"
             message = error?.localizedDescription ?? ""
         case .success:
+            let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
             CheckoutCart.shared.emptyCart()
+            CoreDataManager.sharedManager.saveContext(context: managedContext)
             title = "Success"
             message = "Your purchase was successful!"
         case .userCancellation:

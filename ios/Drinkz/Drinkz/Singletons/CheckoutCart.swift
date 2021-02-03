@@ -52,19 +52,8 @@ extension CheckoutCart {
         self.cost = (self.subtotal + self.salesTax + self.tipAmount).rounded(digits: 2)
     }
     public func emptyCart () {
-        self.userId = ""
-        self.businessId = nil
         self.cost = 0.0
         self.drinks = NSSet.init(array: [Drink]())
-    }
-    public func destroyCart() {
-        emptyCart()
-        self.user = nil
-        self.userBusiness = nil
-        self.businessId = nil
-        self.stripeId = ""
-        self.userId = ""
-        
     }
 }
 extension Double {

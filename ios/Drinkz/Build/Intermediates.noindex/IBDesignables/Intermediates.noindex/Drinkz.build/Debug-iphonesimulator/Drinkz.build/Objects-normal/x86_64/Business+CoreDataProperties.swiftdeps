@@ -12,7 +12,7 @@ provides-member:
 - ["6Drinkz8BusinessC", "salesTaxRate"]
 - ["6Drinkz8BusinessC", "stripeId"]
 - ["6Drinkz8BusinessC", "businessToCheckoutCart"]
-- ["6Drinkz8BusinessC", "businessAddressId"]
+- ["6Drinkz8BusinessC", "businessId"]
 - ["6Drinkz8BusinessC", "drinks"]
 - ["6Drinkz8BusinessC", "userBusinessToCheckoutCart"]
 - ["6Drinkz8BusinessC", "addToDrinks"]
@@ -22,7 +22,7 @@ provides-member:
 provides-dynamic-lookup:
 - "addToDrinks"
 - "address"
-- "businessAddressId"
+- "businessId"
 - "businessToCheckoutCart"
 - "coordinateString"
 - "drinks"
@@ -59,7 +59,7 @@ depends-member:
 - ["6Drinkz8BusinessC", "_Default_ID"]
 - ["6Drinkz8BusinessC", "addToDrinks"]
 - ["6Drinkz8BusinessC", "address"]
-- ["6Drinkz8BusinessC", "businessAddressId"]
+- ["6Drinkz8BusinessC", "businessId"]
 - ["6Drinkz8BusinessC", "businessToCheckoutCart"]
 - ["6Drinkz8BusinessC", "coordinateString"]
 - ["6Drinkz8BusinessC", "drinks"]
@@ -122,14 +122,13 @@ depends-member:
 - !private ["So9NSCopyingP", "init"]
 - !private ["So14NSFetchRequestC", "init"]
 - ["So20NSFetchRequestResultP", "Default_ID"]
-- ["So20NSFetchRequestResultP", "Double"]
 - ["So20NSFetchRequestResultP", "ID"]
 - ["So20NSFetchRequestResultP", "NSFetchRequest"]
 - ["So20NSFetchRequestResultP", "NSSet"]
 - ["So20NSFetchRequestResultP", "_Default_ID"]
 - ["So20NSFetchRequestResultP", "addToDrinks"]
 - ["So20NSFetchRequestResultP", "address"]
-- ["So20NSFetchRequestResultP", "businessAddressId"]
+- ["So20NSFetchRequestResultP", "businessId"]
 - ["So20NSFetchRequestResultP", "businessToCheckoutCart"]
 - ["So20NSFetchRequestResultP", "coordinateString"]
 - ["So20NSFetchRequestResultP", "drinks"]
@@ -154,7 +153,7 @@ depends-member:
 - ["So15NSManagedObjectC", "_Default_ID"]
 - ["So15NSManagedObjectC", "addToDrinks"]
 - ["So15NSManagedObjectC", "address"]
-- ["So15NSManagedObjectC", "businessAddressId"]
+- ["So15NSManagedObjectC", "businessId"]
 - ["So15NSManagedObjectC", "businessToCheckoutCart"]
 - ["So15NSManagedObjectC", "coordinateString"]
 - ["So15NSManagedObjectC", "drinks"]
@@ -179,7 +178,7 @@ depends-member:
 - ["So8NSObjectC", "_Default_ID"]
 - ["So8NSObjectC", "addToDrinks"]
 - ["So8NSObjectC", "address"]
-- ["So8NSObjectC", "businessAddressId"]
+- ["So8NSObjectC", "businessId"]
 - ["So8NSObjectC", "businessToCheckoutCart"]
 - ["So8NSObjectC", "coordinateString"]
 - ["So8NSObjectC", "drinks"]
@@ -193,14 +192,13 @@ depends-member:
 - ["So8NSObjectC", "stripeId"]
 - ["So8NSObjectC", "userBusinessToCheckoutCart"]
 - ["So8NSObjectP", "Default_ID"]
-- ["So8NSObjectP", "Double"]
 - ["So8NSObjectP", "ID"]
 - ["So8NSObjectP", "NSFetchRequest"]
 - ["So8NSObjectP", ""]
 - ["So8NSObjectP", "_Default_ID"]
 - ["So8NSObjectP", "addToDrinks"]
 - ["So8NSObjectP", "address"]
-- ["So8NSObjectP", "businessAddressId"]
+- ["So8NSObjectP", "businessId"]
 - ["So8NSObjectP", "businessToCheckoutCart"]
 - ["So8NSObjectP", "coordinateString"]
 - ["So8NSObjectP", "drinks"]
@@ -358,4 +356,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "b5c43b9a58c5b24f3eaa199d8cf8e056"
+interface-hash: "10982f15f14bc4edd28255e313a9e3cc"

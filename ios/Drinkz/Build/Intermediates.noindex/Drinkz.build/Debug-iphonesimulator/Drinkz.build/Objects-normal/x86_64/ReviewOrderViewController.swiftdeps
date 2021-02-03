@@ -61,9 +61,9 @@ depends-top-level:
 - !private "BooleanLiteralType"
 - !private "CastingPrecedence"
 - !private "CheckoutCart"
+- !private "CoreDataManager"
 - "Error"
 - !private "FloatLiteralType"
-- "HomePageViewController"
 - !private "Int"
 - !private "IntegerLiteralType"
 - "JSONEncoder"
@@ -72,6 +72,7 @@ depends-top-level:
 - "NSCoder"
 - !private "NSLayoutConstraint"
 - !private "Order"
+- "OrderConfirmationViewController"
 - "Parameters"
 - "ReviewOrderViewController"
 - "RoundButton"
@@ -129,7 +130,7 @@ depends-member:
 - !private ["s18AdditiveArithmeticP", "rounded"]
 - !private ["So22UILayoutConstraintAxisV", "horizontal"]
 - !private ["So22UILayoutConstraintAxisV", "vertical"]
-- !private ["SK", ""]
+- ["SK", ""]
 - !private ["SK", "init"]
 - !private ["SB", "rounded"]
 - !private ["Sz", ""]
@@ -165,13 +166,14 @@ depends-member:
 - !private ["8CloudKit21CKRecordValueProtocolP", "rounded"]
 - !private ["s7CVarArgP", "AF"]
 - !private ["s7CVarArgP", "CheckoutCart"]
-- !private ["s7CVarArgP", "HomePageViewController"]
+- !private ["s7CVarArgP", "CoreDataManager"]
 - !private ["s7CVarArgP", "Int"]
 - !private ["s7CVarArgP", "JSONEncoder"]
 - !private ["s7CVarArgP", "JSONEncoding"]
 - !private ["s7CVarArgP", "JSONSerialization"]
 - !private ["s7CVarArgP", "NSLayoutConstraint"]
 - !private ["s7CVarArgP", "Order"]
+- !private ["s7CVarArgP", "OrderConfirmationViewController"]
 - ["s7CVarArgP", "RoundButton"]
 - !private ["s7CVarArgP", "STPPaymentContext"]
 - !private ["s7CVarArgP", "STPPaymentHandler"]
@@ -270,6 +272,7 @@ depends-member:
 - !private ["s7CVarArgP", "totalStackView"]
 - !private ["s7CVarArgP", "trailingAnchor"]
 - !private ["s7CVarArgP", "view"]
+- !private ["s7CVarArgP", "viewContext"]
 - !private ["s7CVarArgP", "viewDidLoad"]
 - !private ["s7CVarArgP", "widthAnchor"]
 - !private ["6Drinkz12CheckoutCartC", "calculateCost"]
@@ -280,21 +283,25 @@ depends-member:
 - !private ["6Drinkz12CheckoutCartC", "shared"]
 - !private ["6Drinkz12CheckoutCartC", "subtotal"]
 - !private ["6Drinkz12CheckoutCartC", "tipAmount"]
-- !private ["Sl", ""]
+- ["Sl", ""]
 - !private ["Sl", "init"]
 - !private ["SL", "RawValue"]
-- !private ["SL", ""]
+- ["SL", ""]
 - !private ["SL", "init"]
 - !private ["SL", "rounded"]
+- !private ["6Drinkz15CoreDataManagerC", "persistentContainer"]
+- !private ["6Drinkz15CoreDataManagerC", "saveContext"]
+- !private ["6Drinkz15CoreDataManagerC", "sharedManager"]
 - !private ["s28CustomDebugStringConvertibleP", "AF"]
 - !private ["s28CustomDebugStringConvertibleP", "CheckoutCart"]
-- !private ["s28CustomDebugStringConvertibleP", "HomePageViewController"]
+- !private ["s28CustomDebugStringConvertibleP", "CoreDataManager"]
 - !private ["s28CustomDebugStringConvertibleP", "Int"]
 - !private ["s28CustomDebugStringConvertibleP", "JSONEncoder"]
 - !private ["s28CustomDebugStringConvertibleP", "JSONEncoding"]
 - !private ["s28CustomDebugStringConvertibleP", "JSONSerialization"]
 - !private ["s28CustomDebugStringConvertibleP", "NSLayoutConstraint"]
 - !private ["s28CustomDebugStringConvertibleP", "Order"]
+- !private ["s28CustomDebugStringConvertibleP", "OrderConfirmationViewController"]
 - ["s28CustomDebugStringConvertibleP", "RoundButton"]
 - !private ["s28CustomDebugStringConvertibleP", "STPPaymentContext"]
 - !private ["s28CustomDebugStringConvertibleP", "STPPaymentHandler"]
@@ -394,6 +401,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "totalStackView"]
 - !private ["s28CustomDebugStringConvertibleP", "trailingAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "view"]
+- !private ["s28CustomDebugStringConvertibleP", "viewContext"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
 - !private ["s28CustomDebugStringConvertibleP", "widthAnchor"]
 - !private ["s17CustomReflectableP", "addSubview"]
@@ -404,13 +412,14 @@ depends-member:
 - !private ["s17CustomReflectableP", "systemBackground"]
 - !private ["s23CustomStringConvertibleP", "AF"]
 - !private ["s23CustomStringConvertibleP", "CheckoutCart"]
-- !private ["s23CustomStringConvertibleP", "HomePageViewController"]
+- !private ["s23CustomStringConvertibleP", "CoreDataManager"]
 - !private ["s23CustomStringConvertibleP", "Int"]
 - !private ["s23CustomStringConvertibleP", "JSONEncoder"]
 - !private ["s23CustomStringConvertibleP", "JSONEncoding"]
 - !private ["s23CustomStringConvertibleP", "JSONSerialization"]
 - !private ["s23CustomStringConvertibleP", "NSLayoutConstraint"]
 - !private ["s23CustomStringConvertibleP", "Order"]
+- !private ["s23CustomStringConvertibleP", "OrderConfirmationViewController"]
 - ["s23CustomStringConvertibleP", "RoundButton"]
 - !private ["s23CustomStringConvertibleP", "STPPaymentContext"]
 - !private ["s23CustomStringConvertibleP", "STPPaymentHandler"]
@@ -512,6 +521,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "trailingAnchor"]
 - !private ["s23CustomStringConvertibleP", "validate"]
 - !private ["s23CustomStringConvertibleP", "view"]
+- !private ["s23CustomStringConvertibleP", "viewContext"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
 - !private ["s23CustomStringConvertibleP", "widthAnchor"]
 - !private ["9Alamofire11DataRequestC", "responseJSON"]
@@ -533,14 +543,15 @@ depends-member:
 - !private ["SQ", "AF"]
 - !private ["SQ", "ArrayLiteralElement"]
 - !private ["SQ", "CheckoutCart"]
+- !private ["SQ", "CoreDataManager"]
 - !private ["SQ", "Element"]
-- !private ["SQ", "HomePageViewController"]
 - !private ["SQ", "Int"]
 - !private ["SQ", "JSONEncoder"]
 - !private ["SQ", "JSONEncoding"]
 - !private ["SQ", "JSONSerialization"]
 - !private ["SQ", "NSLayoutConstraint"]
 - !private ["SQ", "Order"]
+- !private ["SQ", "OrderConfirmationViewController"]
 - !private ["SQ", "RawValue"]
 - ["SQ", "RoundButton"]
 - !private ["SQ", "STPPaymentContext"]
@@ -655,6 +666,7 @@ depends-member:
 - !private ["SQ", "validate"]
 - !private ["SQ", "vertical"]
 - !private ["SQ", "view"]
+- !private ["SQ", "viewContext"]
 - !private ["SQ", "viewDidLoad"]
 - !private ["SQ", "widthAnchor"]
 - !private ["s5ErrorP", "localizedDescription"]
@@ -664,7 +676,7 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", ""]
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "touchUpInside"]
-- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
 - !private ["s25ExpressibleByFloatLiteralP", ""]
@@ -679,11 +691,11 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "safeAreaLayoutGuide"]
 - !private ["s23ExpressibleByNilLiteralP", "systemBackground"]
-- !private ["s32ExpressibleByStringInterpolationP", ""]
+- ["s32ExpressibleByStringInterpolationP", ""]
 - !private ["s32ExpressibleByStringInterpolationP", "init"]
-- !private ["s26ExpressibleByStringLiteralP", ""]
+- ["s26ExpressibleByStringLiteralP", ""]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
-- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s17FixedWidthIntegerP", "init"]
 - !private ["s17FixedWidthIntegerP", "rounded"]
@@ -692,13 +704,14 @@ depends-member:
 - !private ["9Alamofire10HTTPMethodV", "post"]
 - !private ["SH", "AF"]
 - !private ["SH", "CheckoutCart"]
-- !private ["SH", "HomePageViewController"]
+- !private ["SH", "CoreDataManager"]
 - !private ["SH", "Int"]
 - !private ["SH", "JSONEncoder"]
 - !private ["SH", "JSONEncoding"]
 - !private ["SH", "JSONSerialization"]
 - !private ["SH", "NSLayoutConstraint"]
 - !private ["SH", "Order"]
+- !private ["SH", "OrderConfirmationViewController"]
 - !private ["SH", "RawValue"]
 - ["SH", "RoundButton"]
 - !private ["SH", "STPPaymentContext"]
@@ -812,10 +825,9 @@ depends-member:
 - !private ["SH", "validate"]
 - !private ["SH", "vertical"]
 - !private ["SH", "view"]
+- !private ["SH", "viewContext"]
 - !private ["SH", "viewDidLoad"]
 - !private ["SH", "widthAnchor"]
-- !private ["6Drinkz22HomePageViewControllerC", ""]
-- !private ["6Drinkz22HomePageViewControllerC", "init"]
 - !private ["s12IdentifiableP", "calculateCost"]
 - !private ["s12IdentifiableP", "cost"]
 - !private ["s12IdentifiableP", "customerContext"]
@@ -831,7 +843,7 @@ depends-member:
 - !private ["10Foundation11JSONEncoderC", "init"]
 - !private ["9Alamofire12JSONEncodingV", "default"]
 - !private ["So19NSJSONSerializationC", "jsonObject"]
-- !private ["s25LosslessStringConvertibleP", ""]
+- ["s25LosslessStringConvertibleP", ""]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s25LosslessStringConvertibleP", "rounded"]
 - !private ["10Foundation11MeasurementV", "rounded"]
@@ -839,8 +851,8 @@ depends-member:
 - !private ["s10MirrorPathP", "rounded"]
 - !private ["So8NSCodingP", "AF"]
 - !private ["So8NSCodingP", "CheckoutCart"]
+- !private ["So8NSCodingP", "CoreDataManager"]
 - ["So8NSCodingP", "Error"]
-- !private ["So8NSCodingP", "HomePageViewController"]
 - !private ["So8NSCodingP", "Int"]
 - !private ["So8NSCodingP", "JSONEncoder"]
 - !private ["So8NSCodingP", "JSONEncoding"]
@@ -848,6 +860,7 @@ depends-member:
 - ["So8NSCodingP", "NSCoder"]
 - !private ["So8NSCodingP", "NSLayoutConstraint"]
 - !private ["So8NSCodingP", "Order"]
+- !private ["So8NSCodingP", "OrderConfirmationViewController"]
 - !private ["So8NSCodingP", "Parameters"]
 - ["So8NSCodingP", "RoundButton"]
 - ["So8NSCodingP", "STPPaymentContext"]
@@ -992,8 +1005,8 @@ depends-member:
 - !private ["So9NSCopyingP", "themeColor"]
 - !private ["So26NSExtensionRequestHandlingP", "AF"]
 - !private ["So26NSExtensionRequestHandlingP", "CheckoutCart"]
+- !private ["So26NSExtensionRequestHandlingP", "CoreDataManager"]
 - ["So26NSExtensionRequestHandlingP", "Error"]
-- !private ["So26NSExtensionRequestHandlingP", "HomePageViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "Int"]
 - !private ["So26NSExtensionRequestHandlingP", "JSONEncoder"]
 - !private ["So26NSExtensionRequestHandlingP", "JSONEncoding"]
@@ -1001,6 +1014,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "NSCoder"]
 - !private ["So26NSExtensionRequestHandlingP", "NSLayoutConstraint"]
 - !private ["So26NSExtensionRequestHandlingP", "Order"]
+- !private ["So26NSExtensionRequestHandlingP", "OrderConfirmationViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "Parameters"]
 - ["So26NSExtensionRequestHandlingP", "RoundButton"]
 - ["So26NSExtensionRequestHandlingP", "STPPaymentContext"]
@@ -1124,8 +1138,8 @@ depends-member:
 - !private ["So15NSManagedObjectC", "tipAmount"]
 - !private ["So8NSObjectC", "AF"]
 - !private ["So8NSObjectC", "CheckoutCart"]
+- !private ["So8NSObjectC", "CoreDataManager"]
 - ["So8NSObjectC", "Error"]
-- !private ["So8NSObjectC", "HomePageViewController"]
 - !private ["So8NSObjectC", "Int"]
 - !private ["So8NSObjectC", "JSONEncoder"]
 - !private ["So8NSObjectC", "JSONEncoding"]
@@ -1135,6 +1149,7 @@ depends-member:
 - ["So8NSObjectC", "NSCoder"]
 - !private ["So8NSObjectC", "NSLayoutConstraint"]
 - !private ["So8NSObjectC", "Order"]
+- !private ["So8NSObjectC", "OrderConfirmationViewController"]
 - !private ["So8NSObjectC", "Parameters"]
 - ["So8NSObjectC", "RoundButton"]
 - ["So8NSObjectC", "STPPaymentContext"]
@@ -1279,12 +1294,13 @@ depends-member:
 - ["So8NSObjectC", "totalStackView"]
 - !private ["So8NSObjectC", "trailingAnchor"]
 - !private ["So8NSObjectC", "view"]
+- !private ["So8NSObjectC", "viewContext"]
 - ["So8NSObjectC", "viewDidLoad"]
 - !private ["So8NSObjectC", "widthAnchor"]
 - !private ["So8NSObjectP", "AF"]
 - !private ["So8NSObjectP", "CheckoutCart"]
+- !private ["So8NSObjectP", "CoreDataManager"]
 - ["So8NSObjectP", "Error"]
-- !private ["So8NSObjectP", "HomePageViewController"]
 - !private ["So8NSObjectP", "Int"]
 - !private ["So8NSObjectP", "JSONEncoder"]
 - !private ["So8NSObjectP", "JSONEncoding"]
@@ -1293,6 +1309,7 @@ depends-member:
 - !private ["So8NSObjectP", "JSONSerialization"]
 - !private ["So8NSObjectP", "NSLayoutConstraint"]
 - !private ["So8NSObjectP", "Order"]
+- !private ["So8NSObjectP", "OrderConfirmationViewController"]
 - !private ["So8NSObjectP", "Parameters"]
 - ["So8NSObjectP", "RoundButton"]
 - ["So8NSObjectP", "STPPaymentContext"]
@@ -1439,11 +1456,12 @@ depends-member:
 - ["So8NSObjectP", "totalStackView"]
 - !private ["So8NSObjectP", "trailingAnchor"]
 - !private ["So8NSObjectP", "view"]
+- !private ["So8NSObjectP", "viewContext"]
 - ["So8NSObjectP", "viewDidLoad"]
 - !private ["So8NSObjectP", "widthAnchor"]
+- !private ["So21NSPersistentContainerC", "viewContext"]
 - !private ["So14NSSecureCodingP", "systemBackground"]
 - !private ["So14NSSecureCodingP", "themeColor"]
-- !private ["6Drinkz25NewBusinessPickedProtocolP", "init"]
 - !private ["Sj", ""]
 - !private ["Sj", "init"]
 - !private ["Sj", "rounded"]
@@ -1466,6 +1484,8 @@ depends-member:
 - !private ["Sq", "systemBackground"]
 - !private ["6Drinkz5OrderC", ""]
 - !private ["6Drinkz5OrderC", "init"]
+- !private ["6Drinkz31OrderConfirmationViewControllerC", ""]
+- !private ["6Drinkz31OrderConfirmationViewControllerC", "init"]
 - !private ["9Alamofire17ParameterEncodingP", "default"]
 - !private ["Sm", "init"]
 - !private ["SY", "ArrayLiteralElement"]
@@ -1497,8 +1517,8 @@ depends-member:
 - !private ["s6ResultO", "success"]
 - !private ["6Drinkz25ReviewOrderViewControllerC", "AF"]
 - !private ["6Drinkz25ReviewOrderViewControllerC", "CheckoutCart"]
+- !private ["6Drinkz25ReviewOrderViewControllerC", "CoreDataManager"]
 - ["6Drinkz25ReviewOrderViewControllerC", "Error"]
-- !private ["6Drinkz25ReviewOrderViewControllerC", "HomePageViewController"]
 - !private ["6Drinkz25ReviewOrderViewControllerC", "Int"]
 - !private ["6Drinkz25ReviewOrderViewControllerC", "JSONEncoder"]
 - !private ["6Drinkz25ReviewOrderViewControllerC", "JSONEncoding"]
@@ -1506,6 +1526,7 @@ depends-member:
 - ["6Drinkz25ReviewOrderViewControllerC", "NSCoder"]
 - !private ["6Drinkz25ReviewOrderViewControllerC", "NSLayoutConstraint"]
 - !private ["6Drinkz25ReviewOrderViewControllerC", "Order"]
+- !private ["6Drinkz25ReviewOrderViewControllerC", "OrderConfirmationViewController"]
 - !private ["6Drinkz25ReviewOrderViewControllerC", "Parameters"]
 - ["6Drinkz25ReviewOrderViewControllerC", "RoundButton"]
 - ["6Drinkz25ReviewOrderViewControllerC", "STPPaymentContext"]
@@ -1616,13 +1637,14 @@ depends-member:
 - !private ["6Stripe17STPPaymentContextC", "selectedPaymentOption"]
 - !private ["6Stripe25STPPaymentContextDelegateP", "AF"]
 - !private ["6Stripe25STPPaymentContextDelegateP", "CheckoutCart"]
-- !private ["6Stripe25STPPaymentContextDelegateP", "HomePageViewController"]
+- !private ["6Stripe25STPPaymentContextDelegateP", "CoreDataManager"]
 - !private ["6Stripe25STPPaymentContextDelegateP", "Int"]
 - !private ["6Stripe25STPPaymentContextDelegateP", "JSONEncoder"]
 - !private ["6Stripe25STPPaymentContextDelegateP", "JSONEncoding"]
 - !private ["6Stripe25STPPaymentContextDelegateP", "JSONSerialization"]
 - !private ["6Stripe25STPPaymentContextDelegateP", "NSLayoutConstraint"]
 - !private ["6Stripe25STPPaymentContextDelegateP", "Order"]
+- !private ["6Stripe25STPPaymentContextDelegateP", "OrderConfirmationViewController"]
 - ["6Stripe25STPPaymentContextDelegateP", "RoundButton"]
 - !private ["6Stripe25STPPaymentContextDelegateP", "STPPaymentContext"]
 - !private ["6Stripe25STPPaymentContextDelegateP", "STPPaymentHandler"]
@@ -1721,7 +1743,7 @@ depends-member:
 - !private ["6Stripe40STPShippingAddressViewControllerDelegateP", "selectedPaymentOption"]
 - !private ["6Stripe22STPURLCallbackListenerP", "confirmPayment"]
 - !private ["6Stripe22STPURLCallbackListenerP", "shared"]
-- !private ["ST", ""]
+- ["ST", ""]
 - !private ["ST", "init"]
 - !private ["9Alamofire7SessionC", "request"]
 - !private ["9Alamofire20SessionStateProviderP", "request"]
@@ -1744,11 +1766,12 @@ depends-member:
 - !private ["6Drinkz15StripeAPIClientC", "sharedAPIClient"]
 - !private ["So22UIAlertControllerStyleV", "alert"]
 - !private ["So18UIAlertActionStyleV", "cancel"]
-- !private ["s16TextOutputStreamP", ""]
+- ["s16TextOutputStreamP", ""]
 - !private ["s16TextOutputStreamP", "init"]
-- !private ["s20TextOutputStreamableP", ""]
+- ["s20TextOutputStreamableP", ""]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "rounded"]
+- !private ["6Drinkz11ToolbarViewC", ""]
 - !private ["7Combine15TopLevelEncoderP", "encode"]
 - !private ["7Combine15TopLevelEncoderP", "init"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "addTarget"]
@@ -1790,8 +1813,6 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "topAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "trailingAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "widthAnchor"]
-- !private ["So40UIAdaptivePresentationControllerDelegateP", ""]
-- !private ["So40UIAdaptivePresentationControllerDelegateP", "init"]
 - !private ["So13UIAlertActionC", "init"]
 - !private ["So17UIAlertControllerC", "addAction"]
 - !private ["So17UIAlertControllerC", "init"]
@@ -1823,8 +1844,8 @@ depends-member:
 - !private ["So12UIAppearanceP", "widthAnchor"]
 - !private ["So21UIAppearanceContainerP", "AF"]
 - !private ["So21UIAppearanceContainerP", "CheckoutCart"]
+- !private ["So21UIAppearanceContainerP", "CoreDataManager"]
 - ["So21UIAppearanceContainerP", "Error"]
-- !private ["So21UIAppearanceContainerP", "HomePageViewController"]
 - !private ["So21UIAppearanceContainerP", "Int"]
 - !private ["So21UIAppearanceContainerP", "JSONEncoder"]
 - !private ["So21UIAppearanceContainerP", "JSONEncoding"]
@@ -1832,6 +1853,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "NSCoder"]
 - !private ["So21UIAppearanceContainerP", "NSLayoutConstraint"]
 - !private ["So21UIAppearanceContainerP", "Order"]
+- !private ["So21UIAppearanceContainerP", "OrderConfirmationViewController"]
 - !private ["So21UIAppearanceContainerP", "Parameters"]
 - ["So21UIAppearanceContainerP", "RoundButton"]
 - ["So21UIAppearanceContainerP", "STPPaymentContext"]
@@ -1947,8 +1969,8 @@ depends-member:
 - !private ["So7UIColorC", "themeColor"]
 - !private ["So18UIContentContainerP", "AF"]
 - !private ["So18UIContentContainerP", "CheckoutCart"]
+- !private ["So18UIContentContainerP", "CoreDataManager"]
 - ["So18UIContentContainerP", "Error"]
-- !private ["So18UIContentContainerP", "HomePageViewController"]
 - !private ["So18UIContentContainerP", "Int"]
 - !private ["So18UIContentContainerP", "JSONEncoder"]
 - !private ["So18UIContentContainerP", "JSONEncoding"]
@@ -1956,6 +1978,7 @@ depends-member:
 - ["So18UIContentContainerP", "NSCoder"]
 - !private ["So18UIContentContainerP", "NSLayoutConstraint"]
 - !private ["So18UIContentContainerP", "Order"]
+- !private ["So18UIContentContainerP", "OrderConfirmationViewController"]
 - !private ["So18UIContentContainerP", "Parameters"]
 - ["So18UIContentContainerP", "RoundButton"]
 - ["So18UIContentContainerP", "STPPaymentContext"]
@@ -2118,8 +2141,8 @@ depends-member:
 - !private ["So13UIDynamicItemP", "widthAnchor"]
 - !private ["So18UIFocusEnvironmentP", "AF"]
 - !private ["So18UIFocusEnvironmentP", "CheckoutCart"]
+- !private ["So18UIFocusEnvironmentP", "CoreDataManager"]
 - ["So18UIFocusEnvironmentP", "Error"]
-- !private ["So18UIFocusEnvironmentP", "HomePageViewController"]
 - !private ["So18UIFocusEnvironmentP", "Int"]
 - !private ["So18UIFocusEnvironmentP", "JSONEncoder"]
 - !private ["So18UIFocusEnvironmentP", "JSONEncoding"]
@@ -2127,6 +2150,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "NSCoder"]
 - !private ["So18UIFocusEnvironmentP", "NSLayoutConstraint"]
 - !private ["So18UIFocusEnvironmentP", "Order"]
+- !private ["So18UIFocusEnvironmentP", "OrderConfirmationViewController"]
 - !private ["So18UIFocusEnvironmentP", "Parameters"]
 - ["So18UIFocusEnvironmentP", "RoundButton"]
 - ["So18UIFocusEnvironmentP", "STPPaymentContext"]
@@ -2332,14 +2356,15 @@ depends-member:
 - !private ["So22UINavigationControllerC", "setViewControllers"]
 - !private ["So30UIPasteConfigurationSupportingP", "AF"]
 - !private ["So30UIPasteConfigurationSupportingP", "CheckoutCart"]
+- !private ["So30UIPasteConfigurationSupportingP", "CoreDataManager"]
 - ["So30UIPasteConfigurationSupportingP", "Error"]
-- !private ["So30UIPasteConfigurationSupportingP", "HomePageViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "Int"]
 - !private ["So30UIPasteConfigurationSupportingP", "JSONEncoder"]
 - !private ["So30UIPasteConfigurationSupportingP", "JSONEncoding"]
 - !private ["So30UIPasteConfigurationSupportingP", "JSONSerialization"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSLayoutConstraint"]
 - !private ["So30UIPasteConfigurationSupportingP", "Order"]
+- !private ["So30UIPasteConfigurationSupportingP", "OrderConfirmationViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "Parameters"]
 - ["So30UIPasteConfigurationSupportingP", "RoundButton"]
 - ["So30UIPasteConfigurationSupportingP", "STPPaymentContext"]
@@ -2439,11 +2464,10 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "view"]
 - ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - !private ["So30UIPasteConfigurationSupportingP", "widthAnchor"]
-- !private ["So39UIPopoverPresentationControllerDelegateP", "init"]
 - !private ["So11UIResponderC", "AF"]
 - !private ["So11UIResponderC", "CheckoutCart"]
+- !private ["So11UIResponderC", "CoreDataManager"]
 - ["So11UIResponderC", "Error"]
-- !private ["So11UIResponderC", "HomePageViewController"]
 - !private ["So11UIResponderC", "Int"]
 - !private ["So11UIResponderC", "JSONEncoder"]
 - !private ["So11UIResponderC", "JSONEncoding"]
@@ -2451,6 +2475,7 @@ depends-member:
 - ["So11UIResponderC", "NSCoder"]
 - !private ["So11UIResponderC", "NSLayoutConstraint"]
 - !private ["So11UIResponderC", "Order"]
+- !private ["So11UIResponderC", "OrderConfirmationViewController"]
 - !private ["So11UIResponderC", "Parameters"]
 - ["So11UIResponderC", "RoundButton"]
 - ["So11UIResponderC", "STPPaymentContext"]
@@ -2552,14 +2577,15 @@ depends-member:
 - !private ["So11UIResponderC", "widthAnchor"]
 - !private ["So30UIResponderStandardEditActionsP", "AF"]
 - !private ["So30UIResponderStandardEditActionsP", "CheckoutCart"]
+- !private ["So30UIResponderStandardEditActionsP", "CoreDataManager"]
 - ["So30UIResponderStandardEditActionsP", "Error"]
-- !private ["So30UIResponderStandardEditActionsP", "HomePageViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "Int"]
 - !private ["So30UIResponderStandardEditActionsP", "JSONEncoder"]
 - !private ["So30UIResponderStandardEditActionsP", "JSONEncoding"]
 - !private ["So30UIResponderStandardEditActionsP", "JSONSerialization"]
 - !private ["So30UIResponderStandardEditActionsP", "NSLayoutConstraint"]
 - !private ["So30UIResponderStandardEditActionsP", "Order"]
+- !private ["So30UIResponderStandardEditActionsP", "OrderConfirmationViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "Parameters"]
 - ["So30UIResponderStandardEditActionsP", "RoundButton"]
 - ["So30UIResponderStandardEditActionsP", "STPPaymentContext"]
@@ -2683,8 +2709,8 @@ depends-member:
 - !private ["So11UIStackViewC", "widthAnchor"]
 - !private ["So16UIStateRestoringP", "AF"]
 - !private ["So16UIStateRestoringP", "CheckoutCart"]
+- !private ["So16UIStateRestoringP", "CoreDataManager"]
 - ["So16UIStateRestoringP", "Error"]
-- !private ["So16UIStateRestoringP", "HomePageViewController"]
 - !private ["So16UIStateRestoringP", "Int"]
 - !private ["So16UIStateRestoringP", "JSONEncoder"]
 - !private ["So16UIStateRestoringP", "JSONEncoding"]
@@ -2692,6 +2718,7 @@ depends-member:
 - ["So16UIStateRestoringP", "NSCoder"]
 - !private ["So16UIStateRestoringP", "NSLayoutConstraint"]
 - !private ["So16UIStateRestoringP", "Order"]
+- !private ["So16UIStateRestoringP", "OrderConfirmationViewController"]
 - !private ["So16UIStateRestoringP", "Parameters"]
 - ["So16UIStateRestoringP", "RoundButton"]
 - ["So16UIStateRestoringP", "STPPaymentContext"]
@@ -2768,8 +2795,8 @@ depends-member:
 - ["So16UIStateRestoringP", "viewDidLoad"]
 - !private ["So18UITraitEnvironmentP", "AF"]
 - !private ["So18UITraitEnvironmentP", "CheckoutCart"]
+- !private ["So18UITraitEnvironmentP", "CoreDataManager"]
 - ["So18UITraitEnvironmentP", "Error"]
-- !private ["So18UITraitEnvironmentP", "HomePageViewController"]
 - !private ["So18UITraitEnvironmentP", "Int"]
 - !private ["So18UITraitEnvironmentP", "JSONEncoder"]
 - !private ["So18UITraitEnvironmentP", "JSONEncoding"]
@@ -2777,6 +2804,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "NSCoder"]
 - !private ["So18UITraitEnvironmentP", "NSLayoutConstraint"]
 - !private ["So18UITraitEnvironmentP", "Order"]
+- !private ["So18UITraitEnvironmentP", "OrderConfirmationViewController"]
 - !private ["So18UITraitEnvironmentP", "Parameters"]
 - ["So18UITraitEnvironmentP", "RoundButton"]
 - ["So18UITraitEnvironmentP", "STPPaymentContext"]
@@ -2877,14 +2905,15 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "widthAnchor"]
 - !private ["So23UIUserActivityRestoringP", "AF"]
 - !private ["So23UIUserActivityRestoringP", "CheckoutCart"]
+- !private ["So23UIUserActivityRestoringP", "CoreDataManager"]
 - ["So23UIUserActivityRestoringP", "Error"]
-- !private ["So23UIUserActivityRestoringP", "HomePageViewController"]
 - !private ["So23UIUserActivityRestoringP", "Int"]
 - !private ["So23UIUserActivityRestoringP", "JSONEncoder"]
 - !private ["So23UIUserActivityRestoringP", "JSONEncoding"]
 - !private ["So23UIUserActivityRestoringP", "JSONSerialization"]
 - !private ["So23UIUserActivityRestoringP", "NSLayoutConstraint"]
 - !private ["So23UIUserActivityRestoringP", "Order"]
+- !private ["So23UIUserActivityRestoringP", "OrderConfirmationViewController"]
 - !private ["So23UIUserActivityRestoringP", "Parameters"]
 - ["So23UIUserActivityRestoringP", "RoundButton"]
 - ["So23UIUserActivityRestoringP", "STPPaymentContext"]
@@ -3012,8 +3041,8 @@ depends-member:
 - !private ["So6UIViewC", "widthAnchor"]
 - !private ["So16UIViewControllerC", "AF"]
 - !private ["So16UIViewControllerC", "CheckoutCart"]
+- !private ["So16UIViewControllerC", "CoreDataManager"]
 - ["So16UIViewControllerC", "Error"]
-- !private ["So16UIViewControllerC", "HomePageViewController"]
 - !private ["So16UIViewControllerC", "Int"]
 - !private ["So16UIViewControllerC", "JSONEncoder"]
 - !private ["So16UIViewControllerC", "JSONEncoding"]
@@ -3021,6 +3050,7 @@ depends-member:
 - ["So16UIViewControllerC", "NSCoder"]
 - !private ["So16UIViewControllerC", "NSLayoutConstraint"]
 - !private ["So16UIViewControllerC", "Order"]
+- !private ["So16UIViewControllerC", "OrderConfirmationViewController"]
 - !private ["So16UIViewControllerC", "Parameters"]
 - ["So16UIViewControllerC", "RoundButton"]
 - ["So16UIViewControllerC", "STPPaymentContext"]
@@ -3104,14 +3134,14 @@ depends-member:
 - !private ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "rounded"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
-- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "rounded"]
 - ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "rounded"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s26_ExpressibleByColorLiteralP", "systemBackground"]
 - !private ["s26_ExpressibleByColorLiteralP", "themeColor"]
@@ -3122,13 +3152,14 @@ depends-member:
 - !private ["s35_HasCustomAnyHashableRepresentationP", "rounded"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "AF"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CheckoutCart"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "HomePageViewController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CoreDataManager"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Int"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "JSONEncoder"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "JSONEncoding"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "JSONSerialization"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSLayoutConstraint"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Order"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "OrderConfirmationViewController"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "RoundButton"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "STPPaymentContext"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "STPPaymentHandler"]
@@ -3226,17 +3257,19 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "totalStackView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "trailingAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "view"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewContext"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "widthAnchor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "AF"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CheckoutCart"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "HomePageViewController"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CoreDataManager"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Int"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "JSONEncoder"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "JSONEncoding"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "JSONSerialization"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSLayoutConstraint"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Order"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "OrderConfirmationViewController"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "RoundButton"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPPaymentContext"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPPaymentHandler"]
@@ -3334,6 +3367,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "totalStackView"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "trailingAnchor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "view"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewContext"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewDidLoad"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "widthAnchor"]
 - !private ["s21_ObjectiveCBridgeableP", "RawValue"]
@@ -3376,15 +3410,16 @@ depends-member:
 depends-nominal:
 - !private "s18AdditiveArithmeticP"
 - !private "So22UILayoutConstraintAxisV"
-- !private "SK"
+- "SK"
 - !private "SB"
 - !private "Sz"
 - "So15CALayerDelegateP"
 - !private "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
 - !private "6Drinkz12CheckoutCartC"
-- !private "Sl"
-- !private "SL"
+- "Sl"
+- "SL"
+- !private "6Drinkz15CoreDataManagerC"
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
@@ -3397,24 +3432,23 @@ depends-nominal:
 - !private "s5ErrorP"
 - !private "So15UIControlEventsV"
 - !private "s25ExpressibleByArrayLiteralP"
-- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- !private "s32ExpressibleByStringInterpolationP"
-- !private "s26ExpressibleByStringLiteralP"
-- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s32ExpressibleByStringInterpolationP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "s17FixedWidthIntegerP"
 - !private "SF"
 - !private "9Alamofire10HTTPMethodV"
 - "SH"
-- !private "6Drinkz22HomePageViewControllerC"
 - !private "s12IdentifiableP"
 - !private "Si"
 - !private "10Foundation11JSONEncoderC"
 - !private "9Alamofire12JSONEncodingV"
 - !private "So19NSJSONSerializationC"
-- !private "s25LosslessStringConvertibleP"
+- "s25LosslessStringConvertibleP"
 - !private "10Foundation11MeasurementV"
 - !private "s10MirrorPathP"
 - "So8NSCodingP"
@@ -3431,13 +3465,14 @@ depends-nominal:
 - "So15NSManagedObjectC"
 - "So8NSObjectC"
 - "So8NSObjectP"
+- !private "So21NSPersistentContainerC"
 - !private "So14NSSecureCodingP"
-- !private "6Drinkz25NewBusinessPickedProtocolP"
 - !private "Sj"
 - !private "7Combine16ObservableObjectP"
 - !private "s9OptionSetP"
 - !private "Sq"
 - !private "6Drinkz5OrderC"
+- !private "6Drinkz31OrderConfirmationViewControllerC"
 - !private "9Alamofire17ParameterEncodingP"
 - !private "Sm"
 - "SY"
@@ -3466,7 +3501,7 @@ depends-nominal:
 - "6Stripe16STPPaymentStatusO"
 - !private "6Stripe40STPShippingAddressViewControllerDelegateP"
 - !private "6Stripe22STPURLCallbackListenerP"
-- !private "ST"
+- "ST"
 - !private "9Alamofire7SessionC"
 - !private "9Alamofire20SessionStateProviderP"
 - !private "s10SetAlgebraP"
@@ -3478,12 +3513,12 @@ depends-nominal:
 - !private "6Drinkz15StripeAPIClientC"
 - !private "So22UIAlertControllerStyleV"
 - !private "So18UIAlertActionStyleV"
-- !private "s16TextOutputStreamP"
-- !private "s20TextOutputStreamableP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "6Drinkz11ToolbarViewC"
 - !private "7Combine15TopLevelEncoderP"
 - "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - "So29UIAccessibilityIdentificationP"
-- !private "So40UIAdaptivePresentationControllerDelegateP"
 - !private "So13UIAlertActionC"
 - !private "So17UIAlertControllerC"
 - "So12UIAppearanceP"
@@ -3507,7 +3542,6 @@ depends-nominal:
 - !private "So16UILayoutPrioritya"
 - !private "So22UINavigationControllerC"
 - "So30UIPasteConfigurationSupportingP"
-- !private "So39UIPopoverPresentationControllerDelegateP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
 - "So35UISpringLoadedInteractionSupportingP"
@@ -3523,11 +3557,11 @@ depends-nominal:
 - !private "s22_CVarArgPassedAsDoubleP"
 - !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
-- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
-- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"

@@ -488,9 +488,7 @@ SWIFT_CLASS("_TtC6Drinkz22HomePageViewController")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidLoad;
-- (void)launchAccountViewController;
 - (void)launchBusinessViewController;
-- (void)launchCheckoutViewController;
 - (void)centerButtonTouchup:(RoundButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
@@ -544,9 +542,10 @@ SWIFT_CLASS("_TtC6Drinkz5Order")
 
 SWIFT_CLASS("_TtC6Drinkz31OrderConfirmationViewController")
 @interface OrderConfirmationViewController : UIViewController
-- (void)viewDidLoad;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
 @class UILabel;
@@ -767,6 +766,10 @@ SWIFT_CLASS("_TtC6Drinkz11ToolbarView")
 @interface ToolbarView : UIView
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (void)updateConstraints;
+- (void)launchAccountViewController;
+- (void)launchCheckoutViewController;
+- (void)launchHomePageViewController;
 @end
 
 
