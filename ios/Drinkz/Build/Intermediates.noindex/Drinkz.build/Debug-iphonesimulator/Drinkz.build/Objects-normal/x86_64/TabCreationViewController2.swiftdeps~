@@ -32,7 +32,9 @@ depends-top-level:
 - !private "eventPrivacySegmentedControl"
 - !private "print"
 depends-member:
-- !private ["SK", ""]
+- !private ["s18AdditiveArithmeticP", ""]
+- ["SK", ""]
+- !private ["So15CALayerDelegateP", ""]
 - !private ["So15CALayerDelegateP", "addGestureRecognizer"]
 - !private ["So15CALayerDelegateP", "selectedSegmentIndex"]
 - !private ["So15CALayerDelegateP", "standardAppearance"]
@@ -52,8 +54,8 @@ depends-member:
 - !private ["s7CVarArgP", "standardAppearance"]
 - !private ["s7CVarArgP", "titleTextAttributes"]
 - !private ["s7CVarArgP", "viewDidLoad"]
-- !private ["Sl", ""]
-- !private ["SL", ""]
+- ["Sl", ""]
+- ["SL", ""]
 - !private ["s28CustomDebugStringConvertibleP", "Key"]
 - !private ["s28CustomDebugStringConvertibleP", "NSAttributedString"]
 - !private ["s28CustomDebugStringConvertibleP", "UIFont"]
@@ -112,14 +114,17 @@ depends-member:
 - !private ["s30ExpressibleByDictionaryLiteralP", "Key"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "Value"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "init"]
-- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s25ExpressibleByFloatLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
+- !private ["s27ExpressibleByIntegerLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "addGestureRecognizer"]
 - !private ["s23ExpressibleByNilLiteralP", "selectedSegmentIndex"]
-- !private ["s32ExpressibleByStringInterpolationP", ""]
-- !private ["s26ExpressibleByStringLiteralP", ""]
-- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- ["s32ExpressibleByStringInterpolationP", ""]
+- ["s26ExpressibleByStringLiteralP", ""]
+- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["SF", ""]
 - !private ["SH", "Key"]
 - !private ["SH", "NSAttributedString"]
 - !private ["SH", "UIFont"]
@@ -138,10 +143,11 @@ depends-member:
 - !private ["SH", "titleTextAttributes"]
 - !private ["SH", "viewDidLoad"]
 - !private ["So21NSAttributedStringKeya", "font"]
-- !private ["s25LosslessStringConvertibleP", ""]
+- ["s25LosslessStringConvertibleP", ""]
 - !private ["So18NSAttributedStringC", "Key"]
 - !private ["So8NSCodingP", "Key"]
 - !private ["So8NSCodingP", "NSAttributedString"]
+- ["So8NSCodingP", "RoundButton"]
 - !private ["So8NSCodingP", "UIFont"]
 - ["So8NSCodingP", "UISegmentedControl"]
 - !private ["So8NSCodingP", "UITapGestureRecognizer"]
@@ -163,6 +169,7 @@ depends-member:
 - !private ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "titleTextAttributes"]
 - !private ["So26NSExtensionRequestHandlingP", "NSAttributedString"]
+- ["So26NSExtensionRequestHandlingP", "RoundButton"]
 - !private ["So26NSExtensionRequestHandlingP", "UIFont"]
 - ["So26NSExtensionRequestHandlingP", "UISegmentedControl"]
 - !private ["So26NSExtensionRequestHandlingP", "UITapGestureRecognizer"]
@@ -188,6 +195,8 @@ depends-member:
 - !private ["So8NSObjectC", "addGestureRecognizer"]
 - ["So8NSObjectC", "eventPrivacyEventHandler"]
 - ["So8NSObjectC", "eventPrivacySegmentedControl"]
+- !private ["So8NSObjectC", "fontWithDescriptor"]
+- !private ["So8NSObjectC", "fontWithName"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "navigationBar"]
 - !private ["So8NSObjectC", "navigationController"]
@@ -199,6 +208,7 @@ depends-member:
 - ["So8NSObjectC", "viewDidLoad"]
 - !private ["So8NSObjectP", "Key"]
 - !private ["So8NSObjectP", "NSAttributedString"]
+- ["So8NSObjectP", "RoundButton"]
 - !private ["So8NSObjectP", "UIFont"]
 - ["So8NSObjectP", "UISegmentedControl"]
 - !private ["So8NSObjectP", "UITapGestureRecognizer"]
@@ -206,6 +216,8 @@ depends-member:
 - !private ["So8NSObjectP", "addGestureRecognizer"]
 - ["So8NSObjectP", "eventPrivacyEventHandler"]
 - ["So8NSObjectP", "eventPrivacySegmentedControl"]
+- !private ["So8NSObjectP", "fontWithDescriptor"]
+- !private ["So8NSObjectP", "fontWithName"]
 - ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "navigationBar"]
 - !private ["So8NSObjectP", "navigationController"]
@@ -218,11 +230,14 @@ depends-member:
 - !private ["So14NSSecureCodingP", "Key"]
 - !private ["So14NSSecureCodingP", ""]
 - !private ["So14NSSecureCodingP", "titleTextAttributes"]
+- !private ["Sj", ""]
 - !private ["Sq", "addGestureRecognizer"]
 - !private ["Sq", "selectedSegmentIndex"]
 - !private ["SY", ""]
 - !private ["SY", "font"]
-- !private ["ST", ""]
+- ["ST", ""]
+- !private ["s13SignedNumericP", ""]
+- !private ["Sx", ""]
 - ["6Drinkz35TabCreationSecondPagePickerProtocolP", "String"]
 - ["6Drinkz35TabCreationSecondPagePickerProtocolP", "selectedValues"]
 - !private ["6Drinkz26TabCreationViewController2C", "NSAttributedString"]
@@ -239,15 +254,18 @@ depends-member:
 - !private ["6Drinkz26TabCreationViewController2C", "print"]
 - ["6Drinkz26TabCreationViewController2C", "submitButton"]
 - ["6Drinkz26TabCreationViewController2C", "viewDidLoad"]
-- !private ["s16TextOutputStreamP", ""]
-- !private ["s20TextOutputStreamableP", ""]
+- ["s16TextOutputStreamP", ""]
+- ["s20TextOutputStreamableP", ""]
+- !private ["So29UIAccessibilityIdentificationP", ""]
 - !private ["So29UIAccessibilityIdentificationP", "addGestureRecognizer"]
 - !private ["So29UIAccessibilityIdentificationP", "selectedSegmentIndex"]
 - !private ["So29UIAccessibilityIdentificationP", "standardAppearance"]
+- !private ["So12UIAppearanceP", ""]
 - !private ["So12UIAppearanceP", "addGestureRecognizer"]
 - !private ["So12UIAppearanceP", "selectedSegmentIndex"]
 - !private ["So12UIAppearanceP", "standardAppearance"]
 - !private ["So21UIAppearanceContainerP", "NSAttributedString"]
+- ["So21UIAppearanceContainerP", "RoundButton"]
 - !private ["So21UIAppearanceContainerP", "UIFont"]
 - ["So21UIAppearanceContainerP", "UISegmentedControl"]
 - !private ["So21UIAppearanceContainerP", "UITapGestureRecognizer"]
@@ -267,6 +285,7 @@ depends-member:
 - !private ["So15UIBarAppearanceC", "titleTextAttributes"]
 - !private ["So16UIBarPositioningP", "standardAppearance"]
 - !private ["So18UIContentContainerP", "NSAttributedString"]
+- ["So18UIContentContainerP", "RoundButton"]
 - !private ["So18UIContentContainerP", "UIFont"]
 - ["So18UIContentContainerP", "UISegmentedControl"]
 - !private ["So18UIContentContainerP", "UITapGestureRecognizer"]
@@ -279,18 +298,22 @@ depends-member:
 - !private ["So18UIContentContainerP", "print"]
 - ["So18UIContentContainerP", "submitButton"]
 - ["So18UIContentContainerP", "viewDidLoad"]
+- !private ["So32UIContextMenuInteractionDelegateP", ""]
 - !private ["So32UIContextMenuInteractionDelegateP", "addGestureRecognizer"]
 - !private ["So32UIContextMenuInteractionDelegateP", "selectedSegmentIndex"]
 - ["So9UIControlC", ""]
 - !private ["So9UIControlC", "addGestureRecognizer"]
 - !private ["So9UIControlC", "selectedSegmentIndex"]
+- !private ["So17UICoordinateSpaceP", ""]
 - !private ["So17UICoordinateSpaceP", "addGestureRecognizer"]
 - !private ["So17UICoordinateSpaceP", "selectedSegmentIndex"]
 - !private ["So17UICoordinateSpaceP", "standardAppearance"]
+- !private ["So13UIDynamicItemP", ""]
 - !private ["So13UIDynamicItemP", "addGestureRecognizer"]
 - !private ["So13UIDynamicItemP", "selectedSegmentIndex"]
 - !private ["So13UIDynamicItemP", "standardAppearance"]
 - !private ["So18UIFocusEnvironmentP", "NSAttributedString"]
+- ["So18UIFocusEnvironmentP", "RoundButton"]
 - !private ["So18UIFocusEnvironmentP", "UIFont"]
 - ["So18UIFocusEnvironmentP", "UISegmentedControl"]
 - !private ["So18UIFocusEnvironmentP", "UITapGestureRecognizer"]
@@ -306,15 +329,18 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "standardAppearance"]
 - ["So18UIFocusEnvironmentP", "submitButton"]
 - ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- !private ["So11UIFocusItemP", ""]
 - !private ["So11UIFocusItemP", "addGestureRecognizer"]
 - !private ["So11UIFocusItemP", "selectedSegmentIndex"]
 - !private ["So11UIFocusItemP", "standardAppearance"]
+- !private ["So20UIFocusItemContainerP", ""]
 - !private ["So20UIFocusItemContainerP", "addGestureRecognizer"]
 - !private ["So20UIFocusItemContainerP", "selectedSegmentIndex"]
 - !private ["So20UIFocusItemContainerP", "standardAppearance"]
 - !private ["So6UIFontC", "init"]
 - ["So19UIGestureRecognizerC", ""]
 - !private ["So19UIGestureRecognizerC", "init"]
+- !private ["So24UILargeContentViewerItemP", ""]
 - !private ["So24UILargeContentViewerItemP", "addGestureRecognizer"]
 - !private ["So24UILargeContentViewerItemP", "selectedSegmentIndex"]
 - !private ["So24UILargeContentViewerItemP", "standardAppearance"]
@@ -322,6 +348,7 @@ depends-member:
 - !private ["So25UINavigationBarAppearanceC", "titleTextAttributes"]
 - !private ["So22UINavigationControllerC", "navigationBar"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSAttributedString"]
+- ["So30UIPasteConfigurationSupportingP", "RoundButton"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIFont"]
 - ["So30UIPasteConfigurationSupportingP", "UISegmentedControl"]
 - !private ["So30UIPasteConfigurationSupportingP", "UITapGestureRecognizer"]
@@ -355,6 +382,7 @@ depends-member:
 - ["So11UIResponderC", "submitButton"]
 - ["So11UIResponderC", "viewDidLoad"]
 - !private ["So30UIResponderStandardEditActionsP", "NSAttributedString"]
+- ["So30UIResponderStandardEditActionsP", "RoundButton"]
 - !private ["So30UIResponderStandardEditActionsP", "UIFont"]
 - ["So30UIResponderStandardEditActionsP", "UISegmentedControl"]
 - !private ["So30UIResponderStandardEditActionsP", "UITapGestureRecognizer"]
@@ -375,6 +403,7 @@ depends-member:
 - !private ["So35UISpringLoadedInteractionSupportingP", "addGestureRecognizer"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "selectedSegmentIndex"]
 - !private ["So16UIStateRestoringP", "NSAttributedString"]
+- ["So16UIStateRestoringP", "RoundButton"]
 - !private ["So16UIStateRestoringP", "UIFont"]
 - ["So16UIStateRestoringP", "UISegmentedControl"]
 - !private ["So16UIStateRestoringP", "UITapGestureRecognizer"]
@@ -389,6 +418,7 @@ depends-member:
 - ["So16UIStateRestoringP", "viewDidLoad"]
 - !private ["So22UITapGestureRecognizerC", "init"]
 - !private ["So18UITraitEnvironmentP", "NSAttributedString"]
+- ["So18UITraitEnvironmentP", "RoundButton"]
 - !private ["So18UITraitEnvironmentP", "UIFont"]
 - ["So18UITraitEnvironmentP", "UISegmentedControl"]
 - !private ["So18UITraitEnvironmentP", "UITapGestureRecognizer"]
@@ -405,6 +435,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "submitButton"]
 - ["So18UITraitEnvironmentP", "viewDidLoad"]
 - !private ["So23UIUserActivityRestoringP", "NSAttributedString"]
+- ["So23UIUserActivityRestoringP", "RoundButton"]
 - !private ["So23UIUserActivityRestoringP", "UIFont"]
 - ["So23UIUserActivityRestoringP", "UISegmentedControl"]
 - !private ["So23UIUserActivityRestoringP", "UITapGestureRecognizer"]
@@ -438,10 +469,10 @@ depends-member:
 - !private ["So16UIViewControllerC", "print"]
 - ["So16UIViewControllerC", "submitButton"]
 - ["So16UIViewControllerC", "viewDidLoad"]
-- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s35_HasCustomAnyHashableRepresentationP", ""]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "font"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Key"]
@@ -484,11 +515,12 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "selectedSegmentIndex"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "standardAppearance"]
 depends-nominal:
-- !private "SK"
+- !private "s18AdditiveArithmeticP"
+- "SK"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
-- !private "Sl"
-- !private "SL"
+- "Sl"
+- "SL"
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
@@ -496,15 +528,17 @@ depends-nominal:
 - !private "SE"
 - "SQ"
 - !private "s30ExpressibleByDictionaryLiteralP"
-- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- !private "s32ExpressibleByStringInterpolationP"
-- !private "s26ExpressibleByStringLiteralP"
-- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s32ExpressibleByStringInterpolationP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "SF"
 - "SH"
 - !private "So21NSAttributedStringKeya"
-- !private "s25LosslessStringConvertibleP"
+- "s25LosslessStringConvertibleP"
 - !private "So18NSAttributedStringC"
 - "So8NSCodingP"
 - !private "So9NSCopyingP"
@@ -515,13 +549,16 @@ depends-nominal:
 - "So8NSObjectC"
 - "So8NSObjectP"
 - !private "So14NSSecureCodingP"
+- !private "Sj"
 - !private "Sq"
 - !private "SY"
-- !private "ST"
+- "ST"
+- !private "s13SignedNumericP"
+- !private "Sx"
 - "6Drinkz35TabCreationSecondPagePickerProtocolP"
 - "6Drinkz26TabCreationViewController2C"
-- !private "s16TextOutputStreamP"
-- !private "s20TextOutputStreamableP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
@@ -552,10 +589,10 @@ depends-nominal:
 - "So23UIUserActivityRestoringP"
 - "So6UIViewC"
 - "So16UIViewControllerC"
-- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
-- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"

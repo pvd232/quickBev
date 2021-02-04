@@ -187,10 +187,10 @@ depends-member:
 - !private ["s12IdentifiableP", "shared"]
 - !private ["s25LosslessStringConvertibleP", ""]
 - ["So8NSCodingP", ""]
-- !private ["So8NSCodingP", "init"]
+- ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "makeKeyAndVisible"]
 - !private ["So8NSCodingP", "rootViewController"]
-- !private ["So26NSExtensionRequestHandlingP", "init"]
+- ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So20NSFetchRequestResultP", "shared"]
 - !private ["So15NSManagedObjectC", "shared"]
 - ["So8NSObjectC", "Bool"]
@@ -231,6 +231,7 @@ depends-member:
 - !private ["So8NSObjectP", "UIApplication"]
 - ["So8NSObjectP", "UIScene"]
 - ["So8NSObjectP", "UISceneSession"]
+- ["So8NSObjectP", "UIViewController"]
 - ["So8NSObjectP", "UIWindow"]
 - !private ["So8NSObjectP", "UIWindowScene"]
 - ["So8NSObjectP", ""]
@@ -299,12 +300,12 @@ depends-member:
 - !private ["So12UIAppearanceP", "init"]
 - !private ["So12UIAppearanceP", "makeKeyAndVisible"]
 - !private ["So12UIAppearanceP", "rootViewController"]
-- !private ["So21UIAppearanceContainerP", "init"]
+- ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "makeKeyAndVisible"]
 - !private ["So21UIAppearanceContainerP", "rootViewController"]
 - !private ["So13UIApplicationC", "connectedScenes"]
 - !private ["So13UIApplicationC", "shared"]
-- !private ["So18UIContentContainerP", "init"]
+- ["So18UIContentContainerP", "init"]
 - !private ["So17UICoordinateSpaceP", "init"]
 - !private ["So17UICoordinateSpaceP", "makeKeyAndVisible"]
 - !private ["So17UICoordinateSpaceP", "rootViewController"]
@@ -312,7 +313,7 @@ depends-member:
 - !private ["So13UIDynamicItemP", "makeKeyAndVisible"]
 - !private ["So13UIDynamicItemP", "rootViewController"]
 - !private ["So18UIFocusEnvironmentP", ""]
-- !private ["So18UIFocusEnvironmentP", "init"]
+- ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "makeKeyAndVisible"]
 - !private ["So18UIFocusEnvironmentP", "rootViewController"]
 - !private ["So11UIFocusItemP", "init"]
@@ -331,6 +332,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "UIApplication"]
 - ["So30UIPasteConfigurationSupportingP", "UIScene"]
 - ["So30UIPasteConfigurationSupportingP", "UISceneSession"]
+- ["So30UIPasteConfigurationSupportingP", "UIViewController"]
 - ["So30UIPasteConfigurationSupportingP", "UIWindow"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIWindowScene"]
 - ["So30UIPasteConfigurationSupportingP", ""]
@@ -389,6 +391,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "UIApplication"]
 - ["So30UIResponderStandardEditActionsP", "UIScene"]
 - ["So30UIResponderStandardEditActionsP", "UISceneSession"]
+- ["So30UIResponderStandardEditActionsP", "UIViewController"]
 - ["So30UIResponderStandardEditActionsP", "UIWindow"]
 - !private ["So30UIResponderStandardEditActionsP", "UIWindowScene"]
 - ["So30UIResponderStandardEditActionsP", ""]
@@ -434,8 +437,8 @@ depends-member:
 - ["So15UISceneDelegateP", "stateRestorationActivityForScene"]
 - ["So15UISceneDelegateP", "window"]
 - ["So15UISceneDelegateP", "windowScene"]
-- !private ["So16UIStateRestoringP", "init"]
-- !private ["So18UITraitEnvironmentP", "init"]
+- ["So16UIStateRestoringP", "init"]
+- ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "makeKeyAndVisible"]
 - !private ["So18UITraitEnvironmentP", "rootViewController"]
 - !private ["So23UIUserActivityRestoringP", "CheckoutCart"]
@@ -445,6 +448,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "UIApplication"]
 - ["So23UIUserActivityRestoringP", "UIScene"]
 - ["So23UIUserActivityRestoringP", "UISceneSession"]
+- ["So23UIUserActivityRestoringP", "UIViewController"]
 - ["So23UIUserActivityRestoringP", "UIWindow"]
 - !private ["So23UIUserActivityRestoringP", "UIWindowScene"]
 - ["So23UIUserActivityRestoringP", ""]
@@ -578,7 +582,7 @@ depends-nominal:
 - !private "s12IdentifiableP"
 - !private "s25LosslessStringConvertibleP"
 - "So8NSCodingP"
-- !private "So26NSExtensionRequestHandlingP"
+- "So26NSExtensionRequestHandlingP"
 - !private "So20NSFetchRequestResultP"
 - !private "So15NSManagedObjectC"
 - "So8NSObjectC"
@@ -597,12 +601,12 @@ depends-nominal:
 - !private "s20TextOutputStreamableP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
-- !private "So21UIAppearanceContainerP"
+- "So21UIAppearanceContainerP"
 - !private "So13UIApplicationC"
-- !private "So18UIContentContainerP"
+- "So18UIContentContainerP"
 - !private "So17UICoordinateSpaceP"
 - !private "So13UIDynamicItemP"
-- !private "So18UIFocusEnvironmentP"
+- "So18UIFocusEnvironmentP"
 - !private "So11UIFocusItemP"
 - !private "So20UIFocusItemContainerP"
 - !private "So24UILargeContentViewerItemP"
@@ -611,8 +615,8 @@ depends-nominal:
 - "So30UIResponderStandardEditActionsP"
 - "So7UISceneC"
 - "So15UISceneDelegateP"
-- !private "So16UIStateRestoringP"
-- !private "So18UITraitEnvironmentP"
+- "So16UIStateRestoringP"
+- "So18UITraitEnvironmentP"
 - "So23UIUserActivityRestoringP"
 - "So6UIViewC"
 - "So16UIViewControllerC"

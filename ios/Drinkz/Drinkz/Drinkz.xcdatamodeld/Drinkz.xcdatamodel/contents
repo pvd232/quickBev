@@ -7,9 +7,9 @@
         <attribute name="name" attributeType="String"/>
         <attribute name="salesTaxRate" attributeType="Double" defaultValueString="0.0"/>
         <attribute name="stripeId" attributeType="String" defaultValueString=""/>
-        <relationship name="businessToCheckoutCart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CheckoutCart" inverseName="business" inverseEntity="CheckoutCart"/>
+        <relationship name="businessToCheckoutCart" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CheckoutCart" inverseName="business" inverseEntity="CheckoutCart"/>
         <relationship name="drinks" toMany="YES" deletionRule="Cascade" destinationEntity="Drink" inverseName="drinkToBusiness" inverseEntity="Drink"/>
-        <relationship name="userBusinessToCheckoutCart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CheckoutCart" inverseName="userBusiness" inverseEntity="CheckoutCart"/>
+        <relationship name="userBusinessToCheckoutCart" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CheckoutCart" inverseName="userBusiness" inverseEntity="CheckoutCart"/>
     </entity>
     <entity name="CheckoutCart" representedClassName=".CheckoutCart" syncable="YES">
         <attribute name="businessId" optional="YES" attributeType="UUID" defaultValueString="" usesScalarValueType="NO"/>
@@ -22,10 +22,10 @@
         <attribute name="tipAmount" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="tipPercentage" attributeType="Double" defaultValueString="0.1" usesScalarValueType="YES"/>
         <attribute name="userId" attributeType="String" defaultValueString=""/>
-        <relationship name="business" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Business" inverseName="businessToCheckoutCart" inverseEntity="Business"/>
-        <relationship name="drinks" toMany="YES" deletionRule="Cascade" destinationEntity="Drink" inverseName="relationship" inverseEntity="Drink"/>
-        <relationship name="user" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="User" inverseName="relationship" inverseEntity="User"/>
-        <relationship name="userBusiness" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Business" inverseName="userBusinessToCheckoutCart" inverseEntity="Business"/>
+        <relationship name="business" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Business" inverseName="businessToCheckoutCart" inverseEntity="Business"/>
+        <relationship name="drinks" toMany="YES" deletionRule="Nullify" destinationEntity="Drink" inverseName="relationship" inverseEntity="Drink"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="relationship" inverseEntity="User"/>
+        <relationship name="userBusiness" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Business" inverseName="userBusinessToCheckoutCart" inverseEntity="Business"/>
     </entity>
     <entity name="Drink" representedClassName=".Drink" syncable="YES">
         <attribute name="businessId" attributeType="UUID" usesScalarValueType="NO"/>
@@ -68,7 +68,7 @@
         <attribute name="lastName" attributeType="String"/>
         <attribute name="password" attributeType="String"/>
         <attribute name="stripeId" attributeType="String" defaultValueString=""/>
-        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CheckoutCart" inverseName="user" inverseEntity="CheckoutCart"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CheckoutCart" inverseName="user" inverseEntity="CheckoutCart"/>
         <relationship name="userToOrder" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Order" inverseName="user" inverseEntity="Order"/>
         <relationship name="userToTab" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tab" inverseName="tabToUser" inverseEntity="Tab"/>
     </entity>

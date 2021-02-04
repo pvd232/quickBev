@@ -48,7 +48,6 @@ class SplashPageViewController: UIViewController {
         
         optionsStackView.axis = .vertical
         optionsStackView.spacing = 14.0
-        //        optionsStackView.distribution = .equalSpacing
         
         signInButton.refreshTitle(newTitle: "Sign in to QuickBev")
         signInButton.titleLabel?.font = UIFont(name: "Charter-Black", size: 20.0)
@@ -77,7 +76,6 @@ class SplashPageViewController: UIViewController {
         self.view.addSubview(optionsStackView)
         let margins = self.view.safeAreaLayoutGuide
         NSLayoutConstraint.activate([
-            //            moonImageView.widthAnchor.constraint(equalTo: margins.widthAnchor, multiplier: 0.565217),
             moonImageView.heightAnchor.constraint(equalTo: moonImageView.widthAnchor),
             moonImageView.topAnchor.constraint(equalTo: margins.topAnchor, constant: 40.0),
             moonImageView.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
@@ -90,7 +88,7 @@ class SplashPageViewController: UIViewController {
             optionsStackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -10.0),
             optionsStackView.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -20.0).usingPriority(UILayoutPriority(751)),
             optionsStackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 10.0),
-            //            optionsStackView.heightAnchor.constraint(equalTo: margins.heightAnchor, multiplier: 0.276486),
+
             letsGetStartedLabel.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
             letsGetStartedLabel.centerYAnchor.constraint(equalTo: margins.centerYAnchor),
             letsGetStartedLabel.topAnchor.constraint(equalTo: moonImageView.bottomAnchor, constant: 60.0).usingPriority(UILayoutPriority(750)),

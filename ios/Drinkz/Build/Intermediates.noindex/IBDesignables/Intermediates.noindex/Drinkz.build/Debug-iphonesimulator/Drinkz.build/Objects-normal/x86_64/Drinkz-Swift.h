@@ -769,6 +769,7 @@ SWIFT_CLASS("_TtC6Drinkz11ToolbarView")
 - (void)updateConstraints;
 - (void)launchAccountViewController;
 - (void)launchCheckoutViewController;
+- (void)launchHomePageViewController;
 @end
 
 

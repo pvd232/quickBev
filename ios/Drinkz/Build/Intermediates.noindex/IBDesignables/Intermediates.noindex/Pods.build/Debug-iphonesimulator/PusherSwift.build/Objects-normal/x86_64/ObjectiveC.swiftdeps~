@@ -1,0 +1,633 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "OCPusherHost"
+- "OCAuthMethod"
+provides-nominal:
+- "11PusherSwift12OCPusherHostC"
+- "11PusherSwift12OCAuthMethodC"
+provides-member:
+- ["11PusherSwift0A0C", ""]
+- ["11PusherSwift0A10ConnectionC", ""]
+- ["11PusherSwift0A13ClientOptionsC", ""]
+- ["11PusherSwift0A4HostO", ""]
+- ["11PusherSwift12OCPusherHostC", ""]
+- ["11PusherSwift10AuthMethodO", ""]
+- ["11PusherSwift12OCAuthMethodC", ""]
+- ["11PusherSwift0A5ErrorC", ""]
+- ["11PusherSwift0A0C", "subscribe"]
+- ["11PusherSwift0A0C", "subscribe"]
+- ["11PusherSwift0A0C", "subscribeToPresenceChannel"]
+- ["11PusherSwift0A0C", "subscribeToPresenceChannel"]
+- ["11PusherSwift0A0C", "init"]
+- ["11PusherSwift0A0C", "init"]
+- ["11PusherSwift0A10ConnectionC", "OCReconnectAttemptsMax"]
+- ["11PusherSwift0A10ConnectionC", "OCMaxReconnectGapInSeconds"]
+- ["11PusherSwift0A13ClientOptionsC", "init"]
+- ["11PusherSwift0A13ClientOptionsC", "init"]
+- ["11PusherSwift0A13ClientOptionsC", "init"]
+- ["11PusherSwift0A13ClientOptionsC", "setAuthMethod"]
+- ["11PusherSwift0A4HostO", "toObjc"]
+- ["11PusherSwift0A4HostO", "fromObjc"]
+- ["11PusherSwift10AuthMethodO", "toObjc"]
+- ["11PusherSwift10AuthMethodO", "fromObjc"]
+- ["11PusherSwift0A5ErrorC", "codeOC"]
+provides-dynamic-lookup:
+- "OCMaxReconnectGapInSeconds"
+- "OCReconnectAttemptsMax"
+- "authEndpoint"
+- "authRequestBuilder"
+- "authorizer"
+- "cluster"
+- "codeOC"
+- "host"
+- "secret"
+- "setAuthMethod"
+- "subscribe"
+- "subscribeToPresenceChannel"
+- "type"
+depends-top-level:
+- "AssignmentPrecedence"
+- "AuthMethod"
+- "AuthRequestBuilderProtocol"
+- "Authorizer"
+- "Bool"
+- "BooleanLiteralType"
+- "CastingPrecedence"
+- "Constants"
+- !private "FloatLiteralType"
+- "Int"
+- !private "IntegerLiteralType"
+- "NSNumber"
+- "NSObject"
+- "OCAuthMethod"
+- "OCPusherHost"
+- "Pusher"
+- "PusherChannel"
+- "PusherClientOptions"
+- "PusherConnection"
+- "PusherError"
+- "PusherHost"
+- "PusherPresenceChannel"
+- "PusherPresenceChannelMember"
+- "String"
+- !private "StringLiteralType"
+- "TimeInterval"
+- !private "UnicodeScalarType"
+- "Void"
+- !private "code"
+- !private "maxReconnectGapInSeconds"
+- !private "reconnectAttemptsMax"
+- !private "~="
+depends-member:
+- !private ["11PusherSwift9ConstantsO3APIO", "defaultHost"]
+- !private ["11PusherSwift9ConstantsO3APIO", "pusherDomain"]
+- ["11PusherSwift10AuthMethodO", "AuthMethod"]
+- ["11PusherSwift10AuthMethodO", "OCAuthMethod"]
+- ["11PusherSwift10AuthMethodO", ""]
+- ["11PusherSwift10AuthMethodO", "authRequestBuilder"]
+- ["11PusherSwift10AuthMethodO", "authorizer"]
+- ["11PusherSwift10AuthMethodO", "endpoint"]
+- ["11PusherSwift10AuthMethodO", "fromObjc"]
+- ["11PusherSwift10AuthMethodO", "inline"]
+- ["11PusherSwift10AuthMethodO", "noMethod"]
+- ["11PusherSwift10AuthMethodO", "toObjc"]
+- !private ["s7CVarArgP", "AuthMethod"]
+- !private ["s7CVarArgP", "Constants"]
+- !private ["s7CVarArgP", "NSNumber"]
+- !private ["s7CVarArgP", "PusherHost"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "authEndpoint"]
+- !private ["s7CVarArgP", "authMethod"]
+- !private ["s7CVarArgP", "authRequestBuilder"]
+- !private ["s7CVarArgP", "authorizer"]
+- !private ["s7CVarArgP", "cluster"]
+- !private ["s7CVarArgP", "code"]
+- !private ["s7CVarArgP", "doubleValue"]
+- !private ["s7CVarArgP", "host"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "intValue"]
+- !private ["s7CVarArgP", "maxReconnectGapInSeconds"]
+- !private ["s7CVarArgP", "reconnectAttemptsMax"]
+- !private ["s7CVarArgP", "secret"]
+- !private ["s7CVarArgP", "subscribe"]
+- !private ["s7CVarArgP", "subscribeToPresenceChannel"]
+- !private ["s7CVarArgP", "type"]
+- !private ["11PusherSwift9ConstantsO", "API"]
+- !private ["s28CustomDebugStringConvertibleP", "AuthMethod"]
+- !private ["s28CustomDebugStringConvertibleP", "Constants"]
+- !private ["s28CustomDebugStringConvertibleP", "NSNumber"]
+- !private ["s28CustomDebugStringConvertibleP", "PusherHost"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "authEndpoint"]
+- !private ["s28CustomDebugStringConvertibleP", "authMethod"]
+- !private ["s28CustomDebugStringConvertibleP", "authRequestBuilder"]
+- !private ["s28CustomDebugStringConvertibleP", "authorizer"]
+- !private ["s28CustomDebugStringConvertibleP", "cluster"]
+- !private ["s28CustomDebugStringConvertibleP", "code"]
+- !private ["s28CustomDebugStringConvertibleP", "doubleValue"]
+- !private ["s28CustomDebugStringConvertibleP", "host"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "intValue"]
+- !private ["s28CustomDebugStringConvertibleP", "maxReconnectGapInSeconds"]
+- !private ["s28CustomDebugStringConvertibleP", "reconnectAttemptsMax"]
+- !private ["s28CustomDebugStringConvertibleP", "secret"]
+- !private ["s28CustomDebugStringConvertibleP", "subscribe"]
+- !private ["s28CustomDebugStringConvertibleP", "subscribeToPresenceChannel"]
+- !private ["s28CustomDebugStringConvertibleP", "type"]
+- !private ["s23CustomStringConvertibleP", "AuthMethod"]
+- !private ["s23CustomStringConvertibleP", "Constants"]
+- !private ["s23CustomStringConvertibleP", "NSNumber"]
+- !private ["s23CustomStringConvertibleP", "PusherHost"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["s23CustomStringConvertibleP", "authEndpoint"]
+- !private ["s23CustomStringConvertibleP", "authMethod"]
+- !private ["s23CustomStringConvertibleP", "authRequestBuilder"]
+- !private ["s23CustomStringConvertibleP", "authorizer"]
+- !private ["s23CustomStringConvertibleP", "cluster"]
+- !private ["s23CustomStringConvertibleP", "code"]
+- !private ["s23CustomStringConvertibleP", "doubleValue"]
+- !private ["s23CustomStringConvertibleP", "host"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "intValue"]
+- !private ["s23CustomStringConvertibleP", "maxReconnectGapInSeconds"]
+- !private ["s23CustomStringConvertibleP", "reconnectAttemptsMax"]
+- !private ["s23CustomStringConvertibleP", "secret"]
+- !private ["s23CustomStringConvertibleP", "subscribe"]
+- !private ["s23CustomStringConvertibleP", "subscribeToPresenceChannel"]
+- !private ["s23CustomStringConvertibleP", "type"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- !private ["SQ", "AuthMethod"]
+- !private ["SQ", "Constants"]
+- !private ["SQ", "NSNumber"]
+- !private ["SQ", "PusherHost"]
+- ["SQ", ""]
+- !private ["SQ", "authEndpoint"]
+- !private ["SQ", "authMethod"]
+- !private ["SQ", "authRequestBuilder"]
+- !private ["SQ", "authorizer"]
+- !private ["SQ", "cluster"]
+- !private ["SQ", "code"]
+- !private ["SQ", "doubleValue"]
+- !private ["SQ", "host"]
+- !private ["SQ", "init"]
+- !private ["SQ", "intValue"]
+- !private ["SQ", "maxReconnectGapInSeconds"]
+- !private ["SQ", "reconnectAttemptsMax"]
+- !private ["SQ", "secret"]
+- !private ["SQ", "subscribe"]
+- !private ["SQ", "subscribeToPresenceChannel"]
+- !private ["SQ", "type"]
+- !private ["s27ExpressibleByBooleanLiteralP", "doubleValue"]
+- !private ["s27ExpressibleByBooleanLiteralP", "init"]
+- !private ["s27ExpressibleByBooleanLiteralP", "intValue"]
+- !private ["s25ExpressibleByFloatLiteralP", "doubleValue"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s25ExpressibleByFloatLiteralP", "intValue"]
+- !private ["s27ExpressibleByIntegerLiteralP", "doubleValue"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "intValue"]
+- !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
+- !private ["SH", "AuthMethod"]
+- !private ["SH", "Constants"]
+- !private ["SH", "NSNumber"]
+- !private ["SH", "PusherHost"]
+- ["SH", ""]
+- !private ["SH", "authEndpoint"]
+- !private ["SH", "authMethod"]
+- !private ["SH", "authRequestBuilder"]
+- !private ["SH", "authorizer"]
+- !private ["SH", "cluster"]
+- !private ["SH", "code"]
+- !private ["SH", "doubleValue"]
+- !private ["SH", "host"]
+- !private ["SH", "init"]
+- !private ["SH", "intValue"]
+- !private ["SH", "maxReconnectGapInSeconds"]
+- !private ["SH", "reconnectAttemptsMax"]
+- !private ["SH", "secret"]
+- !private ["SH", "subscribe"]
+- !private ["SH", "subscribeToPresenceChannel"]
+- !private ["SH", "type"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "doubleValue"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "intValue"]
+- !private ["So8NSCodingP", "numberWithBool"]
+- !private ["So8NSCodingP", "numberWithChar"]
+- !private ["So8NSCodingP", "numberWithDouble"]
+- !private ["So8NSCodingP", "numberWithFloat"]
+- !private ["So8NSCodingP", "numberWithInt"]
+- !private ["So8NSCodingP", "numberWithInteger"]
+- !private ["So8NSCodingP", "numberWithLong"]
+- !private ["So8NSCodingP", "numberWithLongLong"]
+- !private ["So8NSCodingP", "numberWithShort"]
+- !private ["So8NSCodingP", "numberWithUnsignedChar"]
+- !private ["So8NSCodingP", "numberWithUnsignedInt"]
+- !private ["So8NSCodingP", "numberWithUnsignedInteger"]
+- !private ["So8NSCodingP", "numberWithUnsignedLong"]
+- !private ["So8NSCodingP", "numberWithUnsignedLongLong"]
+- !private ["So8NSCodingP", "numberWithUnsignedShort"]
+- !private ["So9NSCopyingP", ""]
+- !private ["So9NSCopyingP", "doubleValue"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "intValue"]
+- !private ["So9NSCopyingP", "numberWithBool"]
+- !private ["So9NSCopyingP", "numberWithChar"]
+- !private ["So9NSCopyingP", "numberWithDouble"]
+- !private ["So9NSCopyingP", "numberWithFloat"]
+- !private ["So9NSCopyingP", "numberWithInt"]
+- !private ["So9NSCopyingP", "numberWithInteger"]
+- !private ["So9NSCopyingP", "numberWithLong"]
+- !private ["So9NSCopyingP", "numberWithLongLong"]
+- !private ["So9NSCopyingP", "numberWithShort"]
+- !private ["So9NSCopyingP", "numberWithUnsignedChar"]
+- !private ["So9NSCopyingP", "numberWithUnsignedInt"]
+- !private ["So9NSCopyingP", "numberWithUnsignedInteger"]
+- !private ["So9NSCopyingP", "numberWithUnsignedLong"]
+- !private ["So9NSCopyingP", "numberWithUnsignedLongLong"]
+- !private ["So9NSCopyingP", "numberWithUnsignedShort"]
+- !private ["So8NSNumberC", "doubleValue"]
+- !private ["So8NSNumberC", "init"]
+- !private ["So8NSNumberC", "intValue"]
+- !private ["So8NSObjectC", "AuthMethod"]
+- ["So8NSObjectC", "AuthRequestBuilderProtocol"]
+- ["So8NSObjectC", "Authorizer"]
+- ["So8NSObjectC", "Bool"]
+- !private ["So8NSObjectC", "Constants"]
+- ["So8NSObjectC", "Int"]
+- ["So8NSObjectC", "NSNumber"]
+- ["So8NSObjectC", "OCAuthMethod"]
+- ["So8NSObjectC", "OCMaxReconnectGapInSeconds"]
+- ["So8NSObjectC", "OCPusherHost"]
+- ["So8NSObjectC", "OCReconnectAttemptsMax"]
+- ["So8NSObjectC", "PusherChannel"]
+- ["So8NSObjectC", "PusherClientOptions"]
+- !private ["So8NSObjectC", "PusherHost"]
+- ["So8NSObjectC", "PusherPresenceChannel"]
+- ["So8NSObjectC", "PusherPresenceChannelMember"]
+- ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "TimeInterval"]
+- ["So8NSObjectC", "Void"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "authEndpoint"]
+- !private ["So8NSObjectC", "authMethod"]
+- ["So8NSObjectC", "authRequestBuilder"]
+- ["So8NSObjectC", "authorizer"]
+- ["So8NSObjectC", "cluster"]
+- !private ["So8NSObjectC", "code"]
+- ["So8NSObjectC", "codeOC"]
+- !private ["So8NSObjectC", "doubleValue"]
+- ["So8NSObjectC", "host"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "intValue"]
+- !private ["So8NSObjectC", "maxReconnectGapInSeconds"]
+- !private ["So8NSObjectC", "numberWithBool"]
+- !private ["So8NSObjectC", "numberWithChar"]
+- !private ["So8NSObjectC", "numberWithDouble"]
+- !private ["So8NSObjectC", "numberWithFloat"]
+- !private ["So8NSObjectC", "numberWithInt"]
+- !private ["So8NSObjectC", "numberWithInteger"]
+- !private ["So8NSObjectC", "numberWithLong"]
+- !private ["So8NSObjectC", "numberWithLongLong"]
+- !private ["So8NSObjectC", "numberWithShort"]
+- !private ["So8NSObjectC", "numberWithUnsignedChar"]
+- !private ["So8NSObjectC", "numberWithUnsignedInt"]
+- !private ["So8NSObjectC", "numberWithUnsignedInteger"]
+- !private ["So8NSObjectC", "numberWithUnsignedLong"]
+- !private ["So8NSObjectC", "numberWithUnsignedLongLong"]
+- !private ["So8NSObjectC", "numberWithUnsignedShort"]
+- !private ["So8NSObjectC", "reconnectAttemptsMax"]
+- ["So8NSObjectC", "secret"]
+- ["So8NSObjectC", "setAuthMethod"]
+- ["So8NSObjectC", "subscribe"]
+- ["So8NSObjectC", "subscribeToPresenceChannel"]
+- ["So8NSObjectC", "type"]
+- !private ["So8NSObjectC", "value"]
+- !private ["So8NSObjectC", "valueWithBytes"]
+- !private ["So8NSObjectC", "valueWithCATransform3D"]
+- !private ["So8NSObjectC", "valueWithCGAffineTransform"]
+- !private ["So8NSObjectC", "valueWithCGPoint"]
+- !private ["So8NSObjectC", "valueWithCGRect"]
+- !private ["So8NSObjectC", "valueWithCGSize"]
+- !private ["So8NSObjectC", "valueWithCGVector"]
+- !private ["So8NSObjectC", "valueWithDirectionalEdgeInsets"]
+- !private ["So8NSObjectC", "valueWithNonretainedObject"]
+- !private ["So8NSObjectC", "valueWithPointer"]
+- !private ["So8NSObjectC", "valueWithRange"]
+- !private ["So8NSObjectC", "valueWithUIEdgeInsets"]
+- !private ["So8NSObjectC", "valueWithUIOffset"]
+- !private ["So8NSObjectP", "AuthMethod"]
+- ["So8NSObjectP", "AuthRequestBuilderProtocol"]
+- ["So8NSObjectP", "Authorizer"]
+- ["So8NSObjectP", "Bool"]
+- !private ["So8NSObjectP", "Constants"]
+- ["So8NSObjectP", "Int"]
+- ["So8NSObjectP", "NSNumber"]
+- ["So8NSObjectP", "OCAuthMethod"]
+- ["So8NSObjectP", "OCMaxReconnectGapInSeconds"]
+- ["So8NSObjectP", "OCPusherHost"]
+- ["So8NSObjectP", "OCReconnectAttemptsMax"]
+- ["So8NSObjectP", "PusherChannel"]
+- ["So8NSObjectP", "PusherClientOptions"]
+- !private ["So8NSObjectP", "PusherHost"]
+- ["So8NSObjectP", "PusherPresenceChannel"]
+- ["So8NSObjectP", "PusherPresenceChannelMember"]
+- ["So8NSObjectP", "String"]
+- ["So8NSObjectP", "Void"]
+- ["So8NSObjectP", ""]
+- ["So8NSObjectP", "authEndpoint"]
+- !private ["So8NSObjectP", "authMethod"]
+- ["So8NSObjectP", "authRequestBuilder"]
+- ["So8NSObjectP", "authorizer"]
+- ["So8NSObjectP", "cluster"]
+- !private ["So8NSObjectP", "code"]
+- ["So8NSObjectP", "codeOC"]
+- !private ["So8NSObjectP", "doubleValue"]
+- ["So8NSObjectP", "host"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "intValue"]
+- !private ["So8NSObjectP", "maxReconnectGapInSeconds"]
+- !private ["So8NSObjectP", "numberWithBool"]
+- !private ["So8NSObjectP", "numberWithChar"]
+- !private ["So8NSObjectP", "numberWithDouble"]
+- !private ["So8NSObjectP", "numberWithFloat"]
+- !private ["So8NSObjectP", "numberWithInt"]
+- !private ["So8NSObjectP", "numberWithInteger"]
+- !private ["So8NSObjectP", "numberWithLong"]
+- !private ["So8NSObjectP", "numberWithLongLong"]
+- !private ["So8NSObjectP", "numberWithShort"]
+- !private ["So8NSObjectP", "numberWithUnsignedChar"]
+- !private ["So8NSObjectP", "numberWithUnsignedInt"]
+- !private ["So8NSObjectP", "numberWithUnsignedInteger"]
+- !private ["So8NSObjectP", "numberWithUnsignedLong"]
+- !private ["So8NSObjectP", "numberWithUnsignedLongLong"]
+- !private ["So8NSObjectP", "numberWithUnsignedShort"]
+- !private ["So8NSObjectP", "reconnectAttemptsMax"]
+- ["So8NSObjectP", "secret"]
+- ["So8NSObjectP", "setAuthMethod"]
+- ["So8NSObjectP", "subscribe"]
+- ["So8NSObjectP", "subscribeToPresenceChannel"]
+- ["So8NSObjectP", "type"]
+- !private ["So8NSObjectP", "value"]
+- !private ["So8NSObjectP", "valueWithBytes"]
+- !private ["So8NSObjectP", "valueWithCATransform3D"]
+- !private ["So8NSObjectP", "valueWithCGAffineTransform"]
+- !private ["So8NSObjectP", "valueWithCGPoint"]
+- !private ["So8NSObjectP", "valueWithCGRect"]
+- !private ["So8NSObjectP", "valueWithCGSize"]
+- !private ["So8NSObjectP", "valueWithCGVector"]
+- !private ["So8NSObjectP", "valueWithDirectionalEdgeInsets"]
+- !private ["So8NSObjectP", "valueWithNonretainedObject"]
+- !private ["So8NSObjectP", "valueWithPointer"]
+- !private ["So8NSObjectP", "valueWithRange"]
+- !private ["So8NSObjectP", "valueWithUIEdgeInsets"]
+- !private ["So8NSObjectP", "valueWithUIOffset"]
+- !private ["So14NSSecureCodingP", ""]
+- !private ["So14NSSecureCodingP", "doubleValue"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "intValue"]
+- !private ["So14NSSecureCodingP", "numberWithBool"]
+- !private ["So14NSSecureCodingP", "numberWithChar"]
+- !private ["So14NSSecureCodingP", "numberWithDouble"]
+- !private ["So14NSSecureCodingP", "numberWithFloat"]
+- !private ["So14NSSecureCodingP", "numberWithInt"]
+- !private ["So14NSSecureCodingP", "numberWithInteger"]
+- !private ["So14NSSecureCodingP", "numberWithLong"]
+- !private ["So14NSSecureCodingP", "numberWithLongLong"]
+- !private ["So14NSSecureCodingP", "numberWithShort"]
+- !private ["So14NSSecureCodingP", "numberWithUnsignedChar"]
+- !private ["So14NSSecureCodingP", "numberWithUnsignedInt"]
+- !private ["So14NSSecureCodingP", "numberWithUnsignedInteger"]
+- !private ["So14NSSecureCodingP", "numberWithUnsignedLong"]
+- !private ["So14NSSecureCodingP", "numberWithUnsignedLongLong"]
+- !private ["So14NSSecureCodingP", "numberWithUnsignedShort"]
+- ["So7NSValueC", ""]
+- !private ["So7NSValueC", "doubleValue"]
+- !private ["So7NSValueC", "init"]
+- !private ["So7NSValueC", "intValue"]
+- !private ["So7NSValueC", "numberWithBool"]
+- !private ["So7NSValueC", "numberWithChar"]
+- !private ["So7NSValueC", "numberWithDouble"]
+- !private ["So7NSValueC", "numberWithFloat"]
+- !private ["So7NSValueC", "numberWithInt"]
+- !private ["So7NSValueC", "numberWithInteger"]
+- !private ["So7NSValueC", "numberWithLong"]
+- !private ["So7NSValueC", "numberWithLongLong"]
+- !private ["So7NSValueC", "numberWithShort"]
+- !private ["So7NSValueC", "numberWithUnsignedChar"]
+- !private ["So7NSValueC", "numberWithUnsignedInt"]
+- !private ["So7NSValueC", "numberWithUnsignedInteger"]
+- !private ["So7NSValueC", "numberWithUnsignedLong"]
+- !private ["So7NSValueC", "numberWithUnsignedLongLong"]
+- !private ["So7NSValueC", "numberWithUnsignedShort"]
+- ["11PusherSwift12OCAuthMethodC", "AuthRequestBuilderProtocol"]
+- ["11PusherSwift12OCAuthMethodC", "Authorizer"]
+- ["11PusherSwift12OCAuthMethodC", "Int"]
+- ["11PusherSwift12OCAuthMethodC", "String"]
+- ["11PusherSwift12OCAuthMethodC", ""]
+- ["11PusherSwift12OCAuthMethodC", "authEndpoint"]
+- ["11PusherSwift12OCAuthMethodC", "authRequestBuilder"]
+- ["11PusherSwift12OCAuthMethodC", "authorizer"]
+- ["11PusherSwift12OCAuthMethodC", "deinit"]
+- ["11PusherSwift12OCAuthMethodC", "init"]
+- ["11PusherSwift12OCAuthMethodC", "secret"]
+- ["11PusherSwift12OCAuthMethodC", "type"]
+- ["11PusherSwift12OCPusherHostC", "Int"]
+- ["11PusherSwift12OCPusherHostC", "String"]
+- ["11PusherSwift12OCPusherHostC", ""]
+- ["11PusherSwift12OCPusherHostC", "cluster"]
+- ["11PusherSwift12OCPusherHostC", "deinit"]
+- ["11PusherSwift12OCPusherHostC", "host"]
+- ["11PusherSwift12OCPusherHostC", "init"]
+- ["11PusherSwift12OCPusherHostC", "type"]
+- ["11PusherSwift0A0C", "PusherChannel"]
+- ["11PusherSwift0A0C", "PusherClientOptions"]
+- ["11PusherSwift0A0C", "PusherPresenceChannel"]
+- ["11PusherSwift0A0C", "PusherPresenceChannelMember"]
+- ["11PusherSwift0A0C", "String"]
+- ["11PusherSwift0A0C", "Void"]
+- ["11PusherSwift0A0C", ""]
+- ["11PusherSwift0A0C", "init"]
+- ["11PusherSwift0A0C", "subscribe"]
+- ["11PusherSwift0A0C", "subscribeToPresenceChannel"]
+- !private ["11PusherSwift0A13ClientOptionsC", "AuthMethod"]
+- ["11PusherSwift0A13ClientOptionsC", "Bool"]
+- !private ["11PusherSwift0A13ClientOptionsC", "Constants"]
+- !private ["11PusherSwift0A13ClientOptionsC", "Int"]
+- ["11PusherSwift0A13ClientOptionsC", "NSNumber"]
+- ["11PusherSwift0A13ClientOptionsC", "OCAuthMethod"]
+- ["11PusherSwift0A13ClientOptionsC", "OCPusherHost"]
+- !private ["11PusherSwift0A13ClientOptionsC", "PusherHost"]
+- !private ["11PusherSwift0A13ClientOptionsC", "TimeInterval"]
+- ["11PusherSwift0A13ClientOptionsC", ""]
+- !private ["11PusherSwift0A13ClientOptionsC", "authMethod"]
+- ["11PusherSwift0A13ClientOptionsC", "init"]
+- ["11PusherSwift0A13ClientOptionsC", "setAuthMethod"]
+- ["11PusherSwift0A10ConnectionC", "NSNumber"]
+- ["11PusherSwift0A10ConnectionC", "OCMaxReconnectGapInSeconds"]
+- ["11PusherSwift0A10ConnectionC", "OCReconnectAttemptsMax"]
+- ["11PusherSwift0A10ConnectionC", ""]
+- !private ["11PusherSwift0A10ConnectionC", "maxReconnectGapInSeconds"]
+- !private ["11PusherSwift0A10ConnectionC", "reconnectAttemptsMax"]
+- ["11PusherSwift0A5ErrorC", "NSNumber"]
+- ["11PusherSwift0A5ErrorC", ""]
+- !private ["11PusherSwift0A5ErrorC", "code"]
+- ["11PusherSwift0A5ErrorC", "codeOC"]
+- !private ["11PusherSwift0A18EventQueueDelegateP", "maxReconnectGapInSeconds"]
+- !private ["11PusherSwift0A18EventQueueDelegateP", "reconnectAttemptsMax"]
+- !private ["11PusherSwift0A4HostO", "Constants"]
+- ["11PusherSwift0A4HostO", "OCPusherHost"]
+- ["11PusherSwift0A4HostO", "PusherHost"]
+- ["11PusherSwift0A4HostO", ""]
+- ["11PusherSwift0A4HostO", "cluster"]
+- ["11PusherSwift0A4HostO", "fromObjc"]
+- ["11PusherSwift0A4HostO", "host"]
+- ["11PusherSwift0A4HostO", "toObjc"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s27StringInterpolationProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- !private ["11NWWebSocket03WebB18ConnectionDelegateP", "maxReconnectGapInSeconds"]
+- !private ["11NWWebSocket03WebB18ConnectionDelegateP", "reconnectAttemptsMax"]
+- ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "doubleValue"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "intValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "AuthMethod"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Constants"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSNumber"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "PusherHost"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "authEndpoint"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "authMethod"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "authRequestBuilder"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "authorizer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cluster"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "code"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "doubleValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "host"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "intValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "maxReconnectGapInSeconds"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "reconnectAttemptsMax"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "secret"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "subscribe"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "subscribeToPresenceChannel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "type"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "AuthMethod"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Constants"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSNumber"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PusherHost"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "authEndpoint"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "authMethod"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "authRequestBuilder"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "authorizer"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cluster"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "code"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "doubleValue"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "host"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "intValue"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "maxReconnectGapInSeconds"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "reconnectAttemptsMax"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "secret"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "subscribe"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "subscribeToPresenceChannel"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "type"]
+- !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
+- !private ["s21_ObjectiveCBridgeableP", "_bridgeToObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_conditionallyBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_forceBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_unconditionallyBridgeFromObjectiveC"]
+depends-nominal:
+- !private "11PusherSwift9ConstantsO3APIO"
+- "11PusherSwift10AuthMethodO"
+- "s7CVarArgP"
+- !private "11PusherSwift9ConstantsO"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- !private "s26DefaultStringInterpolationV"
+- "SQ"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- "SH"
+- "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So8NSNumberC"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- "So7NSValueC"
+- "11PusherSwift12OCAuthMethodC"
+- "11PusherSwift12OCPusherHostC"
+- "11PusherSwift0A0C"
+- "11PusherSwift0A13ClientOptionsC"
+- "11PusherSwift0A10ConnectionC"
+- "11PusherSwift0A5ErrorC"
+- !private "11PusherSwift0A18EventQueueDelegateP"
+- "11PusherSwift0A4HostO"
+- !private "s27StringInterpolationProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "11NWWebSocket03WebB18ConnectionDelegateP"
+- "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Modules/TweetNacl.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Modules/NWWebSocket.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Target Support Files/TweetNacl/TweetNacl-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Target Support Files/NWWebSocket/NWWebSocket-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Target Support Files/PusherSwift/PusherSwift-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/TweetNacl/Sources/TweetNacl/TweetNacl.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/TweetNacl/Sources/module.map"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Intermediates.noindex/Pods.build/Debug-iphonesimulator/PusherSwift.build/unextended-module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Intermediates.noindex/Pods.build/Debug-iphonesimulator/TweetNacl.build/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Intermediates.noindex/Pods.build/Debug-iphonesimulator/NWWebSocket.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "ee3fa1744512a935617b326aa00d2909"

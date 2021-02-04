@@ -92,7 +92,7 @@ depends-top-level:
 - !private "present"
 - !private "print"
 depends-member:
-- !private ["s18AdditiveArithmeticP", ""]
+- ["s18AdditiveArithmeticP", ""]
 - !private ["s18AdditiveArithmeticP", "description"]
 - !private ["So22UILayoutConstraintAxisV", "horizontal"]
 - !private ["So22UILayoutConstraintAxisV", "vertical"]
@@ -246,7 +246,7 @@ depends-member:
 - !private ["Sl", ""]
 - !private ["Sl", "init"]
 - !private ["Sl", "lowercased"]
-- !private ["SL", ""]
+- ["SL", ""]
 - !private ["SL", "description"]
 - !private ["SL", "init"]
 - !private ["SL", "lowercased"]
@@ -692,11 +692,11 @@ depends-member:
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "lowercased"]
 - !private ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
-- !private ["s25ExpressibleByFloatLiteralP", ""]
+- ["s25ExpressibleByFloatLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "description"]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
-- !private ["s27ExpressibleByIntegerLiteralP", ""]
+- ["s27ExpressibleByIntegerLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", "description"]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "addSubview"]
@@ -716,7 +716,7 @@ depends-member:
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "lowercased"]
 - !private ["s17FixedWidthIntegerP", "description"]
-- !private ["SF", ""]
+- ["SF", ""]
 - !private ["SF", "description"]
 - !private ["SH", "CheckoutCart"]
 - !private ["SH", "CoreDataManager"]
@@ -1136,6 +1136,7 @@ depends-member:
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "isActive"]
 - !private ["So8NSObjectC", "layoutFrame"]
+- !private ["So8NSObjectC", "lowercaseStringWithLocale"]
 - !private ["So8NSObjectC", "lowercased"]
 - ["So8NSObjectC", "minusButton"]
 - !private ["So8NSObjectC", "name"]
@@ -1179,6 +1180,7 @@ depends-member:
 - ["So8NSObjectC", "viewWillAppear"]
 - ["So8NSObjectC", "viewWillDisappear"]
 - !private ["So8NSObjectC", "widthAnchor"]
+- ["So8NSObjectP", "Bool"]
 - !private ["So8NSObjectP", "CheckoutCart"]
 - !private ["So8NSObjectP", "CoreDataManager"]
 - !private ["So8NSObjectP", "Key"]
@@ -1249,6 +1251,7 @@ depends-member:
 - ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "isActive"]
 - !private ["So8NSObjectP", "layoutFrame"]
+- !private ["So8NSObjectP", "lowercaseStringWithLocale"]
 - !private ["So8NSObjectP", "lowercased"]
 - ["So8NSObjectP", "minusButton"]
 - !private ["So8NSObjectP", "name"]
@@ -1285,7 +1288,7 @@ depends-member:
 - !private ["So8NSObjectP", "user"]
 - !private ["So8NSObjectP", "userBusiness"]
 - !private ["So8NSObjectP", "userId"]
-- ["So8NSObjectP", "usingPriority"]
+- !private ["So8NSObjectP", "usingPriority"]
 - !private ["So8NSObjectP", "view"]
 - !private ["So8NSObjectP", "viewContext"]
 - ["So8NSObjectP", "viewDidLoad"]
@@ -1302,7 +1305,7 @@ depends-member:
 - !private ["So14NSSecureCodingP", "titleTextAttributes"]
 - !private ["So8NSStringC", "lowercased"]
 - !private ["So15NSTextAlignmentV", "center"]
-- !private ["Sj", ""]
+- ["Sj", ""]
 - !private ["Sj", "description"]
 - !private ["7Combine16ObservableObjectP", "addToDrinks"]
 - !private ["7Combine16ObservableObjectP", "businessId"]
@@ -1339,6 +1342,7 @@ depends-member:
 - !private ["SY", "vertical"]
 - !private ["6Drinkz36RegistrationSplashPageViewControllerC", ""]
 - !private ["6Drinkz36RegistrationSplashPageViewControllerC", "init"]
+- ["6Drinkz11RoundButtonC", ""]
 - !private ["6Drinkz11RoundButtonC", "addTarget"]
 - !private ["6Drinkz11RoundButtonC", "contentVerticalAlignment"]
 - !private ["6Drinkz11RoundButtonC", "cornerRadius"]
@@ -1357,10 +1361,10 @@ depends-member:
 - !private ["s10SetAlgebraP", "normal"]
 - !private ["s10SetAlgebraP", "touchUpInside"]
 - !private ["SZ", "description"]
-- !private ["s13SignedNumericP", ""]
+- ["s13SignedNumericP", ""]
 - !private ["s13SignedNumericP", "description"]
 - !private ["So14UIControlStateV", "normal"]
-- !private ["Sx", ""]
+- ["Sx", ""]
 - !private ["Sx", "description"]
 - !private ["SS", "init"]
 - !private ["SS", "lowercased"]
@@ -1918,6 +1922,7 @@ depends-member:
 - !private ["So22UINavigationControllerC", "popViewController"]
 - !private ["So22UINavigationControllerC", "pushViewController"]
 - !private ["So16UINavigationItemC", "title"]
+- ["So30UIPasteConfigurationSupportingP", "Bool"]
 - !private ["So30UIPasteConfigurationSupportingP", "CheckoutCart"]
 - !private ["So30UIPasteConfigurationSupportingP", "CoreDataManager"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSAttributedString"]
@@ -2093,6 +2098,7 @@ depends-member:
 - ["So11UIResponderC", "viewWillAppear"]
 - ["So11UIResponderC", "viewWillDisappear"]
 - !private ["So11UIResponderC", "widthAnchor"]
+- ["So30UIResponderStandardEditActionsP", "Bool"]
 - !private ["So30UIResponderStandardEditActionsP", "CheckoutCart"]
 - !private ["So30UIResponderStandardEditActionsP", "CoreDataManager"]
 - !private ["So30UIResponderStandardEditActionsP", "NSAttributedString"]
@@ -2386,6 +2392,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "viewWillAppear"]
 - ["So18UITraitEnvironmentP", "viewWillDisappear"]
 - !private ["So18UITraitEnvironmentP", "widthAnchor"]
+- ["So23UIUserActivityRestoringP", "Bool"]
 - !private ["So23UIUserActivityRestoringP", "CheckoutCart"]
 - !private ["So23UIUserActivityRestoringP", "CoreDataManager"]
 - !private ["So23UIUserActivityRestoringP", "NSAttributedString"]
@@ -2842,7 +2849,7 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "trailingAnchor"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "widthAnchor"]
 depends-nominal:
-- !private "s18AdditiveArithmeticP"
+- "s18AdditiveArithmeticP"
 - !private "So22UILayoutConstraintAxisV"
 - !private "SK"
 - !private "SB"
@@ -2855,7 +2862,7 @@ depends-nominal:
 - "s7CVarArgP"
 - !private "6Drinkz12CheckoutCartC"
 - !private "Sl"
-- !private "SL"
+- "SL"
 - !private "So35UIControlContentHorizontalAlignmentV"
 - !private "So33UIControlContentVerticalAlignmentV"
 - !private "6Drinkz15CoreDataManagerC"
@@ -2873,14 +2880,14 @@ depends-nominal:
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s30ExpressibleByDictionaryLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
-- !private "s25ExpressibleByFloatLiteralP"
-- !private "s27ExpressibleByIntegerLiteralP"
+- "s25ExpressibleByFloatLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
 - !private "s32ExpressibleByStringInterpolationP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "s17FixedWidthIntegerP"
-- !private "SF"
+- "SF"
 - "SH"
 - !private "s12IdentifiableP"
 - !private "s5Int16V"
@@ -2907,7 +2914,7 @@ depends-nominal:
 - !private "So14NSSecureCodingP"
 - !private "So8NSStringC"
 - !private "So15NSTextAlignmentV"
-- !private "Sj"
+- "Sj"
 - !private "7Combine16ObservableObjectP"
 - !private "s9OptionSetP"
 - !private "Sq"
@@ -2919,9 +2926,9 @@ depends-nominal:
 - !private "ST"
 - !private "s10SetAlgebraP"
 - !private "SZ"
-- !private "s13SignedNumericP"
+- "s13SignedNumericP"
 - !private "So14UIControlStateV"
-- !private "Sx"
+- "Sx"
 - !private "SS"
 - !private "s27StringInterpolationProtocolP"
 - !private "Sy"

@@ -1,0 +1,511 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "STPPushProvisioningContext"
+provides-nominal:
+- "6Stripe26STPPushProvisioningContextC"
+provides-member:
+- ["6Stripe26STPPushProvisioningContextC", ""]
+provides-dynamic-lookup:
+- "addPaymentPassViewController"
+- "apiClient"
+- "ephemeralKey"
+- "keyManager"
+- "requestConfiguration"
+depends-top-level:
+- !private "=="
+- "??"
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- !private "CastingPrecedence"
+- "Data"
+- "NSError"
+- "NSObject"
+- "PKAddPaymentPassRequest"
+- "PKAddPaymentPassRequestConfiguration"
+- "PKAddPaymentPassViewController"
+- "STPAPIClient"
+- "STPCardBrand"
+- "STPEphemeralKey"
+- "STPEphemeralKeyManager"
+- "STPIssuingCardEphemeralKeyProvider"
+- "STPPushProvisioningContext"
+- "STPPushProvisioningDetailsParams"
+- "String"
+- "StringLiteralType"
+- "Void"
+- !private "apiClient"
+- !private "keyManager"
+depends-member:
+- !private ["SK", ""]
+- !private ["s7CVarArgP", "PKAddPaymentPassRequest"]
+- !private ["s7CVarArgP", "PKAddPaymentPassRequestConfiguration"]
+- !private ["s7CVarArgP", "STPAPIClient"]
+- !private ["s7CVarArgP", "STPEphemeralKeyManager"]
+- !private ["s7CVarArgP", "STPPushProvisioningDetailsParams"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "activationData"]
+- !private ["s7CVarArgP", "addPaymentPassViewController"]
+- !private ["s7CVarArgP", "apiClient"]
+- !private ["s7CVarArgP", "apiVersion"]
+- !private ["s7CVarArgP", "cardholderName"]
+- !private ["s7CVarArgP", "encryptedPassData"]
+- !private ["s7CVarArgP", "ephemeralPublicKey"]
+- !private ["s7CVarArgP", "getOrCreateKey"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "issuingCardID"]
+- !private ["s7CVarArgP", "keyManager"]
+- !private ["s7CVarArgP", "localizedDescription"]
+- !private ["s7CVarArgP", "paymentNetwork"]
+- !private ["s7CVarArgP", "primaryAccountSuffix"]
+- !private ["s7CVarArgP", "retrievePushProvisioningDetails"]
+- ["s7CVarArgP", "shared"]
+- !private ["s7CVarArgP", "stp_error"]
+- !private ["s7CVarArgP", "style"]
+- !private ["Sl", ""]
+- !private ["SL", ""]
+- !private ["s28CustomDebugStringConvertibleP", "PKAddPaymentPassRequest"]
+- !private ["s28CustomDebugStringConvertibleP", "PKAddPaymentPassRequestConfiguration"]
+- !private ["s28CustomDebugStringConvertibleP", "STPAPIClient"]
+- !private ["s28CustomDebugStringConvertibleP", "STPEphemeralKeyManager"]
+- !private ["s28CustomDebugStringConvertibleP", "STPPushProvisioningDetailsParams"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "activationData"]
+- !private ["s28CustomDebugStringConvertibleP", "addPaymentPassViewController"]
+- !private ["s28CustomDebugStringConvertibleP", "apiClient"]
+- !private ["s28CustomDebugStringConvertibleP", "apiVersion"]
+- !private ["s28CustomDebugStringConvertibleP", "cardholderName"]
+- !private ["s28CustomDebugStringConvertibleP", "encryptedPassData"]
+- !private ["s28CustomDebugStringConvertibleP", "ephemeralPublicKey"]
+- !private ["s28CustomDebugStringConvertibleP", "getOrCreateKey"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "issuingCardID"]
+- !private ["s28CustomDebugStringConvertibleP", "keyManager"]
+- !private ["s28CustomDebugStringConvertibleP", "localizedDescription"]
+- !private ["s28CustomDebugStringConvertibleP", "masterCard"]
+- !private ["s28CustomDebugStringConvertibleP", "paymentNetwork"]
+- !private ["s28CustomDebugStringConvertibleP", "primaryAccountSuffix"]
+- !private ["s28CustomDebugStringConvertibleP", "retrievePushProvisioningDetails"]
+- ["s28CustomDebugStringConvertibleP", "shared"]
+- !private ["s28CustomDebugStringConvertibleP", "stp_error"]
+- !private ["s28CustomDebugStringConvertibleP", "style"]
+- !private ["s28CustomDebugStringConvertibleP", "visa"]
+- !private ["s17CustomReflectableP", "masterCard"]
+- !private ["s17CustomReflectableP", "visa"]
+- !private ["s23CustomStringConvertibleP", "PKAddPaymentPassRequest"]
+- !private ["s23CustomStringConvertibleP", "PKAddPaymentPassRequestConfiguration"]
+- !private ["s23CustomStringConvertibleP", "STPAPIClient"]
+- !private ["s23CustomStringConvertibleP", "STPEphemeralKeyManager"]
+- !private ["s23CustomStringConvertibleP", "STPPushProvisioningDetailsParams"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "activationData"]
+- !private ["s23CustomStringConvertibleP", "addPaymentPassViewController"]
+- !private ["s23CustomStringConvertibleP", "apiClient"]
+- !private ["s23CustomStringConvertibleP", "apiVersion"]
+- !private ["s23CustomStringConvertibleP", "cardholderName"]
+- !private ["s23CustomStringConvertibleP", "encryptedPassData"]
+- !private ["s23CustomStringConvertibleP", "ephemeralPublicKey"]
+- !private ["s23CustomStringConvertibleP", "getOrCreateKey"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "issuingCardID"]
+- !private ["s23CustomStringConvertibleP", "keyManager"]
+- !private ["s23CustomStringConvertibleP", "localizedDescription"]
+- !private ["s23CustomStringConvertibleP", "paymentNetwork"]
+- !private ["s23CustomStringConvertibleP", "primaryAccountSuffix"]
+- !private ["s23CustomStringConvertibleP", "retrievePushProvisioningDetails"]
+- ["s23CustomStringConvertibleP", "shared"]
+- !private ["s23CustomStringConvertibleP", "stp_error"]
+- !private ["s23CustomStringConvertibleP", "style"]
+- !private ["Se", "masterCard"]
+- !private ["Se", "visa"]
+- !private ["SE", "masterCard"]
+- !private ["SE", "visa"]
+- !private ["SQ", "=="]
+- !private ["SQ", "ECC_V2"]
+- !private ["SQ", "PKAddPaymentPassRequest"]
+- !private ["SQ", "PKAddPaymentPassRequestConfiguration"]
+- !private ["SQ", "STPAPIClient"]
+- !private ["SQ", "STPEphemeralKeyManager"]
+- !private ["SQ", "STPPushProvisioningDetailsParams"]
+- ["SQ", ""]
+- !private ["SQ", "activationData"]
+- !private ["SQ", "addPaymentPassViewController"]
+- !private ["SQ", "apiClient"]
+- !private ["SQ", "apiVersion"]
+- !private ["SQ", "cardholderName"]
+- !private ["SQ", "encryptedPassData"]
+- !private ["SQ", "ephemeralPublicKey"]
+- !private ["SQ", "getOrCreateKey"]
+- !private ["SQ", "init"]
+- !private ["SQ", "issuingCardID"]
+- !private ["SQ", "keyManager"]
+- !private ["SQ", "localizedDescription"]
+- !private ["SQ", "masterCard"]
+- !private ["SQ", "mastercard"]
+- !private ["SQ", "payment"]
+- !private ["SQ", "paymentNetwork"]
+- !private ["SQ", "primaryAccountSuffix"]
+- !private ["SQ", "retrievePushProvisioningDetails"]
+- ["SQ", "shared"]
+- !private ["SQ", "stp_error"]
+- !private ["SQ", "style"]
+- !private ["SQ", "visa"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s23ExpressibleByNilLiteralP", "masterCard"]
+- !private ["s23ExpressibleByNilLiteralP", "visa"]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["SH", "ECC_V2"]
+- !private ["SH", "PKAddPaymentPassRequest"]
+- !private ["SH", "PKAddPaymentPassRequestConfiguration"]
+- !private ["SH", "STPAPIClient"]
+- !private ["SH", "STPEphemeralKeyManager"]
+- !private ["SH", "STPPushProvisioningDetailsParams"]
+- ["SH", ""]
+- !private ["SH", "activationData"]
+- !private ["SH", "addPaymentPassViewController"]
+- !private ["SH", "apiClient"]
+- !private ["SH", "apiVersion"]
+- !private ["SH", "cardholderName"]
+- !private ["SH", "encryptedPassData"]
+- !private ["SH", "ephemeralPublicKey"]
+- !private ["SH", "getOrCreateKey"]
+- !private ["SH", "init"]
+- !private ["SH", "issuingCardID"]
+- !private ["SH", "keyManager"]
+- !private ["SH", "localizedDescription"]
+- !private ["SH", "masterCard"]
+- !private ["SH", "mastercard"]
+- !private ["SH", "payment"]
+- !private ["SH", "paymentNetwork"]
+- !private ["SH", "primaryAccountSuffix"]
+- !private ["SH", "retrievePushProvisioningDetails"]
+- ["SH", "shared"]
+- !private ["SH", "stp_error"]
+- !private ["SH", "style"]
+- !private ["SH", "visa"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- ["So8NSObjectC", "Data"]
+- !private ["So8NSObjectC", "NSError"]
+- ["So8NSObjectC", "PKAddPaymentPassRequest"]
+- ["So8NSObjectC", "PKAddPaymentPassRequestConfiguration"]
+- ["So8NSObjectC", "PKAddPaymentPassViewController"]
+- ["So8NSObjectC", "STPAPIClient"]
+- ["So8NSObjectC", "STPCardBrand"]
+- ["So8NSObjectC", "STPEphemeralKey"]
+- ["So8NSObjectC", "STPEphemeralKeyManager"]
+- ["So8NSObjectC", "STPIssuingCardEphemeralKeyProvider"]
+- !private ["So8NSObjectC", "STPPushProvisioningDetailsParams"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "Void"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "activationData"]
+- ["So8NSObjectC", "addPaymentPassViewController"]
+- ["So8NSObjectC", "apiClient"]
+- !private ["So8NSObjectC", "apiVersion"]
+- !private ["So8NSObjectC", "cardholderName"]
+- !private ["So8NSObjectC", "encryptedPassData"]
+- ["So8NSObjectC", "ephemeralKey"]
+- !private ["So8NSObjectC", "ephemeralPublicKey"]
+- !private ["So8NSObjectC", "getOrCreateKey"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "issuingCardID"]
+- ["So8NSObjectC", "keyManager"]
+- !private ["So8NSObjectC", "localizedDescription"]
+- !private ["So8NSObjectC", "paymentNetwork"]
+- !private ["So8NSObjectC", "primaryAccountSuffix"]
+- ["So8NSObjectC", "requestConfiguration"]
+- !private ["So8NSObjectC", "retrievePushProvisioningDetails"]
+- ["So8NSObjectC", "shared"]
+- !private ["So8NSObjectC", "stp_error"]
+- !private ["So8NSObjectC", "style"]
+- ["So8NSObjectP", "Data"]
+- ["So8NSObjectP", "PKAddPaymentPassRequest"]
+- ["So8NSObjectP", "PKAddPaymentPassRequestConfiguration"]
+- ["So8NSObjectP", "PKAddPaymentPassViewController"]
+- !private ["So8NSObjectP", "STPAPIClient"]
+- !private ["So8NSObjectP", "STPEphemeralKeyManager"]
+- !private ["So8NSObjectP", "STPPushProvisioningDetailsParams"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "activationData"]
+- ["So8NSObjectP", "addPaymentPassViewController"]
+- ["So8NSObjectP", "apiClient"]
+- !private ["So8NSObjectP", "apiVersion"]
+- !private ["So8NSObjectP", "cardholderName"]
+- !private ["So8NSObjectP", "encryptedPassData"]
+- ["So8NSObjectP", "ephemeralKey"]
+- !private ["So8NSObjectP", "ephemeralPublicKey"]
+- !private ["So8NSObjectP", "getOrCreateKey"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "issuingCardID"]
+- ["So8NSObjectP", "keyManager"]
+- !private ["So8NSObjectP", "localizedDescription"]
+- !private ["So8NSObjectP", "paymentNetwork"]
+- !private ["So8NSObjectP", "primaryAccountSuffix"]
+- ["So8NSObjectP", "requestConfiguration"]
+- !private ["So8NSObjectP", "retrievePushProvisioningDetails"]
+- ["So8NSObjectP", "shared"]
+- !private ["So8NSObjectP", "stp_error"]
+- !private ["So8NSObjectP", "style"]
+- !private ["Sq", "masterCard"]
+- !private ["Sq", "visa"]
+- !private ["So23PKAddPaymentPassRequestC", "activationData"]
+- !private ["So23PKAddPaymentPassRequestC", "encryptedPassData"]
+- !private ["So23PKAddPaymentPassRequestC", "ephemeralPublicKey"]
+- !private ["So23PKAddPaymentPassRequestC", "init"]
+- !private ["So23PKAddPaymentPassRequestC", "stp_error"]
+- !private ["So36PKAddPaymentPassRequestConfigurationC", "cardholderName"]
+- !private ["So36PKAddPaymentPassRequestConfigurationC", "init"]
+- !private ["So36PKAddPaymentPassRequestConfigurationC", "localizedDescription"]
+- !private ["So36PKAddPaymentPassRequestConfigurationC", "paymentNetwork"]
+- !private ["So36PKAddPaymentPassRequestConfigurationC", "primaryAccountSuffix"]
+- !private ["So36PKAddPaymentPassRequestConfigurationC", "style"]
+- !private ["So21PKAddPaymentPassStyleV", "payment"]
+- !private ["So18PKEncryptionSchemea", "ECC_V2"]
+- !private ["So16PKPaymentNetworka", "masterCard"]
+- !private ["So16PKPaymentNetworka", "visa"]
+- !private ["SY", "ECC_V2"]
+- !private ["SY", ""]
+- !private ["SY", "masterCard"]
+- !private ["SY", "mastercard"]
+- !private ["SY", "payment"]
+- !private ["SY", "visa"]
+- !private ["6Stripe12STPAPIClientC", "apiVersion"]
+- !private ["6Stripe12STPAPIClientC", "retrievePushProvisioningDetails"]
+- ["6Stripe12STPAPIClientC", "shared"]
+- !private ["6Stripe23STPAPIResponseDecodableP", "activationData"]
+- !private ["6Stripe23STPAPIResponseDecodableP", "encryptedPassData"]
+- !private ["6Stripe23STPAPIResponseDecodableP", "ephemeralPublicKey"]
+- !private ["6Stripe23STPAPIResponseDecodableP", "issuingCardID"]
+- !private ["6Stripe12STPCardBrandO", "RawValue"]
+- !private ["6Stripe12STPCardBrandO", ""]
+- !private ["6Stripe12STPCardBrandO", "mastercard"]
+- !private ["6Stripe12STPCardBrandO", "visa"]
+- !private ["6Stripe15STPEphemeralKeyC", "issuingCardID"]
+- !private ["6Stripe22STPEphemeralKeyManagerC", "getOrCreateKey"]
+- !private ["6Stripe22STPEphemeralKeyManagerC", "init"]
+- ["6Stripe26STPPushProvisioningContextC", "Data"]
+- !private ["6Stripe26STPPushProvisioningContextC", "NSError"]
+- ["6Stripe26STPPushProvisioningContextC", "PKAddPaymentPassRequest"]
+- ["6Stripe26STPPushProvisioningContextC", "PKAddPaymentPassRequestConfiguration"]
+- ["6Stripe26STPPushProvisioningContextC", "PKAddPaymentPassViewController"]
+- ["6Stripe26STPPushProvisioningContextC", "STPAPIClient"]
+- ["6Stripe26STPPushProvisioningContextC", "STPCardBrand"]
+- ["6Stripe26STPPushProvisioningContextC", "STPEphemeralKey"]
+- ["6Stripe26STPPushProvisioningContextC", "STPEphemeralKeyManager"]
+- ["6Stripe26STPPushProvisioningContextC", "STPIssuingCardEphemeralKeyProvider"]
+- !private ["6Stripe26STPPushProvisioningContextC", "STPPushProvisioningDetailsParams"]
+- ["6Stripe26STPPushProvisioningContextC", "String"]
+- ["6Stripe26STPPushProvisioningContextC", "Void"]
+- ["6Stripe26STPPushProvisioningContextC", ""]
+- ["6Stripe26STPPushProvisioningContextC", "addPaymentPassViewController"]
+- ["6Stripe26STPPushProvisioningContextC", "apiClient"]
+- ["6Stripe26STPPushProvisioningContextC", "deinit"]
+- !private ["6Stripe26STPPushProvisioningContextC", "ephemeralKey"]
+- ["6Stripe26STPPushProvisioningContextC", "init"]
+- !private ["6Stripe26STPPushProvisioningContextC", "keyManager"]
+- ["6Stripe26STPPushProvisioningContextC", "requestConfiguration"]
+- !private ["6Stripe26STPPushProvisioningDetailsC", "activationData"]
+- !private ["6Stripe26STPPushProvisioningDetailsC", "encryptedPassData"]
+- !private ["6Stripe26STPPushProvisioningDetailsC", "ephemeralPublicKey"]
+- !private ["6Stripe32STPPushProvisioningDetailsParamsC", "init"]
+- !private ["ST", ""]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s20TextOutputStreamableP", ""]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "ECC_V2"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", ""]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "masterCard"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "visa"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "PKAddPaymentPassRequest"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "PKAddPaymentPassRequestConfiguration"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPAPIClient"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPEphemeralKeyManager"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPPushProvisioningDetailsParams"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "activationData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addPaymentPassViewController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "apiClient"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "apiVersion"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cardholderName"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "encryptedPassData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ephemeralPublicKey"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getOrCreateKey"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "issuingCardID"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "keyManager"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "localizedDescription"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "paymentNetwork"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "primaryAccountSuffix"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "retrievePushProvisioningDetails"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stp_error"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "style"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PKAddPaymentPassRequest"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PKAddPaymentPassRequestConfiguration"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPAPIClient"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPEphemeralKeyManager"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPPushProvisioningDetailsParams"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "activationData"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addPaymentPassViewController"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "apiClient"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "apiVersion"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cardholderName"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "encryptedPassData"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ephemeralPublicKey"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getOrCreateKey"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "issuingCardID"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "keyManager"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "localizedDescription"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "paymentNetwork"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "primaryAccountSuffix"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "retrievePushProvisioningDetails"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stp_error"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "style"]
+- !private ["s21_ObjectiveCBridgeableP", "ECC_V2"]
+- !private ["s21_ObjectiveCBridgeableP", "masterCard"]
+- !private ["s21_ObjectiveCBridgeableP", "visa"]
+- !private ["s20_SwiftNewtypeWrapperP", "ECC_V2"]
+- !private ["s20_SwiftNewtypeWrapperP", "masterCard"]
+- !private ["s20_SwiftNewtypeWrapperP", "visa"]
+depends-nominal:
+- !private "SK"
+- "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "SH"
+- !private "s25LosslessStringConvertibleP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "Sq"
+- !private "So23PKAddPaymentPassRequestC"
+- !private "So36PKAddPaymentPassRequestConfigurationC"
+- !private "So21PKAddPaymentPassStyleV"
+- !private "So18PKEncryptionSchemea"
+- !private "So16PKPaymentNetworka"
+- !private "SY"
+- "6Stripe12STPAPIClientC"
+- !private "6Stripe23STPAPIResponseDecodableP"
+- !private "6Stripe12STPCardBrandO"
+- !private "6Stripe15STPEphemeralKeyC"
+- !private "6Stripe22STPEphemeralKeyManagerC"
+- "6Stripe26STPPushProvisioningContextC"
+- !private "6Stripe26STPPushProvisioningDetailsC"
+- !private "6Stripe32STPPushProvisioningDetailsParamsC"
+- !private "ST"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s20_SwiftNewtypeWrapperP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Vision.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/AVFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Target Support Files/Stripe/Stripe-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Stripe.build/unextended-module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "b6c581a0ab3fbf5182f78108c80d64ba"

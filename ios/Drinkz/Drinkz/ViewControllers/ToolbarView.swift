@@ -15,7 +15,6 @@ class ToolbarView: UIView {
     @UsesAutoLayout var eventsButton = UIButton()
     @UsesAutoLayout var homeButton = UIButton()
     
-    
     var shouldSetupConstraints = true
     let screenSize = UIScreen.main.bounds
     
@@ -41,9 +40,6 @@ class ToolbarView: UIView {
         bottomButtonsStackView.addArrangedSubview(eventsButton)
         bottomButtonsStackView.addArrangedSubview(accountButton)
         bottomButtonsStackView.addArrangedSubview(orderButton)
-
-
-        
         
         accountButton.setTitle("Account", for: .normal)
         accountButton.titleLabel?.font = UIFont.themeButtonFont
@@ -56,7 +52,6 @@ class ToolbarView: UIView {
         
         orderButton.setTitle("Order", for: .normal)
         orderButton.titleLabel?.font = UIFont.themeButtonFont
-        
         
         NSLayoutConstraint.activate([
             bottomButtonsStackView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
@@ -71,11 +66,9 @@ class ToolbarView: UIView {
         
         if CheckoutCart.shared.user == nil {
             bottomButtonsStackView.isHidden = true
-            
         }
         else {
             bottomButtonsStackView.isHidden = false
-            
         }
     }
     override func updateConstraints() {
@@ -96,5 +89,4 @@ class ToolbarView: UIView {
     @objc func launchHomePageViewController () {
         rootViewController.switchToHomePageViewController()
     }
-    
 }

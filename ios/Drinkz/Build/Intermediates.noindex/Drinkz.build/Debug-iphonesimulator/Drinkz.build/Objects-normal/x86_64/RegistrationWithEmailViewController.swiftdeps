@@ -60,8 +60,7 @@ depends-top-level:
 - !private "submitRequest"
 depends-member:
 - !private ["s18AdditiveArithmeticP", ""]
-- ["SK", ""]
-- !private ["So15CALayerDelegateP", ""]
+- !private ["SK", ""]
 - !private ["So15CALayerDelegateP", "standardAppearance"]
 - !private ["So15CALayerDelegateP", "text"]
 - !private ["s7CVarArgP", "AF"]
@@ -115,8 +114,8 @@ depends-member:
 - !private ["6Drinkz12CheckoutCartC", "stripeId"]
 - !private ["6Drinkz12CheckoutCartC", "user"]
 - !private ["6Drinkz12CheckoutCartC", "userId"]
-- ["Sl", ""]
-- ["SL", ""]
+- !private ["Sl", ""]
+- !private ["SL", ""]
 - !private ["6Drinkz15CoreDataManagerC", "persistentContainer"]
 - !private ["6Drinkz15CoreDataManagerC", "saveContext"]
 - !private ["6Drinkz15CoreDataManagerC", "sharedManager"]
@@ -303,7 +302,7 @@ depends-member:
 - !private ["s30ExpressibleByDictionaryLiteralP", "Value"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "init"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
 - !private ["s27ExpressibleByIntegerLiteralP", ""]
@@ -311,9 +310,9 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "callAsFunction"]
 - !private ["s23ExpressibleByNilLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "text"]
-- ["s32ExpressibleByStringInterpolationP", ""]
-- ["s26ExpressibleByStringLiteralP", ""]
-- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["SF", ""]
 - !private ["9Alamofire10HTTPMethodV", "post"]
 - !private ["SH", "AF"]
@@ -382,10 +381,9 @@ depends-member:
 - !private ["9Alamofire12JSONEncodingV", "default"]
 - !private ["So19NSJSONSerializationC", "jsonObject"]
 - !private ["So21NSAttributedStringKeya", "font"]
-- ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", ""]
 - !private ["So18NSAttributedStringC", "Key"]
 - !private ["So8NSCodingP", "AF"]
-- ["So8NSCodingP", "Bool"]
 - !private ["So8NSCodingP", "CheckoutCart"]
 - !private ["So8NSCodingP", "CoreDataManager"]
 - !private ["So8NSCodingP", "DrinkListTableViewController"]
@@ -400,11 +398,9 @@ depends-member:
 - ["So8NSCodingP", "Parameters"]
 - ["So8NSCodingP", "RoundButton"]
 - !private ["So8NSCodingP", "SceneDelegate"]
-- ["So8NSCodingP", "String"]
 - !private ["So8NSCodingP", "UIAlertAction"]
 - !private ["So8NSCodingP", "UIAlertController"]
 - !private ["So8NSCodingP", "UIFont"]
-- ["So8NSCodingP", "UITextField"]
 - ["So8NSCodingP", "User"]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "addAction"]
@@ -440,7 +436,6 @@ depends-member:
 - !private ["So9NSCopyingP", "titleTextAttributes"]
 - !private ["So12NSDictionaryC", "subscript"]
 - !private ["So26NSExtensionRequestHandlingP", "AF"]
-- ["So26NSExtensionRequestHandlingP", "Bool"]
 - !private ["So26NSExtensionRequestHandlingP", "CheckoutCart"]
 - !private ["So26NSExtensionRequestHandlingP", "CoreDataManager"]
 - !private ["So26NSExtensionRequestHandlingP", "DrinkListTableViewController"]
@@ -454,11 +449,9 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "Parameters"]
 - ["So26NSExtensionRequestHandlingP", "RoundButton"]
 - !private ["So26NSExtensionRequestHandlingP", "SceneDelegate"]
-- ["So26NSExtensionRequestHandlingP", "String"]
 - !private ["So26NSExtensionRequestHandlingP", "UIAlertAction"]
 - !private ["So26NSExtensionRequestHandlingP", "UIAlertController"]
 - !private ["So26NSExtensionRequestHandlingP", "UIFont"]
-- ["So26NSExtensionRequestHandlingP", "UITextField"]
 - ["So26NSExtensionRequestHandlingP", "User"]
 - ["So26NSExtensionRequestHandlingP", ""]
 - !private ["So26NSExtensionRequestHandlingP", "addAction"]
@@ -485,7 +478,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "viewWillAppear"]
 - !private ["So17NSFastEnumerationP", "subscript"]
 - !private ["So20NSFetchRequestResultP", "email"]
-- !private ["So20NSFetchRequestResultP", "init"]
+- ["So20NSFetchRequestResultP", "init"]
 - !private ["So20NSFetchRequestResultP", "shared"]
 - !private ["So20NSFetchRequestResultP", "stripeId"]
 - !private ["So20NSFetchRequestResultP", "subscript"]
@@ -569,7 +562,6 @@ depends-member:
 - ["So8NSObjectC", "viewDidLoad"]
 - ["So8NSObjectC", "viewWillAppear"]
 - !private ["So8NSObjectP", "AF"]
-- ["So8NSObjectP", "Bool"]
 - !private ["So8NSObjectP", "CheckoutCart"]
 - !private ["So8NSObjectP", "CoreDataManager"]
 - !private ["So8NSObjectP", "DrinkListTableViewController"]
@@ -589,8 +581,7 @@ depends-member:
 - !private ["So8NSObjectP", "UIAlertAction"]
 - !private ["So8NSObjectP", "UIAlertController"]
 - !private ["So8NSObjectP", "UIFont"]
-- ["So8NSObjectP", "UITextField"]
-- !private ["So8NSObjectP", "User"]
+- ["So8NSObjectP", "User"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "actionWithTitle"]
 - !private ["So8NSObjectP", "addAction"]
@@ -711,7 +702,7 @@ depends-member:
 - !private ["6Drinkz18RootViewControllerC", "switchToHomePageViewController"]
 - !private ["6Drinkz13SceneDelegateC", "rootViewController"]
 - !private ["6Drinkz13SceneDelegateC", "shared"]
-- ["ST", ""]
+- !private ["ST", ""]
 - !private ["ST", "subscript"]
 - !private ["9Alamofire7SessionC", "request"]
 - !private ["9Alamofire20SessionStateProviderP", "request"]
@@ -723,22 +714,19 @@ depends-member:
 - !private ["Sx", ""]
 - !private ["So22UIAlertControllerStyleV", "alert"]
 - !private ["So18UIAlertActionStyleV", "cancel"]
-- ["s16TextOutputStreamP", ""]
-- ["s20TextOutputStreamableP", ""]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s20TextOutputStreamableP", ""]
 - !private ["7Combine15TopLevelEncoderP", "encode"]
 - !private ["7Combine15TopLevelEncoderP", "init"]
-- !private ["So29UIAccessibilityIdentificationP", ""]
 - !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "standardAppearance"]
 - !private ["So29UIAccessibilityIdentificationP", "text"]
 - !private ["So13UIAlertActionC", "init"]
 - !private ["So17UIAlertControllerC", "addAction"]
 - !private ["So17UIAlertControllerC", "init"]
-- !private ["So12UIAppearanceP", ""]
 - !private ["So12UIAppearanceP", "standardAppearance"]
 - !private ["So12UIAppearanceP", "text"]
 - !private ["So21UIAppearanceContainerP", "AF"]
-- ["So21UIAppearanceContainerP", "Bool"]
 - !private ["So21UIAppearanceContainerP", "CheckoutCart"]
 - !private ["So21UIAppearanceContainerP", "CoreDataManager"]
 - !private ["So21UIAppearanceContainerP", "DrinkListTableViewController"]
@@ -752,11 +740,9 @@ depends-member:
 - ["So21UIAppearanceContainerP", "Parameters"]
 - ["So21UIAppearanceContainerP", "RoundButton"]
 - !private ["So21UIAppearanceContainerP", "SceneDelegate"]
-- ["So21UIAppearanceContainerP", "String"]
 - !private ["So21UIAppearanceContainerP", "UIAlertAction"]
 - !private ["So21UIAppearanceContainerP", "UIAlertController"]
 - !private ["So21UIAppearanceContainerP", "UIFont"]
-- ["So21UIAppearanceContainerP", "UITextField"]
 - ["So21UIAppearanceContainerP", "User"]
 - ["So21UIAppearanceContainerP", ""]
 - !private ["So21UIAppearanceContainerP", "addAction"]
@@ -787,7 +773,6 @@ depends-member:
 - !private ["So15UIBarAppearanceC", "titleTextAttributes"]
 - !private ["So16UIBarPositioningP", "standardAppearance"]
 - !private ["So18UIContentContainerP", "AF"]
-- ["So18UIContentContainerP", "Bool"]
 - !private ["So18UIContentContainerP", "CheckoutCart"]
 - !private ["So18UIContentContainerP", "CoreDataManager"]
 - !private ["So18UIContentContainerP", "DrinkListTableViewController"]
@@ -801,11 +786,9 @@ depends-member:
 - ["So18UIContentContainerP", "Parameters"]
 - ["So18UIContentContainerP", "RoundButton"]
 - !private ["So18UIContentContainerP", "SceneDelegate"]
-- ["So18UIContentContainerP", "String"]
 - !private ["So18UIContentContainerP", "UIAlertAction"]
 - !private ["So18UIContentContainerP", "UIAlertController"]
 - !private ["So18UIContentContainerP", "UIFont"]
-- ["So18UIContentContainerP", "UITextField"]
 - ["So18UIContentContainerP", "User"]
 - ["So18UIContentContainerP", ""]
 - !private ["So18UIContentContainerP", "addAction"]
@@ -833,16 +816,13 @@ depends-member:
 - !private ["So30UIContentSizeCategoryAdjustingP", "text"]
 - !private ["So32UIContextMenuInteractionDelegateP", ""]
 - !private ["So32UIContextMenuInteractionDelegateP", "text"]
-- ["So9UIControlC", ""]
+- !private ["So9UIControlC", ""]
 - !private ["So9UIControlC", "text"]
-- !private ["So17UICoordinateSpaceP", ""]
 - !private ["So17UICoordinateSpaceP", "standardAppearance"]
 - !private ["So17UICoordinateSpaceP", "text"]
-- !private ["So13UIDynamicItemP", ""]
 - !private ["So13UIDynamicItemP", "standardAppearance"]
 - !private ["So13UIDynamicItemP", "text"]
 - !private ["So18UIFocusEnvironmentP", "AF"]
-- ["So18UIFocusEnvironmentP", "Bool"]
 - !private ["So18UIFocusEnvironmentP", "CheckoutCart"]
 - !private ["So18UIFocusEnvironmentP", "CoreDataManager"]
 - !private ["So18UIFocusEnvironmentP", "DrinkListTableViewController"]
@@ -856,11 +836,9 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "Parameters"]
 - ["So18UIFocusEnvironmentP", "RoundButton"]
 - !private ["So18UIFocusEnvironmentP", "SceneDelegate"]
-- ["So18UIFocusEnvironmentP", "String"]
 - !private ["So18UIFocusEnvironmentP", "UIAlertAction"]
 - !private ["So18UIFocusEnvironmentP", "UIAlertController"]
 - !private ["So18UIFocusEnvironmentP", "UIFont"]
-- ["So18UIFocusEnvironmentP", "UITextField"]
 - ["So18UIFocusEnvironmentP", "User"]
 - ["So18UIFocusEnvironmentP", ""]
 - !private ["So18UIFocusEnvironmentP", "addAction"]
@@ -887,16 +865,13 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "text"]
 - ["So18UIFocusEnvironmentP", "viewDidLoad"]
 - ["So18UIFocusEnvironmentP", "viewWillAppear"]
-- !private ["So11UIFocusItemP", ""]
 - !private ["So11UIFocusItemP", "standardAppearance"]
 - !private ["So11UIFocusItemP", "text"]
-- !private ["So20UIFocusItemContainerP", ""]
 - !private ["So20UIFocusItemContainerP", "standardAppearance"]
 - !private ["So20UIFocusItemContainerP", "text"]
 - !private ["So6UIFontC", "init"]
 - !private ["So10UIKeyInputP", ""]
 - !private ["So10UIKeyInputP", "text"]
-- !private ["So24UILargeContentViewerItemP", ""]
 - !private ["So24UILargeContentViewerItemP", "standardAppearance"]
 - !private ["So24UILargeContentViewerItemP", "text"]
 - !private ["So15UINavigationBarC", "standardAppearance"]
@@ -904,7 +879,6 @@ depends-member:
 - !private ["So22UINavigationControllerC", "navigationBar"]
 - !private ["So22UINavigationControllerC", "setViewControllers"]
 - !private ["So30UIPasteConfigurationSupportingP", "AF"]
-- ["So30UIPasteConfigurationSupportingP", "Bool"]
 - !private ["So30UIPasteConfigurationSupportingP", "CheckoutCart"]
 - !private ["So30UIPasteConfigurationSupportingP", "CoreDataManager"]
 - !private ["So30UIPasteConfigurationSupportingP", "DrinkListTableViewController"]
@@ -918,11 +892,9 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "Parameters"]
 - ["So30UIPasteConfigurationSupportingP", "RoundButton"]
 - !private ["So30UIPasteConfigurationSupportingP", "SceneDelegate"]
-- ["So30UIPasteConfigurationSupportingP", "String"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIAlertAction"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIAlertController"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIFont"]
-- ["So30UIPasteConfigurationSupportingP", "UITextField"]
 - ["So30UIPasteConfigurationSupportingP", "User"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "addAction"]
@@ -1002,7 +974,6 @@ depends-member:
 - ["So11UIResponderC", "viewDidLoad"]
 - ["So11UIResponderC", "viewWillAppear"]
 - !private ["So30UIResponderStandardEditActionsP", "AF"]
-- ["So30UIResponderStandardEditActionsP", "Bool"]
 - !private ["So30UIResponderStandardEditActionsP", "CheckoutCart"]
 - !private ["So30UIResponderStandardEditActionsP", "CoreDataManager"]
 - !private ["So30UIResponderStandardEditActionsP", "DrinkListTableViewController"]
@@ -1016,11 +987,9 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "Parameters"]
 - ["So30UIResponderStandardEditActionsP", "RoundButton"]
 - !private ["So30UIResponderStandardEditActionsP", "SceneDelegate"]
-- ["So30UIResponderStandardEditActionsP", "String"]
 - !private ["So30UIResponderStandardEditActionsP", "UIAlertAction"]
 - !private ["So30UIResponderStandardEditActionsP", "UIAlertController"]
 - !private ["So30UIResponderStandardEditActionsP", "UIFont"]
-- ["So30UIResponderStandardEditActionsP", "UITextField"]
 - ["So30UIResponderStandardEditActionsP", "User"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "addAction"]
@@ -1056,7 +1025,6 @@ depends-member:
 - !private ["So35UISpringLoadedInteractionSupportingP", "addAction"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "init"]
 - !private ["So16UIStateRestoringP", "AF"]
-- ["So16UIStateRestoringP", "Bool"]
 - !private ["So16UIStateRestoringP", "CheckoutCart"]
 - !private ["So16UIStateRestoringP", "CoreDataManager"]
 - !private ["So16UIStateRestoringP", "DrinkListTableViewController"]
@@ -1070,11 +1038,9 @@ depends-member:
 - ["So16UIStateRestoringP", "Parameters"]
 - ["So16UIStateRestoringP", "RoundButton"]
 - !private ["So16UIStateRestoringP", "SceneDelegate"]
-- ["So16UIStateRestoringP", "String"]
 - !private ["So16UIStateRestoringP", "UIAlertAction"]
 - !private ["So16UIStateRestoringP", "UIAlertController"]
 - !private ["So16UIStateRestoringP", "UIFont"]
-- ["So16UIStateRestoringP", "UITextField"]
 - ["So16UIStateRestoringP", "User"]
 - ["So16UIStateRestoringP", ""]
 - !private ["So16UIStateRestoringP", "addAction"]
@@ -1111,7 +1077,6 @@ depends-member:
 - !private ["So34UITextPasteConfigurationSupportingP", ""]
 - !private ["So34UITextPasteConfigurationSupportingP", "text"]
 - !private ["So18UITraitEnvironmentP", "AF"]
-- ["So18UITraitEnvironmentP", "Bool"]
 - !private ["So18UITraitEnvironmentP", "CheckoutCart"]
 - !private ["So18UITraitEnvironmentP", "CoreDataManager"]
 - !private ["So18UITraitEnvironmentP", "DrinkListTableViewController"]
@@ -1125,11 +1090,9 @@ depends-member:
 - ["So18UITraitEnvironmentP", "Parameters"]
 - ["So18UITraitEnvironmentP", "RoundButton"]
 - !private ["So18UITraitEnvironmentP", "SceneDelegate"]
-- ["So18UITraitEnvironmentP", "String"]
 - !private ["So18UITraitEnvironmentP", "UIAlertAction"]
 - !private ["So18UITraitEnvironmentP", "UIAlertController"]
 - !private ["So18UITraitEnvironmentP", "UIFont"]
-- ["So18UITraitEnvironmentP", "UITextField"]
 - ["So18UITraitEnvironmentP", "User"]
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "addAction"]
@@ -1157,7 +1120,6 @@ depends-member:
 - ["So18UITraitEnvironmentP", "viewDidLoad"]
 - ["So18UITraitEnvironmentP", "viewWillAppear"]
 - !private ["So23UIUserActivityRestoringP", "AF"]
-- ["So23UIUserActivityRestoringP", "Bool"]
 - !private ["So23UIUserActivityRestoringP", "CheckoutCart"]
 - !private ["So23UIUserActivityRestoringP", "CoreDataManager"]
 - !private ["So23UIUserActivityRestoringP", "DrinkListTableViewController"]
@@ -1171,11 +1133,9 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "Parameters"]
 - ["So23UIUserActivityRestoringP", "RoundButton"]
 - !private ["So23UIUserActivityRestoringP", "SceneDelegate"]
-- ["So23UIUserActivityRestoringP", "String"]
 - !private ["So23UIUserActivityRestoringP", "UIAlertAction"]
 - !private ["So23UIUserActivityRestoringP", "UIAlertController"]
 - !private ["So23UIUserActivityRestoringP", "UIFont"]
-- ["So23UIUserActivityRestoringP", "UITextField"]
 - ["So23UIUserActivityRestoringP", "User"]
 - ["So23UIUserActivityRestoringP", ""]
 - !private ["So23UIUserActivityRestoringP", "addAction"]
@@ -1205,7 +1165,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "text"]
 - ["So23UIUserActivityRestoringP", "viewDidLoad"]
 - ["So23UIUserActivityRestoringP", "viewWillAppear"]
-- ["So6UIViewC", ""]
+- !private ["So6UIViewC", ""]
 - !private ["So6UIViewC", "standardAppearance"]
 - !private ["So6UIViewC", "text"]
 - !private ["So16UIViewControllerC", "AF"]
@@ -1259,10 +1219,10 @@ depends-member:
 - !private ["6Drinkz4UserC", "init"]
 - !private ["6Drinkz4UserC", "stripeId"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s35_HasCustomAnyHashableRepresentationP", ""]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "font"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
@@ -1368,12 +1328,12 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "text"]
 depends-nominal:
 - !private "s18AdditiveArithmeticP"
-- "SK"
+- !private "SK"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
 - !private "6Drinkz12CheckoutCartC"
-- "Sl"
-- "SL"
+- !private "Sl"
+- !private "SL"
 - !private "6Drinkz15CoreDataManagerC"
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
@@ -1385,13 +1345,13 @@ depends-nominal:
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s30ExpressibleByDictionaryLiteralP"
-- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- "s32ExpressibleByStringInterpolationP"
-- "s26ExpressibleByStringLiteralP"
-- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "SF"
 - !private "9Alamofire10HTTPMethodV"
 - "SH"
@@ -1400,14 +1360,14 @@ depends-nominal:
 - !private "9Alamofire12JSONEncodingV"
 - !private "So19NSJSONSerializationC"
 - !private "So21NSAttributedStringKeya"
-- "s25LosslessStringConvertibleP"
+- !private "s25LosslessStringConvertibleP"
 - !private "So18NSAttributedStringC"
 - "So8NSCodingP"
 - !private "So9NSCopyingP"
 - !private "So12NSDictionaryC"
 - "So26NSExtensionRequestHandlingP"
 - !private "So17NSFastEnumerationP"
-- !private "So20NSFetchRequestResultP"
+- "So20NSFetchRequestResultP"
 - !private "So21NSItemProviderReadingP"
 - !private "So21NSItemProviderWritingP"
 - "So15NSManagedObjectC"
@@ -1429,7 +1389,7 @@ depends-nominal:
 - !private "s6ResultO"
 - !private "6Drinkz18RootViewControllerC"
 - !private "6Drinkz13SceneDelegateC"
-- "ST"
+- !private "ST"
 - !private "9Alamofire7SessionC"
 - !private "9Alamofire20SessionStateProviderP"
 - !private "s10SetAlgebraP"
@@ -1437,8 +1397,8 @@ depends-nominal:
 - !private "Sx"
 - !private "So22UIAlertControllerStyleV"
 - !private "So18UIAlertActionStyleV"
-- "s16TextOutputStreamP"
-- "s20TextOutputStreamableP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
 - !private "7Combine15TopLevelEncoderP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So13UIAlertActionC"
@@ -1450,7 +1410,7 @@ depends-nominal:
 - "So18UIContentContainerP"
 - !private "So30UIContentSizeCategoryAdjustingP"
 - !private "So32UIContextMenuInteractionDelegateP"
-- "So9UIControlC"
+- !private "So9UIControlC"
 - !private "So17UICoordinateSpaceP"
 - !private "So13UIDynamicItemP"
 - "So18UIFocusEnvironmentP"
@@ -1478,15 +1438,15 @@ depends-nominal:
 - !private "So34UITextPasteConfigurationSupportingP"
 - "So18UITraitEnvironmentP"
 - "So23UIUserActivityRestoringP"
-- "So6UIViewC"
+- !private "So6UIViewC"
 - "So16UIViewControllerC"
 - !private "So21UIWindowSceneDelegateP"
 - !private "6Drinkz4UserC"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
-- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
-- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"

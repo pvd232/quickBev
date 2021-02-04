@@ -52,14 +52,5 @@ class RootViewController:  UIViewController {
             completion?()  //1
         }
     }
-//    private func makeServiceCall() {
-//       if UserDefaults.standard.bool(forKey: “LOGGED_IN”) {
-//          // navigate to protected page
-//          AppDelegate.shared.rootViewController.switchToMainScreen()
-//       } else {
-//          // navigate to login screen
-//          AppDelegate.shared.rootViewController.switchToLogout()
-//       }
-//    }
 }
 

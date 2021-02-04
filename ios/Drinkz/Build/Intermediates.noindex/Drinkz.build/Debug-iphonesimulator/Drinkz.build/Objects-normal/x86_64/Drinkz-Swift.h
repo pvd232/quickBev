@@ -656,14 +656,22 @@ SWIFT_CLASS("_TtC6Drinkz13SceneDelegate")
 @end
 
 
+SWIFT_CLASS("_TtC6Drinkz18SignInOrSignUpView")
+@interface SignInOrSignUpView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (void)updateConstraints;
+- (void)firstButtonTouchUp;
+- (void)secondButtonTouchUp;
+- (void)thirdButtonTouchUp;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC6Drinkz30SignInSplashPageViewController")
 @interface SignInSplashPageViewController : UIViewController
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidLoad;
-- (void)signInWithFacebookButtonTouchup;
-- (void)signInWithGoogleButtonTouchup;
-- (void)signInWithEmailButtonTouchup;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 

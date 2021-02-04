@@ -17,11 +17,11 @@ protocol NewBusinessPickedProtocol {
 class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UIGestureRecognizerDelegate{
     
     @UsesAutoLayout var mapView = MKMapView()
+    @UsesAutoLayout private var activityIndicator = UIActivityIndicatorView(style: .large)
     
     let locationManager = CLLocationManager()
     var customAnnotations = [CustomAnnotation]()
     var businessPickerDelegate: NewBusinessPickedProtocol? = nil
-    @UsesAutoLayout private var activityIndicator = UIActivityIndicatorView(style: .large)
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -64,9 +64,9 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
         navigationController?.interactivePopGestureRecognizer?.delegate = self
         if CLLocationManager.locationServicesEnabled() {
             locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
-//            locationManager.allowsBackgroundLocationUpdates = true
+            //            locationManager.allowsBackgroundLocationUpdates = true
             locationManager.requestLocation()
-//            locationManager.startUpdatingLocation()
+            //            locationManager.startUpdatingLocation()
             makeBusinessServiceCall()
         }
     }
@@ -96,7 +96,7 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
                     }
                     CoreDataManager.sharedManager.saveContext(context: managedContext)
                     group.leave()
-
+                    
                 }
             }
             //Add a custom pin to the map

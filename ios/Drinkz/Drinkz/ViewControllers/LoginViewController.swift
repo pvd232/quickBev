@@ -18,16 +18,15 @@ class LoginViewController: UIViewController {
     @UsesAutoLayout var ellipsisLabel = UILabel()
     @UsesAutoLayout var signInToQuickBevLabel = UILabel()
     @UsesAutoLayout var moonImageView = UIImageView()
-    let moonImage = UIImage(named:"moon")
     @UsesAutoLayout var emailAddressLabel = UILabel()
     @UsesAutoLayout var emailTextField = UITextField()
     @UsesAutoLayout var passwordLabel = UILabel()
     @UsesAutoLayout var passwordTextField = UITextField()
     @UsesAutoLayout var forgotPasswordButton = UIButton()
     @UsesAutoLayout var submitButton = RoundButton()
-    
     @UsesAutoLayout private var activityIndicator = UIActivityIndicatorView(style: .large)
-
+    let moonImage = UIImage(named:"moon")
+    
     init() {
         super.init(nibName: nil, bundle: nil)
         self.view.backgroundColor = .systemBackground
@@ -49,7 +48,6 @@ class LoginViewController: UIViewController {
         letsGetStartedLabel.text = "Let's Get Started"
         letsGetStartedLabel.font = UIFont(name: "Charter-Roman", size: 32.0)
         letsGetStartedLabel.textAlignment = .center
-
         
         ellipsisLabel.text = "· · ·"
         ellipsisLabel.font = UIFont(name: "System-Bold", size: 20.0)
@@ -58,22 +56,19 @@ class LoginViewController: UIViewController {
         signInToQuickBevLabel.text = "SIGN IN TO QUICKBEV"
         signInToQuickBevLabel.font = UIFont(name: "Charter-Roman", size: 20.0)
         signInToQuickBevLabel.textAlignment = .center
-
         
         emailAddressLabel.text = "Email Address"
         emailAddressLabel.font = UIFont(name: "Charter-Roman", size: 20.0)
         emailTextField.borderStyle = .roundedRect
         emailTextField.autocapitalizationType = .none
         emailTextField.backgroundColor = UIColor.clear
-
-        
         
         passwordLabel.text = "Password"
         passwordLabel.font = UIFont(name: "Charter-Roman", size: 20.0)
         passwordTextField.borderStyle = .roundedRect
         passwordTextField.autocapitalizationType = .none
         passwordTextField.backgroundColor = UIColor.clear
-
+        
         forgotPasswordButton.setTitle("Forgot Password?", for: .normal)
         forgotPasswordButton.titleLabel?.font = UIFont(name: "Charter-Roman", size: 18.0)
         forgotPasswordButton.setTitleColor(.black, for: .normal)
@@ -110,16 +105,16 @@ class LoginViewController: UIViewController {
         )
         let margins = self.view.safeAreaLayoutGuide
         NSLayoutConstraint.activate([
-        moonImageView.widthAnchor.constraint(equalTo: margins.widthAnchor, multiplier: 0.565217),
-        moonImageView.topAnchor.constraint(equalTo: margins.topAnchor, constant: 10.0),
+            moonImageView.widthAnchor.constraint(equalTo: margins.widthAnchor, multiplier: 0.565217),
+            moonImageView.topAnchor.constraint(equalTo: margins.topAnchor, constant: 10.0),
             moonImageView.heightAnchor.constraint(equalTo: moonImageView.widthAnchor),
-        moonImageView.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
+            moonImageView.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
             moonImageView.bottomAnchor.constraint(equalTo:letsGetStartedStackView.topAnchor , constant: -10.0),
             moonImageView.topAnchor.constraint(equalTo: margins.topAnchor, constant: 40.0).usingPriority(UILayoutPriority(750)),
             
             letsGetStartedStackView.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
             letsGetStartedStackView.topAnchor.constraint(equalTo: moonImageView.bottomAnchor, constant: 20.0).usingPriority(UILayoutPriority(750)),
-
+            
             signInButtonsStackView.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
             signInButtonsStackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -10.0),
             signInButtonsStackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 10.0),
@@ -139,7 +134,7 @@ class LoginViewController: UIViewController {
     
     @objc private func submitButtonPressed(_ sender: RoundButton) {
         activityIndicator.startAnimating()
-
+        
         let userCredentials: HTTPHeaders = ["email": emailTextField.text!, "password" : passwordTextField.text!]
         validateUser (headers: userCredentials) { // this bracket is the trailing closure that is being passed into the validate user function as an argument for the completion parameter. the data is the parameter that was passed into the completion by the validate user function
             
@@ -148,14 +143,12 @@ class LoginViewController: UIViewController {
                 CheckoutCart.shared.user = nil
                 // TODO: Make a pretty little error message that appears if your login was incorrect - base it off of Instagram or FB maybe?
                 self.activityIndicator.stopAnimating()
-
+                
                 print("data returned from submit button is nill")
                 return
             }
-//            let nextViewController =  HomePageViewController()
-//            self.navigationController!.setViewControllers([nextViewController], animated: true)
             SceneDelegate.shared.rootViewController.switchToHomePageViewController()
-
+            
             self.activityIndicator.stopAnimating()
         }
     }
@@ -169,18 +162,16 @@ class LoginViewController: UIViewController {
                     // need to create an optional user that will either be assigned to the novel user returned from login or from the existing user in core data if the user logged out so we don't create a duplicate instances of the same user
                     var user: User?
                     guard let returnedUser = response.data
+                    
                     else {
                         print("error user not returned")
                         completion(nil)
                         return
                     }
                     let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
-
-                    print("returnedUser", returnedUser)
                     let jsonDecoder = JSONDecoder()
                     user = try! jsonDecoder.decode(User.self, from: returnedUser)
-                    print("user", user)
-
+                    
                     if let fetchedUsers = CoreDataManager.sharedManager.fetchEntities(entityName: "User", context: managedContext) as? [User] {
                         for fetchedUser in fetchedUsers{
                             if fetchedUser.id == user!.id{
