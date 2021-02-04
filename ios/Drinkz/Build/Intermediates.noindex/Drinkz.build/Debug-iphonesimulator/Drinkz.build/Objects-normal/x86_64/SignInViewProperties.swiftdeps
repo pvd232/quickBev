@@ -4,19 +4,23 @@ provides-top-level:
 provides-nominal:
 - "6Drinkz09SignInAndB7UpPropsO"
 - "6Drinkz09SignInAndB7UpPropsO6ActionO"
-- "6Drinkz09SignInAndB7UpPropsO14ActionProviderO"
+- "6Drinkz09SignInAndB7UpPropsO11ButtonIndexO"
 provides-member:
 - ["6Drinkz09SignInAndB7UpPropsO", ""]
 - ["6Drinkz09SignInAndB7UpPropsO6ActionO", ""]
-- ["6Drinkz09SignInAndB7UpPropsO14ActionProviderO", ""]
+- ["6Drinkz09SignInAndB7UpPropsO11ButtonIndexO", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- "<="
 - "=="
 - "Action"
-- "ActionProvider"
-- "Bool"
+- !private "Array"
+- "AssignmentPrecedence"
 - !private "BooleanLiteralType"
+- "ButtonIndex"
+- "CastingPrecedence"
 - !private "FloatLiteralType"
+- !private "HomePageViewController"
 - !private "IntegerLiteralType"
 - !private "LoginViewController"
 - !private "RegistrationSplashPageViewController"
@@ -25,100 +29,150 @@ depends-top-level:
 - "SignInAndSignUpProps"
 - !private "SignInSplashPageViewController"
 - "String"
-- !private "StringLiteralType"
+- "StringLiteralType"
+- "UINavigationController"
+- !private "_findStringSwitchCase"
+- !private "~="
 depends-member:
 - ["6Drinkz09SignInAndB7UpPropsO6ActionO", "=="]
+- ["6Drinkz09SignInAndB7UpPropsO6ActionO", "Default_RawValue"]
+- ["6Drinkz09SignInAndB7UpPropsO6ActionO", "RawValue"]
 - ["6Drinkz09SignInAndB7UpPropsO6ActionO", ""]
-- ["6Drinkz09SignInAndB7UpPropsO6ActionO", "__derived_enum_equals"]
+- ["6Drinkz09SignInAndB7UpPropsO6ActionO", "_Default_RawValue"]
+- !private ["6Drinkz09SignInAndB7UpPropsO6ActionO", "_findStringSwitchCase"]
 - ["6Drinkz09SignInAndB7UpPropsO6ActionO", "_rawHashValue"]
+- !private ["6Drinkz09SignInAndB7UpPropsO6ActionO", "findStringSwitchCase"]
 - ["6Drinkz09SignInAndB7UpPropsO6ActionO", "hash"]
 - ["6Drinkz09SignInAndB7UpPropsO6ActionO", "hashValue"]
+- ["6Drinkz09SignInAndB7UpPropsO6ActionO", "init"]
+- ["6Drinkz09SignInAndB7UpPropsO6ActionO", "rawValue"]
 - ["6Drinkz09SignInAndB7UpPropsO6ActionO", "signIn"]
 - ["6Drinkz09SignInAndB7UpPropsO6ActionO", "signUp"]
-- ["6Drinkz09SignInAndB7UpPropsO14ActionProviderO", "=="]
-- ["6Drinkz09SignInAndB7UpPropsO14ActionProviderO", ""]
-- ["6Drinkz09SignInAndB7UpPropsO14ActionProviderO", "__derived_enum_equals"]
-- ["6Drinkz09SignInAndB7UpPropsO14ActionProviderO", "_rawHashValue"]
-- ["6Drinkz09SignInAndB7UpPropsO14ActionProviderO", "fb"]
-- ["6Drinkz09SignInAndB7UpPropsO14ActionProviderO", "google"]
-- ["6Drinkz09SignInAndB7UpPropsO14ActionProviderO", "hash"]
-- ["6Drinkz09SignInAndB7UpPropsO14ActionProviderO", "hashValue"]
-- ["6Drinkz09SignInAndB7UpPropsO14ActionProviderO", "quickBev"]
+- ["6Drinkz09SignInAndB7UpPropsO6ActionO", "splash"]
+- !private ["s18AdditiveArithmeticP", ""]
+- ["6Drinkz09SignInAndB7UpPropsO11ButtonIndexO", "=="]
+- ["6Drinkz09SignInAndB7UpPropsO11ButtonIndexO", ""]
+- ["6Drinkz09SignInAndB7UpPropsO11ButtonIndexO", "__derived_enum_equals"]
+- ["6Drinkz09SignInAndB7UpPropsO11ButtonIndexO", "_rawHashValue"]
+- ["6Drinkz09SignInAndB7UpPropsO11ButtonIndexO", "first"]
+- ["6Drinkz09SignInAndB7UpPropsO11ButtonIndexO", "hash"]
+- ["6Drinkz09SignInAndB7UpPropsO11ButtonIndexO", "hashValue"]
+- ["6Drinkz09SignInAndB7UpPropsO11ButtonIndexO", "second"]
+- ["6Drinkz09SignInAndB7UpPropsO11ButtonIndexO", "third"]
 - !private ["s7CVarArgP", "current"]
 - !private ["s7CVarArgP", "init"]
-- !private ["s7CVarArgP", "navigationController"]
 - !private ["s7CVarArgP", "pushViewController"]
 - !private ["s7CVarArgP", "rootViewController"]
 - !private ["s7CVarArgP", "shared"]
+- !private ["SL", "<"]
+- !private ["SL", "<="]
+- !private ["SL", ">"]
+- !private ["SL", ">="]
+- !private ["SL", ""]
 - !private ["s28CustomDebugStringConvertibleP", "current"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "navigationController"]
 - !private ["s28CustomDebugStringConvertibleP", "pushViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "rootViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "shared"]
 - !private ["s23CustomStringConvertibleP", "current"]
 - !private ["s23CustomStringConvertibleP", "init"]
-- !private ["s23CustomStringConvertibleP", "navigationController"]
 - !private ["s23CustomStringConvertibleP", "pushViewController"]
 - !private ["s23CustomStringConvertibleP", "rootViewController"]
 - !private ["s23CustomStringConvertibleP", "shared"]
 - ["SQ", "=="]
+- ["SQ", "Default_RawValue"]
+- ["SQ", "RawValue"]
 - ["SQ", ""]
+- ["SQ", "_Default_RawValue"]
+- !private ["SQ", "_findStringSwitchCase"]
 - ["SQ", "_rawHashValue"]
 - !private ["SQ", "current"]
-- ["SQ", "fb"]
-- ["SQ", "google"]
+- !private ["SQ", "findStringSwitchCase"]
+- ["SQ", "first"]
 - ["SQ", "hash"]
 - ["SQ", "hashValue"]
-- !private ["SQ", "init"]
-- !private ["SQ", "navigationController"]
+- ["SQ", "init"]
 - !private ["SQ", "pushViewController"]
-- ["SQ", "quickBev"]
+- ["SQ", "rawValue"]
 - !private ["SQ", "rootViewController"]
+- ["SQ", "second"]
 - !private ["SQ", "shared"]
 - ["SQ", "signIn"]
 - ["SQ", "signUp"]
+- ["SQ", "splash"]
+- ["SQ", "third"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
+- !private ["s27ExpressibleByIntegerLiteralP", ""]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["SF", "<"]
+- !private ["SF", "<="]
+- !private ["SF", ">"]
+- !private ["SF", ">="]
 - ["SH", "=="]
+- ["SH", "Default_RawValue"]
+- ["SH", "RawValue"]
 - ["SH", ""]
+- ["SH", "_Default_RawValue"]
+- !private ["SH", "_findStringSwitchCase"]
 - ["SH", "_rawHashValue"]
 - !private ["SH", "current"]
-- ["SH", "fb"]
-- ["SH", "google"]
+- !private ["SH", "findStringSwitchCase"]
+- ["SH", "first"]
 - ["SH", "hash"]
 - ["SH", "hashValue"]
-- !private ["SH", "init"]
-- !private ["SH", "navigationController"]
+- ["SH", "init"]
 - !private ["SH", "pushViewController"]
-- ["SH", "quickBev"]
+- ["SH", "rawValue"]
 - !private ["SH", "rootViewController"]
+- ["SH", "second"]
 - !private ["SH", "shared"]
 - ["SH", "signIn"]
 - ["SH", "signUp"]
+- ["SH", "splash"]
+- ["SH", "third"]
 - !private ["s6HasherV", "combine"]
+- !private ["6Drinkz22HomePageViewControllerC", ""]
+- !private ["6Drinkz22HomePageViewControllerC", "init"]
 - !private ["6Drinkz19LoginViewControllerC", ""]
 - !private ["6Drinkz19LoginViewControllerC", "init"]
 - !private ["So8NSCodingP", "current"]
 - !private ["So8NSCodingP", "init"]
-- !private ["So8NSCodingP", "navigationController"]
 - !private ["So8NSCodingP", "pushViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "current"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
-- !private ["So26NSExtensionRequestHandlingP", "navigationController"]
 - !private ["So26NSExtensionRequestHandlingP", "pushViewController"]
 - ["So8NSObjectC", ""]
 - !private ["So8NSObjectC", "current"]
 - !private ["So8NSObjectC", "init"]
-- !private ["So8NSObjectC", "navigationController"]
 - !private ["So8NSObjectC", "pushViewController"]
 - !private ["So8NSObjectC", "rootViewController"]
 - !private ["So8NSObjectC", "shared"]
 - !private ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "current"]
 - !private ["So8NSObjectP", "init"]
-- !private ["So8NSObjectP", "navigationController"]
 - !private ["So8NSObjectP", "pushViewController"]
 - !private ["So8NSObjectP", "rootViewController"]
 - !private ["So8NSObjectP", "shared"]
+- !private ["6Drinkz25NewBusinessPickedProtocolP", "init"]
+- !private ["Sj", ""]
+- ["SY", "=="]
+- ["SY", "Default_RawValue"]
+- ["SY", "RawValue"]
+- ["SY", ""]
+- ["SY", "_Default_RawValue"]
+- !private ["SY", "_findStringSwitchCase"]
+- ["SY", "_rawHashValue"]
+- !private ["SY", "findStringSwitchCase"]
+- ["SY", "hash"]
+- ["SY", "hashValue"]
+- ["SY", "init"]
+- ["SY", "rawValue"]
+- ["SY", "signIn"]
+- ["SY", "signUp"]
+- ["SY", "splash"]
 - !private ["6Drinkz36RegistrationSplashPageViewControllerC", ""]
 - !private ["6Drinkz36RegistrationSplashPageViewControllerC", "init"]
 - !private ["6Drinkz35RegistrationWithEmailViewControllerC", ""]
@@ -128,51 +182,56 @@ depends-member:
 - !private ["6Drinkz13SceneDelegateC", "rootViewController"]
 - !private ["6Drinkz13SceneDelegateC", "shared"]
 - ["6Drinkz09SignInAndB7UpPropsO", "Action"]
-- ["6Drinkz09SignInAndB7UpPropsO", "ActionProvider"]
-- ["6Drinkz09SignInAndB7UpPropsO", "Bool"]
+- ["6Drinkz09SignInAndB7UpPropsO", "ButtonIndex"]
+- !private ["6Drinkz09SignInAndB7UpPropsO", "HomePageViewController"]
 - !private ["6Drinkz09SignInAndB7UpPropsO", "LoginViewController"]
 - !private ["6Drinkz09SignInAndB7UpPropsO", "RegistrationSplashPageViewController"]
 - !private ["6Drinkz09SignInAndB7UpPropsO", "RegistrationWithEmailViewController"]
 - !private ["6Drinkz09SignInAndB7UpPropsO", "SceneDelegate"]
 - !private ["6Drinkz09SignInAndB7UpPropsO", "SignInSplashPageViewController"]
 - ["6Drinkz09SignInAndB7UpPropsO", "String"]
+- !private ["6Drinkz09SignInAndB7UpPropsO", "UINavigationController"]
 - ["6Drinkz09SignInAndB7UpPropsO", "UserAction"]
+- !private ["6Drinkz09SignInAndB7UpPropsO", "_findStringSwitchCase"]
+- !private ["6Drinkz09SignInAndB7UpPropsO", "findStringSwitchCase"]
 - ["6Drinkz09SignInAndB7UpPropsO", "getButtonText"]
 - ["6Drinkz09SignInAndB7UpPropsO", "getCenterTitleText"]
+- ["6Drinkz09SignInAndB7UpPropsO", "getRawValue"]
 - ["6Drinkz09SignInAndB7UpPropsO", "launchNewViewController"]
 - !private ["6Drinkz30SignInSplashPageViewControllerC", ""]
 - !private ["6Drinkz30SignInSplashPageViewControllerC", "init"]
+- !private ["s13SignedNumericP", ""]
+- !private ["Sx", ""]
+- !private ["So40UIAdaptivePresentationControllerDelegateP", ""]
+- !private ["So40UIAdaptivePresentationControllerDelegateP", "init"]
 - !private ["So21UIAppearanceContainerP", "current"]
 - !private ["So21UIAppearanceContainerP", "init"]
-- !private ["So21UIAppearanceContainerP", "navigationController"]
 - !private ["So21UIAppearanceContainerP", "pushViewController"]
 - ["So8UIButtonC", ""]
 - !private ["So18UIContentContainerP", "current"]
 - !private ["So18UIContentContainerP", "init"]
-- !private ["So18UIContentContainerP", "navigationController"]
 - !private ["So18UIContentContainerP", "pushViewController"]
 - ["So9UIControlC", ""]
 - !private ["So18UIFocusEnvironmentP", "current"]
 - !private ["So18UIFocusEnvironmentP", "init"]
-- !private ["So18UIFocusEnvironmentP", "navigationController"]
 - !private ["So18UIFocusEnvironmentP", "pushViewController"]
+- !private ["So10UIKeyInputP", ""]
 - !private ["So22UINavigationControllerC", "pushViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "current"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
-- !private ["So30UIPasteConfigurationSupportingP", "navigationController"]
 - !private ["So30UIPasteConfigurationSupportingP", "pushViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "rootViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "shared"]
+- !private ["So39UIPopoverPresentationControllerDelegateP", "init"]
 - ["So11UIResponderC", ""]
 - !private ["So11UIResponderC", "current"]
 - !private ["So11UIResponderC", "init"]
-- !private ["So11UIResponderC", "navigationController"]
 - !private ["So11UIResponderC", "pushViewController"]
 - !private ["So11UIResponderC", "rootViewController"]
 - !private ["So11UIResponderC", "shared"]
 - !private ["So30UIResponderStandardEditActionsP", "current"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
-- !private ["So30UIResponderStandardEditActionsP", "navigationController"]
 - !private ["So30UIResponderStandardEditActionsP", "pushViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "rootViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "shared"]
@@ -181,15 +240,15 @@ depends-member:
 - !private ["So15UISceneDelegateP", "shared"]
 - !private ["So16UIStateRestoringP", "current"]
 - !private ["So16UIStateRestoringP", "init"]
-- !private ["So16UIStateRestoringP", "navigationController"]
 - !private ["So16UIStateRestoringP", "pushViewController"]
+- !private ["So11UITextInputP", ""]
+- !private ["So17UITextInputTraitsP", ""]
+- !private ["So34UITextPasteConfigurationSupportingP", ""]
 - !private ["So18UITraitEnvironmentP", "current"]
 - !private ["So18UITraitEnvironmentP", "init"]
-- !private ["So18UITraitEnvironmentP", "navigationController"]
 - !private ["So18UITraitEnvironmentP", "pushViewController"]
 - !private ["So23UIUserActivityRestoringP", "current"]
 - !private ["So23UIUserActivityRestoringP", "init"]
-- !private ["So23UIUserActivityRestoringP", "navigationController"]
 - !private ["So23UIUserActivityRestoringP", "pushViewController"]
 - !private ["So23UIUserActivityRestoringP", "rootViewController"]
 - !private ["So23UIUserActivityRestoringP", "shared"]
@@ -197,39 +256,47 @@ depends-member:
 - ["So16UIViewControllerC", ""]
 - !private ["So16UIViewControllerC", "current"]
 - !private ["So16UIViewControllerC", "init"]
-- !private ["So16UIViewControllerC", "navigationController"]
 - !private ["So16UIViewControllerC", "pushViewController"]
 - !private ["So21UIWindowSceneDelegateP", "rootViewController"]
 - !private ["So21UIWindowSceneDelegateP", "shared"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
-- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "current"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "pushViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "rootViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "current"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "navigationController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "pushViewController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "rootViewController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
 depends-nominal:
 - "6Drinkz09SignInAndB7UpPropsO6ActionO"
-- "6Drinkz09SignInAndB7UpPropsO14ActionProviderO"
+- !private "s18AdditiveArithmeticP"
+- "6Drinkz09SignInAndB7UpPropsO11ButtonIndexO"
 - !private "s7CVarArgP"
+- !private "SL"
 - !private "s28CustomDebugStringConvertibleP"
 - !private "s23CustomStringConvertibleP"
 - "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "SF"
 - "SH"
 - !private "s6HasherV"
+- !private "6Drinkz22HomePageViewControllerC"
 - !private "6Drinkz19LoginViewControllerC"
 - !private "So8NSCodingP"
 - !private "So26NSExtensionRequestHandlingP"
 - "So8NSObjectC"
 - !private "So8NSObjectP"
+- !private "6Drinkz25NewBusinessPickedProtocolP"
+- !private "Sj"
+- "SY"
 - !private "6Drinkz36RegistrationSplashPageViewControllerC"
 - !private "6Drinkz35RegistrationWithEmailViewControllerC"
 - !private "6Drinkz18RootViewControllerC"
@@ -237,25 +304,34 @@ depends-nominal:
 - !private "6Drinkz13SceneDelegateC"
 - "6Drinkz09SignInAndB7UpPropsO"
 - !private "6Drinkz30SignInSplashPageViewControllerC"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "So40UIAdaptivePresentationControllerDelegateP"
 - !private "So21UIAppearanceContainerP"
 - "So8UIButtonC"
 - !private "So18UIContentContainerP"
 - "So9UIControlC"
 - !private "So18UIFocusEnvironmentP"
+- !private "So10UIKeyInputP"
 - !private "So22UINavigationControllerC"
 - !private "So30UIPasteConfigurationSupportingP"
+- !private "So39UIPopoverPresentationControllerDelegateP"
 - "So11UIResponderC"
 - !private "So30UIResponderStandardEditActionsP"
 - !private "So15UISceneDelegateP"
 - !private "So16UIStateRestoringP"
+- !private "So11UITextInputP"
+- !private "So17UITextInputTraitsP"
+- !private "So34UITextPasteConfigurationSupportingP"
 - !private "So18UITraitEnvironmentP"
 - !private "So23UIUserActivityRestoringP"
 - "So6UIViewC"
 - "So16UIViewControllerC"
 - !private "So21UIWindowSceneDelegateP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
-- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
 - !private "10Foundation27_KeyValueCodingAndObservingP"
 - !private "10Foundation37_KeyValueCodingAndObservingPublishingP"
 depends-dynamic-lookup:
@@ -360,4 +436,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "94741e43a00a989ba35189f7e4f6127e"
+interface-hash: "f7ff9afac5d88926b982aaa0a280ef0b"

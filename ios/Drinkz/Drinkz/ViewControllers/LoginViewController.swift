@@ -14,18 +14,58 @@ import CoreData
 class LoginViewController: UIViewController {
     @UsesAutoLayout var signInButtonsStackView = UIStackView()
     @UsesAutoLayout var letsGetStartedStackView = UIStackView()
-    @UsesAutoLayout var letsGetStartedLabel = UILabel()
+    @UsesAutoLayout var letsGetStartedLabel : UILabel
+        = {
+            if UIViewController.screenSize.height <= 667 {
+                let smallFontUILabel = UILabel()
+                smallFontUILabel.font =  UIFont(name: "Charter-Roman", size: 24.0)
+                return smallFontUILabel
+            }
+            else {
+                let largeFontUILabel = UILabel()
+                largeFontUILabel.font = UIFont(name: "Charter-Roman", size: 30.0)
+                return largeFontUILabel
+            }
+        }()
     @UsesAutoLayout var ellipsisLabel = UILabel()
-    @UsesAutoLayout var signInToQuickBevLabel = UILabel()
-    @UsesAutoLayout var moonImageView = UIImageView()
+    @UsesAutoLayout var signInToQuickBevLabel: UILabel  = {
+        if UIViewController.screenSize.height <= 667 {
+            let smallFontUILabel = UILabel()
+            smallFontUILabel.font =  UIFont(name: "Charter-Roman", size: 18.0)
+            return smallFontUILabel
+        }
+        else {
+            let largeFontUILabel = UILabel()
+            largeFontUILabel.font = UIFont(name: "Charter-Roman", size: 24.0)
+            return largeFontUILabel
+        }
+    }()
+    @UsesAutoLayout var logoImageView = UIImageView()
     @UsesAutoLayout var emailAddressLabel = UILabel()
     @UsesAutoLayout var emailTextField = UITextField()
     @UsesAutoLayout var passwordLabel = UILabel()
     @UsesAutoLayout var passwordTextField = UITextField()
     @UsesAutoLayout var forgotPasswordButton = UIButton()
     @UsesAutoLayout var submitButton = RoundButton()
+    
     @UsesAutoLayout private var activityIndicator = UIActivityIndicatorView(style: .large)
-    let moonImage = UIImage(named:"moon")
+    lazy var logoMultiplier: Float = { if UIViewController.screenSize.height <= 700 {
+        return 0.565217
+    }
+    else {
+        return 0.65
+    }
+    }()
+    
+    lazy var centerLabelBool: Bool = { if UIViewController.screenSize.height <= 700 {
+        return false
+    }
+    else {
+        return true
+    }
+    }()
+    
+    let logoImage = UIImage(named:"charterRomanPurpleLogo-30")
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -38,15 +78,12 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.addSubview(activityIndicator)
+        
         activityIndicator.frame = view.bounds
         activityIndicator.backgroundColor = UIColor(white: 0, alpha: 0.4)
         
-        navigationController?.view.backgroundColor = navigationController?.navigationBar.barTintColor
-        
         letsGetStartedLabel.text = "Let's Get Started"
-        letsGetStartedLabel.font = UIFont(name: "Charter-Roman", size: 32.0)
         letsGetStartedLabel.textAlignment = .center
         
         ellipsisLabel.text = "· · ·"
@@ -54,17 +91,16 @@ class LoginViewController: UIViewController {
         ellipsisLabel.textAlignment = .center
         
         signInToQuickBevLabel.text = "SIGN IN TO QUICKBEV"
-        signInToQuickBevLabel.font = UIFont(name: "Charter-Roman", size: 20.0)
         signInToQuickBevLabel.textAlignment = .center
         
         emailAddressLabel.text = "Email Address"
-        emailAddressLabel.font = UIFont(name: "Charter-Roman", size: 20.0)
+        emailAddressLabel.font = UIFont.themeLabelFont
         emailTextField.borderStyle = .roundedRect
         emailTextField.autocapitalizationType = .none
         emailTextField.backgroundColor = UIColor.clear
         
         passwordLabel.text = "Password"
-        passwordLabel.font = UIFont(name: "Charter-Roman", size: 20.0)
+        passwordLabel.font = UIFont.themeLabelFont
         passwordTextField.borderStyle = .roundedRect
         passwordTextField.autocapitalizationType = .none
         passwordTextField.backgroundColor = UIColor.clear
@@ -73,10 +109,8 @@ class LoginViewController: UIViewController {
         forgotPasswordButton.titleLabel?.font = UIFont(name: "Charter-Roman", size: 18.0)
         forgotPasswordButton.setTitleColor(.black, for: .normal)
         forgotPasswordButton.contentHorizontalAlignment = .center
-        forgotPasswordButton.setContentHuggingPriority(UILayoutPriority(249), for: .vertical)
-        forgotPasswordButton.setContentHuggingPriority(UILayoutPriority(250), for: .horizontal)
         
-        moonImageView.image = moonImage
+        logoImageView.image = logoImage
         
         letsGetStartedStackView.axis = .vertical
         letsGetStartedStackView.addArrangedSubview(letsGetStartedLabel)
@@ -98,34 +132,42 @@ class LoginViewController: UIViewController {
         submitButton.titleLabel?.font = UIFont(name: "Charter-Black", size: 20.0)
         submitButton.refreshColor(color:  UIColor.init(red: 134/255, green: 130/255, blue: 230/255, alpha: 1.0))
         
-        self.view.addSubview(moonImageView)
+        self.view.addSubview(logoImageView)
         self.view.addSubview(letsGetStartedStackView)
         self.view.addSubview(signInButtonsStackView)
         self.view.bringSubviewToFront(activityIndicator
         )
-        let margins = self.view.safeAreaLayoutGuide
+        let safeArea = self.view.safeAreaLayoutGuide
+        
+        if centerLabelBool {
+            letsGetStartedStackView.centerYAnchor.constraint(equalTo: safeArea.centerYAnchor).isActive = true
+        }
         NSLayoutConstraint.activate([
-            moonImageView.widthAnchor.constraint(equalTo: margins.widthAnchor, multiplier: 0.565217),
-            moonImageView.topAnchor.constraint(equalTo: margins.topAnchor, constant: 10.0),
-            moonImageView.heightAnchor.constraint(equalTo: moonImageView.widthAnchor),
-            moonImageView.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
-            moonImageView.bottomAnchor.constraint(equalTo:letsGetStartedStackView.topAnchor , constant: -10.0),
-            moonImageView.topAnchor.constraint(equalTo: margins.topAnchor, constant: 40.0).usingPriority(UILayoutPriority(750)),
+            logoImageView.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: CGFloat(logoMultiplier)),
+            logoImageView.heightAnchor.constraint(equalTo: logoImageView.widthAnchor),
+            logoImageView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
+            logoImageView.bottomAnchor.constraint(lessThanOrEqualTo :letsGetStartedStackView.topAnchor , constant: -10.0),
+            logoImageView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: (0.025 * UIViewController.screenSize.height)),
             
-            letsGetStartedStackView.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
-            letsGetStartedStackView.topAnchor.constraint(equalTo: moonImageView.bottomAnchor, constant: 20.0).usingPriority(UILayoutPriority(750)),
+            letsGetStartedStackView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
             
-            signInButtonsStackView.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
-            signInButtonsStackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -10.0),
-            signInButtonsStackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 10.0),
-            signInButtonsStackView.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -10.0).usingPriority(UILayoutPriority(750)),
-            signInButtonsStackView.topAnchor.constraint(equalTo: letsGetStartedStackView.bottomAnchor, constant: 128.0).usingPriority(UILayoutPriority(250)),
-            signInButtonsStackView.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
+            letsGetStartedStackView.bottomAnchor.constraint(lessThanOrEqualTo: signInButtonsStackView.topAnchor, constant: (-(0.06 * UIViewController.screenSize.height))),
+            letsGetStartedStackView.heightAnchor.constraint(greaterThanOrEqualTo: safeArea.heightAnchor, multiplier: 0.12),
+            
+            signInButtonsStackView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
+            signInButtonsStackView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -10.0),
+            signInButtonsStackView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 10.0),
+            signInButtonsStackView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -20.0),
+            signInButtonsStackView.heightAnchor.constraint(greaterThanOrEqualTo: safeArea.heightAnchor, multiplier: 0.25),
+            signInButtonsStackView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
+            
+            forgotPasswordButton.heightAnchor.constraint(equalTo: safeArea.heightAnchor, multiplier: 0.07),
             emailTextField.widthAnchor.constraint(equalTo: emailTextField.heightAnchor, multiplier: (197/25)),
             passwordTextField.widthAnchor.constraint(equalTo: passwordTextField.heightAnchor, multiplier: (197/25)),
             submitButton.widthAnchor.constraint(equalTo: submitButton.heightAnchor, multiplier: (197/25)),
-            activityIndicator.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
-            activityIndicator.centerYAnchor.constraint(equalTo: margins.centerYAnchor),
+            
+            activityIndicator.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: safeArea.centerYAnchor),
             activityIndicator.widthAnchor.constraint(equalTo: activityIndicator.superview!.widthAnchor),
             activityIndicator.heightAnchor.constraint(equalTo: activityIndicator.superview!.heightAnchor)
         ])
@@ -143,7 +185,6 @@ class LoginViewController: UIViewController {
                 CheckoutCart.shared.user = nil
                 // TODO: Make a pretty little error message that appears if your login was incorrect - base it off of Instagram or FB maybe?
                 self.activityIndicator.stopAnimating()
-                
                 print("data returned from submit button is nill")
                 return
             }
@@ -190,6 +231,9 @@ class LoginViewController: UIViewController {
                     print("error case .failure", error)
                 }
             }
+    }
+    override func viewDidLayoutSubviews() {
+        print("height", letsGetStartedStackView.frame.size.height)
     }
 }
 

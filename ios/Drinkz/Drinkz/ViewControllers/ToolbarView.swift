@@ -16,17 +16,19 @@ class ToolbarView: UIView {
     @UsesAutoLayout var homeButton = UIButton()
     
     var shouldSetupConstraints = true
-    let screenSize = UIScreen.main.bounds
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     private lazy var navigationController: UINavigationController = {
         return SceneDelegate.shared.rootViewController.current as! UINavigationController
     }()
+    
     private lazy var rootViewController: RootViewController = {
         return SceneDelegate.shared.rootViewController
     }()
+    
     override init(frame: CGRect){
         super.init(frame: frame)
         self.addSubview(bottomButtonsStackView)

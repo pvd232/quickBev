@@ -25,7 +25,7 @@ depends-member:
 - !private ["s18AdditiveArithmeticP", ""]
 - !private ["9Alamofire0A8ExtendedP", "count"]
 - !private ["Sa", "count"]
-- !private ["SK", ""]
+- ["SK", ""]
 - !private ["SK", "count"]
 - !private ["So15CALayerDelegateP", "dequeueReusableCell"]
 - !private ["So15CALayerDelegateP", "dequeueReusableCellWithIdentifier"]
@@ -39,9 +39,9 @@ depends-member:
 - !private ["s7CVarArgP", "viewDidLoad"]
 - !private ["6Drinkz12CheckoutCartC", "cart"]
 - !private ["6Drinkz12CheckoutCartC", "shared"]
-- !private ["Sl", ""]
+- ["Sl", ""]
 - !private ["Sl", "count"]
-- !private ["SL", ""]
+- ["SL", ""]
 - !private ["10Foundation15ContiguousBytesP", "count"]
 - !private ["s28CustomDebugStringConvertibleP", "CheckoutCart"]
 - ["s28CustomDebugStringConvertibleP", ""]
@@ -71,8 +71,12 @@ depends-member:
 - !private ["SQ", "viewDidLoad"]
 - !private ["s25ExpressibleByArrayLiteralP", ""]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", ""]
+- ["s32ExpressibleByStringInterpolationP", ""]
+- ["s26ExpressibleByStringLiteralP", ""]
+- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["SF", ""]
 - !private ["SH", "CheckoutCart"]
 - ["SH", ""]
@@ -83,6 +87,7 @@ depends-member:
 - !private ["SH", "viewDidLoad"]
 - !private ["s12IdentifiableP", "cart"]
 - !private ["s12IdentifiableP", "shared"]
+- ["s25LosslessStringConvertibleP", ""]
 - !private ["SM", ""]
 - !private ["SM", "count"]
 - !private ["10Foundation19MutableDataProtocolP", "count"]
@@ -110,6 +115,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - !private ["So20NSFetchRequestResultP", "cart"]
 - !private ["So20NSFetchRequestResultP", "shared"]
+- ["So15NSManagedObjectC", ""]
 - !private ["So15NSManagedObjectC", "cart"]
 - !private ["So15NSManagedObjectC", "shared"]
 - !private ["So8NSObjectC", "CheckoutCart"]
@@ -129,6 +135,7 @@ depends-member:
 - !private ["So8NSObjectP", "CheckoutCart"]
 - ["So8NSObjectP", "DrinkTableViewCell"]
 - ["So8NSObjectP", "IndexPath"]
+- ["So8NSObjectP", "Int"]
 - ["So8NSObjectP", "UITableView"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "cart"]
@@ -157,10 +164,12 @@ depends-member:
 - !private ["Sk", "count"]
 - !private ["Sm", ""]
 - !private ["Sm", "count"]
-- !private ["ST", ""]
+- ["ST", ""]
 - !private ["ST", "count"]
 - !private ["s13SignedNumericP", ""]
 - !private ["Sx", ""]
+- ["s16TextOutputStreamP", ""]
+- ["s20TextOutputStreamableP", ""]
 - !private ["So29UIAccessibilityIdentificationP", "dequeueReusableCell"]
 - !private ["So29UIAccessibilityIdentificationP", "dequeueReusableCellWithIdentifier"]
 - !private ["So12UIAppearanceP", "dequeueReusableCell"]
@@ -217,6 +226,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "CheckoutCart"]
 - ["So30UIPasteConfigurationSupportingP", "DrinkTableViewCell"]
 - ["So30UIPasteConfigurationSupportingP", "IndexPath"]
+- ["So30UIPasteConfigurationSupportingP", "Int"]
 - ["So30UIPasteConfigurationSupportingP", "UITableView"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "dequeueReusableCell"]
@@ -240,6 +250,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "CheckoutCart"]
 - ["So30UIResponderStandardEditActionsP", "DrinkTableViewCell"]
 - ["So30UIResponderStandardEditActionsP", "IndexPath"]
+- ["So30UIResponderStandardEditActionsP", "Int"]
 - ["So30UIResponderStandardEditActionsP", "UITableView"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "dequeueReusableCell"]
@@ -319,6 +330,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "CheckoutCart"]
 - ["So23UIUserActivityRestoringP", "DrinkTableViewCell"]
 - ["So23UIUserActivityRestoringP", "IndexPath"]
+- ["So23UIUserActivityRestoringP", "Int"]
 - ["So23UIUserActivityRestoringP", "UITableView"]
 - ["So23UIUserActivityRestoringP", ""]
 - !private ["So23UIUserActivityRestoringP", "dequeueReusableCell"]
@@ -342,8 +354,10 @@ depends-member:
 - ["So16UIViewControllerC", "viewDidLoad"]
 - !private ["s14_ArrayProtocolP", "count"]
 - !private ["s24_DestructorSafeContainerP", "count"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s19_HasContiguousBytesP", "count"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CheckoutCart"]
@@ -364,13 +378,13 @@ depends-nominal:
 - !private "s18AdditiveArithmeticP"
 - !private "9Alamofire0A8ExtendedP"
 - !private "Sa"
-- !private "SK"
+- "SK"
 - !private "So15CALayerDelegateP"
 - !private "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
 - !private "6Drinkz12CheckoutCartC"
-- !private "Sl"
-- !private "SL"
+- "Sl"
+- "SL"
 - !private "10Foundation15ContiguousBytesP"
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
@@ -380,17 +394,22 @@ depends-nominal:
 - !private "SE"
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
+- "s32ExpressibleByStringInterpolationP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "SF"
 - "SH"
 - !private "s12IdentifiableP"
+- "s25LosslessStringConvertibleP"
 - !private "SM"
 - !private "10Foundation19MutableDataProtocolP"
 - "So8NSCodingP"
 - "So26NSExtensionRequestHandlingP"
 - !private "So20NSFetchRequestResultP"
-- !private "So15NSManagedObjectC"
+- "So15NSManagedObjectC"
 - "So8NSObjectC"
 - "So8NSObjectP"
 - !private "Sj"
@@ -398,9 +417,11 @@ depends-nominal:
 - "6Drinkz24OrderTableViewControllerC"
 - !private "Sk"
 - !private "Sm"
-- !private "ST"
+- "ST"
 - !private "s13SignedNumericP"
 - !private "Sx"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
@@ -432,8 +453,10 @@ depends-nominal:
 - "So16UIViewControllerC"
 - !private "s14_ArrayProtocolP"
 - !private "s24_DestructorSafeContainerP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"

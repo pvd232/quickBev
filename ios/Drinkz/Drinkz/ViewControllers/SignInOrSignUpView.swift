@@ -17,12 +17,12 @@ class SignInOrSignUpView: UIView {
     }()
     
     var shouldSetupConstraints = true
-    var signInProps: SignInAndSignUpProps
-    let moonImage = UIImage(named:"moon")
+    var viewProps: SignInAndSignUpProps
+    let logoImage = UIImage(named:"charterRomanPurpleLogo-30")
     
-    @UsesAutoLayout var moonImageView = UIImageView()
+    @UsesAutoLayout var logoImageView = UIImageView()
     @UsesAutoLayout var centerLabel :UILabel = {
-        if UIViewController.screenSize.height < 667 {
+        if UIViewController.screenSize.height <= 667 {
                 let smallFontUILabel = UILabel()
                 smallFontUILabel.font =  UIFont(name: "Charter-Roman", size: 26.0)
                 return smallFontUILabel
@@ -33,33 +33,53 @@ class SignInOrSignUpView: UIView {
                 return largeFontUILabel
             }
     }()
+    
+    lazy var logoMultiplier: Float = { if UIViewController.screenSize.height <= 700 {
+        return 0.565217
+        }
+        else {
+            return 0.65
+        }
+    }()
+    
     @UsesAutoLayout var optionsStackView = UIStackView()
     @UsesAutoLayout var firstButton = RoundButton()
     @UsesAutoLayout var secondButton = RoundButton()
     @UsesAutoLayout var thirdButton = RoundButton()
     @UsesAutoLayout var orLabel = UILabel()
+    
     init(frame: CGRect, props: SignInAndSignUpProps){
         // have to initialize view controller properties before calling super.init
-        signInProps = props
-
+        viewProps = props
         super.init(frame: frame)
-        self.addSubview(moonImageView)
+        self.addSubview(logoImageView)
         self.addSubview(centerLabel)
         self.addSubview(optionsStackView)
         
-        moonImageView.image = moonImage
+        logoImageView.image = logoImage
+        logoImageView.layer.cornerRadius = 20.0
+        logoImageView.clipsToBounds = true
+        logoImageView.contentMode = .scaleToFill
+        
         optionsStackView.axis = .vertical
         optionsStackView.spacing = 14.0
         
-        firstButton.refreshTitle(newTitle: props.getButtonText(actionProvider: SignInAndSignUpProps.ActionProvider.fb))
+        firstButton.refreshTitle(newTitle: props.getButtonText(buttonIndex: SignInAndSignUpProps.ButtonIndex.first))
         firstButton.titleLabel?.font = UIFont(name: "Charter-Black", size: 20.0)
         firstButton.refreshColor(color:  UIColor.themeColor)
         
-        secondButton.refreshTitle(newTitle: props.getButtonText(actionProvider: SignInAndSignUpProps.ActionProvider.google))
-        secondButton.refreshColor(color:  UIColor.white)
+        secondButton.refreshTitle(newTitle: props.getButtonText(buttonIndex: SignInAndSignUpProps.ButtonIndex.second))
+        if props.getRawValue() == "splash"{
+            secondButton.refreshColor(color:  UIColor.themeColor)
+            secondButton.setTitleColor(UIColor.white, for: .normal)
+
+        }
+        else {
+            secondButton.refreshColor(color: UIColor.white)
+            secondButton.setTitleColor(UIColor.black, for: .normal)
+        }
         secondButton.titleLabel?.font = UIFont(name: "Charter-Black", size: 20.0)
-        secondButton.setTitleColor(UIColor.black, for: .normal)
-        thirdButton.refreshTitle(newTitle: props.getButtonText(actionProvider: SignInAndSignUpProps.ActionProvider.quickBev))
+        thirdButton.refreshTitle(newTitle: props.getButtonText(buttonIndex: SignInAndSignUpProps.ButtonIndex.third))
         thirdButton.titleLabel?.font = UIFont(name: "Charter-Black", size: 20.0)
         thirdButton.refreshColor(color:  UIColor.init(red: 134/255, green: 130/255, blue: 230/255, alpha: 1.0))
         
@@ -69,6 +89,8 @@ class SignInOrSignUpView: UIView {
         
         centerLabel.text = props.getCenterTitleText()
         centerLabel.textAlignment = .center
+        centerLabel.textColor = UIColor.black
+        
         
         optionsStackView.addArrangedSubview(firstButton)
         optionsStackView.addArrangedSubview(secondButton)
@@ -77,23 +99,20 @@ class SignInOrSignUpView: UIView {
         
         let safeArea = self.safeAreaLayoutGuide
         NSLayoutConstraint.activate([
-            moonImageView.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.45 ),
-
-            moonImageView.heightAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.45),
-            moonImageView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: (0.11 * UIViewController.screenSize.height)),
-            moonImageView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
+            logoImageView.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: CGFloat(logoMultiplier)  ),
+            logoImageView.heightAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: CGFloat(logoMultiplier)),
+            logoImageView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: (0.025 * UIViewController.screenSize.height)),
+            logoImageView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
             
         firstButton.widthAnchor.constraint(equalTo: firstButton.heightAnchor, multiplier: (197/25)),
-            
         secondButton.widthAnchor.constraint(equalTo: secondButton.heightAnchor, multiplier: (197/25)),
-
         thirdButton.widthAnchor.constraint(equalTo: thirdButton.heightAnchor, multiplier: (197/25)),
 
         optionsStackView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -10.0),
         optionsStackView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -20.0),
         optionsStackView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 10.0),
 
-        centerLabel.centerYAnchor.constraint(equalTo: safeArea.centerYAnchor),
+            centerLabel.centerYAnchor.constraint(equalTo: safeArea.centerYAnchor),
         centerLabel.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
         centerLabel.heightAnchor.constraint(equalTo: safeArea.heightAnchor, multiplier: 0.07),
             ])
@@ -112,13 +131,14 @@ class SignInOrSignUpView: UIView {
     }
     
     @objc func firstButtonTouchUp () {
-        signInProps.launchNewViewController(actionProvider: SignInAndSignUpProps.ActionProvider.fb, splash: true)
+
+        viewProps.launchNewViewController(buttonIndex: SignInAndSignUpProps.ButtonIndex.first)
     }
     @objc func secondButtonTouchUp () {
-        signInProps.launchNewViewController(actionProvider: SignInAndSignUpProps.ActionProvider.google, splash: true)
+        viewProps.launchNewViewController(buttonIndex:  SignInAndSignUpProps.ButtonIndex.second)
     }
     @objc func thirdButtonTouchUp () {
-        signInProps.launchNewViewController(actionProvider: SignInAndSignUpProps.ActionProvider.quickBev, splash: true)
+        viewProps.launchNewViewController(buttonIndex: SignInAndSignUpProps.ButtonIndex.third)
     }
 }
 

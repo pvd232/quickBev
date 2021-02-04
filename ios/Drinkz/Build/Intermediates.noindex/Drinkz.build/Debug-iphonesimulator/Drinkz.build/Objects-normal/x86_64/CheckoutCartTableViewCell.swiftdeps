@@ -33,11 +33,12 @@ depends-top-level:
 - !private "fatalError"
 - !private "name"
 depends-member:
+- !private ["s18AdditiveArithmeticP", ""]
 - !private ["So20UIStackViewAlignmentV", "fill"]
 - !private ["So22UILayoutConstraintAxisV", "horizontal"]
+- !private ["SK", ""]
 - ["So15CALayerDelegateP", "Bool"]
 - ["So15CALayerDelegateP", "CellStyle"]
-- ["So15CALayerDelegateP", "NSCoder"]
 - !private ["So15CALayerDelegateP", "NSLayoutConstraint"]
 - ["So15CALayerDelegateP", "String"]
 - !private ["So15CALayerDelegateP", "UIFont"]
@@ -124,6 +125,8 @@ depends-member:
 - ["6Drinkz25CheckoutCartTableViewCellC", "init"]
 - ["6Drinkz25CheckoutCartTableViewCellC", "name"]
 - ["6Drinkz25CheckoutCartTableViewCellC", "setSelected"]
+- !private ["Sl", ""]
+- !private ["SL", ""]
 - !private ["So17UIViewContentModeV", "scaleToFill"]
 - ["s28CustomDebugStringConvertibleP", "CellStyle"]
 - !private ["s28CustomDebugStringConvertibleP", "NSLayoutConstraint"]
@@ -232,10 +235,17 @@ depends-member:
 - !private ["SQ", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["SQ", "widthAnchor"]
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
+- !private ["s25ExpressibleByFloatLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
+- !private ["s27ExpressibleByIntegerLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["SF", ""]
 - ["SH", "CellStyle"]
 - !private ["SH", "NSLayoutConstraint"]
 - !private ["SH", "UIFont"]
@@ -273,9 +283,9 @@ depends-member:
 - !private ["SH", "trailingAnchor"]
 - !private ["SH", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["SH", "widthAnchor"]
+- !private ["s25LosslessStringConvertibleP", ""]
 - ["So8NSCodingP", "Bool"]
 - ["So8NSCodingP", "CellStyle"]
-- ["So8NSCodingP", "NSCoder"]
 - !private ["So8NSCodingP", "NSLayoutConstraint"]
 - ["So8NSCodingP", "String"]
 - !private ["So8NSCodingP", "UIFont"]
@@ -348,7 +358,6 @@ depends-member:
 - ["So8NSObjectC", "UITableViewCell"]
 - ["So8NSObjectC", ""]
 - !private ["So8NSObjectC", "activate"]
-- !private ["So8NSObjectC", "activateConstraints"]
 - !private ["So8NSObjectC", "addArrangedSubview"]
 - !private ["So8NSObjectC", "addSubview"]
 - !private ["So8NSObjectC", "alignment"]
@@ -371,6 +380,8 @@ depends-member:
 - ["So8NSObjectC", "drinkImageView"]
 - !private ["So8NSObjectC", "fatalError"]
 - !private ["So8NSObjectC", "font"]
+- !private ["So8NSObjectC", "fontWithDescriptor"]
+- !private ["So8NSObjectC", "fontWithName"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "leadingAnchor"]
 - ["So8NSObjectC", "name"]
@@ -381,16 +392,17 @@ depends-member:
 - !private ["So8NSObjectC", "trailingAnchor"]
 - !private ["So8NSObjectC", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So8NSObjectC", "widthAnchor"]
+- ["So8NSObjectP", "Bool"]
 - ["So8NSObjectP", "CellStyle"]
-- ["So8NSObjectP", "NSCoder"]
 - !private ["So8NSObjectP", "NSLayoutConstraint"]
+- ["So8NSObjectP", "String"]
 - !private ["So8NSObjectP", "UIFont"]
 - ["So8NSObjectP", "UIImageView"]
 - ["So8NSObjectP", "UILabel"]
 - !private ["So8NSObjectP", "UIStackView"]
+- ["So8NSObjectP", "UITableViewCell"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "activate"]
-- !private ["So8NSObjectP", "activateConstraints"]
 - !private ["So8NSObjectP", "addArrangedSubview"]
 - !private ["So8NSObjectP", "addSubview"]
 - !private ["So8NSObjectP", "alignment"]
@@ -410,6 +422,8 @@ depends-member:
 - ["So8NSObjectP", "drinkImageView"]
 - !private ["So8NSObjectP", "fatalError"]
 - !private ["So8NSObjectP", "font"]
+- !private ["So8NSObjectP", "fontWithDescriptor"]
+- !private ["So8NSObjectP", "fontWithName"]
 - ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "leadingAnchor"]
 - ["So8NSObjectP", "name"]
@@ -420,9 +434,15 @@ depends-member:
 - !private ["So8NSObjectP", "trailingAnchor"]
 - !private ["So8NSObjectP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So8NSObjectP", "widthAnchor"]
+- !private ["Sj", ""]
 - !private ["SY", "fill"]
 - !private ["SY", "horizontal"]
 - !private ["SY", "scaleToFill"]
+- !private ["ST", ""]
+- !private ["s13SignedNumericP", ""]
+- !private ["Sx", ""]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s20TextOutputStreamableP", ""]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "bottomAnchor"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "clipsToBounds"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "contentMode"]
@@ -434,7 +454,6 @@ depends-member:
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "widthAnchor"]
 - ["So29UIAccessibilityIdentificationP", "Bool"]
 - ["So29UIAccessibilityIdentificationP", "CellStyle"]
-- ["So29UIAccessibilityIdentificationP", "NSCoder"]
 - !private ["So29UIAccessibilityIdentificationP", "NSLayoutConstraint"]
 - ["So29UIAccessibilityIdentificationP", "String"]
 - !private ["So29UIAccessibilityIdentificationP", "UIFont"]
@@ -470,7 +489,6 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "widthAnchor"]
 - ["So12UIAppearanceP", "Bool"]
 - ["So12UIAppearanceP", "CellStyle"]
-- ["So12UIAppearanceP", "NSCoder"]
 - !private ["So12UIAppearanceP", "NSLayoutConstraint"]
 - ["So12UIAppearanceP", "String"]
 - !private ["So12UIAppearanceP", "UIFont"]
@@ -506,7 +524,6 @@ depends-member:
 - !private ["So12UIAppearanceP", "widthAnchor"]
 - ["So21UIAppearanceContainerP", "Bool"]
 - ["So21UIAppearanceContainerP", "CellStyle"]
-- ["So21UIAppearanceContainerP", "NSCoder"]
 - !private ["So21UIAppearanceContainerP", "NSLayoutConstraint"]
 - ["So21UIAppearanceContainerP", "String"]
 - !private ["So21UIAppearanceContainerP", "UIFont"]
@@ -546,7 +563,6 @@ depends-member:
 - !private ["So30UIContentSizeCategoryAdjustingP", "translatesAutoresizingMaskIntoConstraints"]
 - ["So17UICoordinateSpaceP", "Bool"]
 - ["So17UICoordinateSpaceP", "CellStyle"]
-- ["So17UICoordinateSpaceP", "NSCoder"]
 - !private ["So17UICoordinateSpaceP", "NSLayoutConstraint"]
 - ["So17UICoordinateSpaceP", "String"]
 - !private ["So17UICoordinateSpaceP", "UIFont"]
@@ -582,7 +598,6 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "widthAnchor"]
 - ["So13UIDynamicItemP", "Bool"]
 - ["So13UIDynamicItemP", "CellStyle"]
-- ["So13UIDynamicItemP", "NSCoder"]
 - !private ["So13UIDynamicItemP", "NSLayoutConstraint"]
 - ["So13UIDynamicItemP", "String"]
 - !private ["So13UIDynamicItemP", "UIFont"]
@@ -618,7 +633,6 @@ depends-member:
 - !private ["So13UIDynamicItemP", "widthAnchor"]
 - ["So18UIFocusEnvironmentP", "Bool"]
 - ["So18UIFocusEnvironmentP", "CellStyle"]
-- ["So18UIFocusEnvironmentP", "NSCoder"]
 - !private ["So18UIFocusEnvironmentP", "NSLayoutConstraint"]
 - ["So18UIFocusEnvironmentP", "String"]
 - !private ["So18UIFocusEnvironmentP", "UIFont"]
@@ -654,7 +668,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "widthAnchor"]
 - ["So11UIFocusItemP", "Bool"]
 - ["So11UIFocusItemP", "CellStyle"]
-- ["So11UIFocusItemP", "NSCoder"]
 - !private ["So11UIFocusItemP", "NSLayoutConstraint"]
 - ["So11UIFocusItemP", "String"]
 - !private ["So11UIFocusItemP", "UIFont"]
@@ -690,7 +703,6 @@ depends-member:
 - !private ["So11UIFocusItemP", "widthAnchor"]
 - ["So20UIFocusItemContainerP", "Bool"]
 - ["So20UIFocusItemContainerP", "CellStyle"]
-- ["So20UIFocusItemContainerP", "NSCoder"]
 - !private ["So20UIFocusItemContainerP", "NSLayoutConstraint"]
 - ["So20UIFocusItemContainerP", "String"]
 - !private ["So20UIFocusItemContainerP", "UIFont"]
@@ -759,7 +771,6 @@ depends-member:
 - !private ["So7UILabelC", "translatesAutoresizingMaskIntoConstraints"]
 - ["So24UILargeContentViewerItemP", "Bool"]
 - ["So24UILargeContentViewerItemP", "CellStyle"]
-- ["So24UILargeContentViewerItemP", "NSCoder"]
 - !private ["So24UILargeContentViewerItemP", "NSLayoutConstraint"]
 - ["So24UILargeContentViewerItemP", "String"]
 - !private ["So24UILargeContentViewerItemP", "UIFont"]
@@ -798,13 +809,15 @@ depends-member:
 - !private ["So13UILayoutGuideC", "leadingAnchor"]
 - !private ["So13UILayoutGuideC", "topAnchor"]
 - !private ["So13UILayoutGuideC", "widthAnchor"]
+- ["So30UIPasteConfigurationSupportingP", "Bool"]
 - ["So30UIPasteConfigurationSupportingP", "CellStyle"]
-- ["So30UIPasteConfigurationSupportingP", "NSCoder"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSLayoutConstraint"]
+- ["So30UIPasteConfigurationSupportingP", "String"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIFont"]
 - ["So30UIPasteConfigurationSupportingP", "UIImageView"]
 - ["So30UIPasteConfigurationSupportingP", "UILabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIStackView"]
+- ["So30UIPasteConfigurationSupportingP", "UITableViewCell"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "addArrangedSubview"]
 - !private ["So30UIPasteConfigurationSupportingP", "addSubview"]
@@ -867,13 +880,15 @@ depends-member:
 - !private ["So11UIResponderC", "trailingAnchor"]
 - !private ["So11UIResponderC", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So11UIResponderC", "widthAnchor"]
+- ["So30UIResponderStandardEditActionsP", "Bool"]
 - ["So30UIResponderStandardEditActionsP", "CellStyle"]
-- ["So30UIResponderStandardEditActionsP", "NSCoder"]
 - !private ["So30UIResponderStandardEditActionsP", "NSLayoutConstraint"]
+- ["So30UIResponderStandardEditActionsP", "String"]
 - !private ["So30UIResponderStandardEditActionsP", "UIFont"]
 - ["So30UIResponderStandardEditActionsP", "UIImageView"]
 - ["So30UIResponderStandardEditActionsP", "UILabel"]
 - !private ["So30UIResponderStandardEditActionsP", "UIStackView"]
+- ["So30UIResponderStandardEditActionsP", "UITableViewCell"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "addArrangedSubview"]
 - !private ["So30UIResponderStandardEditActionsP", "addSubview"]
@@ -932,7 +947,6 @@ depends-member:
 - ["So15UITableViewCellC", "setSelected"]
 - ["So18UITraitEnvironmentP", "Bool"]
 - ["So18UITraitEnvironmentP", "CellStyle"]
-- ["So18UITraitEnvironmentP", "NSCoder"]
 - !private ["So18UITraitEnvironmentP", "NSLayoutConstraint"]
 - ["So18UITraitEnvironmentP", "String"]
 - !private ["So18UITraitEnvironmentP", "UIFont"]
@@ -966,13 +980,15 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "trailingAnchor"]
 - !private ["So18UITraitEnvironmentP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So18UITraitEnvironmentP", "widthAnchor"]
+- ["So23UIUserActivityRestoringP", "Bool"]
 - ["So23UIUserActivityRestoringP", "CellStyle"]
-- ["So23UIUserActivityRestoringP", "NSCoder"]
 - !private ["So23UIUserActivityRestoringP", "NSLayoutConstraint"]
+- ["So23UIUserActivityRestoringP", "String"]
 - !private ["So23UIUserActivityRestoringP", "UIFont"]
 - ["So23UIUserActivityRestoringP", "UIImageView"]
 - ["So23UIUserActivityRestoringP", "UILabel"]
 - !private ["So23UIUserActivityRestoringP", "UIStackView"]
+- ["So23UIUserActivityRestoringP", "UITableViewCell"]
 - ["So23UIUserActivityRestoringP", ""]
 - !private ["So23UIUserActivityRestoringP", "addArrangedSubview"]
 - !private ["So23UIUserActivityRestoringP", "addSubview"]
@@ -1036,9 +1052,11 @@ depends-member:
 - !private ["So6UIViewC", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So6UIViewC", "widthAnchor"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - ["10Foundation27_KeyValueCodingAndObservingP", "CellStyle"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSLayoutConstraint"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIFont"]
@@ -1140,20 +1158,30 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "widthAnchor"]
 depends-nominal:
+- !private "s18AdditiveArithmeticP"
 - !private "So20UIStackViewAlignmentV"
 - !private "So22UILayoutConstraintAxisV"
+- !private "SK"
 - "So15CALayerDelegateP"
 - "s7CVarArgP"
 - "6Drinkz25CheckoutCartTableViewCellC"
+- !private "Sl"
+- !private "SL"
 - !private "So17UIViewContentModeV"
 - "s28CustomDebugStringConvertibleP"
 - "s23CustomStringConvertibleP"
 - !private "So23UIStackViewDistributionV"
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "SF"
 - "SH"
+- !private "s25LosslessStringConvertibleP"
 - "So8NSCodingP"
 - !private "So9NSCopyingP"
 - "So14NSLayoutAnchorC"
@@ -1163,7 +1191,13 @@ depends-nominal:
 - !private "So19NSLayoutYAxisAnchorC"
 - "So8NSObjectC"
 - "So8NSObjectP"
+- !private "Sj"
 - !private "SY"
+- !private "ST"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
 - "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
@@ -1189,9 +1223,11 @@ depends-nominal:
 - "So23UIUserActivityRestoringP"
 - "So6UIViewC"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"
 - "s38__DefaultCustomPlaygroundQuickLookableP"

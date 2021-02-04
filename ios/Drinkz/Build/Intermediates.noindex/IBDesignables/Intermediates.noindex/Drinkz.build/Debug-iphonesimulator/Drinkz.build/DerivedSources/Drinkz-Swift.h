@@ -505,6 +505,7 @@ SWIFT_CLASS("_TtC6Drinkz19LoginViewController")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidLoad;
+- (void)viewDidLayoutSubviews;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
@@ -575,9 +576,10 @@ SWIFT_CLASS("_TtC6Drinkz24OrderTableViewController")
 
 SWIFT_CLASS("_TtC6Drinkz36RegistrationSplashPageViewController")
 @interface RegistrationSplashPageViewController : UIViewController
-- (void)viewDidLoad;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
 @class UITextField;
@@ -656,14 +658,22 @@ SWIFT_CLASS("_TtC6Drinkz13SceneDelegate")
 @end
 
 
+SWIFT_CLASS("_TtC6Drinkz18SignInOrSignUpView")
+@interface SignInOrSignUpView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (void)updateConstraints;
+- (void)firstButtonTouchUp;
+- (void)secondButtonTouchUp;
+- (void)thirdButtonTouchUp;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC6Drinkz30SignInSplashPageViewController")
 @interface SignInSplashPageViewController : UIViewController
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidLoad;
-- (void)signInWithFacebookButtonTouchup;
-- (void)signInWithGoogleButtonTouchup;
-- (void)signInWithEmailButtonTouchup;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
@@ -673,9 +683,6 @@ SWIFT_CLASS("_TtC6Drinkz24SplashPageViewController")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidLoad;
-- (void)signInButtonTouchup;
-- (void)createAQuickBevAccountButtonTouchup;
-- (void)continueAsGuestButtonTouchup;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 

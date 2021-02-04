@@ -110,8 +110,6 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
         navigationBarStackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(launchBusinessViewController)))
         
         // initialize checkout cart
-        print("CheckoutCart.shared.stripeId", CheckoutCart.shared.stripeId)
-        print("CheckoutCart.shared.businessArray count", CheckoutCart.shared.businessArray.count)
         // this triggers the StripeAPI to call the create customer key function, sending the existing stripe id of the user returned from logging in as a parameter
         let _ = CheckoutCart.customerContext
         if CheckoutCart.shared.user == nil {
