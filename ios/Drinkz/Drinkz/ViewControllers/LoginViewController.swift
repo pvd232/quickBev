@@ -16,27 +16,27 @@ class LoginViewController: UIViewController {
     @UsesAutoLayout var letsGetStartedStackView = UIStackView()
     @UsesAutoLayout var letsGetStartedLabel : UILabel
         = {
-            if UIViewController.screenSize.height <= 667 {
+            if UIViewController.screenSize.height <= 736 {
                 let smallFontUILabel = UILabel()
-                smallFontUILabel.font =  UIFont(name: "Charter-Roman", size: 24.0)
+                smallFontUILabel.font =  UIFont(name: "Charter-Roman", size: 25.0)
                 return smallFontUILabel
             }
             else {
                 let largeFontUILabel = UILabel()
-                largeFontUILabel.font = UIFont(name: "Charter-Roman", size: 30.0)
+                largeFontUILabel.font = UIFont(name: "Charter-Roman", size: 31.0)
                 return largeFontUILabel
             }
         }()
     @UsesAutoLayout var ellipsisLabel = UILabel()
     @UsesAutoLayout var signInToQuickBevLabel: UILabel  = {
-        if UIViewController.screenSize.height <= 667 {
+        if UIViewController.screenSize.height <= 736 {
             let smallFontUILabel = UILabel()
-            smallFontUILabel.font =  UIFont(name: "Charter-Roman", size: 18.0)
+            smallFontUILabel.font =  UIFont(name: "Charter-Roman", size: 19.0)
             return smallFontUILabel
         }
         else {
             let largeFontUILabel = UILabel()
-            largeFontUILabel.font = UIFont(name: "Charter-Roman", size: 24.0)
+            largeFontUILabel.font = UIFont(name: "Charter-Roman", size: 25.0)
             return largeFontUILabel
         }
     }()
@@ -47,9 +47,9 @@ class LoginViewController: UIViewController {
     @UsesAutoLayout var passwordTextField = UITextField()
     @UsesAutoLayout var forgotPasswordButton = UIButton()
     @UsesAutoLayout var submitButton = RoundButton()
-    
     @UsesAutoLayout private var activityIndicator = UIActivityIndicatorView(style: .large)
-    lazy var logoMultiplier: Float = { if UIViewController.screenSize.height <= 700 {
+    
+    lazy var logoMultiplier: Float = { if UIViewController.screenSize.height <= 736 {
         return 0.565217
     }
     else {
@@ -57,7 +57,7 @@ class LoginViewController: UIViewController {
     }
     }()
     
-    lazy var centerLabelBool: Bool = { if UIViewController.screenSize.height <= 700 {
+    lazy var centerLabelBool: Bool = { if UIViewController.screenSize.height <= 736 {
         return false
     }
     else {
@@ -147,11 +147,11 @@ class LoginViewController: UIViewController {
             logoImageView.heightAnchor.constraint(equalTo: logoImageView.widthAnchor),
             logoImageView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
             logoImageView.bottomAnchor.constraint(lessThanOrEqualTo :letsGetStartedStackView.topAnchor , constant: -10.0),
-            logoImageView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: (0.025 * UIViewController.screenSize.height)),
+            logoImageView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: (0.02 * UIViewController.screenSize.height)),
             
             letsGetStartedStackView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
             
-            letsGetStartedStackView.bottomAnchor.constraint(lessThanOrEqualTo: signInButtonsStackView.topAnchor, constant: (-(0.06 * UIViewController.screenSize.height))),
+            letsGetStartedStackView.bottomAnchor.constraint(lessThanOrEqualTo: signInButtonsStackView.topAnchor, constant: (-(0.07 * UIViewController.screenSize.height))),
             letsGetStartedStackView.heightAnchor.constraint(greaterThanOrEqualTo: safeArea.heightAnchor, multiplier: 0.12),
             
             signInButtonsStackView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),

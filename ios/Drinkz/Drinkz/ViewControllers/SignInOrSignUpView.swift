@@ -22,7 +22,7 @@ class SignInOrSignUpView: UIView {
     
     @UsesAutoLayout var logoImageView = UIImageView()
     @UsesAutoLayout var centerLabel :UILabel = {
-        if UIViewController.screenSize.height <= 667 {
+        if UIViewController.screenSize.height <= 736 {
                 let smallFontUILabel = UILabel()
                 smallFontUILabel.font =  UIFont(name: "Charter-Roman", size: 26.0)
                 return smallFontUILabel
@@ -34,7 +34,8 @@ class SignInOrSignUpView: UIView {
             }
     }()
     
-    lazy var logoMultiplier: Float = { if UIViewController.screenSize.height <= 700 {
+    lazy var logoMultiplier: Float = { if UIViewController.screenSize.height <= 736 {
+        print("wee")
         return 0.565217
         }
         else {
@@ -99,9 +100,9 @@ class SignInOrSignUpView: UIView {
         
         let safeArea = self.safeAreaLayoutGuide
         NSLayoutConstraint.activate([
-            logoImageView.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: CGFloat(logoMultiplier)  ),
+            logoImageView.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: CGFloat(logoMultiplier) ),
             logoImageView.heightAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: CGFloat(logoMultiplier)),
-            logoImageView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: (0.025 * UIViewController.screenSize.height)),
+            logoImageView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: (0.02 * UIViewController.screenSize.height)),
             logoImageView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
             
         firstButton.widthAnchor.constraint(equalTo: firstButton.heightAnchor, multiplier: (197/25)),
