@@ -9,12 +9,17 @@ provides-dynamic-lookup:
 - "add"
 - "addPresence"
 - "channels"
+- "channelsInternal"
+- "channelsQueue"
 - "find"
 - "findPresence"
 - "remove"
 depends-top-level:
 - "AssignmentPrecedence"
 - "CastingPrecedence"
+- "DispatchQueue"
+- "FloatLiteralType"
+- "IntegerLiteralType"
 - "NSObject"
 - "PusherAuth"
 - "PusherChannel"
@@ -24,78 +29,140 @@ depends-top-level:
 - "PusherPresenceChannel"
 - "PusherPresenceChannelMember"
 - "String"
+- "StringLiteralType"
+- "UUID"
 - "Void"
+- "channelsInternal"
+- !private "channelsQueue"
 depends-member:
+- ["So17OS_dispatch_queueC8DispatchE10AttributesV", "concurrent"]
+- ["s7CVarArgP", "DispatchQueue"]
 - ["s7CVarArgP", "PusherChannel"]
 - !private ["s7CVarArgP", "PusherChannelType"]
 - !private ["s7CVarArgP", "PusherPresenceChannel"]
 - ["s7CVarArgP", "String"]
+- ["s7CVarArgP", "UUID"]
 - ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "async"]
 - !private ["s7CVarArgP", "channels"]
+- !private ["s7CVarArgP", "channelsInternal"]
+- !private ["s7CVarArgP", "channelsQueue"]
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "remove"]
 - !private ["s7CVarArgP", "removeValue"]
 - !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "sync"]
 - ["Sl", "init"]
 - !private ["Sl", "removeValue"]
 - !private ["Sl", "subscript"]
+- ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
 - ["s28CustomDebugStringConvertibleP", "PusherChannel"]
 - !private ["s28CustomDebugStringConvertibleP", "PusherChannelType"]
 - !private ["s28CustomDebugStringConvertibleP", "PusherPresenceChannel"]
 - ["s28CustomDebugStringConvertibleP", "String"]
+- ["s28CustomDebugStringConvertibleP", "UUID"]
 - ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
 - !private ["s28CustomDebugStringConvertibleP", "channels"]
+- !private ["s28CustomDebugStringConvertibleP", "channelsInternal"]
+- !private ["s28CustomDebugStringConvertibleP", "channelsQueue"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "remove"]
 - !private ["s28CustomDebugStringConvertibleP", "removeValue"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "sync"]
+- ["s28CustomDebugStringConvertibleP", "uuidString"]
 - ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "removeValue"]
 - !private ["s17CustomReflectableP", "subscript"]
+- ["s17CustomReflectableP", "uuidString"]
+- ["s23CustomStringConvertibleP", "DispatchQueue"]
 - ["s23CustomStringConvertibleP", "PusherChannel"]
 - !private ["s23CustomStringConvertibleP", "PusherChannelType"]
 - !private ["s23CustomStringConvertibleP", "PusherPresenceChannel"]
 - ["s23CustomStringConvertibleP", "String"]
+- ["s23CustomStringConvertibleP", "UUID"]
 - ["s23CustomStringConvertibleP", ""]
+- ["s23CustomStringConvertibleP", "appendInterpolation"]
+- ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["s23CustomStringConvertibleP", "async"]
 - !private ["s23CustomStringConvertibleP", "channels"]
+- !private ["s23CustomStringConvertibleP", "channelsInternal"]
+- !private ["s23CustomStringConvertibleP", "channelsQueue"]
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "remove"]
 - !private ["s23CustomStringConvertibleP", "removeValue"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "sync"]
+- ["s23CustomStringConvertibleP", "uuidString"]
 - ["Se", "init"]
 - !private ["Se", "removeValue"]
 - !private ["Se", "subscript"]
+- ["Se", "uuidString"]
+- ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- ["s26DefaultStringInterpolationV", "appendLiteral"]
 - ["SD", "init"]
 - !private ["SD", "removeValue"]
 - !private ["SD", "subscript"]
+- ["So18OS_dispatch_objectC", ""]
+- !private ["So18OS_dispatch_objectC", "async"]
+- ["So18OS_dispatch_objectC", "init"]
+- !private ["So18OS_dispatch_objectC", "sync"]
+- !private ["So17OS_dispatch_queueC", "async"]
+- ["So17OS_dispatch_queueC", "init"]
+- !private ["So17OS_dispatch_queueC", "sync"]
+- !private ["8Dispatch0A13WorkItemFlagsV", "barrier"]
 - ["SE", "init"]
 - !private ["SE", "removeValue"]
 - !private ["SE", "subscript"]
+- ["SE", "uuidString"]
+- ["SQ", "DispatchQueue"]
 - ["SQ", "PusherChannel"]
 - !private ["SQ", "PusherChannelType"]
 - !private ["SQ", "PusherPresenceChannel"]
 - ["SQ", "String"]
+- ["SQ", "UUID"]
 - ["SQ", ""]
+- !private ["SQ", "async"]
+- !private ["SQ", "barrier"]
 - !private ["SQ", "channels"]
+- !private ["SQ", "channelsInternal"]
+- !private ["SQ", "channelsQueue"]
+- ["SQ", "concurrent"]
 - ["SQ", "init"]
 - !private ["SQ", "isPresenceChannel"]
 - !private ["SQ", "remove"]
 - !private ["SQ", "removeValue"]
 - !private ["SQ", "subscript"]
+- !private ["SQ", "sync"]
+- ["SQ", "uuidString"]
+- ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "barrier"]
+- ["s25ExpressibleByArrayLiteralP", "concurrent"]
 - ["s30ExpressibleByDictionaryLiteralP", "init"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "removeValue"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
+- ["s32ExpressibleByStringInterpolationP", "init"]
+- ["SH", "DispatchQueue"]
 - ["SH", "PusherChannel"]
 - !private ["SH", "PusherChannelType"]
 - !private ["SH", "PusherPresenceChannel"]
 - ["SH", "String"]
+- ["SH", "UUID"]
 - ["SH", ""]
+- !private ["SH", "async"]
 - !private ["SH", "channels"]
+- !private ["SH", "channelsInternal"]
+- !private ["SH", "channelsQueue"]
 - ["SH", "init"]
 - !private ["SH", "isPresenceChannel"]
 - !private ["SH", "remove"]
 - !private ["SH", "removeValue"]
 - !private ["SH", "subscript"]
+- !private ["SH", "sync"]
+- ["SH", "uuidString"]
+- ["So8NSObjectC", "DispatchQueue"]
 - ["So8NSObjectC", "PusherAuth"]
 - ["So8NSObjectC", "PusherChannel"]
 - !private ["So8NSObjectC", "PusherChannelType"]
@@ -103,30 +170,48 @@ depends-member:
 - ["So8NSObjectC", "PusherPresenceChannel"]
 - ["So8NSObjectC", "PusherPresenceChannelMember"]
 - ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "UUID"]
 - ["So8NSObjectC", "Void"]
 - ["So8NSObjectC", ""]
 - ["So8NSObjectC", "add"]
 - ["So8NSObjectC", "addPresence"]
+- !private ["So8NSObjectC", "async"]
 - ["So8NSObjectC", "channels"]
+- ["So8NSObjectC", "channelsInternal"]
+- ["So8NSObjectC", "channelsQueue"]
 - ["So8NSObjectC", "find"]
 - ["So8NSObjectC", "findPresence"]
 - ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "remove"]
+- !private ["So8NSObjectC", "sync"]
+- ["So8NSObjectP", "DispatchQueue"]
 - ["So8NSObjectP", "PusherChannel"]
 - !private ["So8NSObjectP", "PusherChannelType"]
 - !private ["So8NSObjectP", "PusherPresenceChannel"]
 - ["So8NSObjectP", "String"]
+- ["So8NSObjectP", "UUID"]
 - ["So8NSObjectP", ""]
 - ["So8NSObjectP", "add"]
 - ["So8NSObjectP", "addPresence"]
+- !private ["So8NSObjectP", "async"]
 - ["So8NSObjectP", "channels"]
+- ["So8NSObjectP", "channelsInternal"]
+- ["So8NSObjectP", "channelsQueue"]
 - ["So8NSObjectP", "find"]
 - ["So8NSObjectP", "findPresence"]
 - ["So8NSObjectP", "init"]
 - ["So8NSObjectP", "remove"]
+- !private ["So8NSObjectP", "sync"]
+- ["So9OS_objectC", ""]
+- !private ["So9OS_objectC", "async"]
+- ["So9OS_objectC", "init"]
+- !private ["So9OS_objectC", "sync"]
+- !private ["s9OptionSetP", "barrier"]
+- ["s9OptionSetP", "concurrent"]
 - ["11PusherSwift0A7ChannelC", ""]
 - !private ["11PusherSwift0A7ChannelC", "init"]
 - !private ["11PusherSwift0A11ChannelTypeO", "isPresenceChannel"]
+- ["11PusherSwift0A8ChannelsC", "DispatchQueue"]
 - ["11PusherSwift0A8ChannelsC", "PusherAuth"]
 - ["11PusherSwift0A8ChannelsC", "PusherChannel"]
 - !private ["11PusherSwift0A8ChannelsC", "PusherChannelType"]
@@ -134,62 +219,117 @@ depends-member:
 - ["11PusherSwift0A8ChannelsC", "PusherPresenceChannel"]
 - ["11PusherSwift0A8ChannelsC", "PusherPresenceChannelMember"]
 - ["11PusherSwift0A8ChannelsC", "String"]
+- ["11PusherSwift0A8ChannelsC", "UUID"]
 - ["11PusherSwift0A8ChannelsC", "Void"]
 - ["11PusherSwift0A8ChannelsC", ""]
 - ["11PusherSwift0A8ChannelsC", "add"]
 - ["11PusherSwift0A8ChannelsC", "addPresence"]
 - ["11PusherSwift0A8ChannelsC", "channels"]
+- !private ["11PusherSwift0A8ChannelsC", "channelsInternal"]
+- !private ["11PusherSwift0A8ChannelsC", "channelsQueue"]
 - ["11PusherSwift0A8ChannelsC", "deinit"]
 - ["11PusherSwift0A8ChannelsC", "find"]
 - ["11PusherSwift0A8ChannelsC", "findPresence"]
 - ["11PusherSwift0A8ChannelsC", "init"]
 - ["11PusherSwift0A8ChannelsC", "remove"]
 - !private ["11PusherSwift0A15PresenceChannelC", "init"]
+- ["SY", ""]
+- !private ["SY", "barrier"]
+- ["SY", "concurrent"]
+- ["10Foundation20ReferenceConvertibleP", "init"]
+- ["10Foundation20ReferenceConvertibleP", "uuidString"]
+- !private ["7Combine9SchedulerP", "async"]
+- ["7Combine9SchedulerP", "init"]
+- !private ["7Combine9SchedulerP", "sync"]
 - ["ST", ""]
 - ["ST", "init"]
 - !private ["ST", "removeValue"]
 - !private ["ST", "subscript"]
+- ["s10SetAlgebraP", ""]
+- !private ["s10SetAlgebraP", "barrier"]
+- ["s10SetAlgebraP", "concurrent"]
+- ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- ["s27StringInterpolationProtocolP", "appendLiteral"]
+- ["s27StringInterpolationProtocolP", "init"]
+- ["s16TextOutputStreamP", "appendInterpolation"]
+- ["s16TextOutputStreamP", "appendLiteral"]
+- ["10Foundation4UUIDV", "init"]
+- ["10Foundation4UUIDV", "uuidString"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "removeValue"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "PusherChannel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "PusherChannelType"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "PusherPresenceChannel"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "String"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "UUID"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "channels"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "channelsInternal"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "channelsQueue"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "remove"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sync"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "DispatchQueue"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PusherChannel"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PusherChannelType"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PusherPresenceChannel"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "String"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UUID"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "async"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "channels"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "channelsInternal"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "channelsQueue"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "remove"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sync"]
+- ["s21_ObjectiveCBridgeableP", ""]
 - ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "removeValue"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- ["s21_ObjectiveCBridgeableP", "uuidString"]
 depends-nominal:
+- "So17OS_dispatch_queueC8DispatchE10AttributesV"
 - "s7CVarArgP"
 - "Sl"
 - "s28CustomDebugStringConvertibleP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - "Se"
+- "s26DefaultStringInterpolationV"
 - "SD"
+- "So18OS_dispatch_objectC"
+- "So17OS_dispatch_queueC"
+- !private "8Dispatch0A13WorkItemFlagsV"
 - "SE"
 - "SQ"
+- "s25ExpressibleByArrayLiteralP"
 - "s30ExpressibleByDictionaryLiteralP"
+- "s32ExpressibleByStringInterpolationP"
 - "SH"
 - "So8NSObjectC"
 - "So8NSObjectP"
+- "So9OS_objectC"
+- "s9OptionSetP"
 - "11PusherSwift0A7ChannelC"
 - !private "11PusherSwift0A11ChannelTypeO"
 - "11PusherSwift0A8ChannelsC"
 - !private "11PusherSwift0A15PresenceChannelC"
+- "SY"
+- "10Foundation20ReferenceConvertibleP"
+- "7Combine9SchedulerP"
 - "ST"
+- "s10SetAlgebraP"
+- "s27StringInterpolationProtocolP"
+- "s16TextOutputStreamP"
+- "10Foundation4UUIDV"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
 - "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"
@@ -238,4 +378,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "a5908728ce8967de6a50ac4969f76319"
+interface-hash: "8844bce3e64638490eefc8d750132cd5"

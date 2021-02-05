@@ -21,7 +21,7 @@ enum SignInAndSignUpProps {
     case UserAction(action: Action)
     func getButtonText(buttonIndex: ButtonIndex) -> String {
         switch self {
-        case let .UserAction(action):
+        case .UserAction(let action):
             switch action {
             case Action.signIn:
                 switch buttonIndex {

@@ -42,13 +42,14 @@ provides-dynamic-lookup:
 - "viewDidLayoutSubviews"
 - "viewDidLoad"
 depends-top-level:
-- "!="
 - !private "*"
 - !private "-"
 - !private "/"
 - "<="
 - "=="
-- !private "AF"
+- !private "APIClient"
+- "APIError"
+- "APIRequest"
 - !private "Array"
 - "AssignmentPrecedence"
 - "Bool"
@@ -57,12 +58,11 @@ depends-top-level:
 - !private "CastingPrecedence"
 - "CheckoutCart"
 - "CoreDataManager"
-- !private "Dictionary"
+- "DispatchQueue"
 - "Float"
 - "FloatLiteralType"
-- "HTTPHeaders"
+- "HTTPHeader"
 - "IntegerLiteralType"
-- "JSONDecoder"
 - "LoginViewController"
 - "NSCoder"
 - !private "NSLayoutConstraint"
@@ -70,6 +70,8 @@ depends-top-level:
 - "SceneDelegate"
 - "StringLiteralType"
 - "UIActivityIndicatorView"
+- "UIAlertAction"
+- "UIAlertController"
 - "UIButton"
 - !private "UIColor"
 - "UIFont"
@@ -101,9 +103,19 @@ depends-top-level:
 - !private "signInToQuickBevLabel"
 - !private "submitButton"
 - !private "submitButtonPressed"
-- !private "validateUser"
 - !private "view"
 depends-member:
+- !private ["6Drinkz9APIClientV", "init"]
+- !private ["6Drinkz9APIClientV", "perform"]
+- !private ["6Drinkz8APIErrorO", "requestFailed"]
+- !private ["6Drinkz8APIErrorO", "resourceNotFound"]
+- !private ["6Drinkz10APIRequestC", "headers"]
+- !private ["6Drinkz10APIRequestC", "init"]
+- !private ["6Drinkz11APIResponseV", "body"]
+- !private ["6Drinkz11APIResponseV", "decode"]
+- !private ["6Drinkz11APIResponseV", "statusCode"]
+- !private ["6Drinkz9APIResultO", "failure"]
+- !private ["6Drinkz9APIResultO", "success"]
 - ["s18AdditiveArithmeticP", ""]
 - !private ["s18AdditiveArithmeticP", "init"]
 - !private ["So22UILayoutConstraintAxisV", "vertical"]
@@ -160,15 +172,20 @@ depends-member:
 - ["So6CGRectV", "height"]
 - !private ["So6CGRectV", "size"]
 - !private ["So6CGSizeV", "height"]
-- !private ["s7CVarArgP", "AF"]
+- !private ["s7CVarArgP", "APIClient"]
+- !private ["s7CVarArgP", "APIError"]
+- !private ["s7CVarArgP", "APIRequest"]
 - !private ["s7CVarArgP", "CGFloat"]
 - !private ["s7CVarArgP", "CheckoutCart"]
 - !private ["s7CVarArgP", "CoreDataManager"]
-- !private ["s7CVarArgP", "JSONDecoder"]
+- !private ["s7CVarArgP", "DispatchQueue"]
+- !private ["s7CVarArgP", "HTTPHeader"]
 - !private ["s7CVarArgP", "NSLayoutConstraint"]
 - ["s7CVarArgP", "RoundButton"]
 - !private ["s7CVarArgP", "SceneDelegate"]
 - ["s7CVarArgP", "UIActivityIndicatorView"]
+- !private ["s7CVarArgP", "UIAlertAction"]
+- !private ["s7CVarArgP", "UIAlertController"]
 - ["s7CVarArgP", "UIButton"]
 - !private ["s7CVarArgP", "UIColor"]
 - ["s7CVarArgP", "UIFont"]
@@ -183,9 +200,11 @@ depends-member:
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "activate"]
 - !private ["s7CVarArgP", "activityIndicator"]
+- !private ["s7CVarArgP", "addAction"]
 - !private ["s7CVarArgP", "addArrangedSubview"]
 - !private ["s7CVarArgP", "addSubview"]
 - !private ["s7CVarArgP", "addTarget"]
+- !private ["s7CVarArgP", "async"]
 - !private ["s7CVarArgP", "autocapitalizationType"]
 - !private ["s7CVarArgP", "axis"]
 - !private ["s7CVarArgP", "backgroundColor"]
@@ -200,6 +219,7 @@ depends-member:
 - !private ["s7CVarArgP", "clear"]
 - !private ["s7CVarArgP", "constraint"]
 - !private ["s7CVarArgP", "contentHorizontalAlignment"]
+- !private ["s7CVarArgP", "dismiss"]
 - !private ["s7CVarArgP", "ellipsisLabel"]
 - !private ["s7CVarArgP", "email"]
 - !private ["s7CVarArgP", "emailAddressLabel"]
@@ -219,8 +239,10 @@ depends-member:
 - !private ["s7CVarArgP", "logoImage"]
 - !private ["s7CVarArgP", "logoImageView"]
 - !private ["s7CVarArgP", "logoMultiplier"]
+- !private ["s7CVarArgP", "main"]
 - !private ["s7CVarArgP", "passwordLabel"]
 - !private ["s7CVarArgP", "passwordTextField"]
+- !private ["s7CVarArgP", "present"]
 - !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "refreshColor"]
 - !private ["s7CVarArgP", "refreshTitle"]
@@ -273,15 +295,20 @@ depends-member:
 - !private ["6Drinkz15CoreDataManagerC", "persistentContainer"]
 - !private ["6Drinkz15CoreDataManagerC", "saveContext"]
 - !private ["6Drinkz15CoreDataManagerC", "sharedManager"]
-- !private ["s28CustomDebugStringConvertibleP", "AF"]
+- !private ["s28CustomDebugStringConvertibleP", "APIClient"]
+- !private ["s28CustomDebugStringConvertibleP", "APIError"]
+- !private ["s28CustomDebugStringConvertibleP", "APIRequest"]
 - !private ["s28CustomDebugStringConvertibleP", "CGFloat"]
 - !private ["s28CustomDebugStringConvertibleP", "CheckoutCart"]
 - !private ["s28CustomDebugStringConvertibleP", "CoreDataManager"]
-- !private ["s28CustomDebugStringConvertibleP", "JSONDecoder"]
+- !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
+- !private ["s28CustomDebugStringConvertibleP", "HTTPHeader"]
 - !private ["s28CustomDebugStringConvertibleP", "NSLayoutConstraint"]
 - ["s28CustomDebugStringConvertibleP", "RoundButton"]
 - !private ["s28CustomDebugStringConvertibleP", "SceneDelegate"]
 - ["s28CustomDebugStringConvertibleP", "UIActivityIndicatorView"]
+- !private ["s28CustomDebugStringConvertibleP", "UIAlertAction"]
+- !private ["s28CustomDebugStringConvertibleP", "UIAlertController"]
 - ["s28CustomDebugStringConvertibleP", "UIButton"]
 - !private ["s28CustomDebugStringConvertibleP", "UIColor"]
 - ["s28CustomDebugStringConvertibleP", "UIFont"]
@@ -296,9 +323,11 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "activate"]
 - !private ["s28CustomDebugStringConvertibleP", "activityIndicator"]
+- !private ["s28CustomDebugStringConvertibleP", "addAction"]
 - !private ["s28CustomDebugStringConvertibleP", "addArrangedSubview"]
 - !private ["s28CustomDebugStringConvertibleP", "addSubview"]
 - !private ["s28CustomDebugStringConvertibleP", "addTarget"]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
 - !private ["s28CustomDebugStringConvertibleP", "autocapitalizationType"]
 - !private ["s28CustomDebugStringConvertibleP", "axis"]
 - !private ["s28CustomDebugStringConvertibleP", "backgroundColor"]
@@ -307,14 +336,13 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "bottomAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "bounds"]
 - !private ["s28CustomDebugStringConvertibleP", "bringSubviewToFront"]
-- !private ["s28CustomDebugStringConvertibleP", "callAsFunction"]
 - !private ["s28CustomDebugStringConvertibleP", "centerLabelBool"]
 - !private ["s28CustomDebugStringConvertibleP", "centerXAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "centerYAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "clear"]
 - !private ["s28CustomDebugStringConvertibleP", "constraint"]
 - !private ["s28CustomDebugStringConvertibleP", "contentHorizontalAlignment"]
-- !private ["s28CustomDebugStringConvertibleP", "data"]
+- !private ["s28CustomDebugStringConvertibleP", "dismiss"]
 - !private ["s28CustomDebugStringConvertibleP", "ellipsisLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "email"]
 - !private ["s28CustomDebugStringConvertibleP", "emailAddressLabel"]
@@ -335,12 +363,13 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "logoImage"]
 - !private ["s28CustomDebugStringConvertibleP", "logoImageView"]
 - !private ["s28CustomDebugStringConvertibleP", "logoMultiplier"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
 - !private ["s28CustomDebugStringConvertibleP", "passwordLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "passwordTextField"]
+- !private ["s28CustomDebugStringConvertibleP", "present"]
 - !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "refreshColor"]
 - !private ["s28CustomDebugStringConvertibleP", "refreshTitle"]
-- !private ["s28CustomDebugStringConvertibleP", "result"]
 - !private ["s28CustomDebugStringConvertibleP", "rootViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "safeAreaLayoutGuide"]
 - ["s28CustomDebugStringConvertibleP", "screenSize"]
@@ -380,21 +409,25 @@ depends-member:
 - !private ["s17CustomReflectableP", "black"]
 - !private ["s17CustomReflectableP", "bounds"]
 - !private ["s17CustomReflectableP", "bringSubviewToFront"]
-- !private ["s17CustomReflectableP", "callAsFunction"]
 - ["s17CustomReflectableP", "height"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "safeAreaLayoutGuide"]
 - !private ["s17CustomReflectableP", "size"]
 - !private ["s17CustomReflectableP", "systemBackground"]
-- !private ["s23CustomStringConvertibleP", "AF"]
+- !private ["s23CustomStringConvertibleP", "APIClient"]
+- !private ["s23CustomStringConvertibleP", "APIError"]
+- !private ["s23CustomStringConvertibleP", "APIRequest"]
 - !private ["s23CustomStringConvertibleP", "CGFloat"]
 - !private ["s23CustomStringConvertibleP", "CheckoutCart"]
 - !private ["s23CustomStringConvertibleP", "CoreDataManager"]
-- !private ["s23CustomStringConvertibleP", "JSONDecoder"]
+- !private ["s23CustomStringConvertibleP", "DispatchQueue"]
+- !private ["s23CustomStringConvertibleP", "HTTPHeader"]
 - !private ["s23CustomStringConvertibleP", "NSLayoutConstraint"]
 - ["s23CustomStringConvertibleP", "RoundButton"]
 - !private ["s23CustomStringConvertibleP", "SceneDelegate"]
 - ["s23CustomStringConvertibleP", "UIActivityIndicatorView"]
+- !private ["s23CustomStringConvertibleP", "UIAlertAction"]
+- !private ["s23CustomStringConvertibleP", "UIAlertController"]
 - ["s23CustomStringConvertibleP", "UIButton"]
 - !private ["s23CustomStringConvertibleP", "UIColor"]
 - ["s23CustomStringConvertibleP", "UIFont"]
@@ -409,9 +442,11 @@ depends-member:
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "activate"]
 - !private ["s23CustomStringConvertibleP", "activityIndicator"]
+- !private ["s23CustomStringConvertibleP", "addAction"]
 - !private ["s23CustomStringConvertibleP", "addArrangedSubview"]
 - !private ["s23CustomStringConvertibleP", "addSubview"]
 - !private ["s23CustomStringConvertibleP", "addTarget"]
+- !private ["s23CustomStringConvertibleP", "async"]
 - !private ["s23CustomStringConvertibleP", "autocapitalizationType"]
 - !private ["s23CustomStringConvertibleP", "axis"]
 - !private ["s23CustomStringConvertibleP", "backgroundColor"]
@@ -426,7 +461,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "clear"]
 - !private ["s23CustomStringConvertibleP", "constraint"]
 - !private ["s23CustomStringConvertibleP", "contentHorizontalAlignment"]
-- !private ["s23CustomStringConvertibleP", "data"]
+- !private ["s23CustomStringConvertibleP", "dismiss"]
 - !private ["s23CustomStringConvertibleP", "ellipsisLabel"]
 - !private ["s23CustomStringConvertibleP", "email"]
 - !private ["s23CustomStringConvertibleP", "emailAddressLabel"]
@@ -446,13 +481,13 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "logoImage"]
 - !private ["s23CustomStringConvertibleP", "logoImageView"]
 - !private ["s23CustomStringConvertibleP", "logoMultiplier"]
+- !private ["s23CustomStringConvertibleP", "main"]
 - !private ["s23CustomStringConvertibleP", "passwordLabel"]
 - !private ["s23CustomStringConvertibleP", "passwordTextField"]
+- !private ["s23CustomStringConvertibleP", "present"]
 - !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "refreshColor"]
 - !private ["s23CustomStringConvertibleP", "refreshTitle"]
-- !private ["s23CustomStringConvertibleP", "response"]
-- !private ["s23CustomStringConvertibleP", "result"]
 - !private ["s23CustomStringConvertibleP", "rootViewController"]
 - !private ["s23CustomStringConvertibleP", "safeAreaLayoutGuide"]
 - ["s23CustomStringConvertibleP", "screenSize"]
@@ -479,7 +514,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "trailingAnchor"]
 - !private ["s23CustomStringConvertibleP", "user"]
 - !private ["s23CustomStringConvertibleP", "userId"]
-- !private ["s23CustomStringConvertibleP", "validate"]
 - !private ["s23CustomStringConvertibleP", "validateUser"]
 - !private ["s23CustomStringConvertibleP", "view"]
 - !private ["s23CustomStringConvertibleP", "viewContext"]
@@ -487,18 +521,11 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
 - !private ["s23CustomStringConvertibleP", "white"]
 - !private ["s23CustomStringConvertibleP", "widthAnchor"]
-- !private ["9Alamofire11DataDecoderP", "decode"]
-- !private ["9Alamofire11DataDecoderP", "init"]
-- !private ["9Alamofire11DataRequestC", "response"]
-- !private ["9Alamofire11DataRequestC", "validate"]
-- !private ["9Alamofire12DataResponseV", "data"]
-- !private ["9Alamofire12DataResponseV", "result"]
 - !private ["Se", "addSubview"]
 - !private ["Se", "backgroundColor"]
 - !private ["Se", "black"]
 - !private ["Se", "bounds"]
 - !private ["Se", "bringSubviewToFront"]
-- !private ["Se", "callAsFunction"]
 - !private ["Se", "email"]
 - ["Se", "height"]
 - !private ["Se", "id"]
@@ -507,12 +534,18 @@ depends-member:
 - !private ["Se", "size"]
 - !private ["Se", "stripeId"]
 - !private ["Se", "systemBackground"]
+- ["So18OS_dispatch_objectC", ""]
+- !private ["So18OS_dispatch_objectC", "async"]
+- !private ["So18OS_dispatch_objectC", "init"]
+- !private ["So18OS_dispatch_objectC", "main"]
+- !private ["So18OS_dispatch_objectC", "sync"]
+- !private ["So17OS_dispatch_queueC", "async"]
+- !private ["So17OS_dispatch_queueC", "main"]
 - !private ["SE", "addSubview"]
 - !private ["SE", "backgroundColor"]
 - !private ["SE", "black"]
 - !private ["SE", "bounds"]
 - !private ["SE", "bringSubviewToFront"]
-- !private ["SE", "callAsFunction"]
 - !private ["SE", "email"]
 - ["SE", "height"]
 - !private ["SE", "id"]
@@ -521,15 +554,20 @@ depends-member:
 - !private ["SE", "size"]
 - !private ["SE", "stripeId"]
 - !private ["SE", "systemBackground"]
-- !private ["SQ", "AF"]
+- !private ["SQ", "APIClient"]
+- !private ["SQ", "APIError"]
+- !private ["SQ", "APIRequest"]
 - !private ["SQ", "CGFloat"]
 - !private ["SQ", "CheckoutCart"]
 - !private ["SQ", "CoreDataManager"]
-- !private ["SQ", "JSONDecoder"]
+- !private ["SQ", "DispatchQueue"]
+- !private ["SQ", "HTTPHeader"]
 - !private ["SQ", "NSLayoutConstraint"]
 - ["SQ", "RoundButton"]
 - !private ["SQ", "SceneDelegate"]
 - ["SQ", "UIActivityIndicatorView"]
+- !private ["SQ", "UIAlertAction"]
+- !private ["SQ", "UIAlertController"]
 - ["SQ", "UIButton"]
 - !private ["SQ", "UIColor"]
 - ["SQ", "UIFont"]
@@ -544,9 +582,12 @@ depends-member:
 - ["SQ", ""]
 - !private ["SQ", "activate"]
 - !private ["SQ", "activityIndicator"]
+- !private ["SQ", "addAction"]
 - !private ["SQ", "addArrangedSubview"]
 - !private ["SQ", "addSubview"]
 - !private ["SQ", "addTarget"]
+- !private ["SQ", "alert"]
+- !private ["SQ", "async"]
 - !private ["SQ", "autocapitalizationType"]
 - !private ["SQ", "axis"]
 - !private ["SQ", "backgroundColor"]
@@ -555,7 +596,7 @@ depends-member:
 - !private ["SQ", "bottomAnchor"]
 - !private ["SQ", "bounds"]
 - !private ["SQ", "bringSubviewToFront"]
-- !private ["SQ", "callAsFunction"]
+- !private ["SQ", "cancel"]
 - !private ["SQ", "center"]
 - !private ["SQ", "centerLabelBool"]
 - !private ["SQ", "centerXAnchor"]
@@ -563,11 +604,11 @@ depends-member:
 - !private ["SQ", "clear"]
 - !private ["SQ", "constraint"]
 - !private ["SQ", "contentHorizontalAlignment"]
+- !private ["SQ", "dismiss"]
 - !private ["SQ", "ellipsisLabel"]
 - !private ["SQ", "email"]
 - !private ["SQ", "emailAddressLabel"]
 - !private ["SQ", "emailTextField"]
-- !private ["SQ", "failure"]
 - !private ["SQ", "fatalError"]
 - ["SQ", "font"]
 - !private ["SQ", "forgotPasswordButton"]
@@ -586,14 +627,17 @@ depends-member:
 - !private ["SQ", "logoImage"]
 - !private ["SQ", "logoImageView"]
 - !private ["SQ", "logoMultiplier"]
+- !private ["SQ", "main"]
 - !private ["SQ", "none"]
 - !private ["SQ", "normal"]
 - !private ["SQ", "passwordLabel"]
 - !private ["SQ", "passwordTextField"]
+- !private ["SQ", "present"]
 - !private ["SQ", "print"]
 - !private ["SQ", "refreshColor"]
 - !private ["SQ", "refreshTitle"]
-- !private ["SQ", "response"]
+- !private ["SQ", "requestFailed"]
+- !private ["SQ", "resourceNotFound"]
 - !private ["SQ", "rootViewController"]
 - !private ["SQ", "roundedRect"]
 - !private ["SQ", "safeAreaLayoutGuide"]
@@ -610,7 +654,6 @@ depends-member:
 - !private ["SQ", "stripeId"]
 - !private ["SQ", "submitButton"]
 - !private ["SQ", "submitButtonPressed"]
-- !private ["SQ", "success"]
 - !private ["SQ", "superview"]
 - !private ["SQ", "switchToHomePageViewController"]
 - !private ["SQ", "systemBackground"]
@@ -624,7 +667,6 @@ depends-member:
 - !private ["SQ", "trailingAnchor"]
 - !private ["SQ", "user"]
 - !private ["SQ", "userId"]
-- !private ["SQ", "validate"]
 - !private ["SQ", "validateUser"]
 - !private ["SQ", "vertical"]
 - !private ["SQ", "view"]
@@ -633,14 +675,13 @@ depends-member:
 - !private ["SQ", "viewDidLoad"]
 - !private ["SQ", "white"]
 - !private ["SQ", "widthAnchor"]
+- !private ["s5ErrorP", "requestFailed"]
+- !private ["s5ErrorP", "resourceNotFound"]
 - !private ["So15UIControlEventsV", "touchUpInside"]
 - !private ["s25ExpressibleByArrayLiteralP", ""]
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "normal"]
 - !private ["s25ExpressibleByArrayLiteralP", "touchUpInside"]
-- !private ["s30ExpressibleByDictionaryLiteralP", "Key"]
-- !private ["s30ExpressibleByDictionaryLiteralP", "Value"]
-- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
 - ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
 - ["s25ExpressibleByFloatLiteralP", ""]
@@ -653,8 +694,6 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "black"]
 - !private ["s23ExpressibleByNilLiteralP", "bounds"]
 - !private ["s23ExpressibleByNilLiteralP", "bringSubviewToFront"]
-- !private ["s23ExpressibleByNilLiteralP", "callAsFunction"]
-- !private ["s23ExpressibleByNilLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "safeAreaLayoutGuide"]
 - !private ["s23ExpressibleByNilLiteralP", "systemBackground"]
 - ["s32ExpressibleByStringInterpolationP", ""]
@@ -717,16 +756,22 @@ depends-member:
 - !private ["SF", "truncatingRemainder"]
 - !private ["SF", "ulp"]
 - !private ["SF", "ulpOfOne"]
-- !private ["9Alamofire10HTTPMethodV", "get"]
-- !private ["SH", "AF"]
+- !private ["6Drinkz10HTTPHeaderV", "init"]
+- !private ["6Drinkz10HTTPMethodO", "get"]
+- !private ["SH", "APIClient"]
+- !private ["SH", "APIError"]
+- !private ["SH", "APIRequest"]
 - !private ["SH", "CGFloat"]
 - !private ["SH", "CheckoutCart"]
 - !private ["SH", "CoreDataManager"]
-- !private ["SH", "JSONDecoder"]
+- !private ["SH", "DispatchQueue"]
+- !private ["SH", "HTTPHeader"]
 - !private ["SH", "NSLayoutConstraint"]
 - ["SH", "RoundButton"]
 - !private ["SH", "SceneDelegate"]
 - ["SH", "UIActivityIndicatorView"]
+- !private ["SH", "UIAlertAction"]
+- !private ["SH", "UIAlertController"]
 - ["SH", "UIButton"]
 - !private ["SH", "UIColor"]
 - ["SH", "UIFont"]
@@ -741,9 +786,12 @@ depends-member:
 - ["SH", ""]
 - !private ["SH", "activate"]
 - !private ["SH", "activityIndicator"]
+- !private ["SH", "addAction"]
 - !private ["SH", "addArrangedSubview"]
 - !private ["SH", "addSubview"]
 - !private ["SH", "addTarget"]
+- !private ["SH", "alert"]
+- !private ["SH", "async"]
 - !private ["SH", "autocapitalizationType"]
 - !private ["SH", "axis"]
 - !private ["SH", "backgroundColor"]
@@ -752,7 +800,7 @@ depends-member:
 - !private ["SH", "bottomAnchor"]
 - !private ["SH", "bounds"]
 - !private ["SH", "bringSubviewToFront"]
-- !private ["SH", "callAsFunction"]
+- !private ["SH", "cancel"]
 - !private ["SH", "center"]
 - !private ["SH", "centerLabelBool"]
 - !private ["SH", "centerXAnchor"]
@@ -760,11 +808,11 @@ depends-member:
 - !private ["SH", "clear"]
 - !private ["SH", "constraint"]
 - !private ["SH", "contentHorizontalAlignment"]
+- !private ["SH", "dismiss"]
 - !private ["SH", "ellipsisLabel"]
 - !private ["SH", "email"]
 - !private ["SH", "emailAddressLabel"]
 - !private ["SH", "emailTextField"]
-- !private ["SH", "failure"]
 - !private ["SH", "fatalError"]
 - ["SH", "font"]
 - !private ["SH", "forgotPasswordButton"]
@@ -782,13 +830,16 @@ depends-member:
 - !private ["SH", "logoImage"]
 - !private ["SH", "logoImageView"]
 - !private ["SH", "logoMultiplier"]
+- !private ["SH", "main"]
 - !private ["SH", "none"]
 - !private ["SH", "passwordLabel"]
 - !private ["SH", "passwordTextField"]
+- !private ["SH", "present"]
 - !private ["SH", "print"]
 - !private ["SH", "refreshColor"]
 - !private ["SH", "refreshTitle"]
-- !private ["SH", "response"]
+- !private ["SH", "requestFailed"]
+- !private ["SH", "resourceNotFound"]
 - !private ["SH", "rootViewController"]
 - !private ["SH", "roundedRect"]
 - !private ["SH", "safeAreaLayoutGuide"]
@@ -804,7 +855,6 @@ depends-member:
 - !private ["SH", "stripeId"]
 - !private ["SH", "submitButton"]
 - !private ["SH", "submitButtonPressed"]
-- !private ["SH", "success"]
 - !private ["SH", "superview"]
 - !private ["SH", "switchToHomePageViewController"]
 - !private ["SH", "systemBackground"]
@@ -817,7 +867,6 @@ depends-member:
 - !private ["SH", "trailingAnchor"]
 - !private ["SH", "user"]
 - !private ["SH", "userId"]
-- !private ["SH", "validate"]
 - !private ["SH", "validateUser"]
 - !private ["SH", "vertical"]
 - !private ["SH", "view"]
@@ -832,23 +881,25 @@ depends-member:
 - !private ["s12IdentifiableP", "stripeId"]
 - !private ["s12IdentifiableP", "user"]
 - !private ["s12IdentifiableP", "userId"]
-- !private ["10Foundation11JSONDecoderC", "decode"]
-- !private ["10Foundation11JSONDecoderC", "init"]
 - !private ["6Drinkz19LoginViewControllerC", "$__lazy_storage_$_centerLabelBool"]
 - !private ["6Drinkz19LoginViewControllerC", "$__lazy_storage_$_logoMultiplier"]
-- !private ["6Drinkz19LoginViewControllerC", "AF"]
+- !private ["6Drinkz19LoginViewControllerC", "APIClient"]
+- !private ["6Drinkz19LoginViewControllerC", "APIError"]
+- ["6Drinkz19LoginViewControllerC", "APIRequest"]
 - ["6Drinkz19LoginViewControllerC", "Bool"]
 - !private ["6Drinkz19LoginViewControllerC", "CGFloat"]
 - !private ["6Drinkz19LoginViewControllerC", "CheckoutCart"]
 - !private ["6Drinkz19LoginViewControllerC", "CoreDataManager"]
+- !private ["6Drinkz19LoginViewControllerC", "DispatchQueue"]
 - ["6Drinkz19LoginViewControllerC", "Float"]
-- ["6Drinkz19LoginViewControllerC", "HTTPHeaders"]
-- !private ["6Drinkz19LoginViewControllerC", "JSONDecoder"]
+- !private ["6Drinkz19LoginViewControllerC", "HTTPHeader"]
 - ["6Drinkz19LoginViewControllerC", "NSCoder"]
 - !private ["6Drinkz19LoginViewControllerC", "NSLayoutConstraint"]
 - ["6Drinkz19LoginViewControllerC", "RoundButton"]
 - !private ["6Drinkz19LoginViewControllerC", "SceneDelegate"]
 - ["6Drinkz19LoginViewControllerC", "UIActivityIndicatorView"]
+- !private ["6Drinkz19LoginViewControllerC", "UIAlertAction"]
+- !private ["6Drinkz19LoginViewControllerC", "UIAlertController"]
 - ["6Drinkz19LoginViewControllerC", "UIButton"]
 - !private ["6Drinkz19LoginViewControllerC", "UIColor"]
 - ["6Drinkz19LoginViewControllerC", "UIFont"]
@@ -858,7 +909,7 @@ depends-member:
 - ["6Drinkz19LoginViewControllerC", "UIStackView"]
 - ["6Drinkz19LoginViewControllerC", "UITextField"]
 - ["6Drinkz19LoginViewControllerC", "UIViewController"]
-- ["6Drinkz19LoginViewControllerC", "User"]
+- !private ["6Drinkz19LoginViewControllerC", "User"]
 - ["6Drinkz19LoginViewControllerC", "UsesAutoLayout"]
 - ["6Drinkz19LoginViewControllerC", "Void"]
 - ["6Drinkz19LoginViewControllerC", ""]
@@ -878,6 +929,7 @@ depends-member:
 - !private ["6Drinkz19LoginViewControllerC", "activityIndicator"]
 - ["6Drinkz19LoginViewControllerC", "centerLabelBool"]
 - ["6Drinkz19LoginViewControllerC", "deinit"]
+- !private ["6Drinkz19LoginViewControllerC", "dismiss"]
 - ["6Drinkz19LoginViewControllerC", "ellipsisLabel"]
 - ["6Drinkz19LoginViewControllerC", "emailAddressLabel"]
 - ["6Drinkz19LoginViewControllerC", "emailTextField"]
@@ -891,6 +943,7 @@ depends-member:
 - ["6Drinkz19LoginViewControllerC", "logoMultiplier"]
 - ["6Drinkz19LoginViewControllerC", "passwordLabel"]
 - ["6Drinkz19LoginViewControllerC", "passwordTextField"]
+- !private ["6Drinkz19LoginViewControllerC", "present"]
 - !private ["6Drinkz19LoginViewControllerC", "print"]
 - ["6Drinkz19LoginViewControllerC", "signInButtonsStackView"]
 - ["6Drinkz19LoginViewControllerC", "signInToQuickBevLabel"]
@@ -903,19 +956,23 @@ depends-member:
 - ["s25LosslessStringConvertibleP", ""]
 - ["So8NSCodingP", "$__lazy_storage_$_centerLabelBool"]
 - ["So8NSCodingP", "$__lazy_storage_$_logoMultiplier"]
-- !private ["So8NSCodingP", "AF"]
+- !private ["So8NSCodingP", "APIClient"]
+- !private ["So8NSCodingP", "APIError"]
+- ["So8NSCodingP", "APIRequest"]
 - ["So8NSCodingP", "Bool"]
 - !private ["So8NSCodingP", "CGFloat"]
 - !private ["So8NSCodingP", "CheckoutCart"]
 - !private ["So8NSCodingP", "CoreDataManager"]
+- !private ["So8NSCodingP", "DispatchQueue"]
 - ["So8NSCodingP", "Float"]
-- ["So8NSCodingP", "HTTPHeaders"]
-- !private ["So8NSCodingP", "JSONDecoder"]
+- !private ["So8NSCodingP", "HTTPHeader"]
 - ["So8NSCodingP", "NSCoder"]
 - !private ["So8NSCodingP", "NSLayoutConstraint"]
 - ["So8NSCodingP", "RoundButton"]
 - !private ["So8NSCodingP", "SceneDelegate"]
 - ["So8NSCodingP", "UIActivityIndicatorView"]
+- !private ["So8NSCodingP", "UIAlertAction"]
+- !private ["So8NSCodingP", "UIAlertController"]
 - ["So8NSCodingP", "UIButton"]
 - !private ["So8NSCodingP", "UIColor"]
 - ["So8NSCodingP", "UIFont"]
@@ -925,7 +982,7 @@ depends-member:
 - ["So8NSCodingP", "UIStackView"]
 - ["So8NSCodingP", "UITextField"]
 - ["So8NSCodingP", "UIViewController"]
-- ["So8NSCodingP", "User"]
+- !private ["So8NSCodingP", "User"]
 - ["So8NSCodingP", "UsesAutoLayout"]
 - ["So8NSCodingP", "Void"]
 - ["So8NSCodingP", ""]
@@ -946,9 +1003,11 @@ depends-member:
 - ["So8NSCodingP", "_signInToQuickBevLabel"]
 - ["So8NSCodingP", "_submitButton"]
 - ["So8NSCodingP", "activityIndicator"]
+- !private ["So8NSCodingP", "addAction"]
 - !private ["So8NSCodingP", "addArrangedSubview"]
 - !private ["So8NSCodingP", "addSubview"]
 - !private ["So8NSCodingP", "addTarget"]
+- !private ["So8NSCodingP", "alertControllerWithTitle"]
 - !private ["So8NSCodingP", "autocapitalizationType"]
 - !private ["So8NSCodingP", "axis"]
 - !private ["So8NSCodingP", "backgroundColor"]
@@ -982,6 +1041,7 @@ depends-member:
 - !private ["So8NSCodingP", "constraintLessThanOrEqualToSystemSpacingBelow"]
 - !private ["So8NSCodingP", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - !private ["So8NSCodingP", "contentHorizontalAlignment"]
+- !private ["So8NSCodingP", "dismiss"]
 - ["So8NSCodingP", "ellipsisLabel"]
 - ["So8NSCodingP", "emailAddressLabel"]
 - ["So8NSCodingP", "emailTextField"]
@@ -1000,6 +1060,7 @@ depends-member:
 - ["So8NSCodingP", "logoMultiplier"]
 - ["So8NSCodingP", "passwordLabel"]
 - ["So8NSCodingP", "passwordTextField"]
+- !private ["So8NSCodingP", "present"]
 - !private ["So8NSCodingP", "print"]
 - ["So8NSCodingP", "refreshColor"]
 - ["So8NSCodingP", "refreshTitle"]
@@ -1056,19 +1117,23 @@ depends-member:
 - !private ["So9NSCopyingP", "white"]
 - ["So26NSExtensionRequestHandlingP", "$__lazy_storage_$_centerLabelBool"]
 - ["So26NSExtensionRequestHandlingP", "$__lazy_storage_$_logoMultiplier"]
-- !private ["So26NSExtensionRequestHandlingP", "AF"]
+- !private ["So26NSExtensionRequestHandlingP", "APIClient"]
+- !private ["So26NSExtensionRequestHandlingP", "APIError"]
+- ["So26NSExtensionRequestHandlingP", "APIRequest"]
 - ["So26NSExtensionRequestHandlingP", "Bool"]
 - !private ["So26NSExtensionRequestHandlingP", "CGFloat"]
 - !private ["So26NSExtensionRequestHandlingP", "CheckoutCart"]
 - !private ["So26NSExtensionRequestHandlingP", "CoreDataManager"]
+- !private ["So26NSExtensionRequestHandlingP", "DispatchQueue"]
 - ["So26NSExtensionRequestHandlingP", "Float"]
-- ["So26NSExtensionRequestHandlingP", "HTTPHeaders"]
-- !private ["So26NSExtensionRequestHandlingP", "JSONDecoder"]
+- !private ["So26NSExtensionRequestHandlingP", "HTTPHeader"]
 - ["So26NSExtensionRequestHandlingP", "NSCoder"]
 - !private ["So26NSExtensionRequestHandlingP", "NSLayoutConstraint"]
 - ["So26NSExtensionRequestHandlingP", "RoundButton"]
 - !private ["So26NSExtensionRequestHandlingP", "SceneDelegate"]
 - ["So26NSExtensionRequestHandlingP", "UIActivityIndicatorView"]
+- !private ["So26NSExtensionRequestHandlingP", "UIAlertAction"]
+- !private ["So26NSExtensionRequestHandlingP", "UIAlertController"]
 - ["So26NSExtensionRequestHandlingP", "UIButton"]
 - !private ["So26NSExtensionRequestHandlingP", "UIColor"]
 - ["So26NSExtensionRequestHandlingP", "UIFont"]
@@ -1078,7 +1143,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "UIStackView"]
 - ["So26NSExtensionRequestHandlingP", "UITextField"]
 - ["So26NSExtensionRequestHandlingP", "UIViewController"]
-- ["So26NSExtensionRequestHandlingP", "User"]
+- !private ["So26NSExtensionRequestHandlingP", "User"]
 - ["So26NSExtensionRequestHandlingP", "UsesAutoLayout"]
 - ["So26NSExtensionRequestHandlingP", "Void"]
 - ["So26NSExtensionRequestHandlingP", ""]
@@ -1098,7 +1163,10 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "_signInToQuickBevLabel"]
 - ["So26NSExtensionRequestHandlingP", "_submitButton"]
 - ["So26NSExtensionRequestHandlingP", "activityIndicator"]
+- !private ["So26NSExtensionRequestHandlingP", "addAction"]
+- !private ["So26NSExtensionRequestHandlingP", "alertControllerWithTitle"]
 - ["So26NSExtensionRequestHandlingP", "centerLabelBool"]
+- !private ["So26NSExtensionRequestHandlingP", "dismiss"]
 - ["So26NSExtensionRequestHandlingP", "ellipsisLabel"]
 - ["So26NSExtensionRequestHandlingP", "emailAddressLabel"]
 - ["So26NSExtensionRequestHandlingP", "emailTextField"]
@@ -1112,6 +1180,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "logoMultiplier"]
 - ["So26NSExtensionRequestHandlingP", "passwordLabel"]
 - ["So26NSExtensionRequestHandlingP", "passwordTextField"]
+- !private ["So26NSExtensionRequestHandlingP", "present"]
 - !private ["So26NSExtensionRequestHandlingP", "print"]
 - ["So26NSExtensionRequestHandlingP", "screenSize"]
 - ["So26NSExtensionRequestHandlingP", "signInButtonsStackView"]
@@ -1173,19 +1242,23 @@ depends-member:
 - !private ["So15NSManagedObjectC", "userId"]
 - ["So8NSObjectC", "$__lazy_storage_$_centerLabelBool"]
 - ["So8NSObjectC", "$__lazy_storage_$_logoMultiplier"]
-- !private ["So8NSObjectC", "AF"]
+- !private ["So8NSObjectC", "APIClient"]
+- !private ["So8NSObjectC", "APIError"]
+- ["So8NSObjectC", "APIRequest"]
 - ["So8NSObjectC", "Bool"]
 - !private ["So8NSObjectC", "CGFloat"]
 - !private ["So8NSObjectC", "CheckoutCart"]
 - !private ["So8NSObjectC", "CoreDataManager"]
+- !private ["So8NSObjectC", "DispatchQueue"]
 - ["So8NSObjectC", "Float"]
-- ["So8NSObjectC", "HTTPHeaders"]
-- !private ["So8NSObjectC", "JSONDecoder"]
+- !private ["So8NSObjectC", "HTTPHeader"]
 - ["So8NSObjectC", "NSCoder"]
 - !private ["So8NSObjectC", "NSLayoutConstraint"]
 - ["So8NSObjectC", "RoundButton"]
 - !private ["So8NSObjectC", "SceneDelegate"]
 - ["So8NSObjectC", "UIActivityIndicatorView"]
+- !private ["So8NSObjectC", "UIAlertAction"]
+- !private ["So8NSObjectC", "UIAlertController"]
 - ["So8NSObjectC", "UIButton"]
 - !private ["So8NSObjectC", "UIColor"]
 - ["So8NSObjectC", "UIFont"]
@@ -1195,7 +1268,7 @@ depends-member:
 - ["So8NSObjectC", "UIStackView"]
 - ["So8NSObjectC", "UITextField"]
 - ["So8NSObjectC", "UIViewController"]
-- ["So8NSObjectC", "User"]
+- !private ["So8NSObjectC", "User"]
 - ["So8NSObjectC", "UsesAutoLayout"]
 - ["So8NSObjectC", "Void"]
 - ["So8NSObjectC", ""]
@@ -1215,12 +1288,16 @@ depends-member:
 - ["So8NSObjectC", "_signInButtonsStackView"]
 - ["So8NSObjectC", "_signInToQuickBevLabel"]
 - ["So8NSObjectC", "_submitButton"]
+- !private ["So8NSObjectC", "actionWithTitle"]
 - !private ["So8NSObjectC", "activate"]
 - !private ["So8NSObjectC", "activateConstraints"]
 - ["So8NSObjectC", "activityIndicator"]
+- !private ["So8NSObjectC", "addAction"]
 - !private ["So8NSObjectC", "addArrangedSubview"]
 - !private ["So8NSObjectC", "addSubview"]
 - !private ["So8NSObjectC", "addTarget"]
+- !private ["So8NSObjectC", "alertControllerWithTitle"]
+- !private ["So8NSObjectC", "async"]
 - !private ["So8NSObjectC", "autocapitalizationType"]
 - !private ["So8NSObjectC", "axis"]
 - !private ["So8NSObjectC", "backgroundColor"]
@@ -1264,6 +1341,8 @@ depends-member:
 - !private ["So8NSObjectC", "constraintLessThanOrEqualToSystemSpacingBelow"]
 - !private ["So8NSObjectC", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - !private ["So8NSObjectC", "contentHorizontalAlignment"]
+- !private ["So8NSObjectC", "dismiss"]
+- !private ["So8NSObjectC", "dismissViewControllerAnimated"]
 - ["So8NSObjectC", "ellipsisLabel"]
 - !private ["So8NSObjectC", "email"]
 - ["So8NSObjectC", "emailAddressLabel"]
@@ -1292,15 +1371,20 @@ depends-member:
 - ["So8NSObjectC", "logoImage"]
 - ["So8NSObjectC", "logoImageView"]
 - ["So8NSObjectC", "logoMultiplier"]
+- !private ["So8NSObjectC", "main"]
 - ["So8NSObjectC", "passwordLabel"]
 - ["So8NSObjectC", "passwordTextField"]
 - ["So8NSObjectC", "pngData"]
+- !private ["So8NSObjectC", "present"]
+- !private ["So8NSObjectC", "presentViewController"]
 - !private ["So8NSObjectC", "print"]
 - !private ["So8NSObjectC", "refreshColor"]
 - !private ["So8NSObjectC", "refreshTitle"]
+- !private ["So8NSObjectC", "resume"]
 - !private ["So8NSObjectC", "rootViewController"]
 - !private ["So8NSObjectC", "safeAreaLayoutGuide"]
 - ["So8NSObjectC", "screenSize"]
+- !private ["So8NSObjectC", "setTarget"]
 - !private ["So8NSObjectC", "setTitle"]
 - !private ["So8NSObjectC", "setTitleColor"]
 - !private ["So8NSObjectC", "shared"]
@@ -1313,7 +1397,9 @@ depends-member:
 - ["So8NSObjectC", "submitButton"]
 - ["So8NSObjectC", "submitButtonPressed"]
 - !private ["So8NSObjectC", "superview"]
+- !private ["So8NSObjectC", "suspend"]
 - !private ["So8NSObjectC", "switchToHomePageViewController"]
+- !private ["So8NSObjectC", "sync"]
 - !private ["So8NSObjectC", "systemBackground"]
 - ["So8NSObjectC", "systemImageNamed"]
 - !private ["So8NSObjectC", "text"]
@@ -1334,18 +1420,22 @@ depends-member:
 - !private ["So8NSObjectC", "widthAnchor"]
 - ["So8NSObjectP", "$__lazy_storage_$_centerLabelBool"]
 - ["So8NSObjectP", "$__lazy_storage_$_logoMultiplier"]
-- !private ["So8NSObjectP", "AF"]
+- !private ["So8NSObjectP", "APIClient"]
+- !private ["So8NSObjectP", "APIError"]
+- ["So8NSObjectP", "APIRequest"]
 - ["So8NSObjectP", "Bool"]
 - !private ["So8NSObjectP", "CGFloat"]
 - !private ["So8NSObjectP", "CheckoutCart"]
 - !private ["So8NSObjectP", "CoreDataManager"]
+- !private ["So8NSObjectP", "DispatchQueue"]
 - ["So8NSObjectP", "Float"]
-- ["So8NSObjectP", "HTTPHeaders"]
-- !private ["So8NSObjectP", "JSONDecoder"]
+- !private ["So8NSObjectP", "HTTPHeader"]
 - !private ["So8NSObjectP", "NSLayoutConstraint"]
 - ["So8NSObjectP", "RoundButton"]
 - !private ["So8NSObjectP", "SceneDelegate"]
 - ["So8NSObjectP", "UIActivityIndicatorView"]
+- !private ["So8NSObjectP", "UIAlertAction"]
+- !private ["So8NSObjectP", "UIAlertController"]
 - ["So8NSObjectP", "UIButton"]
 - !private ["So8NSObjectP", "UIColor"]
 - ["So8NSObjectP", "UIFont"]
@@ -1355,7 +1445,7 @@ depends-member:
 - ["So8NSObjectP", "UIStackView"]
 - ["So8NSObjectP", "UITextField"]
 - ["So8NSObjectP", "UIViewController"]
-- ["So8NSObjectP", "User"]
+- !private ["So8NSObjectP", "User"]
 - ["So8NSObjectP", "UsesAutoLayout"]
 - ["So8NSObjectP", "Void"]
 - ["So8NSObjectP", ""]
@@ -1375,12 +1465,16 @@ depends-member:
 - ["So8NSObjectP", "_signInButtonsStackView"]
 - ["So8NSObjectP", "_signInToQuickBevLabel"]
 - ["So8NSObjectP", "_submitButton"]
+- !private ["So8NSObjectP", "actionWithTitle"]
 - !private ["So8NSObjectP", "activate"]
 - !private ["So8NSObjectP", "activateConstraints"]
 - ["So8NSObjectP", "activityIndicator"]
+- !private ["So8NSObjectP", "addAction"]
 - !private ["So8NSObjectP", "addArrangedSubview"]
 - !private ["So8NSObjectP", "addSubview"]
 - !private ["So8NSObjectP", "addTarget"]
+- !private ["So8NSObjectP", "alertControllerWithTitle"]
+- !private ["So8NSObjectP", "async"]
 - !private ["So8NSObjectP", "autocapitalizationType"]
 - !private ["So8NSObjectP", "axis"]
 - !private ["So8NSObjectP", "backgroundColor"]
@@ -1424,6 +1518,8 @@ depends-member:
 - !private ["So8NSObjectP", "constraintLessThanOrEqualToSystemSpacingBelow"]
 - !private ["So8NSObjectP", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - !private ["So8NSObjectP", "contentHorizontalAlignment"]
+- !private ["So8NSObjectP", "dismiss"]
+- !private ["So8NSObjectP", "dismissViewControllerAnimated"]
 - ["So8NSObjectP", "ellipsisLabel"]
 - !private ["So8NSObjectP", "email"]
 - ["So8NSObjectP", "emailAddressLabel"]
@@ -1452,15 +1548,20 @@ depends-member:
 - ["So8NSObjectP", "logoImage"]
 - ["So8NSObjectP", "logoImageView"]
 - ["So8NSObjectP", "logoMultiplier"]
+- !private ["So8NSObjectP", "main"]
 - ["So8NSObjectP", "passwordLabel"]
 - ["So8NSObjectP", "passwordTextField"]
 - ["So8NSObjectP", "pngData"]
+- !private ["So8NSObjectP", "present"]
+- !private ["So8NSObjectP", "presentViewController"]
 - !private ["So8NSObjectP", "print"]
 - ["So8NSObjectP", "refreshColor"]
 - ["So8NSObjectP", "refreshTitle"]
+- !private ["So8NSObjectP", "resume"]
 - !private ["So8NSObjectP", "rootViewController"]
 - !private ["So8NSObjectP", "safeAreaLayoutGuide"]
 - ["So8NSObjectP", "screenSize"]
+- !private ["So8NSObjectP", "setTarget"]
 - !private ["So8NSObjectP", "setTitle"]
 - !private ["So8NSObjectP", "setTitleColor"]
 - !private ["So8NSObjectP", "shared"]
@@ -1473,7 +1574,9 @@ depends-member:
 - ["So8NSObjectP", "submitButton"]
 - ["So8NSObjectP", "submitButtonPressed"]
 - !private ["So8NSObjectP", "superview"]
+- !private ["So8NSObjectP", "suspend"]
 - !private ["So8NSObjectP", "switchToHomePageViewController"]
+- !private ["So8NSObjectP", "sync"]
 - !private ["So8NSObjectP", "systemBackground"]
 - ["So8NSObjectP", "systemImageNamed"]
 - !private ["So8NSObjectP", "text"]
@@ -1504,6 +1607,15 @@ depends-member:
 - ["Sj", ""]
 - !private ["Sj", "init"]
 - !private ["Sj", "magnitude"]
+- ["So9OS_objectC", ""]
+- !private ["So9OS_objectC", "activate"]
+- !private ["So9OS_objectC", "async"]
+- !private ["So9OS_objectC", "init"]
+- !private ["So9OS_objectC", "main"]
+- !private ["So9OS_objectC", "resume"]
+- !private ["So9OS_objectC", "setTarget"]
+- !private ["So9OS_objectC", "suspend"]
+- !private ["So9OS_objectC", "sync"]
 - !private ["7Combine16ObservableObjectP", "email"]
 - !private ["7Combine16ObservableObjectP", "id"]
 - !private ["7Combine16ObservableObjectP", "shared"]
@@ -1517,10 +1629,11 @@ depends-member:
 - !private ["Sq", "black"]
 - !private ["Sq", "bounds"]
 - !private ["Sq", "bringSubviewToFront"]
-- !private ["Sq", "callAsFunction"]
 - !private ["Sq", "safeAreaLayoutGuide"]
 - !private ["Sq", "systemBackground"]
 - !private ["SY", ""]
+- !private ["SY", "alert"]
+- !private ["SY", "cancel"]
 - !private ["SY", "center"]
 - !private ["SY", "get"]
 - ["SY", "large"]
@@ -1529,12 +1642,6 @@ depends-member:
 - !private ["SY", "roundedRect"]
 - !private ["SY", "touchUpInside"]
 - !private ["SY", "vertical"]
-- ["9Alamofire7RequestC", ""]
-- !private ["9Alamofire7RequestC", "response"]
-- !private ["9Alamofire7RequestC", "validate"]
-- !private ["9Alamofire15RequestDelegateP", "request"]
-- !private ["s6ResultO", "failure"]
-- !private ["s6ResultO", "success"]
 - !private ["6Drinkz18RootViewControllerC", "switchToHomePageViewController"]
 - ["6Drinkz11RoundButtonC", ""]
 - !private ["6Drinkz11RoundButtonC", "addTarget"]
@@ -1546,12 +1653,12 @@ depends-member:
 - !private ["6Drinkz11RoundButtonC", "widthAnchor"]
 - !private ["6Drinkz13SceneDelegateC", "rootViewController"]
 - !private ["6Drinkz13SceneDelegateC", "shared"]
+- !private ["7Combine9SchedulerP", "async"]
+- !private ["7Combine9SchedulerP", "main"]
 - !private ["ST", "Element"]
 - !private ["ST", "Iterator"]
 - ["ST", ""]
 - !private ["ST", "makeIterator"]
-- !private ["9Alamofire7SessionC", "request"]
-- !private ["9Alamofire20SessionStateProviderP", "request"]
 - !private ["s10SetAlgebraP", ""]
 - !private ["s10SetAlgebraP", "normal"]
 - !private ["s10SetAlgebraP", "touchUpInside"]
@@ -1561,11 +1668,11 @@ depends-member:
 - !private ["So14UIControlStateV", "normal"]
 - ["Sx", ""]
 - !private ["Sx", "init"]
+- !private ["So22UIAlertControllerStyleV", "alert"]
+- !private ["So18UIAlertActionStyleV", "cancel"]
 - ["So28UIActivityIndicatorViewStyleV", "large"]
 - ["s16TextOutputStreamP", ""]
 - ["s20TextOutputStreamableP", ""]
-- !private ["7Combine15TopLevelDecoderP", "decode"]
-- !private ["7Combine15TopLevelDecoderP", "init"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "addTarget"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "bottomAnchor"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "centerXAnchor"]
@@ -1628,6 +1735,9 @@ depends-member:
 - !private ["So23UIActivityIndicatorViewC", "stopAnimating"]
 - !private ["So23UIActivityIndicatorViewC", "superview"]
 - !private ["So23UIActivityIndicatorViewC", "widthAnchor"]
+- !private ["So13UIAlertActionC", "init"]
+- !private ["So17UIAlertControllerC", "addAction"]
+- !private ["So17UIAlertControllerC", "init"]
 - ["So12UIAppearanceP", ""]
 - ["So12UIAppearanceP", "__buttonWithType"]
 - !private ["So12UIAppearanceP", "addArrangedSubview"]
@@ -1668,19 +1778,23 @@ depends-member:
 - !private ["So12UIAppearanceP", "widthAnchor"]
 - ["So21UIAppearanceContainerP", "$__lazy_storage_$_centerLabelBool"]
 - ["So21UIAppearanceContainerP", "$__lazy_storage_$_logoMultiplier"]
-- !private ["So21UIAppearanceContainerP", "AF"]
+- !private ["So21UIAppearanceContainerP", "APIClient"]
+- !private ["So21UIAppearanceContainerP", "APIError"]
+- ["So21UIAppearanceContainerP", "APIRequest"]
 - ["So21UIAppearanceContainerP", "Bool"]
 - !private ["So21UIAppearanceContainerP", "CGFloat"]
 - !private ["So21UIAppearanceContainerP", "CheckoutCart"]
 - !private ["So21UIAppearanceContainerP", "CoreDataManager"]
+- !private ["So21UIAppearanceContainerP", "DispatchQueue"]
 - ["So21UIAppearanceContainerP", "Float"]
-- ["So21UIAppearanceContainerP", "HTTPHeaders"]
-- !private ["So21UIAppearanceContainerP", "JSONDecoder"]
+- !private ["So21UIAppearanceContainerP", "HTTPHeader"]
 - ["So21UIAppearanceContainerP", "NSCoder"]
 - !private ["So21UIAppearanceContainerP", "NSLayoutConstraint"]
 - ["So21UIAppearanceContainerP", "RoundButton"]
 - !private ["So21UIAppearanceContainerP", "SceneDelegate"]
 - ["So21UIAppearanceContainerP", "UIActivityIndicatorView"]
+- !private ["So21UIAppearanceContainerP", "UIAlertAction"]
+- !private ["So21UIAppearanceContainerP", "UIAlertController"]
 - ["So21UIAppearanceContainerP", "UIButton"]
 - !private ["So21UIAppearanceContainerP", "UIColor"]
 - ["So21UIAppearanceContainerP", "UIFont"]
@@ -1690,7 +1804,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "UIStackView"]
 - ["So21UIAppearanceContainerP", "UITextField"]
 - ["So21UIAppearanceContainerP", "UIViewController"]
-- ["So21UIAppearanceContainerP", "User"]
+- !private ["So21UIAppearanceContainerP", "User"]
 - ["So21UIAppearanceContainerP", "UsesAutoLayout"]
 - ["So21UIAppearanceContainerP", "Void"]
 - ["So21UIAppearanceContainerP", ""]
@@ -1711,9 +1825,11 @@ depends-member:
 - ["So21UIAppearanceContainerP", "_signInToQuickBevLabel"]
 - ["So21UIAppearanceContainerP", "_submitButton"]
 - ["So21UIAppearanceContainerP", "activityIndicator"]
+- !private ["So21UIAppearanceContainerP", "addAction"]
 - !private ["So21UIAppearanceContainerP", "addArrangedSubview"]
 - !private ["So21UIAppearanceContainerP", "addSubview"]
 - !private ["So21UIAppearanceContainerP", "addTarget"]
+- !private ["So21UIAppearanceContainerP", "alertControllerWithTitle"]
 - !private ["So21UIAppearanceContainerP", "autocapitalizationType"]
 - !private ["So21UIAppearanceContainerP", "axis"]
 - !private ["So21UIAppearanceContainerP", "backgroundColor"]
@@ -1726,6 +1842,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "centerXAnchor"]
 - !private ["So21UIAppearanceContainerP", "centerYAnchor"]
 - !private ["So21UIAppearanceContainerP", "contentHorizontalAlignment"]
+- !private ["So21UIAppearanceContainerP", "dismiss"]
 - ["So21UIAppearanceContainerP", "ellipsisLabel"]
 - ["So21UIAppearanceContainerP", "emailAddressLabel"]
 - ["So21UIAppearanceContainerP", "emailTextField"]
@@ -1744,6 +1861,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "logoMultiplier"]
 - ["So21UIAppearanceContainerP", "passwordLabel"]
 - ["So21UIAppearanceContainerP", "passwordTextField"]
+- !private ["So21UIAppearanceContainerP", "present"]
 - !private ["So21UIAppearanceContainerP", "print"]
 - ["So21UIAppearanceContainerP", "refreshColor"]
 - ["So21UIAppearanceContainerP", "refreshTitle"]
@@ -1789,19 +1907,23 @@ depends-member:
 - !private ["So7UIColorC", "white"]
 - ["So18UIContentContainerP", "$__lazy_storage_$_centerLabelBool"]
 - ["So18UIContentContainerP", "$__lazy_storage_$_logoMultiplier"]
-- !private ["So18UIContentContainerP", "AF"]
+- !private ["So18UIContentContainerP", "APIClient"]
+- !private ["So18UIContentContainerP", "APIError"]
+- ["So18UIContentContainerP", "APIRequest"]
 - ["So18UIContentContainerP", "Bool"]
 - !private ["So18UIContentContainerP", "CGFloat"]
 - !private ["So18UIContentContainerP", "CheckoutCart"]
 - !private ["So18UIContentContainerP", "CoreDataManager"]
+- !private ["So18UIContentContainerP", "DispatchQueue"]
 - ["So18UIContentContainerP", "Float"]
-- ["So18UIContentContainerP", "HTTPHeaders"]
-- !private ["So18UIContentContainerP", "JSONDecoder"]
+- !private ["So18UIContentContainerP", "HTTPHeader"]
 - ["So18UIContentContainerP", "NSCoder"]
 - !private ["So18UIContentContainerP", "NSLayoutConstraint"]
 - ["So18UIContentContainerP", "RoundButton"]
 - !private ["So18UIContentContainerP", "SceneDelegate"]
 - ["So18UIContentContainerP", "UIActivityIndicatorView"]
+- !private ["So18UIContentContainerP", "UIAlertAction"]
+- !private ["So18UIContentContainerP", "UIAlertController"]
 - ["So18UIContentContainerP", "UIButton"]
 - !private ["So18UIContentContainerP", "UIColor"]
 - ["So18UIContentContainerP", "UIFont"]
@@ -1811,7 +1933,7 @@ depends-member:
 - ["So18UIContentContainerP", "UIStackView"]
 - ["So18UIContentContainerP", "UITextField"]
 - ["So18UIContentContainerP", "UIViewController"]
-- ["So18UIContentContainerP", "User"]
+- !private ["So18UIContentContainerP", "User"]
 - ["So18UIContentContainerP", "UsesAutoLayout"]
 - ["So18UIContentContainerP", "Void"]
 - ["So18UIContentContainerP", ""]
@@ -1831,7 +1953,10 @@ depends-member:
 - ["So18UIContentContainerP", "_signInToQuickBevLabel"]
 - ["So18UIContentContainerP", "_submitButton"]
 - ["So18UIContentContainerP", "activityIndicator"]
+- !private ["So18UIContentContainerP", "addAction"]
+- !private ["So18UIContentContainerP", "alertControllerWithTitle"]
 - ["So18UIContentContainerP", "centerLabelBool"]
+- !private ["So18UIContentContainerP", "dismiss"]
 - ["So18UIContentContainerP", "ellipsisLabel"]
 - ["So18UIContentContainerP", "emailAddressLabel"]
 - ["So18UIContentContainerP", "emailTextField"]
@@ -1845,6 +1970,7 @@ depends-member:
 - ["So18UIContentContainerP", "logoMultiplier"]
 - ["So18UIContentContainerP", "passwordLabel"]
 - ["So18UIContentContainerP", "passwordTextField"]
+- !private ["So18UIContentContainerP", "present"]
 - !private ["So18UIContentContainerP", "print"]
 - ["So18UIContentContainerP", "screenSize"]
 - ["So18UIContentContainerP", "signInButtonsStackView"]
@@ -1978,19 +2104,23 @@ depends-member:
 - !private ["So13UIDynamicItemP", "widthAnchor"]
 - ["So18UIFocusEnvironmentP", "$__lazy_storage_$_centerLabelBool"]
 - ["So18UIFocusEnvironmentP", "$__lazy_storage_$_logoMultiplier"]
-- !private ["So18UIFocusEnvironmentP", "AF"]
+- !private ["So18UIFocusEnvironmentP", "APIClient"]
+- !private ["So18UIFocusEnvironmentP", "APIError"]
+- ["So18UIFocusEnvironmentP", "APIRequest"]
 - ["So18UIFocusEnvironmentP", "Bool"]
 - !private ["So18UIFocusEnvironmentP", "CGFloat"]
 - !private ["So18UIFocusEnvironmentP", "CheckoutCart"]
 - !private ["So18UIFocusEnvironmentP", "CoreDataManager"]
+- !private ["So18UIFocusEnvironmentP", "DispatchQueue"]
 - ["So18UIFocusEnvironmentP", "Float"]
-- ["So18UIFocusEnvironmentP", "HTTPHeaders"]
-- !private ["So18UIFocusEnvironmentP", "JSONDecoder"]
+- !private ["So18UIFocusEnvironmentP", "HTTPHeader"]
 - ["So18UIFocusEnvironmentP", "NSCoder"]
 - !private ["So18UIFocusEnvironmentP", "NSLayoutConstraint"]
 - ["So18UIFocusEnvironmentP", "RoundButton"]
 - !private ["So18UIFocusEnvironmentP", "SceneDelegate"]
 - ["So18UIFocusEnvironmentP", "UIActivityIndicatorView"]
+- !private ["So18UIFocusEnvironmentP", "UIAlertAction"]
+- !private ["So18UIFocusEnvironmentP", "UIAlertController"]
 - ["So18UIFocusEnvironmentP", "UIButton"]
 - !private ["So18UIFocusEnvironmentP", "UIColor"]
 - ["So18UIFocusEnvironmentP", "UIFont"]
@@ -2000,7 +2130,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "UIStackView"]
 - ["So18UIFocusEnvironmentP", "UITextField"]
 - ["So18UIFocusEnvironmentP", "UIViewController"]
-- ["So18UIFocusEnvironmentP", "User"]
+- !private ["So18UIFocusEnvironmentP", "User"]
 - ["So18UIFocusEnvironmentP", "UsesAutoLayout"]
 - ["So18UIFocusEnvironmentP", "Void"]
 - ["So18UIFocusEnvironmentP", ""]
@@ -2021,9 +2151,11 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "_signInToQuickBevLabel"]
 - ["So18UIFocusEnvironmentP", "_submitButton"]
 - ["So18UIFocusEnvironmentP", "activityIndicator"]
+- !private ["So18UIFocusEnvironmentP", "addAction"]
 - !private ["So18UIFocusEnvironmentP", "addArrangedSubview"]
 - !private ["So18UIFocusEnvironmentP", "addSubview"]
 - !private ["So18UIFocusEnvironmentP", "addTarget"]
+- !private ["So18UIFocusEnvironmentP", "alertControllerWithTitle"]
 - !private ["So18UIFocusEnvironmentP", "autocapitalizationType"]
 - !private ["So18UIFocusEnvironmentP", "axis"]
 - !private ["So18UIFocusEnvironmentP", "backgroundColor"]
@@ -2036,6 +2168,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "centerXAnchor"]
 - !private ["So18UIFocusEnvironmentP", "centerYAnchor"]
 - !private ["So18UIFocusEnvironmentP", "contentHorizontalAlignment"]
+- !private ["So18UIFocusEnvironmentP", "dismiss"]
 - ["So18UIFocusEnvironmentP", "ellipsisLabel"]
 - ["So18UIFocusEnvironmentP", "emailAddressLabel"]
 - ["So18UIFocusEnvironmentP", "emailTextField"]
@@ -2054,6 +2187,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "logoMultiplier"]
 - ["So18UIFocusEnvironmentP", "passwordLabel"]
 - ["So18UIFocusEnvironmentP", "passwordTextField"]
+- !private ["So18UIFocusEnvironmentP", "present"]
 - !private ["So18UIFocusEnvironmentP", "print"]
 - ["So18UIFocusEnvironmentP", "refreshColor"]
 - ["So18UIFocusEnvironmentP", "refreshTitle"]
@@ -2229,18 +2363,22 @@ depends-member:
 - !private ["So13UILayoutGuideC", "widthAnchor"]
 - ["So30UIPasteConfigurationSupportingP", "$__lazy_storage_$_centerLabelBool"]
 - ["So30UIPasteConfigurationSupportingP", "$__lazy_storage_$_logoMultiplier"]
-- !private ["So30UIPasteConfigurationSupportingP", "AF"]
+- !private ["So30UIPasteConfigurationSupportingP", "APIClient"]
+- !private ["So30UIPasteConfigurationSupportingP", "APIError"]
+- ["So30UIPasteConfigurationSupportingP", "APIRequest"]
 - ["So30UIPasteConfigurationSupportingP", "Bool"]
 - !private ["So30UIPasteConfigurationSupportingP", "CGFloat"]
 - !private ["So30UIPasteConfigurationSupportingP", "CheckoutCart"]
 - !private ["So30UIPasteConfigurationSupportingP", "CoreDataManager"]
+- !private ["So30UIPasteConfigurationSupportingP", "DispatchQueue"]
 - ["So30UIPasteConfigurationSupportingP", "Float"]
-- ["So30UIPasteConfigurationSupportingP", "HTTPHeaders"]
-- !private ["So30UIPasteConfigurationSupportingP", "JSONDecoder"]
+- !private ["So30UIPasteConfigurationSupportingP", "HTTPHeader"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSLayoutConstraint"]
 - ["So30UIPasteConfigurationSupportingP", "RoundButton"]
 - !private ["So30UIPasteConfigurationSupportingP", "SceneDelegate"]
 - ["So30UIPasteConfigurationSupportingP", "UIActivityIndicatorView"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIAlertAction"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIAlertController"]
 - ["So30UIPasteConfigurationSupportingP", "UIButton"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIColor"]
 - ["So30UIPasteConfigurationSupportingP", "UIFont"]
@@ -2250,7 +2388,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "UIStackView"]
 - ["So30UIPasteConfigurationSupportingP", "UITextField"]
 - ["So30UIPasteConfigurationSupportingP", "UIViewController"]
-- ["So30UIPasteConfigurationSupportingP", "User"]
+- !private ["So30UIPasteConfigurationSupportingP", "User"]
 - ["So30UIPasteConfigurationSupportingP", "UsesAutoLayout"]
 - ["So30UIPasteConfigurationSupportingP", "Void"]
 - ["So30UIPasteConfigurationSupportingP", ""]
@@ -2271,9 +2409,11 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "_signInToQuickBevLabel"]
 - ["So30UIPasteConfigurationSupportingP", "_submitButton"]
 - ["So30UIPasteConfigurationSupportingP", "activityIndicator"]
+- !private ["So30UIPasteConfigurationSupportingP", "addAction"]
 - !private ["So30UIPasteConfigurationSupportingP", "addArrangedSubview"]
 - !private ["So30UIPasteConfigurationSupportingP", "addSubview"]
 - !private ["So30UIPasteConfigurationSupportingP", "addTarget"]
+- !private ["So30UIPasteConfigurationSupportingP", "alertControllerWithTitle"]
 - !private ["So30UIPasteConfigurationSupportingP", "autocapitalizationType"]
 - !private ["So30UIPasteConfigurationSupportingP", "axis"]
 - !private ["So30UIPasteConfigurationSupportingP", "backgroundColor"]
@@ -2287,6 +2427,8 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "centerXAnchor"]
 - !private ["So30UIPasteConfigurationSupportingP", "centerYAnchor"]
 - !private ["So30UIPasteConfigurationSupportingP", "contentHorizontalAlignment"]
+- !private ["So30UIPasteConfigurationSupportingP", "dismiss"]
+- !private ["So30UIPasteConfigurationSupportingP", "dismissViewControllerAnimated"]
 - ["So30UIPasteConfigurationSupportingP", "ellipsisLabel"]
 - ["So30UIPasteConfigurationSupportingP", "emailAddressLabel"]
 - ["So30UIPasteConfigurationSupportingP", "emailTextField"]
@@ -2306,6 +2448,8 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "logoMultiplier"]
 - ["So30UIPasteConfigurationSupportingP", "passwordLabel"]
 - ["So30UIPasteConfigurationSupportingP", "passwordTextField"]
+- !private ["So30UIPasteConfigurationSupportingP", "present"]
+- !private ["So30UIPasteConfigurationSupportingP", "presentViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "print"]
 - ["So30UIPasteConfigurationSupportingP", "refreshColor"]
 - ["So30UIPasteConfigurationSupportingP", "refreshTitle"]
@@ -2337,19 +2481,23 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "widthAnchor"]
 - ["So11UIResponderC", "$__lazy_storage_$_centerLabelBool"]
 - ["So11UIResponderC", "$__lazy_storage_$_logoMultiplier"]
-- !private ["So11UIResponderC", "AF"]
+- !private ["So11UIResponderC", "APIClient"]
+- !private ["So11UIResponderC", "APIError"]
+- ["So11UIResponderC", "APIRequest"]
 - ["So11UIResponderC", "Bool"]
 - !private ["So11UIResponderC", "CGFloat"]
 - !private ["So11UIResponderC", "CheckoutCart"]
 - !private ["So11UIResponderC", "CoreDataManager"]
+- !private ["So11UIResponderC", "DispatchQueue"]
 - ["So11UIResponderC", "Float"]
-- ["So11UIResponderC", "HTTPHeaders"]
-- !private ["So11UIResponderC", "JSONDecoder"]
+- !private ["So11UIResponderC", "HTTPHeader"]
 - ["So11UIResponderC", "NSCoder"]
 - !private ["So11UIResponderC", "NSLayoutConstraint"]
 - ["So11UIResponderC", "RoundButton"]
 - !private ["So11UIResponderC", "SceneDelegate"]
 - ["So11UIResponderC", "UIActivityIndicatorView"]
+- !private ["So11UIResponderC", "UIAlertAction"]
+- !private ["So11UIResponderC", "UIAlertController"]
 - ["So11UIResponderC", "UIButton"]
 - !private ["So11UIResponderC", "UIColor"]
 - ["So11UIResponderC", "UIFont"]
@@ -2359,7 +2507,7 @@ depends-member:
 - ["So11UIResponderC", "UIStackView"]
 - ["So11UIResponderC", "UITextField"]
 - ["So11UIResponderC", "UIViewController"]
-- ["So11UIResponderC", "User"]
+- !private ["So11UIResponderC", "User"]
 - ["So11UIResponderC", "UsesAutoLayout"]
 - ["So11UIResponderC", "Void"]
 - ["So11UIResponderC", ""]
@@ -2380,9 +2528,11 @@ depends-member:
 - ["So11UIResponderC", "_signInToQuickBevLabel"]
 - ["So11UIResponderC", "_submitButton"]
 - ["So11UIResponderC", "activityIndicator"]
+- !private ["So11UIResponderC", "addAction"]
 - !private ["So11UIResponderC", "addArrangedSubview"]
 - !private ["So11UIResponderC", "addSubview"]
 - !private ["So11UIResponderC", "addTarget"]
+- !private ["So11UIResponderC", "alertControllerWithTitle"]
 - !private ["So11UIResponderC", "autocapitalizationType"]
 - !private ["So11UIResponderC", "axis"]
 - !private ["So11UIResponderC", "backgroundColor"]
@@ -2396,6 +2546,8 @@ depends-member:
 - !private ["So11UIResponderC", "centerXAnchor"]
 - !private ["So11UIResponderC", "centerYAnchor"]
 - !private ["So11UIResponderC", "contentHorizontalAlignment"]
+- !private ["So11UIResponderC", "dismiss"]
+- !private ["So11UIResponderC", "dismissViewControllerAnimated"]
 - ["So11UIResponderC", "ellipsisLabel"]
 - ["So11UIResponderC", "emailAddressLabel"]
 - ["So11UIResponderC", "emailTextField"]
@@ -2415,6 +2567,8 @@ depends-member:
 - ["So11UIResponderC", "logoMultiplier"]
 - ["So11UIResponderC", "passwordLabel"]
 - ["So11UIResponderC", "passwordTextField"]
+- !private ["So11UIResponderC", "present"]
+- !private ["So11UIResponderC", "presentViewController"]
 - !private ["So11UIResponderC", "print"]
 - !private ["So11UIResponderC", "refreshColor"]
 - !private ["So11UIResponderC", "refreshTitle"]
@@ -2446,18 +2600,22 @@ depends-member:
 - !private ["So11UIResponderC", "widthAnchor"]
 - ["So30UIResponderStandardEditActionsP", "$__lazy_storage_$_centerLabelBool"]
 - ["So30UIResponderStandardEditActionsP", "$__lazy_storage_$_logoMultiplier"]
-- !private ["So30UIResponderStandardEditActionsP", "AF"]
+- !private ["So30UIResponderStandardEditActionsP", "APIClient"]
+- !private ["So30UIResponderStandardEditActionsP", "APIError"]
+- ["So30UIResponderStandardEditActionsP", "APIRequest"]
 - ["So30UIResponderStandardEditActionsP", "Bool"]
 - !private ["So30UIResponderStandardEditActionsP", "CGFloat"]
 - !private ["So30UIResponderStandardEditActionsP", "CheckoutCart"]
 - !private ["So30UIResponderStandardEditActionsP", "CoreDataManager"]
+- !private ["So30UIResponderStandardEditActionsP", "DispatchQueue"]
 - ["So30UIResponderStandardEditActionsP", "Float"]
-- ["So30UIResponderStandardEditActionsP", "HTTPHeaders"]
-- !private ["So30UIResponderStandardEditActionsP", "JSONDecoder"]
+- !private ["So30UIResponderStandardEditActionsP", "HTTPHeader"]
 - !private ["So30UIResponderStandardEditActionsP", "NSLayoutConstraint"]
 - ["So30UIResponderStandardEditActionsP", "RoundButton"]
 - !private ["So30UIResponderStandardEditActionsP", "SceneDelegate"]
 - ["So30UIResponderStandardEditActionsP", "UIActivityIndicatorView"]
+- !private ["So30UIResponderStandardEditActionsP", "UIAlertAction"]
+- !private ["So30UIResponderStandardEditActionsP", "UIAlertController"]
 - ["So30UIResponderStandardEditActionsP", "UIButton"]
 - !private ["So30UIResponderStandardEditActionsP", "UIColor"]
 - ["So30UIResponderStandardEditActionsP", "UIFont"]
@@ -2467,7 +2625,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "UIStackView"]
 - ["So30UIResponderStandardEditActionsP", "UITextField"]
 - ["So30UIResponderStandardEditActionsP", "UIViewController"]
-- ["So30UIResponderStandardEditActionsP", "User"]
+- !private ["So30UIResponderStandardEditActionsP", "User"]
 - ["So30UIResponderStandardEditActionsP", "UsesAutoLayout"]
 - ["So30UIResponderStandardEditActionsP", "Void"]
 - ["So30UIResponderStandardEditActionsP", ""]
@@ -2488,9 +2646,11 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "_signInToQuickBevLabel"]
 - ["So30UIResponderStandardEditActionsP", "_submitButton"]
 - ["So30UIResponderStandardEditActionsP", "activityIndicator"]
+- !private ["So30UIResponderStandardEditActionsP", "addAction"]
 - !private ["So30UIResponderStandardEditActionsP", "addArrangedSubview"]
 - !private ["So30UIResponderStandardEditActionsP", "addSubview"]
 - !private ["So30UIResponderStandardEditActionsP", "addTarget"]
+- !private ["So30UIResponderStandardEditActionsP", "alertControllerWithTitle"]
 - !private ["So30UIResponderStandardEditActionsP", "autocapitalizationType"]
 - !private ["So30UIResponderStandardEditActionsP", "axis"]
 - !private ["So30UIResponderStandardEditActionsP", "backgroundColor"]
@@ -2504,6 +2664,8 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "centerXAnchor"]
 - !private ["So30UIResponderStandardEditActionsP", "centerYAnchor"]
 - !private ["So30UIResponderStandardEditActionsP", "contentHorizontalAlignment"]
+- !private ["So30UIResponderStandardEditActionsP", "dismiss"]
+- !private ["So30UIResponderStandardEditActionsP", "dismissViewControllerAnimated"]
 - ["So30UIResponderStandardEditActionsP", "ellipsisLabel"]
 - ["So30UIResponderStandardEditActionsP", "emailAddressLabel"]
 - ["So30UIResponderStandardEditActionsP", "emailTextField"]
@@ -2523,6 +2685,8 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "logoMultiplier"]
 - ["So30UIResponderStandardEditActionsP", "passwordLabel"]
 - ["So30UIResponderStandardEditActionsP", "passwordTextField"]
+- !private ["So30UIResponderStandardEditActionsP", "present"]
+- !private ["So30UIResponderStandardEditActionsP", "presentViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "print"]
 - ["So30UIResponderStandardEditActionsP", "refreshColor"]
 - ["So30UIResponderStandardEditActionsP", "refreshTitle"]
@@ -2555,6 +2719,7 @@ depends-member:
 - !private ["So15UISceneDelegateP", ""]
 - !private ["So15UISceneDelegateP", "rootViewController"]
 - !private ["So15UISceneDelegateP", "shared"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "addAction"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "addTarget"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "contentHorizontalAlignment"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "heightAnchor"]
@@ -2579,19 +2744,23 @@ depends-member:
 - !private ["So11UIStackViewC", "trailingAnchor"]
 - ["So16UIStateRestoringP", "$__lazy_storage_$_centerLabelBool"]
 - ["So16UIStateRestoringP", "$__lazy_storage_$_logoMultiplier"]
-- !private ["So16UIStateRestoringP", "AF"]
+- !private ["So16UIStateRestoringP", "APIClient"]
+- !private ["So16UIStateRestoringP", "APIError"]
+- ["So16UIStateRestoringP", "APIRequest"]
 - ["So16UIStateRestoringP", "Bool"]
 - !private ["So16UIStateRestoringP", "CGFloat"]
 - !private ["So16UIStateRestoringP", "CheckoutCart"]
 - !private ["So16UIStateRestoringP", "CoreDataManager"]
+- !private ["So16UIStateRestoringP", "DispatchQueue"]
 - ["So16UIStateRestoringP", "Float"]
-- ["So16UIStateRestoringP", "HTTPHeaders"]
-- !private ["So16UIStateRestoringP", "JSONDecoder"]
+- !private ["So16UIStateRestoringP", "HTTPHeader"]
 - ["So16UIStateRestoringP", "NSCoder"]
 - !private ["So16UIStateRestoringP", "NSLayoutConstraint"]
 - ["So16UIStateRestoringP", "RoundButton"]
 - !private ["So16UIStateRestoringP", "SceneDelegate"]
 - ["So16UIStateRestoringP", "UIActivityIndicatorView"]
+- !private ["So16UIStateRestoringP", "UIAlertAction"]
+- !private ["So16UIStateRestoringP", "UIAlertController"]
 - ["So16UIStateRestoringP", "UIButton"]
 - !private ["So16UIStateRestoringP", "UIColor"]
 - ["So16UIStateRestoringP", "UIFont"]
@@ -2601,7 +2770,7 @@ depends-member:
 - ["So16UIStateRestoringP", "UIStackView"]
 - ["So16UIStateRestoringP", "UITextField"]
 - ["So16UIStateRestoringP", "UIViewController"]
-- ["So16UIStateRestoringP", "User"]
+- !private ["So16UIStateRestoringP", "User"]
 - ["So16UIStateRestoringP", "UsesAutoLayout"]
 - ["So16UIStateRestoringP", "Void"]
 - ["So16UIStateRestoringP", ""]
@@ -2621,7 +2790,10 @@ depends-member:
 - ["So16UIStateRestoringP", "_signInToQuickBevLabel"]
 - ["So16UIStateRestoringP", "_submitButton"]
 - ["So16UIStateRestoringP", "activityIndicator"]
+- !private ["So16UIStateRestoringP", "addAction"]
+- !private ["So16UIStateRestoringP", "alertControllerWithTitle"]
 - ["So16UIStateRestoringP", "centerLabelBool"]
+- !private ["So16UIStateRestoringP", "dismiss"]
 - ["So16UIStateRestoringP", "ellipsisLabel"]
 - ["So16UIStateRestoringP", "emailAddressLabel"]
 - ["So16UIStateRestoringP", "emailTextField"]
@@ -2635,6 +2807,7 @@ depends-member:
 - ["So16UIStateRestoringP", "logoMultiplier"]
 - ["So16UIStateRestoringP", "passwordLabel"]
 - ["So16UIStateRestoringP", "passwordTextField"]
+- !private ["So16UIStateRestoringP", "present"]
 - !private ["So16UIStateRestoringP", "print"]
 - ["So16UIStateRestoringP", "screenSize"]
 - ["So16UIStateRestoringP", "signInButtonsStackView"]
@@ -2694,19 +2867,23 @@ depends-member:
 - !private ["So34UITextPasteConfigurationSupportingP", "widthAnchor"]
 - ["So18UITraitEnvironmentP", "$__lazy_storage_$_centerLabelBool"]
 - ["So18UITraitEnvironmentP", "$__lazy_storage_$_logoMultiplier"]
-- !private ["So18UITraitEnvironmentP", "AF"]
+- !private ["So18UITraitEnvironmentP", "APIClient"]
+- !private ["So18UITraitEnvironmentP", "APIError"]
+- ["So18UITraitEnvironmentP", "APIRequest"]
 - ["So18UITraitEnvironmentP", "Bool"]
 - !private ["So18UITraitEnvironmentP", "CGFloat"]
 - !private ["So18UITraitEnvironmentP", "CheckoutCart"]
 - !private ["So18UITraitEnvironmentP", "CoreDataManager"]
+- !private ["So18UITraitEnvironmentP", "DispatchQueue"]
 - ["So18UITraitEnvironmentP", "Float"]
-- ["So18UITraitEnvironmentP", "HTTPHeaders"]
-- !private ["So18UITraitEnvironmentP", "JSONDecoder"]
+- !private ["So18UITraitEnvironmentP", "HTTPHeader"]
 - ["So18UITraitEnvironmentP", "NSCoder"]
 - !private ["So18UITraitEnvironmentP", "NSLayoutConstraint"]
 - ["So18UITraitEnvironmentP", "RoundButton"]
 - !private ["So18UITraitEnvironmentP", "SceneDelegate"]
 - ["So18UITraitEnvironmentP", "UIActivityIndicatorView"]
+- !private ["So18UITraitEnvironmentP", "UIAlertAction"]
+- !private ["So18UITraitEnvironmentP", "UIAlertController"]
 - ["So18UITraitEnvironmentP", "UIButton"]
 - !private ["So18UITraitEnvironmentP", "UIColor"]
 - ["So18UITraitEnvironmentP", "UIFont"]
@@ -2716,7 +2893,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "UIStackView"]
 - ["So18UITraitEnvironmentP", "UITextField"]
 - ["So18UITraitEnvironmentP", "UIViewController"]
-- ["So18UITraitEnvironmentP", "User"]
+- !private ["So18UITraitEnvironmentP", "User"]
 - ["So18UITraitEnvironmentP", "UsesAutoLayout"]
 - ["So18UITraitEnvironmentP", "Void"]
 - ["So18UITraitEnvironmentP", ""]
@@ -2737,9 +2914,11 @@ depends-member:
 - ["So18UITraitEnvironmentP", "_signInToQuickBevLabel"]
 - ["So18UITraitEnvironmentP", "_submitButton"]
 - ["So18UITraitEnvironmentP", "activityIndicator"]
+- !private ["So18UITraitEnvironmentP", "addAction"]
 - !private ["So18UITraitEnvironmentP", "addArrangedSubview"]
 - !private ["So18UITraitEnvironmentP", "addSubview"]
 - !private ["So18UITraitEnvironmentP", "addTarget"]
+- !private ["So18UITraitEnvironmentP", "alertControllerWithTitle"]
 - !private ["So18UITraitEnvironmentP", "autocapitalizationType"]
 - !private ["So18UITraitEnvironmentP", "axis"]
 - !private ["So18UITraitEnvironmentP", "backgroundColor"]
@@ -2752,6 +2931,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "centerXAnchor"]
 - !private ["So18UITraitEnvironmentP", "centerYAnchor"]
 - !private ["So18UITraitEnvironmentP", "contentHorizontalAlignment"]
+- !private ["So18UITraitEnvironmentP", "dismiss"]
 - ["So18UITraitEnvironmentP", "ellipsisLabel"]
 - ["So18UITraitEnvironmentP", "emailAddressLabel"]
 - ["So18UITraitEnvironmentP", "emailTextField"]
@@ -2770,6 +2950,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "logoMultiplier"]
 - ["So18UITraitEnvironmentP", "passwordLabel"]
 - ["So18UITraitEnvironmentP", "passwordTextField"]
+- !private ["So18UITraitEnvironmentP", "present"]
 - !private ["So18UITraitEnvironmentP", "print"]
 - ["So18UITraitEnvironmentP", "refreshColor"]
 - ["So18UITraitEnvironmentP", "refreshTitle"]
@@ -2799,18 +2980,22 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "widthAnchor"]
 - ["So23UIUserActivityRestoringP", "$__lazy_storage_$_centerLabelBool"]
 - ["So23UIUserActivityRestoringP", "$__lazy_storage_$_logoMultiplier"]
-- !private ["So23UIUserActivityRestoringP", "AF"]
+- !private ["So23UIUserActivityRestoringP", "APIClient"]
+- !private ["So23UIUserActivityRestoringP", "APIError"]
+- ["So23UIUserActivityRestoringP", "APIRequest"]
 - ["So23UIUserActivityRestoringP", "Bool"]
 - !private ["So23UIUserActivityRestoringP", "CGFloat"]
 - !private ["So23UIUserActivityRestoringP", "CheckoutCart"]
 - !private ["So23UIUserActivityRestoringP", "CoreDataManager"]
+- !private ["So23UIUserActivityRestoringP", "DispatchQueue"]
 - ["So23UIUserActivityRestoringP", "Float"]
-- ["So23UIUserActivityRestoringP", "HTTPHeaders"]
-- !private ["So23UIUserActivityRestoringP", "JSONDecoder"]
+- !private ["So23UIUserActivityRestoringP", "HTTPHeader"]
 - !private ["So23UIUserActivityRestoringP", "NSLayoutConstraint"]
 - ["So23UIUserActivityRestoringP", "RoundButton"]
 - !private ["So23UIUserActivityRestoringP", "SceneDelegate"]
 - ["So23UIUserActivityRestoringP", "UIActivityIndicatorView"]
+- !private ["So23UIUserActivityRestoringP", "UIAlertAction"]
+- !private ["So23UIUserActivityRestoringP", "UIAlertController"]
 - ["So23UIUserActivityRestoringP", "UIButton"]
 - !private ["So23UIUserActivityRestoringP", "UIColor"]
 - ["So23UIUserActivityRestoringP", "UIFont"]
@@ -2820,7 +3005,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "UIStackView"]
 - ["So23UIUserActivityRestoringP", "UITextField"]
 - ["So23UIUserActivityRestoringP", "UIViewController"]
-- ["So23UIUserActivityRestoringP", "User"]
+- !private ["So23UIUserActivityRestoringP", "User"]
 - ["So23UIUserActivityRestoringP", "UsesAutoLayout"]
 - ["So23UIUserActivityRestoringP", "Void"]
 - ["So23UIUserActivityRestoringP", ""]
@@ -2841,9 +3026,11 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "_signInToQuickBevLabel"]
 - ["So23UIUserActivityRestoringP", "_submitButton"]
 - ["So23UIUserActivityRestoringP", "activityIndicator"]
+- !private ["So23UIUserActivityRestoringP", "addAction"]
 - !private ["So23UIUserActivityRestoringP", "addArrangedSubview"]
 - !private ["So23UIUserActivityRestoringP", "addSubview"]
 - !private ["So23UIUserActivityRestoringP", "addTarget"]
+- !private ["So23UIUserActivityRestoringP", "alertControllerWithTitle"]
 - !private ["So23UIUserActivityRestoringP", "autocapitalizationType"]
 - !private ["So23UIUserActivityRestoringP", "axis"]
 - !private ["So23UIUserActivityRestoringP", "backgroundColor"]
@@ -2857,6 +3044,8 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "centerXAnchor"]
 - !private ["So23UIUserActivityRestoringP", "centerYAnchor"]
 - !private ["So23UIUserActivityRestoringP", "contentHorizontalAlignment"]
+- !private ["So23UIUserActivityRestoringP", "dismiss"]
+- !private ["So23UIUserActivityRestoringP", "dismissViewControllerAnimated"]
 - ["So23UIUserActivityRestoringP", "ellipsisLabel"]
 - ["So23UIUserActivityRestoringP", "emailAddressLabel"]
 - ["So23UIUserActivityRestoringP", "emailTextField"]
@@ -2876,6 +3065,8 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "logoMultiplier"]
 - ["So23UIUserActivityRestoringP", "passwordLabel"]
 - ["So23UIUserActivityRestoringP", "passwordTextField"]
+- !private ["So23UIUserActivityRestoringP", "present"]
+- !private ["So23UIUserActivityRestoringP", "presentViewController"]
 - !private ["So23UIUserActivityRestoringP", "print"]
 - ["So23UIUserActivityRestoringP", "refreshColor"]
 - ["So23UIUserActivityRestoringP", "refreshTitle"]
@@ -2945,19 +3136,23 @@ depends-member:
 - !private ["So6UIViewC", "widthAnchor"]
 - ["So16UIViewControllerC", "$__lazy_storage_$_centerLabelBool"]
 - ["So16UIViewControllerC", "$__lazy_storage_$_logoMultiplier"]
-- !private ["So16UIViewControllerC", "AF"]
+- !private ["So16UIViewControllerC", "APIClient"]
+- !private ["So16UIViewControllerC", "APIError"]
+- ["So16UIViewControllerC", "APIRequest"]
 - ["So16UIViewControllerC", "Bool"]
 - !private ["So16UIViewControllerC", "CGFloat"]
 - !private ["So16UIViewControllerC", "CheckoutCart"]
 - !private ["So16UIViewControllerC", "CoreDataManager"]
+- !private ["So16UIViewControllerC", "DispatchQueue"]
 - ["So16UIViewControllerC", "Float"]
-- ["So16UIViewControllerC", "HTTPHeaders"]
-- !private ["So16UIViewControllerC", "JSONDecoder"]
+- !private ["So16UIViewControllerC", "HTTPHeader"]
 - ["So16UIViewControllerC", "NSCoder"]
 - !private ["So16UIViewControllerC", "NSLayoutConstraint"]
 - ["So16UIViewControllerC", "RoundButton"]
 - !private ["So16UIViewControllerC", "SceneDelegate"]
 - ["So16UIViewControllerC", "UIActivityIndicatorView"]
+- !private ["So16UIViewControllerC", "UIAlertAction"]
+- !private ["So16UIViewControllerC", "UIAlertController"]
 - ["So16UIViewControllerC", "UIButton"]
 - !private ["So16UIViewControllerC", "UIColor"]
 - ["So16UIViewControllerC", "UIFont"]
@@ -2967,7 +3162,7 @@ depends-member:
 - ["So16UIViewControllerC", "UIStackView"]
 - ["So16UIViewControllerC", "UITextField"]
 - ["So16UIViewControllerC", "UIViewController"]
-- ["So16UIViewControllerC", "User"]
+- !private ["So16UIViewControllerC", "User"]
 - ["So16UIViewControllerC", "UsesAutoLayout"]
 - ["So16UIViewControllerC", "Void"]
 - ["So16UIViewControllerC", ""]
@@ -2987,7 +3182,10 @@ depends-member:
 - ["So16UIViewControllerC", "_signInToQuickBevLabel"]
 - ["So16UIViewControllerC", "_submitButton"]
 - ["So16UIViewControllerC", "activityIndicator"]
+- !private ["So16UIViewControllerC", "addAction"]
+- !private ["So16UIViewControllerC", "alertControllerWithTitle"]
 - ["So16UIViewControllerC", "centerLabelBool"]
+- !private ["So16UIViewControllerC", "dismiss"]
 - ["So16UIViewControllerC", "ellipsisLabel"]
 - ["So16UIViewControllerC", "emailAddressLabel"]
 - ["So16UIViewControllerC", "emailTextField"]
@@ -3001,6 +3199,7 @@ depends-member:
 - ["So16UIViewControllerC", "logoMultiplier"]
 - ["So16UIViewControllerC", "passwordLabel"]
 - ["So16UIViewControllerC", "passwordTextField"]
+- !private ["So16UIViewControllerC", "present"]
 - !private ["So16UIViewControllerC", "print"]
 - ["So16UIViewControllerC", "screenSize"]
 - ["So16UIViewControllerC", "signInButtonsStackView"]
@@ -3037,15 +3236,20 @@ depends-member:
 - !private ["s26_ExpressibleByColorLiteralP", "systemBackground"]
 - !private ["s26_ExpressibleByColorLiteralP", "white"]
 - ["s26_ExpressibleByImageLiteralP", "init"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "AF"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "APIClient"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "APIError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "APIRequest"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CheckoutCart"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CoreDataManager"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "JSONDecoder"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "HTTPHeader"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSLayoutConstraint"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "RoundButton"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "SceneDelegate"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UIActivityIndicatorView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIAlertAction"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIAlertController"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UIButton"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIColor"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UIFont"]
@@ -3060,9 +3264,11 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "activate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "activityIndicator"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addAction"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addArrangedSubview"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addSubview"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addTarget"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "autocapitalizationType"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "axis"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "backgroundColor"]
@@ -3077,6 +3283,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "clear"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "constraint"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "contentHorizontalAlignment"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dismiss"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "ellipsisLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "email"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "emailAddressLabel"]
@@ -3096,8 +3303,10 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "logoImage"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "logoImageView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "logoMultiplier"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "passwordLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "passwordTextField"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "present"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "refreshColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "refreshTitle"]
@@ -3134,15 +3343,20 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "white"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "widthAnchor"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "AF"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "APIClient"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "APIError"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "APIRequest"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CGFloat"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CheckoutCart"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CoreDataManager"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "JSONDecoder"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "DispatchQueue"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "HTTPHeader"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSLayoutConstraint"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "RoundButton"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "SceneDelegate"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIActivityIndicatorView"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIAlertAction"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIAlertController"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIButton"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIColor"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIFont"]
@@ -3157,9 +3371,11 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "activate"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "activityIndicator"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addAction"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addArrangedSubview"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addSubview"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addTarget"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "async"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "autocapitalizationType"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "axis"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "backgroundColor"]
@@ -3174,6 +3390,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "clear"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "constraint"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "contentHorizontalAlignment"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dismiss"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ellipsisLabel"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "email"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "emailAddressLabel"]
@@ -3193,8 +3410,10 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "logoImage"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "logoImageView"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "logoMultiplier"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "main"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "passwordLabel"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "passwordTextField"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "present"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "print"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "refreshColor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "refreshTitle"]
@@ -3236,7 +3455,6 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "black"]
 - !private ["s21_ObjectiveCBridgeableP", "bounds"]
 - !private ["s21_ObjectiveCBridgeableP", "bringSubviewToFront"]
-- !private ["s21_ObjectiveCBridgeableP", "callAsFunction"]
 - ["s21_ObjectiveCBridgeableP", "height"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "safeAreaLayoutGuide"]
@@ -3278,6 +3496,11 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "trailingAnchor"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "widthAnchor"]
 depends-nominal:
+- !private "6Drinkz9APIClientV"
+- !private "6Drinkz8APIErrorO"
+- !private "6Drinkz10APIRequestC"
+- !private "6Drinkz11APIResponseV"
+- !private "6Drinkz9APIResultO"
 - "s18AdditiveArithmeticP"
 - !private "So22UILayoutConstraintAxisV"
 - "SK"
@@ -3296,15 +3519,14 @@ depends-nominal:
 - "s28CustomDebugStringConvertibleP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
-- !private "9Alamofire11DataDecoderP"
-- !private "9Alamofire11DataRequestC"
-- !private "9Alamofire12DataResponseV"
 - "Se"
+- "So18OS_dispatch_objectC"
+- !private "So17OS_dispatch_queueC"
 - "SE"
 - "SQ"
+- !private "s5ErrorP"
 - !private "So15UIControlEventsV"
 - !private "s25ExpressibleByArrayLiteralP"
-- !private "s30ExpressibleByDictionaryLiteralP"
 - "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - "s25ExpressibleByFloatLiteralP"
 - "s27ExpressibleByIntegerLiteralP"
@@ -3313,10 +3535,10 @@ depends-nominal:
 - "s26ExpressibleByStringLiteralP"
 - "s33ExpressibleByUnicodeScalarLiteralP"
 - "SF"
-- !private "9Alamofire10HTTPMethodV"
+- !private "6Drinkz10HTTPHeaderV"
+- !private "6Drinkz10HTTPMethodO"
 - "SH"
 - !private "s12IdentifiableP"
-- !private "10Foundation11JSONDecoderC"
 - "6Drinkz19LoginViewControllerC"
 - "s25LosslessStringConvertibleP"
 - "So8NSCodingP"
@@ -3337,30 +3559,30 @@ depends-nominal:
 - "So14NSSecureCodingP"
 - !private "So15NSTextAlignmentV"
 - "Sj"
+- "So9OS_objectC"
 - !private "7Combine16ObservableObjectP"
 - !private "s9OptionSetP"
 - !private "Sq"
 - "SY"
-- "9Alamofire7RequestC"
-- !private "9Alamofire15RequestDelegateP"
-- !private "s6ResultO"
 - !private "6Drinkz18RootViewControllerC"
 - "6Drinkz11RoundButtonC"
 - !private "6Drinkz13SceneDelegateC"
+- !private "7Combine9SchedulerP"
 - "ST"
-- !private "9Alamofire7SessionC"
-- !private "9Alamofire20SessionStateProviderP"
 - !private "s10SetAlgebraP"
 - "s13SignedNumericP"
 - !private "So14UIControlStateV"
 - "Sx"
+- !private "So22UIAlertControllerStyleV"
+- !private "So18UIAlertActionStyleV"
 - "So28UIActivityIndicatorViewStyleV"
 - "s16TextOutputStreamP"
 - "s20TextOutputStreamableP"
-- !private "7Combine15TopLevelDecoderP"
 - "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - "So29UIAccessibilityIdentificationP"
 - "So23UIActivityIndicatorViewC"
+- !private "So13UIAlertActionC"
+- !private "So17UIAlertControllerC"
 - "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
 - "So8UIButtonC"
@@ -3445,51 +3667,120 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/MapKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIViewController+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSError+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDS2Service.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseImage.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSErrorMessage.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONDecodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONEncodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONWebSignature.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponse.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAuthenticationResponse.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDirectoryServerCertificate.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDSProtocolVersion+Private.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTransaction+Private.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformationParameter+Private.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSString+EmptyChecking.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWarning.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSLocalizedString.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSEphemeralKeyPair+Testing.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSwiftTryCatch.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSErrorMessage+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDirectoryServerCertificate+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSException+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseMessageExtension.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformation.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIButton+CustomInitialization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSUICustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTextFieldCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSLabelCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSelectionCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSButtonCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSNavigationBarCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSFooterCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTransaction.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSNotInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAlreadyInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSRuntimeException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSInvalidInputException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONWebEncryption.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSelectionButton.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfo.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe3DS2-Bridging-Header.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSImageLoader.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONEncoder.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSACSNetworkingManager.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSynchronousLocationManager.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformationManager.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJailbreakChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSOSVersionChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDebuggerChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSimulatorChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSIntegrityChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSCategoryLinker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseViewController.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSProgressViewController.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformationParameter.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDirectoryServer.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSEphemeralKeyPair.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSStripe3DS2Error.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSBundleLocator.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSecTypeUtilities.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSData+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSString+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSDictionary+DecodingHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSConfigParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIColor+DefaultColors.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSIPAddress.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIFont+DefaultFonts.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseImageObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAuthenticationResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseMessageExtensionObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfoObject.h"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSCompletionEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSEllipticCurvePoint.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIColor+ThirteenSupport.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSLayoutConstraint+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIView+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWebView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTextChallengeView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSBrandingView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSProcessingView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSStackView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSExpandableInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeSelectionView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSpacerView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWhitelistView.h"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/TweetNacl/Sources/module.map"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
@@ -3513,6 +3804,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
@@ -3520,4 +3812,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "13963dd5ee074bcee4b8de37f24b77e5"
+interface-hash: "b7881bd4aeb608d4ba90dc6cde7b54a0"

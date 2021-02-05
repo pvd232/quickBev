@@ -56,9 +56,3 @@ extension CheckoutCart {
         self.drinks = NSSet.init(array: [Drink]())
     }
 }
-extension Double {
-    func rounded(digits: Int) -> Double {
-        let multiplier = pow(10.0, Double(digits))
-        return Darwin.round(self * multiplier) / multiplier
-    }
-}

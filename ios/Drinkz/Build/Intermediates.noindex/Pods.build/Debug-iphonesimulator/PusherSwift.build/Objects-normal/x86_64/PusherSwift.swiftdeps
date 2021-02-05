@@ -25,6 +25,7 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "!="
 - !private "&&"
+- !private "??"
 - !private "Array"
 - "AssignmentPrecedence"
 - "CLIENT_NAME"
@@ -41,6 +42,7 @@ depends-top-level:
 - "PusherDelegate"
 - !private "PusherEncryptionHelpers"
 - "PusherEvent"
+- !private "PusherLogger"
 - "PusherPresenceChannel"
 - "PusherPresenceChannelMember"
 - "String"
@@ -51,13 +53,13 @@ depends-top-level:
 - "Void"
 - !private "connection"
 - "constructUrl"
-- !private "print"
 depends-member:
 - !private ["s7CVarArgP", "NWWebSocket"]
 - !private ["s7CVarArgP", "PROTOCOL"]
 - !private ["s7CVarArgP", "PusherClientOptions"]
 - !private ["s7CVarArgP", "PusherConnection"]
 - !private ["s7CVarArgP", "PusherEncryptionHelpers"]
+- !private ["s7CVarArgP", "PusherLogger"]
 - !private ["s7CVarArgP", "URL"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "addCallbackToGlobalChannel"]
@@ -71,8 +73,8 @@ depends-member:
 - !private ["s7CVarArgP", "host"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "key"]
+- !private ["s7CVarArgP", "path"]
 - !private ["s7CVarArgP", "port"]
-- !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "removeAllCallbacksFromGlobalChannel"]
 - !private ["s7CVarArgP", "removeCallbackFromGlobalChannel"]
 - !private ["s7CVarArgP", "subscribe"]
@@ -87,6 +89,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "PusherClientOptions"]
 - !private ["s28CustomDebugStringConvertibleP", "PusherConnection"]
 - !private ["s28CustomDebugStringConvertibleP", "PusherEncryptionHelpers"]
+- !private ["s28CustomDebugStringConvertibleP", "PusherLogger"]
 - !private ["s28CustomDebugStringConvertibleP", "URL"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "addCallbackToGlobalChannel"]
@@ -100,8 +103,8 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "host"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "key"]
+- !private ["s28CustomDebugStringConvertibleP", "path"]
 - !private ["s28CustomDebugStringConvertibleP", "port"]
-- !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "removeAllCallbacksFromGlobalChannel"]
 - !private ["s28CustomDebugStringConvertibleP", "removeCallbackFromGlobalChannel"]
 - !private ["s28CustomDebugStringConvertibleP", "subscribe"]
@@ -116,6 +119,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "PusherClientOptions"]
 - !private ["s23CustomStringConvertibleP", "PusherConnection"]
 - !private ["s23CustomStringConvertibleP", "PusherEncryptionHelpers"]
+- !private ["s23CustomStringConvertibleP", "PusherLogger"]
 - !private ["s23CustomStringConvertibleP", "URL"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "addCallbackToGlobalChannel"]
@@ -131,8 +135,8 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "host"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "key"]
+- !private ["s23CustomStringConvertibleP", "path"]
 - !private ["s23CustomStringConvertibleP", "port"]
-- !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "removeAllCallbacksFromGlobalChannel"]
 - !private ["s23CustomStringConvertibleP", "removeCallbackFromGlobalChannel"]
 - !private ["s23CustomStringConvertibleP", "subscribe"]
@@ -151,10 +155,12 @@ depends-member:
 - !private ["SQ", "PusherClientOptions"]
 - !private ["SQ", "PusherConnection"]
 - !private ["SQ", "PusherEncryptionHelpers"]
+- !private ["SQ", "PusherLogger"]
 - !private ["SQ", "URL"]
 - ["SQ", ""]
 - !private ["SQ", "addCallbackToGlobalChannel"]
 - !private ["SQ", "addLegacyCallbackToGlobalChannel"]
+- !private ["SQ", "authValueOnSubscriptionNotSupported"]
 - !private ["SQ", "connect"]
 - !private ["SQ", "connection"]
 - !private ["SQ", "constructUrl"]
@@ -164,8 +170,8 @@ depends-member:
 - !private ["SQ", "host"]
 - !private ["SQ", "init"]
 - !private ["SQ", "key"]
+- !private ["SQ", "path"]
 - !private ["SQ", "port"]
-- !private ["SQ", "print"]
 - !private ["SQ", "removeAllCallbacksFromGlobalChannel"]
 - !private ["SQ", "removeCallbackFromGlobalChannel"]
 - !private ["SQ", "subscribe"]
@@ -184,10 +190,12 @@ depends-member:
 - !private ["SH", "PusherClientOptions"]
 - !private ["SH", "PusherConnection"]
 - !private ["SH", "PusherEncryptionHelpers"]
+- !private ["SH", "PusherLogger"]
 - !private ["SH", "URL"]
 - ["SH", ""]
 - !private ["SH", "addCallbackToGlobalChannel"]
 - !private ["SH", "addLegacyCallbackToGlobalChannel"]
+- !private ["SH", "authValueOnSubscriptionNotSupported"]
 - !private ["SH", "connect"]
 - !private ["SH", "connection"]
 - !private ["SH", "constructUrl"]
@@ -197,8 +205,8 @@ depends-member:
 - !private ["SH", "host"]
 - !private ["SH", "init"]
 - !private ["SH", "key"]
+- !private ["SH", "path"]
 - !private ["SH", "port"]
-- !private ["SH", "print"]
 - !private ["SH", "removeAllCallbacksFromGlobalChannel"]
 - !private ["SH", "removeCallbackFromGlobalChannel"]
 - !private ["SH", "subscribe"]
@@ -208,6 +216,7 @@ depends-member:
 - !private ["SH", "unsubscribe"]
 - !private ["SH", "unsubscribeAll"]
 - !private ["SH", "useTLS"]
+- !private ["11PusherSwift0A6LoggerC12LoggingEventO", "authValueOnSubscriptionNotSupported"]
 - !private ["So8NSCodingP", ""]
 - !private ["So8NSObjectC", "NWWebSocket"]
 - !private ["So8NSObjectC", "PROTOCOL"]
@@ -218,6 +227,7 @@ depends-member:
 - ["So8NSObjectC", "PusherDelegate"]
 - !private ["So8NSObjectC", "PusherEncryptionHelpers"]
 - ["So8NSObjectC", "PusherEvent"]
+- !private ["So8NSObjectC", "PusherLogger"]
 - ["So8NSObjectC", "PusherPresenceChannel"]
 - ["So8NSObjectC", "PusherPresenceChannelMember"]
 - ["So8NSObjectC", "String"]
@@ -236,8 +246,8 @@ depends-member:
 - !private ["So8NSObjectC", "host"]
 - ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "key"]
+- !private ["So8NSObjectC", "path"]
 - !private ["So8NSObjectC", "port"]
-- !private ["So8NSObjectC", "print"]
 - !private ["So8NSObjectC", "removeAllCallbacksFromGlobalChannel"]
 - !private ["So8NSObjectC", "removeCallbackFromGlobalChannel"]
 - ["So8NSObjectC", "subscribe"]
@@ -254,6 +264,7 @@ depends-member:
 - !private ["So8NSObjectP", "PusherConnection"]
 - ["So8NSObjectP", "PusherDelegate"]
 - !private ["So8NSObjectP", "PusherEncryptionHelpers"]
+- !private ["So8NSObjectP", "PusherLogger"]
 - ["So8NSObjectP", "PusherPresenceChannel"]
 - !private ["So8NSObjectP", "URL"]
 - ["So8NSObjectP", ""]
@@ -269,8 +280,8 @@ depends-member:
 - !private ["So8NSObjectP", "host"]
 - ["So8NSObjectP", "init"]
 - ["So8NSObjectP", "key"]
+- !private ["So8NSObjectP", "path"]
 - !private ["So8NSObjectP", "port"]
-- !private ["So8NSObjectP", "print"]
 - ["So8NSObjectP", "removeAllCallbacksFromGlobalChannel"]
 - ["So8NSObjectP", "removeCallbackFromGlobalChannel"]
 - ["So8NSObjectP", "subscribe"]
@@ -294,6 +305,7 @@ depends-member:
 - ["11PusherSwift0A0C", "PusherDelegate"]
 - !private ["11PusherSwift0A0C", "PusherEncryptionHelpers"]
 - ["11PusherSwift0A0C", "PusherEvent"]
+- !private ["11PusherSwift0A0C", "PusherLogger"]
 - ["11PusherSwift0A0C", "PusherPresenceChannel"]
 - ["11PusherSwift0A0C", "PusherPresenceChannelMember"]
 - ["11PusherSwift0A0C", "String"]
@@ -309,7 +321,6 @@ depends-member:
 - ["11PusherSwift0A0C", "disconnect"]
 - ["11PusherSwift0A0C", "init"]
 - !private ["11PusherSwift0A0C", "key"]
-- !private ["11PusherSwift0A0C", "print"]
 - ["11PusherSwift0A0C", "subscribe"]
 - ["11PusherSwift0A0C", "subscribeToPresenceChannel"]
 - ["11PusherSwift0A0C", "unbind"]
@@ -319,6 +330,7 @@ depends-member:
 - !private ["11PusherSwift0A4AuthC", ""]
 - !private ["11PusherSwift0A13ClientOptionsC", "host"]
 - !private ["11PusherSwift0A13ClientOptionsC", "init"]
+- !private ["11PusherSwift0A13ClientOptionsC", "path"]
 - !private ["11PusherSwift0A13ClientOptionsC", "port"]
 - !private ["11PusherSwift0A13ClientOptionsC", "useTLS"]
 - !private ["11PusherSwift0A10ConnectionC", "addCallbackToGlobalChannel"]
@@ -348,6 +360,9 @@ depends-member:
 - !private ["11PusherSwift0A18EventQueueDelegateP", "subscribeToPresenceChannel"]
 - !private ["11PusherSwift0A18EventQueueDelegateP", "unsubscribe"]
 - !private ["11PusherSwift0A18EventQueueDelegateP", "unsubscribeAll"]
+- !private ["11PusherSwift0A6LoggerC", "shared"]
+- !private ["11PusherSwift0A6LoggerC", "warning"]
+- !private ["SY", "authValueOnSubscriptionNotSupported"]
 - !private ["10Foundation20ReferenceConvertibleP", "init"]
 - !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
 - !private ["s27StringInterpolationProtocolP", "appendLiteral"]
@@ -379,6 +394,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "PusherClientOptions"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "PusherConnection"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "PusherEncryptionHelpers"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "PusherLogger"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "URL"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addCallbackToGlobalChannel"]
@@ -392,8 +408,8 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "host"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "key"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "path"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "port"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "removeAllCallbacksFromGlobalChannel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "removeCallbackFromGlobalChannel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "subscribe"]
@@ -408,6 +424,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PusherClientOptions"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PusherConnection"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PusherEncryptionHelpers"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PusherLogger"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "URL"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addCallbackToGlobalChannel"]
@@ -421,8 +438,8 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "host"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "key"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "path"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "port"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "print"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "removeAllCallbacksFromGlobalChannel"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "removeCallbackFromGlobalChannel"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "subscribe"]
@@ -446,6 +463,7 @@ depends-nominal:
 - !private "s23ExpressibleByNilLiteralP"
 - !private "s32ExpressibleByStringInterpolationP"
 - "SH"
+- !private "11PusherSwift0A6LoggerC12LoggingEventO"
 - !private "So8NSCodingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
@@ -458,6 +476,8 @@ depends-nominal:
 - !private "11PusherSwift0A10ConnectionC"
 - !private "11PusherSwift0A17EncryptionHelpersV"
 - !private "11PusherSwift0A18EventQueueDelegateP"
+- !private "11PusherSwift0A6LoggerC"
+- !private "SY"
 - !private "10Foundation20ReferenceConvertibleP"
 - !private "s27StringInterpolationProtocolP"
 - !private "s16TextOutputStreamP"
@@ -515,4 +535,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "ef76534958947663337e0be85a0f0ef1"
+interface-hash: "a69d5a3d33c8f7b19cb9399ee73ce67f"

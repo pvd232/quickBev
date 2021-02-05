@@ -31,8 +31,10 @@ depends-top-level:
 - !private "fatalError"
 - !private "name"
 depends-member:
+- !private ["s18AdditiveArithmeticP", ""]
 - !private ["So20UIStackViewAlignmentV", "fill"]
 - !private ["So22UILayoutConstraintAxisV", "vertical"]
+- !private ["SK", ""]
 - ["6Drinkz26BusinessArrayTableViewCellC", "Bool"]
 - ["6Drinkz26BusinessArrayTableViewCellC", "NSCoder"]
 - !private ["6Drinkz26BusinessArrayTableViewCellC", "NSLayoutConstraint"]
@@ -54,6 +56,7 @@ depends-member:
 - ["So15CALayerDelegateP", "Bool"]
 - ["So15CALayerDelegateP", "CellStyle"]
 - !private ["So15CALayerDelegateP", "NSLayoutConstraint"]
+- ["So15CALayerDelegateP", "String"]
 - !private ["So15CALayerDelegateP", "UIColor"]
 - !private ["So15CALayerDelegateP", "UIFont"]
 - ["So15CALayerDelegateP", "UILabel"]
@@ -110,6 +113,8 @@ depends-member:
 - !private ["s7CVarArgP", "spacing"]
 - !private ["s7CVarArgP", "textColor"]
 - !private ["s7CVarArgP", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["Sl", ""]
+- !private ["SL", ""]
 - ["s28CustomDebugStringConvertibleP", "CellStyle"]
 - !private ["s28CustomDebugStringConvertibleP", "NSLayoutConstraint"]
 - !private ["s28CustomDebugStringConvertibleP", "UIColor"]
@@ -204,10 +209,17 @@ depends-member:
 - !private ["SQ", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["SQ", "vertical"]
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
+- !private ["s25ExpressibleByFloatLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
+- !private ["s27ExpressibleByIntegerLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["SF", ""]
 - ["SH", "CellStyle"]
 - !private ["SH", "NSLayoutConstraint"]
 - !private ["SH", "UIColor"]
@@ -240,9 +252,11 @@ depends-member:
 - !private ["SH", "textColor"]
 - !private ["SH", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["SH", "vertical"]
+- !private ["s25LosslessStringConvertibleP", ""]
 - ["So8NSCodingP", "Bool"]
 - ["So8NSCodingP", "CellStyle"]
 - !private ["So8NSCodingP", "NSLayoutConstraint"]
+- ["So8NSCodingP", "String"]
 - !private ["So8NSCodingP", "UIColor"]
 - !private ["So8NSCodingP", "UIFont"]
 - ["So8NSCodingP", "UILabel"]
@@ -257,6 +271,12 @@ depends-member:
 - !private ["So8NSCodingP", "axis"]
 - !private ["So8NSCodingP", "centerYAnchor"]
 - !private ["So8NSCodingP", "constraint"]
+- !private ["So8NSCodingP", "constraintEqualToAnchor"]
+- !private ["So8NSCodingP", "constraintEqualToConstant"]
+- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToAnchor"]
+- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToConstant"]
+- !private ["So8NSCodingP", "constraintLessThanOrEqualToAnchor"]
+- !private ["So8NSCodingP", "constraintLessThanOrEqualToConstant"]
 - !private ["So8NSCodingP", "contentView"]
 - !private ["So8NSCodingP", "distribution"]
 - !private ["So8NSCodingP", "fatalError"]
@@ -272,12 +292,24 @@ depends-member:
 - !private ["So8NSCodingP", "textColor"]
 - !private ["So8NSCodingP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So9NSCopyingP", "constraint"]
+- !private ["So9NSCopyingP", "constraintEqualToAnchor"]
+- !private ["So9NSCopyingP", "constraintEqualToConstant"]
+- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToAnchor"]
+- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToConstant"]
+- !private ["So9NSCopyingP", "constraintLessThanOrEqualToAnchor"]
+- !private ["So9NSCopyingP", "constraintLessThanOrEqualToConstant"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "lightGray"]
 - !private ["So21NSItemProviderReadingP", "lightGray"]
 - !private ["So21NSItemProviderWritingP", "lightGray"]
 - ["So14NSLayoutAnchorC", ""]
 - !private ["So14NSLayoutAnchorC", "constraint"]
+- !private ["So14NSLayoutAnchorC", "constraintEqualToAnchor"]
+- !private ["So14NSLayoutAnchorC", "constraintEqualToConstant"]
+- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToAnchor"]
+- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToConstant"]
+- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToAnchor"]
+- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToConstant"]
 - !private ["So18NSLayoutConstraintC", "activate"]
 - !private ["So17NSLayoutDimensionC", "constraint"]
 - !private ["So19NSLayoutXAxisAnchorC", "constraint"]
@@ -302,10 +334,18 @@ depends-member:
 - !private ["So8NSObjectC", "axis"]
 - !private ["So8NSObjectC", "centerYAnchor"]
 - !private ["So8NSObjectC", "constraint"]
+- !private ["So8NSObjectC", "constraintEqualToAnchor"]
+- !private ["So8NSObjectC", "constraintEqualToConstant"]
+- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToAnchor"]
+- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToConstant"]
+- !private ["So8NSObjectC", "constraintLessThanOrEqualToAnchor"]
+- !private ["So8NSObjectC", "constraintLessThanOrEqualToConstant"]
 - !private ["So8NSObjectC", "contentView"]
 - !private ["So8NSObjectC", "distribution"]
 - !private ["So8NSObjectC", "fatalError"]
 - !private ["So8NSObjectC", "font"]
+- !private ["So8NSObjectC", "fontWithDescriptor"]
+- !private ["So8NSObjectC", "fontWithName"]
 - !private ["So8NSObjectC", "heightAnchor"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "leadingAnchor"]
@@ -334,10 +374,15 @@ depends-member:
 - !private ["So8NSObjectP", "axis"]
 - !private ["So8NSObjectP", "centerYAnchor"]
 - !private ["So8NSObjectP", "constraint"]
+- !private ["So8NSObjectP", "constraintEqualToConstant"]
+- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToConstant"]
+- !private ["So8NSObjectP", "constraintLessThanOrEqualToConstant"]
 - !private ["So8NSObjectP", "contentView"]
 - !private ["So8NSObjectP", "distribution"]
 - !private ["So8NSObjectP", "fatalError"]
 - !private ["So8NSObjectP", "font"]
+- !private ["So8NSObjectP", "fontWithDescriptor"]
+- !private ["So8NSObjectP", "fontWithName"]
 - !private ["So8NSObjectP", "heightAnchor"]
 - ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "leadingAnchor"]
@@ -349,11 +394,18 @@ depends-member:
 - !private ["So8NSObjectP", "textColor"]
 - !private ["So8NSObjectP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So14NSSecureCodingP", "lightGray"]
+- !private ["Sj", ""]
 - !private ["SY", "fill"]
 - !private ["SY", "vertical"]
+- !private ["ST", ""]
+- !private ["s13SignedNumericP", ""]
+- !private ["Sx", ""]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s20TextOutputStreamableP", ""]
 - ["So29UIAccessibilityIdentificationP", "Bool"]
 - ["So29UIAccessibilityIdentificationP", "CellStyle"]
 - !private ["So29UIAccessibilityIdentificationP", "NSLayoutConstraint"]
+- ["So29UIAccessibilityIdentificationP", "String"]
 - !private ["So29UIAccessibilityIdentificationP", "UIColor"]
 - !private ["So29UIAccessibilityIdentificationP", "UIFont"]
 - ["So29UIAccessibilityIdentificationP", "UILabel"]
@@ -383,6 +435,7 @@ depends-member:
 - ["So12UIAppearanceP", "Bool"]
 - ["So12UIAppearanceP", "CellStyle"]
 - !private ["So12UIAppearanceP", "NSLayoutConstraint"]
+- ["So12UIAppearanceP", "String"]
 - !private ["So12UIAppearanceP", "UIColor"]
 - !private ["So12UIAppearanceP", "UIFont"]
 - ["So12UIAppearanceP", "UILabel"]
@@ -412,6 +465,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "Bool"]
 - ["So21UIAppearanceContainerP", "CellStyle"]
 - !private ["So21UIAppearanceContainerP", "NSLayoutConstraint"]
+- ["So21UIAppearanceContainerP", "String"]
 - !private ["So21UIAppearanceContainerP", "UIColor"]
 - !private ["So21UIAppearanceContainerP", "UIFont"]
 - ["So21UIAppearanceContainerP", "UILabel"]
@@ -446,6 +500,7 @@ depends-member:
 - ["So17UICoordinateSpaceP", "Bool"]
 - ["So17UICoordinateSpaceP", "CellStyle"]
 - !private ["So17UICoordinateSpaceP", "NSLayoutConstraint"]
+- ["So17UICoordinateSpaceP", "String"]
 - !private ["So17UICoordinateSpaceP", "UIColor"]
 - !private ["So17UICoordinateSpaceP", "UIFont"]
 - ["So17UICoordinateSpaceP", "UILabel"]
@@ -475,6 +530,7 @@ depends-member:
 - ["So13UIDynamicItemP", "Bool"]
 - ["So13UIDynamicItemP", "CellStyle"]
 - !private ["So13UIDynamicItemP", "NSLayoutConstraint"]
+- ["So13UIDynamicItemP", "String"]
 - !private ["So13UIDynamicItemP", "UIColor"]
 - !private ["So13UIDynamicItemP", "UIFont"]
 - ["So13UIDynamicItemP", "UILabel"]
@@ -504,6 +560,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "Bool"]
 - ["So18UIFocusEnvironmentP", "CellStyle"]
 - !private ["So18UIFocusEnvironmentP", "NSLayoutConstraint"]
+- ["So18UIFocusEnvironmentP", "String"]
 - !private ["So18UIFocusEnvironmentP", "UIColor"]
 - !private ["So18UIFocusEnvironmentP", "UIFont"]
 - ["So18UIFocusEnvironmentP", "UILabel"]
@@ -533,6 +590,7 @@ depends-member:
 - ["So11UIFocusItemP", "Bool"]
 - ["So11UIFocusItemP", "CellStyle"]
 - !private ["So11UIFocusItemP", "NSLayoutConstraint"]
+- ["So11UIFocusItemP", "String"]
 - !private ["So11UIFocusItemP", "UIColor"]
 - !private ["So11UIFocusItemP", "UIFont"]
 - ["So11UIFocusItemP", "UILabel"]
@@ -562,6 +620,7 @@ depends-member:
 - ["So20UIFocusItemContainerP", "Bool"]
 - ["So20UIFocusItemContainerP", "CellStyle"]
 - !private ["So20UIFocusItemContainerP", "NSLayoutConstraint"]
+- ["So20UIFocusItemContainerP", "String"]
 - !private ["So20UIFocusItemContainerP", "UIColor"]
 - !private ["So20UIFocusItemContainerP", "UIFont"]
 - ["So20UIFocusItemContainerP", "UILabel"]
@@ -614,6 +673,7 @@ depends-member:
 - ["So24UILargeContentViewerItemP", "Bool"]
 - ["So24UILargeContentViewerItemP", "CellStyle"]
 - !private ["So24UILargeContentViewerItemP", "NSLayoutConstraint"]
+- ["So24UILargeContentViewerItemP", "String"]
 - !private ["So24UILargeContentViewerItemP", "UIColor"]
 - !private ["So24UILargeContentViewerItemP", "UIFont"]
 - ["So24UILargeContentViewerItemP", "UILabel"]
@@ -646,6 +706,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "Bool"]
 - ["So30UIPasteConfigurationSupportingP", "CellStyle"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSLayoutConstraint"]
+- ["So30UIPasteConfigurationSupportingP", "String"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIColor"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIFont"]
 - ["So30UIPasteConfigurationSupportingP", "UILabel"]
@@ -706,6 +767,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "Bool"]
 - ["So30UIResponderStandardEditActionsP", "CellStyle"]
 - !private ["So30UIResponderStandardEditActionsP", "NSLayoutConstraint"]
+- ["So30UIResponderStandardEditActionsP", "String"]
 - !private ["So30UIResponderStandardEditActionsP", "UIColor"]
 - !private ["So30UIResponderStandardEditActionsP", "UIFont"]
 - ["So30UIResponderStandardEditActionsP", "UILabel"]
@@ -763,6 +825,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "Bool"]
 - ["So18UITraitEnvironmentP", "CellStyle"]
 - !private ["So18UITraitEnvironmentP", "NSLayoutConstraint"]
+- ["So18UITraitEnvironmentP", "String"]
 - !private ["So18UITraitEnvironmentP", "UIColor"]
 - !private ["So18UITraitEnvironmentP", "UIFont"]
 - ["So18UITraitEnvironmentP", "UILabel"]
@@ -792,6 +855,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "Bool"]
 - ["So23UIUserActivityRestoringP", "CellStyle"]
 - !private ["So23UIUserActivityRestoringP", "NSLayoutConstraint"]
+- ["So23UIUserActivityRestoringP", "String"]
 - !private ["So23UIUserActivityRestoringP", "UIColor"]
 - !private ["So23UIUserActivityRestoringP", "UIFont"]
 - ["So23UIUserActivityRestoringP", "UILabel"]
@@ -850,9 +914,11 @@ depends-member:
 - !private ["So6UIViewC", "textColor"]
 - !private ["So6UIViewC", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s26_ExpressibleByColorLiteralP", "lightGray"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "CellStyle"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSLayoutConstraint"]
@@ -942,19 +1008,29 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "textColor"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "translatesAutoresizingMaskIntoConstraints"]
 depends-nominal:
+- !private "s18AdditiveArithmeticP"
 - !private "So20UIStackViewAlignmentV"
 - !private "So22UILayoutConstraintAxisV"
+- !private "SK"
 - "6Drinkz26BusinessArrayTableViewCellC"
 - "So15CALayerDelegateP"
 - "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
 - "s28CustomDebugStringConvertibleP"
 - "s23CustomStringConvertibleP"
 - !private "So23UIStackViewDistributionV"
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "SF"
 - "SH"
+- !private "s25LosslessStringConvertibleP"
 - "So8NSCodingP"
 - !private "So9NSCopyingP"
 - !private "So21NSItemProviderReadingP"
@@ -967,7 +1043,13 @@ depends-nominal:
 - "So8NSObjectC"
 - "So8NSObjectP"
 - !private "So14NSSecureCodingP"
+- !private "Sj"
 - !private "SY"
+- !private "ST"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
@@ -992,9 +1074,11 @@ depends-nominal:
 - "So23UIUserActivityRestoringP"
 - "So6UIViewC"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"
@@ -1026,51 +1110,120 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/MapKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIViewController+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSError+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDS2Service.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseImage.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSErrorMessage.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONDecodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONEncodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONWebSignature.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponse.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAuthenticationResponse.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDirectoryServerCertificate.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDSProtocolVersion+Private.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTransaction+Private.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformationParameter+Private.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSString+EmptyChecking.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWarning.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSLocalizedString.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSEphemeralKeyPair+Testing.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSwiftTryCatch.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSErrorMessage+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDirectoryServerCertificate+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSException+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseMessageExtension.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformation.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIButton+CustomInitialization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSUICustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTextFieldCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSLabelCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSelectionCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSButtonCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSNavigationBarCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSFooterCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTransaction.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSNotInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAlreadyInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSRuntimeException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSInvalidInputException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONWebEncryption.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSelectionButton.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfo.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe3DS2-Bridging-Header.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSImageLoader.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONEncoder.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSACSNetworkingManager.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSynchronousLocationManager.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformationManager.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJailbreakChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSOSVersionChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDebuggerChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSimulatorChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSIntegrityChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSCategoryLinker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseViewController.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSProgressViewController.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformationParameter.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDirectoryServer.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSEphemeralKeyPair.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSStripe3DS2Error.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSBundleLocator.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSecTypeUtilities.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSData+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSString+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSDictionary+DecodingHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSConfigParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIColor+DefaultColors.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSIPAddress.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIFont+DefaultFonts.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseImageObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAuthenticationResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseMessageExtensionObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfoObject.h"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSCompletionEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSEllipticCurvePoint.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIColor+ThirteenSupport.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSLayoutConstraint+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIView+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWebView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTextChallengeView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSBrandingView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSProcessingView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSStackView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSExpandableInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeSelectionView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSpacerView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWhitelistView.h"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/TweetNacl/Sources/module.map"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
@@ -1094,6 +1247,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"

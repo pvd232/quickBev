@@ -177,64 +177,65 @@ class LoginViewController: UIViewController {
     @objc private func submitButtonPressed(_ sender: RoundButton) {
         activityIndicator.startAnimating()
         
-        let userCredentials: HTTPHeaders = ["email": emailTextField.text!, "password" : passwordTextField.text!]
-        validateUser (headers: userCredentials) { // this bracket is the trailing closure that is being passed into the validate user function as an argument for the completion parameter. the data is the parameter that was passed into the completion by the validate user function
-            
-            data in
-            guard data != nil else {
-                CheckoutCart.shared.user = nil
-                // TODO: Make a pretty little error message that appears if your login was incorrect - base it off of Instagram or FB maybe?
-                self.activityIndicator.stopAnimating()
-                print("data returned from submit button is nill")
-                return
-            }
-            SceneDelegate.shared.rootViewController.switchToHomePageViewController()
-            
-            self.activityIndicator.stopAnimating()
-        }
-    }
-    // the completion parameter takes in a closure that takes in an optional User and returns nothing.
-    private func validateUser(headers: HTTPHeaders, completion: @escaping (User?) -> Void) {
-        AF.request("http://127.0.0.1:5000/login", method: .get, headers : headers)
-            .validate()
-            .response { response in
-                switch response.result {
-                case .success:
-                    // need to create an optional user that will either be assigned to the novel user returned from login or from the existing user in core data if the user logged out so we don't create a duplicate instances of the same user
-                    var user: User?
-                    guard let returnedUser = response.data
-                    
-                    else {
-                        print("error user not returned")
-                        completion(nil)
-                        return
-                    }
+        let userCredentials: [HTTPHeader] = [HTTPHeader(field: "email", value:emailTextField.text! ), HTTPHeader(field:"password", value:passwordTextField.text! )]
+        let request = APIRequest(method: .get, path:"http://127.0.0.1:5000/login")
+        request.headers = userCredentials
+        
+        APIClient().perform(request) {result in // this bracket is the trailing closure that is being passed into the APIClient perform function as an argument for the completion parameter. the data is the parameter that was passed into the completion by the APIClient perform function, which was in turn returned the data by the URL session task
+            switch result {
+            case .success (let response): // the response is the APIResponse struct parameter that was passed into the APIResult instance for the .success case
+                print("response", response)
+                if response.statusCode == 200, let response = try? response.decode(to: User.self)  {
+                    var user = response.body
                     let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
-                    let jsonDecoder = JSONDecoder()
-                    user = try! jsonDecoder.decode(User.self, from: returnedUser)
-                    
                     if let fetchedUsers = CoreDataManager.sharedManager.fetchEntities(entityName: "User", context: managedContext) as? [User] {
                         for fetchedUser in fetchedUsers{
-                            if fetchedUser.id == user!.id{
+                            if fetchedUser.id == user.id{
                                 user = fetchedUser
                             }
                         }
                     }
                     CheckoutCart.shared.user = user
-                    CheckoutCart.shared.userId = user!.email
-                    CheckoutCart.shared.stripeId = user!.stripeId
+                    CheckoutCart.shared.userId = user.email
+                    CheckoutCart.shared.stripeId = user.stripeId
                     CoreDataManager.sharedManager.saveContext(context: managedContext)
-                    // if the API is successful the user that is returned is passed into the completion as a parameter
-                    completion(user)
-                case .failure(let error):                    // if the API fails nil is passed into the completion as a parameter
-                    completion(nil)
+                    DispatchQueue.main.async {
+                        SceneDelegate.shared.rootViewController.switchToHomePageViewController()
+                        self.activityIndicator.stopAnimating()
+                        
+                    }
+                }
+                else {
+                    DispatchQueue.main.async {
+                        self.activityIndicator.stopAnimating()
+                        
+                        let alertController = UIAlertController(title: "Incorrect Username", message: "Your username or password was incorrect. Please try again.", preferredStyle: .alert)
+                        alertController.addAction(UIAlertAction(title: "Try again", style: .cancel) { action in
+                            self.dismiss( animated: true)
+                        })
+                        self.present(alertController, animated: true, completion: nil)
+                    }
+                    
+                }
+            case .failure(let error):                    // if the API fails the enum API result will be of the type failure
+                DispatchQueue.main.async {
+                    self.activityIndicator.stopAnimating()
+                    
+                    let alertController = UIAlertController(title: "Network Error", message: "A network error has occured. Check your internet connection and if necessary, restart the app.", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Okay", style: .cancel) { action in
+                        self.dismiss( animated: true)
+                    })
+                    self.present(alertController, animated: true, completion: nil)
                     print("error case .failure", error)
+                    
                 }
             }
+        }
     }
     override func viewDidLayoutSubviews() {
         print("height", letsGetStartedStackView.frame.size.height)
     }
 }
+
 
 

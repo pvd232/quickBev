@@ -21,8 +21,11 @@ provides-member:
 - ["6Stripe22STPPaymentMethodParamsC", "paramsWith"]
 - ["6Stripe22STPPaymentMethodParamsC", "paramsWith"]
 - ["6Stripe22STPPaymentMethodParamsC", "paramsWith"]
+- ["6Stripe22STPPaymentMethodParamsC", "paramsWith"]
+- ["6Stripe22STPPaymentMethodParamsC", "paramsWith"]
 provides-dynamic-lookup:
 - "additionalAPIParameters"
+- "afterpayClearpay"
 - "alipay"
 - "auBECSDebit"
 - "bacsDebit"
@@ -38,6 +41,7 @@ provides-dynamic-lookup:
 - "isReusable"
 - "label"
 - "metadata"
+- "netBanking"
 - "oxxo"
 - "paramsWith"
 - "payPal"
@@ -71,6 +75,7 @@ depends-top-level:
 - !private "STPLocalizedString"
 - "STPPaymentMethod"
 - "STPPaymentMethodAUBECSDebitParams"
+- "STPPaymentMethodAfterpayClearpayParams"
 - "STPPaymentMethodAlipayParams"
 - "STPPaymentMethodBacsDebitParams"
 - "STPPaymentMethodBancontactParams"
@@ -80,6 +85,7 @@ depends-top-level:
 - "STPPaymentMethodFPXParams"
 - "STPPaymentMethodGiropayParams"
 - "STPPaymentMethodGrabPayParams"
+- "STPPaymentMethodNetBankingParams"
 - "STPPaymentMethodOXXOParams"
 - "STPPaymentMethodParams"
 - "STPPaymentMethodPayPalParams"
@@ -94,6 +100,7 @@ depends-top-level:
 - !private "StringLiteralType"
 - "UIImage"
 - !private "UnicodeScalarType"
+- !private "afterpayClearpay"
 - !private "auBECSDebit"
 - !private "bacsDebit"
 - !private "bancontact"
@@ -105,6 +112,7 @@ depends-top-level:
 - !private "grabPay"
 - !private "iDEAL"
 - !private "metadata"
+- !private "netBanking"
 - !private "oxxo"
 - !private "przelewy24"
 - !private "rawTypeString"
@@ -120,11 +128,13 @@ depends-member:
 - !private ["s7CVarArgP", "STPImageLibrary"]
 - !private ["s7CVarArgP", "STPLocalizedString"]
 - !private ["s7CVarArgP", "STPPaymentMethod"]
+- !private ["s7CVarArgP", "STPPaymentMethodAfterpayClearpayParams"]
 - !private ["s7CVarArgP", "STPPaymentMethodBancontactParams"]
 - !private ["s7CVarArgP", "STPPaymentMethodEPSParams"]
 - !private ["s7CVarArgP", "STPPaymentMethodFPXParams"]
 - !private ["s7CVarArgP", "STPPaymentMethodGiropayParams"]
 - !private ["s7CVarArgP", "STPPaymentMethodGrabPayParams"]
+- !private ["s7CVarArgP", "STPPaymentMethodNetBankingParams"]
 - !private ["s7CVarArgP", "STPPaymentMethodOXXOParams"]
 - !private ["s7CVarArgP", "STPPaymentMethodParams"]
 - !private ["s7CVarArgP", "STPPaymentMethodPrzelewy24Params"]
@@ -133,6 +143,7 @@ depends-member:
 - !private ["s7CVarArgP", "STPPaymentMethodiDEALParams"]
 - ["s7CVarArgP", ""]
 - ["s7CVarArgP", "additionalAPIParameters"]
+- !private ["s7CVarArgP", "afterpayClearpay"]
 - !private ["s7CVarArgP", "alipay"]
 - !private ["s7CVarArgP", "auBECSDebit"]
 - !private ["s7CVarArgP", "bacsDebit"]
@@ -156,6 +167,7 @@ depends-member:
 - ["s7CVarArgP", "label"]
 - !private ["s7CVarArgP", "last4"]
 - !private ["s7CVarArgP", "metadata"]
+- !private ["s7CVarArgP", "netBanking"]
 - !private ["s7CVarArgP", "number"]
 - !private ["s7CVarArgP", "oxxo"]
 - !private ["s7CVarArgP", "payPal"]
@@ -179,11 +191,13 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "STPImageLibrary"]
 - !private ["s28CustomDebugStringConvertibleP", "STPLocalizedString"]
 - !private ["s28CustomDebugStringConvertibleP", "STPPaymentMethod"]
+- !private ["s28CustomDebugStringConvertibleP", "STPPaymentMethodAfterpayClearpayParams"]
 - !private ["s28CustomDebugStringConvertibleP", "STPPaymentMethodBancontactParams"]
 - !private ["s28CustomDebugStringConvertibleP", "STPPaymentMethodEPSParams"]
 - !private ["s28CustomDebugStringConvertibleP", "STPPaymentMethodFPXParams"]
 - !private ["s28CustomDebugStringConvertibleP", "STPPaymentMethodGiropayParams"]
 - !private ["s28CustomDebugStringConvertibleP", "STPPaymentMethodGrabPayParams"]
+- !private ["s28CustomDebugStringConvertibleP", "STPPaymentMethodNetBankingParams"]
 - !private ["s28CustomDebugStringConvertibleP", "STPPaymentMethodOXXOParams"]
 - !private ["s28CustomDebugStringConvertibleP", "STPPaymentMethodParams"]
 - !private ["s28CustomDebugStringConvertibleP", "STPPaymentMethodPrzelewy24Params"]
@@ -192,6 +206,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "STPPaymentMethodiDEALParams"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - ["s28CustomDebugStringConvertibleP", "additionalAPIParameters"]
+- !private ["s28CustomDebugStringConvertibleP", "afterpayClearpay"]
 - !private ["s28CustomDebugStringConvertibleP", "alipay"]
 - !private ["s28CustomDebugStringConvertibleP", "auBECSDebit"]
 - !private ["s28CustomDebugStringConvertibleP", "bacsDebit"]
@@ -215,6 +230,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "label"]
 - !private ["s28CustomDebugStringConvertibleP", "last4"]
 - !private ["s28CustomDebugStringConvertibleP", "metadata"]
+- !private ["s28CustomDebugStringConvertibleP", "netBanking"]
 - !private ["s28CustomDebugStringConvertibleP", "number"]
 - !private ["s28CustomDebugStringConvertibleP", "oxxo"]
 - !private ["s28CustomDebugStringConvertibleP", "payPal"]
@@ -238,11 +254,13 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "STPImageLibrary"]
 - !private ["s23CustomStringConvertibleP", "STPLocalizedString"]
 - !private ["s23CustomStringConvertibleP", "STPPaymentMethod"]
+- !private ["s23CustomStringConvertibleP", "STPPaymentMethodAfterpayClearpayParams"]
 - !private ["s23CustomStringConvertibleP", "STPPaymentMethodBancontactParams"]
 - !private ["s23CustomStringConvertibleP", "STPPaymentMethodEPSParams"]
 - !private ["s23CustomStringConvertibleP", "STPPaymentMethodFPXParams"]
 - !private ["s23CustomStringConvertibleP", "STPPaymentMethodGiropayParams"]
 - !private ["s23CustomStringConvertibleP", "STPPaymentMethodGrabPayParams"]
+- !private ["s23CustomStringConvertibleP", "STPPaymentMethodNetBankingParams"]
 - !private ["s23CustomStringConvertibleP", "STPPaymentMethodOXXOParams"]
 - !private ["s23CustomStringConvertibleP", "STPPaymentMethodParams"]
 - !private ["s23CustomStringConvertibleP", "STPPaymentMethodPrzelewy24Params"]
@@ -251,6 +269,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "STPPaymentMethodiDEALParams"]
 - ["s23CustomStringConvertibleP", ""]
 - ["s23CustomStringConvertibleP", "additionalAPIParameters"]
+- !private ["s23CustomStringConvertibleP", "afterpayClearpay"]
 - !private ["s23CustomStringConvertibleP", "alipay"]
 - !private ["s23CustomStringConvertibleP", "appendInterpolation"]
 - !private ["s23CustomStringConvertibleP", "appendLiteral"]
@@ -276,6 +295,7 @@ depends-member:
 - ["s23CustomStringConvertibleP", "label"]
 - !private ["s23CustomStringConvertibleP", "last4"]
 - !private ["s23CustomStringConvertibleP", "metadata"]
+- !private ["s23CustomStringConvertibleP", "netBanking"]
 - !private ["s23CustomStringConvertibleP", "number"]
 - !private ["s23CustomStringConvertibleP", "oxxo"]
 - !private ["s23CustomStringConvertibleP", "payPal"]
@@ -306,11 +326,13 @@ depends-member:
 - !private ["SQ", "STPImageLibrary"]
 - !private ["SQ", "STPLocalizedString"]
 - !private ["SQ", "STPPaymentMethod"]
+- !private ["SQ", "STPPaymentMethodAfterpayClearpayParams"]
 - !private ["SQ", "STPPaymentMethodBancontactParams"]
 - !private ["SQ", "STPPaymentMethodEPSParams"]
 - !private ["SQ", "STPPaymentMethodFPXParams"]
 - !private ["SQ", "STPPaymentMethodGiropayParams"]
 - !private ["SQ", "STPPaymentMethodGrabPayParams"]
+- !private ["SQ", "STPPaymentMethodNetBankingParams"]
 - !private ["SQ", "STPPaymentMethodOXXOParams"]
 - !private ["SQ", "STPPaymentMethodParams"]
 - !private ["SQ", "STPPaymentMethodPrzelewy24Params"]
@@ -320,6 +342,7 @@ depends-member:
 - ["SQ", "UPI"]
 - ["SQ", ""]
 - ["SQ", "additionalAPIParameters"]
+- ["SQ", "afterpayClearpay"]
 - ["SQ", "alipay"]
 - !private ["SQ", "auBECSDebit"]
 - ["SQ", "bacsDebit"]
@@ -344,6 +367,7 @@ depends-member:
 - ["SQ", "label"]
 - !private ["SQ", "last4"]
 - !private ["SQ", "metadata"]
+- ["SQ", "netBanking"]
 - !private ["SQ", "number"]
 - !private ["SQ", "oxxo"]
 - ["SQ", "payPal"]
@@ -379,11 +403,13 @@ depends-member:
 - !private ["SH", "STPImageLibrary"]
 - !private ["SH", "STPLocalizedString"]
 - !private ["SH", "STPPaymentMethod"]
+- !private ["SH", "STPPaymentMethodAfterpayClearpayParams"]
 - !private ["SH", "STPPaymentMethodBancontactParams"]
 - !private ["SH", "STPPaymentMethodEPSParams"]
 - !private ["SH", "STPPaymentMethodFPXParams"]
 - !private ["SH", "STPPaymentMethodGiropayParams"]
 - !private ["SH", "STPPaymentMethodGrabPayParams"]
+- !private ["SH", "STPPaymentMethodNetBankingParams"]
 - !private ["SH", "STPPaymentMethodOXXOParams"]
 - !private ["SH", "STPPaymentMethodParams"]
 - !private ["SH", "STPPaymentMethodPrzelewy24Params"]
@@ -393,6 +419,7 @@ depends-member:
 - ["SH", "UPI"]
 - ["SH", ""]
 - ["SH", "additionalAPIParameters"]
+- ["SH", "afterpayClearpay"]
 - ["SH", "alipay"]
 - !private ["SH", "auBECSDebit"]
 - ["SH", "bacsDebit"]
@@ -417,6 +444,7 @@ depends-member:
 - ["SH", "label"]
 - !private ["SH", "last4"]
 - !private ["SH", "metadata"]
+- ["SH", "netBanking"]
 - !private ["SH", "number"]
 - !private ["SH", "oxxo"]
 - ["SH", "payPal"]
@@ -444,6 +472,7 @@ depends-member:
 - !private ["So8NSObjectC", "STPLocalizedString"]
 - ["So8NSObjectC", "STPPaymentMethod"]
 - ["So8NSObjectC", "STPPaymentMethodAUBECSDebitParams"]
+- ["So8NSObjectC", "STPPaymentMethodAfterpayClearpayParams"]
 - ["So8NSObjectC", "STPPaymentMethodAlipayParams"]
 - ["So8NSObjectC", "STPPaymentMethodBacsDebitParams"]
 - ["So8NSObjectC", "STPPaymentMethodBancontactParams"]
@@ -453,6 +482,7 @@ depends-member:
 - ["So8NSObjectC", "STPPaymentMethodFPXParams"]
 - ["So8NSObjectC", "STPPaymentMethodGiropayParams"]
 - ["So8NSObjectC", "STPPaymentMethodGrabPayParams"]
+- ["So8NSObjectC", "STPPaymentMethodNetBankingParams"]
 - ["So8NSObjectC", "STPPaymentMethodOXXOParams"]
 - ["So8NSObjectC", "STPPaymentMethodParams"]
 - ["So8NSObjectC", "STPPaymentMethodPayPalParams"]
@@ -466,6 +496,7 @@ depends-member:
 - ["So8NSObjectC", "UIImage"]
 - ["So8NSObjectC", ""]
 - ["So8NSObjectC", "additionalAPIParameters"]
+- ["So8NSObjectC", "afterpayClearpay"]
 - ["So8NSObjectC", "alipay"]
 - ["So8NSObjectC", "auBECSDebit"]
 - ["So8NSObjectC", "bacsDebit"]
@@ -489,6 +520,7 @@ depends-member:
 - ["So8NSObjectC", "label"]
 - !private ["So8NSObjectC", "last4"]
 - ["So8NSObjectC", "metadata"]
+- ["So8NSObjectC", "netBanking"]
 - !private ["So8NSObjectC", "number"]
 - ["So8NSObjectC", "oxxo"]
 - ["So8NSObjectC", "paramsWith"]
@@ -515,6 +547,7 @@ depends-member:
 - !private ["So8NSObjectP", "STPLocalizedString"]
 - !private ["So8NSObjectP", "STPPaymentMethod"]
 - ["So8NSObjectP", "STPPaymentMethodAUBECSDebitParams"]
+- ["So8NSObjectP", "STPPaymentMethodAfterpayClearpayParams"]
 - ["So8NSObjectP", "STPPaymentMethodAlipayParams"]
 - ["So8NSObjectP", "STPPaymentMethodBacsDebitParams"]
 - ["So8NSObjectP", "STPPaymentMethodBancontactParams"]
@@ -524,6 +557,7 @@ depends-member:
 - ["So8NSObjectP", "STPPaymentMethodFPXParams"]
 - ["So8NSObjectP", "STPPaymentMethodGiropayParams"]
 - ["So8NSObjectP", "STPPaymentMethodGrabPayParams"]
+- ["So8NSObjectP", "STPPaymentMethodNetBankingParams"]
 - ["So8NSObjectP", "STPPaymentMethodOXXOParams"]
 - ["So8NSObjectP", "STPPaymentMethodParams"]
 - ["So8NSObjectP", "STPPaymentMethodPayPalParams"]
@@ -536,6 +570,7 @@ depends-member:
 - ["So8NSObjectP", "UIImage"]
 - ["So8NSObjectP", ""]
 - ["So8NSObjectP", "additionalAPIParameters"]
+- ["So8NSObjectP", "afterpayClearpay"]
 - ["So8NSObjectP", "alipay"]
 - ["So8NSObjectP", "auBECSDebit"]
 - ["So8NSObjectP", "bacsDebit"]
@@ -559,6 +594,7 @@ depends-member:
 - ["So8NSObjectP", "label"]
 - !private ["So8NSObjectP", "last4"]
 - ["So8NSObjectP", "metadata"]
+- ["So8NSObjectP", "netBanking"]
 - !private ["So8NSObjectP", "number"]
 - ["So8NSObjectP", "oxxo"]
 - ["So8NSObjectP", "paramsWith"]
@@ -582,6 +618,7 @@ depends-member:
 - ["SY", "OXXO"]
 - ["SY", "SEPADebit"]
 - ["SY", "UPI"]
+- ["SY", "afterpayClearpay"]
 - ["SY", "alipay"]
 - ["SY", "bacsDebit"]
 - ["SY", "bancontact"]
@@ -590,6 +627,7 @@ depends-member:
 - ["SY", "giropay"]
 - ["SY", "grabPay"]
 - ["SY", "iDEAL"]
+- ["SY", "netBanking"]
 - ["SY", "payPal"]
 - ["SY", "przelewy24"]
 - ["SY", "sofort"]
@@ -612,11 +650,13 @@ depends-member:
 - !private ["6Stripe16STPFormEncodableP", "STPImageLibrary"]
 - !private ["6Stripe16STPFormEncodableP", "STPLocalizedString"]
 - !private ["6Stripe16STPFormEncodableP", "STPPaymentMethod"]
+- !private ["6Stripe16STPFormEncodableP", "STPPaymentMethodAfterpayClearpayParams"]
 - !private ["6Stripe16STPFormEncodableP", "STPPaymentMethodBancontactParams"]
 - !private ["6Stripe16STPFormEncodableP", "STPPaymentMethodEPSParams"]
 - !private ["6Stripe16STPFormEncodableP", "STPPaymentMethodFPXParams"]
 - !private ["6Stripe16STPFormEncodableP", "STPPaymentMethodGiropayParams"]
 - !private ["6Stripe16STPFormEncodableP", "STPPaymentMethodGrabPayParams"]
+- !private ["6Stripe16STPFormEncodableP", "STPPaymentMethodNetBankingParams"]
 - !private ["6Stripe16STPFormEncodableP", "STPPaymentMethodOXXOParams"]
 - !private ["6Stripe16STPFormEncodableP", "STPPaymentMethodParams"]
 - !private ["6Stripe16STPFormEncodableP", "STPPaymentMethodPrzelewy24Params"]
@@ -625,6 +665,7 @@ depends-member:
 - !private ["6Stripe16STPFormEncodableP", "STPPaymentMethodiDEALParams"]
 - ["6Stripe16STPFormEncodableP", ""]
 - ["6Stripe16STPFormEncodableP", "additionalAPIParameters"]
+- ["6Stripe16STPFormEncodableP", "afterpayClearpay"]
 - ["6Stripe16STPFormEncodableP", "alipay"]
 - ["6Stripe16STPFormEncodableP", "auBECSDebit"]
 - ["6Stripe16STPFormEncodableP", "bacsDebit"]
@@ -644,6 +685,7 @@ depends-member:
 - ["6Stripe16STPFormEncodableP", "label"]
 - !private ["6Stripe16STPFormEncodableP", "last4"]
 - ["6Stripe16STPFormEncodableP", "metadata"]
+- ["6Stripe16STPFormEncodableP", "netBanking"]
 - !private ["6Stripe16STPFormEncodableP", "number"]
 - ["6Stripe16STPFormEncodableP", "oxxo"]
 - ["6Stripe16STPFormEncodableP", "paramsWith"]
@@ -666,6 +708,7 @@ depends-member:
 - !private ["6Stripe16STPPaymentMethodC", "iDEAL"]
 - !private ["6Stripe16STPPaymentMethodC", "string"]
 - !private ["6Stripe16STPPaymentMethodC", "type"]
+- !private ["6Stripe38STPPaymentMethodAfterpayClearpayParamsC", "init"]
 - !private ["6Stripe32STPPaymentMethodBancontactParamsC", "init"]
 - !private ["6Stripe26STPPaymentMethodCardParamsC", ""]
 - !private ["6Stripe26STPPaymentMethodCardParamsC", "last4"]
@@ -677,6 +720,7 @@ depends-member:
 - !private ["6Stripe25STPPaymentMethodFPXParamsC", "rawBankString"]
 - !private ["6Stripe29STPPaymentMethodGiropayParamsC", "init"]
 - !private ["6Stripe29STPPaymentMethodGrabPayParamsC", "init"]
+- !private ["6Stripe32STPPaymentMethodNetBankingParamsC", "init"]
 - !private ["6Stripe26STPPaymentMethodOXXOParamsC", "init"]
 - ["6Stripe22STPPaymentMethodParamsC", "AnyHashable"]
 - ["6Stripe22STPPaymentMethodParamsC", "Bool"]
@@ -688,6 +732,7 @@ depends-member:
 - !private ["6Stripe22STPPaymentMethodParamsC", "STPLocalizedString"]
 - ["6Stripe22STPPaymentMethodParamsC", "STPPaymentMethod"]
 - ["6Stripe22STPPaymentMethodParamsC", "STPPaymentMethodAUBECSDebitParams"]
+- ["6Stripe22STPPaymentMethodParamsC", "STPPaymentMethodAfterpayClearpayParams"]
 - ["6Stripe22STPPaymentMethodParamsC", "STPPaymentMethodAlipayParams"]
 - ["6Stripe22STPPaymentMethodParamsC", "STPPaymentMethodBacsDebitParams"]
 - ["6Stripe22STPPaymentMethodParamsC", "STPPaymentMethodBancontactParams"]
@@ -697,6 +742,7 @@ depends-member:
 - ["6Stripe22STPPaymentMethodParamsC", "STPPaymentMethodFPXParams"]
 - ["6Stripe22STPPaymentMethodParamsC", "STPPaymentMethodGiropayParams"]
 - ["6Stripe22STPPaymentMethodParamsC", "STPPaymentMethodGrabPayParams"]
+- ["6Stripe22STPPaymentMethodParamsC", "STPPaymentMethodNetBankingParams"]
 - ["6Stripe22STPPaymentMethodParamsC", "STPPaymentMethodOXXOParams"]
 - ["6Stripe22STPPaymentMethodParamsC", "STPPaymentMethodParams"]
 - ["6Stripe22STPPaymentMethodParamsC", "STPPaymentMethodPayPalParams"]
@@ -710,6 +756,7 @@ depends-member:
 - ["6Stripe22STPPaymentMethodParamsC", "UIImage"]
 - ["6Stripe22STPPaymentMethodParamsC", ""]
 - ["6Stripe22STPPaymentMethodParamsC", "additionalAPIParameters"]
+- ["6Stripe22STPPaymentMethodParamsC", "afterpayClearpay"]
 - ["6Stripe22STPPaymentMethodParamsC", "alipay"]
 - ["6Stripe22STPPaymentMethodParamsC", "auBECSDebit"]
 - ["6Stripe22STPPaymentMethodParamsC", "bacsDebit"]
@@ -727,6 +774,7 @@ depends-member:
 - ["6Stripe22STPPaymentMethodParamsC", "isReusable"]
 - ["6Stripe22STPPaymentMethodParamsC", "label"]
 - ["6Stripe22STPPaymentMethodParamsC", "metadata"]
+- ["6Stripe22STPPaymentMethodParamsC", "netBanking"]
 - ["6Stripe22STPPaymentMethodParamsC", "oxxo"]
 - ["6Stripe22STPPaymentMethodParamsC", "paramsWith"]
 - ["6Stripe22STPPaymentMethodParamsC", "payPal"]
@@ -748,6 +796,7 @@ depends-member:
 - ["6Stripe20STPPaymentMethodTypeO", "SEPADebit"]
 - ["6Stripe20STPPaymentMethodTypeO", "UPI"]
 - !private ["6Stripe20STPPaymentMethodTypeO", ""]
+- ["6Stripe20STPPaymentMethodTypeO", "afterpayClearpay"]
 - ["6Stripe20STPPaymentMethodTypeO", "alipay"]
 - ["6Stripe20STPPaymentMethodTypeO", "bacsDebit"]
 - ["6Stripe20STPPaymentMethodTypeO", "bancontact"]
@@ -756,6 +805,7 @@ depends-member:
 - ["6Stripe20STPPaymentMethodTypeO", "giropay"]
 - ["6Stripe20STPPaymentMethodTypeO", "grabPay"]
 - ["6Stripe20STPPaymentMethodTypeO", "iDEAL"]
+- ["6Stripe20STPPaymentMethodTypeO", "netBanking"]
 - ["6Stripe20STPPaymentMethodTypeO", "payPal"]
 - ["6Stripe20STPPaymentMethodTypeO", "przelewy24"]
 - ["6Stripe20STPPaymentMethodTypeO", "sofort"]
@@ -771,11 +821,13 @@ depends-member:
 - !private ["6Stripe16STPPaymentOptionP", "STPImageLibrary"]
 - !private ["6Stripe16STPPaymentOptionP", "STPLocalizedString"]
 - !private ["6Stripe16STPPaymentOptionP", "STPPaymentMethod"]
+- !private ["6Stripe16STPPaymentOptionP", "STPPaymentMethodAfterpayClearpayParams"]
 - !private ["6Stripe16STPPaymentOptionP", "STPPaymentMethodBancontactParams"]
 - !private ["6Stripe16STPPaymentOptionP", "STPPaymentMethodEPSParams"]
 - !private ["6Stripe16STPPaymentOptionP", "STPPaymentMethodFPXParams"]
 - !private ["6Stripe16STPPaymentOptionP", "STPPaymentMethodGiropayParams"]
 - !private ["6Stripe16STPPaymentOptionP", "STPPaymentMethodGrabPayParams"]
+- !private ["6Stripe16STPPaymentOptionP", "STPPaymentMethodNetBankingParams"]
 - !private ["6Stripe16STPPaymentOptionP", "STPPaymentMethodOXXOParams"]
 - !private ["6Stripe16STPPaymentOptionP", "STPPaymentMethodParams"]
 - !private ["6Stripe16STPPaymentOptionP", "STPPaymentMethodPrzelewy24Params"]
@@ -784,6 +836,7 @@ depends-member:
 - !private ["6Stripe16STPPaymentOptionP", "STPPaymentMethodiDEALParams"]
 - ["6Stripe16STPPaymentOptionP", ""]
 - ["6Stripe16STPPaymentOptionP", "additionalAPIParameters"]
+- ["6Stripe16STPPaymentOptionP", "afterpayClearpay"]
 - ["6Stripe16STPPaymentOptionP", "alipay"]
 - ["6Stripe16STPPaymentOptionP", "auBECSDebit"]
 - ["6Stripe16STPPaymentOptionP", "bacsDebit"]
@@ -800,6 +853,7 @@ depends-member:
 - ["6Stripe16STPPaymentOptionP", "isReusable"]
 - ["6Stripe16STPPaymentOptionP", "label"]
 - ["6Stripe16STPPaymentOptionP", "metadata"]
+- ["6Stripe16STPPaymentOptionP", "netBanking"]
 - ["6Stripe16STPPaymentOptionP", "oxxo"]
 - ["6Stripe16STPPaymentOptionP", "paramsWith"]
 - ["6Stripe16STPPaymentOptionP", "payPal"]
@@ -828,11 +882,13 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "STPImageLibrary"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "STPLocalizedString"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "STPPaymentMethod"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPPaymentMethodAfterpayClearpayParams"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "STPPaymentMethodBancontactParams"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "STPPaymentMethodEPSParams"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "STPPaymentMethodFPXParams"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "STPPaymentMethodGiropayParams"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "STPPaymentMethodGrabPayParams"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPPaymentMethodNetBankingParams"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "STPPaymentMethodOXXOParams"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "STPPaymentMethodParams"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "STPPaymentMethodPrzelewy24Params"]
@@ -841,6 +897,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "STPPaymentMethodiDEALParams"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - ["10Foundation27_KeyValueCodingAndObservingP", "additionalAPIParameters"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "afterpayClearpay"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "alipay"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "auBECSDebit"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "bacsDebit"]
@@ -864,6 +921,7 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "label"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "last4"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "metadata"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "netBanking"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "number"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "oxxo"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "payPal"]
@@ -887,11 +945,13 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPImageLibrary"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPLocalizedString"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPPaymentMethod"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPPaymentMethodAfterpayClearpayParams"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPPaymentMethodBancontactParams"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPPaymentMethodEPSParams"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPPaymentMethodFPXParams"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPPaymentMethodGiropayParams"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPPaymentMethodGrabPayParams"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPPaymentMethodNetBankingParams"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPPaymentMethodOXXOParams"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPPaymentMethodParams"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPPaymentMethodPrzelewy24Params"]
@@ -900,6 +960,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPPaymentMethodiDEALParams"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "additionalAPIParameters"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "afterpayClearpay"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "alipay"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "auBECSDebit"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bacsDebit"]
@@ -923,6 +984,7 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "label"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "last4"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "metadata"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "netBanking"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "number"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "oxxo"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "payPal"]
@@ -960,6 +1022,7 @@ depends-nominal:
 - "6Stripe16STPFormEncodableP"
 - !private "6Stripe15STPImageLibraryC"
 - !private "6Stripe16STPPaymentMethodC"
+- !private "6Stripe38STPPaymentMethodAfterpayClearpayParamsC"
 - !private "6Stripe32STPPaymentMethodBancontactParamsC"
 - !private "6Stripe26STPPaymentMethodCardParamsC"
 - !private "6Stripe25STPPaymentMethodEPSParamsC"
@@ -967,6 +1030,7 @@ depends-nominal:
 - !private "6Stripe25STPPaymentMethodFPXParamsC"
 - !private "6Stripe29STPPaymentMethodGiropayParamsC"
 - !private "6Stripe29STPPaymentMethodGrabPayParamsC"
+- !private "6Stripe32STPPaymentMethodNetBankingParamsC"
 - !private "6Stripe26STPPaymentMethodOXXOParamsC"
 - "6Stripe22STPPaymentMethodParamsC"
 - !private "6Stripe32STPPaymentMethodPrzelewy24ParamsC"
@@ -1007,43 +1071,108 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIViewController+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSError+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Target Support Files/Stripe/Stripe-umbrella.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDS2Service.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseImage.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSErrorMessage.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONDecodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONEncodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONWebSignature.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponse.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationResponse.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDirectoryServerCertificate.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDSProtocolVersion+Private.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTransaction+Private.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformationParameter+Private.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSString+EmptyChecking.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSWarning.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSLocalizedString.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSEphemeralKeyPair+Testing.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSwiftTryCatch.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSErrorMessage+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDirectoryServerCertificate+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSException+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseMessageExtension.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformation.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIButton+CustomInitialization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSUICustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTextFieldCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSLabelCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSelectionCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSButtonCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSNavigationBarCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSFooterCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTransaction.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSNotInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAlreadyInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSRuntimeException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSInvalidInputException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONWebEncryption.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSelectionButton.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseSelectionInfo.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/Stripe3DS2-Bridging-Header.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSImageLoader.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONEncoder.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSACSNetworkingManager.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSynchronousLocationManager.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformationManager.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJailbreakChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSOSVersionChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDebuggerChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSimulatorChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSIntegrityChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCategoryLinker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseViewController.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSProgressViewController.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformationParameter.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDirectoryServer.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSEphemeralKeyPair.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSStripe3DS2Error.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSBundleLocator.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSecTypeUtilities.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSData+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSString+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSDictionary+DecodingHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSConfigParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIColor+DefaultColors.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSIPAddress.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIFont+DefaultFonts.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseImageObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseMessageExtensionObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseSelectionInfoObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCompletionEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSEllipticCurvePoint.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIColor+ThirteenSupport.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSLayoutConstraint+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIView+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSWebView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTextChallengeView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSBrandingView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSProcessingView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSStackView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSExpandableInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeSelectionView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSpacerView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSWhitelistView.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Stripe.build/unextended-module.modulemap"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
@@ -1065,9 +1194,10 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "d504ad8a24192595a28a48eb946ef482"
+interface-hash: "9cab23edef33abe4b813e1ea3f87aaaa"

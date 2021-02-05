@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Stripe
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,30 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        var window:UIWindow?
         StripeAPI.defaultPublishableKey = "pk_test_51I0xFxFseFjpsgWvepMo3sJRNB4CCbFPhkxj2gEKgHUhIGBnciTqNVzjz1wz68Btbd5zAb2KC9eXpYaiOwLDA5QH00SZhtKPLT"
-//        print("CheckoutCart.shared.userId", CheckoutCart.shared.userId)
-//        if CheckoutCart.shared.userId != nil {
-//            let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
-//            let rootViewController = storyBoard.instantiateViewController(identifier: "HomePageViewController") as! HomePageViewController
-//            let frame = UIScreen.main.bounds
-//            window = UIWindow(frame: frame)
-//
-//            window!.rootViewController = rootViewController
-//            window!.makeKeyAndVisible()
-//
-//            return true
-//        }
-//        else {
-//            let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
-//            let rootViewController = storyBoard.instantiateViewController(identifier: "SplashPageViewController") as! SplashPageViewController
-//            let frame = UIScreen.main.bounds
-//            window = UIWindow(frame: frame)
-//
-//            window!.rootViewController = rootViewController
-//            window!.makeKeyAndVisible()
-//            return true
-//        }
+        IQKeyboardManager.shared.enable = true
+
         return true
     }
     // MARK: - Core Data stack

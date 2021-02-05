@@ -297,7 +297,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 - (void)createTokenWithBankAccount:(STPBankAccountParams * _Nonnull)bankAccount completion:(void (^ _Nonnull)(STPToken * _Nullable, NSError * _Nullable))completion;
 @end
 
-
 @class STPConnectAccountParams;
 
 @interface STPAPIClient (SWIFT_EXTENSION(Stripe))
@@ -309,6 +308,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 ///
 - (void)createTokenWithConnectAccount:(STPConnectAccountParams * _Nonnull)account completion:(void (^ _Nullable)(STPToken * _Nullable, NSError * _Nullable))completion;
 @end
+
 
 
 @class STPCardParams;
@@ -328,20 +328,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 - (void)createTokenForCVCUpdate:(NSString * _Nonnull)cvc completion:(void (^ _Nullable)(STPToken * _Nullable, NSError * _Nullable))completion;
 @end
 
-@class STPPaymentMethodParams;
-@class STPPaymentMethod;
-
-@interface STPAPIClient (SWIFT_EXTENSION(Stripe))
-/// Creates a PaymentMethod object with the provided params object.
-/// seealso:
-/// https://stripe.com/docs/api/payment_methods/create
-/// \param paymentMethodParams The <code>STPPaymentMethodParams</code> to pass to <code>/v1/payment_methods</code>.  Cannot be nil.
-///
-/// \param completion The callback to run with the returned PaymentMethod object, or an error.
-///
-- (void)createPaymentMethodWithParams:(STPPaymentMethodParams * _Nonnull)paymentMethodParams completion:(void (^ _Nonnull)(STPPaymentMethod * _Nullable, NSError * _Nullable))completion;
-@end
-
 
 @interface STPAPIClient (SWIFT_EXTENSION(Stripe))
 /// Converts a personal identification number into a Stripe token using the Stripe API.
@@ -356,6 +342,20 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 /// \param completion The callback to run with the returned Stripe token (and any errors that may have occurred).
 ///
 - (void)createTokenWithSSNLast4:(NSString * _Nonnull)ssnLast4 completion:(void (^ _Nonnull)(STPToken * _Nullable, NSError * _Nullable))completion;
+@end
+
+@class STPPaymentMethodParams;
+@class STPPaymentMethod;
+
+@interface STPAPIClient (SWIFT_EXTENSION(Stripe))
+/// Creates a PaymentMethod object with the provided params object.
+/// seealso:
+/// https://stripe.com/docs/api/payment_methods/create
+/// \param paymentMethodParams The <code>STPPaymentMethodParams</code> to pass to <code>/v1/payment_methods</code>.  Cannot be nil.
+///
+/// \param completion The callback to run with the returned PaymentMethod object, or an error.
+///
+- (void)createPaymentMethodWithParams:(STPPaymentMethodParams * _Nonnull)paymentMethodParams completion:(void (^ _Nonnull)(STPPaymentMethod * _Nullable, NSError * _Nullable))completion;
 @end
 
 @class UIImage;
@@ -404,7 +404,6 @@ enum STPFilePurpose : NSInteger;
 - (void)confirmSetupIntentWithParams:(STPSetupIntentConfirmParams * _Nonnull)setupIntentParams completion:(void (^ _Nonnull)(STPSetupIntent * _Nullable, NSError * _Nullable))completion;
 @end
 
-
 @class STPSourceParams;
 @class STPSource;
 
@@ -444,12 +443,12 @@ enum STPFilePurpose : NSInteger;
 ///
 /// \param completion The callback to run with the returned Source object, or an error.
 ///
-- (void)startPollingSourceWithId:(NSString * _Nonnull)identifier clientSecret:(NSString * _Nonnull)secret timeout:(NSTimeInterval)timeout completion:(void (^ _Nonnull)(STPSource * _Nullable, NSError * _Nullable))completion SWIFT_AVAILABILITY(ios_app_extension,unavailable);
+- (void)startPollingSourceWithId:(NSString * _Nonnull)identifier clientSecret:(NSString * _Nonnull)secret timeout:(NSTimeInterval)timeout completion:(void (^ _Nonnull)(STPSource * _Nullable, NSError * _Nullable))completion SWIFT_AVAILABILITY(maccatalyst_app_extension,unavailable) SWIFT_AVAILABILITY(ios_app_extension,unavailable);
 /// Stops polling the Source object with the given ID. Note that the completion block passed to
 /// <code>startPolling</code> will not be fired when <code>stopPolling</code> is called.
 /// \param identifier The identifier of the source to be retrieved. Cannot be nil.
 ///
-- (void)stopPollingSourceWithId:(NSString * _Nonnull)identifier SWIFT_AVAILABILITY(ios_app_extension,unavailable);
+- (void)stopPollingSourceWithId:(NSString * _Nonnull)identifier SWIFT_AVAILABILITY(maccatalyst_app_extension,unavailable) SWIFT_AVAILABILITY(ios_app_extension,unavailable);
 @end
 
 @class STPPaymentIntent;
@@ -495,6 +494,7 @@ enum STPFilePurpose : NSInteger;
 ///
 - (void)confirmPaymentIntentWithParams:(STPPaymentIntentParams * _Nonnull)paymentIntentParams expand:(NSArray<NSString *> * _Nullable)expand completion:(void (^ _Nonnull)(STPPaymentIntent * _Nullable, NSError * _Nullable))completion;
 @end
+
 
 @class PKPayment;
 
@@ -1011,14 +1011,14 @@ SWIFT_CLASS("_TtC6Stripe10STPAddress")
 @end
 
 
-@interface STPAddress (SWIFT_EXTENSION(Stripe)) <STPAPIResponseDecodable>
-+ (nullable instancetype)decodedObjectFromAPIResponse:(NSDictionary * _Nullable)response SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
 @interface STPAddress (SWIFT_EXTENSION(Stripe)) <NSCopying>
 /// :nodoc:
 - (id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+@interface STPAddress (SWIFT_EXTENSION(Stripe)) <STPAPIResponseDecodable>
++ (nullable instancetype)decodedObjectFromAPIResponse:(NSDictionary * _Nullable)response SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -1100,7 +1100,7 @@ SWIFT_CLASS("_TtC6Stripe10STPAppInfo")
 /// https://stripe.com/docs/apple-pay#native for a full guide
 /// seealso:
 /// ApplePayExampleViewController for an example
-SWIFT_CLASS("_TtC6Stripe18STPApplePayContext") SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+SWIFT_CLASS("_TtC6Stripe18STPApplePayContext") SWIFT_AVAILABILITY(maccatalyst_app_extension,unavailable) SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @interface STPApplePayContext : NSObject <PKPaymentAuthorizationViewControllerDelegate>
 /// Initializes this class.
 /// @note This may return nil if the request is invalid e.g. the user is restricted by parental controls, or can’t make payments on any of the request’s supported networks
@@ -1137,7 +1137,7 @@ enum STPPaymentStatus : NSInteger;
 
 /// Implement the required methods of this delegate to supply a PaymentIntent to STPApplePayContext and be notified of the completion of the Apple Pay payment.
 /// You may also implement the optional delegate methods to handle shipping methods and shipping address changes e.g. to verify you can ship to the address, or update the payment amount.
-SWIFT_PROTOCOL("_TtP6Stripe26STPApplePayContextDelegate_") SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+SWIFT_PROTOCOL("_TtP6Stripe26STPApplePayContextDelegate_") SWIFT_AVAILABILITY(maccatalyst_app_extension,unavailable) SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @protocol STPApplePayContextDelegate <NSObject>
 /// Called after the customer has authorized Apple Pay.  Implement this method to call the completion block with the client secret of a PaymentIntent representing the payment.
 /// \param paymentMethod The PaymentMethod that represents the customer’s Apple Pay payment method.
@@ -2148,6 +2148,8 @@ SWIFT_CLASS("_TtC6Stripe39STPConnectAccountIndividualVerification")
 @interface STPConnectAccountIndividualVerification : NSObject
 /// An identifying document, either a passport or local ID card.
 @property (nonatomic, strong) STPConnectAccountVerificationDocument * _Nullable document;
+/// A document showing address, either a passport, local ID card, or utility bill from a well-known utility company.
+@property (nonatomic, strong) STPConnectAccountVerificationDocument * _Nullable additionalDocument;
 @property (nonatomic, copy) NSDictionary * _Nonnull additionalAPIParameters;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -2355,7 +2357,11 @@ SWIFT_CLASS("_TtC6Stripe18STPCustomerContext")
 @property (nonatomic) BOOL includeApplePayPaymentMethods;
 - (void)retrieveCustomer:(void (^ _Nullable)(STPCustomer * _Nullable, NSError * _Nullable))completion;
 - (void)updateCustomerWithShippingAddress:(STPAddress * _Nonnull)shipping completion:(void (^ _Nullable)(NSError * _Nullable))completion;
+/// A convenience method for attaching the PaymentMethod to the current Customer
+- (void)attachPaymentMethodToCustomerWithPaymentMethodId:(NSString * _Nonnull)paymentMethodId completion:(void (^ _Nullable)(NSError * _Nullable))completion;
 - (void)attachPaymentMethodToCustomer:(STPPaymentMethod * _Nonnull)paymentMethod completion:(void (^ _Nullable)(NSError * _Nullable))completion;
+/// A convenience method for detaching the PaymentMethod to the current Customer
+- (void)detachPaymentMethodFromCustomerWithPaymentMethodId:(NSString * _Nonnull)paymentMethodId completion:(void (^ _Nullable)(NSError * _Nullable))completion;
 - (void)detachPaymentMethodFromCustomer:(STPPaymentMethod * _Nonnull)paymentMethod completion:(void (^ _Nullable)(NSError * _Nullable))completion;
 - (void)listPaymentMethodsForCustomerWithCompletion:(void (^ _Nullable)(NSArray<STPPaymentMethod *> * _Nullable, NSError * _Nullable))completion;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -3729,7 +3735,7 @@ enum STPPaymentHandlerActionStatus : NSInteger;
 /// It can present authentication UI on top of your app or redirect users out of your app (to e.g. their banking app).
 /// seealso:
 /// https://stripe.com/docs/mobile/ios/authentication
-SWIFT_CLASS("_TtC6Stripe17STPPaymentHandler") SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+SWIFT_CLASS("_TtC6Stripe17STPPaymentHandler") SWIFT_AVAILABILITY(maccatalyst_app_extension,unavailable) SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @interface STPPaymentHandler : NSObject <SFSafariViewControllerDelegate>
 /// The error domain for errors in <code>STPPaymentHandler</code>.
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull errorDomain;)
@@ -4362,10 +4368,12 @@ enum STPPaymentMethodType : NSInteger;
 @class STPPaymentMethodEPS;
 @class STPPaymentMethodPrzelewy24;
 @class STPPaymentMethodBancontact;
+@class STPPaymentMethodNetBanking;
 @class STPPaymentMethodOXXO;
 @class STPPaymentMethodSofort;
 @class STPPaymentMethodUPI;
 @class STPPaymentMethodPayPal;
+@class STPPaymentMethodAfterpayClearpay;
 
 /// PaymentMethod objects represent your customer’s payment instruments. They can be used with PaymentIntents to collect payments.
 /// seealso:
@@ -4409,6 +4417,8 @@ SWIFT_CLASS("_TtC6Stripe16STPPaymentMethod")
 @property (nonatomic, readonly, strong) STPPaymentMethodPrzelewy24 * _Nullable przelewy24;
 /// If this is a Bancontact PaymentMethod (i.e. <code>self.type == STPPaymentMethodTypeBancontact</code>), this contains additional details.
 @property (nonatomic, readonly, strong) STPPaymentMethodBancontact * _Nullable bancontact;
+/// If this is a NetBanking PaymentMethod (i.e. <code>self.type == STPPaymentMethodTypeNetBanking</code>), this contains additional details.
+@property (nonatomic, readonly, strong) STPPaymentMethodNetBanking * _Nullable netBanking;
 /// If this is an OXXO PaymentMethod (i.e. <code>self.type == STPPaymentMethodTypeOXXO</code>), this contains additional details.
 @property (nonatomic, readonly, strong) STPPaymentMethodOXXO * _Nullable oxxo;
 /// If this is a Sofort PaymentMethod (i.e. <code>self.type == STPPaymentMethodTypeSofort</code>), this contains additional details.
@@ -4417,8 +4427,15 @@ SWIFT_CLASS("_TtC6Stripe16STPPaymentMethod")
 @property (nonatomic, readonly, strong) STPPaymentMethodUPI * _Nullable upi;
 /// If this is a PayPal PaymentMethod (i.e. <code>self.type == STPPaymentMethodTypePayPal</code>), this contains additional details. :nodoc:
 @property (nonatomic, readonly, strong) STPPaymentMethodPayPal * _Nullable payPal;
+/// If this is an AfterpayClearpay PaymentMethod (i.e. <code>self.type == STPPaymentMethodTypeAfterpayClearpay</code>), this contains additional details. :nodoc:
+@property (nonatomic, readonly, strong) STPPaymentMethodAfterpayClearpay * _Nullable afterpayClearpay;
 /// The ID of the Customer to which this PaymentMethod is saved. Nil when the PaymentMethod has not been saved to a Customer.
 @property (nonatomic, readonly, copy) NSString * _Nullable customerId;
+/// Set of key-value pairs that you can attach to an object. This can be useful for storing additional information about the object in a structured format.
+/// @deprecated Metadata is no longer returned to clients using publishable keys. Retrieve them on your server using yoursecret key instead.
+/// seealso:
+/// https://stripe.com/docs/api#metadata
+@property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nullable metadata SWIFT_DEPRECATED_MSG("Metadata is no longer returned to clients using publishable keys. Retrieve them on your server using your secret key instead.");
 /// :nodoc:
 @property (nonatomic, readonly, copy) NSDictionary * _Nonnull allResponseFields;
 /// :nodoc:
@@ -4495,6 +4512,30 @@ SWIFT_CLASS("_TtC6Stripe23STPPaymentMethodAddress")
 + (NSDictionary<NSString *, NSString *> * _Nonnull)propertyNamesToFormFieldNamesMapping SWIFT_WARN_UNUSED_RESULT;
 + (NSString * _Nullable)rootObjectName SWIFT_WARN_UNUSED_RESULT;
 + (nullable instancetype)decodedObjectFromAPIResponse:(NSDictionary * _Nullable)response SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+/// An AfterpayClearpay Payment Method.
+/// seealso:
+/// https://stripe.com/docs/api/payment_methods/object#payment_method_object-afterpay_clearpay
+SWIFT_CLASS("_TtC6Stripe32STPPaymentMethodAfterpayClearpay")
+@interface STPPaymentMethodAfterpayClearpay : NSObject <STPAPIResponseDecodable>
+@property (nonatomic, readonly, copy) NSDictionary * _Nonnull allResponseFields;
+/// :nodoc:
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
++ (nullable instancetype)decodedObjectFromAPIResponse:(NSDictionary * _Nullable)response SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+/// An object representing parameters used to create an AfterpayClearpay Payment Method
+SWIFT_CLASS("_TtC6Stripe38STPPaymentMethodAfterpayClearpayParams")
+@interface STPPaymentMethodAfterpayClearpayParams : NSObject <STPFormEncodable>
+@property (nonatomic, copy) NSDictionary * _Nonnull additionalAPIParameters;
++ (NSString * _Nullable)rootObjectName SWIFT_WARN_UNUSED_RESULT;
++ (NSDictionary<NSString *, NSString *> * _Nonnull)propertyNamesToFormFieldNamesMapping SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -4944,6 +4985,34 @@ SWIFT_CLASS("_TtC6Stripe29STPPaymentMethodGrabPayParams")
 @end
 
 
+/// A NetBanking Payment Method.
+/// seealso:
+/// https://stripe.com/docs/api/payment_methods/object#payment_method_object-netbanking
+SWIFT_CLASS("_TtC6Stripe26STPPaymentMethodNetBanking")
+@interface STPPaymentMethodNetBanking : NSObject <STPAPIResponseDecodable>
+@property (nonatomic, readonly, copy) NSDictionary * _Nonnull allResponseFields;
+/// Customer’s Bank Name
+@property (nonatomic, readonly, copy) NSString * _Nonnull bank;
+/// :nodoc:
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
++ (nullable instancetype)decodedObjectFromAPIResponse:(NSDictionary * _Nullable)response SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+/// An object representing parameters used to create a NetBanking Payment Method
+SWIFT_CLASS("_TtC6Stripe32STPPaymentMethodNetBankingParams")
+@interface STPPaymentMethodNetBankingParams : NSObject <STPFormEncodable>
+@property (nonatomic, copy) NSDictionary * _Nonnull additionalAPIParameters;
+/// Customer’s Bank Name. Required.
+@property (nonatomic, copy) NSString * _Nullable bank;
++ (NSString * _Nullable)rootObjectName SWIFT_WARN_UNUSED_RESULT;
++ (NSDictionary<NSString *, NSString *> * _Nonnull)propertyNamesToFormFieldNamesMapping SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 /// An OXXO Payment Method.
 /// seealso:
 /// https://stripe.com/docs/payments/oxxo
@@ -5016,6 +5085,8 @@ SWIFT_CLASS("_TtC6Stripe22STPPaymentMethodParams")
 @property (nonatomic, strong) STPPaymentMethodEPSParams * _Nullable eps;
 /// If this is a Bancontact PaymentMethod, this contains additional details.
 @property (nonatomic, strong) STPPaymentMethodBancontactParams * _Nullable bancontact;
+/// If this is a NetBanking PaymentMethod, this contains additional details.
+@property (nonatomic, strong) STPPaymentMethodNetBankingParams * _Nullable netBanking;
 /// If this is an OXXO PaymentMethod, this contains additional details.
 @property (nonatomic, strong) STPPaymentMethodOXXOParams * _Nullable oxxo;
 /// If this is a Sofort PaymentMethod, this contains additional details.
@@ -5024,6 +5095,8 @@ SWIFT_CLASS("_TtC6Stripe22STPPaymentMethodParams")
 @property (nonatomic, strong) STPPaymentMethodUPIParams * _Nullable upi;
 /// If this is a GrabPay PaymentMethod, this contains additional details.
 @property (nonatomic, strong) STPPaymentMethodGrabPayParams * _Nullable grabPay;
+/// If this is a Afterpay PaymentMethod, this contains additional details.
+@property (nonatomic, strong) STPPaymentMethodAfterpayClearpayParams * _Nullable afterpayClearpay;
 /// Set of key-value pairs that you can attach to the PaymentMethod. This can be useful for storing additional information about the PaymentMethod in a structured format.
 @property (nonatomic, copy) NSDictionary<NSString *, NSString *> * _Nullable metadata;
 /// Creates params for a card PaymentMethod.
@@ -5106,6 +5179,14 @@ SWIFT_CLASS("_TtC6Stripe22STPPaymentMethodParams")
 /// \param metadata Additional information to attach to the PaymentMethod.
 ///
 - (nonnull instancetype)initWithBancontact:(STPPaymentMethodBancontactParams * _Nonnull)bancontact billingDetails:(STPPaymentMethodBillingDetails * _Nonnull)billingDetails metadata:(NSDictionary<NSString *, NSString *> * _Nullable)metadata;
+/// Creates params for a NetBanking PaymentMethod;
+/// \param netBanking An object containing additional NetBanking details.
+///
+/// \param billingDetails An object containing the user’s billing details.
+///
+/// \param metadata Additional information to attach to the PaymentMethod.
+///
+- (nonnull instancetype)initWithNetBanking:(STPPaymentMethodNetBankingParams * _Nonnull)netBanking billingDetails:(STPPaymentMethodBillingDetails * _Nonnull)billingDetails metadata:(NSDictionary<NSString *, NSString *> * _Nullable)metadata;
 /// Creates params for a GrabPay PaymentMethod;
 /// \param grabPay An object containing additional GrabPay details.
 ///
@@ -5154,6 +5235,14 @@ SWIFT_CLASS("_TtC6Stripe22STPPaymentMethodParams")
 /// \param metadata Additional information to attach to the PaymentMethod.
 ///
 - (nonnull instancetype)initWithPayPal:(STPPaymentMethodPayPalParams * _Nonnull)payPal billingDetails:(STPPaymentMethodBillingDetails * _Nullable)billingDetails metadata:(NSDictionary<NSString *, NSString *> * _Nullable)metadata;
+/// Creates params for an AfterpayClearpay PaymentMethod. :nodoc:
+/// \param afterpayClearpay An object containing additional AfterpayClearpay details.
+///
+/// \param billingDetails An object containing the user’s billing details.
+///
+/// \param metadata Additional information to attach to the PaymentMethod.
+///
+- (nonnull instancetype)initWithAfterpayClearpay:(STPPaymentMethodAfterpayClearpayParams * _Nonnull)afterpayClearpay billingDetails:(STPPaymentMethodBillingDetails * _Nullable)billingDetails metadata:(NSDictionary<NSString *, NSString *> * _Nullable)metadata;
 /// Creates params from a single-use PaymentMethod. This is useful for recreating a new payment method
 /// with similar settings. It will return nil if used with a reusable PaymentMethod.
 /// \param paymentMethod An object containing the original single-use PaymentMethod.
@@ -5250,6 +5339,14 @@ SWIFT_CLASS("_TtC6Stripe22STPPaymentMethodParams")
 /// \param metadata Additional information to attach to the PaymentMethod.
 ///
 + (STPPaymentMethodParams * _Nonnull)paramsWithBancontact:(STPPaymentMethodBancontactParams * _Nonnull)bancontact billingDetails:(STPPaymentMethodBillingDetails * _Nonnull)billingDetails metadata:(NSDictionary<NSString *, NSString *> * _Nullable)metadata SWIFT_WARN_UNUSED_RESULT;
+/// Creates params for a NetBanking PaymentMethod;
+/// \param netBanking An object containing additional NetBanking details.
+///
+/// \param billingDetails An object containing the user’s billing details. Note that <code>billingDetails.name</code> is required for Bancontact PaymentMethods.
+///
+/// \param metadata Additional information to attach to the PaymentMethod.
+///
++ (STPPaymentMethodParams * _Nonnull)paramsWithNetBanking:(STPPaymentMethodNetBankingParams * _Nonnull)netBanking billingDetails:(STPPaymentMethodBillingDetails * _Nonnull)billingDetails metadata:(NSDictionary<NSString *, NSString *> * _Nullable)metadata SWIFT_WARN_UNUSED_RESULT;
 /// Creates params for an OXXO PaymentMethod;
 /// \param oxxo An object containing additional OXXO details.
 ///
@@ -5298,6 +5395,14 @@ SWIFT_CLASS("_TtC6Stripe22STPPaymentMethodParams")
 /// \param metadata Additional information to attach to the PaymentMethod.
 ///
 + (STPPaymentMethodParams * _Nonnull)paramsWithPayPal:(STPPaymentMethodPayPalParams * _Nonnull)payPal billingDetails:(STPPaymentMethodBillingDetails * _Nullable)billingDetails metadata:(NSDictionary<NSString *, NSString *> * _Nullable)metadata SWIFT_WARN_UNUSED_RESULT;
+/// Creates params for an AfterpayClearpay PaymentMethod. :nodoc:
+/// \param afterpayClearpay An object containing additional AfterpayClearpay details.
+///
+/// \param billingDetails An object containing the user’s billing details.
+///
+/// \param metadata Additional information to attach to the PaymentMethod.
+///
++ (STPPaymentMethodParams * _Nonnull)paramsWithAfterpayClearpay:(STPPaymentMethodAfterpayClearpayParams * _Nonnull)afterpayClearpay billingDetails:(STPPaymentMethodBillingDetails * _Nullable)billingDetails metadata:(NSDictionary<NSString *, NSString *> * _Nullable)metadata SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -5456,16 +5561,20 @@ typedef SWIFT_ENUM(NSInteger, STPPaymentMethodType, closed) {
   STPPaymentMethodTypeEPS SWIFT_COMPILE_NAME("EPS") = 11,
 /// A Bancontact payment method.
   STPPaymentMethodTypeBancontact = 12,
+/// A NetBanking payment method.
+  STPPaymentMethodTypeNetBanking = 13,
 /// An OXXO payment method.
-  STPPaymentMethodTypeOXXO SWIFT_COMPILE_NAME("OXXO") = 13,
+  STPPaymentMethodTypeOXXO SWIFT_COMPILE_NAME("OXXO") = 14,
 /// A Sofort payment method.
-  STPPaymentMethodTypeSofort = 14,
+  STPPaymentMethodTypeSofort = 15,
 /// A UPI payment method.
-  STPPaymentMethodTypeUPI = 15,
+  STPPaymentMethodTypeUPI = 16,
 /// A PayPal payment method. :nodoc:
-  STPPaymentMethodTypePayPal = 16,
+  STPPaymentMethodTypePayPal = 17,
+/// An AfterpayClearpay payment method
+  STPPaymentMethodTypeAfterpayClearpay = 18,
 /// An unknown type.
-  STPPaymentMethodTypeUnknown = 17,
+  STPPaymentMethodTypeUnknown = 19,
 };
 
 
@@ -5773,7 +5882,7 @@ enum STPRedirectContextState : NSInteger;
 /// @note You must retain this instance for the duration of the redirect flow.
 /// This class dismisses any presented view controller upon deallocation.
 /// See https://stripe.com/docs/sources/best-practices
-SWIFT_CLASS("_TtC6Stripe18STPRedirectContext") SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+SWIFT_CLASS("_TtC6Stripe18STPRedirectContext") SWIFT_AVAILABILITY(maccatalyst_app_extension,unavailable) SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @interface STPRedirectContext : NSObject <SFSafariViewControllerDelegate, UIViewControllerTransitioningDelegate>
 /// The domain for NSErrors specific to <code>STPRedirectContext</code>
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull STPRedirectContextErrorDomain;)

@@ -101,6 +101,8 @@ depends-member:
 - ["s30ExpressibleByDictionaryLiteralP", "init"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "removeValue"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
+- ["s32ExpressibleByStringInterpolationP", "init"]
 - ["11PusherSwift13GlobalChannelC", "PusherConnection"]
 - ["11PusherSwift13GlobalChannelC", "PusherEvent"]
 - ["11PusherSwift13GlobalChannelC", "String"]
@@ -154,6 +156,8 @@ depends-member:
 - ["So8NSObjectP", "bindLegacy"]
 - ["So8NSObjectP", "connection"]
 - !private ["So8NSObjectP", "copy"]
+- ["So8NSObjectP", "eventHandlersInternal"]
+- ["So8NSObjectP", "eventHandlersQueue"]
 - ["So8NSObjectP", "globalCallbacks"]
 - ["So8NSObjectP", "globalLegacyCallbacks"]
 - ["So8NSObjectP", "handleEvent"]
@@ -191,10 +195,12 @@ depends-member:
 - !private ["ST", "makeIterator"]
 - !private ["ST", "removeValue"]
 - !private ["ST", "subscript"]
+- ["s27StringInterpolationProtocolP", "init"]
 - !private ["10Foundation4UUIDV", "init"]
 - !private ["10Foundation4UUIDV", "uuidString"]
 - ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
-- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "removeValue"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UUID"]
@@ -233,6 +239,7 @@ depends-nominal:
 - !private "SE"
 - "SQ"
 - "s30ExpressibleByDictionaryLiteralP"
+- "s32ExpressibleByStringInterpolationP"
 - "11PusherSwift13GlobalChannelC"
 - "SH"
 - !private "So9NSCopyingP"
@@ -242,9 +249,11 @@ depends-nominal:
 - !private "11PusherSwift0A5EventC"
 - !private "10Foundation20ReferenceConvertibleP"
 - !private "ST"
+- "s27StringInterpolationProtocolP"
 - !private "10Foundation4UUIDV"
 - "s35_ExpressibleByBuiltinBooleanLiteralP"
-- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"

@@ -466,6 +466,7 @@ SWIFT_CLASS("_TtC11PusherSwift19PusherClientOptions")
 @property (nonatomic, readonly) BOOL autoReconnect;
 @property (nonatomic, readonly, copy) NSString * _Nonnull host;
 @property (nonatomic, readonly) NSInteger port;
+@property (nonatomic, readonly, copy) NSString * _Nullable path;
 @property (nonatomic, readonly) BOOL useTLS;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");

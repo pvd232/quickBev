@@ -49,6 +49,8 @@ public class STPPaymentMethod: NSObject, STPAPIResponseDecodable, STPPaymentOpti
   @objc private(set) public var przelewy24: STPPaymentMethodPrzelewy24?
   /// If this is a Bancontact PaymentMethod (i.e. `self.type == STPPaymentMethodTypeBancontact`), this contains additional details.
   @objc private(set) public var bancontact: STPPaymentMethodBancontact?
+  /// If this is a NetBanking PaymentMethod (i.e. `self.type == STPPaymentMethodTypeNetBanking`), this contains additional details.
+  @objc private(set) public var netBanking: STPPaymentMethodNetBanking?
   /// If this is an OXXO PaymentMethod (i.e. `self.type == STPPaymentMethodTypeOXXO`), this contains additional details.
   @objc private(set) public var oxxo: STPPaymentMethodOXXO?
   /// If this is a Sofort PaymentMethod (i.e. `self.type == STPPaymentMethodTypeSofort`), this contains additional details.
@@ -57,6 +59,8 @@ public class STPPaymentMethod: NSObject, STPAPIResponseDecodable, STPPaymentOpti
   @objc private(set) public var upi: STPPaymentMethodUPI?
   /// If this is a PayPal PaymentMethod (i.e. `self.type == STPPaymentMethodTypePayPal`), this contains additional details. :nodoc:
   @objc private(set) public var payPal: STPPaymentMethodPayPal?
+  /// If this is an AfterpayClearpay PaymentMethod (i.e. `self.type == STPPaymentMethodTypeAfterpayClearpay`), this contains additional details. :nodoc:
+  @objc private(set) public var afterpayClearpay: STPPaymentMethodAfterpayClearpay?
   /// The ID of the Customer to which this PaymentMethod is saved. Nil when the PaymentMethod has not been saved to a Customer.
   @objc private(set) public var customerId: String?
   // MARK: - Deprecated
@@ -69,7 +73,7 @@ public class STPPaymentMethod: NSObject, STPAPIResponseDecodable, STPPaymentOpti
     message:
       "Metadata is no longer returned to clients using publishable keys. Retrieve them on your server using your secret key instead."
   )
-  private(set) public var metadata: [String: String]?
+  @objc private(set) public var metadata: [String: String]?
 
   /// :nodoc:
   @objc private(set) public var allResponseFields: [AnyHashable: Any] = [:]
@@ -95,6 +99,7 @@ public class STPPaymentMethod: NSObject, STPAPIResponseDecodable, STPPaymentOpti
       "eps = \(String(describing: eps))",
       "fpx = \(String(describing: fpx))",
       "giropay = \(String(describing: giropay))",
+      "netBanking = \(String(describing: netBanking))",
       "oxxo = \(String(describing: oxxo))",
       "grabPay = \(String(describing: grabPay))",
       "payPal = \(String(describing: payPal))",
@@ -102,6 +107,7 @@ public class STPPaymentMethod: NSObject, STPAPIResponseDecodable, STPPaymentOpti
       "sepaDebit = \(String(describing: sepaDebit))",
       "sofort = \(String(describing: sofort))",
       "upi = \(String(describing: upi))",
+      "afterpay_clearpay = \(String(describing: afterpayClearpay))",
       "liveMode = \(liveMode ? "YES" : "NO")",
       "type = \(allResponseFields["type"] as? String ?? "")",
     ]
@@ -123,11 +129,13 @@ public class STPPaymentMethod: NSObject, STPAPIResponseDecodable, STPPaymentOpti
       "p24": NSNumber(value: STPPaymentMethodType.przelewy24.rawValue),
       "eps": NSNumber(value: STPPaymentMethodType.EPS.rawValue),
       "bancontact": NSNumber(value: STPPaymentMethodType.bancontact.rawValue),
+      "netbanking": NSNumber(value: STPPaymentMethodType.netBanking.rawValue),
       "oxxo": NSNumber(value: STPPaymentMethodType.OXXO.rawValue),
       "sofort": NSNumber(value: STPPaymentMethodType.sofort.rawValue),
       "upi": NSNumber(value: STPPaymentMethodType.UPI.rawValue),
       "alipay": NSNumber(value: STPPaymentMethodType.alipay.rawValue),
       "paypal": NSNumber(value: STPPaymentMethodType.payPal.rawValue),
+      "afterpay_clearpay": NSNumber(value: STPPaymentMethodType.afterpayClearpay.rawValue),
     ]
   }
 
@@ -215,6 +223,8 @@ public class STPPaymentMethod: NSObject, STPAPIResponseDecodable, STPPaymentOpti
       fromAPIResponse: dict.stp_dictionary(forKey: "p24"))
     paymentMethod.bancontact = STPPaymentMethodBancontact.decodedObject(
       fromAPIResponse: dict.stp_dictionary(forKey: "bancontact"))
+    paymentMethod.netBanking = STPPaymentMethodNetBanking.decodedObject(
+      fromAPIResponse: dict.stp_dictionary(forKey: "netbanking"))
     paymentMethod.oxxo = STPPaymentMethodOXXO.decodedObject(
       fromAPIResponse: dict.stp_dictionary(forKey: "oxxo"))
     paymentMethod.sofort = STPPaymentMethodSofort.decodedObject(
@@ -228,6 +238,8 @@ public class STPPaymentMethod: NSObject, STPAPIResponseDecodable, STPPaymentOpti
       fromAPIResponse: dict.stp_dictionary(forKey: "grabpay"))
     paymentMethod.payPal = STPPaymentMethodPayPal.decodedObject(
       fromAPIResponse: dict.stp_dictionary(forKey: "paypal"))
+    paymentMethod.afterpayClearpay = STPPaymentMethodAfterpayClearpay.decodedObject(
+      fromAPIResponse: dict.stp_dictionary(forKey: "afterpay_clearpay"))
     return paymentMethod
   }
 
@@ -281,6 +293,8 @@ public class STPPaymentMethod: NSObject, STPAPIResponseDecodable, STPPaymentOpti
       return STPLocalizedString("Przelewy24", "Payment Method type brand name.")
     case .bancontact:
       return STPLocalizedString("Bancontact", "Payment Method type brand name")
+    case .netBanking:
+      return STPLocalizedString("NetBanking", "Payment Method type brand name")
     case .OXXO:
       return STPLocalizedString("OXXO", "Payment Method type brand name")
     case .sofort:
@@ -289,6 +303,8 @@ public class STPPaymentMethod: NSObject, STPAPIResponseDecodable, STPPaymentOpti
       return STPLocalizedString("UPI", "Payment Method type brand name")
     case .payPal:
       return STPLocalizedString("PayPal", "Payment Method type brand name")
+    case .afterpayClearpay:
+      return STPLocalizedString("AfterpayClearpay", "Payment Method type brand name")
     case .bacsDebit, .cardPresent,  // fall through
       .unknown:
       return STPLocalizedString("Unknown", "Default missing source type label")
@@ -303,7 +319,7 @@ public class STPPaymentMethod: NSObject, STPAPIResponseDecodable, STPPaymentOpti
       return true
     case .alipay /* Careful! Revisit this if/when we support recurring Alipay */, .AUBECSDebit,
       .bacsDebit, .SEPADebit, .iDEAL, .FPX, .cardPresent, .giropay, .EPS, .payPal, .przelewy24, .bancontact,
-      .OXXO, .sofort, .grabPay, .UPI,  // fall through
+      .OXXO, .sofort, .grabPay, .netBanking, .UPI, .afterpayClearpay, // fall through
       .unknown:
       return false
     @unknown default:

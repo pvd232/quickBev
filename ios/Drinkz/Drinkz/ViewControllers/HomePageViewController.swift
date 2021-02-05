@@ -217,15 +217,6 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
         }
     }
 }
-extension String {
-    func capitalizingFirstLetter() -> String {
-        return prefix(1).capitalized + dropFirst()
-    }
-    
-    mutating func capitalizeFirstLetter() {
-        self = self.capitalizingFirstLetter()
-    }
-}
 extension HomePageViewController: UIPopoverPresentationControllerDelegate {
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
         return UIModalPresentationStyle.fullScreen
@@ -235,53 +226,3 @@ extension HomePageViewController: UIPopoverPresentationControllerDelegate {
         return UINavigationController(rootViewController: controller.presentedViewController)
     }
 }
-extension UIColor {
-    class var themeColor:UIColor {
-        return UIColor.init(red: 134/255, green: 130/255, blue: 230/255, alpha: 1.0)
-    }
-}
-extension UIFont {
-    class var themeButtonFont:UIFont {
-        return UIFont.init(name: "Charter-Black", size: 20.0)!
-    }
-    class var smallThemeButtonFont:UIFont {
-        return UIFont.init(name: "Charter-Black", size: 12.0)!
-    }
-    class var themeLabelFont:UIFont {
-        return UIFont.init(name: "Charter-Roman", size: 20.0)!
-    }
-    class var themeLabelSmallFont:UIFont {
-        return UIFont.init(name: "Charter-Roman", size: 14.0)!
-    }
-}
-@propertyWrapper
-public struct UsesAutoLayout<T: UIView> {
-    public var wrappedValue: T {
-        didSet {
-            wrappedValue.translatesAutoresizingMaskIntoConstraints = false
-        }
-    }
-    
-    public init(wrappedValue: T) {
-        self.wrappedValue = wrappedValue
-        wrappedValue.translatesAutoresizingMaskIntoConstraints = false
-    }
-}
-extension NSLayoutConstraint {
-    
-    /// Returns the constraint sender with the passed priority.
-    ///
-    /// - Parameter priority: The priority to be set.
-    /// - Returns: The sended constraint adjusted with the new priority.
-    func usingPriority(_ priority: UILayoutPriority) -> NSLayoutConstraint {
-        self.priority = priority
-        return self
-    }
-    
-}
-extension UIViewController{
-    class var screenSize: CGRect { return UIScreen.main.bounds}
-    
-}
-
-

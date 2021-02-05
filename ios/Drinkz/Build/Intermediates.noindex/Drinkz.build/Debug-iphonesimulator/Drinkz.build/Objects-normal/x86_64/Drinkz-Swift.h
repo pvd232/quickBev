@@ -354,18 +354,18 @@ SWIFT_CLASS("_TtC6Drinkz12CheckoutCart")
 
 
 @interface CheckoutCart (SWIFT_EXTENSION(Drinkz))
-- (void)addDrinksObject:(Drink * _Nonnull)value;
-- (void)removeDrinksObject:(Drink * _Nonnull)value;
-- (void)addDrinks:(NSSet * _Nonnull)values;
-- (void)removeDrinks:(NSSet * _Nonnull)values;
-@end
-
-
-@interface CheckoutCart (SWIFT_EXTENSION(Drinkz))
 - (void)addBusinessObject:(Business * _Nonnull)value;
 - (void)removeBusinessObject:(Business * _Nonnull)value;
 - (void)addBusiness:(NSSet * _Nonnull)values;
 - (void)removeBusiness:(NSSet * _Nonnull)values;
+@end
+
+
+@interface CheckoutCart (SWIFT_EXTENSION(Drinkz))
+- (void)addDrinksObject:(Drink * _Nonnull)value;
+- (void)removeDrinksObject:(Drink * _Nonnull)value;
+- (void)addDrinks:(NSSet * _Nonnull)values;
+- (void)removeDrinks:(NSSet * _Nonnull)values;
 @end
 
 

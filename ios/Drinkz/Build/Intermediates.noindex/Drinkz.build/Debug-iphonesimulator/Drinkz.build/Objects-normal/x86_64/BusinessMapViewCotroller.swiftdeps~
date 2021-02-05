@@ -1139,7 +1139,7 @@ depends-member:
 - !private ["So8NSCodingP", "MKPinAnnotationView"]
 - !private ["So8NSCodingP", "NSLayoutConstraint"]
 - ["So8NSCodingP", "NewBusinessPickedProtocol"]
-- !private ["So8NSCodingP", "RoundButton"]
+- ["So8NSCodingP", "RoundButton"]
 - !private ["So8NSCodingP", "String"]
 - ["So8NSCodingP", "UIActivityIndicatorView"]
 - !private ["So8NSCodingP", "UIBarButtonItem"]
@@ -1252,7 +1252,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "MKPinAnnotationView"]
 - !private ["So26NSExtensionRequestHandlingP", "NSLayoutConstraint"]
 - ["So26NSExtensionRequestHandlingP", "NewBusinessPickedProtocol"]
-- !private ["So26NSExtensionRequestHandlingP", "RoundButton"]
+- ["So26NSExtensionRequestHandlingP", "RoundButton"]
 - !private ["So26NSExtensionRequestHandlingP", "String"]
 - ["So26NSExtensionRequestHandlingP", "UIActivityIndicatorView"]
 - !private ["So26NSExtensionRequestHandlingP", "UIBarButtonItem"]
@@ -1420,16 +1420,21 @@ depends-member:
 - !private ["So8NSObjectC", "fatalError"]
 - !private ["So8NSObjectC", "first"]
 - !private ["So8NSObjectC", "frame"]
-- !private ["So8NSObjectC", "frameForAlignmentRect"]
 - ["So8NSObjectC", "gestureRecognizer"]
 - ["So8NSObjectC", "gestureRecognizerShouldBegin"]
 - !private ["So8NSObjectC", "getLocation"]
 - !private ["So8NSObjectC", "heightAnchor"]
 - !private ["So8NSObjectC", "id"]
 - !private ["So8NSObjectC", "image"]
+- !private ["So8NSObjectC", "imageNamed"]
+- !private ["So8NSObjectC", "imageWithCGImage"]
+- !private ["So8NSObjectC", "imageWithCIImage"]
+- !private ["So8NSObjectC", "imageWithContentsOfFile"]
+- !private ["So8NSObjectC", "imageWithData"]
 - !private ["So8NSObjectC", "imageWithTintColor"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "interactivePopGestureRecognizer"]
+- !private ["So8NSObjectC", "jpegData"]
 - !private ["So8NSObjectC", "kCLLocationAccuracyHundredMeters"]
 - !private ["So8NSObjectC", "leave"]
 - !private ["So8NSObjectC", "leftBarButtonItem"]
@@ -1455,6 +1460,7 @@ depends-member:
 - !private ["So8NSObjectC", "navigationItem"]
 - !private ["So8NSObjectC", "notify"]
 - !private ["So8NSObjectC", "params"]
+- !private ["So8NSObjectC", "pngData"]
 - !private ["So8NSObjectC", "print"]
 - !private ["So8NSObjectC", "removeAnnotations"]
 - !private ["So8NSObjectC", "removeFromSuperview"]
@@ -1475,6 +1481,7 @@ depends-member:
 - !private ["So8NSObjectC", "suspend"]
 - !private ["So8NSObjectC", "sync"]
 - !private ["So8NSObjectC", "systemBackground"]
+- !private ["So8NSObjectC", "systemImageNamed"]
 - !private ["So8NSObjectC", "userBusiness"]
 - !private ["So8NSObjectC", "view"]
 - !private ["So8NSObjectC", "viewContext"]
@@ -1498,7 +1505,7 @@ depends-member:
 - !private ["So8NSObjectP", "MKPinAnnotationView"]
 - !private ["So8NSObjectP", "NSLayoutConstraint"]
 - ["So8NSObjectP", "NewBusinessPickedProtocol"]
-- !private ["So8NSObjectP", "RoundButton"]
+- ["So8NSObjectP", "RoundButton"]
 - !private ["So8NSObjectP", "String"]
 - ["So8NSObjectP", "UIActivityIndicatorView"]
 - !private ["So8NSObjectP", "UIBarButtonItem"]
@@ -1554,16 +1561,21 @@ depends-member:
 - !private ["So8NSObjectP", "fatalError"]
 - !private ["So8NSObjectP", "first"]
 - !private ["So8NSObjectP", "frame"]
-- !private ["So8NSObjectP", "frameForAlignmentRect"]
 - ["So8NSObjectP", "gestureRecognizer"]
 - ["So8NSObjectP", "gestureRecognizerShouldBegin"]
 - !private ["So8NSObjectP", "getLocation"]
 - !private ["So8NSObjectP", "heightAnchor"]
 - !private ["So8NSObjectP", "id"]
 - !private ["So8NSObjectP", "image"]
+- !private ["So8NSObjectP", "imageNamed"]
+- !private ["So8NSObjectP", "imageWithCGImage"]
+- !private ["So8NSObjectP", "imageWithCIImage"]
+- !private ["So8NSObjectP", "imageWithContentsOfFile"]
+- !private ["So8NSObjectP", "imageWithData"]
 - !private ["So8NSObjectP", "imageWithTintColor"]
 - ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "interactivePopGestureRecognizer"]
+- !private ["So8NSObjectP", "jpegData"]
 - !private ["So8NSObjectP", "kCLLocationAccuracyHundredMeters"]
 - !private ["So8NSObjectP", "leave"]
 - !private ["So8NSObjectP", "leftBarButtonItem"]
@@ -1589,6 +1601,7 @@ depends-member:
 - !private ["So8NSObjectP", "navigationItem"]
 - !private ["So8NSObjectP", "notify"]
 - !private ["So8NSObjectP", "params"]
+- !private ["So8NSObjectP", "pngData"]
 - !private ["So8NSObjectP", "print"]
 - !private ["So8NSObjectP", "removeAnnotations"]
 - !private ["So8NSObjectP", "removeFromSuperview"]
@@ -1609,6 +1622,7 @@ depends-member:
 - !private ["So8NSObjectP", "suspend"]
 - !private ["So8NSObjectP", "sync"]
 - !private ["So8NSObjectP", "systemBackground"]
+- !private ["So8NSObjectP", "systemImageNamed"]
 - !private ["So8NSObjectP", "userBusiness"]
 - !private ["So8NSObjectP", "view"]
 - !private ["So8NSObjectP", "viewContext"]
@@ -1843,7 +1857,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "MKPinAnnotationView"]
 - !private ["So21UIAppearanceContainerP", "NSLayoutConstraint"]
 - ["So21UIAppearanceContainerP", "NewBusinessPickedProtocol"]
-- !private ["So21UIAppearanceContainerP", "RoundButton"]
+- ["So21UIAppearanceContainerP", "RoundButton"]
 - !private ["So21UIAppearanceContainerP", "String"]
 - ["So21UIAppearanceContainerP", "UIActivityIndicatorView"]
 - !private ["So21UIAppearanceContainerP", "UIBarButtonItem"]
@@ -1951,7 +1965,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "MKPinAnnotationView"]
 - !private ["So18UIContentContainerP", "NSLayoutConstraint"]
 - ["So18UIContentContainerP", "NewBusinessPickedProtocol"]
-- !private ["So18UIContentContainerP", "RoundButton"]
+- ["So18UIContentContainerP", "RoundButton"]
 - !private ["So18UIContentContainerP", "String"]
 - ["So18UIContentContainerP", "UIActivityIndicatorView"]
 - !private ["So18UIContentContainerP", "UIBarButtonItem"]
@@ -2090,7 +2104,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "MKPinAnnotationView"]
 - !private ["So18UIFocusEnvironmentP", "NSLayoutConstraint"]
 - ["So18UIFocusEnvironmentP", "NewBusinessPickedProtocol"]
-- !private ["So18UIFocusEnvironmentP", "RoundButton"]
+- ["So18UIFocusEnvironmentP", "RoundButton"]
 - !private ["So18UIFocusEnvironmentP", "String"]
 - ["So18UIFocusEnvironmentP", "UIActivityIndicatorView"]
 - !private ["So18UIFocusEnvironmentP", "UIBarButtonItem"]
@@ -2350,7 +2364,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "MKPinAnnotationView"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSLayoutConstraint"]
 - ["So30UIPasteConfigurationSupportingP", "NewBusinessPickedProtocol"]
-- !private ["So30UIPasteConfigurationSupportingP", "RoundButton"]
+- ["So30UIPasteConfigurationSupportingP", "RoundButton"]
 - !private ["So30UIPasteConfigurationSupportingP", "String"]
 - ["So30UIPasteConfigurationSupportingP", "UIActivityIndicatorView"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIBarButtonItem"]
@@ -2391,7 +2405,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "dismissViewControllerAnimated"]
 - !private ["So30UIPasteConfigurationSupportingP", "fatalError"]
 - !private ["So30UIPasteConfigurationSupportingP", "frame"]
-- !private ["So30UIPasteConfigurationSupportingP", "frameForAlignmentRect"]
 - ["So30UIPasteConfigurationSupportingP", "gestureRecognizer"]
 - ["So30UIPasteConfigurationSupportingP", "gestureRecognizerShouldBegin"]
 - !private ["So30UIPasteConfigurationSupportingP", "heightAnchor"]
@@ -2488,7 +2501,6 @@ depends-member:
 - !private ["So11UIResponderC", "dismissViewControllerAnimated"]
 - !private ["So11UIResponderC", "fatalError"]
 - !private ["So11UIResponderC", "frame"]
-- !private ["So11UIResponderC", "frameForAlignmentRect"]
 - ["So11UIResponderC", "gestureRecognizer"]
 - ["So11UIResponderC", "gestureRecognizerShouldBegin"]
 - !private ["So11UIResponderC", "heightAnchor"]
@@ -2544,7 +2556,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "MKPinAnnotationView"]
 - !private ["So30UIResponderStandardEditActionsP", "NSLayoutConstraint"]
 - ["So30UIResponderStandardEditActionsP", "NewBusinessPickedProtocol"]
-- !private ["So30UIResponderStandardEditActionsP", "RoundButton"]
+- ["So30UIResponderStandardEditActionsP", "RoundButton"]
 - !private ["So30UIResponderStandardEditActionsP", "String"]
 - ["So30UIResponderStandardEditActionsP", "UIActivityIndicatorView"]
 - !private ["So30UIResponderStandardEditActionsP", "UIBarButtonItem"]
@@ -2585,7 +2597,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "dismissViewControllerAnimated"]
 - !private ["So30UIResponderStandardEditActionsP", "fatalError"]
 - !private ["So30UIResponderStandardEditActionsP", "frame"]
-- !private ["So30UIResponderStandardEditActionsP", "frameForAlignmentRect"]
 - ["So30UIResponderStandardEditActionsP", "gestureRecognizer"]
 - ["So30UIResponderStandardEditActionsP", "gestureRecognizerShouldBegin"]
 - !private ["So30UIResponderStandardEditActionsP", "heightAnchor"]
@@ -2646,7 +2657,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "MKPinAnnotationView"]
 - !private ["So16UIStateRestoringP", "NSLayoutConstraint"]
 - ["So16UIStateRestoringP", "NewBusinessPickedProtocol"]
-- !private ["So16UIStateRestoringP", "RoundButton"]
+- ["So16UIStateRestoringP", "RoundButton"]
 - !private ["So16UIStateRestoringP", "String"]
 - ["So16UIStateRestoringP", "UIActivityIndicatorView"]
 - !private ["So16UIStateRestoringP", "UIBarButtonItem"]
@@ -2710,7 +2721,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "MKPinAnnotationView"]
 - !private ["So18UITraitEnvironmentP", "NSLayoutConstraint"]
 - ["So18UITraitEnvironmentP", "NewBusinessPickedProtocol"]
-- !private ["So18UITraitEnvironmentP", "RoundButton"]
+- ["So18UITraitEnvironmentP", "RoundButton"]
 - !private ["So18UITraitEnvironmentP", "String"]
 - ["So18UITraitEnvironmentP", "UIActivityIndicatorView"]
 - !private ["So18UITraitEnvironmentP", "UIBarButtonItem"]
@@ -2805,7 +2816,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "MKPinAnnotationView"]
 - !private ["So23UIUserActivityRestoringP", "NSLayoutConstraint"]
 - ["So23UIUserActivityRestoringP", "NewBusinessPickedProtocol"]
-- !private ["So23UIUserActivityRestoringP", "RoundButton"]
+- ["So23UIUserActivityRestoringP", "RoundButton"]
 - !private ["So23UIUserActivityRestoringP", "String"]
 - ["So23UIUserActivityRestoringP", "UIActivityIndicatorView"]
 - !private ["So23UIUserActivityRestoringP", "UIBarButtonItem"]
@@ -2846,7 +2857,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "dismissViewControllerAnimated"]
 - !private ["So23UIUserActivityRestoringP", "fatalError"]
 - !private ["So23UIUserActivityRestoringP", "frame"]
-- !private ["So23UIUserActivityRestoringP", "frameForAlignmentRect"]
 - ["So23UIUserActivityRestoringP", "gestureRecognizer"]
 - ["So23UIUserActivityRestoringP", "gestureRecognizerShouldBegin"]
 - !private ["So23UIUserActivityRestoringP", "heightAnchor"]
@@ -3501,51 +3511,120 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/MapKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIViewController+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSError+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDS2Service.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseImage.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSErrorMessage.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONDecodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONEncodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONWebSignature.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponse.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAuthenticationResponse.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDirectoryServerCertificate.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDSProtocolVersion+Private.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTransaction+Private.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformationParameter+Private.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSString+EmptyChecking.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWarning.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSLocalizedString.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSEphemeralKeyPair+Testing.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSwiftTryCatch.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSErrorMessage+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDirectoryServerCertificate+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSException+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseMessageExtension.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformation.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIButton+CustomInitialization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSUICustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTextFieldCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSLabelCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSelectionCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSButtonCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSNavigationBarCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSFooterCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTransaction.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSNotInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAlreadyInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSRuntimeException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSInvalidInputException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONWebEncryption.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSelectionButton.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfo.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe3DS2-Bridging-Header.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSImageLoader.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONEncoder.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSACSNetworkingManager.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSynchronousLocationManager.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformationManager.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJailbreakChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSOSVersionChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDebuggerChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSimulatorChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSIntegrityChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSCategoryLinker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseViewController.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSProgressViewController.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformationParameter.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDirectoryServer.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSEphemeralKeyPair.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSStripe3DS2Error.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSBundleLocator.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSecTypeUtilities.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSData+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSString+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSDictionary+DecodingHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSConfigParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIColor+DefaultColors.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSIPAddress.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIFont+DefaultFonts.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseImageObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAuthenticationResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseMessageExtensionObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfoObject.h"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSCompletionEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSEllipticCurvePoint.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIColor+ThirteenSupport.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSLayoutConstraint+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIView+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWebView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTextChallengeView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSBrandingView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSProcessingView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSStackView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSExpandableInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeSelectionView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSpacerView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWhitelistView.h"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/TweetNacl/Sources/module.map"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
@@ -3569,6 +3648,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"

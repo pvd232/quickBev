@@ -22,6 +22,8 @@ provides-dynamic-lookup:
 - "decryptionKeyInternal"
 - "decryptionKeyQueue"
 - "eventHandlers"
+- "eventHandlersInternal"
+- "eventHandlersQueue"
 - "handleEvent"
 - "name"
 - "shouldParseJSONForLegacyCallbacks"
@@ -53,6 +55,7 @@ depends-top-level:
 - "PusherConnection"
 - !private "PusherEncryptionHelpers"
 - "PusherEvent"
+- !private "PusherLogger"
 - "QueuedClientEvent"
 - "String"
 - "StringLiteralType"
@@ -64,7 +67,8 @@ depends-top-level:
 - !private "connection"
 - "decryptionKeyInternal"
 - !private "decryptionKeyQueue"
-- !private "print"
+- "eventHandlersInternal"
+- !private "eventHandlersQueue"
 - !private "subscribed"
 - !private "unsentEvents"
 depends-member:
@@ -73,6 +77,7 @@ depends-member:
 - ["Sa", "init"]
 - !private ["Sa", "insert"]
 - !private ["Sa", "subscript"]
+- ["So17OS_dispatch_queueC8DispatchE10AttributesV", "concurrent"]
 - ["SK", ""]
 - !private ["SK", "append"]
 - !private ["SK", "components"]
@@ -82,13 +87,16 @@ depends-member:
 - !private ["SK", "subscript"]
 - !private ["s7CVarArgP", "Constants"]
 - ["s7CVarArgP", "DispatchQueue"]
-- !private ["s7CVarArgP", "EventHandler"]
+- ["s7CVarArgP", "EventHandler"]
 - !private ["s7CVarArgP", "PusherChannelType"]
 - !private ["s7CVarArgP", "PusherEncryptionHelpers"]
+- !private ["s7CVarArgP", "PusherLogger"]
 - ["s7CVarArgP", "QueuedClientEvent"]
+- ["s7CVarArgP", "String"]
 - ["s7CVarArgP", "UUID"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "async"]
 - !private ["s7CVarArgP", "attemptToReturnJSONObject"]
 - !private ["s7CVarArgP", "auth"]
 - !private ["s7CVarArgP", "bind"]
@@ -100,14 +108,14 @@ depends-member:
 - !private ["s7CVarArgP", "decryptionKeyInternal"]
 - !private ["s7CVarArgP", "decryptionKeyQueue"]
 - !private ["s7CVarArgP", "eventHandlers"]
+- !private ["s7CVarArgP", "eventHandlersInternal"]
+- !private ["s7CVarArgP", "eventHandlersQueue"]
 - !private ["s7CVarArgP", "eventName"]
 - !private ["s7CVarArgP", "filter"]
-- !private ["s7CVarArgP", "handleEvent"]
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "insert"]
 - !private ["s7CVarArgP", "name"]
 - !private ["s7CVarArgP", "options"]
-- !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "raw"]
 - !private ["s7CVarArgP", "sendEvent"]
 - !private ["s7CVarArgP", "shouldParseJSONForLegacyCallbacks"]
@@ -115,7 +123,6 @@ depends-member:
 - !private ["s7CVarArgP", "subscript"]
 - !private ["s7CVarArgP", "sync"]
 - !private ["s7CVarArgP", "type"]
-- !private ["s7CVarArgP", "unbind"]
 - !private ["s7CVarArgP", "unbindAll"]
 - !private ["s7CVarArgP", "unsentEvents"]
 - !private ["11PusherSwift9ConstantsO12ChannelTypesO", "presence"]
@@ -138,13 +145,16 @@ depends-member:
 - !private ["10Foundation15ContiguousBytesP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "Constants"]
 - ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
-- !private ["s28CustomDebugStringConvertibleP", "EventHandler"]
+- ["s28CustomDebugStringConvertibleP", "EventHandler"]
 - !private ["s28CustomDebugStringConvertibleP", "PusherChannelType"]
 - !private ["s28CustomDebugStringConvertibleP", "PusherEncryptionHelpers"]
+- !private ["s28CustomDebugStringConvertibleP", "PusherLogger"]
 - ["s28CustomDebugStringConvertibleP", "QueuedClientEvent"]
+- ["s28CustomDebugStringConvertibleP", "String"]
 - ["s28CustomDebugStringConvertibleP", "UUID"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
 - !private ["s28CustomDebugStringConvertibleP", "attemptToReturnJSONObject"]
 - !private ["s28CustomDebugStringConvertibleP", "auth"]
 - !private ["s28CustomDebugStringConvertibleP", "bind"]
@@ -156,14 +166,14 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "decryptionKeyInternal"]
 - !private ["s28CustomDebugStringConvertibleP", "decryptionKeyQueue"]
 - !private ["s28CustomDebugStringConvertibleP", "eventHandlers"]
+- !private ["s28CustomDebugStringConvertibleP", "eventHandlersInternal"]
+- !private ["s28CustomDebugStringConvertibleP", "eventHandlersQueue"]
 - !private ["s28CustomDebugStringConvertibleP", "eventName"]
 - !private ["s28CustomDebugStringConvertibleP", "filter"]
-- !private ["s28CustomDebugStringConvertibleP", "handleEvent"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "insert"]
 - !private ["s28CustomDebugStringConvertibleP", "name"]
 - !private ["s28CustomDebugStringConvertibleP", "options"]
-- !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "raw"]
 - !private ["s28CustomDebugStringConvertibleP", "sendEvent"]
 - !private ["s28CustomDebugStringConvertibleP", "shouldParseJSONForLegacyCallbacks"]
@@ -171,7 +181,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "sync"]
 - !private ["s28CustomDebugStringConvertibleP", "type"]
-- !private ["s28CustomDebugStringConvertibleP", "unbind"]
 - !private ["s28CustomDebugStringConvertibleP", "unbindAll"]
 - !private ["s28CustomDebugStringConvertibleP", "unsentEvents"]
 - ["s28CustomDebugStringConvertibleP", "uuidString"]
@@ -184,15 +193,18 @@ depends-member:
 - ["s17CustomReflectableP", "uuidString"]
 - !private ["s23CustomStringConvertibleP", "Constants"]
 - ["s23CustomStringConvertibleP", "DispatchQueue"]
-- !private ["s23CustomStringConvertibleP", "EventHandler"]
+- ["s23CustomStringConvertibleP", "EventHandler"]
 - !private ["s23CustomStringConvertibleP", "PusherChannelType"]
 - !private ["s23CustomStringConvertibleP", "PusherEncryptionHelpers"]
+- !private ["s23CustomStringConvertibleP", "PusherLogger"]
 - ["s23CustomStringConvertibleP", "QueuedClientEvent"]
+- ["s23CustomStringConvertibleP", "String"]
 - ["s23CustomStringConvertibleP", "UUID"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "append"]
 - ["s23CustomStringConvertibleP", "appendInterpolation"]
 - ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["s23CustomStringConvertibleP", "async"]
 - !private ["s23CustomStringConvertibleP", "attemptToReturnJSONObject"]
 - !private ["s23CustomStringConvertibleP", "auth"]
 - !private ["s23CustomStringConvertibleP", "bind"]
@@ -204,14 +216,14 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "decryptionKeyInternal"]
 - !private ["s23CustomStringConvertibleP", "decryptionKeyQueue"]
 - !private ["s23CustomStringConvertibleP", "eventHandlers"]
+- !private ["s23CustomStringConvertibleP", "eventHandlersInternal"]
+- !private ["s23CustomStringConvertibleP", "eventHandlersQueue"]
 - !private ["s23CustomStringConvertibleP", "eventName"]
 - !private ["s23CustomStringConvertibleP", "filter"]
-- !private ["s23CustomStringConvertibleP", "handleEvent"]
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "insert"]
 - !private ["s23CustomStringConvertibleP", "name"]
 - !private ["s23CustomStringConvertibleP", "options"]
-- !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "raw"]
 - !private ["s23CustomStringConvertibleP", "sendEvent"]
 - !private ["s23CustomStringConvertibleP", "shouldParseJSONForLegacyCallbacks"]
@@ -219,7 +231,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "sync"]
 - !private ["s23CustomStringConvertibleP", "type"]
-- !private ["s23CustomStringConvertibleP", "unbind"]
 - !private ["s23CustomStringConvertibleP", "unbindAll"]
 - !private ["s23CustomStringConvertibleP", "unsentEvents"]
 - ["s23CustomStringConvertibleP", "uuidString"]
@@ -238,12 +249,16 @@ depends-member:
 - ["Se", "uuidString"]
 - ["s26DefaultStringInterpolationV", "appendInterpolation"]
 - ["s26DefaultStringInterpolationV", "appendLiteral"]
+- ["SD", "init"]
 - !private ["SD", "subscript"]
 - ["So18OS_dispatch_objectC", ""]
+- !private ["So18OS_dispatch_objectC", "async"]
 - ["So18OS_dispatch_objectC", "init"]
 - ["So18OS_dispatch_objectC", "sync"]
+- !private ["So17OS_dispatch_queueC", "async"]
 - ["So17OS_dispatch_queueC", "init"]
 - !private ["So17OS_dispatch_queueC", "sync"]
+- !private ["8Dispatch0A13WorkItemFlagsV", "barrier"]
 - !private ["SE", "append"]
 - !private ["SE", "components"]
 - !private ["SE", "filter"]
@@ -254,19 +269,25 @@ depends-member:
 - ["SQ", "=="]
 - !private ["SQ", "Constants"]
 - ["SQ", "DispatchQueue"]
-- !private ["SQ", "EventHandler"]
+- ["SQ", "EventHandler"]
 - !private ["SQ", "PusherChannelType"]
 - !private ["SQ", "PusherEncryptionHelpers"]
+- !private ["SQ", "PusherLogger"]
 - ["SQ", "QueuedClientEvent"]
+- ["SQ", "String"]
 - !private ["SQ", "Swift"]
 - ["SQ", "UUID"]
 - ["SQ", ""]
 - ["SQ", "_rawHashValue"]
 - !private ["SQ", "append"]
+- !private ["SQ", "async"]
 - !private ["SQ", "attemptToReturnJSONObject"]
 - !private ["SQ", "auth"]
+- !private ["SQ", "barrier"]
 - !private ["SQ", "bind"]
+- !private ["SQ", "clientEventsNotSupported"]
 - !private ["SQ", "components"]
+- ["SQ", "concurrent"]
 - !private ["SQ", "connection"]
 - !private ["SQ", "copy"]
 - !private ["SQ", "data"]
@@ -274,9 +295,10 @@ depends-member:
 - !private ["SQ", "decryptionKeyInternal"]
 - !private ["SQ", "decryptionKeyQueue"]
 - !private ["SQ", "eventHandlers"]
+- !private ["SQ", "eventHandlersInternal"]
+- !private ["SQ", "eventHandlersQueue"]
 - !private ["SQ", "eventName"]
 - !private ["SQ", "filter"]
-- !private ["SQ", "handleEvent"]
 - ["SQ", "hash"]
 - ["SQ", "hashValue"]
 - ["SQ", "init"]
@@ -285,7 +307,6 @@ depends-member:
 - !private ["SQ", "normal"]
 - !private ["SQ", "options"]
 - !private ["SQ", "presence"]
-- !private ["SQ", "print"]
 - !private ["SQ", "private"]
 - !private ["SQ", "raw"]
 - !private ["SQ", "sendEvent"]
@@ -294,7 +315,6 @@ depends-member:
 - !private ["SQ", "subscript"]
 - !private ["SQ", "sync"]
 - !private ["SQ", "type"]
-- !private ["SQ", "unbind"]
 - !private ["SQ", "unbindAll"]
 - !private ["SQ", "unsentEvents"]
 - ["SQ", "uuidString"]
@@ -306,12 +326,14 @@ depends-member:
 - ["11PusherSwift12EventHandlerV", "init"]
 - ["s25ExpressibleByArrayLiteralP", ""]
 - !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "barrier"]
+- ["s25ExpressibleByArrayLiteralP", "concurrent"]
 - !private ["s25ExpressibleByArrayLiteralP", "filter"]
 - ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "insert"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
-- ["s30ExpressibleByDictionaryLiteralP", "Key"]
-- ["s30ExpressibleByDictionaryLiteralP", "Value"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Key"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Value"]
 - ["s30ExpressibleByDictionaryLiteralP", "init"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
@@ -328,18 +350,22 @@ depends-member:
 - ["SH", "=="]
 - !private ["SH", "Constants"]
 - ["SH", "DispatchQueue"]
-- !private ["SH", "EventHandler"]
+- ["SH", "EventHandler"]
 - !private ["SH", "PusherChannelType"]
 - !private ["SH", "PusherEncryptionHelpers"]
+- !private ["SH", "PusherLogger"]
 - ["SH", "QueuedClientEvent"]
+- ["SH", "String"]
 - !private ["SH", "Swift"]
 - ["SH", "UUID"]
 - ["SH", ""]
 - ["SH", "_rawHashValue"]
 - !private ["SH", "append"]
+- !private ["SH", "async"]
 - !private ["SH", "attemptToReturnJSONObject"]
 - !private ["SH", "auth"]
 - !private ["SH", "bind"]
+- !private ["SH", "clientEventsNotSupported"]
 - !private ["SH", "components"]
 - !private ["SH", "connection"]
 - !private ["SH", "copy"]
@@ -348,9 +374,10 @@ depends-member:
 - !private ["SH", "decryptionKeyInternal"]
 - !private ["SH", "decryptionKeyQueue"]
 - !private ["SH", "eventHandlers"]
+- !private ["SH", "eventHandlersInternal"]
+- !private ["SH", "eventHandlersQueue"]
 - !private ["SH", "eventName"]
 - !private ["SH", "filter"]
-- !private ["SH", "handleEvent"]
 - ["SH", "hash"]
 - ["SH", "hashValue"]
 - ["SH", "init"]
@@ -359,7 +386,6 @@ depends-member:
 - !private ["SH", "normal"]
 - !private ["SH", "options"]
 - !private ["SH", "presence"]
-- !private ["SH", "print"]
 - !private ["SH", "private"]
 - !private ["SH", "raw"]
 - !private ["SH", "sendEvent"]
@@ -368,12 +394,12 @@ depends-member:
 - !private ["SH", "subscript"]
 - !private ["SH", "sync"]
 - !private ["SH", "type"]
-- !private ["SH", "unbind"]
 - !private ["SH", "unbindAll"]
 - !private ["SH", "unsentEvents"]
 - ["SH", "uuidString"]
 - !private ["s6HasherV", "combine"]
 - !private ["11PusherSwift9ConstantsO8JSONKeysO", "data"]
+- !private ["11PusherSwift0A6LoggerC12LoggingEventO", "clientEventsNotSupported"]
 - !private ["s25LosslessStringConvertibleP", ""]
 - !private ["s25LosslessStringConvertibleP", "components"]
 - !private ["s10MirrorPathP", "components"]
@@ -408,12 +434,14 @@ depends-member:
 - ["So8NSObjectC", "PusherConnection"]
 - !private ["So8NSObjectC", "PusherEncryptionHelpers"]
 - ["So8NSObjectC", "PusherEvent"]
+- !private ["So8NSObjectC", "PusherLogger"]
 - ["So8NSObjectC", "QueuedClientEvent"]
 - ["So8NSObjectC", "String"]
 - ["So8NSObjectC", "UUID"]
 - ["So8NSObjectC", "Void"]
 - ["So8NSObjectC", ""]
 - ["So8NSObjectC", "activate"]
+- !private ["So8NSObjectC", "async"]
 - !private ["So8NSObjectC", "attemptToReturnJSONObject"]
 - ["So8NSObjectC", "auth"]
 - ["So8NSObjectC", "bind"]
@@ -428,12 +456,13 @@ depends-member:
 - ["So8NSObjectC", "decryptionKeyInternal"]
 - ["So8NSObjectC", "decryptionKeyQueue"]
 - ["So8NSObjectC", "eventHandlers"]
+- ["So8NSObjectC", "eventHandlersInternal"]
+- ["So8NSObjectC", "eventHandlersQueue"]
 - !private ["So8NSObjectC", "eventName"]
 - ["So8NSObjectC", "handleEvent"]
 - ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "name"]
 - !private ["So8NSObjectC", "options"]
-- !private ["So8NSObjectC", "print"]
 - !private ["So8NSObjectC", "raw"]
 - ["So8NSObjectC", "resume"]
 - !private ["So8NSObjectC", "sendEvent"]
@@ -454,10 +483,13 @@ depends-member:
 - ["So8NSObjectP", "PusherConnection"]
 - !private ["So8NSObjectP", "PusherEncryptionHelpers"]
 - ["So8NSObjectP", "PusherEvent"]
+- !private ["So8NSObjectP", "PusherLogger"]
 - ["So8NSObjectP", "QueuedClientEvent"]
+- ["So8NSObjectP", "String"]
 - ["So8NSObjectP", "UUID"]
 - ["So8NSObjectP", ""]
 - ["So8NSObjectP", "activate"]
+- !private ["So8NSObjectP", "async"]
 - !private ["So8NSObjectP", "attemptToReturnJSONObject"]
 - ["So8NSObjectP", "auth"]
 - ["So8NSObjectP", "bind"]
@@ -472,12 +504,13 @@ depends-member:
 - ["So8NSObjectP", "decryptionKeyInternal"]
 - ["So8NSObjectP", "decryptionKeyQueue"]
 - ["So8NSObjectP", "eventHandlers"]
+- ["So8NSObjectP", "eventHandlersInternal"]
+- ["So8NSObjectP", "eventHandlersQueue"]
 - !private ["So8NSObjectP", "eventName"]
 - ["So8NSObjectP", "handleEvent"]
 - ["So8NSObjectP", "init"]
 - ["So8NSObjectP", "name"]
 - !private ["So8NSObjectP", "options"]
-- !private ["So8NSObjectP", "print"]
 - !private ["So8NSObjectP", "raw"]
 - ["So8NSObjectP", "resume"]
 - ["So8NSObjectP", "sendEvent"]
@@ -495,11 +528,14 @@ depends-member:
 - !private ["So8NSStringC", "components"]
 - ["So9OS_objectC", ""]
 - ["So9OS_objectC", "activate"]
+- !private ["So9OS_objectC", "async"]
 - ["So9OS_objectC", "init"]
 - ["So9OS_objectC", "resume"]
 - ["So9OS_objectC", "setTarget"]
 - ["So9OS_objectC", "suspend"]
 - ["So9OS_objectC", "sync"]
+- !private ["s9OptionSetP", "barrier"]
+- ["s9OptionSetP", "concurrent"]
 - ["11PusherSwift0A7ChannelC", "Bool"]
 - !private ["11PusherSwift0A7ChannelC", "Constants"]
 - ["11PusherSwift0A7ChannelC", "DispatchQueue"]
@@ -509,6 +545,7 @@ depends-member:
 - ["11PusherSwift0A7ChannelC", "PusherConnection"]
 - !private ["11PusherSwift0A7ChannelC", "PusherEncryptionHelpers"]
 - ["11PusherSwift0A7ChannelC", "PusherEvent"]
+- !private ["11PusherSwift0A7ChannelC", "PusherLogger"]
 - ["11PusherSwift0A7ChannelC", "QueuedClientEvent"]
 - ["11PusherSwift0A7ChannelC", "String"]
 - ["11PusherSwift0A7ChannelC", "UUID"]
@@ -522,10 +559,11 @@ depends-member:
 - !private ["11PusherSwift0A7ChannelC", "decryptionKeyQueue"]
 - ["11PusherSwift0A7ChannelC", "deinit"]
 - ["11PusherSwift0A7ChannelC", "eventHandlers"]
+- !private ["11PusherSwift0A7ChannelC", "eventHandlersInternal"]
+- !private ["11PusherSwift0A7ChannelC", "eventHandlersQueue"]
 - ["11PusherSwift0A7ChannelC", "handleEvent"]
 - ["11PusherSwift0A7ChannelC", "init"]
 - ["11PusherSwift0A7ChannelC", "name"]
-- !private ["11PusherSwift0A7ChannelC", "print"]
 - ["11PusherSwift0A7ChannelC", "shouldParseJSONForLegacyCallbacks"]
 - ["11PusherSwift0A7ChannelC", "subscribed"]
 - ["11PusherSwift0A7ChannelC", "trigger"]
@@ -562,6 +600,8 @@ depends-member:
 - !private ["11PusherSwift0A5EventC", "raw"]
 - !private ["11PusherSwift0A18EventQueueDelegateP", "options"]
 - !private ["11PusherSwift0A18EventQueueDelegateP", "sendEvent"]
+- !private ["11PusherSwift0A6LoggerC", "error"]
+- !private ["11PusherSwift0A6LoggerC", "shared"]
 - ["11PusherSwift17QueuedClientEventV", "String"]
 - ["11PusherSwift17QueuedClientEventV", "data"]
 - ["11PusherSwift17QueuedClientEventV", "init"]
@@ -579,8 +619,13 @@ depends-member:
 - ["Sm", "init"]
 - !private ["Sm", "insert"]
 - !private ["Sm", "subscript"]
+- ["SY", ""]
+- !private ["SY", "barrier"]
+- !private ["SY", "clientEventsNotSupported"]
+- ["SY", "concurrent"]
 - ["10Foundation20ReferenceConvertibleP", "init"]
 - ["10Foundation20ReferenceConvertibleP", "uuidString"]
+- !private ["7Combine9SchedulerP", "async"]
 - ["7Combine9SchedulerP", "init"]
 - !private ["7Combine9SchedulerP", "sync"]
 - !private ["ST", "Element"]
@@ -593,6 +638,9 @@ depends-member:
 - !private ["ST", "insert"]
 - !private ["ST", "makeIterator"]
 - !private ["ST", "subscript"]
+- ["s10SetAlgebraP", ""]
+- !private ["s10SetAlgebraP", "barrier"]
+- ["s10SetAlgebraP", "concurrent"]
 - !private ["SS", "components"]
 - ["s27StringInterpolationProtocolP", "appendInterpolation"]
 - ["s27StringInterpolationProtocolP", "appendLiteral"]
@@ -642,12 +690,15 @@ depends-member:
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Constants"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "EventHandler"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "EventHandler"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "PusherChannelType"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "PusherEncryptionHelpers"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "PusherLogger"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "QueuedClientEvent"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "String"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UUID"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "attemptToReturnJSONObject"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "auth"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "bind"]
@@ -659,29 +710,31 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "decryptionKeyInternal"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "decryptionKeyQueue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "eventHandlers"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "eventHandlersInternal"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "eventHandlersQueue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "eventName"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "handleEvent"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "options"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "raw"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "sendEvent"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "shouldParseJSONForLegacyCallbacks"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "subscribed"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "sync"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "type"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "unbind"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "unbindAll"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "unsentEvents"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Constants"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "DispatchQueue"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "EventHandler"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "EventHandler"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PusherChannelType"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PusherEncryptionHelpers"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PusherLogger"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "QueuedClientEvent"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "String"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UUID"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "async"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "attemptToReturnJSONObject"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "auth"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bind"]
@@ -693,19 +746,18 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "decryptionKeyInternal"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "decryptionKeyQueue"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "eventHandlers"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "eventHandlersInternal"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "eventHandlersQueue"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "eventName"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "handleEvent"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "name"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "options"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "print"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "raw"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sendEvent"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shouldParseJSONForLegacyCallbacks"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "subscribed"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sync"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "type"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "unbind"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "unbindAll"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "unsentEvents"]
 - ["s21_ObjectiveCBridgeableP", ""]
@@ -719,6 +771,7 @@ depends-member:
 - ["s21_ObjectiveCBridgeableP", "uuidString"]
 depends-nominal:
 - "Sa"
+- "So17OS_dispatch_queueC8DispatchE10AttributesV"
 - "SK"
 - "s7CVarArgP"
 - !private "11PusherSwift9ConstantsO12ChannelTypesO"
@@ -732,9 +785,10 @@ depends-nominal:
 - "10Foundation12DataProtocolP"
 - "Se"
 - "s26DefaultStringInterpolationV"
-- !private "SD"
+- "SD"
 - "So18OS_dispatch_objectC"
 - "So17OS_dispatch_queueC"
+- !private "8Dispatch0A13WorkItemFlagsV"
 - "SE"
 - "SQ"
 - "11PusherSwift12EventHandlerV"
@@ -748,6 +802,7 @@ depends-nominal:
 - "SH"
 - !private "s6HasherV"
 - !private "11PusherSwift9ConstantsO8JSONKeysO"
+- !private "11PusherSwift0A6LoggerC12LoggingEventO"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
 - "SM"
@@ -762,6 +817,7 @@ depends-nominal:
 - !private "So14NSSecureCodingP"
 - !private "So8NSStringC"
 - "So9OS_objectC"
+- "s9OptionSetP"
 - "11PusherSwift0A7ChannelC"
 - "11PusherSwift0A11ChannelTypeO"
 - !private "11PusherSwift0A13ClientOptionsC"
@@ -769,12 +825,15 @@ depends-nominal:
 - !private "11PusherSwift0A17EncryptionHelpersV"
 - !private "11PusherSwift0A5EventC"
 - !private "11PusherSwift0A18EventQueueDelegateP"
+- !private "11PusherSwift0A6LoggerC"
 - "11PusherSwift17QueuedClientEventV"
 - "Sk"
 - "Sm"
+- "SY"
 - "10Foundation20ReferenceConvertibleP"
 - "7Combine9SchedulerP"
 - "ST"
+- "s10SetAlgebraP"
 - !private "SS"
 - "s27StringInterpolationProtocolP"
 - !private "Sy"
@@ -840,4 +899,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "a959b399ea609c369459e13e50d3fd4f"
+interface-hash: "7fb52e8dee6866810bca16f0611a8832"

@@ -635,27 +635,12 @@ depends-member:
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "intValue"]
 - !private ["So8NSCodingP", "lowercased"]
-- !private ["So8NSCodingP", "numberWithBool"]
-- !private ["So8NSCodingP", "numberWithChar"]
-- !private ["So8NSCodingP", "numberWithDouble"]
-- !private ["So8NSCodingP", "numberWithFloat"]
-- !private ["So8NSCodingP", "numberWithInt"]
-- !private ["So8NSCodingP", "numberWithInteger"]
-- !private ["So8NSCodingP", "numberWithLong"]
-- !private ["So8NSCodingP", "numberWithLongLong"]
-- !private ["So8NSCodingP", "numberWithShort"]
-- !private ["So8NSCodingP", "numberWithUnsignedChar"]
-- !private ["So8NSCodingP", "numberWithUnsignedInt"]
-- !private ["So8NSCodingP", "numberWithUnsignedInteger"]
-- !private ["So8NSCodingP", "numberWithUnsignedLong"]
-- !private ["So8NSCodingP", "numberWithUnsignedLongLong"]
-- !private ["So8NSCodingP", "numberWithUnsignedShort"]
 - ["So8NSCodingP", "stp_bool"]
 - ["So8NSCodingP", "stp_date"]
-- ["So8NSCodingP", "stp_dictionary"]
-- ["So8NSCodingP", "stp_dictionaryByRemovingNulls"]
+- !private ["So8NSCodingP", "stp_dictionary"]
+- !private ["So8NSCodingP", "stp_dictionaryByRemovingNulls"]
 - ["So8NSCodingP", "stp_number"]
-- ["So8NSCodingP", "stp_string"]
+- !private ["So8NSCodingP", "stp_string"]
 - !private ["So8NSCodingP", "subscript"]
 - !private ["So9NSCopyingP", ""]
 - !private ["So9NSCopyingP", "allKeys"]
@@ -663,27 +648,12 @@ depends-member:
 - !private ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "intValue"]
 - !private ["So9NSCopyingP", "lowercased"]
-- !private ["So9NSCopyingP", "numberWithBool"]
-- !private ["So9NSCopyingP", "numberWithChar"]
-- !private ["So9NSCopyingP", "numberWithDouble"]
-- !private ["So9NSCopyingP", "numberWithFloat"]
-- !private ["So9NSCopyingP", "numberWithInt"]
-- !private ["So9NSCopyingP", "numberWithInteger"]
-- !private ["So9NSCopyingP", "numberWithLong"]
-- !private ["So9NSCopyingP", "numberWithLongLong"]
-- !private ["So9NSCopyingP", "numberWithShort"]
-- !private ["So9NSCopyingP", "numberWithUnsignedChar"]
-- !private ["So9NSCopyingP", "numberWithUnsignedInt"]
-- !private ["So9NSCopyingP", "numberWithUnsignedInteger"]
-- !private ["So9NSCopyingP", "numberWithUnsignedLong"]
-- !private ["So9NSCopyingP", "numberWithUnsignedLongLong"]
-- !private ["So9NSCopyingP", "numberWithUnsignedShort"]
 - ["So9NSCopyingP", "stp_bool"]
 - ["So9NSCopyingP", "stp_date"]
-- ["So9NSCopyingP", "stp_dictionary"]
-- ["So9NSCopyingP", "stp_dictionaryByRemovingNulls"]
+- !private ["So9NSCopyingP", "stp_dictionary"]
+- !private ["So9NSCopyingP", "stp_dictionaryByRemovingNulls"]
 - ["So9NSCopyingP", "stp_number"]
-- ["So9NSCopyingP", "stp_string"]
+- !private ["So9NSCopyingP", "stp_string"]
 - !private ["So9NSCopyingP", "subscript"]
 - !private ["So12NSDictionaryC", "allKeys"]
 - !private ["So12NSDictionaryC", "stp_bool"]
@@ -696,10 +666,10 @@ depends-member:
 - !private ["So17NSFastEnumerationP", "allKeys"]
 - ["So17NSFastEnumerationP", "stp_bool"]
 - ["So17NSFastEnumerationP", "stp_date"]
-- ["So17NSFastEnumerationP", "stp_dictionary"]
-- ["So17NSFastEnumerationP", "stp_dictionaryByRemovingNulls"]
+- !private ["So17NSFastEnumerationP", "stp_dictionary"]
+- !private ["So17NSFastEnumerationP", "stp_dictionaryByRemovingNulls"]
 - ["So17NSFastEnumerationP", "stp_number"]
-- ["So17NSFastEnumerationP", "stp_string"]
+- !private ["So17NSFastEnumerationP", "stp_string"]
 - !private ["So17NSFastEnumerationP", "subscript"]
 - !private ["So21NSItemProviderReadingP", "hash"]
 - !private ["So21NSItemProviderReadingP", "lowercased"]
@@ -710,10 +680,10 @@ depends-member:
 - !private ["So16NSMutableCopyingP", "lowercased"]
 - ["So16NSMutableCopyingP", "stp_bool"]
 - ["So16NSMutableCopyingP", "stp_date"]
-- ["So16NSMutableCopyingP", "stp_dictionary"]
-- ["So16NSMutableCopyingP", "stp_dictionaryByRemovingNulls"]
+- !private ["So16NSMutableCopyingP", "stp_dictionary"]
+- !private ["So16NSMutableCopyingP", "stp_dictionaryByRemovingNulls"]
 - ["So16NSMutableCopyingP", "stp_number"]
-- ["So16NSMutableCopyingP", "stp_string"]
+- !private ["So16NSMutableCopyingP", "stp_string"]
 - !private ["So16NSMutableCopyingP", "subscript"]
 - !private ["So8NSNumberC", "init"]
 - !private ["So8NSNumberC", "intValue"]
@@ -768,24 +738,8 @@ depends-member:
 - ["So8NSObjectC", "label"]
 - !private ["So8NSObjectC", "last4"]
 - ["So8NSObjectC", "livemode"]
-- !private ["So8NSObjectC", "lowercaseStringWithLocale"]
 - !private ["So8NSObjectC", "lowercased"]
 - ["So8NSObjectC", "metadata"]
-- !private ["So8NSObjectC", "numberWithBool"]
-- !private ["So8NSObjectC", "numberWithChar"]
-- !private ["So8NSObjectC", "numberWithDouble"]
-- !private ["So8NSObjectC", "numberWithFloat"]
-- !private ["So8NSObjectC", "numberWithInt"]
-- !private ["So8NSObjectC", "numberWithInteger"]
-- !private ["So8NSObjectC", "numberWithLong"]
-- !private ["So8NSObjectC", "numberWithLongLong"]
-- !private ["So8NSObjectC", "numberWithShort"]
-- !private ["So8NSObjectC", "numberWithUnsignedChar"]
-- !private ["So8NSObjectC", "numberWithUnsignedInt"]
-- !private ["So8NSObjectC", "numberWithUnsignedInteger"]
-- !private ["So8NSObjectC", "numberWithUnsignedLong"]
-- !private ["So8NSObjectC", "numberWithUnsignedLongLong"]
-- !private ["So8NSObjectC", "numberWithUnsignedShort"]
 - !private ["So8NSObjectC", "objectForKeyedSubscript"]
 - ["So8NSObjectC", "owner"]
 - ["So8NSObjectC", "receiver"]
@@ -810,29 +764,10 @@ depends-member:
 - !private ["So8NSObjectC", "templatedBrandImage"]
 - ["So8NSObjectC", "type"]
 - ["So8NSObjectC", "usage"]
-- !private ["So8NSObjectC", "value"]
-- !private ["So8NSObjectC", "valueWithBytes"]
-- !private ["So8NSObjectC", "valueWithCATransform3D"]
-- !private ["So8NSObjectC", "valueWithCGAffineTransform"]
-- !private ["So8NSObjectC", "valueWithCGPoint"]
-- !private ["So8NSObjectC", "valueWithCGRect"]
-- !private ["So8NSObjectC", "valueWithCGSize"]
-- !private ["So8NSObjectC", "valueWithCGVector"]
-- !private ["So8NSObjectC", "valueWithCMTime"]
-- !private ["So8NSObjectC", "valueWithCMTimeMapping"]
-- !private ["So8NSObjectC", "valueWithCMTimeRange"]
-- !private ["So8NSObjectC", "valueWithDirectionalEdgeInsets"]
-- !private ["So8NSObjectC", "valueWithNonretainedObject"]
-- !private ["So8NSObjectC", "valueWithPointer"]
-- !private ["So8NSObjectC", "valueWithRange"]
-- !private ["So8NSObjectC", "valueWithUIEdgeInsets"]
-- !private ["So8NSObjectC", "valueWithUIOffset"]
 - ["So8NSObjectC", "verification"]
 - ["So8NSObjectC", "weChatPayDetails"]
-- ["So8NSObjectP", "AnyHashable"]
 - ["So8NSObjectP", "Date"]
-- !private ["So8NSObjectP", "NSDictionary"]
-- ["So8NSObjectP", "NSNumber"]
+- !private ["So8NSObjectP", "NSNumber"]
 - !private ["So8NSObjectP", "NSStringFromClass"]
 - !private ["So8NSObjectP", "STPCard"]
 - !private ["So8NSObjectP", "STPImageLibrary"]
@@ -877,24 +812,8 @@ depends-member:
 - ["So8NSObjectP", "label"]
 - !private ["So8NSObjectP", "last4"]
 - ["So8NSObjectP", "livemode"]
-- !private ["So8NSObjectP", "lowercaseStringWithLocale"]
 - !private ["So8NSObjectP", "lowercased"]
 - ["So8NSObjectP", "metadata"]
-- !private ["So8NSObjectP", "numberWithBool"]
-- !private ["So8NSObjectP", "numberWithChar"]
-- !private ["So8NSObjectP", "numberWithDouble"]
-- !private ["So8NSObjectP", "numberWithFloat"]
-- !private ["So8NSObjectP", "numberWithInt"]
-- !private ["So8NSObjectP", "numberWithInteger"]
-- !private ["So8NSObjectP", "numberWithLong"]
-- !private ["So8NSObjectP", "numberWithLongLong"]
-- !private ["So8NSObjectP", "numberWithShort"]
-- !private ["So8NSObjectP", "numberWithUnsignedChar"]
-- !private ["So8NSObjectP", "numberWithUnsignedInt"]
-- !private ["So8NSObjectP", "numberWithUnsignedInteger"]
-- !private ["So8NSObjectP", "numberWithUnsignedLong"]
-- !private ["So8NSObjectP", "numberWithUnsignedLongLong"]
-- !private ["So8NSObjectP", "numberWithUnsignedShort"]
 - !private ["So8NSObjectP", "objectForKeyedSubscript"]
 - ["So8NSObjectP", "owner"]
 - ["So8NSObjectP", "receiver"]
@@ -903,10 +822,10 @@ depends-member:
 - ["So8NSObjectP", "status"]
 - ["So8NSObjectP", "stp_bool"]
 - ["So8NSObjectP", "stp_date"]
-- ["So8NSObjectP", "stp_dictionary"]
-- ["So8NSObjectP", "stp_dictionaryByRemovingNulls"]
+- !private ["So8NSObjectP", "stp_dictionary"]
+- !private ["So8NSObjectP", "stp_dictionaryByRemovingNulls"]
 - ["So8NSObjectP", "stp_number"]
-- ["So8NSObjectP", "stp_string"]
+- !private ["So8NSObjectP", "stp_string"]
 - ["So8NSObjectP", "string"]
 - ["So8NSObjectP", "stringToFlowMapping"]
 - ["So8NSObjectP", "stringToStatusMapping"]
@@ -919,23 +838,6 @@ depends-member:
 - ["So8NSObjectP", "templatedBrandImage"]
 - ["So8NSObjectP", "type"]
 - ["So8NSObjectP", "usage"]
-- !private ["So8NSObjectP", "value"]
-- !private ["So8NSObjectP", "valueWithBytes"]
-- !private ["So8NSObjectP", "valueWithCATransform3D"]
-- !private ["So8NSObjectP", "valueWithCGAffineTransform"]
-- !private ["So8NSObjectP", "valueWithCGPoint"]
-- !private ["So8NSObjectP", "valueWithCGRect"]
-- !private ["So8NSObjectP", "valueWithCGSize"]
-- !private ["So8NSObjectP", "valueWithCGVector"]
-- !private ["So8NSObjectP", "valueWithCMTime"]
-- !private ["So8NSObjectP", "valueWithCMTimeMapping"]
-- !private ["So8NSObjectP", "valueWithCMTimeRange"]
-- !private ["So8NSObjectP", "valueWithDirectionalEdgeInsets"]
-- !private ["So8NSObjectP", "valueWithNonretainedObject"]
-- !private ["So8NSObjectP", "valueWithPointer"]
-- !private ["So8NSObjectP", "valueWithRange"]
-- !private ["So8NSObjectP", "valueWithUIEdgeInsets"]
-- !private ["So8NSObjectP", "valueWithUIOffset"]
 - ["So8NSObjectP", "verification"]
 - ["So8NSObjectP", "weChatPayDetails"]
 - !private ["So14NSSecureCodingP", ""]
@@ -944,48 +846,18 @@ depends-member:
 - !private ["So14NSSecureCodingP", "init"]
 - !private ["So14NSSecureCodingP", "intValue"]
 - !private ["So14NSSecureCodingP", "lowercased"]
-- !private ["So14NSSecureCodingP", "numberWithBool"]
-- !private ["So14NSSecureCodingP", "numberWithChar"]
-- !private ["So14NSSecureCodingP", "numberWithDouble"]
-- !private ["So14NSSecureCodingP", "numberWithFloat"]
-- !private ["So14NSSecureCodingP", "numberWithInt"]
-- !private ["So14NSSecureCodingP", "numberWithInteger"]
-- !private ["So14NSSecureCodingP", "numberWithLong"]
-- !private ["So14NSSecureCodingP", "numberWithLongLong"]
-- !private ["So14NSSecureCodingP", "numberWithShort"]
-- !private ["So14NSSecureCodingP", "numberWithUnsignedChar"]
-- !private ["So14NSSecureCodingP", "numberWithUnsignedInt"]
-- !private ["So14NSSecureCodingP", "numberWithUnsignedInteger"]
-- !private ["So14NSSecureCodingP", "numberWithUnsignedLong"]
-- !private ["So14NSSecureCodingP", "numberWithUnsignedLongLong"]
-- !private ["So14NSSecureCodingP", "numberWithUnsignedShort"]
 - ["So14NSSecureCodingP", "stp_bool"]
 - ["So14NSSecureCodingP", "stp_date"]
-- ["So14NSSecureCodingP", "stp_dictionary"]
-- ["So14NSSecureCodingP", "stp_dictionaryByRemovingNulls"]
+- !private ["So14NSSecureCodingP", "stp_dictionary"]
+- !private ["So14NSSecureCodingP", "stp_dictionaryByRemovingNulls"]
 - ["So14NSSecureCodingP", "stp_number"]
-- ["So14NSSecureCodingP", "stp_string"]
+- !private ["So14NSSecureCodingP", "stp_string"]
 - !private ["So14NSSecureCodingP", "subscript"]
 - !private ["So8NSStringC", "hash"]
 - !private ["So8NSStringC", "lowercased"]
 - ["So7NSValueC", ""]
 - !private ["So7NSValueC", "init"]
 - !private ["So7NSValueC", "intValue"]
-- !private ["So7NSValueC", "numberWithBool"]
-- !private ["So7NSValueC", "numberWithChar"]
-- !private ["So7NSValueC", "numberWithDouble"]
-- !private ["So7NSValueC", "numberWithFloat"]
-- !private ["So7NSValueC", "numberWithInt"]
-- !private ["So7NSValueC", "numberWithInteger"]
-- !private ["So7NSValueC", "numberWithLong"]
-- !private ["So7NSValueC", "numberWithLongLong"]
-- !private ["So7NSValueC", "numberWithShort"]
-- !private ["So7NSValueC", "numberWithUnsignedChar"]
-- !private ["So7NSValueC", "numberWithUnsignedInt"]
-- !private ["So7NSValueC", "numberWithUnsignedInteger"]
-- !private ["So7NSValueC", "numberWithUnsignedLong"]
-- !private ["So7NSValueC", "numberWithUnsignedLongLong"]
-- !private ["So7NSValueC", "numberWithUnsignedShort"]
 - !private ["Sk", ""]
 - !private ["Sk", "callAsFunction"]
 - !private ["Sk", "first"]
@@ -1659,43 +1531,108 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIViewController+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSError+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Target Support Files/Stripe/Stripe-umbrella.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDS2Service.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseImage.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSErrorMessage.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONDecodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONEncodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONWebSignature.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponse.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationResponse.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDirectoryServerCertificate.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDSProtocolVersion+Private.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTransaction+Private.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformationParameter+Private.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSString+EmptyChecking.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSWarning.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSLocalizedString.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSEphemeralKeyPair+Testing.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSwiftTryCatch.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSErrorMessage+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDirectoryServerCertificate+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSException+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseMessageExtension.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformation.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIButton+CustomInitialization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSUICustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTextFieldCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSLabelCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSelectionCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSButtonCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSNavigationBarCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSFooterCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTransaction.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSNotInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAlreadyInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSRuntimeException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSInvalidInputException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONWebEncryption.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSelectionButton.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseSelectionInfo.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/Stripe3DS2-Bridging-Header.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSImageLoader.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONEncoder.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSACSNetworkingManager.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSynchronousLocationManager.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformationManager.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJailbreakChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSOSVersionChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDebuggerChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSimulatorChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSIntegrityChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCategoryLinker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseViewController.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSProgressViewController.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformationParameter.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDirectoryServer.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSEphemeralKeyPair.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSStripe3DS2Error.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSBundleLocator.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSecTypeUtilities.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSData+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSString+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSDictionary+DecodingHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSConfigParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIColor+DefaultColors.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSIPAddress.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIFont+DefaultFonts.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseImageObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseMessageExtensionObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseSelectionInfoObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCompletionEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSEllipticCurvePoint.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIColor+ThirteenSupport.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSLayoutConstraint+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIView+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSWebView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTextChallengeView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSBrandingView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSProcessingView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSStackView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSExpandableInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeSelectionView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSpacerView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSWhitelistView.h"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Stripe.build/unextended-module.modulemap"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
@@ -1717,6 +1654,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
