@@ -24,9 +24,9 @@ public class Drink: NSManagedObject, Codable, NSCopying {
         case cost = "cost"
     }
     required convenience public init(from decoder: Decoder) throws {
-        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
+//        let context = CoreDataManager.sharedManager.managedContext
         
-        self.init(context: context)
+        self.init(context: CoreDataManager.sharedManager.managedContext)
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let nestedContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .drinkResponse)
         self.id = try nestedContainer.decode(UUID.self, forKey: .id)
@@ -83,8 +83,8 @@ extension Drink {
         return Double(quantity) * price
     }
     convenience init(Id:UUID, Name:String, Detail:String, Price:Double, businessId:UUID) {
-        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
-        self.init(context: context)
+//        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
+        self.init(context: CoreDataManager.sharedManager.managedContext)
         self.id = Id
         self.name = Name
         self.detail = Detail

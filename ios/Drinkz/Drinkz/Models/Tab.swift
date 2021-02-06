@@ -24,9 +24,9 @@ public class Tab: NSManagedObject,Codable {
         case fundraisingGoal = "fundraising_goal"
     }
     required convenience public init(from decoder: Decoder) throws {
-        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
+//        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
         
-        self.init(context: context)
+        self.init(context: CoreDataManager.sharedManager.managedContext)
         
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let nestedContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .tabResponse)
@@ -56,8 +56,7 @@ public class Tab: NSManagedObject,Codable {
 }
 extension Tab {
     convenience init () {
-        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
-        self.init(context: context)
+        self.init(context: CoreDataManager.sharedManager.managedContext)
         self.id = UUID()
         self.name = nil
         self.businessId = nil
@@ -69,8 +68,7 @@ extension Tab {
         self.fundraisingGoal = 0
     }
     convenience init (Name: String?, BusinessId: UUID?, UserId: String?, Address:String?, DateTime: Date, Detail: String?, MinimumContribution: Int64?, FundraisingGoal: Int64?) {
-        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
-        self.init(context: context)
+        self.init(context: CoreDataManager.sharedManager.managedContext)
         self.id = UUID()
         self.name = Name
         self.businessId = BusinessId

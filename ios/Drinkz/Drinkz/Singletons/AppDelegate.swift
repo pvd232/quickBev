@@ -36,10 +36,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Core Data stack
     
     func applicationWillTerminate(_ application: UIApplication) {
-        let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
+//        let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        CoreDataManager.sharedManager.saveContext(context:managedContext)
+        CoreDataManager.sharedManager.saveContext()
     }
     
 }

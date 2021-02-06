@@ -107,7 +107,11 @@ def orders():
 def customer():
     response = {}
     customer_service = Customer_Service()
-
+    print("request", request)
+    print("request.method", request.method)
+    print('request.data', request.data)
+    print("request.headers", request.headers)
+    print(json.loads(request.data))
     if request.method == 'POST':
         new_customer = json.loads(request.data)  # load JSON data from request
         response = customer_service.register_new_customer(new_customer)

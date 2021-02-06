@@ -75,7 +75,6 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
     }
     func makeBusinessServiceCall () {
         activityIndicator.startAnimating()
-        let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
         let group = DispatchGroup()
         //https://stackoverflow.com/questions/58319322/using-dispatch-group-in-multi-for-loop-with-urlsession-tasks
         for business in CheckoutCart.shared.businessArray {
@@ -94,7 +93,7 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
                         business.coordinate = location!
                         business.coordinateString = String(describing:location!)
                     }
-                    CoreDataManager.sharedManager.saveContext(context: managedContext)
+                    CoreDataManager.sharedManager.saveContext()
                     group.leave()
                     
                 }
@@ -176,11 +175,10 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
     }
     @objc func buttonAction(sender: RoundButton!) {
         //https://stackoverflow.com/questions/24814646/attach-parameter-to-button-addtarget-action-in-swift
-        let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
         if let clickedBusiness = CheckoutCart.shared.business!.first(where: { ($0 as! Business).id?.uuidString == sender.params["businessId"] }) as? Business {
             CheckoutCart.shared.userBusiness = clickedBusiness
             CheckoutCart.shared.userBusiness!.drinks =  clickedBusiness.drinks!
-            CoreDataManager.sharedManager.saveContext(context: managedContext)
+            CoreDataManager.sharedManager.saveContext()
             businessPickerDelegate?.businessPicked()
         }
         dismiss(animated: true) {

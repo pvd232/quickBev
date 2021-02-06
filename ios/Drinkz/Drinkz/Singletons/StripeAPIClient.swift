@@ -72,7 +72,6 @@ final class StripeAPIClient: NSObject, STPCustomerEphemeralKeyProvider {
         let jsonData = try? JSONSerialization.data(withJSONObject: params)
 
         var request = URLRequest(url: url)
-        request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = jsonData
         request.httpMethod = "POST"
@@ -85,10 +84,9 @@ final class StripeAPIClient: NSObject, STPCustomerEphemeralKeyProvider {
                 return
             }
             // this will be true during the guest checkout pathway
-            if CheckoutCart.shared.stripeId == "" {
-                let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
+            if CheckoutCart.shared.isGuest {
                 CheckoutCart.shared.stripeId = response.allHeaderFields["stripe_id"] as? String
-                CoreDataManager.sharedManager.saveContext(context: managedContext)
+                CoreDataManager.sharedManager.saveContext()
             }
             completion(json, nil)
         })

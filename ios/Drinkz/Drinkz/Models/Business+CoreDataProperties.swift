@@ -25,7 +25,6 @@ extension Business {
     @NSManaged public var stripeId: String?
     @NSManaged public var businessToCheckoutCart: CheckoutCart?
     @NSManaged public var businessId: UUID?
-    //    @NSManaged public var businessAddressId: UUID?
     @NSManaged public var drinks: NSSet?
     @NSManaged public var userBusinessToCheckoutCart: CheckoutCart?
 

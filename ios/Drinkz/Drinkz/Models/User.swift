@@ -20,12 +20,8 @@ public class User: NSManagedObject, Codable {
         case stripeId = "stripe_id"
     }
     required public convenience init(from decoder: Decoder) throws {
-        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
-        
-        self.init(context: context)
-        
+        self.init(context: CoreDataManager.sharedManager.managedContext)
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        //        let userResponse = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .userResponse)
         self.email = try container.decode(String.self, forKey: .email)
         self.firstName = try container.decode(String.self, forKey: .firstName)
         self.lastName = try container.decode(String.self, forKey: .lastName)
@@ -44,16 +40,14 @@ public class User: NSManagedObject, Codable {
 }
 extension User {
     convenience init (Email: String, FirstName: String, LastName:String, Password: String) {
-        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
-        self.init(context: context)
+        self.init(context: CoreDataManager.sharedManager.managedContext)
         self.email = Email
         self.firstName = FirstName
         self.lastName = LastName
         self.password = Password
     }
     convenience init (Email: String, FirstName: String, LastName:String, Password: String, StripeId: String) {
-        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
-        self.init(context: context)
+        self.init(context: CoreDataManager.sharedManager.managedContext)
         self.email = Email
         self.firstName = FirstName
         self.lastName = LastName

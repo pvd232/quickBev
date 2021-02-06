@@ -21,6 +21,12 @@ extension UIColor {
         return UIColor.init(red: 134/255, green: 130/255, blue: 230/255, alpha: 1.0)
     }
 }
+extension NSLayoutConstraint {
+    func usingPriority(_ priority: UILayoutPriority) -> NSLayoutConstraint {
+        self.priority = priority
+        return self
+    }
+}
 extension UIFont {
     class var themeButtonFont:UIFont {
         return UIFont.init(name: "Charter-Black", size: 20.0)!
@@ -47,18 +53,6 @@ public struct UsesAutoLayout<T: UIView> {
         self.wrappedValue = wrappedValue
         wrappedValue.translatesAutoresizingMaskIntoConstraints = false
     }
-}
-extension NSLayoutConstraint {
-    
-    /// Returns the constraint sender with the passed priority.
-    ///
-    /// - Parameter priority: The priority to be set.
-    /// - Returns: The sended constraint adjusted with the new priority.
-    func usingPriority(_ priority: UILayoutPriority) -> NSLayoutConstraint {
-        self.priority = priority
-        return self
-    }
-    
 }
 extension UIViewController{
     class var screenSize: CGRect { return UIScreen.main.bounds}
@@ -96,5 +90,110 @@ extension UITextField {
     
     @objc func tapCancel() {
         self.resignFirstResponder()
+    }
+}
+extension UIView {
+    convenience init(theme: Theme, superview: UIView? = nil) {
+        self.init()
+        switch self {
+        case let self as UIStackView :
+            switch theme {
+            case .UIStackView(let props):
+                for prop in props{
+                    switch prop{
+                    case .vertical:
+                        self.axis = .vertical
+                    case .horizontal:
+                        self.axis = .horizontal
+                    case .spacing(let value):
+                        self.spacing = CGFloat(value)
+                    }
+                }
+            default:
+                ()
+            }
+            print("constraints", constraints)
+        case let self as RoundButton:
+            
+            switch theme {
+            case .RoundButton(let props):
+                for prop in props{
+                    switch prop{
+                    case .color:
+                        let value = prop.rawValue as! UIColor
+                        self.refreshColor(color: value)
+                   
+                    case .titleLabelFont(var value):
+                        if value == nil {
+                            value  =  prop.rawValue as? UIFont
+                        }
+                            self.titleLabel?.font = value
+                    case .text(let value):
+                        self.refreshTitle(newTitle: value)
+                   
+                    }
+                }
+            default:
+                ()
+            }
+        case let self as UILabel:
+            switch theme {
+            case .UILabel(let props):
+                for prop in props{
+                    switch prop{
+                    case .font(let value):
+                        if value == nil {
+                            self.font  =  prop.rawValue as? UIFont
+                        }
+                        else {
+                            self.font = value
+                        }
+                    case .center:
+                        self.textAlignment = .center
+                    case .text(let value):
+                        self.text = value
+                    }
+                }
+            default:
+                ()
+            }
+        case let self as UITextField:
+            switch theme {
+            case .UITextField(let props):
+                for prop in props{
+                    print(prop)
+                    switch prop{
+                    case .font(let value):
+                        if value == nil {
+                            self.font  =  prop.rawValue as? UIFont
+                        }
+                        else {
+                            self.font = value
+                        }
+                
+                    case .placeHolderText(let value):
+                        self.placeholder = value
+                    case .autocapitalizationType(let value):
+                        switch value {
+                        case .none:
+                            self.autocapitalizationType = .none
+                        }
+                    case .borderStyle(let value):
+                        switch value {
+                        case .roundedRect:
+                            self.borderStyle = .roundedRect
+                        }
+                    case .backgroundColor(let value):
+                    self.backgroundColor = value
+                    }
+                }
+            default:
+                ()
+            }
+            
+            
+        default:
+            print("")
+        }
     }
 }

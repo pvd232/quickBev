@@ -31,6 +31,7 @@ provides-dynamic-lookup:
 - "path"
 - "queryItems"
 depends-top-level:
+- !private "!="
 - "=="
 - "APIClient"
 - "APIClientCompletion"
@@ -65,6 +66,7 @@ depends-top-level:
 - !private "_findStringSwitchCase"
 - !private "baseURL"
 - !private "body"
+- !private "print"
 - !private "session"
 - !private "~="
 depends-member:
@@ -98,6 +100,7 @@ depends-member:
 - ["6Drinkz8APIErrorO", "hashValue"]
 - ["6Drinkz8APIErrorO", "invalidURL"]
 - ["6Drinkz8APIErrorO", "requestFailed"]
+- ["6Drinkz8APIErrorO", "resourceNotFound"]
 - ["6Drinkz8APIErrorO", "userInfo"]
 - ["6Drinkz10APIRequestC", "Data"]
 - ["6Drinkz10APIRequestC", "Encodable"]
@@ -112,6 +115,7 @@ depends-member:
 - ["6Drinkz10APIRequestC", "init"]
 - ["6Drinkz10APIRequestC", "method"]
 - ["6Drinkz10APIRequestC", "path"]
+- !private ["6Drinkz10APIRequestC", "print"]
 - ["6Drinkz10APIRequestC", "queryItems"]
 - !private ["6Drinkz11APIResponseV", "APIError"]
 - ["6Drinkz11APIResponseV", "APIResponse"]
@@ -152,6 +156,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "httpMethod"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "path"]
+- !private ["s28CustomDebugStringConvertibleP", "port"]
 - !private ["s28CustomDebugStringConvertibleP", "queryItems"]
 - !private ["s28CustomDebugStringConvertibleP", "resume"]
 - !private ["s28CustomDebugStringConvertibleP", "scheme"]
@@ -165,6 +170,7 @@ depends-member:
 - !private ["s17CustomReflectableP", "httpMethod"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "path"]
+- !private ["s17CustomReflectableP", "port"]
 - !private ["s17CustomReflectableP", "queryItems"]
 - !private ["s17CustomReflectableP", "scheme"]
 - !private ["s17CustomReflectableP", "url"]
@@ -178,6 +184,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "httpMethod"]
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "path"]
+- !private ["s23CustomStringConvertibleP", "port"]
 - !private ["s23CustomStringConvertibleP", "queryItems"]
 - !private ["s23CustomStringConvertibleP", "resume"]
 - !private ["s23CustomStringConvertibleP", "scheme"]
@@ -193,6 +200,7 @@ depends-member:
 - !private ["Se", "host"]
 - ["Se", "init"]
 - !private ["Se", "path"]
+- !private ["Se", "port"]
 - !private ["Se", "queryItems"]
 - !private ["Se", "scheme"]
 - !private ["Se", "url"]
@@ -201,6 +209,7 @@ depends-member:
 - !private ["SE", "host"]
 - ["SE", "init"]
 - !private ["SE", "path"]
+- !private ["SE", "port"]
 - !private ["SE", "queryItems"]
 - !private ["SE", "scheme"]
 - !private ["SE", "url"]
@@ -231,6 +240,7 @@ depends-member:
 - ["SQ", "init"]
 - !private ["SQ", "invalidURL"]
 - !private ["SQ", "path"]
+- !private ["SQ", "port"]
 - !private ["SQ", "queryItems"]
 - ["SQ", "rawValue"]
 - !private ["SQ", "requestFailed"]
@@ -259,6 +269,7 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "forEach"]
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
 - ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s23ExpressibleByNilLiteralP", "init"]
 - ["s32ExpressibleByStringInterpolationP", ""]
 - ["s26ExpressibleByStringLiteralP", ""]
 - ["s33ExpressibleByUnicodeScalarLiteralP", ""]
@@ -314,6 +325,7 @@ depends-member:
 - ["SH", "init"]
 - !private ["SH", "invalidURL"]
 - !private ["SH", "path"]
+- !private ["SH", "port"]
 - !private ["SH", "queryItems"]
 - ["SH", "rawValue"]
 - !private ["SH", "requestFailed"]
@@ -377,6 +389,7 @@ depends-member:
 - !private ["10Foundation20ReferenceConvertibleP", "httpMethod"]
 - ["10Foundation20ReferenceConvertibleP", "init"]
 - !private ["10Foundation20ReferenceConvertibleP", "path"]
+- !private ["10Foundation20ReferenceConvertibleP", "port"]
 - !private ["10Foundation20ReferenceConvertibleP", "queryItems"]
 - !private ["10Foundation20ReferenceConvertibleP", "scheme"]
 - !private ["10Foundation20ReferenceConvertibleP", "url"]
@@ -392,10 +405,12 @@ depends-member:
 - !private ["10Foundation3URLV", "host"]
 - ["10Foundation3URLV", "init"]
 - !private ["10Foundation3URLV", "path"]
+- !private ["10Foundation3URLV", "port"]
 - !private ["10Foundation3URLV", "scheme"]
 - !private ["10Foundation13URLComponentsV", "host"]
 - !private ["10Foundation13URLComponentsV", "init"]
 - !private ["10Foundation13URLComponentsV", "path"]
+- !private ["10Foundation13URLComponentsV", "port"]
 - !private ["10Foundation13URLComponentsV", "queryItems"]
 - !private ["10Foundation13URLComponentsV", "scheme"]
 - !private ["10Foundation13URLComponentsV", "url"]
@@ -403,6 +418,7 @@ depends-member:
 - !private ["9Alamofire14URLConvertibleP", "host"]
 - ["9Alamofire14URLConvertibleP", "init"]
 - !private ["9Alamofire14URLConvertibleP", "path"]
+- !private ["9Alamofire14URLConvertibleP", "port"]
 - !private ["9Alamofire14URLConvertibleP", "queryItems"]
 - !private ["9Alamofire14URLConvertibleP", "scheme"]
 - !private ["9Alamofire14URLConvertibleP", "url"]
@@ -426,16 +442,18 @@ depends-member:
 - !private ["s30_CustomPlaygroundQuickLookableP", "host"]
 - ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "path"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "port"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "scheme"]
 - !private ["s24_DestructorSafeContainerP", "forEach"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
-- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s34_ExpressibleByFileReferenceLiteralP", "appendingPathComponent"]
 - !private ["s34_ExpressibleByFileReferenceLiteralP", "host"]
 - ["s34_ExpressibleByFileReferenceLiteralP", "init"]
 - !private ["s34_ExpressibleByFileReferenceLiteralP", "path"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "port"]
 - !private ["s34_ExpressibleByFileReferenceLiteralP", "scheme"]
 - !private ["s19_HasContiguousBytesP", "forEach"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "forEach"]
@@ -456,6 +474,7 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "httpMethod"]
 - ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "path"]
+- !private ["s21_ObjectiveCBridgeableP", "port"]
 - !private ["s21_ObjectiveCBridgeableP", "queryItems"]
 - !private ["s21_ObjectiveCBridgeableP", "scheme"]
 - !private ["s21_ObjectiveCBridgeableP", "url"]
@@ -484,6 +503,7 @@ depends-nominal:
 - "s5ErrorP"
 - !private "s25ExpressibleByArrayLiteralP"
 - "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
 - "s32ExpressibleByStringInterpolationP"
 - "s26ExpressibleByStringLiteralP"
 - "s33ExpressibleByUnicodeScalarLiteralP"
@@ -525,7 +545,7 @@ depends-nominal:
 - "s30_CustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
 - "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
 - "s34_ExpressibleByBuiltinStringLiteralP"
 - "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - "s34_ExpressibleByFileReferenceLiteralP"
@@ -706,4 +726,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "3e7feb3999ddde1bac4f8027be2594b0"
+interface-hash: "c29167be1fe18d66e13e3d6ece8ff276"

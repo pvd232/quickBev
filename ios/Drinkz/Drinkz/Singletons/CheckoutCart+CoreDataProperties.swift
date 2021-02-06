@@ -31,6 +31,7 @@ extension CheckoutCart {
     @NSManaged public var drinks: NSSet?
     @NSManaged public var user: User?
     @NSManaged public var userBusiness: Business?
+    @NSManaged public var isGuest: Bool
 
 }
 

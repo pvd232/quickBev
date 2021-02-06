@@ -82,7 +82,6 @@ depends-member:
 - !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "quantity"]
 - !private ["s7CVarArgP", "value"]
-- !private ["s7CVarArgP", "viewContext"]
 - ["s9CodingKeyP", "=="]
 - ["s9CodingKeyP", "Default_RawValue"]
 - ["s9CodingKeyP", "RawValue"]
@@ -132,7 +131,7 @@ depends-member:
 - ["6Drinkz5DrinkC10CodingKeysO", "stringValue"]
 - !private ["SL", ""]
 - !private ["SL", "init"]
-- !private ["6Drinkz15CoreDataManagerC", "persistentContainer"]
+- !private ["6Drinkz15CoreDataManagerC", "managedContext"]
 - !private ["6Drinkz15CoreDataManagerC", "sharedManager"]
 - ["s28CustomDebugStringConvertibleP", "=="]
 - !private ["s28CustomDebugStringConvertibleP", "AF"]
@@ -178,7 +177,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "result"]
 - ["s28CustomDebugStringConvertibleP", "stringValue"]
 - !private ["s28CustomDebugStringConvertibleP", "value"]
-- !private ["s28CustomDebugStringConvertibleP", "viewContext"]
 - !private ["s17CustomReflectableP", "callAsFunction"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "value"]
@@ -227,7 +225,6 @@ depends-member:
 - ["s23CustomStringConvertibleP", "stringValue"]
 - !private ["s23CustomStringConvertibleP", "validate"]
 - !private ["s23CustomStringConvertibleP", "value"]
-- !private ["s23CustomStringConvertibleP", "viewContext"]
 - !private ["9Alamofire11DataDecoderP", "decode"]
 - !private ["9Alamofire11DataDecoderP", "init"]
 - !private ["9Alamofire11DataRequestC", "response"]
@@ -375,7 +372,6 @@ depends-member:
 - !private ["SQ", "success"]
 - !private ["SQ", "validate"]
 - !private ["SQ", "value"]
-- !private ["SQ", "viewContext"]
 - !private ["s25ExpressibleByArrayLiteralP", "ArrayLiteralElement"]
 - !private ["s25ExpressibleByArrayLiteralP", "Element"]
 - !private ["s25ExpressibleByArrayLiteralP", ""]
@@ -437,7 +433,6 @@ depends-member:
 - !private ["SH", "success"]
 - !private ["SH", "validate"]
 - !private ["SH", "value"]
-- !private ["SH", "viewContext"]
 - !private ["s12IdentifiableP", "AF"]
 - !private ["s12IdentifiableP", "CodingKeys"]
 - !private ["s12IdentifiableP", "CoreDataManager"]
@@ -582,6 +577,8 @@ depends-member:
 - ["So8NSObjectC", "Encoder"]
 - !private ["So8NSObjectC", "Int16"]
 - !private ["So8NSObjectC", "JSONDecoder"]
+- !private ["So8NSObjectC", "JSONObjectWithData"]
+- !private ["So8NSObjectC", "JSONObjectWithStream"]
 - !private ["So8NSObjectC", "JSONSerialization"]
 - !private ["So8NSObjectC", "NSDictionary"]
 - ["So8NSObjectC", "NSZone"]
@@ -610,7 +607,6 @@ depends-member:
 - !private ["So8NSObjectC", "quantity"]
 - !private ["So8NSObjectC", "value"]
 - !private ["So8NSObjectC", "valueForKey"]
-- !private ["So8NSObjectC", "viewContext"]
 - !private ["So8NSObjectP", "AF"]
 - !private ["So8NSObjectP", "CodingKeys"]
 - !private ["So8NSObjectP", "CoreDataManager"]
@@ -618,7 +614,10 @@ depends-member:
 - !private ["So8NSObjectP", "Drink"]
 - !private ["So8NSObjectP", "Int16"]
 - !private ["So8NSObjectP", "JSONDecoder"]
+- !private ["So8NSObjectP", "JSONObjectWithData"]
+- !private ["So8NSObjectP", "JSONObjectWithStream"]
 - !private ["So8NSObjectP", "JSONSerialization"]
+- !private ["So8NSObjectP", "NSDictionary"]
 - ["So8NSObjectP", "NSZone"]
 - !private ["So8NSObjectP", "String"]
 - !private ["So8NSObjectP", "UUID"]
@@ -644,8 +643,6 @@ depends-member:
 - !private ["So8NSObjectP", "quantity"]
 - !private ["So8NSObjectP", "value"]
 - !private ["So8NSObjectP", "valueForKey"]
-- !private ["So8NSObjectP", "viewContext"]
-- !private ["So21NSPersistentContainerC", "viewContext"]
 - !private ["So14NSSecureCodingP", "value"]
 - !private ["Sj", ""]
 - !private ["Sj", "init"]
@@ -705,6 +702,9 @@ depends-member:
 - !private ["SY", "quantity"]
 - ["SY", "rawValue"]
 - ["SY", "stringValue"]
+- !private ["So20NSJSONReadingOptionsV", "ArrayLiteralElement"]
+- !private ["So20NSJSONReadingOptionsV", "Element"]
+- !private ["So20NSJSONReadingOptionsV", "init"]
 - ["9Alamofire7RequestC", ""]
 - !private ["9Alamofire7RequestC", "response"]
 - !private ["9Alamofire7RequestC", "validate"]
@@ -766,7 +766,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "quantity"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "value"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewContext"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "AF"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CodingKeys"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CoreDataManager"]
@@ -796,7 +795,6 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "print"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "quantity"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "value"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewContext"]
 - !private ["s21_ObjectiveCBridgeableP", "callAsFunction"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 depends-nominal:
@@ -846,13 +844,13 @@ depends-nominal:
 - !private "So16NSMutableCopyingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
-- !private "So21NSPersistentContainerC"
 - !private "So14NSSecureCodingP"
 - !private "Sj"
 - "7Combine16ObservableObjectP"
 - !private "s9OptionSetP"
 - !private "Sq"
 - "SY"
+- !private "So20NSJSONReadingOptionsV"
 - "9Alamofire7RequestC"
 - !private "9Alamofire15RequestDelegateP"
 - !private "s6ResultO"

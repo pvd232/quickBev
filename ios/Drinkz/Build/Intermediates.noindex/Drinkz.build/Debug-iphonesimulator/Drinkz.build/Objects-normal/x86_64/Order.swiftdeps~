@@ -74,7 +74,6 @@ depends-member:
 - !private ["s7CVarArgP", "tipAmount"]
 - !private ["s7CVarArgP", "tipPercentage"]
 - !private ["s7CVarArgP", "user"]
-- !private ["s7CVarArgP", "viewContext"]
 - !private ["6Drinkz12CheckoutCartC", "businessId"]
 - !private ["6Drinkz12CheckoutCartC", "cart"]
 - !private ["6Drinkz12CheckoutCartC", "cost"]
@@ -138,7 +137,7 @@ depends-member:
 - !private ["Sl", "sorted"]
 - !private ["SL", "init"]
 - !private ["SL", "timeIntervalSince1970"]
-- !private ["6Drinkz15CoreDataManagerC", "persistentContainer"]
+- !private ["6Drinkz15CoreDataManagerC", "managedContext"]
 - !private ["6Drinkz15CoreDataManagerC", "sharedManager"]
 - ["s28CustomDebugStringConvertibleP", "=="]
 - !private ["s28CustomDebugStringConvertibleP", "CodingKeys"]
@@ -181,7 +180,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "tipAmount"]
 - !private ["s28CustomDebugStringConvertibleP", "tipPercentage"]
 - !private ["s28CustomDebugStringConvertibleP", "user"]
-- !private ["s28CustomDebugStringConvertibleP", "viewContext"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "sorted"]
 - !private ["s17CustomReflectableP", "timeIntervalSince1970"]
@@ -226,7 +224,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "tipAmount"]
 - !private ["s23CustomStringConvertibleP", "tipPercentage"]
 - !private ["s23CustomStringConvertibleP", "user"]
-- !private ["s23CustomStringConvertibleP", "viewContext"]
 - !private ["10Foundation4DateV", "init"]
 - !private ["10Foundation4DateV", "timeIntervalSince1970"]
 - !private ["Se", "CodingKeys"]
@@ -330,7 +327,6 @@ depends-member:
 - !private ["SQ", "tipAmount"]
 - !private ["SQ", "tipPercentage"]
 - !private ["SQ", "user"]
-- !private ["SQ", "viewContext"]
 - !private ["s25ExpressibleByArrayLiteralP", ""]
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "sorted"]
@@ -375,7 +371,6 @@ depends-member:
 - !private ["SH", "tipAmount"]
 - !private ["SH", "tipPercentage"]
 - !private ["SH", "user"]
-- !private ["SH", "viewContext"]
 - !private ["s12IdentifiableP", "CodingKeys"]
 - !private ["s12IdentifiableP", "CoreDataManager"]
 - !private ["s12IdentifiableP", "Date"]
@@ -514,7 +509,6 @@ depends-member:
 - !private ["So8NSObjectC", "tipAmount"]
 - !private ["So8NSObjectC", "tipPercentage"]
 - !private ["So8NSObjectC", "user"]
-- !private ["So8NSObjectC", "viewContext"]
 - ["So8NSObjectP", "CodingKey"]
 - !private ["So8NSObjectP", "CodingKeys"]
 - !private ["So8NSObjectP", "CoreDataManager"]
@@ -551,8 +545,6 @@ depends-member:
 - !private ["So8NSObjectP", "tipAmount"]
 - !private ["So8NSObjectP", "tipPercentage"]
 - !private ["So8NSObjectP", "user"]
-- !private ["So8NSObjectP", "viewContext"]
-- !private ["So21NSPersistentContainerC", "viewContext"]
 - !private ["So14NSSecureCodingP", "init"]
 - !private ["So5NSSetC", "init"]
 - !private ["7Combine16ObservableObjectP", "CodingKeys"]
@@ -684,7 +676,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tipAmount"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tipPercentage"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "user"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewContext"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CodingKeys"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CoreDataManager"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Date"]
@@ -712,7 +703,6 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "tipAmount"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "tipPercentage"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "user"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewContext"]
 - !private ["s21_ObjectiveCBridgeableP", ""]
 - !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
 - !private ["s21_ObjectiveCBridgeableP", "_bridgeToObjectiveC"]
@@ -756,7 +746,6 @@ depends-nominal:
 - !private "So16NSMutableCopyingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
-- !private "So21NSPersistentContainerC"
 - !private "So14NSSecureCodingP"
 - !private "So5NSSetC"
 - "7Combine16ObservableObjectP"

@@ -55,7 +55,6 @@ depends-member:
 - !private ["s7CVarArgP", "minimumContribution"]
 - !private ["s7CVarArgP", "name"]
 - !private ["s7CVarArgP", "userId"]
-- !private ["s7CVarArgP", "viewContext"]
 - ["s9CodingKeyP", "=="]
 - ["s9CodingKeyP", "Default_RawValue"]
 - ["s9CodingKeyP", "RawValue"]
@@ -110,7 +109,7 @@ depends-member:
 - ["6Drinkz3TabC10CodingKeysO", "userId"]
 - !private ["SL", "init"]
 - !private ["SL", "timeIntervalSince1970"]
-- !private ["6Drinkz15CoreDataManagerC", "persistentContainer"]
+- !private ["6Drinkz15CoreDataManagerC", "managedContext"]
 - !private ["6Drinkz15CoreDataManagerC", "sharedManager"]
 - ["s28CustomDebugStringConvertibleP", "=="]
 - !private ["s28CustomDebugStringConvertibleP", "CodingKeys"]
@@ -146,7 +145,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "tabResponse"]
 - !private ["s28CustomDebugStringConvertibleP", "timeIntervalSince1970"]
 - !private ["s28CustomDebugStringConvertibleP", "userId"]
-- !private ["s28CustomDebugStringConvertibleP", "viewContext"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "timeIntervalSince1970"]
 - ["s23CustomStringConvertibleP", "=="]
@@ -183,7 +181,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "tabResponse"]
 - !private ["s23CustomStringConvertibleP", "timeIntervalSince1970"]
 - !private ["s23CustomStringConvertibleP", "userId"]
-- !private ["s23CustomStringConvertibleP", "viewContext"]
 - !private ["10Foundation4DateV", "init"]
 - !private ["10Foundation4DateV", "timeIntervalSince1970"]
 - !private ["Se", "CodingKeys"]
@@ -264,7 +261,6 @@ depends-member:
 - !private ["SQ", "tabResponse"]
 - !private ["SQ", "timeIntervalSince1970"]
 - !private ["SQ", "userId"]
-- !private ["SQ", "viewContext"]
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
 - ["SH", "=="]
 - !private ["SH", "CodingKeys"]
@@ -300,7 +296,6 @@ depends-member:
 - !private ["SH", "tabResponse"]
 - !private ["SH", "timeIntervalSince1970"]
 - !private ["SH", "userId"]
-- !private ["SH", "viewContext"]
 - !private ["s12IdentifiableP", "CodingKeys"]
 - !private ["s12IdentifiableP", "CoreDataManager"]
 - !private ["s12IdentifiableP", "Date"]
@@ -396,7 +391,6 @@ depends-member:
 - !private ["So8NSObjectC", "minimumContribution"]
 - !private ["So8NSObjectC", "name"]
 - !private ["So8NSObjectC", "userId"]
-- !private ["So8NSObjectC", "viewContext"]
 - ["So8NSObjectP", "CodingKey"]
 - !private ["So8NSObjectP", "CodingKeys"]
 - !private ["So8NSObjectP", "CoreDataManager"]
@@ -419,8 +413,6 @@ depends-member:
 - !private ["So8NSObjectP", "minimumContribution"]
 - !private ["So8NSObjectP", "name"]
 - !private ["So8NSObjectP", "userId"]
-- !private ["So8NSObjectP", "viewContext"]
-- !private ["So21NSPersistentContainerC", "viewContext"]
 - !private ["7Combine16ObservableObjectP", "CodingKeys"]
 - !private ["7Combine16ObservableObjectP", "CoreDataManager"]
 - !private ["7Combine16ObservableObjectP", "Date"]
@@ -518,7 +510,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "minimumContribution"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "userId"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewContext"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CodingKeys"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CoreDataManager"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Date"]
@@ -539,7 +530,6 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "minimumContribution"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "name"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "userId"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewContext"]
 - !private ["s21_ObjectiveCBridgeableP", ""]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "timeIntervalSince1970"]
@@ -570,7 +560,6 @@ depends-nominal:
 - "So15NSManagedObjectC"
 - "So8NSObjectC"
 - "So8NSObjectP"
-- !private "So21NSPersistentContainerC"
 - "7Combine16ObservableObjectP"
 - "SY"
 - !private "10Foundation20ReferenceConvertibleP"

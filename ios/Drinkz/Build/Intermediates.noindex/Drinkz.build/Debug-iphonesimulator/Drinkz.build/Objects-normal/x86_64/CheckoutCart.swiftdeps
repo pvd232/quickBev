@@ -104,7 +104,6 @@ depends-member:
 - !private ["s7CVarArgP", "tipAmount"]
 - !private ["s7CVarArgP", "tipPercentage"]
 - !private ["s7CVarArgP", "userBusiness"]
-- !private ["s7CVarArgP", "viewContext"]
 - ["6Drinkz12CheckoutCartC", "Bool"]
 - ["6Drinkz12CheckoutCartC", "Business"]
 - ["6Drinkz12CheckoutCartC", "CheckoutCart"]
@@ -149,7 +148,7 @@ depends-member:
 - !private ["10Foundation15ContiguousBytesP", "reduce"]
 - !private ["10Foundation15ContiguousBytesP", "subscript"]
 - !private ["6Drinkz15CoreDataManagerC", "fetchEntities"]
-- !private ["6Drinkz15CoreDataManagerC", "persistentContainer"]
+- !private ["6Drinkz15CoreDataManagerC", "managedContext"]
 - !private ["6Drinkz15CoreDataManagerC", "sharedManager"]
 - !private ["s28CustomDebugStringConvertibleP", "CheckoutCart"]
 - !private ["s28CustomDebugStringConvertibleP", "CoreDataManager"]
@@ -177,7 +176,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "tipAmount"]
 - !private ["s28CustomDebugStringConvertibleP", "tipPercentage"]
 - !private ["s28CustomDebugStringConvertibleP", "userBusiness"]
-- !private ["s28CustomDebugStringConvertibleP", "viewContext"]
 - !private ["s17CustomReflectableP", "count"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "isEmpty"]
@@ -211,7 +209,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "tipAmount"]
 - !private ["s23CustomStringConvertibleP", "tipPercentage"]
 - !private ["s23CustomStringConvertibleP", "userBusiness"]
-- !private ["s23CustomStringConvertibleP", "viewContext"]
 - !private ["10Foundation12DataProtocolP", ""]
 - !private ["10Foundation12DataProtocolP", "count"]
 - !private ["10Foundation12DataProtocolP", "init"]
@@ -270,7 +267,6 @@ depends-member:
 - !private ["SQ", "tipAmount"]
 - !private ["SQ", "tipPercentage"]
 - !private ["SQ", "userBusiness"]
-- !private ["SQ", "viewContext"]
 - !private ["s25ExpressibleByArrayLiteralP", ""]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
@@ -314,7 +310,6 @@ depends-member:
 - !private ["SH", "tipAmount"]
 - !private ["SH", "tipPercentage"]
 - !private ["SH", "userBusiness"]
-- !private ["SH", "viewContext"]
 - !private ["s12IdentifiableP", "CheckoutCart"]
 - !private ["s12IdentifiableP", "CoreDataManager"]
 - !private ["s12IdentifiableP", "Drink"]
@@ -448,8 +443,6 @@ depends-member:
 - !private ["So8NSObjectC", "tipPercentage"]
 - !private ["So8NSObjectC", "userBusiness"]
 - ["So8NSObjectC", "userBusinessDrinks"]
-- !private ["So8NSObjectC", "viewContext"]
-- ["So8NSObjectP", "Business"]
 - !private ["So8NSObjectP", "CheckoutCart"]
 - !private ["So8NSObjectP", "CoreDataManager"]
 - !private ["So8NSObjectP", "Drink"]
@@ -483,8 +476,6 @@ depends-member:
 - !private ["So8NSObjectP", "tipPercentage"]
 - !private ["So8NSObjectP", "userBusiness"]
 - ["So8NSObjectP", "userBusinessDrinks"]
-- !private ["So8NSObjectP", "viewContext"]
-- !private ["So21NSPersistentContainerC", "viewContext"]
 - !private ["So14NSSecureCodingP", "init"]
 - !private ["So5NSSetC", "init"]
 - !private ["Sj", ""]
@@ -594,7 +585,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tipAmount"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tipPercentage"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "userBusiness"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewContext"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CheckoutCart"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CoreDataManager"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Drink"]
@@ -615,7 +605,6 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "tipAmount"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "tipPercentage"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "userBusiness"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewContext"]
 - !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
 - !private ["s21_ObjectiveCBridgeableP", "count"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
@@ -668,7 +657,6 @@ depends-nominal:
 - !private "So16NSMutableCopyingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
-- !private "So21NSPersistentContainerC"
 - !private "So14NSSecureCodingP"
 - !private "So5NSSetC"
 - !private "Sj"

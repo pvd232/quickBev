@@ -11,9 +11,11 @@ provides-member:
 - ["11PusherSwift0A6LoggerC12LoggingLevelO", ""]
 provides-dynamic-lookup:
 - "debug"
+- "delegate"
 - "error"
 - "info"
 - "message"
+- "shared"
 - "warning"
 depends-top-level:
 - !private "+="
@@ -24,6 +26,7 @@ depends-top-level:
 - !private "IntegerLiteralType"
 - "LoggingEvent"
 - "LoggingLevel"
+- "PusherDelegate"
 - "PusherLogger"
 - "String"
 - "StringLiteralType"
@@ -80,12 +83,18 @@ depends-member:
 - ["11PusherSwift0A6LoggerC12LoggingEventO", "_rawHashValue"]
 - ["11PusherSwift0A6LoggerC12LoggingEventO", "attemptReconnectionAfterWaiting"]
 - ["11PusherSwift0A6LoggerC12LoggingEventO", "attemptReconnectionImmediately"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "authInfoForCompletionHandlerIsNil"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "authValueOnSubscriptionNotSupported"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "authenticationFailed"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "cannotSendClientEventForChannel"]
 - ["11PusherSwift0A6LoggerC12LoggingEventO", "clientEventSent"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "clientEventsNotSupported"]
 - ["11PusherSwift0A6LoggerC12LoggingEventO", "connectionEstablished"]
 - ["11PusherSwift0A6LoggerC12LoggingEventO", "disconnectionWithoutError"]
 - ["11PusherSwift0A6LoggerC12LoggingEventO", "errorReceived"]
 - ["11PusherSwift0A6LoggerC12LoggingEventO", "eventSent"]
 - !private ["11PusherSwift0A6LoggerC12LoggingEventO", "findStringSwitchCase"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "genericError"]
 - ["11PusherSwift0A6LoggerC12LoggingEventO", "hash"]
 - ["11PusherSwift0A6LoggerC12LoggingEventO", "hashValue"]
 - ["11PusherSwift0A6LoggerC12LoggingEventO", "init"]
@@ -100,8 +109,12 @@ depends-member:
 - ["11PusherSwift0A6LoggerC12LoggingEventO", "receivedMessage"]
 - ["11PusherSwift0A6LoggerC12LoggingEventO", "skippedEventAfterDecryptionFailure"]
 - ["11PusherSwift0A6LoggerC12LoggingEventO", "subscriptionSucceededNoDataInPayload"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "unableToAddMemberToChannel"]
 - ["11PusherSwift0A6LoggerC12LoggingEventO", "unableToHandleIncomingError"]
 - ["11PusherSwift0A6LoggerC12LoggingEventO", "unableToHandleIncomingMessage"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "unableToParseStringAsJSON"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "unableToRemoveMemberFromChannel"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "unableToSubscribeToChannel"]
 - ["11PusherSwift0A6LoggerC12LoggingLevelO", "=="]
 - ["11PusherSwift0A6LoggerC12LoggingLevelO", "Default_RawValue"]
 - ["11PusherSwift0A6LoggerC12LoggingLevelO", "RawValue"]
@@ -120,18 +133,23 @@ depends-member:
 - ["11PusherSwift0A6LoggerC12LoggingLevelO", "warning"]
 - ["So8NSCodingP", ""]
 - ["So8NSObjectP", ""]
+- !private ["11PusherSwift0A8DelegateP", "debugLog"]
 - ["11PusherSwift0A6LoggerC", "CustomStringConvertible"]
 - ["11PusherSwift0A6LoggerC", "LoggingEvent"]
 - ["11PusherSwift0A6LoggerC", "LoggingLevel"]
+- ["11PusherSwift0A6LoggerC", "PusherDelegate"]
+- ["11PusherSwift0A6LoggerC", "PusherLogger"]
 - ["11PusherSwift0A6LoggerC", "String"]
 - !private ["11PusherSwift0A6LoggerC", "_findStringSwitchCase"]
 - ["11PusherSwift0A6LoggerC", "debug"]
 - ["11PusherSwift0A6LoggerC", "deinit"]
+- ["11PusherSwift0A6LoggerC", "delegate"]
 - ["11PusherSwift0A6LoggerC", "error"]
 - !private ["11PusherSwift0A6LoggerC", "findStringSwitchCase"]
 - ["11PusherSwift0A6LoggerC", "info"]
 - ["11PusherSwift0A6LoggerC", "init"]
 - !private ["11PusherSwift0A6LoggerC", "message"]
+- ["11PusherSwift0A6LoggerC", "shared"]
 - ["11PusherSwift0A6LoggerC", "warning"]
 - ["SY", "=="]
 - ["SY", "Default_RawValue"]
@@ -168,6 +186,7 @@ depends-nominal:
 - "11PusherSwift0A6LoggerC12LoggingLevelO"
 - "So8NSCodingP"
 - "So8NSObjectP"
+- !private "11PusherSwift0A8DelegateP"
 - "11PusherSwift0A6LoggerC"
 - "SY"
 - !private "s27StringInterpolationProtocolP"
@@ -219,4 +238,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "53627c1d1820d63443ebf853c15767d0"
+interface-hash: "6bf043ba4dce9e7aeeb0f26fc01ab587"

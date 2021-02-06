@@ -43,7 +43,6 @@ depends-member:
 - !private ["s7CVarArgP", "lastName"]
 - !private ["s7CVarArgP", "password"]
 - !private ["s7CVarArgP", "stripeId"]
-- !private ["s7CVarArgP", "viewContext"]
 - ["s9CodingKeyP", "=="]
 - ["s9CodingKeyP", "Default_RawValue"]
 - ["s9CodingKeyP", "RawValue"]
@@ -86,7 +85,7 @@ depends-member:
 - ["6Drinkz4UserC10CodingKeysO", "rawValue"]
 - ["6Drinkz4UserC10CodingKeysO", "stringValue"]
 - ["6Drinkz4UserC10CodingKeysO", "stripeId"]
-- !private ["6Drinkz15CoreDataManagerC", "persistentContainer"]
+- !private ["6Drinkz15CoreDataManagerC", "managedContext"]
 - !private ["6Drinkz15CoreDataManagerC", "sharedManager"]
 - ["s28CustomDebugStringConvertibleP", "=="]
 - !private ["s28CustomDebugStringConvertibleP", "CodingKeys"]
@@ -113,7 +112,6 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "rawValue"]
 - ["s28CustomDebugStringConvertibleP", "stringValue"]
 - !private ["s28CustomDebugStringConvertibleP", "stripeId"]
-- !private ["s28CustomDebugStringConvertibleP", "viewContext"]
 - ["s23CustomStringConvertibleP", "=="]
 - !private ["s23CustomStringConvertibleP", "CodingKeys"]
 - !private ["s23CustomStringConvertibleP", "CoreDataManager"]
@@ -139,7 +137,6 @@ depends-member:
 - ["s23CustomStringConvertibleP", "rawValue"]
 - ["s23CustomStringConvertibleP", "stringValue"]
 - !private ["s23CustomStringConvertibleP", "stripeId"]
-- !private ["s23CustomStringConvertibleP", "viewContext"]
 - !private ["Se", "CodingKeys"]
 - !private ["Se", "CoreDataManager"]
 - !private ["Se", "String"]
@@ -193,7 +190,6 @@ depends-member:
 - ["SQ", "rawValue"]
 - ["SQ", "stringValue"]
 - !private ["SQ", "stripeId"]
-- !private ["SQ", "viewContext"]
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
 - ["SH", "=="]
 - !private ["SH", "CodingKeys"]
@@ -220,7 +216,6 @@ depends-member:
 - ["SH", "rawValue"]
 - ["SH", "stringValue"]
 - !private ["SH", "stripeId"]
-- !private ["SH", "viewContext"]
 - !private ["s12IdentifiableP", "CodingKeys"]
 - !private ["s12IdentifiableP", "CoreDataManager"]
 - !private ["s12IdentifiableP", "String"]
@@ -237,6 +232,7 @@ depends-member:
 - !private ["s30KeyedDecodingContainerProtocolP", "decode"]
 - !private ["s22KeyedEncodingContainerV", "encode"]
 - !private ["s30KeyedEncodingContainerProtocolP", "encode"]
+- ["So8NSCodingP", ""]
 - ["So20NSFetchRequestResultP", "CodingKey"]
 - !private ["So20NSFetchRequestResultP", "CodingKeys"]
 - !private ["So20NSFetchRequestResultP", "CoreDataManager"]
@@ -285,7 +281,6 @@ depends-member:
 - !private ["So8NSObjectC", "lastName"]
 - !private ["So8NSObjectC", "password"]
 - !private ["So8NSObjectC", "stripeId"]
-- !private ["So8NSObjectC", "viewContext"]
 - ["So8NSObjectP", "CodingKey"]
 - !private ["So8NSObjectP", "CodingKeys"]
 - !private ["So8NSObjectP", "CoreDataManager"]
@@ -302,8 +297,6 @@ depends-member:
 - !private ["So8NSObjectP", "lastName"]
 - !private ["So8NSObjectP", "password"]
 - !private ["So8NSObjectP", "stripeId"]
-- !private ["So8NSObjectP", "viewContext"]
-- !private ["So21NSPersistentContainerC", "viewContext"]
 - !private ["7Combine16ObservableObjectP", "CodingKeys"]
 - !private ["7Combine16ObservableObjectP", "CoreDataManager"]
 - !private ["7Combine16ObservableObjectP", "String"]
@@ -370,7 +363,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "lastName"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "password"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "stripeId"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewContext"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CodingKeys"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CoreDataManager"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "String"]
@@ -384,7 +376,6 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "lastName"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "password"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stripeId"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewContext"]
 depends-nominal:
 - "s7CVarArgP"
 - "s9CodingKeyP"
@@ -404,11 +395,11 @@ depends-nominal:
 - !private "s30KeyedDecodingContainerProtocolP"
 - !private "s22KeyedEncodingContainerV"
 - !private "s30KeyedEncodingContainerProtocolP"
+- "So8NSCodingP"
 - "So20NSFetchRequestResultP"
 - "So15NSManagedObjectC"
 - "So8NSObjectC"
 - "So8NSObjectP"
-- !private "So21NSPersistentContainerC"
 - "7Combine16ObservableObjectP"
 - "SY"
 - "6Drinkz4UserC"

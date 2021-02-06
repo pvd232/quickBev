@@ -3,14 +3,12 @@ import Stripe
 
 public class CheckoutCart: NSManagedObject {
     private convenience init() {
-        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
-        self.init(context: context)
+        self.init(context: CoreDataManager.sharedManager.managedContext)
     }
     static var customerContext: STPCustomerContext = STPCustomerContext(keyProvider: StripeAPIClient.sharedAPIClient)
     static var shared:CheckoutCart {
         get {
-            let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
-            let fetchedResults = CoreDataManager.sharedManager.fetchEntities(entityName: "CheckoutCart", context: managedContext)
+            let fetchedResults = CoreDataManager.sharedManager.fetchEntities(entityName: "CheckoutCart")
             if fetchedResults!.count > 0 {
                 return fetchedResults![0] as! CheckoutCart
             }

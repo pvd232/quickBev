@@ -354,18 +354,18 @@ SWIFT_CLASS("_TtC6Drinkz12CheckoutCart")
 
 
 @interface CheckoutCart (SWIFT_EXTENSION(Drinkz))
-- (void)addDrinksObject:(Drink * _Nonnull)value;
-- (void)removeDrinksObject:(Drink * _Nonnull)value;
-- (void)addDrinks:(NSSet * _Nonnull)values;
-- (void)removeDrinks:(NSSet * _Nonnull)values;
-@end
-
-
-@interface CheckoutCart (SWIFT_EXTENSION(Drinkz))
 - (void)addBusinessObject:(Business * _Nonnull)value;
 - (void)removeBusinessObject:(Business * _Nonnull)value;
 - (void)addBusiness:(NSSet * _Nonnull)values;
 - (void)removeBusiness:(NSSet * _Nonnull)values;
+@end
+
+
+@interface CheckoutCart (SWIFT_EXTENSION(Drinkz))
+- (void)addDrinksObject:(Drink * _Nonnull)value;
+- (void)removeDrinksObject:(Drink * _Nonnull)value;
+- (void)addDrinks:(NSSet * _Nonnull)values;
+- (void)removeDrinks:(NSSet * _Nonnull)values;
 @end
 
 
@@ -582,20 +582,14 @@ SWIFT_CLASS("_TtC6Drinkz36RegistrationSplashPageViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
-@class UITextField;
 
 SWIFT_CLASS("_TtC6Drinkz35RegistrationWithEmailViewController")
 @interface RegistrationWithEmailViewController : UIViewController
-@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified firstNameTextField;
-@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified lastNameTextField;
-@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified emailTextField;
-@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified passwordTextField;
-@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified confirmPasswordTextField;
-- (void)viewDidLoad;
-- (void)viewWillAppear:(BOOL)animated;
-- (IBAction)submitRegistration:(RoundButton * _Nonnull)sender;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewDidLoad;
+- (void)submitRegistration:(RoundButton * _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
 
@@ -720,6 +714,7 @@ SWIFT_CLASS("_TtC6Drinkz3Tab")
 @property (nonatomic, strong) User * _Nullable tabToUser;
 @end
 
+@class UITextField;
 @class UITextView;
 @class UIStackView;
 
@@ -785,6 +780,7 @@ SWIFT_CLASS("_TtC6Drinkz11ToolbarView")
 @interface UITextField (SWIFT_EXTENSION(Drinkz))
 - (void)tapCancel;
 @end
+
 
 
 

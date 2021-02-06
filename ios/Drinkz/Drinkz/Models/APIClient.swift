@@ -42,7 +42,9 @@ class APIRequest {
         self.method = method
         self.path = path
         // assign body property to generic type body parameter
+        
         self.body = try JSONEncoder().encode(body)
+        print("self.body", self.body)
     }
 }
 
@@ -91,12 +93,14 @@ struct APIClient {
     typealias APIClientCompletion = (APIResult<Data?>) -> Void
 
     private let session = URLSession.shared
-    private let baseURL = URL(string: "https://jsonplaceholder.typicode.com")!
+    private let baseURL = URL(string: "http://127.0.0.1:5000")!
 
     func perform(_ request: APIRequest, _ completion: @escaping APIClientCompletion) {
-
         var urlComponents = URLComponents()
         urlComponents.scheme = baseURL.scheme
+        if baseURL.port != nil {
+            urlComponents.port = baseURL.port
+        }
         urlComponents.host = baseURL.host
         urlComponents.path = baseURL.path
         urlComponents.queryItems = request.queryItems
@@ -108,10 +112,14 @@ struct APIClient {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = request.method.rawValue
         urlRequest.httpBody = request.body
+        if urlRequest.httpBody != nil {
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
 
+        }
         request.headers?.forEach { urlRequest.addValue($0.value, forHTTPHeaderField: $0.field) }
 
-        let task = session.dataTask(with: url) { (data, response, error) in
+        let task = session.dataTask(with: urlRequest) { (data, response, error) in
             // this is where the APIResponse is declared using optional binding to downcast the type. the new variable httpResponse is declared and binded to the value of the response on the condition that it is of the type HTTPURLResponse
             guard let httpResponse = response as? HTTPURLResponse else {
                 completion(.failure(.requestFailed)); return

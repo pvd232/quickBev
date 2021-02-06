@@ -13,6 +13,7 @@ class TemplateNavigationController: UINavigationController  {
     }
     override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
-        self.navigationBar.standardAppearance.backgroundColor = UIColor.init(red: 134/255, green: 130/255, blue: 230/255, alpha: 1.0)
+        self.navigationBar.standardAppearance.backgroundColor = UIColor.themeColor
+        self.navigationBar.standardAppearance.titleTextAttributes  = [NSAttributedString.Key.font: UIFont(name: "Charter-Roman", size: 25)!]
     }
 }

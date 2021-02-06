@@ -17,6 +17,7 @@ provides-dynamic-lookup:
 - "authMethod"
 - "autoReconnect"
 - "host"
+- "path"
 - "port"
 - "useTLS"
 depends-top-level:
@@ -56,6 +57,7 @@ depends-member:
 - !private ["s7CVarArgP", "autoReconnect"]
 - !private ["s7CVarArgP", "host"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "path"]
 - !private ["s7CVarArgP", "port"]
 - !private ["s7CVarArgP", "useTLS"]
 - !private ["11PusherSwift9ConstantsO", "API"]
@@ -67,6 +69,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "autoReconnect"]
 - !private ["s28CustomDebugStringConvertibleP", "host"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "path"]
 - !private ["s28CustomDebugStringConvertibleP", "port"]
 - !private ["s28CustomDebugStringConvertibleP", "useTLS"]
 - !private ["s23CustomStringConvertibleP", "Constants"]
@@ -79,6 +82,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "autoReconnect"]
 - !private ["s23CustomStringConvertibleP", "host"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "path"]
 - !private ["s23CustomStringConvertibleP", "port"]
 - !private ["s23CustomStringConvertibleP", "useTLS"]
 - !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
@@ -91,6 +95,7 @@ depends-member:
 - !private ["SQ", "autoReconnect"]
 - !private ["SQ", "host"]
 - !private ["SQ", "init"]
+- !private ["SQ", "path"]
 - !private ["SQ", "port"]
 - !private ["SQ", "useTLS"]
 - !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
@@ -103,6 +108,7 @@ depends-member:
 - !private ["SH", "autoReconnect"]
 - !private ["SH", "host"]
 - !private ["SH", "init"]
+- !private ["SH", "path"]
 - !private ["SH", "port"]
 - !private ["SH", "useTLS"]
 - ["So8NSObjectC", "AuthMethod"]
@@ -119,6 +125,7 @@ depends-member:
 - ["So8NSObjectC", "autoReconnect"]
 - ["So8NSObjectC", "host"]
 - ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "path"]
 - ["So8NSObjectC", "port"]
 - ["So8NSObjectC", "useTLS"]
 - ["So8NSObjectP", "AuthMethod"]
@@ -135,6 +142,7 @@ depends-member:
 - ["So8NSObjectP", "autoReconnect"]
 - ["So8NSObjectP", "host"]
 - ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "path"]
 - ["So8NSObjectP", "port"]
 - ["So8NSObjectP", "useTLS"]
 - ["11PusherSwift0A13ClientOptionsC", "AuthMethod"]
@@ -152,6 +160,7 @@ depends-member:
 - ["11PusherSwift0A13ClientOptionsC", "deinit"]
 - ["11PusherSwift0A13ClientOptionsC", "host"]
 - ["11PusherSwift0A13ClientOptionsC", "init"]
+- ["11PusherSwift0A13ClientOptionsC", "path"]
 - ["11PusherSwift0A13ClientOptionsC", "port"]
 - ["11PusherSwift0A13ClientOptionsC", "useTLS"]
 - ["11PusherSwift0A4HostO", "String"]
@@ -174,6 +183,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "autoReconnect"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "host"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "path"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "port"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "useTLS"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Constants"]
@@ -184,6 +194,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "autoReconnect"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "host"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "path"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "port"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "useTLS"]
 depends-nominal:
@@ -252,4 +263,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "75508ea7b76af1d6bc923c02c02b869f"
+interface-hash: "cd401aee2136bd6ef0a87de6c7959d4c"

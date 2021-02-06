@@ -55,19 +55,18 @@ depends-member:
 - !private ["So7CALayerC", "borderColor"]
 - !private ["So7CALayerC", "borderWidth"]
 - !private ["So7CALayerC", "cornerRadius"]
-- ["So15CALayerDelegateP", "CGFloat"]
-- !private ["So15CALayerDelegateP", "CGRect"]
+- ["So15CALayerDelegateP", "CGRect"]
 - !private ["So15CALayerDelegateP", "CGSize"]
-- ["So15CALayerDelegateP", "String"]
 - ["So15CALayerDelegateP", "UIColor"]
 - !private ["So15CALayerDelegateP", "UIGraphicsBeginImageContextWithOptions"]
 - !private ["So15CALayerDelegateP", "UIGraphicsGetImageFromCurrentImageContext"]
-- ["So15CALayerDelegateP", "UIImage"]
 - !private ["So15CALayerDelegateP", "UIRectFill"]
 - ["So15CALayerDelegateP", ""]
+- ["So15CALayerDelegateP", "__buttonWithType"]
 - ["So15CALayerDelegateP", "backgroundImageColor"]
 - ["So15CALayerDelegateP", "borderColor"]
 - ["So15CALayerDelegateP", "borderWidth"]
+- ["So15CALayerDelegateP", "buttonWithType"]
 - !private ["So15CALayerDelegateP", "clipsToBounds"]
 - ["So15CALayerDelegateP", "cornerRadius"]
 - ["So15CALayerDelegateP", "createImage"]
@@ -77,9 +76,9 @@ depends-member:
 - ["So15CALayerDelegateP", "prepareForInterfaceBuilder"]
 - ["So15CALayerDelegateP", "refreshBorderColor"]
 - ["So15CALayerDelegateP", "refreshBorderWidth"]
-- !private ["So15CALayerDelegateP", "refreshColor"]
+- ["So15CALayerDelegateP", "refreshColor"]
 - ["So15CALayerDelegateP", "refreshCorners"]
-- !private ["So15CALayerDelegateP", "refreshTitle"]
+- ["So15CALayerDelegateP", "refreshTitle"]
 - !private ["So15CALayerDelegateP", "setBackgroundImage"]
 - !private ["So15CALayerDelegateP", "setTitle"]
 - ["So15CALayerDelegateP", "sharedInit"]
@@ -246,19 +245,18 @@ depends-member:
 - !private ["SH", "setTitle"]
 - !private ["SH", "sharedInit"]
 - ["SH", "white"]
-- ["So8NSCodingP", "CGFloat"]
-- !private ["So8NSCodingP", "CGRect"]
+- ["So8NSCodingP", "CGRect"]
 - !private ["So8NSCodingP", "CGSize"]
-- ["So8NSCodingP", "String"]
 - ["So8NSCodingP", "UIColor"]
 - !private ["So8NSCodingP", "UIGraphicsBeginImageContextWithOptions"]
 - !private ["So8NSCodingP", "UIGraphicsGetImageFromCurrentImageContext"]
-- ["So8NSCodingP", "UIImage"]
 - !private ["So8NSCodingP", "UIRectFill"]
 - ["So8NSCodingP", ""]
+- ["So8NSCodingP", "__buttonWithType"]
 - ["So8NSCodingP", "backgroundImageColor"]
 - ["So8NSCodingP", "borderColor"]
 - ["So8NSCodingP", "borderWidth"]
+- ["So8NSCodingP", "buttonWithType"]
 - !private ["So8NSCodingP", "cgColor"]
 - !private ["So8NSCodingP", "clipsToBounds"]
 - ["So8NSCodingP", "cornerRadius"]
@@ -270,9 +268,9 @@ depends-member:
 - ["So8NSCodingP", "prepareForInterfaceBuilder"]
 - ["So8NSCodingP", "refreshBorderColor"]
 - ["So8NSCodingP", "refreshBorderWidth"]
-- !private ["So8NSCodingP", "refreshColor"]
+- ["So8NSCodingP", "refreshColor"]
 - ["So8NSCodingP", "refreshCorners"]
-- !private ["So8NSCodingP", "refreshTitle"]
+- ["So8NSCodingP", "refreshTitle"]
 - !private ["So8NSCodingP", "setBackgroundImage"]
 - !private ["So8NSCodingP", "setFill"]
 - !private ["So8NSCodingP", "setTitle"]
@@ -301,9 +299,11 @@ depends-member:
 - ["So8NSObjectC", "UIImage"]
 - !private ["So8NSObjectC", "UIRectFill"]
 - ["So8NSObjectC", ""]
+- ["So8NSObjectC", "__buttonWithType"]
 - ["So8NSObjectC", "backgroundImageColor"]
 - ["So8NSObjectC", "borderColor"]
 - ["So8NSObjectC", "borderWidth"]
+- ["So8NSObjectC", "buttonWithType"]
 - !private ["So8NSObjectC", "cgColor"]
 - !private ["So8NSObjectC", "clipsToBounds"]
 - ["So8NSObjectC", "cornerRadius"]
@@ -325,15 +325,16 @@ depends-member:
 - ["So8NSObjectC", "white"]
 - !private ["So8NSObjectP", "CGRect"]
 - !private ["So8NSObjectP", "CGSize"]
-- ["So8NSObjectP", "String"]
 - ["So8NSObjectP", "UIColor"]
 - !private ["So8NSObjectP", "UIGraphicsBeginImageContextWithOptions"]
 - !private ["So8NSObjectP", "UIGraphicsGetImageFromCurrentImageContext"]
 - !private ["So8NSObjectP", "UIRectFill"]
 - ["So8NSObjectP", ""]
+- ["So8NSObjectP", "__buttonWithType"]
 - ["So8NSObjectP", "backgroundImageColor"]
 - ["So8NSObjectP", "borderColor"]
 - ["So8NSObjectP", "borderWidth"]
+- ["So8NSObjectP", "buttonWithType"]
 - !private ["So8NSObjectP", "cgColor"]
 - !private ["So8NSObjectP", "clipsToBounds"]
 - ["So8NSObjectP", "cornerRadius"]
@@ -345,9 +346,9 @@ depends-member:
 - ["So8NSObjectP", "prepareForInterfaceBuilder"]
 - ["So8NSObjectP", "refreshBorderColor"]
 - ["So8NSObjectP", "refreshBorderWidth"]
-- !private ["So8NSObjectP", "refreshColor"]
+- ["So8NSObjectP", "refreshColor"]
 - ["So8NSObjectP", "refreshCorners"]
-- !private ["So8NSObjectP", "refreshTitle"]
+- ["So8NSObjectP", "refreshTitle"]
 - !private ["So8NSObjectP", "setBackgroundImage"]
 - !private ["So8NSObjectP", "setFill"]
 - !private ["So8NSObjectP", "setTitle"]
@@ -419,25 +420,24 @@ depends-member:
 - ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "prepareForInterfaceBuilder"]
 - ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "refreshBorderColor"]
 - ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "refreshBorderWidth"]
-- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "refreshColor"]
+- ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "refreshColor"]
 - ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "refreshCorners"]
-- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "refreshTitle"]
+- ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "refreshTitle"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "setBackgroundImage"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "setTitle"]
 - ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "sharedInit"]
-- ["So29UIAccessibilityIdentificationP", "CGFloat"]
-- !private ["So29UIAccessibilityIdentificationP", "CGRect"]
+- ["So29UIAccessibilityIdentificationP", "CGRect"]
 - !private ["So29UIAccessibilityIdentificationP", "CGSize"]
-- ["So29UIAccessibilityIdentificationP", "String"]
 - ["So29UIAccessibilityIdentificationP", "UIColor"]
 - !private ["So29UIAccessibilityIdentificationP", "UIGraphicsBeginImageContextWithOptions"]
 - !private ["So29UIAccessibilityIdentificationP", "UIGraphicsGetImageFromCurrentImageContext"]
-- ["So29UIAccessibilityIdentificationP", "UIImage"]
 - !private ["So29UIAccessibilityIdentificationP", "UIRectFill"]
 - ["So29UIAccessibilityIdentificationP", ""]
+- ["So29UIAccessibilityIdentificationP", "__buttonWithType"]
 - ["So29UIAccessibilityIdentificationP", "backgroundImageColor"]
 - ["So29UIAccessibilityIdentificationP", "borderColor"]
 - ["So29UIAccessibilityIdentificationP", "borderWidth"]
+- ["So29UIAccessibilityIdentificationP", "buttonWithType"]
 - !private ["So29UIAccessibilityIdentificationP", "clipsToBounds"]
 - ["So29UIAccessibilityIdentificationP", "cornerRadius"]
 - ["So29UIAccessibilityIdentificationP", "createImage"]
@@ -447,25 +447,24 @@ depends-member:
 - ["So29UIAccessibilityIdentificationP", "prepareForInterfaceBuilder"]
 - ["So29UIAccessibilityIdentificationP", "refreshBorderColor"]
 - ["So29UIAccessibilityIdentificationP", "refreshBorderWidth"]
-- !private ["So29UIAccessibilityIdentificationP", "refreshColor"]
+- ["So29UIAccessibilityIdentificationP", "refreshColor"]
 - ["So29UIAccessibilityIdentificationP", "refreshCorners"]
-- !private ["So29UIAccessibilityIdentificationP", "refreshTitle"]
+- ["So29UIAccessibilityIdentificationP", "refreshTitle"]
 - !private ["So29UIAccessibilityIdentificationP", "setBackgroundImage"]
 - !private ["So29UIAccessibilityIdentificationP", "setTitle"]
 - ["So29UIAccessibilityIdentificationP", "sharedInit"]
-- ["So12UIAppearanceP", "CGFloat"]
-- !private ["So12UIAppearanceP", "CGRect"]
+- ["So12UIAppearanceP", "CGRect"]
 - !private ["So12UIAppearanceP", "CGSize"]
-- ["So12UIAppearanceP", "String"]
 - ["So12UIAppearanceP", "UIColor"]
 - !private ["So12UIAppearanceP", "UIGraphicsBeginImageContextWithOptions"]
 - !private ["So12UIAppearanceP", "UIGraphicsGetImageFromCurrentImageContext"]
-- ["So12UIAppearanceP", "UIImage"]
 - !private ["So12UIAppearanceP", "UIRectFill"]
 - ["So12UIAppearanceP", ""]
+- ["So12UIAppearanceP", "__buttonWithType"]
 - ["So12UIAppearanceP", "backgroundImageColor"]
 - ["So12UIAppearanceP", "borderColor"]
 - ["So12UIAppearanceP", "borderWidth"]
+- ["So12UIAppearanceP", "buttonWithType"]
 - !private ["So12UIAppearanceP", "clipsToBounds"]
 - ["So12UIAppearanceP", "cornerRadius"]
 - ["So12UIAppearanceP", "createImage"]
@@ -475,25 +474,24 @@ depends-member:
 - ["So12UIAppearanceP", "prepareForInterfaceBuilder"]
 - ["So12UIAppearanceP", "refreshBorderColor"]
 - ["So12UIAppearanceP", "refreshBorderWidth"]
-- !private ["So12UIAppearanceP", "refreshColor"]
+- ["So12UIAppearanceP", "refreshColor"]
 - ["So12UIAppearanceP", "refreshCorners"]
-- !private ["So12UIAppearanceP", "refreshTitle"]
+- ["So12UIAppearanceP", "refreshTitle"]
 - !private ["So12UIAppearanceP", "setBackgroundImage"]
 - !private ["So12UIAppearanceP", "setTitle"]
 - ["So12UIAppearanceP", "sharedInit"]
-- ["So21UIAppearanceContainerP", "CGFloat"]
-- !private ["So21UIAppearanceContainerP", "CGRect"]
+- ["So21UIAppearanceContainerP", "CGRect"]
 - !private ["So21UIAppearanceContainerP", "CGSize"]
-- ["So21UIAppearanceContainerP", "String"]
 - ["So21UIAppearanceContainerP", "UIColor"]
 - !private ["So21UIAppearanceContainerP", "UIGraphicsBeginImageContextWithOptions"]
 - !private ["So21UIAppearanceContainerP", "UIGraphicsGetImageFromCurrentImageContext"]
-- ["So21UIAppearanceContainerP", "UIImage"]
 - !private ["So21UIAppearanceContainerP", "UIRectFill"]
 - ["So21UIAppearanceContainerP", ""]
+- ["So21UIAppearanceContainerP", "__buttonWithType"]
 - ["So21UIAppearanceContainerP", "backgroundImageColor"]
 - ["So21UIAppearanceContainerP", "borderColor"]
 - ["So21UIAppearanceContainerP", "borderWidth"]
+- ["So21UIAppearanceContainerP", "buttonWithType"]
 - !private ["So21UIAppearanceContainerP", "clipsToBounds"]
 - ["So21UIAppearanceContainerP", "cornerRadius"]
 - ["So21UIAppearanceContainerP", "createImage"]
@@ -503,9 +501,9 @@ depends-member:
 - ["So21UIAppearanceContainerP", "prepareForInterfaceBuilder"]
 - ["So21UIAppearanceContainerP", "refreshBorderColor"]
 - ["So21UIAppearanceContainerP", "refreshBorderWidth"]
-- !private ["So21UIAppearanceContainerP", "refreshColor"]
+- ["So21UIAppearanceContainerP", "refreshColor"]
 - ["So21UIAppearanceContainerP", "refreshCorners"]
-- !private ["So21UIAppearanceContainerP", "refreshTitle"]
+- ["So21UIAppearanceContainerP", "refreshTitle"]
 - !private ["So21UIAppearanceContainerP", "setBackgroundImage"]
 - !private ["So21UIAppearanceContainerP", "setTitle"]
 - ["So21UIAppearanceContainerP", "sharedInit"]
@@ -553,9 +551,11 @@ depends-member:
 - ["So32UIContextMenuInteractionDelegateP", "UIImage"]
 - !private ["So32UIContextMenuInteractionDelegateP", "UIRectFill"]
 - ["So32UIContextMenuInteractionDelegateP", ""]
+- ["So32UIContextMenuInteractionDelegateP", "__buttonWithType"]
 - ["So32UIContextMenuInteractionDelegateP", "backgroundImageColor"]
 - ["So32UIContextMenuInteractionDelegateP", "borderColor"]
 - ["So32UIContextMenuInteractionDelegateP", "borderWidth"]
+- ["So32UIContextMenuInteractionDelegateP", "buttonWithType"]
 - !private ["So32UIContextMenuInteractionDelegateP", "clipsToBounds"]
 - ["So32UIContextMenuInteractionDelegateP", "cornerRadius"]
 - ["So32UIContextMenuInteractionDelegateP", "createImage"]
@@ -565,9 +565,9 @@ depends-member:
 - ["So32UIContextMenuInteractionDelegateP", "prepareForInterfaceBuilder"]
 - ["So32UIContextMenuInteractionDelegateP", "refreshBorderColor"]
 - ["So32UIContextMenuInteractionDelegateP", "refreshBorderWidth"]
-- !private ["So32UIContextMenuInteractionDelegateP", "refreshColor"]
+- ["So32UIContextMenuInteractionDelegateP", "refreshColor"]
 - ["So32UIContextMenuInteractionDelegateP", "refreshCorners"]
-- !private ["So32UIContextMenuInteractionDelegateP", "refreshTitle"]
+- ["So32UIContextMenuInteractionDelegateP", "refreshTitle"]
 - !private ["So32UIContextMenuInteractionDelegateP", "setBackgroundImage"]
 - !private ["So32UIContextMenuInteractionDelegateP", "setTitle"]
 - ["So32UIContextMenuInteractionDelegateP", "sharedInit"]
@@ -582,9 +582,11 @@ depends-member:
 - ["So9UIControlC", "UIImage"]
 - !private ["So9UIControlC", "UIRectFill"]
 - ["So9UIControlC", ""]
+- ["So9UIControlC", "__buttonWithType"]
 - ["So9UIControlC", "backgroundImageColor"]
 - ["So9UIControlC", "borderColor"]
 - ["So9UIControlC", "borderWidth"]
+- ["So9UIControlC", "buttonWithType"]
 - !private ["So9UIControlC", "clipsToBounds"]
 - ["So9UIControlC", "cornerRadius"]
 - ["So9UIControlC", "createImage"]
@@ -600,19 +602,18 @@ depends-member:
 - !private ["So9UIControlC", "setBackgroundImage"]
 - !private ["So9UIControlC", "setTitle"]
 - ["So9UIControlC", "sharedInit"]
-- ["So17UICoordinateSpaceP", "CGFloat"]
-- !private ["So17UICoordinateSpaceP", "CGRect"]
+- ["So17UICoordinateSpaceP", "CGRect"]
 - !private ["So17UICoordinateSpaceP", "CGSize"]
-- ["So17UICoordinateSpaceP", "String"]
 - ["So17UICoordinateSpaceP", "UIColor"]
 - !private ["So17UICoordinateSpaceP", "UIGraphicsBeginImageContextWithOptions"]
 - !private ["So17UICoordinateSpaceP", "UIGraphicsGetImageFromCurrentImageContext"]
-- ["So17UICoordinateSpaceP", "UIImage"]
 - !private ["So17UICoordinateSpaceP", "UIRectFill"]
 - ["So17UICoordinateSpaceP", ""]
+- ["So17UICoordinateSpaceP", "__buttonWithType"]
 - ["So17UICoordinateSpaceP", "backgroundImageColor"]
 - ["So17UICoordinateSpaceP", "borderColor"]
 - ["So17UICoordinateSpaceP", "borderWidth"]
+- ["So17UICoordinateSpaceP", "buttonWithType"]
 - !private ["So17UICoordinateSpaceP", "clipsToBounds"]
 - ["So17UICoordinateSpaceP", "cornerRadius"]
 - ["So17UICoordinateSpaceP", "createImage"]
@@ -622,25 +623,24 @@ depends-member:
 - ["So17UICoordinateSpaceP", "prepareForInterfaceBuilder"]
 - ["So17UICoordinateSpaceP", "refreshBorderColor"]
 - ["So17UICoordinateSpaceP", "refreshBorderWidth"]
-- !private ["So17UICoordinateSpaceP", "refreshColor"]
+- ["So17UICoordinateSpaceP", "refreshColor"]
 - ["So17UICoordinateSpaceP", "refreshCorners"]
-- !private ["So17UICoordinateSpaceP", "refreshTitle"]
+- ["So17UICoordinateSpaceP", "refreshTitle"]
 - !private ["So17UICoordinateSpaceP", "setBackgroundImage"]
 - !private ["So17UICoordinateSpaceP", "setTitle"]
 - ["So17UICoordinateSpaceP", "sharedInit"]
-- ["So13UIDynamicItemP", "CGFloat"]
-- !private ["So13UIDynamicItemP", "CGRect"]
+- ["So13UIDynamicItemP", "CGRect"]
 - !private ["So13UIDynamicItemP", "CGSize"]
-- ["So13UIDynamicItemP", "String"]
 - ["So13UIDynamicItemP", "UIColor"]
 - !private ["So13UIDynamicItemP", "UIGraphicsBeginImageContextWithOptions"]
 - !private ["So13UIDynamicItemP", "UIGraphicsGetImageFromCurrentImageContext"]
-- ["So13UIDynamicItemP", "UIImage"]
 - !private ["So13UIDynamicItemP", "UIRectFill"]
 - ["So13UIDynamicItemP", ""]
+- ["So13UIDynamicItemP", "__buttonWithType"]
 - ["So13UIDynamicItemP", "backgroundImageColor"]
 - ["So13UIDynamicItemP", "borderColor"]
 - ["So13UIDynamicItemP", "borderWidth"]
+- ["So13UIDynamicItemP", "buttonWithType"]
 - !private ["So13UIDynamicItemP", "clipsToBounds"]
 - ["So13UIDynamicItemP", "cornerRadius"]
 - ["So13UIDynamicItemP", "createImage"]
@@ -650,25 +650,24 @@ depends-member:
 - ["So13UIDynamicItemP", "prepareForInterfaceBuilder"]
 - ["So13UIDynamicItemP", "refreshBorderColor"]
 - ["So13UIDynamicItemP", "refreshBorderWidth"]
-- !private ["So13UIDynamicItemP", "refreshColor"]
+- ["So13UIDynamicItemP", "refreshColor"]
 - ["So13UIDynamicItemP", "refreshCorners"]
-- !private ["So13UIDynamicItemP", "refreshTitle"]
+- ["So13UIDynamicItemP", "refreshTitle"]
 - !private ["So13UIDynamicItemP", "setBackgroundImage"]
 - !private ["So13UIDynamicItemP", "setTitle"]
 - ["So13UIDynamicItemP", "sharedInit"]
-- ["So18UIFocusEnvironmentP", "CGFloat"]
-- !private ["So18UIFocusEnvironmentP", "CGRect"]
+- ["So18UIFocusEnvironmentP", "CGRect"]
 - !private ["So18UIFocusEnvironmentP", "CGSize"]
-- ["So18UIFocusEnvironmentP", "String"]
 - ["So18UIFocusEnvironmentP", "UIColor"]
 - !private ["So18UIFocusEnvironmentP", "UIGraphicsBeginImageContextWithOptions"]
 - !private ["So18UIFocusEnvironmentP", "UIGraphicsGetImageFromCurrentImageContext"]
-- ["So18UIFocusEnvironmentP", "UIImage"]
 - !private ["So18UIFocusEnvironmentP", "UIRectFill"]
 - ["So18UIFocusEnvironmentP", ""]
+- ["So18UIFocusEnvironmentP", "__buttonWithType"]
 - ["So18UIFocusEnvironmentP", "backgroundImageColor"]
 - ["So18UIFocusEnvironmentP", "borderColor"]
 - ["So18UIFocusEnvironmentP", "borderWidth"]
+- ["So18UIFocusEnvironmentP", "buttonWithType"]
 - !private ["So18UIFocusEnvironmentP", "clipsToBounds"]
 - ["So18UIFocusEnvironmentP", "cornerRadius"]
 - ["So18UIFocusEnvironmentP", "createImage"]
@@ -678,25 +677,24 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "prepareForInterfaceBuilder"]
 - ["So18UIFocusEnvironmentP", "refreshBorderColor"]
 - ["So18UIFocusEnvironmentP", "refreshBorderWidth"]
-- !private ["So18UIFocusEnvironmentP", "refreshColor"]
+- ["So18UIFocusEnvironmentP", "refreshColor"]
 - ["So18UIFocusEnvironmentP", "refreshCorners"]
-- !private ["So18UIFocusEnvironmentP", "refreshTitle"]
+- ["So18UIFocusEnvironmentP", "refreshTitle"]
 - !private ["So18UIFocusEnvironmentP", "setBackgroundImage"]
 - !private ["So18UIFocusEnvironmentP", "setTitle"]
 - ["So18UIFocusEnvironmentP", "sharedInit"]
-- ["So11UIFocusItemP", "CGFloat"]
-- !private ["So11UIFocusItemP", "CGRect"]
+- ["So11UIFocusItemP", "CGRect"]
 - !private ["So11UIFocusItemP", "CGSize"]
-- ["So11UIFocusItemP", "String"]
 - ["So11UIFocusItemP", "UIColor"]
 - !private ["So11UIFocusItemP", "UIGraphicsBeginImageContextWithOptions"]
 - !private ["So11UIFocusItemP", "UIGraphicsGetImageFromCurrentImageContext"]
-- ["So11UIFocusItemP", "UIImage"]
 - !private ["So11UIFocusItemP", "UIRectFill"]
 - ["So11UIFocusItemP", ""]
+- ["So11UIFocusItemP", "__buttonWithType"]
 - ["So11UIFocusItemP", "backgroundImageColor"]
 - ["So11UIFocusItemP", "borderColor"]
 - ["So11UIFocusItemP", "borderWidth"]
+- ["So11UIFocusItemP", "buttonWithType"]
 - !private ["So11UIFocusItemP", "clipsToBounds"]
 - ["So11UIFocusItemP", "cornerRadius"]
 - ["So11UIFocusItemP", "createImage"]
@@ -706,25 +704,24 @@ depends-member:
 - ["So11UIFocusItemP", "prepareForInterfaceBuilder"]
 - ["So11UIFocusItemP", "refreshBorderColor"]
 - ["So11UIFocusItemP", "refreshBorderWidth"]
-- !private ["So11UIFocusItemP", "refreshColor"]
+- ["So11UIFocusItemP", "refreshColor"]
 - ["So11UIFocusItemP", "refreshCorners"]
-- !private ["So11UIFocusItemP", "refreshTitle"]
+- ["So11UIFocusItemP", "refreshTitle"]
 - !private ["So11UIFocusItemP", "setBackgroundImage"]
 - !private ["So11UIFocusItemP", "setTitle"]
 - ["So11UIFocusItemP", "sharedInit"]
-- ["So20UIFocusItemContainerP", "CGFloat"]
-- !private ["So20UIFocusItemContainerP", "CGRect"]
+- ["So20UIFocusItemContainerP", "CGRect"]
 - !private ["So20UIFocusItemContainerP", "CGSize"]
-- ["So20UIFocusItemContainerP", "String"]
 - ["So20UIFocusItemContainerP", "UIColor"]
 - !private ["So20UIFocusItemContainerP", "UIGraphicsBeginImageContextWithOptions"]
 - !private ["So20UIFocusItemContainerP", "UIGraphicsGetImageFromCurrentImageContext"]
-- ["So20UIFocusItemContainerP", "UIImage"]
 - !private ["So20UIFocusItemContainerP", "UIRectFill"]
 - ["So20UIFocusItemContainerP", ""]
+- ["So20UIFocusItemContainerP", "__buttonWithType"]
 - ["So20UIFocusItemContainerP", "backgroundImageColor"]
 - ["So20UIFocusItemContainerP", "borderColor"]
 - ["So20UIFocusItemContainerP", "borderWidth"]
+- ["So20UIFocusItemContainerP", "buttonWithType"]
 - !private ["So20UIFocusItemContainerP", "clipsToBounds"]
 - ["So20UIFocusItemContainerP", "cornerRadius"]
 - ["So20UIFocusItemContainerP", "createImage"]
@@ -734,25 +731,24 @@ depends-member:
 - ["So20UIFocusItemContainerP", "prepareForInterfaceBuilder"]
 - ["So20UIFocusItemContainerP", "refreshBorderColor"]
 - ["So20UIFocusItemContainerP", "refreshBorderWidth"]
-- !private ["So20UIFocusItemContainerP", "refreshColor"]
+- ["So20UIFocusItemContainerP", "refreshColor"]
 - ["So20UIFocusItemContainerP", "refreshCorners"]
-- !private ["So20UIFocusItemContainerP", "refreshTitle"]
+- ["So20UIFocusItemContainerP", "refreshTitle"]
 - !private ["So20UIFocusItemContainerP", "setBackgroundImage"]
 - !private ["So20UIFocusItemContainerP", "setTitle"]
 - ["So20UIFocusItemContainerP", "sharedInit"]
-- ["So24UILargeContentViewerItemP", "CGFloat"]
-- !private ["So24UILargeContentViewerItemP", "CGRect"]
+- ["So24UILargeContentViewerItemP", "CGRect"]
 - !private ["So24UILargeContentViewerItemP", "CGSize"]
-- ["So24UILargeContentViewerItemP", "String"]
 - ["So24UILargeContentViewerItemP", "UIColor"]
 - !private ["So24UILargeContentViewerItemP", "UIGraphicsBeginImageContextWithOptions"]
 - !private ["So24UILargeContentViewerItemP", "UIGraphicsGetImageFromCurrentImageContext"]
-- ["So24UILargeContentViewerItemP", "UIImage"]
 - !private ["So24UILargeContentViewerItemP", "UIRectFill"]
 - ["So24UILargeContentViewerItemP", ""]
+- ["So24UILargeContentViewerItemP", "__buttonWithType"]
 - ["So24UILargeContentViewerItemP", "backgroundImageColor"]
 - ["So24UILargeContentViewerItemP", "borderColor"]
 - ["So24UILargeContentViewerItemP", "borderWidth"]
+- ["So24UILargeContentViewerItemP", "buttonWithType"]
 - !private ["So24UILargeContentViewerItemP", "clipsToBounds"]
 - ["So24UILargeContentViewerItemP", "cornerRadius"]
 - ["So24UILargeContentViewerItemP", "createImage"]
@@ -762,23 +758,24 @@ depends-member:
 - ["So24UILargeContentViewerItemP", "prepareForInterfaceBuilder"]
 - ["So24UILargeContentViewerItemP", "refreshBorderColor"]
 - ["So24UILargeContentViewerItemP", "refreshBorderWidth"]
-- !private ["So24UILargeContentViewerItemP", "refreshColor"]
+- ["So24UILargeContentViewerItemP", "refreshColor"]
 - ["So24UILargeContentViewerItemP", "refreshCorners"]
-- !private ["So24UILargeContentViewerItemP", "refreshTitle"]
+- ["So24UILargeContentViewerItemP", "refreshTitle"]
 - !private ["So24UILargeContentViewerItemP", "setBackgroundImage"]
 - !private ["So24UILargeContentViewerItemP", "setTitle"]
 - ["So24UILargeContentViewerItemP", "sharedInit"]
 - !private ["So30UIPasteConfigurationSupportingP", "CGRect"]
 - !private ["So30UIPasteConfigurationSupportingP", "CGSize"]
-- ["So30UIPasteConfigurationSupportingP", "String"]
 - ["So30UIPasteConfigurationSupportingP", "UIColor"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIGraphicsBeginImageContextWithOptions"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIGraphicsGetImageFromCurrentImageContext"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIRectFill"]
 - ["So30UIPasteConfigurationSupportingP", ""]
+- ["So30UIPasteConfigurationSupportingP", "__buttonWithType"]
 - ["So30UIPasteConfigurationSupportingP", "backgroundImageColor"]
 - ["So30UIPasteConfigurationSupportingP", "borderColor"]
 - ["So30UIPasteConfigurationSupportingP", "borderWidth"]
+- ["So30UIPasteConfigurationSupportingP", "buttonWithType"]
 - !private ["So30UIPasteConfigurationSupportingP", "clipsToBounds"]
 - ["So30UIPasteConfigurationSupportingP", "cornerRadius"]
 - ["So30UIPasteConfigurationSupportingP", "createImage"]
@@ -788,9 +785,9 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "prepareForInterfaceBuilder"]
 - ["So30UIPasteConfigurationSupportingP", "refreshBorderColor"]
 - ["So30UIPasteConfigurationSupportingP", "refreshBorderWidth"]
-- !private ["So30UIPasteConfigurationSupportingP", "refreshColor"]
+- ["So30UIPasteConfigurationSupportingP", "refreshColor"]
 - ["So30UIPasteConfigurationSupportingP", "refreshCorners"]
-- !private ["So30UIPasteConfigurationSupportingP", "refreshTitle"]
+- ["So30UIPasteConfigurationSupportingP", "refreshTitle"]
 - !private ["So30UIPasteConfigurationSupportingP", "setBackgroundImage"]
 - !private ["So30UIPasteConfigurationSupportingP", "setTitle"]
 - ["So30UIPasteConfigurationSupportingP", "sharedInit"]
@@ -805,9 +802,11 @@ depends-member:
 - ["So11UIResponderC", "UIImage"]
 - !private ["So11UIResponderC", "UIRectFill"]
 - ["So11UIResponderC", ""]
+- ["So11UIResponderC", "__buttonWithType"]
 - ["So11UIResponderC", "backgroundImageColor"]
 - ["So11UIResponderC", "borderColor"]
 - ["So11UIResponderC", "borderWidth"]
+- ["So11UIResponderC", "buttonWithType"]
 - !private ["So11UIResponderC", "clipsToBounds"]
 - ["So11UIResponderC", "cornerRadius"]
 - ["So11UIResponderC", "createImage"]
@@ -825,15 +824,16 @@ depends-member:
 - ["So11UIResponderC", "sharedInit"]
 - !private ["So30UIResponderStandardEditActionsP", "CGRect"]
 - !private ["So30UIResponderStandardEditActionsP", "CGSize"]
-- ["So30UIResponderStandardEditActionsP", "String"]
 - ["So30UIResponderStandardEditActionsP", "UIColor"]
 - !private ["So30UIResponderStandardEditActionsP", "UIGraphicsBeginImageContextWithOptions"]
 - !private ["So30UIResponderStandardEditActionsP", "UIGraphicsGetImageFromCurrentImageContext"]
 - !private ["So30UIResponderStandardEditActionsP", "UIRectFill"]
 - ["So30UIResponderStandardEditActionsP", ""]
+- ["So30UIResponderStandardEditActionsP", "__buttonWithType"]
 - ["So30UIResponderStandardEditActionsP", "backgroundImageColor"]
 - ["So30UIResponderStandardEditActionsP", "borderColor"]
 - ["So30UIResponderStandardEditActionsP", "borderWidth"]
+- ["So30UIResponderStandardEditActionsP", "buttonWithType"]
 - !private ["So30UIResponderStandardEditActionsP", "clipsToBounds"]
 - ["So30UIResponderStandardEditActionsP", "cornerRadius"]
 - ["So30UIResponderStandardEditActionsP", "createImage"]
@@ -843,9 +843,9 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "prepareForInterfaceBuilder"]
 - ["So30UIResponderStandardEditActionsP", "refreshBorderColor"]
 - ["So30UIResponderStandardEditActionsP", "refreshBorderWidth"]
-- !private ["So30UIResponderStandardEditActionsP", "refreshColor"]
+- ["So30UIResponderStandardEditActionsP", "refreshColor"]
 - ["So30UIResponderStandardEditActionsP", "refreshCorners"]
-- !private ["So30UIResponderStandardEditActionsP", "refreshTitle"]
+- ["So30UIResponderStandardEditActionsP", "refreshTitle"]
 - !private ["So30UIResponderStandardEditActionsP", "setBackgroundImage"]
 - !private ["So30UIResponderStandardEditActionsP", "setTitle"]
 - ["So30UIResponderStandardEditActionsP", "sharedInit"]
@@ -872,25 +872,24 @@ depends-member:
 - ["So35UISpringLoadedInteractionSupportingP", "prepareForInterfaceBuilder"]
 - ["So35UISpringLoadedInteractionSupportingP", "refreshBorderColor"]
 - ["So35UISpringLoadedInteractionSupportingP", "refreshBorderWidth"]
-- !private ["So35UISpringLoadedInteractionSupportingP", "refreshColor"]
+- ["So35UISpringLoadedInteractionSupportingP", "refreshColor"]
 - ["So35UISpringLoadedInteractionSupportingP", "refreshCorners"]
-- !private ["So35UISpringLoadedInteractionSupportingP", "refreshTitle"]
+- ["So35UISpringLoadedInteractionSupportingP", "refreshTitle"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "setBackgroundImage"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "setTitle"]
 - ["So35UISpringLoadedInteractionSupportingP", "sharedInit"]
-- ["So18UITraitEnvironmentP", "CGFloat"]
-- !private ["So18UITraitEnvironmentP", "CGRect"]
+- ["So18UITraitEnvironmentP", "CGRect"]
 - !private ["So18UITraitEnvironmentP", "CGSize"]
-- ["So18UITraitEnvironmentP", "String"]
 - ["So18UITraitEnvironmentP", "UIColor"]
 - !private ["So18UITraitEnvironmentP", "UIGraphicsBeginImageContextWithOptions"]
 - !private ["So18UITraitEnvironmentP", "UIGraphicsGetImageFromCurrentImageContext"]
-- ["So18UITraitEnvironmentP", "UIImage"]
 - !private ["So18UITraitEnvironmentP", "UIRectFill"]
 - ["So18UITraitEnvironmentP", ""]
+- ["So18UITraitEnvironmentP", "__buttonWithType"]
 - ["So18UITraitEnvironmentP", "backgroundImageColor"]
 - ["So18UITraitEnvironmentP", "borderColor"]
 - ["So18UITraitEnvironmentP", "borderWidth"]
+- ["So18UITraitEnvironmentP", "buttonWithType"]
 - !private ["So18UITraitEnvironmentP", "clipsToBounds"]
 - ["So18UITraitEnvironmentP", "cornerRadius"]
 - ["So18UITraitEnvironmentP", "createImage"]
@@ -900,23 +899,24 @@ depends-member:
 - ["So18UITraitEnvironmentP", "prepareForInterfaceBuilder"]
 - ["So18UITraitEnvironmentP", "refreshBorderColor"]
 - ["So18UITraitEnvironmentP", "refreshBorderWidth"]
-- !private ["So18UITraitEnvironmentP", "refreshColor"]
+- ["So18UITraitEnvironmentP", "refreshColor"]
 - ["So18UITraitEnvironmentP", "refreshCorners"]
-- !private ["So18UITraitEnvironmentP", "refreshTitle"]
+- ["So18UITraitEnvironmentP", "refreshTitle"]
 - !private ["So18UITraitEnvironmentP", "setBackgroundImage"]
 - !private ["So18UITraitEnvironmentP", "setTitle"]
 - ["So18UITraitEnvironmentP", "sharedInit"]
 - !private ["So23UIUserActivityRestoringP", "CGRect"]
 - !private ["So23UIUserActivityRestoringP", "CGSize"]
-- ["So23UIUserActivityRestoringP", "String"]
 - ["So23UIUserActivityRestoringP", "UIColor"]
 - !private ["So23UIUserActivityRestoringP", "UIGraphicsBeginImageContextWithOptions"]
 - !private ["So23UIUserActivityRestoringP", "UIGraphicsGetImageFromCurrentImageContext"]
 - !private ["So23UIUserActivityRestoringP", "UIRectFill"]
 - ["So23UIUserActivityRestoringP", ""]
+- ["So23UIUserActivityRestoringP", "__buttonWithType"]
 - ["So23UIUserActivityRestoringP", "backgroundImageColor"]
 - ["So23UIUserActivityRestoringP", "borderColor"]
 - ["So23UIUserActivityRestoringP", "borderWidth"]
+- ["So23UIUserActivityRestoringP", "buttonWithType"]
 - !private ["So23UIUserActivityRestoringP", "clipsToBounds"]
 - ["So23UIUserActivityRestoringP", "cornerRadius"]
 - ["So23UIUserActivityRestoringP", "createImage"]
@@ -926,9 +926,9 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "prepareForInterfaceBuilder"]
 - ["So23UIUserActivityRestoringP", "refreshBorderColor"]
 - ["So23UIUserActivityRestoringP", "refreshBorderWidth"]
-- !private ["So23UIUserActivityRestoringP", "refreshColor"]
+- ["So23UIUserActivityRestoringP", "refreshColor"]
 - ["So23UIUserActivityRestoringP", "refreshCorners"]
-- !private ["So23UIUserActivityRestoringP", "refreshTitle"]
+- ["So23UIUserActivityRestoringP", "refreshTitle"]
 - !private ["So23UIUserActivityRestoringP", "setBackgroundImage"]
 - !private ["So23UIUserActivityRestoringP", "setTitle"]
 - ["So23UIUserActivityRestoringP", "sharedInit"]
@@ -943,9 +943,11 @@ depends-member:
 - ["So6UIViewC", "UIImage"]
 - !private ["So6UIViewC", "UIRectFill"]
 - ["So6UIViewC", ""]
+- ["So6UIViewC", "__buttonWithType"]
 - ["So6UIViewC", "backgroundImageColor"]
 - ["So6UIViewC", "borderColor"]
 - ["So6UIViewC", "borderWidth"]
+- ["So6UIViewC", "buttonWithType"]
 - !private ["So6UIViewC", "clipsToBounds"]
 - ["So6UIViewC", "cornerRadius"]
 - ["So6UIViewC", "createImage"]
@@ -1140,51 +1142,120 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/MapKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIViewController+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSError+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDS2Service.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSErrorMessage.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONDecodable.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncodable.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationResponse.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSWarning.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSwiftTryCatch.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSThreeDSProtocolVersion.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSUICustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTextFieldCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSLabelCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSSelectionCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSButtonCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNavigationBarCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSFooterCustomization.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSTransaction.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSNotInitializedException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAlreadyInitializedException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSInvalidInputException.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSJSONEncoder.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeStatusReceiver.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSStripe3DS2Error.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSChallengeParameters.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSConfigParameters.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDS2Service.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseImage.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSErrorMessage.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONDecodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONEncodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONWebSignature.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponse.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAuthenticationResponse.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDirectoryServerCertificate.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDSProtocolVersion+Private.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTransaction+Private.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformationParameter+Private.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSString+EmptyChecking.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWarning.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSLocalizedString.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSEphemeralKeyPair+Testing.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSwiftTryCatch.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSErrorMessage+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDirectoryServerCertificate+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSException+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseMessageExtension.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformation.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIButton+CustomInitialization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSUICustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTextFieldCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSLabelCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSelectionCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSButtonCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSNavigationBarCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSFooterCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTransaction.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSNotInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAlreadyInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSRuntimeException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSInvalidInputException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONWebEncryption.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSelectionButton.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfo.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe3DS2-Bridging-Header.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSImageLoader.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONEncoder.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSACSNetworkingManager.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSynchronousLocationManager.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformationManager.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJailbreakChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSOSVersionChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDebuggerChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSimulatorChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSIntegrityChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSCategoryLinker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseViewController.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSProgressViewController.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformationParameter.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDirectoryServer.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSEphemeralKeyPair.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSStripe3DS2Error.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSBundleLocator.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSecTypeUtilities.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSData+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSString+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSDictionary+DecodingHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSConfigParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIColor+DefaultColors.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSIPAddress.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIFont+DefaultFonts.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseImageObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAuthenticationResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseMessageExtensionObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfoObject.h"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSCompletionEvent.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSRuntimeErrorEvent.h"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/Stripe3DS2/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSCompletionEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSEllipticCurvePoint.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIColor+ThirteenSupport.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSLayoutConstraint+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIView+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWebView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTextChallengeView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSBrandingView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSProcessingView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSStackView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSExpandableInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeSelectionView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSpacerView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWhitelistView.h"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/TweetNacl/Sources/module.map"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
-- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/XCFrameworkIntermediates/Stripe3DS2/Headers/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/IBDesignables/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
@@ -1208,6 +1279,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"

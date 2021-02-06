@@ -22,8 +22,7 @@ public class Order: NSManagedObject, Codable {
         case salesTax = "sales_tax"
     }
     required convenience public init(from decoder: Decoder) throws {
-        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
-        self.init(context: context)
+        self.init(context: CoreDataManager.sharedManager.managedContext)
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(UUID.self, forKey: .id)
         self.user = try container.decode(User.self, forKey: .user)
@@ -56,8 +55,8 @@ extension Order {
         }
     }
     convenience init(checkoutCart: CheckoutCart) {
-        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
-        self.init(context: context)
+//        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
+        self.init(context: CoreDataManager.sharedManager.managedContext)
         self.id = UUID()
         self.user = checkoutCart.user!
         self.businessId = checkoutCart.businessId!

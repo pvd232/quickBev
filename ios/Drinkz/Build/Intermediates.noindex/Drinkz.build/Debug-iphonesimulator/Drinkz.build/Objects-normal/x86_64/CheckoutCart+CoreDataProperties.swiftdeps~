@@ -19,6 +19,7 @@ provides-member:
 - ["6Drinkz12CheckoutCartC", "drinks"]
 - ["6Drinkz12CheckoutCartC", "user"]
 - ["6Drinkz12CheckoutCartC", "userBusiness"]
+- ["6Drinkz12CheckoutCartC", "isGuest"]
 - ["6Drinkz12CheckoutCartC", "addToBusiness"]
 - ["6Drinkz12CheckoutCartC", "removeFromBusiness"]
 - ["6Drinkz12CheckoutCartC", "addToBusiness"]
@@ -36,6 +37,7 @@ provides-dynamic-lookup:
 - "currentOrderId"
 - "drinks"
 - "fetchRequest"
+- "isGuest"
 - "orderingProcessViewControllerIndex"
 - "removeFromBusiness"
 - "removeFromDrinks"
@@ -48,6 +50,7 @@ provides-dynamic-lookup:
 - "userBusiness"
 - "userId"
 depends-top-level:
+- "Bool"
 - "Business"
 - "CheckoutCart"
 - "Double"
@@ -67,6 +70,7 @@ depends-member:
 - ["s7CVarArgP", "_Default_ID"]
 - ["s7CVarArgP", "id"]
 - !private ["s7CVarArgP", "init"]
+- ["6Drinkz12CheckoutCartC", "Bool"]
 - ["6Drinkz12CheckoutCartC", "Business"]
 - ["6Drinkz12CheckoutCartC", "CheckoutCart"]
 - ["6Drinkz12CheckoutCartC", "Default_ID"]
@@ -90,6 +94,7 @@ depends-member:
 - ["6Drinkz12CheckoutCartC", "drinks"]
 - ["6Drinkz12CheckoutCartC", "fetchRequest"]
 - ["6Drinkz12CheckoutCartC", "id"]
+- ["6Drinkz12CheckoutCartC", "isGuest"]
 - ["6Drinkz12CheckoutCartC", "orderingProcessViewControllerIndex"]
 - ["6Drinkz12CheckoutCartC", "removeFromBusiness"]
 - ["6Drinkz12CheckoutCartC", "removeFromDrinks"]
@@ -135,6 +140,7 @@ depends-member:
 - !private ["So8NSCodingP", "init"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So14NSFetchRequestC", "init"]
+- ["So20NSFetchRequestResultP", "Bool"]
 - ["So20NSFetchRequestResultP", "Business"]
 - ["So20NSFetchRequestResultP", "Default_ID"]
 - ["So20NSFetchRequestResultP", "Double"]
@@ -150,6 +156,7 @@ depends-member:
 - ["So20NSFetchRequestResultP", "currentOrderId"]
 - ["So20NSFetchRequestResultP", "drinks"]
 - ["So20NSFetchRequestResultP", "id"]
+- ["So20NSFetchRequestResultP", "isGuest"]
 - ["So20NSFetchRequestResultP", "orderingProcessViewControllerIndex"]
 - ["So20NSFetchRequestResultP", "removeFromBusiness"]
 - ["So20NSFetchRequestResultP", "removeFromDrinks"]
@@ -161,6 +168,7 @@ depends-member:
 - ["So20NSFetchRequestResultP", "user"]
 - ["So20NSFetchRequestResultP", "userBusiness"]
 - ["So20NSFetchRequestResultP", "userId"]
+- ["So15NSManagedObjectC", "Bool"]
 - ["So15NSManagedObjectC", "Business"]
 - ["So15NSManagedObjectC", "CheckoutCart"]
 - ["So15NSManagedObjectC", "Default_ID"]
@@ -184,6 +192,7 @@ depends-member:
 - ["So15NSManagedObjectC", "drinks"]
 - ["So15NSManagedObjectC", "fetchRequest"]
 - ["So15NSManagedObjectC", "id"]
+- ["So15NSManagedObjectC", "isGuest"]
 - ["So15NSManagedObjectC", "orderingProcessViewControllerIndex"]
 - ["So15NSManagedObjectC", "removeFromBusiness"]
 - ["So15NSManagedObjectC", "removeFromDrinks"]
@@ -195,6 +204,7 @@ depends-member:
 - ["So15NSManagedObjectC", "user"]
 - ["So15NSManagedObjectC", "userBusiness"]
 - ["So15NSManagedObjectC", "userId"]
+- ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "Business"]
 - ["So8NSObjectC", "CheckoutCart"]
 - ["So8NSObjectC", "Default_ID"]
@@ -219,6 +229,7 @@ depends-member:
 - ["So8NSObjectC", "fetchRequest"]
 - ["So8NSObjectC", "id"]
 - !private ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "isGuest"]
 - ["So8NSObjectC", "orderingProcessViewControllerIndex"]
 - ["So8NSObjectC", "removeFromBusiness"]
 - ["So8NSObjectC", "removeFromDrinks"]
@@ -246,6 +257,7 @@ depends-member:
 - ["So8NSObjectP", "drinks"]
 - ["So8NSObjectP", "id"]
 - !private ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "isGuest"]
 - ["So8NSObjectP", "orderingProcessViewControllerIndex"]
 - ["So8NSObjectP", "removeFromBusiness"]
 - ["So8NSObjectP", "removeFromDrinks"]
@@ -469,4 +481,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "a79d1fcece97720a8e3fcc97911c779e"
+interface-hash: "33d77624c6d25af6d5f22494456acb7d"

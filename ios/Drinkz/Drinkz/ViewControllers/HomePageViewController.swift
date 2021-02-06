@@ -128,13 +128,11 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
             centerButton.refreshTitle(newTitle: "Order from \(CheckoutCart.shared.userBusiness!.name!)")
             navigationBarLabel.text = CheckoutCart.shared.userBusiness!.name
         }
-        let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
-        
         var fetchedDrinksOrBusinessesBool = false
         
         let group = DispatchGroup()
         group.enter()
-        if let fetchedBusinesses = CoreDataManager.sharedManager.fetchEntities(entityName: "Business", context:managedContext) as? [Business], fetchedBusinesses.count > 0 {
+        if let fetchedBusinesses = CoreDataManager.sharedManager.fetchEntities(entityName: "Business") as? [Business], fetchedBusinesses.count > 0 {
             businesses = fetchedBusinesses
             group.leave()
         } else {
@@ -149,7 +147,7 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
             }
         }
         group.enter()
-        if let fetchedDrinks = CoreDataManager.sharedManager.fetchEntities(entityName: "Drink", context:managedContext) as? [Drink], fetchedDrinks.count > 0 {
+        if let fetchedDrinks = CoreDataManager.sharedManager.fetchEntities(entityName: "Drink") as? [Drink], fetchedDrinks.count > 0 {
             drinks = fetchedDrinks
             group.leave()
         } else {
@@ -176,12 +174,17 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
                     business.drinks = NSSet.init(array: businessDrinks)
                 }
                 CheckoutCart.shared.business = NSSet.init(array: self.businesses)
-                CoreDataManager.sharedManager.saveContext(context: managedContext)
+                CoreDataManager.sharedManager.saveContext()
             }
             // if the user has signed out of their account the shopping cart will be empty but the businesses and drinks will be saved in core data
             else if CheckoutCart.shared.businessArray.count == 0 {
+                if let fetchedBusinesses = CoreDataManager.sharedManager.fetchEntities(entityName: "Business") as? [Business] {
+                    for fetchedBusiness in fetchedBusinesses{
+                        print("fetchedBusiness in home", fetchedBusiness)
+                    }
+                }
                 CheckoutCart.shared.business = NSSet.init(array: self.businesses)
-                CoreDataManager.sharedManager.saveContext(context: managedContext)
+                CoreDataManager.sharedManager.saveContext()
             }
         })
     }

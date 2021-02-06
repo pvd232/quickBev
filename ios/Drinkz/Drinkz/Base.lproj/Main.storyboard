@@ -978,7 +978,7 @@
         <!--Join QuickBev-->
         <scene sceneID="ceh-dh-kd7">
             <objects>
-                <viewController storyboardIdentifier="RegistrationWithEmailViewController" id="5Q7-Sc-zjd" customClass="RegistrationWithEmailViewController" customModule="Drinkz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegistrationWithEmailViewController" id="5Q7-Sc-zjd" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EEc-7A-ZEc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1057,9 +1057,6 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="8mt-P3-MIH" firstAttribute="width" secondItem="8mt-P3-MIH" secondAttribute="height" multiplier="197:25" id="orD-s9-a2q"/>
-                                </constraints>
                             </stackView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuF-fV-nee" customClass="RoundButton" customModule="Drinkz" customModuleProvider="target">
                                 <rect key="frame" x="10" y="714" width="394" height="50"/>
@@ -1086,8 +1083,8 @@
                         <viewLayoutGuide key="safeArea" id="wBO-kv-8r7"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="wBO-kv-8r7" firstAttribute="bottom" secondItem="MuF-fV-nee" secondAttribute="bottom" constant="10" id="2eo-Jn-gVN"/>
-                            <constraint firstItem="wBO-kv-8r7" firstAttribute="trailing" secondItem="Cue-IS-7u1" secondAttribute="trailing" constant="10" id="6L5-0B-iIz"/>
+                            <constraint firstItem="MuF-fV-nee" firstAttribute="bottom" secondItem="wBO-kv-8r7" secondAttribute="bottom" constant="-10" id="2eo-Jn-gVN"/>
+                            <constraint firstItem="Cue-IS-7u1" firstAttribute="trailing" secondItem="wBO-kv-8r7" secondAttribute="trailing" constant="-10" id="6L5-0B-iIz"/>
                             <constraint firstItem="wBO-kv-8r7" firstAttribute="trailing" secondItem="MuF-fV-nee" secondAttribute="trailing" constant="10" id="8ch-E9-xgQ"/>
                             <constraint firstItem="Cue-IS-7u1" firstAttribute="leading" secondItem="wBO-kv-8r7" secondAttribute="leading" constant="10" id="BuI-cO-3F3"/>
                             <constraint firstItem="MuF-fV-nee" firstAttribute="top" secondItem="Cue-IS-7u1" secondAttribute="bottom" priority="250" constant="250" id="abW-T6-IaF"/>

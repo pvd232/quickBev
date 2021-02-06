@@ -11,15 +11,12 @@ depends-top-level:
 - !private "Array"
 - !private "BooleanLiteralType"
 - "CastingPrecedence"
-- !private "FloatLiteralType"
-- !private "IntegerLiteralType"
 - !private "JSONSerialization"
 - "NSError"
 - "NSString"
+- !private "PusherLogger"
 - "PusherParser"
 - "String"
-- !private "StringLiteralType"
-- !private "print"
 depends-member:
 - !private ["SK", "Encoding"]
 - !private ["SK", ""]
@@ -38,16 +35,12 @@ depends-member:
 - !private ["s17CustomReflectableP", "Encoding"]
 - !private ["s23CustomStringConvertibleP", "Encoding"]
 - !private ["s23CustomStringConvertibleP", ""]
-- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
-- !private ["s23CustomStringConvertibleP", "appendLiteral"]
 - !private ["s23CustomStringConvertibleP", "data"]
 - !private ["s23CustomStringConvertibleP", "jsonObject"]
 - !private ["s23CustomStringConvertibleP", "localizedDescription"]
 - !private ["s23CustomStringConvertibleP", "rawValue"]
 - !private ["s23CustomStringConvertibleP", "utf8"]
 - !private ["Se", "Encoding"]
-- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
-- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
 - !private ["SE", "Encoding"]
 - !private ["SS10FoundationE8EncodingV", "rawValue"]
 - !private ["SS10FoundationE8EncodingV", "utf8"]
@@ -56,10 +49,12 @@ depends-member:
 - !private ["SQ", "Encoding"]
 - !private ["SQ", ""]
 - !private ["SQ", "data"]
+- !private ["SQ", "genericError"]
 - !private ["SQ", "init"]
 - !private ["SQ", "jsonObject"]
 - !private ["SQ", "localizedDescription"]
 - !private ["SQ", "rawValue"]
+- !private ["SQ", "unableToParseStringAsJSON"]
 - !private ["SQ", "utf8"]
 - !private ["s5ErrorP", "localizedDescription"]
 - !private ["s25ExpressibleByArrayLiteralP", "ArrayLiteralElement"]
@@ -70,9 +65,7 @@ depends-member:
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "data"]
 - !private ["s32ExpressibleByStringInterpolationP", "Encoding"]
-- !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
 - !private ["s32ExpressibleByStringInterpolationP", ""]
-- !private ["s32ExpressibleByStringInterpolationP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "Encoding"]
 - !private ["s26ExpressibleByStringLiteralP", ""]
 - !private ["s26ExpressibleByStringLiteralP", "data"]
@@ -82,11 +75,15 @@ depends-member:
 - !private ["SH", "Encoding"]
 - !private ["SH", ""]
 - !private ["SH", "data"]
+- !private ["SH", "genericError"]
 - !private ["SH", "jsonObject"]
 - !private ["SH", "localizedDescription"]
 - !private ["SH", "rawValue"]
+- !private ["SH", "unableToParseStringAsJSON"]
 - !private ["SH", "utf8"]
 - !private ["So19NSJSONSerializationC", "jsonObject"]
+- !private ["11PusherSwift0A6LoggerC12LoggingEventO", "genericError"]
+- !private ["11PusherSwift0A6LoggerC12LoggingEventO", "unableToParseStringAsJSON"]
 - !private ["s25LosslessStringConvertibleP", "Encoding"]
 - !private ["s25LosslessStringConvertibleP", ""]
 - !private ["s10MirrorPathP", "Encoding"]
@@ -119,21 +116,26 @@ depends-member:
 - !private ["s9OptionSetP", "ArrayLiteralElement"]
 - !private ["s9OptionSetP", "Element"]
 - !private ["s9OptionSetP", "init"]
+- !private ["11PusherSwift0A6LoggerC", "debug"]
+- !private ["11PusherSwift0A6LoggerC", "error"]
+- !private ["11PusherSwift0A6LoggerC", "shared"]
 - ["11PusherSwift0A6ParserV", "AnyObject"]
 - !private ["11PusherSwift0A6ParserV", "JSONSerialization"]
 - !private ["11PusherSwift0A6ParserV", "NSError"]
 - !private ["11PusherSwift0A6ParserV", "NSString"]
+- !private ["11PusherSwift0A6ParserV", "PusherLogger"]
 - ["11PusherSwift0A6ParserV", "String"]
 - ["11PusherSwift0A6ParserV", "getEventDataJSON"]
 - ["11PusherSwift0A6ParserV", "getPusherEventJSON"]
 - ["11PusherSwift0A6ParserV", "init"]
-- !private ["11PusherSwift0A6ParserV", "print"]
 - !private ["Sm", "Encoding"]
 - !private ["SY", "ArrayLiteralElement"]
 - !private ["SY", "Element"]
 - !private ["SY", ""]
+- !private ["SY", "genericError"]
 - !private ["SY", "init"]
 - !private ["SY", "rawValue"]
+- !private ["SY", "unableToParseStringAsJSON"]
 - !private ["SY", "utf8"]
 - !private ["So20NSJSONReadingOptionsV", "ArrayLiteralElement"]
 - !private ["So20NSJSONReadingOptionsV", "Element"]
@@ -145,14 +147,9 @@ depends-member:
 - !private ["s10SetAlgebraP", ""]
 - !private ["s10SetAlgebraP", "init"]
 - !private ["SS", "Encoding"]
-- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
-- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
-- !private ["s27StringInterpolationProtocolP", "init"]
 - !private ["Sy", "Encoding"]
 - !private ["s16TextOutputStreamP", "Encoding"]
 - !private ["s16TextOutputStreamP", ""]
-- !private ["s16TextOutputStreamP", "appendInterpolation"]
-- !private ["s16TextOutputStreamP", "appendLiteral"]
 - !private ["s20TextOutputStreamableP", "Encoding"]
 - !private ["s20TextOutputStreamableP", ""]
 - !private ["s30_CustomPlaygroundQuickLookableP", "Encoding"]
@@ -162,7 +159,6 @@ depends-member:
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "Encoding"]
-- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "Encoding"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s19_HasContiguousBytesP", "Encoding"]
@@ -188,7 +184,6 @@ depends-nominal:
 - !private "s17CustomReflectableP"
 - !private "s23CustomStringConvertibleP"
 - !private "Se"
-- !private "s26DefaultStringInterpolationV"
 - !private "SE"
 - !private "SS10FoundationE8EncodingV"
 - !private "SQ"
@@ -200,6 +195,7 @@ depends-nominal:
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "SH"
 - !private "So19NSJSONSerializationC"
+- !private "11PusherSwift0A6LoggerC12LoggingEventO"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
 - "So8NSCodingP"
@@ -213,6 +209,7 @@ depends-nominal:
 - !private "So14NSSecureCodingP"
 - !private "So8NSStringC"
 - !private "s9OptionSetP"
+- !private "11PusherSwift0A6LoggerC"
 - "11PusherSwift0A6ParserV"
 - !private "Sm"
 - !private "SY"
@@ -220,7 +217,6 @@ depends-nominal:
 - !private "ST"
 - !private "s10SetAlgebraP"
 - !private "SS"
-- !private "s27StringInterpolationProtocolP"
 - !private "Sy"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"

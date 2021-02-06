@@ -6,7 +6,6 @@
 //  Copyright © 2021 Peter Vail Driscoll II. All rights reserved.
 //
 
-import Alamofire
 import CoreLocation
 import CoreData
 
@@ -19,13 +18,9 @@ public class Business: NSManagedObject, Codable {
         case address = "address"
         case salesTaxRate = "sales_tax_rate"
         case stripeId = "stripe_id"
-//        case businessAddressId = "business_address_id"
     }
     required convenience public init(from decoder: Decoder) throws {
-        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
-        
-        self.init(context: context)
-        
+        self.init(context: CoreDataManager.sharedManager.managedContext)
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let businessResponse = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .businessResponse)
         self.id = try businessResponse.decode(UUID.self, forKey: .id)
@@ -33,7 +28,6 @@ public class Business: NSManagedObject, Codable {
         self.address = try businessResponse.decode(String.self, forKey: .address)
         self.salesTaxRate = try businessResponse.decode(Double.self, forKey: .salesTaxRate)
         self.stripeId = try businessResponse.decode(String.self, forKey: .stripeId)
-//        self.businessAddressId = try businessResponse.decode(UUID.self, forKey: .businessAddressId)
 
     }
     public func encode(to encoder: Encoder) throws {
@@ -43,7 +37,6 @@ public class Business: NSManagedObject, Codable {
         try businessResponse.encode(self.id, forKey: .id)
         try businessResponse.encode(self.address, forKey: .address)
         try businessResponse.encode(self.salesTaxRate, forKey: .salesTaxRate)
-//        try businessResponse.encode(self.businessAddressId, forKey: .businessAddressId)
         try businessResponse.encode(self.stripeId, forKey: .stripeId)
 
     }
@@ -58,26 +51,42 @@ public class Business: NSManagedObject, Codable {
         }
     }
     static func getBusinesses(completion: @escaping ([Business]?) -> Void) {
-        AF.request("http://127.0.0.1:5000/business", method: .get)
-            .validate()
-            .response { response in
-                switch response.result {
-                case .success:
-                    guard let rawData = response.data
-                    else {
-                        return completion(nil)
+        let request = APIRequest( method: .get, path:"/business")
+        APIClient().perform(request)
+           { result in
+                switch result {
+                case .success(let response):
+                    if response.statusCode == 200, let response = try? response.decode(to: [String: [Business]].self)  {
+                        let businesses =  response.body["businesses"]
+                        completion(businesses)
                     }
-                    let json = try! JSONSerialization.jsonObject(with: rawData, options: []) as! NSDictionary
-                    let unpackedBusinesses = json.value(forKey: "businesses")
-                    let rawBusinesses = try! JSONSerialization.data(withJSONObject: unpackedBusinesses!, options: [])
-                    let jsonDecoder = JSONDecoder()
-                    let businesses = try! jsonDecoder.decode([Business].self, from: rawBusinesses)
-                    completion(businesses)
                 case .failure(let error):
                     completion(nil)
                     print(error)
                 }
             }
     }
+//    static func getBusinesses(completion: @escaping ([Business]?) -> Void) {
+//        AF.request("http://127.0.0.1:5000/business", method: .get)
+//            .validate()
+//            .response { response in
+//                switch response.result {
+//                case .success:
+//                    guard let rawData = response.data
+//                    else {
+//                        return completion(nil)
+//                    }
+//                    let json = try! JSONSerialization.jsonObject(with: rawData, options: []) as! NSDictionary
+//                    let unpackedBusinesses = json.value(forKey: "businesses")
+//                    let rawBusinesses = try! JSONSerialization.data(withJSONObject: unpackedBusinesses!, options: [])
+//                    let jsonDecoder = JSONDecoder()
+//                    let businesses = try! jsonDecoder.decode([Business].self, from: rawBusinesses)
+//                    completion(businesses)
+//                case .failure(let error):
+//                    completion(nil)
+//                    print(error)
+//                }
+//            }
+//    }
 }
 

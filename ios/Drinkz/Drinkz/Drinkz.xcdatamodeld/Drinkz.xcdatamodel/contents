@@ -15,6 +15,7 @@
         <attribute name="businessId" optional="YES" attributeType="UUID" defaultValueString="" usesScalarValueType="NO"/>
         <attribute name="cost" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="currentOrderId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="isGuest" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="orderingProcessViewControllerIndex" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="salesTax" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="stripeId" optional="YES" attributeType="String"/>
@@ -74,7 +75,7 @@
     </entity>
     <elements>
         <element name="Business" positionX="0" positionY="81" width="128" height="164"/>
-        <element name="CheckoutCart" positionX="27" positionY="126" width="128" height="239"/>
+        <element name="CheckoutCart" positionX="27" positionY="126" width="128" height="254"/>
         <element name="Drink" positionX="-36" positionY="9" width="128" height="164"/>
         <element name="Order" positionX="18" positionY="162" width="128" height="179"/>
         <element name="Tab" positionX="9" positionY="135" width="128" height="179"/>
