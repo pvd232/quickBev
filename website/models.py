@@ -10,8 +10,11 @@ from sqlalchemy.ext.compiler import compiles
 import uuid
 import json
 from datetime import date
+import stripe
 
 #   https://stackoverflow.com/questions/38678336/sqlalchemy-how-to-implement-drop-table-cascade
+
+stripe.api_key = "sk_test_51I0xFxFseFjpsgWvh9b1munh6nIea6f5Z8bYlIDfmKyNq6zzrgg8iqeKEHwmRi5PqIelVkx4XWcYHAYc1omtD7wz00JiwbEKzj"
 
 
 @compiles(DropTable, "postgresql")
@@ -64,8 +67,6 @@ class Business(db.Model):
     classification = db.Column(db.String(80), nullable=False)
     date_joined = db.Column(db.Date, nullable=False)
     sales_tax_rate = db.Column(db.Float(), nullable=False)
-    stripe_id = db.Column(db.String(80), db.ForeignKey(
-        'stripe_account.id'), nullable=False)
     merchant_id = db.Column(db.String(80), db.ForeignKey(  # composite primary key because there might be multiple businesses with the same name
         'merchant.id'), nullable=False)
     tablet = db.Column(db.Boolean(), nullable=False)
@@ -97,6 +98,8 @@ class Merchant(db.Model):
     id = db.Column(db.String(80), primary_key=True,
                    unique=True, nullable=False)
     password = db.Column(db.String(80), nullable=False)
+    stripe_id = db.Column(db.String(80), db.ForeignKey(
+        'stripe_account.id'), nullable=False)
     first_name = db.Column(db.String(80), nullable=False)
     last_name = db.Column(db.String(80), nullable=False)
     phone_number = db.Column(db.BigInteger(), nullable=False)
@@ -143,6 +146,8 @@ class Order(db.Model):
         'customer.id'), nullable=False)
     business_id = db.Column(UUID(as_uuid=True), db.ForeignKey(
         'business.id'), nullable=False)
+    merchant_stripe_id = db.Column(
+        db.String(80), db.ForeignKey('stripe_account.id'))
     cost = db.Column(db.Float(), nullable=False)
     subtotal = db.Column(db.Float(), nullable=False)
     sales_tax = db.Column(db.Float(), nullable=False)
@@ -231,7 +236,7 @@ class Stripe_Account(db.Model):
 
     id = db.Column(db.String(80), primary_key=True,
                    unique=True, nullable=False)
-    business_adress = relationship('Business', lazy=True)
+    merchant = relationship('Merchant', lazy=True)
 
     @property
     def serialize(self):
@@ -253,10 +258,15 @@ def load_json(filename):
 
 
 def create_business():
-    new_stripe_account = Stripe_Account(id="b")
+    # new_stripe_account = Stripe_Account(id="b")
+    new_account = stripe.Account.create(
+        type="express",
+        country="US"
+    )
+    new_stripe_account = Stripe_Account(id=new_account.id)
     db.session.add(new_stripe_account)
     new_merchant = Merchant(id="a", password="a", first_name="peter",
-                            last_name="driscoll", phone_number=5126456898, number_of_businesses=2)
+                            last_name="driscoll", phone_number=5126456898, number_of_businesses=2, stripe_id=new_stripe_account.id)
     db.session.add(new_merchant)
 
     test_business = load_json("test_business.json")
@@ -274,7 +284,7 @@ def create_business():
         zipcode = business['zipcode']
         address = f"{street}, {city}, {state} {zipcode}"
         new_business = Business(merchant_id=merchant_id,
-                                name=name, date_joined=date_joined, sales_tax_rate=sales_tax_rate, classification=classification,  stripe_id="b", street=street, city=city,
+                                name=name, date_joined=date_joined, sales_tax_rate=sales_tax_rate, classification=classification, street=street, city=city,
                                 state=state, zipcode=zipcode, address=address, tablet=tablet, phone_number=phone_number)
         # After I create the drink, I can then add it to my session.
         db.session.add(new_business)

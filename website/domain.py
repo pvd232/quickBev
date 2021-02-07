@@ -57,6 +57,7 @@ class Order_Domain(object):
         self.address = ''
         self.order_drink = ''
         self.date_time = ''
+        self.merchant_stripe_id = ''
         if order_object:
             # these attributes were from the join and are not nested in the result object
             self.business_name = order_object.business_name
@@ -70,7 +71,6 @@ class Order_Domain(object):
             self.tip_percentage = order_object.Order.tip_percentage
             self.tip_amount = order_object.Order.tip_amount
             self.sales_tax = order_object.Order.sales_tax
-
             # formatted date string
             self.date_time = order_object.Order.date_time.strftime(
                 "%m/%d/%Y")
@@ -79,6 +79,7 @@ class Order_Domain(object):
         elif order_json:
             self.id = order_json["id"]
             self.customer_id = order_json["customer"]["id"]
+            self.merchant_stripe_id = order_json["merchant_stripe_id"]
             self.cost = order_json["cost"]
             self.subtotal = order_json["subtotal"]
             self.tip_percentage = order_json["tip_percentage"]
@@ -207,6 +208,7 @@ class Merchant_Domain(object):
         self.last_name = ''
         self.phone_number = ''
         self.number_of_businesses = ''
+        self.stripe_id = ''
         if merchant_object:
             self.id = merchant_object.id
             self.password = merchant_object.password
@@ -214,6 +216,7 @@ class Merchant_Domain(object):
             self.last_name = merchant_object.last_name
             self.phone_number = merchant_object.phone_number
             self.number_of_businesses = merchant_object.number_of_businesses
+            self.stripe_id = merchant_object.stripe_id
 
         elif merchant_json:
             print('merchant_json', merchant_json)
@@ -245,22 +248,21 @@ class Business_Domain(object):
         self.address = ''
         self.classification = ''
         self.merchant_id = ''
-        self.stripe_id = ''
+        self.merchant_stripe_id = ''
         if business_object:
-            # query result object embeds the business object inside a business key, with the business address attributes exposed at the top level
-            self.id = business_object.id
-            self.merchant_id = business_object.merchant_id
-            self.stripe_id = business_object.stripe_id
-            self.name = business_object.name
-            self.address = business_object.address
-            self.sales_tax_rate = business_object.sales_tax_rate
-            self.classification = business_object.classification
-            self.merchant_id = business_object.merchant_id
-            self.stripe_id = business_object.stripe_id
+            nested_business_object = business_object.Business
+            print('nested_business_object', nested_business_object.serialize)
+            self.id = nested_business_object.id
+            self.merchant_id = nested_business_object.merchant_id
+            self.merchant_stripe_id = business_object.merchant_stripe_id
+            self.name = nested_business_object.name
+            self.address = nested_business_object.address
+            self.sales_tax_rate = nested_business_object.sales_tax_rate
+            self.classification = nested_business_object.classification
         if business_json:
             self.id = business_json["id"]
             self.merchant_id = business_json["merchant_id"]
-            self.stripe_id = business_json["stripe_id"]
+            self.merchant_stripe_id = business_json["merchant_stripe_id"]
             self.name = business_json["name"]
             self.classification = business_json["classification"]
             self.address = business_json["address"]

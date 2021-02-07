@@ -11,6 +11,8 @@ import base64
 from sqlalchemy.sql import text
 from sqlalchemy.inspection import inspect
 
+stripe.api_key = "sk_test_51I0xFxFseFjpsgWvh9b1munh6nIea6f5Z8bYlIDfmKyNq6zzrgg8iqeKEHwmRi5PqIelVkx4XWcYHAYc1omtD7wz00JiwbEKzj"
+
 
 class Drink_Repository(object):
     def get_drinks(self, session):
@@ -20,7 +22,7 @@ class Drink_Repository(object):
 
 class Order_Repository(object):
     def post_order(self, session, order):
-        new_order = Order(id=order.id, customer_id=order.customer_id,
+        new_order = Order(id=order.id, customer_id=order.customer_id, merchant_stripe_id=order.merchant_stripe_id,
                           business_id=order.business_id, cost=order.cost, subtotal=order.subtotal, tip_percentage=order.tip_percentage, tip_amount=order.tip_amount, sales_tax=order.sales_tax, date_time=order.date_time)
         session.add(new_order)
 
@@ -70,14 +72,30 @@ class Order_Repository(object):
             return key, stripe_header
 
     def stripe_payment_intent(self, session, request):
+        # formatting for stripe requires everything in cents
         amount = int(round(request["order"]["cost"], 2) * 100)
+        print("stripe payment intent request", request)
         # when the customer lands on the checkout page we create a payment intent for them and send it back. this includes their payment methods
+        # payment_intent = stripe.PaymentIntent.create(
+        #     amount=amount,
+        #     customer=request["order"]["customer"]["stripe_id"],
+        #     setup_future_usage='on_session',
+        #     currency='usd'
+        # )
+        merchant_stripe_id = request["order"]["merchant_stripe_id"]
+        deduction = int(round(.1 * amount * 100, 2))
         payment_intent = stripe.PaymentIntent.create(
             amount=amount,
             customer=request["order"]["customer"]["stripe_id"],
             setup_future_usage='on_session',
-            currency='usd'
+            currency='usd',
+            application_fee_amount=deduction,
+            transfer_data={
+                'destination': f'{merchant_stripe_id}',
+            }
         )
+
+        # now we return the client secret to the front end which is used to pay for the order
         return payment_intent["client_secret"]
 
 
@@ -124,7 +142,8 @@ class Customer_Repository(object):
 
 class Business_Repository(object):
     def get_businesss(self, session):
-        businesses = session.query(Business).all()
+        businesses = session.query(Business, Merchant.stripe_id.label("merchant_stripe_id")).select_from(
+            Business).join(Merchant, Business.merchant_id == Merchant.id).all()
         print('businesses', businesses)
         return businesses
 
