@@ -6,6 +6,7 @@ provides-member:
 - ["6Drinkz5OrderC", ""]
 - ["6Drinkz5OrderC", "fetchRequest"]
 - ["6Drinkz5OrderC", "businessId"]
+- ["6Drinkz5OrderC", "merchantStripeId"]
 - ["6Drinkz5OrderC", "cost"]
 - ["6Drinkz5OrderC", "dateTime"]
 - ["6Drinkz5OrderC", "id"]
@@ -26,6 +27,7 @@ provides-dynamic-lookup:
 - "dateTime"
 - "fetchRequest"
 - "id"
+- "merchantStripeId"
 - "orderDrink"
 - "removeFromOrderDrink"
 - "salesTax"
@@ -41,6 +43,7 @@ depends-top-level:
 - "NSFetchRequest"
 - "NSSet"
 - "Order"
+- "String"
 - !private "StringLiteralType"
 - "UUID"
 - "User"
@@ -105,6 +108,7 @@ depends-member:
 - ["So20NSFetchRequestResultP", "NSFetchRequest"]
 - ["So20NSFetchRequestResultP", "NSSet"]
 - ["So20NSFetchRequestResultP", "Order"]
+- ["So20NSFetchRequestResultP", "String"]
 - ["So20NSFetchRequestResultP", "UUID"]
 - ["So20NSFetchRequestResultP", "User"]
 - ["So20NSFetchRequestResultP", "_Default_ID"]
@@ -114,6 +118,7 @@ depends-member:
 - ["So20NSFetchRequestResultP", "dateTime"]
 - ["So20NSFetchRequestResultP", "fetchRequest"]
 - ["So20NSFetchRequestResultP", "id"]
+- ["So20NSFetchRequestResultP", "merchantStripeId"]
 - ["So20NSFetchRequestResultP", "orderDrink"]
 - ["So20NSFetchRequestResultP", "removeFromOrderDrink"]
 - ["So20NSFetchRequestResultP", "salesTax"]
@@ -129,6 +134,7 @@ depends-member:
 - ["So15NSManagedObjectC", "NSFetchRequest"]
 - ["So15NSManagedObjectC", "NSSet"]
 - ["So15NSManagedObjectC", "Order"]
+- ["So15NSManagedObjectC", "String"]
 - ["So15NSManagedObjectC", "UUID"]
 - ["So15NSManagedObjectC", "User"]
 - ["So15NSManagedObjectC", ""]
@@ -139,6 +145,7 @@ depends-member:
 - ["So15NSManagedObjectC", "dateTime"]
 - ["So15NSManagedObjectC", "fetchRequest"]
 - ["So15NSManagedObjectC", "id"]
+- ["So15NSManagedObjectC", "merchantStripeId"]
 - ["So15NSManagedObjectC", "orderDrink"]
 - ["So15NSManagedObjectC", "removeFromOrderDrink"]
 - ["So15NSManagedObjectC", "salesTax"]
@@ -154,6 +161,7 @@ depends-member:
 - ["So8NSObjectC", "NSFetchRequest"]
 - ["So8NSObjectC", "NSSet"]
 - ["So8NSObjectC", "Order"]
+- ["So8NSObjectC", "String"]
 - ["So8NSObjectC", "UUID"]
 - ["So8NSObjectC", "User"]
 - ["So8NSObjectC", ""]
@@ -166,6 +174,7 @@ depends-member:
 - !private ["So8NSObjectC", "fetchRequestWithEntityName"]
 - ["So8NSObjectC", "id"]
 - !private ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "merchantStripeId"]
 - ["So8NSObjectC", "orderDrink"]
 - ["So8NSObjectC", "removeFromOrderDrink"]
 - ["So8NSObjectC", "salesTax"]
@@ -181,6 +190,7 @@ depends-member:
 - ["So8NSObjectP", "NSFetchRequest"]
 - ["So8NSObjectP", "NSSet"]
 - ["So8NSObjectP", "Order"]
+- ["So8NSObjectP", "String"]
 - ["So8NSObjectP", "UUID"]
 - ["So8NSObjectP", "User"]
 - ["So8NSObjectP", ""]
@@ -193,6 +203,7 @@ depends-member:
 - !private ["So8NSObjectP", "fetchRequestWithEntityName"]
 - ["So8NSObjectP", "id"]
 - !private ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "merchantStripeId"]
 - ["So8NSObjectP", "orderDrink"]
 - ["So8NSObjectP", "removeFromOrderDrink"]
 - ["So8NSObjectP", "salesTax"]
@@ -216,6 +227,7 @@ depends-member:
 - ["6Drinkz5OrderC", "NSFetchRequest"]
 - ["6Drinkz5OrderC", "NSSet"]
 - ["6Drinkz5OrderC", "Order"]
+- ["6Drinkz5OrderC", "String"]
 - ["6Drinkz5OrderC", "UUID"]
 - ["6Drinkz5OrderC", "User"]
 - ["6Drinkz5OrderC", ""]
@@ -226,6 +238,7 @@ depends-member:
 - ["6Drinkz5OrderC", "dateTime"]
 - ["6Drinkz5OrderC", "fetchRequest"]
 - ["6Drinkz5OrderC", "id"]
+- ["6Drinkz5OrderC", "merchantStripeId"]
 - ["6Drinkz5OrderC", "orderDrink"]
 - ["6Drinkz5OrderC", "removeFromOrderDrink"]
 - ["6Drinkz5OrderC", "salesTax"]
@@ -440,4 +453,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "9565d97fe52d2e082c07b16e721a4120"
+interface-hash: "edfb496821769bc393ede4d7bb4d3cd3"

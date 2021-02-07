@@ -12,6 +12,7 @@ public class Order: NSManagedObject, Codable {
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case user = "customer"
+        case merchantStripeId = "merchant_stripe_id"
         case businessId = "business_id"
         case orderDrink = "order_drink"
         case dateTime = "date_time"
@@ -25,6 +26,7 @@ public class Order: NSManagedObject, Codable {
         self.init(context: CoreDataManager.sharedManager.managedContext)
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(UUID.self, forKey: .id)
+        self.merchantStripeId = try container.decode(String.self, forKey: .merchantStripeId)
         self.user = try container.decode(User.self, forKey: .user)
         self.businessId = try container.decode(UUID.self, forKey: .businessId)
         self.cost = try container.decode(Double.self, forKey: .cost)
@@ -36,6 +38,7 @@ public class Order: NSManagedObject, Codable {
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(self.id, forKey: .id)
+        try container.encode(self.merchantStripeId, forKey: .merchantStripeId)
         try container.encode(self.user, forKey: .user)
         try container.encode(self.businessId, forKey: .businessId)
         try container.encode(self.orderDrinkArray, forKey: .orderDrink)
@@ -55,9 +58,9 @@ extension Order {
         }
     }
     convenience init(checkoutCart: CheckoutCart) {
-//        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
         self.init(context: CoreDataManager.sharedManager.managedContext)
         self.id = UUID()
+        self.merchantStripeId = checkoutCart.userBusiness!.merchantStripeId!
         self.user = checkoutCart.user!
         self.businessId = checkoutCart.businessId!
         self.orderDrink = NSSet.init(array:checkoutCart.cart)

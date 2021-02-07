@@ -124,6 +124,20 @@ struct APIClient {
             guard let httpResponse = response as? HTTPURLResponse else {
                 completion(.failure(.requestFailed)); return
             }
+            guard let dataResponse = data,
+                      error == nil else {
+                      debugPrint(error?.localizedDescription ?? "Response Error")
+                      return }
+                do{
+                    //here dataResponse received from a network request
+                    let jsonResponse = try JSONSerialization.jsonObject(with:
+                                           dataResponse, options: [])
+                    debugPrint("jsonResposne", jsonResponse) //Response result
+                 } catch let parsingError {
+                    debugPrint("Error", parsingError)
+                    debugPrint("response",response)
+               }
+
             completion(.success(APIResponse<Data?>(statusCode: httpResponse.statusCode, body: data)))
         }
         task.resume()

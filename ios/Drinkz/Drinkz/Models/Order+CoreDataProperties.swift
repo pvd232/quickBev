@@ -18,6 +18,7 @@ extension Order {
     }
 
     @NSManaged public var businessId: UUID?
+    @NSManaged public var merchantStripeId: String?
     @NSManaged public var cost: Double
     @NSManaged public var dateTime: Date?
     @NSManaged public var id: UUID?

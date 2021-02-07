@@ -31,6 +31,12 @@ extension UIFont {
     class var themeButtonFont:UIFont {
         return UIFont.init(name: "Charter-Black", size: 20.0)!
     }
+    class var mediumLargeThemeButtonFont:UIFont {
+        return UIFont.init(name: "Charter-Black", size: 18.0)!
+    }
+    class var mediumThemeButtonFont:UIFont {
+        return UIFont.init(name: "Charter-Black", size: 16.0)!
+    }
     class var smallThemeButtonFont:UIFont {
         return UIFont.init(name: "Charter-Black", size: 12.0)!
     }
@@ -197,3 +203,5 @@ extension UIView {
         }
     }
 }
+// 11 width = 375, height = 736
+// 8 width = 375, height = 667

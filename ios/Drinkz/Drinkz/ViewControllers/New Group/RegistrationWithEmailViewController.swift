@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import Alamofire
 
 class RegistrationWithEmailViewController: UIViewController {
     
@@ -40,6 +39,8 @@ class RegistrationWithEmailViewController: UIViewController {
         self.view.addSubview(activityIndicator)
         registrationStackView.addArrangedSubview(firstNameLabel)
         registrationStackView.addArrangedSubview(firstNameTextField)
+        registrationStackView.addArrangedSubview(lastNameLabel)
+        registrationStackView.addArrangedSubview(lastNameTextField)
         registrationStackView.addArrangedSubview(emailLabel)
         registrationStackView.addArrangedSubview(emailTextField)
         registrationStackView.addArrangedSubview(passwordLabel)
@@ -67,9 +68,7 @@ class RegistrationWithEmailViewController: UIViewController {
             registrationStackView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 35),
         ]
         )
-        
         submitButton.addTarget(self, action: #selector(submitRegistration), for: .touchUpInside)
-        
     }
     
     @objc private func submitRegistration(_ sender: RoundButton) {
@@ -93,7 +92,8 @@ class RegistrationWithEmailViewController: UIViewController {
                     let responseJson = response.body
                     CheckoutCart.shared.user = requestedNewUser
                     CheckoutCart.shared.userId = requestedNewUser.email
-//                    let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
+                    
+                    // when changing UI based on asynchronous operation, or when updating core data need to wrap in dispatch queue because both are asynchronous ops themselves
                     DispatchQueue.main.async
                     {
                         if CheckoutCart.shared.isGuest == false {
@@ -102,44 +102,35 @@ class RegistrationWithEmailViewController: UIViewController {
                             requestedNewUser.stripeId = responseJson["stripe_id"]
                             self.alertAccountCreation()
                         }
-                        
                         // the user is creating an account without having ordered something prior as a guest. this is the typical process which redirects to the home page
                         else {
                             self.alertAccountCreationForGuest()
                         }
-                        
                         CoreDataManager.sharedManager.saveContext()
-                        
                         SceneDelegate.shared.rootViewController.switchToHomePageViewController()
                         self.activityIndicator.stopAnimating()
                     }
                 }
                 else {
-                    DispatchQueue.main.async {
-                        self.activityIndicator.stopAnimating()
-                        
-                        let alertController = UIAlertController(title: "Username already exists", message: "Your username is taken. Please choose another", preferredStyle: .alert)
-                        alertController.addAction(UIAlertAction(title: "Try again", style: .cancel) { action in
-                            self.dismiss( animated: true)
-                        })
-                        self.present(alertController, animated: true, completion: nil)
-                    }
-                    
-                }
-            case .failure(let error):                    // if the API fails the enum API result will be of the type failure
-                DispatchQueue.main.async {
-                    self.activityIndicator.stopAnimating()
-                    
-                    let alertController = UIAlertController(title: "Network Error", message: "A network error has occured. Check your internet connection and if necessary, restart the app.", preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title: "Okay", style: .cancel) { action in
+                    let alertController = UIAlertController(title: "Username already exists", message: "Your username is taken. Please choose another", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Try again", style: .cancel) { action in
                         self.dismiss( animated: true)
                     })
+                    DispatchQueue.main.async {
+                        self.activityIndicator.stopAnimating()
+                        self.present(alertController, animated: true, completion: nil)
+                    }
+                }
+            case .failure(let error):                    // if the API fails the enum API result will be of the type failure
+                let alertController = UIAlertController(title: "Network Error", message: "A network error has occured. Check your internet connection and if necessary, restart the app.", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Okay", style: .cancel) { action in
+                    self.dismiss( animated: true)
+                })
+                DispatchQueue.main.async {
+                    self.activityIndicator.stopAnimating()
                     self.present(alertController, animated: true, completion: nil)
                     print("error case .failure", error)
-                    
                 }
-                
-                
             }
         }
     }

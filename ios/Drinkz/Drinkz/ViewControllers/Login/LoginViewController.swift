@@ -166,7 +166,6 @@ class LoginViewController: UIViewController {
         APIClient().perform(request) {result in // this bracket is the trailing closure that is being passed into the APIClient perform function as an argument for the completion parameter. the data is the parameter that was passed into the completion by the APIClient perform function, which was in turn returned the data by the URL session task
             switch result {
             case .success (let response): // the response is the APIResponse struct parameter that was passed into the APIResult instance for the .success case
-                print("response.body",try! JSONDecoder().decode([String: String].self, from: response.body!) )
                 if response.statusCode == 200, let response = try? response.decode(to: User.self)  {
                     var user = response.body
                     if let fetchedUsers = CoreDataManager.sharedManager.fetchEntities(entityName: "User") as? [User] {

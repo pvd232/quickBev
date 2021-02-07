@@ -17,7 +17,7 @@ public class Business: NSManagedObject, Codable {
         case name = "name"
         case address = "address"
         case salesTaxRate = "sales_tax_rate"
-        case stripeId = "stripe_id"
+        case merchantStripeId = "merchant_stripe_id"
     }
     required convenience public init(from decoder: Decoder) throws {
         self.init(context: CoreDataManager.sharedManager.managedContext)
@@ -27,8 +27,7 @@ public class Business: NSManagedObject, Codable {
         self.name = try businessResponse.decode(String.self, forKey: .name)
         self.address = try businessResponse.decode(String.self, forKey: .address)
         self.salesTaxRate = try businessResponse.decode(Double.self, forKey: .salesTaxRate)
-        self.stripeId = try businessResponse.decode(String.self, forKey: .stripeId)
-
+        self.merchantStripeId = try businessResponse.decode(String.self, forKey: .merchantStripeId)
     }
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
@@ -37,8 +36,7 @@ public class Business: NSManagedObject, Codable {
         try businessResponse.encode(self.id, forKey: .id)
         try businessResponse.encode(self.address, forKey: .address)
         try businessResponse.encode(self.salesTaxRate, forKey: .salesTaxRate)
-        try businessResponse.encode(self.stripeId, forKey: .stripeId)
-
+        try businessResponse.encode(self.merchantStripeId, forKey: .merchantStripeId)
     }
     func getLocation(from address: String, completion: @escaping (_ location: CLLocationCoordinate2D?)-> Void) {
         let geocoder = CLGeocoder()

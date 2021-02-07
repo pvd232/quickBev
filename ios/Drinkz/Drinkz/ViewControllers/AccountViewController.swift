@@ -96,20 +96,11 @@ class AccountViewController : UIViewController, UITableViewDelegate, UITableView
         let logoutAction = UIAlertAction(title:"Log Out", style: .default) { action in
             // delete the current shopping cart
             DispatchQueue.main.async {
-
-                if let fetchedBusinesses = CoreDataManager.sharedManager.fetchEntities(entityName: "Business") as? [Business] {
-                    print("fetchedBusinesses.count", fetchedBusinesses.count)
-                    for fetchedBusiness in fetchedBusinesses{
-                        fetchedBusiness.businessToCheckoutCart = nil
-                        fetchedBusiness.userBusinessToCheckoutCart = nil
-                    }
-                }
+                // need to delete the existing CheckoutCart due to singleton architecture, and to reset stripe values
                 CoreDataManager.sharedManager.deleteEntities(entityName: "CheckoutCart")
                 CoreDataManager.sharedManager.saveContext()
             }
             SceneDelegate.shared.rootViewController.switchToSplashPageViewController()
-
-            // need to delete the existing CheckoutCart due to singleton architecture, and to reset stripe values
         }
         logoutAction.setValue(UIColor.red, forKey: "titleTextColor")
         alertController.addAction(logoutAction)

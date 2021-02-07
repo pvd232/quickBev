@@ -10,7 +10,7 @@ provides-member:
 - ["6Drinkz8BusinessC", "id"]
 - ["6Drinkz8BusinessC", "name"]
 - ["6Drinkz8BusinessC", "salesTaxRate"]
-- ["6Drinkz8BusinessC", "stripeId"]
+- ["6Drinkz8BusinessC", "merchantStripeId"]
 - ["6Drinkz8BusinessC", "businessToCheckoutCart"]
 - ["6Drinkz8BusinessC", "businessId"]
 - ["6Drinkz8BusinessC", "drinks"]
@@ -28,10 +28,10 @@ provides-dynamic-lookup:
 - "drinks"
 - "fetchRequest"
 - "id"
+- "merchantStripeId"
 - "name"
 - "removeFromDrinks"
 - "salesTaxRate"
-- "stripeId"
 - "userBusinessToCheckoutCart"
 depends-top-level:
 - "Business"
@@ -65,10 +65,10 @@ depends-member:
 - ["6Drinkz8BusinessC", "drinks"]
 - ["6Drinkz8BusinessC", "fetchRequest"]
 - ["6Drinkz8BusinessC", "id"]
+- ["6Drinkz8BusinessC", "merchantStripeId"]
 - ["6Drinkz8BusinessC", "name"]
 - ["6Drinkz8BusinessC", "removeFromDrinks"]
 - ["6Drinkz8BusinessC", "salesTaxRate"]
-- ["6Drinkz8BusinessC", "stripeId"]
 - ["6Drinkz8BusinessC", "userBusinessToCheckoutCart"]
 - ["s7CVarArgP", "Default_ID"]
 - ["s7CVarArgP", "ID"]
@@ -134,10 +134,10 @@ depends-member:
 - ["So20NSFetchRequestResultP", "drinks"]
 - ["So20NSFetchRequestResultP", "fetchRequest"]
 - ["So20NSFetchRequestResultP", "id"]
+- ["So20NSFetchRequestResultP", "merchantStripeId"]
 - ["So20NSFetchRequestResultP", "name"]
 - ["So20NSFetchRequestResultP", "removeFromDrinks"]
 - ["So20NSFetchRequestResultP", "salesTaxRate"]
-- ["So20NSFetchRequestResultP", "stripeId"]
 - ["So20NSFetchRequestResultP", "userBusinessToCheckoutCart"]
 - ["So15NSManagedObjectC", "Business"]
 - ["So15NSManagedObjectC", "CheckoutCart"]
@@ -159,10 +159,10 @@ depends-member:
 - ["So15NSManagedObjectC", "drinks"]
 - ["So15NSManagedObjectC", "fetchRequest"]
 - ["So15NSManagedObjectC", "id"]
+- ["So15NSManagedObjectC", "merchantStripeId"]
 - ["So15NSManagedObjectC", "name"]
 - ["So15NSManagedObjectC", "removeFromDrinks"]
 - ["So15NSManagedObjectC", "salesTaxRate"]
-- ["So15NSManagedObjectC", "stripeId"]
 - ["So15NSManagedObjectC", "userBusinessToCheckoutCart"]
 - ["So8NSObjectC", "Business"]
 - ["So8NSObjectC", "CheckoutCart"]
@@ -186,10 +186,10 @@ depends-member:
 - !private ["So8NSObjectC", "fetchRequestWithEntityName"]
 - ["So8NSObjectC", "id"]
 - !private ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "merchantStripeId"]
 - ["So8NSObjectC", "name"]
 - ["So8NSObjectC", "removeFromDrinks"]
 - ["So8NSObjectC", "salesTaxRate"]
-- ["So8NSObjectC", "stripeId"]
 - ["So8NSObjectC", "userBusinessToCheckoutCart"]
 - ["So8NSObjectP", "Default_ID"]
 - ["So8NSObjectP", "ID"]
@@ -206,10 +206,10 @@ depends-member:
 - !private ["So8NSObjectP", "fetchRequestWithEntityName"]
 - ["So8NSObjectP", "id"]
 - !private ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "merchantStripeId"]
 - ["So8NSObjectP", "name"]
 - ["So8NSObjectP", "removeFromDrinks"]
 - ["So8NSObjectP", "salesTaxRate"]
-- ["So8NSObjectP", "stripeId"]
 - ["So8NSObjectP", "userBusinessToCheckoutCart"]
 - ["So24NSPersistentStoreRequestC", ""]
 - !private ["So24NSPersistentStoreRequestC", "fetchRequestWithEntityName"]
@@ -426,4 +426,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "10982f15f14bc4edd28255e313a9e3cc"
+interface-hash: "414351e0c046dbeef39eb56172d60ed9"

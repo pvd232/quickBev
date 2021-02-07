@@ -33,6 +33,7 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "!="
 - "=="
+- "??"
 - "APIClient"
 - "APIClientCompletion"
 - "APIError"
@@ -55,6 +56,7 @@ depends-top-level:
 - !private "IntegerLiteralType"
 - !private "JSONDecoder"
 - !private "JSONEncoder"
+- "JSONSerialization"
 - "String"
 - "StringLiteralType"
 - "URL"
@@ -66,6 +68,7 @@ depends-top-level:
 - !private "_findStringSwitchCase"
 - !private "baseURL"
 - !private "body"
+- "debugPrint"
 - !private "print"
 - !private "session"
 - !private "~="
@@ -76,12 +79,14 @@ depends-member:
 - ["6Drinkz9APIClientV", "APIResult"]
 - ["6Drinkz9APIClientV", "Data"]
 - !private ["6Drinkz9APIClientV", "HTTPURLResponse"]
+- !private ["6Drinkz9APIClientV", "JSONSerialization"]
 - ["6Drinkz9APIClientV", "URL"]
 - !private ["6Drinkz9APIClientV", "URLComponents"]
 - !private ["6Drinkz9APIClientV", "URLRequest"]
 - ["6Drinkz9APIClientV", "URLSession"]
 - ["6Drinkz9APIClientV", "Void"]
 - !private ["6Drinkz9APIClientV", "baseURL"]
+- !private ["6Drinkz9APIClientV", "debugPrint"]
 - ["6Drinkz9APIClientV", "init"]
 - ["6Drinkz9APIClientV", "perform"]
 - !private ["6Drinkz9APIClientV", "session"]
@@ -139,6 +144,7 @@ depends-member:
 - !private ["8CloudKit21CKRecordValueProtocolP", "forEach"]
 - !private ["s7CVarArgP", "dataTask"]
 - !private ["s7CVarArgP", "forEach"]
+- !private ["s7CVarArgP", "jsonObject"]
 - !private ["s7CVarArgP", "resume"]
 - ["s7CVarArgP", "shared"]
 - !private ["s7CVarArgP", "statusCode"]
@@ -155,6 +161,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "httpBody"]
 - !private ["s28CustomDebugStringConvertibleP", "httpMethod"]
 - ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "jsonObject"]
 - !private ["s28CustomDebugStringConvertibleP", "path"]
 - !private ["s28CustomDebugStringConvertibleP", "port"]
 - !private ["s28CustomDebugStringConvertibleP", "queryItems"]
@@ -183,6 +190,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "httpBody"]
 - !private ["s23CustomStringConvertibleP", "httpMethod"]
 - ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "jsonObject"]
 - !private ["s23CustomStringConvertibleP", "path"]
 - !private ["s23CustomStringConvertibleP", "port"]
 - !private ["s23CustomStringConvertibleP", "queryItems"]
@@ -214,7 +222,9 @@ depends-member:
 - !private ["SE", "scheme"]
 - !private ["SE", "url"]
 - ["SQ", "=="]
+- !private ["SQ", "ArrayLiteralElement"]
 - ["SQ", "Default_RawValue"]
+- !private ["SQ", "Element"]
 - ["SQ", "RawValue"]
 - ["SQ", ""]
 - ["SQ", "_Default_RawValue"]
@@ -239,6 +249,7 @@ depends-member:
 - !private ["SQ", "httpMethod"]
 - ["SQ", "init"]
 - !private ["SQ", "invalidURL"]
+- !private ["SQ", "jsonObject"]
 - !private ["SQ", "path"]
 - !private ["SQ", "port"]
 - !private ["SQ", "queryItems"]
@@ -263,8 +274,11 @@ depends-member:
 - ["s5ErrorP", "hash"]
 - ["s5ErrorP", "hashValue"]
 - !private ["s5ErrorP", "invalidURL"]
+- !private ["s5ErrorP", "localizedDescription"]
 - !private ["s5ErrorP", "requestFailed"]
 - ["s5ErrorP", "userInfo"]
+- !private ["s25ExpressibleByArrayLiteralP", "ArrayLiteralElement"]
+- !private ["s25ExpressibleByArrayLiteralP", "Element"]
 - !private ["s25ExpressibleByArrayLiteralP", ""]
 - !private ["s25ExpressibleByArrayLiteralP", "forEach"]
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
@@ -324,6 +338,7 @@ depends-member:
 - !private ["SH", "httpMethod"]
 - ["SH", "init"]
 - !private ["SH", "invalidURL"]
+- !private ["SH", "jsonObject"]
 - !private ["SH", "path"]
 - !private ["SH", "port"]
 - !private ["SH", "queryItems"]
@@ -340,6 +355,7 @@ depends-member:
 - !private ["10Foundation11JSONDecoderC", "init"]
 - !private ["10Foundation11JSONEncoderC", "encode"]
 - !private ["10Foundation11JSONEncoderC", "init"]
+- !private ["So19NSJSONSerializationC", "jsonObject"]
 - ["s25LosslessStringConvertibleP", ""]
 - !private ["SM", ""]
 - !private ["SM", "forEach"]
@@ -349,29 +365,40 @@ depends-member:
 - !private ["So9NSCopyingP", ""]
 - !private ["So9NSCopyingP", "resume"]
 - !private ["So9NSCopyingP", "statusCode"]
+- !private ["So8NSObjectC", "JSONObjectWithData"]
+- !private ["So8NSObjectC", "JSONObjectWithStream"]
 - ["So8NSObjectC", ""]
 - !private ["So8NSObjectC", "dataTask"]
 - !private ["So8NSObjectC", "dataTaskWithRequest"]
 - !private ["So8NSObjectC", "dataTaskWithURL"]
+- !private ["So8NSObjectC", "jsonObject"]
 - !private ["So8NSObjectC", "resume"]
 - ["So8NSObjectC", "shared"]
 - !private ["So8NSObjectC", "statusCode"]
+- !private ["So8NSObjectP", "JSONObjectWithData"]
+- !private ["So8NSObjectP", "JSONObjectWithStream"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "dataTask"]
 - !private ["So8NSObjectP", "dataTaskWithRequest"]
 - !private ["So8NSObjectP", "dataTaskWithURL"]
+- !private ["So8NSObjectP", "jsonObject"]
 - !private ["So8NSObjectP", "resume"]
 - ["So8NSObjectP", "shared"]
 - !private ["So8NSObjectP", "statusCode"]
 - !private ["So14NSSecureCodingP", ""]
 - !private ["So14NSSecureCodingP", "statusCode"]
+- !private ["s9OptionSetP", "ArrayLiteralElement"]
+- !private ["s9OptionSetP", "Element"]
+- !private ["s9OptionSetP", "init"]
 - !private ["So19NSProgressReportingP", "resume"]
 - !private ["Sk", ""]
 - !private ["Sk", "forEach"]
 - !private ["Sm", ""]
 - !private ["Sm", "forEach"]
 - ["SY", "=="]
+- !private ["SY", "ArrayLiteralElement"]
 - ["SY", "Default_RawValue"]
+- !private ["SY", "Element"]
 - ["SY", "RawValue"]
 - ["SY", ""]
 - ["SY", "_Default_RawValue"]
@@ -382,6 +409,9 @@ depends-member:
 - ["SY", "hashValue"]
 - ["SY", "init"]
 - ["SY", "rawValue"]
+- !private ["So20NSJSONReadingOptionsV", "ArrayLiteralElement"]
+- !private ["So20NSJSONReadingOptionsV", "Element"]
+- !private ["So20NSJSONReadingOptionsV", "init"]
 - !private ["10Foundation20ReferenceConvertibleP", "addValue"]
 - !private ["10Foundation20ReferenceConvertibleP", "appendingPathComponent"]
 - !private ["10Foundation20ReferenceConvertibleP", "host"]
@@ -395,6 +425,10 @@ depends-member:
 - !private ["10Foundation20ReferenceConvertibleP", "url"]
 - ["ST", ""]
 - !private ["ST", "forEach"]
+- !private ["s10SetAlgebraP", "ArrayLiteralElement"]
+- !private ["s10SetAlgebraP", "Element"]
+- !private ["s10SetAlgebraP", ""]
+- !private ["s10SetAlgebraP", "init"]
 - ["s16TextOutputStreamP", ""]
 - ["s20TextOutputStreamableP", ""]
 - !private ["7Combine15TopLevelDecoderP", "decode"]
@@ -458,10 +492,12 @@ depends-member:
 - !private ["s19_HasContiguousBytesP", "forEach"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "forEach"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dataTask"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "jsonObject"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "resume"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "statusCode"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dataTask"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "jsonObject"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "resume"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "statusCode"]
@@ -514,6 +550,7 @@ depends-nominal:
 - !private "s6HasherV"
 - !private "10Foundation11JSONDecoderC"
 - !private "10Foundation11JSONEncoderC"
+- !private "So19NSJSONSerializationC"
 - "s25LosslessStringConvertibleP"
 - !private "SM"
 - !private "10Foundation19MutableDataProtocolP"
@@ -522,12 +559,15 @@ depends-nominal:
 - "So8NSObjectC"
 - "So8NSObjectP"
 - !private "So14NSSecureCodingP"
+- !private "s9OptionSetP"
 - !private "So19NSProgressReportingP"
 - !private "Sk"
 - !private "Sm"
 - "SY"
+- !private "So20NSJSONReadingOptionsV"
 - "10Foundation20ReferenceConvertibleP"
 - "ST"
+- !private "s10SetAlgebraP"
 - "s16TextOutputStreamP"
 - "s20TextOutputStreamableP"
 - !private "7Combine15TopLevelDecoderP"
@@ -726,4 +766,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "c29167be1fe18d66e13e3d6ece8ff276"
+interface-hash: "f168188645a5481ee9f57001d97943cf"

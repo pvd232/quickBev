@@ -18,6 +18,8 @@ provides-member:
 - ["So7UIColorC", "themeColor"]
 - ["So18NSLayoutConstraintC", "usingPriority"]
 - ["So6UIFontC", "themeButtonFont"]
+- ["So6UIFontC", "mediumLargeThemeButtonFont"]
+- ["So6UIFontC", "mediumThemeButtonFont"]
 - ["So6UIFontC", "smallThemeButtonFont"]
 - ["So6UIFontC", "themeLabelFont"]
 - ["So6UIFontC", "themeLabelSmallFont"]
@@ -27,6 +29,8 @@ provides-member:
 - ["So11UITextFieldC", "tapCancel"]
 - ["So6UIViewC", "init"]
 provides-dynamic-lookup:
+- "mediumLargeThemeButtonFont"
+- "mediumThemeButtonFont"
 - "screenSize"
 - "setInputViewDatePicker"
 - "smallThemeButtonFont"
@@ -605,6 +609,8 @@ depends-member:
 - !private ["So9NSCopyingP", "capitalizingFirstLetter"]
 - !private ["So9NSCopyingP", "dropFirst"]
 - !private ["So9NSCopyingP", "init"]
+- ["So9NSCopyingP", "mediumLargeThemeButtonFont"]
+- ["So9NSCopyingP", "mediumThemeButtonFont"]
 - !private ["So9NSCopyingP", "prefix"]
 - ["So9NSCopyingP", "smallThemeButtonFont"]
 - ["So9NSCopyingP", "themeButtonFont"]
@@ -676,6 +682,8 @@ depends-member:
 - !private ["So8NSObjectC", "inputAccessoryView"]
 - !private ["So8NSObjectC", "inputView"]
 - !private ["So8NSObjectC", "main"]
+- ["So8NSObjectC", "mediumLargeThemeButtonFont"]
+- ["So8NSObjectC", "mediumThemeButtonFont"]
 - !private ["So8NSObjectC", "minimumDate"]
 - !private ["So8NSObjectC", "placeholder"]
 - !private ["So8NSObjectC", "preferredDatePickerStyle"]
@@ -737,6 +745,8 @@ depends-member:
 - !private ["So8NSObjectP", "inputAccessoryView"]
 - !private ["So8NSObjectP", "inputView"]
 - !private ["So8NSObjectP", "main"]
+- ["So8NSObjectP", "mediumLargeThemeButtonFont"]
+- ["So8NSObjectP", "mediumThemeButtonFont"]
 - !private ["So8NSObjectP", "minimumDate"]
 - !private ["So8NSObjectP", "placeholder"]
 - !private ["So8NSObjectP", "preferredDatePickerStyle"]
@@ -1263,6 +1273,8 @@ depends-member:
 - ["So6UIFontC", "UIFont"]
 - ["So6UIFontC", ""]
 - !private ["So6UIFontC", "init"]
+- ["So6UIFontC", "mediumLargeThemeButtonFont"]
+- ["So6UIFontC", "mediumThemeButtonFont"]
 - ["So6UIFontC", "smallThemeButtonFont"]
 - ["So6UIFontC", "themeButtonFont"]
 - ["So6UIFontC", "themeLabelFont"]
@@ -2189,4 +2201,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "536caa23dd092931b00461ea4890a994"
+interface-hash: "4eae3bc059e047064a43aa0678f93b23"

@@ -33,7 +33,7 @@ class ToolbarView: UIView {
         super.init(frame: frame)
         self.addSubview(bottomButtonsStackView)
         self.backgroundColor = UIColor.themeColor
-        
+        print("UIViewController.screenSize.width", UIViewController.screenSize.width)
         bottomButtonsStackView.axis = .horizontal
         bottomButtonsStackView.distribution = .fillProportionally
         bottomButtonsStackView.alignment = .top
@@ -44,16 +44,16 @@ class ToolbarView: UIView {
         bottomButtonsStackView.addArrangedSubview(orderButton)
         
         accountButton.setTitle("Account", for: .normal)
-        accountButton.titleLabel?.font = UIFont.themeButtonFont
+        accountButton.titleLabel?.font = UIFont.mediumLargeThemeButtonFont
         
         eventsButton.setTitle("Events", for: .normal)
-        eventsButton.titleLabel?.font = UIFont.themeButtonFont
+        eventsButton.titleLabel?.font = UIFont.mediumLargeThemeButtonFont
         
         homeButton.setTitle("Home", for: .normal)
-        homeButton.titleLabel?.font = UIFont.themeButtonFont
+        homeButton.titleLabel?.font = UIFont.mediumLargeThemeButtonFont
         
         orderButton.setTitle("Order", for: .normal)
-        orderButton.titleLabel?.font = UIFont.themeButtonFont
+        orderButton.titleLabel?.font = UIFont.mediumLargeThemeButtonFont
         
         NSLayoutConstraint.activate([
             bottomButtonsStackView.centerXAnchor.constraint(equalTo: self.centerXAnchor),

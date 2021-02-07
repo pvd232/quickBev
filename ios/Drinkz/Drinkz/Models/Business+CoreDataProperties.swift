@@ -22,7 +22,7 @@ extension Business {
     @NSManaged public var id: UUID?
     @NSManaged public var name: String?
     @NSManaged public var salesTaxRate: Double
-    @NSManaged public var stripeId: String?
+    @NSManaged public var merchantStripeId: String?
     @NSManaged public var businessToCheckoutCart: CheckoutCart?
     @NSManaged public var businessId: UUID?
     @NSManaged public var drinks: NSSet?
