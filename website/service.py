@@ -54,6 +54,14 @@ class Drink_Service(object):
                 response.append(drink_domain)
             return response
 
+    def add_drinks(self, business_id, drinks):
+        with session_scope() as session:
+            new_drink_list = [Drink_Domain(
+                drink_json=x, init=True) for x in drinks]
+            for drink in new_drink_list:
+                drink.business_id = business_id
+            return self.drink_repository.add_drinks(session, new_drink_list)
+
 
 class Order_Service(object):
     def __init__(self):

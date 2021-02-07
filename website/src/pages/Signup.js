@@ -596,7 +596,7 @@ const BusinessFieldset = (props) => {
     setFormValue({ [name]: value });
   };
 
-  const handleSubmit = async (event, businessStripeId) => {
+  const handleSubmit = async (event, merchantStripeId) => {
     event.preventDefault();
     // the event target is the button that was clicked inside the payout setup component inside the business fieldset
     const form = event.target.closest("form");
@@ -613,7 +613,7 @@ const BusinessFieldset = (props) => {
       newBusiness.city = formValue.city;
       newBusiness.state = formValue.state;
       newBusiness.zipcode = formValue.zipcode;
-      const result = await props.onSubmit(newBusiness, businessStripeId);
+      const result = await props.onSubmit(newBusiness, merchantStripeId);
       console.log("result", result);
       return result;
     } else {
@@ -662,8 +662,8 @@ const BusinessFieldset = (props) => {
             style={{ justifyContent: "center", display: "flex" }}
           >
             <PayoutSetup
-              onSubmit={(event, businessStripeId, redirect) =>
-                handleSubmit(event, businessStripeId, redirect)
+              onSubmit={(event, merchantStripeId, redirect) =>
+                handleSubmit(event, merchantStripeId, redirect)
               }
             ></PayoutSetup>
           </Col>
@@ -707,12 +707,12 @@ const Signup = () => {
     }
   };
 
-  const onSubmit = async (newBusiness, businessStripeId) => {
+  const onSubmit = async (newBusiness, merchantStripeId) => {
+    console.log("merchantStripeId", merchantStripeId);
     const newForm = new FormData();
     // set values from formDataObject into business object
     newBusiness.tablet = formDataObject.tablet;
     newBusiness.classification = formDataObject.classification.toLowerCase();
-    newBusiness.stripeId = businessStripeId;
 
     if (formDataObject.menuUrl) {
       newBusiness.menuUrl = formDataObject.menuUrl;
@@ -728,6 +728,7 @@ const Signup = () => {
     // the merchant in state was being converted back to a regular object
     const newMerchant = new Merchant("merchantStateObject", merchant);
     newMerchant.numberOfBusinesses = formDataObject.numberOfBusinesses;
+    newMerchant.stripeId = merchantStripeId;
 
     // set the stripe ID returned from the backend
     newForm.append("merchant", JSON.stringify(newMerchant));
@@ -771,8 +772,8 @@ const Signup = () => {
       }
     ></PromoteYourMenuFieldset>,
     <BusinessFieldset
-      onSubmit={(newBusiness, businessStripeId) =>
-        onSubmit(newBusiness, businessStripeId)
+      onSubmit={(newBusiness, merchantStripeId) =>
+        onSubmit(newBusiness, merchantStripeId)
       }
       onClick={(buttonType) => handleClick(buttonType)}
     ></BusinessFieldset>,

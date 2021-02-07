@@ -283,6 +283,18 @@ def create_stripe_account():
     return response
 
 
+@app.route('/add-menu', methods=['POST'])
+def add_menu():
+    drink_service = Drink_Service()
+    menu = json.loads(request.data)
+    print('menu', menu)
+    business_id = request.headers.get("business_id")
+    print('business_id', business_id)
+    response = Response(status=200, response=json.dumps(
+        drink_service.add_drinks(business_id, menu)))
+    return response
+
+
 if __name__ == '__main__':
     app.debug = True
     app.run()

@@ -26,8 +26,6 @@ depends-top-level:
 - "NSFetchRequestResult"
 - !private "NSLog"
 - "NSManagedObjectContext"
-- "NSMergePolicy"
-- "NSMergePolicyType"
 - "NSPersistentContainer"
 - "String"
 - "StringLiteralType"
@@ -49,7 +47,6 @@ depends-member:
 - !private ["s7CVarArgP", "hasChanges"]
 - ["s7CVarArgP", "init"]
 - ["s7CVarArgP", "loadPersistentStores"]
-- ["s7CVarArgP", "mergePolicy"]
 - !private ["s7CVarArgP", "save"]
 - ["s7CVarArgP", "userInfo"]
 - ["s7CVarArgP", "viewContext"]
@@ -65,8 +62,6 @@ depends-member:
 - !private ["6Drinkz15CoreDataManagerC", "NSFetchRequestResult"]
 - !private ["6Drinkz15CoreDataManagerC", "NSLog"]
 - ["6Drinkz15CoreDataManagerC", "NSManagedObjectContext"]
-- ["6Drinkz15CoreDataManagerC", "NSMergePolicy"]
-- ["6Drinkz15CoreDataManagerC", "NSMergePolicyType"]
 - ["6Drinkz15CoreDataManagerC", "NSPersistentContainer"]
 - ["6Drinkz15CoreDataManagerC", "String"]
 - !private ["6Drinkz15CoreDataManagerC", "Thread"]
@@ -88,7 +83,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "hasChanges"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - ["s28CustomDebugStringConvertibleP", "loadPersistentStores"]
-- ["s28CustomDebugStringConvertibleP", "mergePolicy"]
 - !private ["s28CustomDebugStringConvertibleP", "save"]
 - ["s28CustomDebugStringConvertibleP", "userInfo"]
 - ["s28CustomDebugStringConvertibleP", "viewContext"]
@@ -102,7 +96,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "hasChanges"]
 - ["s23CustomStringConvertibleP", "init"]
 - ["s23CustomStringConvertibleP", "loadPersistentStores"]
-- ["s23CustomStringConvertibleP", "mergePolicy"]
 - !private ["s23CustomStringConvertibleP", "save"]
 - ["s23CustomStringConvertibleP", "userInfo"]
 - ["s23CustomStringConvertibleP", "viewContext"]
@@ -120,8 +113,6 @@ depends-member:
 - !private ["SQ", "hasChanges"]
 - ["SQ", "init"]
 - ["SQ", "loadPersistentStores"]
-- ["SQ", "mergeByPropertyObjectTrumpMergePolicyType"]
-- ["SQ", "mergePolicy"]
 - !private ["SQ", "save"]
 - ["SQ", "userInfo"]
 - ["SQ", "viewContext"]
@@ -137,8 +128,6 @@ depends-member:
 - !private ["SH", "hasChanges"]
 - ["SH", "init"]
 - ["SH", "loadPersistentStores"]
-- ["SH", "mergeByPropertyObjectTrumpMergePolicyType"]
-- ["SH", "mergePolicy"]
 - !private ["SH", "save"]
 - ["SH", "userInfo"]
 - ["SH", "viewContext"]
@@ -151,7 +140,6 @@ depends-member:
 - !private ["So8NSCodingP", "fetch"]
 - !private ["So8NSCodingP", "hasChanges"]
 - !private ["So8NSCodingP", "init"]
-- ["So8NSCodingP", "mergePolicy"]
 - !private ["So8NSCodingP", "save"]
 - ["So8NSCodingP", "userInfo"]
 - !private ["So9NSCopyingP", "fetchRequestWithEntityName"]
@@ -162,15 +150,11 @@ depends-member:
 - !private ["So9NSLockingP", "execute"]
 - !private ["So9NSLockingP", "fetch"]
 - !private ["So9NSLockingP", "hasChanges"]
-- ["So9NSLockingP", "mergePolicy"]
 - !private ["So9NSLockingP", "save"]
 - !private ["So22NSManagedObjectContextC", "execute"]
 - !private ["So22NSManagedObjectContextC", "fetch"]
 - !private ["So22NSManagedObjectContextC", "hasChanges"]
-- ["So22NSManagedObjectContextC", "mergePolicy"]
 - !private ["So22NSManagedObjectContextC", "save"]
-- ["So13NSMergePolicyC", "init"]
-- ["So17NSMergePolicyTypeV", "mergeByPropertyObjectTrumpMergePolicyType"]
 - ["So8NSObjectC", ""]
 - !private ["So8NSObjectC", "callStackSymbols"]
 - !private ["So8NSObjectC", "execute"]
@@ -182,7 +166,6 @@ depends-member:
 - ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "loadPersistentStores"]
 - ["So8NSObjectC", "loadPersistentStoresWithCompletionHandler"]
-- ["So8NSObjectC", "mergePolicy"]
 - ["So8NSObjectC", "persistentContainerWithName"]
 - !private ["So8NSObjectC", "save"]
 - ["So8NSObjectC", "userInfo"]
@@ -198,7 +181,6 @@ depends-member:
 - ["So8NSObjectP", "init"]
 - ["So8NSObjectP", "loadPersistentStores"]
 - ["So8NSObjectP", "loadPersistentStoresWithCompletionHandler"]
-- ["So8NSObjectP", "mergePolicy"]
 - ["So8NSObjectP", "persistentContainerWithName"]
 - !private ["So8NSObjectP", "save"]
 - ["So8NSObjectP", "userInfo"]
@@ -214,7 +196,6 @@ depends-member:
 - !private ["Sk", "forEach"]
 - !private ["Sm", ""]
 - !private ["Sm", "forEach"]
-- ["SY", "mergeByPropertyObjectTrumpMergePolicyType"]
 - !private ["ST", ""]
 - !private ["ST", "forEach"]
 - ["s27StringInterpolationProtocolP", "appendInterpolation"]
@@ -235,7 +216,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "hasChanges"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "loadPersistentStores"]
-- ["10Foundation27_KeyValueCodingAndObservingP", "mergePolicy"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "save"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "userInfo"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "viewContext"]
@@ -245,7 +225,6 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "hasChanges"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "loadPersistentStores"]
-- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "mergePolicy"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "save"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "userInfo"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewContext"]
@@ -278,10 +257,8 @@ depends-nominal:
 - "So9NSCopyingP"
 - "So7NSErrorC"
 - !private "So14NSFetchRequestC"
-- "So9NSLockingP"
-- "So22NSManagedObjectContextC"
-- "So13NSMergePolicyC"
-- "So17NSMergePolicyTypeV"
+- !private "So9NSLockingP"
+- !private "So22NSManagedObjectContextC"
 - "So8NSObjectC"
 - "So8NSObjectP"
 - "So21NSPersistentContainerC"
@@ -289,7 +266,6 @@ depends-nominal:
 - "So14NSSecureCodingP"
 - !private "Sk"
 - !private "Sm"
-- "SY"
 - !private "ST"
 - "s27StringInterpolationProtocolP"
 - "s16TextOutputStreamP"
@@ -475,4 +451,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "7c4ceb8a0be027d5210872d55cc15efb"
+interface-hash: "d7cdf1de54fd769f6af584007decfe2e"

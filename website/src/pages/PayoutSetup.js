@@ -13,14 +13,14 @@ const PayoutSetup = (props) => {
       `http://127.0.0.1:5000/create-stripe-account`
     );
   };
-  const onSubmit = async (event, businessStripeId) => {
+  const onSubmit = async (event, merchantStripeId) => {
+    console.log("merchantStripeId", merchantStripeId);
     event.preventDefault();
     if (localStorage.getItem("business")) {
       const currentBusiness = new Business(
         localStorage.getItem("business"),
         true
       );
-      currentBusiness.stripeId = businessStripeId;
       setLocalStorage("business", currentBusiness);
 
       const dataObject = { business: currentBusiness };
@@ -38,11 +38,11 @@ const PayoutSetup = (props) => {
   };
   const handleConnect = async () => {
     let [responseBody, response] = await getRedirectInfo();
-    const businessStripeId = response.headers.get("stripe_id");
+    const merchantStripeId = response.headers.get("stripe_id");
     let url = responseBody.url;
-    if (url && businessStripeId) {
+    if (url && merchantStripeId) {
       redirectUrl = url;
-      return businessStripeId;
+      return merchantStripeId;
     }
   };
   useEffect(() => {
@@ -71,8 +71,9 @@ const PayoutSetup = (props) => {
           <Button
             className="btn btn-primary text-center"
             onClick={(event) => {
-              handleConnect().then((businessStripeId) =>
-                onSubmit(event, businessStripeId).then((result) => {
+              // if this is the payout redirect then all values for business and merchant have been set in the backend and we dont need to propogate back upwards
+              handleConnect().then((merchantStripeId) =>
+                onSubmit(event, merchantStripeId).then((result) => {
                   // setRedirect(redirectUrl);
                 })
               );
@@ -100,9 +101,9 @@ const PayoutSetup = (props) => {
           <Button
             className="btn btn-primary text-center"
             onClick={(event) => {
-              handleConnect().then((businessStripeId) =>
+              handleConnect().then((merchantStripeId) =>
                 props
-                  .onSubmit(event, businessStripeId, false)
+                  .onSubmit(event, merchantStripeId, false)
                   .then((result) => {
                     // setRedirect(redirectUrl);
                   })

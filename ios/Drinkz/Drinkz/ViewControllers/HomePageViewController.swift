@@ -162,8 +162,10 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
         }
         group.notify(queue: .main, execute: {
             // if the drinks or businesses were fetched from an API call we must establish their relationships in core data and set them in the checkout cart
+            print("fetchedDrinksOrBusinessesBool", fetchedDrinksOrBusinessesBool)
             if fetchedDrinksOrBusinessesBool == true {
                 for business in self.businesses{
+                    print("business", business)
                     var businessDrinks = [Drink]()
                     for drink in self.drinks {
                         if drink.businessId == business.id {

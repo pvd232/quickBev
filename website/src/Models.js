@@ -220,31 +220,36 @@ export class Order {
 export class Merchant {
   constructor(objectType, object) {
     if (objectType === "merchantObject") {
+      // the merchant object will be pre-populated with values from the form thus it will use camelCase notation
       this._id = object.email;
       this._password = object.password;
       this._firstName = object.firstName;
       this._lastName = object.lastName;
       this._phoneNumber = object.phoneNumber;
     } else if (objectType === "merchantStateObject") {
+      // the merchant stripe id is created on submission those wont exist during the sign up process when the merchant state object is relevant
       this._id = object._id;
       this._password = object._password;
       this._firstName = object._firstName;
       this._lastName = object._lastName;
       this._phoneNumber = object._phoneNumber;
     } else if (objectType === "localStorage") {
+      // number of businessess and stripe id is set extraneously after object initialization so it will only need to be recalled from local storage
       const data = JSON.parse(object);
       this._id = data.id;
       this._password = data.password;
       this._firstName = data.first_name;
       this._lastName = data.last_name;
       this._phoneNumber = data.phone_number;
-      this._numberOfBusinesses = data.numberOfBusinesses;
+      this._numberOfBusinesses = data.number_of_businesses;
+      this._stripeId = data.stripe_id;
     } else {
       this._id = null;
       this._password = null;
       this._firstName = null;
       this._lastName = null;
       this._phoneNumber = null;
+      this._stripeId = null;
     }
   }
 
@@ -266,6 +271,9 @@ export class Merchant {
   get numberOfBusinesses() {
     return this._numberOfBusinesses;
   }
+  get stripeId() {
+    return this._stripeId;
+  }
   set id(value) {
     this._id = value;
   }
@@ -285,6 +293,9 @@ export class Merchant {
   set numberOfBusinesses(value) {
     this._numberOfBusinesses = value;
   }
+  set stripeId(value) {
+    this._stripeId = value;
+  }
   toJSON() {
     const data = {
       id: this._id,
@@ -293,7 +304,9 @@ export class Merchant {
       last_name: this._lastName,
       phone_number: this._phoneNumber,
       number_of_businesses: this._numberOfBusinesses,
+      stripe_id: this._stripeId,
     };
+    console.log("data", data);
     return data;
   }
 }
@@ -302,7 +315,6 @@ export class Business {
     if (businessObject && !isLocalStorage) {
       this._id = businessObject.id;
       this._name = businessObject.name;
-      this._stripeId = businessObject.stripe_id;
       this._merchantId = businessObject.merchant_id;
       this._address = businessObject.address;
       this._street = businessObject.street;
@@ -318,7 +330,6 @@ export class Business {
       const businessJson = JSON.parse(businessObject);
       this._id = businessJson.id;
       this._name = businessJson.name;
-      this._stripeId = businessJson.stripe_id;
       this._merchantId = businessJson.merchant_id;
       this._address = businessJson.address;
       this._street = businessJson.street;
@@ -376,9 +387,6 @@ export class Business {
   get phoneNumber() {
     return this._phoneNumber;
   }
-  get stripeId() {
-    return this._stripeId;
-  }
   get tablet() {
     return this._tablet;
   }
@@ -418,9 +426,6 @@ export class Business {
   set phoneNumber(value) {
     this._phoneNumber = value;
   }
-  set stripeId(value) {
-    this._stripeId = value;
-  }
   set tablet(value) {
     this._tablet = value;
   }
@@ -438,7 +443,6 @@ export class Business {
       id: this._id,
       name: this._name,
       merchant_id: this._merchantId,
-      stripe_id: this._stripeId,
       address: this._address,
       street: this._street,
       city: this._city,

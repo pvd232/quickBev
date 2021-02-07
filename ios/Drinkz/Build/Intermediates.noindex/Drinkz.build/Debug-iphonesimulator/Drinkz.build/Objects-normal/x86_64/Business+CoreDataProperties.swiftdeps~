@@ -117,14 +117,19 @@ depends-member:
 - ["s12IdentifiableP", ""]
 - ["s12IdentifiableP", "_Default_ID"]
 - ["s12IdentifiableP", "id"]
+- ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "init"]
 - !private ["So9NSCopyingP", "fetchRequestWithEntityName"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So14NSFetchRequestC", "init"]
+- ["So20NSFetchRequestResultP", "Business"]
 - ["So20NSFetchRequestResultP", "Default_ID"]
+- ["So20NSFetchRequestResultP", "Drink"]
 - ["So20NSFetchRequestResultP", "ID"]
 - ["So20NSFetchRequestResultP", "NSFetchRequest"]
 - ["So20NSFetchRequestResultP", "NSSet"]
+- ["So20NSFetchRequestResultP", "String"]
+- ["So20NSFetchRequestResultP", "UUID"]
 - ["So20NSFetchRequestResultP", "_Default_ID"]
 - ["So20NSFetchRequestResultP", "addToDrinks"]
 - ["So20NSFetchRequestResultP", "address"]
@@ -191,9 +196,13 @@ depends-member:
 - ["So8NSObjectC", "removeFromDrinks"]
 - ["So8NSObjectC", "salesTaxRate"]
 - ["So8NSObjectC", "userBusinessToCheckoutCart"]
+- ["So8NSObjectP", "Business"]
 - ["So8NSObjectP", "Default_ID"]
+- ["So8NSObjectP", "Drink"]
 - ["So8NSObjectP", "ID"]
 - ["So8NSObjectP", "NSFetchRequest"]
+- ["So8NSObjectP", "NSSet"]
+- ["So8NSObjectP", "UUID"]
 - ["So8NSObjectP", ""]
 - ["So8NSObjectP", "_Default_ID"]
 - ["So8NSObjectP", "addToDrinks"]
@@ -242,7 +251,7 @@ depends-nominal:
 - "SQ"
 - "SH"
 - "s12IdentifiableP"
-- !private "So8NSCodingP"
+- "So8NSCodingP"
 - !private "So9NSCopyingP"
 - !private "So14NSFetchRequestC"
 - "So20NSFetchRequestResultP"

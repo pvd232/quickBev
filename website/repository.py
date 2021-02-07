@@ -19,6 +19,14 @@ class Drink_Repository(object):
         drinks = session.query(Drink)
         return drinks
 
+    def add_drinks(self, session, drink_list):
+        for drink in drink_list:
+            id = uuid.uuid4().hex
+            new_drink = Drink(id=id, name=drink.name, description=drink.description,
+                              price=drink.price, business_id=drink.business_id)
+            session.add(new_drink)
+        return True
+
 
 class Order_Repository(object):
     def post_order(self, session, order):
@@ -83,7 +91,10 @@ class Order_Repository(object):
         #     currency='usd'
         # )
         merchant_stripe_id = request["order"]["merchant_stripe_id"]
-        deduction = int(round(.1 * amount * 100, 2))
+        print('merchant_stripe_id', merchant_stripe_id)
+        deduction = int(round(.1 * request["order"]["cost"], 2) * 100)
+        print('deduction', deduction)
+        print('amount', amount)
         payment_intent = stripe.PaymentIntent.create(
             amount=amount,
             customer=request["order"]["customer"]["stripe_id"],
@@ -150,7 +161,7 @@ class Business_Repository(object):
     def add_business(self, session, business):
         # will have to plug in an API here to dynamically pull information (avalara probs if i can get the freaking credentials to work)
         new_business = Business(name=business.name, classification=business.classification, date_joined=date.today(
-        ), sales_tax_rate=business.sales_tax_rate, merchant_id=business.merchant_id, stripe_id=business.stripe_id, street=business.street, city=business.city,
+        ), sales_tax_rate=business.sales_tax_rate, merchant_id=business.merchant_id, street=business.street, city=business.city,
             state=business.state, zipcode=business.zipcode, address=business.address, tablet=business.tablet, phone_number=business.phone_number)
         session.add(new_business)
         return new_business
@@ -198,6 +209,6 @@ class Merchant_Repository(object):
 
     def add_merchant(self, session, requested_merchant):
         new_merchant = Merchant(id=requested_merchant.id, password=requested_merchant.password, first_name=requested_merchant.first_name,
-                                last_name=requested_merchant.last_name, phone_number=requested_merchant.phone_number, number_of_businesses=requested_merchant.number_of_businesses)
+                                last_name=requested_merchant.last_name, phone_number=requested_merchant.phone_number, number_of_businesses=requested_merchant.number_of_businesses, stripe_id=requested_merchant.stripe_id)
         session.add(new_merchant)
         return True

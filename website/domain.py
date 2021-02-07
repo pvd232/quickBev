@@ -2,7 +2,7 @@ from datetime import datetime
 
 
 class Drink_Domain(object):
-    def __init__(self, drink_object=None, drink_json=None):
+    def __init__(self, drink_object=None, drink_json=None, init=False):
         self.quantity = 1
         self.id = ''
         self.name = ''
@@ -16,7 +16,12 @@ class Drink_Domain(object):
             self.description = drink_object.description
             self.price = drink_object.price
             self.business_id = drink_object.business_id
+        elif init == True and drink_json:
+            self.name = drink_json["name"]
+            self.description = drink_json["description"]
+            self.price = drink_json["price"]
         elif drink_json:
+            print('drink_json', drink_json)
             self.id = drink_json["id"]
             self.name = drink_json["name"]
             self.description = drink_json["description"]
@@ -228,6 +233,9 @@ class Merchant_Domain(object):
             # number of locations is added as a property later in the signup process so it won't be present when checking if the merchant exists at step one
             if "number_of_businesses" in merchant_json:
                 self.number_of_businesses = merchant_json["number_of_businesses"]
+            # when the merchant object is validated it wont be present initially
+            if "stripe_id" in merchant_json:
+                self.stripe_id = merchant_json["stripe_id"]
 
     def serialize(self):
         attribute_names = list(self.__dict__.keys())
@@ -247,22 +255,21 @@ class Business_Domain(object):
         self.name = ''
         self.address = ''
         self.classification = ''
-        self.merchant_id = ''
+        # this attribute will only be present when the business is being pulled from the backend
         self.merchant_stripe_id = ''
         if business_object:
             nested_business_object = business_object.Business
             print('nested_business_object', nested_business_object.serialize)
             self.id = nested_business_object.id
             self.merchant_id = nested_business_object.merchant_id
-            self.merchant_stripe_id = business_object.merchant_stripe_id
             self.name = nested_business_object.name
             self.address = nested_business_object.address
             self.sales_tax_rate = nested_business_object.sales_tax_rate
             self.classification = nested_business_object.classification
+            self.merchant_stripe_id = business_object.merchant_stripe_id
         if business_json:
             self.id = business_json["id"]
             self.merchant_id = business_json["merchant_id"]
-            self.merchant_stripe_id = business_json["merchant_stripe_id"]
             self.name = business_json["name"]
             self.classification = business_json["classification"]
             self.address = business_json["address"]
