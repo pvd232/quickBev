@@ -153,8 +153,8 @@ class Customer_Repository(object):
 
 class Business_Repository(object):
     def get_businesss(self, session):
-        businesses = session.query(Business, Merchant.stripe_id.label("merchant_stripe_id")).select_from(
-            Business).join(Merchant, Business.merchant_id == Merchant.id).all()
+        businesses = session.query(Business, Merchant_Stripe.stripe_id.label("merchant_stripe_id")).select_from(
+            Business).join(Merchant, Business.merchant_id == Merchant.id).join(Merchant_Stripe, Merchant.id == Merchant_Stripe.merchant_id).all()
         print('businesses', businesses)
         return businesses
 

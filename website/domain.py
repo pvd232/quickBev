@@ -251,7 +251,6 @@ class Business_Domain(object):
         self.sales_tax_rate = 0.0625
         self.id = ''
         self.merchant_id = ''
-        self.stripe_id = ''
         self.name = ''
         self.address = ''
         self.classification = ''
