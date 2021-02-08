@@ -316,6 +316,7 @@ export class Business {
       this._id = businessObject.id;
       this._name = businessObject.name;
       this._merchantId = businessObject.merchant_id;
+      this._merchantStripeId = businessObject.merchant_stripe_id;
       this._address = businessObject.address;
       this._street = businessObject.street;
       this._city = businessObject.city;
@@ -331,6 +332,7 @@ export class Business {
       this._id = businessJson.id;
       this._name = businessJson.name;
       this._merchantId = businessJson.merchant_id;
+      this._merchantStripeId = businessJson.merchant_stripe_id;
       this._address = businessJson.address;
       this._street = businessJson.street;
       this._city = businessJson.city;
@@ -345,6 +347,7 @@ export class Business {
       this._id = null;
       this._name = null;
       this._merchantId = null;
+      this._merchantStripeId = null;
       this._stripeId = null;
       this._address = null;
       this._street = null;
@@ -368,6 +371,9 @@ export class Business {
   }
   get merchantId() {
     return this._merchantId;
+  }
+  get merchantStripeId() {
+    return this._merchantStripeId;
   }
   get address() {
     return this._address;
@@ -408,6 +414,9 @@ export class Business {
   set merchantId(value) {
     this._merchantId = value;
   }
+  set merchantStripeId(value) {
+    this._merchantStripeId = value;
+  }
   set address(value) {
     this._address = value;
   }
@@ -443,6 +452,7 @@ export class Business {
       id: this._id,
       name: this._name,
       merchant_id: this._merchantId,
+      merchant_stripe_id: this._merchantStripeId,
       address: this._address,
       street: this._street,
       city: this._city,

@@ -1,0 +1,176 @@
+//
+//  RegistrationWithEmailViewController.swift
+//  Drinkz
+//
+//  Created by Peter Vail Driscoll II on 6/4/20.
+//  Copyright © 2020 Peter Vail Driscoll II. All rights reserved.
+//
+
+import UIKit
+
+class RegistrationWithEmailViewController: UIViewController {
+    
+    @UsesAutoLayout var firstNameTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Your first name"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
+    @UsesAutoLayout var lastNameTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Your last name"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
+    @UsesAutoLayout var emailTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Your email adress"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
+    @UsesAutoLayout var passwordTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Your password"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
+    @UsesAutoLayout var confirmPasswordTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Confirm your password"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
+    @UsesAutoLayout var firstNameLabel = UILabel(theme: Theme.UILabel(props: [.text("First Name"), .font(nil) ]))
+    @UsesAutoLayout var lastNameLabel =  UILabel(theme: Theme.UILabel(props: [.text("Last Name"), .font(nil)]))
+    @UsesAutoLayout var emailLabel =  UILabel(theme: Theme.UILabel(props: [.text("Email"), .font(nil), ]))
+    @UsesAutoLayout var passwordLabel =  UILabel(theme: Theme.UILabel(props: [.text("Password"), .font(nil) ]))
+    @UsesAutoLayout var confirmPasswordLabel =  UILabel(theme: Theme.UILabel(props: [.text("Confirm Password"), .font(nil)]))
+    @UsesAutoLayout var registrationStackView = UIStackView(theme: Theme.UIStackView(props: [.vertical, .spacing(10)]))
+    @UsesAutoLayout var submitButton = RoundButton(theme: Theme.RoundButton(props: [ .color, .text("Submit"), .titleLabelFont(nil)]))
+    @UsesAutoLayout private var activityIndicator = UIActivityIndicatorView(style: .large)
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        self.view.backgroundColor = .systemBackground
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("coder not set up")
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.addSubview(registrationStackView)
+        self.view.addSubview(submitButton)
+        self.view.addSubview(activityIndicator)
+        activityIndicator.frame = view.bounds
+        activityIndicator.backgroundColor = UIColor(white: 0, alpha: 0.4)
+        registrationStackView.addArrangedSubview(firstNameLabel)
+        registrationStackView.addArrangedSubview(firstNameTextField)
+        registrationStackView.addArrangedSubview(lastNameLabel)
+        registrationStackView.addArrangedSubview(lastNameTextField)
+        registrationStackView.addArrangedSubview(emailLabel)
+        registrationStackView.addArrangedSubview(emailTextField)
+        registrationStackView.addArrangedSubview(passwordLabel)
+        registrationStackView.addArrangedSubview(passwordTextField)
+        registrationStackView.addArrangedSubview(confirmPasswordLabel)
+        registrationStackView.addArrangedSubview(confirmPasswordTextField)
+        
+        let safeArea = self.view.safeAreaLayoutGuide
+        
+        NSLayoutConstraint.activate([
+            activityIndicator.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: safeArea.centerYAnchor),
+            activityIndicator.widthAnchor.constraint(equalTo: activityIndicator.superview!.widthAnchor),
+            activityIndicator.heightAnchor.constraint(equalTo: activityIndicator.superview!.heightAnchor),
+            submitButton.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -10.0),
+            submitButton.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 10.0),
+            submitButton.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -10.0),
+            submitButton.widthAnchor.constraint(equalTo: submitButton.heightAnchor, multiplier: (197/25)),
+            submitButton.topAnchor.constraint(lessThanOrEqualTo: registrationStackView.bottomAnchor, constant: (UIViewController.screenSize.height * 0.31)),
+            
+            firstNameTextField.widthAnchor.constraint(equalTo: firstNameTextField.heightAnchor, multiplier: (197/25)),
+            lastNameTextField.widthAnchor.constraint(equalTo: lastNameTextField.heightAnchor, multiplier: (197/25)),
+            emailTextField.widthAnchor.constraint(equalTo: emailTextField.heightAnchor, multiplier: (197/25)),
+            passwordTextField.widthAnchor.constraint(equalTo: passwordTextField.heightAnchor, multiplier: (197/25)),
+            confirmPasswordTextField.widthAnchor.constraint(equalTo: confirmPasswordTextField.heightAnchor, multiplier: (197/25)),
+            
+            registrationStackView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -10.0),
+            registrationStackView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 10.0),
+            registrationStackView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 35),
+        ]
+        )
+        submitButton.addTarget(self, action: #selector(submitRegistration), for: .touchUpInside)
+    }
+    
+    @objc private func submitRegistration(_ sender: RoundButton) {
+        activityIndicator.startAnimating()
+        let requestedNewUser: User  = {
+            // regular registration process
+            if CheckoutCart.shared.isGuest == false {
+                print("checkout card stripeId is nil")
+                return  User(Email : emailTextField.text!, FirstName: firstNameTextField.text!,LastName: lastNameTextField.text!,Password: passwordTextField.text!)
+            }
+            // guest registration process because the stripe id was acquired at home page when a user did not yet exist
+            else {
+                return User(Email : emailTextField.text!, FirstName: firstNameTextField.text!,LastName: lastNameTextField.text!,Password: passwordTextField.text!, StripeId: CheckoutCart.shared.stripeId!)
+            }
+        }()
+        let request = try! APIRequest(method: .post, path:"/customer", body: requestedNewUser)
+        APIClient().perform(request) {result in
+            switch result {
+            case .success (let response):
+                if response.statusCode == 200, let response = try? response.decode(to: [String: String].self)  {
+                    let responseJson = response.body
+                    CheckoutCart.shared.user = requestedNewUser
+                    CheckoutCart.shared.userId = requestedNewUser.email
+                    
+                    // when changing UI based on asynchronous operation, or when updating core data need to wrap in dispatch queue because both are asynchronous ops themselves
+                    DispatchQueue.main.async
+                    {
+                        if CheckoutCart.shared.isGuest == false {
+                            // if the new user's stripe id is nill then this is the regular user creation process and a stripe id will be sent from the backend
+                            CheckoutCart.shared.stripeId = responseJson["stripe_id"]
+                            requestedNewUser.stripeId = responseJson["stripe_id"]
+                            self.alertAccountCreation()
+                        }
+                        // the user is creating an account without having ordered something prior as a guest. this is the typical process which redirects to the home page
+                        else {
+                            self.alertAccountCreationForGuest()
+                        }
+                        CoreDataManager.sharedManager.saveContext()
+                        SceneDelegate.shared.rootViewController.switchToHomePageViewController()
+                        self.activityIndicator.stopAnimating()
+                    }
+                }
+                else {
+                    let alertController = UIAlertController(title: "Username already exists", message: "Your username is taken. Please choose another", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Try again", style: .cancel) { action in
+                        self.dismiss( animated: true)
+                    })
+                    DispatchQueue.main.async {
+                        self.activityIndicator.stopAnimating()
+                        self.present(alertController, animated: true, completion: nil)
+                    }
+                }
+            case .failure(let error):                    // if the API fails the enum API result will be of the type failure
+                let alertController = UIAlertController(title: "Network Error", message: "A network error has occured. Check your internet connection and if necessary, restart the app.", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Okay", style: .cancel) { action in
+                    self.dismiss( animated: true)
+                })
+                DispatchQueue.main.async {
+                    self.activityIndicator.stopAnimating()
+                    self.present(alertController, animated: true, completion: nil)
+                    print("error case .failure", error)
+                }
+            }
+        }
+    }
+    
+    private func alertAccountCreationForGuest() {
+        return self.alert(
+            title: "",
+            message: "Welcome to QuickBev! You may now proceed with your order.",
+            alertType: "accountCreationGuest"
+        )
+    }
+    private func alertAccountCreation() {
+        return self.alert(
+            title: "",
+            message: "Welcome to QuickBev!",
+            alertType: "accountCreation"
+        )
+    }
+    private func alert(title: String, message: String, alertType: String) {
+        let alertCtrl = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        if alertType == "accountCreationGuest"{
+            alertCtrl.addAction(UIAlertAction(title: "Okay", style: .cancel) { action in
+                let drinkViewController =  self.storyboard!.instantiateViewController(identifier: "DrinkViewController") as! DrinkViewController
+                let homePageViewController =  self.storyboard!.instantiateViewController(identifier: "HomePageViewController") as! HomePageViewController
+                let drinkListTableViewController =  self.storyboard!.instantiateViewController(identifier: "DrinkListTableViewController") as! DrinkListTableViewController
+                let navigationController = self.navigationController!
+                navigationController.setViewControllers([drinkViewController, drinkListTableViewController, homePageViewController], animated: true)
+            })
+        }
+        else if alertType == "accountCreation" {
+            alertCtrl.addAction(UIAlertAction(title: "Okay", style: .cancel) { action in
+                SceneDelegate.shared.rootViewController.switchToHomePageViewController()
+            })
+        }
+        present(alertCtrl, animated: true, completion: nil)
+    }
+}

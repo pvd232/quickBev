@@ -1,0 +1,485 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "CoreDataManager"
+provides-nominal:
+- "6Drinkz15CoreDataManagerC"
+provides-member:
+- ["6Drinkz15CoreDataManagerC", ""]
+provides-dynamic-lookup:
+- "$__lazy_storage_$_managedContext"
+- "$__lazy_storage_$_storeContainer"
+- "deleteEntities"
+- "fetchEntities"
+- "managedContext"
+- "saveContext"
+- "sharedManager"
+- "storeContainer"
+depends-top-level:
+- "AssignmentPrecedence"
+- "CastingPrecedence"
+- "CoreDataManager"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- !private "NSBatchDeleteRequest"
+- "NSError"
+- "NSFetchRequest"
+- "NSFetchRequestResult"
+- !private "NSLog"
+- "NSManagedObjectContext"
+- "NSMergePolicy"
+- "NSMergePolicyType"
+- "NSPersistentContainer"
+- "String"
+- "StringLiteralType"
+- !private "Thread"
+- !private "fatalError"
+- !private "managedContext"
+- "print"
+- "self"
+depends-member:
+- !private ["9Alamofire0A8ExtendedP", "forEach"]
+- !private ["Sa", "forEach"]
+- !private ["SK", ""]
+- !private ["SK", "forEach"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "forEach"]
+- !private ["s7CVarArgP", "callStackSymbols"]
+- !private ["s7CVarArgP", "execute"]
+- !private ["s7CVarArgP", "fetch"]
+- !private ["s7CVarArgP", "forEach"]
+- !private ["s7CVarArgP", "hasChanges"]
+- ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "loadPersistentStores"]
+- ["s7CVarArgP", "mergePolicy"]
+- !private ["s7CVarArgP", "save"]
+- ["s7CVarArgP", "userInfo"]
+- ["s7CVarArgP", "viewContext"]
+- !private ["Sl", ""]
+- !private ["Sl", "forEach"]
+- !private ["10Foundation15ContiguousBytesP", "forEach"]
+- !private ["6Drinkz15CoreDataManagerC", "$__lazy_storage_$_managedContext"]
+- !private ["6Drinkz15CoreDataManagerC", "$__lazy_storage_$_storeContainer"]
+- ["6Drinkz15CoreDataManagerC", "CoreDataManager"]
+- !private ["6Drinkz15CoreDataManagerC", "NSBatchDeleteRequest"]
+- ["6Drinkz15CoreDataManagerC", "NSError"]
+- !private ["6Drinkz15CoreDataManagerC", "NSFetchRequest"]
+- !private ["6Drinkz15CoreDataManagerC", "NSFetchRequestResult"]
+- !private ["6Drinkz15CoreDataManagerC", "NSLog"]
+- ["6Drinkz15CoreDataManagerC", "NSManagedObjectContext"]
+- ["6Drinkz15CoreDataManagerC", "NSMergePolicy"]
+- ["6Drinkz15CoreDataManagerC", "NSMergePolicyType"]
+- ["6Drinkz15CoreDataManagerC", "NSPersistentContainer"]
+- ["6Drinkz15CoreDataManagerC", "String"]
+- !private ["6Drinkz15CoreDataManagerC", "Thread"]
+- ["6Drinkz15CoreDataManagerC", "deinit"]
+- ["6Drinkz15CoreDataManagerC", "deleteEntities"]
+- !private ["6Drinkz15CoreDataManagerC", "fatalError"]
+- ["6Drinkz15CoreDataManagerC", "fetchEntities"]
+- ["6Drinkz15CoreDataManagerC", "init"]
+- ["6Drinkz15CoreDataManagerC", "managedContext"]
+- ["6Drinkz15CoreDataManagerC", "print"]
+- ["6Drinkz15CoreDataManagerC", "saveContext"]
+- ["6Drinkz15CoreDataManagerC", "self"]
+- ["6Drinkz15CoreDataManagerC", "sharedManager"]
+- ["6Drinkz15CoreDataManagerC", "storeContainer"]
+- !private ["s28CustomDebugStringConvertibleP", "callStackSymbols"]
+- !private ["s28CustomDebugStringConvertibleP", "execute"]
+- !private ["s28CustomDebugStringConvertibleP", "fetch"]
+- !private ["s28CustomDebugStringConvertibleP", "forEach"]
+- !private ["s28CustomDebugStringConvertibleP", "hasChanges"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "loadPersistentStores"]
+- ["s28CustomDebugStringConvertibleP", "mergePolicy"]
+- !private ["s28CustomDebugStringConvertibleP", "save"]
+- ["s28CustomDebugStringConvertibleP", "userInfo"]
+- ["s28CustomDebugStringConvertibleP", "viewContext"]
+- !private ["s17CustomReflectableP", "forEach"]
+- ["s23CustomStringConvertibleP", "appendInterpolation"]
+- ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["s23CustomStringConvertibleP", "callStackSymbols"]
+- !private ["s23CustomStringConvertibleP", "execute"]
+- !private ["s23CustomStringConvertibleP", "fetch"]
+- !private ["s23CustomStringConvertibleP", "forEach"]
+- !private ["s23CustomStringConvertibleP", "hasChanges"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "loadPersistentStores"]
+- ["s23CustomStringConvertibleP", "mergePolicy"]
+- !private ["s23CustomStringConvertibleP", "save"]
+- ["s23CustomStringConvertibleP", "userInfo"]
+- ["s23CustomStringConvertibleP", "viewContext"]
+- !private ["10Foundation12DataProtocolP", ""]
+- !private ["10Foundation12DataProtocolP", "forEach"]
+- !private ["Se", "forEach"]
+- ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- ["s26DefaultStringInterpolationV", "appendLiteral"]
+- !private ["SE", "forEach"]
+- ["SQ", ""]
+- !private ["SQ", "callStackSymbols"]
+- !private ["SQ", "execute"]
+- !private ["SQ", "fetch"]
+- !private ["SQ", "forEach"]
+- !private ["SQ", "hasChanges"]
+- ["SQ", "init"]
+- ["SQ", "loadPersistentStores"]
+- ["SQ", "mergeByPropertyObjectTrumpMergePolicyType"]
+- ["SQ", "mergePolicy"]
+- !private ["SQ", "save"]
+- ["SQ", "userInfo"]
+- ["SQ", "viewContext"]
+- ["s5ErrorP", "userInfo"]
+- !private ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "forEach"]
+- ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
+- ["s32ExpressibleByStringInterpolationP", "init"]
+- !private ["SH", "callStackSymbols"]
+- !private ["SH", "execute"]
+- !private ["SH", "fetch"]
+- !private ["SH", "forEach"]
+- !private ["SH", "hasChanges"]
+- ["SH", "init"]
+- ["SH", "loadPersistentStores"]
+- ["SH", "mergeByPropertyObjectTrumpMergePolicyType"]
+- ["SH", "mergePolicy"]
+- !private ["SH", "save"]
+- ["SH", "userInfo"]
+- ["SH", "viewContext"]
+- !private ["SM", ""]
+- !private ["SM", "forEach"]
+- !private ["10Foundation19MutableDataProtocolP", "forEach"]
+- !private ["So20NSBatchDeleteRequestC", "init"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "execute"]
+- !private ["So8NSCodingP", "fetch"]
+- !private ["So8NSCodingP", "hasChanges"]
+- !private ["So8NSCodingP", "init"]
+- ["So8NSCodingP", "mergePolicy"]
+- !private ["So8NSCodingP", "save"]
+- ["So8NSCodingP", "userInfo"]
+- !private ["So9NSCopyingP", "fetchRequestWithEntityName"]
+- !private ["So9NSCopyingP", "init"]
+- ["So9NSCopyingP", "userInfo"]
+- ["So7NSErrorC", "userInfo"]
+- !private ["So14NSFetchRequestC", "init"]
+- !private ["So9NSLockingP", "execute"]
+- !private ["So9NSLockingP", "fetch"]
+- !private ["So9NSLockingP", "hasChanges"]
+- ["So9NSLockingP", "mergePolicy"]
+- !private ["So9NSLockingP", "save"]
+- !private ["So22NSManagedObjectContextC", "execute"]
+- !private ["So22NSManagedObjectContextC", "fetch"]
+- !private ["So22NSManagedObjectContextC", "hasChanges"]
+- ["So22NSManagedObjectContextC", "mergePolicy"]
+- !private ["So22NSManagedObjectContextC", "save"]
+- ["So13NSMergePolicyC", "init"]
+- ["So17NSMergePolicyTypeV", "mergeByPropertyObjectTrumpMergePolicyType"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "callStackSymbols"]
+- !private ["So8NSObjectC", "execute"]
+- !private ["So8NSObjectC", "executeFetchRequest"]
+- !private ["So8NSObjectC", "executeRequest"]
+- !private ["So8NSObjectC", "fetch"]
+- !private ["So8NSObjectC", "fetchRequestWithEntityName"]
+- !private ["So8NSObjectC", "hasChanges"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "loadPersistentStores"]
+- ["So8NSObjectC", "loadPersistentStoresWithCompletionHandler"]
+- ["So8NSObjectC", "mergePolicy"]
+- ["So8NSObjectC", "persistentContainerWithName"]
+- !private ["So8NSObjectC", "save"]
+- ["So8NSObjectC", "userInfo"]
+- ["So8NSObjectC", "viewContext"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "callStackSymbols"]
+- !private ["So8NSObjectP", "execute"]
+- !private ["So8NSObjectP", "executeFetchRequest"]
+- !private ["So8NSObjectP", "executeRequest"]
+- !private ["So8NSObjectP", "fetch"]
+- !private ["So8NSObjectP", "fetchRequestWithEntityName"]
+- !private ["So8NSObjectP", "hasChanges"]
+- ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "loadPersistentStores"]
+- ["So8NSObjectP", "loadPersistentStoresWithCompletionHandler"]
+- ["So8NSObjectP", "mergePolicy"]
+- ["So8NSObjectP", "persistentContainerWithName"]
+- !private ["So8NSObjectP", "save"]
+- ["So8NSObjectP", "userInfo"]
+- ["So8NSObjectP", "viewContext"]
+- ["So21NSPersistentContainerC", "init"]
+- ["So21NSPersistentContainerC", "loadPersistentStores"]
+- ["So21NSPersistentContainerC", "viewContext"]
+- ["So24NSPersistentStoreRequestC", ""]
+- !private ["So24NSPersistentStoreRequestC", "fetchRequestWithEntityName"]
+- !private ["So24NSPersistentStoreRequestC", "init"]
+- ["So14NSSecureCodingP", "userInfo"]
+- !private ["Sk", ""]
+- !private ["Sk", "forEach"]
+- !private ["Sm", ""]
+- !private ["Sm", "forEach"]
+- ["SY", "mergeByPropertyObjectTrumpMergePolicyType"]
+- !private ["ST", ""]
+- !private ["ST", "forEach"]
+- ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- ["s27StringInterpolationProtocolP", "appendLiteral"]
+- ["s27StringInterpolationProtocolP", "init"]
+- ["s16TextOutputStreamP", "appendInterpolation"]
+- ["s16TextOutputStreamP", "appendLiteral"]
+- !private ["So8NSThreadC", "callStackSymbols"]
+- !private ["s14_ArrayProtocolP", "forEach"]
+- !private ["s24_DestructorSafeContainerP", "forEach"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s19_HasContiguousBytesP", "forEach"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "forEach"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "callStackSymbols"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "execute"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fetch"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "hasChanges"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "loadPersistentStores"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "mergePolicy"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "save"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "userInfo"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "viewContext"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "callStackSymbols"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "execute"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "fetch"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "hasChanges"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "loadPersistentStores"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "mergePolicy"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "save"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "userInfo"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewContext"]
+- !private ["s21_ObjectiveCBridgeableP", "forEach"]
+depends-nominal:
+- !private "9Alamofire0A8ExtendedP"
+- !private "Sa"
+- !private "SK"
+- !private "8CloudKit21CKRecordValueProtocolP"
+- "s7CVarArgP"
+- !private "Sl"
+- !private "10Foundation15ContiguousBytesP"
+- "6Drinkz15CoreDataManagerC"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- "s26DefaultStringInterpolationV"
+- !private "SE"
+- "SQ"
+- "s5ErrorP"
+- !private "s25ExpressibleByArrayLiteralP"
+- "s32ExpressibleByStringInterpolationP"
+- "SH"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- !private "So20NSBatchDeleteRequestC"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So7NSErrorC"
+- !private "So14NSFetchRequestC"
+- "So9NSLockingP"
+- "So22NSManagedObjectContextC"
+- "So13NSMergePolicyC"
+- "So17NSMergePolicyTypeV"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "So21NSPersistentContainerC"
+- "So24NSPersistentStoreRequestC"
+- "So14NSSecureCodingP"
+- !private "Sk"
+- !private "Sm"
+- "SY"
+- !private "ST"
+- "s27StringInterpolationProtocolP"
+- "s16TextOutputStreamP"
+- !private "So8NSThreadC"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Modules/BadgeHub.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Vision.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/AVFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/os.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/MapKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIViewController+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSError+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDS2Service.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseImage.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSErrorMessage.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONDecodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONEncodable.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONWebSignature.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponse.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAuthenticationResponse.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDirectoryServerCertificate.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDSProtocolVersion+Private.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTransaction+Private.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformationParameter+Private.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSString+EmptyChecking.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWarning.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSLocalizedString.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSEphemeralKeyPair+Testing.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSwiftTryCatch.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSErrorMessage+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDirectoryServerCertificate+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSException+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseMessageExtension.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformation.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIButton+CustomInitialization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSUICustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTextFieldCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSLabelCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSelectionCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSButtonCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSNavigationBarCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSFooterCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTransaction.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSNotInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAlreadyInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSRuntimeException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSInvalidInputException.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONWebEncryption.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSelectionButton.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfo.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe3DS2-Bridging-Header.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSImageLoader.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONEncoder.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSACSNetworkingManager.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSynchronousLocationManager.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformationManager.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJailbreakChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSOSVersionChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDebuggerChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSimulatorChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSIntegrityChecker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSCategoryLinker.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseViewController.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSProgressViewController.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformationParameter.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDirectoryServer.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSEphemeralKeyPair.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSStripe3DS2Error.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSBundleLocator.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSecTypeUtilities.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSData+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSString+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSDictionary+DecodingHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSConfigParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIColor+DefaultColors.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSIPAddress.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIFont+DefaultFonts.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseImageObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAuthenticationResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseMessageExtensionObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfoObject.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSCompletionEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSEllipticCurvePoint.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIColor+ThirteenSupport.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSLayoutConstraint+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIView+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWebView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTextChallengeView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSBrandingView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSProcessingView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSStackView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSExpandableInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeSelectionView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSpacerView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWhitelistView.h"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Pods/TweetNacl/Sources/module.map"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/FBSDKCoreKit_Basics.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/FBSDKCoreKit.modulemap"
+- "/Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/FBSDKLoginKit.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "7c4ceb8a0be027d5210872d55cc15efb"

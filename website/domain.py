@@ -57,7 +57,7 @@ class Order_Domain(object):
         self.subtotal = 0
         self.tip_percentage = 0
         self.tip_amount = 0
-        self.sales_tax = 0
+        self.sales_tax_rate = 0
         self.business_id = ''
         self.address = ''
         self.order_drink = ''
@@ -75,7 +75,9 @@ class Order_Domain(object):
             self.subtotal = order_object.Order.subtotal
             self.tip_percentage = order_object.Order.tip_percentage
             self.tip_amount = order_object.Order.tip_amount
-            self.sales_tax = order_object.Order.sales_tax
+            self.sales_tax_rate = order_object.Order.sales_tax
+            self.sales_tax_percentage = order_object.Order.sales_tax_percentage
+
             # formatted date string
             self.date_time = order_object.Order.date_time.strftime(
                 "%m/%d/%Y")
@@ -83,13 +85,15 @@ class Order_Domain(object):
                 order_id=order_object.Order.id, order_drink_object=order_object.Order.order_drink, drinks=drinks)
         elif order_json:
             self.id = order_json["id"]
-            self.customer_id = order_json["customer"]["id"]
+            self.customer = Customer_Domain(
+                customer_json=order_json["customer"])
+            self.customer_id = self.customer.id
             self.merchant_stripe_id = order_json["merchant_stripe_id"]
             self.cost = order_json["cost"]
             self.subtotal = order_json["subtotal"]
             self.tip_percentage = order_json["tip_percentage"]
             self.tip_amount = order_json["tip_amount"]
-            self.sales_tax = order_json["sales_tax"]
+            self.sales_tax_percentage = order_json["sales_tax_percentage"]
             self.business_id = order_json["business_id"]
             self.date_time = datetime.fromtimestamp(order_json["date_time"])
             print('date_time', datetime.fromtimestamp(order_json["date_time"]))
@@ -219,9 +223,11 @@ class Merchant_Domain(object):
             self.password = merchant_object.password
             self.first_name = merchant_object.first_name
             self.last_name = merchant_object.last_name
-            self.phone_number = merchant_object.phone_number
+            self.phone_number = merchant_object.phone_numberß
             self.number_of_businesses = merchant_object.number_of_businesses
-            self.stripe_id = merchant_object.stripe_id
+            # stripe ID is in an associative table now
+            if 'stripe_id' in merchant_object:
+                self.stripe_id = merchant_object.stripe_id
 
         elif merchant_json:
             print('merchant_json', merchant_json)
@@ -257,18 +263,18 @@ class Business_Domain(object):
         # this attribute will only be present when the business is being pulled from the backend
         self.merchant_stripe_id = ''
         if business_object:
-            nested_business_object = business_object.Business
-            print('nested_business_object', nested_business_object.serialize)
-            self.id = nested_business_object.id
-            self.merchant_id = nested_business_object.merchant_id
-            self.name = nested_business_object.name
-            self.address = nested_business_object.address
-            self.sales_tax_rate = nested_business_object.sales_tax_rate
-            self.classification = nested_business_object.classification
+            print('business_object', business_object.serialize)
+            self.id = business_object.id
+            self.merchant_id = business_object.merchant_id
+            self.name = business_object.name
+            self.address = business_object.address
+            self.sales_tax_rate = business_object.sales_tax_rate
+            self.classification = business_object.classification
             self.merchant_stripe_id = business_object.merchant_stripe_id
         if business_json:
             self.id = business_json["id"]
             self.merchant_id = business_json["merchant_id"]
+            self.merchant_stripe_id = business_json["merchant_stripe_id"]
             self.name = business_json["name"]
             self.classification = business_json["classification"]
             self.address = business_json["address"]

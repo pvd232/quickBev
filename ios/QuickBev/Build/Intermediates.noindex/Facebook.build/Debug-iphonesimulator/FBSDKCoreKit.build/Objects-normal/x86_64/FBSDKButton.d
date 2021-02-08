@@ -1,0 +1,21 @@
+dependencies: \
+  /Users/machina/Library/Developer/Xcode/DerivedData/Drinkz-dglwldakblrddyclgsmjeaqonwki/SourcePackages/checkouts/facebook-ios-sdk/FBSDKCoreKit/FBSDKCoreKit/FBSDKButton.m \
+  /Users/machina/Library/Developer/Xcode/DerivedData/Drinkz-dglwldakblrddyclgsmjeaqonwki/SourcePackages/checkouts/facebook-ios-sdk/FBSDKCoreKit/FBSDKCoreKit/FBSDKButton.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap \
+  /Users/machina/Library/Developer/Xcode/DerivedData/Drinkz-dglwldakblrddyclgsmjeaqonwki/SourcePackages/checkouts/facebook-ios-sdk/FBSDKCoreKit/FBSDKCoreKit/Internal/UI/FBSDKButton+Subclass.h \
+  /Users/machina/Library/Developer/Xcode/DerivedData/Drinkz-dglwldakblrddyclgsmjeaqonwki/SourcePackages/checkouts/facebook-ios-sdk/FBSDKCoreKit/FBSDKCoreKit/include/FBSDKButton.h \
+  /Users/machina/Library/Developer/Xcode/DerivedData/Drinkz-dglwldakblrddyclgsmjeaqonwki/SourcePackages/checkouts/facebook-ios-sdk/FBSDKCoreKit/FBSDKCoreKit/Internal/UI/FBSDKIcon.h \
+  /Users/machina/Library/Developer/Xcode/DerivedData/Drinkz-dglwldakblrddyclgsmjeaqonwki/SourcePackages/checkouts/facebook-ios-sdk/FBSDKCoreKit/FBSDKCoreKit/FBSDKAccessToken.h \
+  /Users/machina/Library/Developer/Xcode/DerivedData/Drinkz-dglwldakblrddyclgsmjeaqonwki/SourcePackages/checkouts/facebook-ios-sdk/FBSDKCoreKit/FBSDKCoreKit/FBSDKCopying.h \
+  /Users/machina/Library/Developer/Xcode/DerivedData/Drinkz-dglwldakblrddyclgsmjeaqonwki/SourcePackages/checkouts/facebook-ios-sdk/FBSDKCoreKit/FBSDKCoreKit/include/FBSDKGraphRequestConnection.h \
+  /Users/machina/Library/Developer/Xcode/DerivedData/Drinkz-dglwldakblrddyclgsmjeaqonwki/SourcePackages/checkouts/facebook-ios-sdk/FBSDKCoreKit/FBSDKCoreKit/include/FBSDKAppEvents.h \
+  /Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/FBSDKCoreKit_Basics.modulemap \
+  /Users/machina/Library/Developer/Xcode/DerivedData/Drinkz-dglwldakblrddyclgsmjeaqonwki/SourcePackages/checkouts/facebook-ios-sdk/FBSDKCoreKit/FBSDKCoreKit/AppEvents/Internal/FBSDKAppEvents+Internal.h \
+  /Users/machina/Library/Developer/Xcode/DerivedData/Drinkz-dglwldakblrddyclgsmjeaqonwki/SourcePackages/checkouts/facebook-ios-sdk/FBSDKCoreKit/FBSDKCoreKit/AppEvents/Internal/FBSDKAppEventsUtility.h \
+  /Users/machina/Library/Developer/Xcode/DerivedData/Drinkz-dglwldakblrddyclgsmjeaqonwki/SourcePackages/checkouts/facebook-ios-sdk/FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKApplicationDelegate+Internal.h \
+  /Users/machina/Library/Developer/Xcode/DerivedData/Drinkz-dglwldakblrddyclgsmjeaqonwki/SourcePackages/checkouts/facebook-ios-sdk/FBSDKCoreKit/FBSDKCoreKit/include/FBSDKApplicationDelegate.h \
+  /Users/machina/Library/Developer/Xcode/DerivedData/Drinkz-dglwldakblrddyclgsmjeaqonwki/SourcePackages/checkouts/facebook-ios-sdk/FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKApplicationObserving.h \
+  /Users/machina/Library/Developer/Xcode/DerivedData/Drinkz-dglwldakblrddyclgsmjeaqonwki/SourcePackages/checkouts/facebook-ios-sdk/FBSDKCoreKit/FBSDKCoreKit/Internal/UI/FBSDKLogo.h \
+  /Users/machina/Library/Developer/Xcode/DerivedData/Drinkz-dglwldakblrddyclgsmjeaqonwki/SourcePackages/checkouts/facebook-ios-sdk/FBSDKCoreKit/FBSDKCoreKit/Internal/UI/FBSDKUIUtility.h \
+  /Users/machina/Library/Developer/Xcode/DerivedData/Drinkz-dglwldakblrddyclgsmjeaqonwki/SourcePackages/checkouts/facebook-ios-sdk/FBSDKCoreKit/FBSDKCoreKit/Internal/UI/FBSDKViewImpressionTracker.h

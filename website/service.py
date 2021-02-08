@@ -91,7 +91,8 @@ class Order_Service(object):
 
     def stripe_payment_intent(self, request):
         with session_scope() as session:
-            return self.order_repository.stripe_payment_intent(session, request)
+            new_order_domain = Order_Domain(order_json=request["order"])
+            return self.order_repository.stripe_payment_intent(session, new_order_domain)
 
 
 class Customer_Service(object):

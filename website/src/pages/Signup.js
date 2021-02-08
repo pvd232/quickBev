@@ -713,7 +713,7 @@ const Signup = () => {
     // set values from formDataObject into business object
     newBusiness.tablet = formDataObject.tablet;
     newBusiness.classification = formDataObject.classification.toLowerCase();
-
+    newBusiness.merchantStripeId = merchantStripeId;
     if (formDataObject.menuUrl) {
       newBusiness.menuUrl = formDataObject.menuUrl;
     }

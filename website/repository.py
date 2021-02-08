@@ -30,8 +30,24 @@ class Drink_Repository(object):
 
 class Order_Repository(object):
     def post_order(self, session, order):
+        # calculate order values on backend to prevent malicious clients
+        cost = 0
+        subtotal = 0
+        tip_amount = 0
+        sales_tax = 0
+
+        for drink in order.order_drink.order_drink:
+            drink_cost = drink.price * drink.quantity
+            subtotal += drink_cost
+        subtotal = round(subtotal, 2)
+        tip_amount = round(order.tip_percentage * subtotal, 2)
+        sales_tax = round(subtotal * order.sales_tax_percentage, 2)
+        cost = int(round(subtotal+tip_amount+sales_tax, 2) * 100)
+        merchant_stripe_id = order.merchant_stripe_id
+        service_fee = int(round(.1 * cost, 2) * 100)
+
         new_order = Order(id=order.id, customer_id=order.customer_id, merchant_stripe_id=order.merchant_stripe_id,
-                          business_id=order.business_id, cost=order.cost, subtotal=order.subtotal, tip_percentage=order.tip_percentage, tip_amount=order.tip_amount, sales_tax=order.sales_tax, date_time=order.date_time)
+                          business_id=order.business_id, cost=cost, subtotal=subtotal, tip_percentage=order.tip_percentage, tip_amount=tip_amount, sales_tax=sales_tax, sales_tax_percentage=order.sales_tax_percentage, date_time=order.date_time, service_fee=service_fee)
         session.add(new_order)
 
         for each_order_drink in order.order_drink.order_drink:
@@ -79,28 +95,31 @@ class Order_Repository(object):
                 customer=new_customer.id, stripe_version=request['api_version'])
             return key, stripe_header
 
-    def stripe_payment_intent(self, session, request):
+    def stripe_payment_intent(self, session, order):
         # formatting for stripe requires everything in cents
-        amount = int(round(request["order"]["cost"], 2) * 100)
-        print("stripe payment intent request", request)
-        # when the customer lands on the checkout page we create a payment intent for them and send it back. this includes their payment methods
-        # payment_intent = stripe.PaymentIntent.create(
-        #     amount=amount,
-        #     customer=request["order"]["customer"]["stripe_id"],
-        #     setup_future_usage='on_session',
-        #     currency='usd'
-        # )
-        merchant_stripe_id = request["order"]["merchant_stripe_id"]
-        print('merchant_stripe_id', merchant_stripe_id)
-        deduction = int(round(.1 * request["order"]["cost"], 2) * 100)
-        print('deduction', deduction)
+        amount = 0
+        subtotal = 0
+        tip_amount = 0
+        sales_tax = 0
+
+        for drink in order.order_drink.order_drink:
+            drink_cost = drink.price * drink.quantity
+            subtotal += drink_cost
+        subtotal = round(subtotal, 2)
+        tip_amount = round(order.tip_percentage * subtotal, 2)
+        sales_tax = round(subtotal * order.sales_tax_percentage, 2)
+        amount = int(round(subtotal+tip_amount+sales_tax, 2) * 100)
         print('amount', amount)
+        merchant_stripe_id = order.merchant_stripe_id
+        service_fee = int(round(.1 * amount, 2))
+        print('service_fee', service_fee)
+
         payment_intent = stripe.PaymentIntent.create(
             amount=amount,
-            customer=request["order"]["customer"]["stripe_id"],
+            customer=order.customer.stripe_id,
             setup_future_usage='on_session',
             currency='usd',
-            application_fee_amount=deduction,
+            application_fee_amount=service_fee,
             transfer_data={
                 'destination': f'{merchant_stripe_id}',
             }
@@ -153,8 +172,7 @@ class Customer_Repository(object):
 
 class Business_Repository(object):
     def get_businesss(self, session):
-        businesses = session.query(Business, Merchant_Stripe.stripe_id.label("merchant_stripe_id")).select_from(
-            Business).join(Merchant, Business.merchant_id == Merchant.id).join(Merchant_Stripe, Merchant.id == Merchant_Stripe.merchant_id).all()
+        businesses = session.query(Business).all()
         print('businesses', businesses)
         return businesses
 
@@ -162,7 +180,7 @@ class Business_Repository(object):
         # will have to plug in an API here to dynamically pull information (avalara probs if i can get the freaking credentials to work)
         new_business = Business(name=business.name, classification=business.classification, date_joined=date.today(
         ), sales_tax_rate=business.sales_tax_rate, merchant_id=business.merchant_id, street=business.street, city=business.city,
-            state=business.state, zipcode=business.zipcode, address=business.address, tablet=business.tablet, phone_number=business.phone_number)
+            state=business.state, zipcode=business.zipcode, address=business.address, tablet=business.tablet, phone_number=business.phone_number, merchant_stripe_id=business.merchant_stripe_id)
         session.add(new_business)
         return new_business
 
@@ -196,6 +214,7 @@ class Merchant_Repository(object):
             country="US"
         )
         new_stripe_account_id = Stripe_Account(id=new_account.id)
+        new_merchant_stripe = Merchant_Stripe()
         session.add(new_stripe_account_id)
         return new_account
 
@@ -209,6 +228,9 @@ class Merchant_Repository(object):
 
     def add_merchant(self, session, requested_merchant):
         new_merchant = Merchant(id=requested_merchant.id, password=requested_merchant.password, first_name=requested_merchant.first_name,
-                                last_name=requested_merchant.last_name, phone_number=requested_merchant.phone_number, number_of_businesses=requested_merchant.number_of_businesses, stripe_id=requested_merchant.stripe_id)
+                                last_name=requested_merchant.last_name, phone_number=requested_merchant.phone_number, number_of_businesses=requested_merchant.number_of_businesses)
+        new_merchant_stripe = Merchant_Stripe(
+            merchant_id=requested_merchant.id, stripe_id=requested_merchant.stripe_id)
         session.add(new_merchant)
+        session.add(new_merchant_stripe)
         return True

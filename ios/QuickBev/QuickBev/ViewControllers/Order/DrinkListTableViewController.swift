@@ -1,0 +1,60 @@
+//
+//  DrinkListTableViewController.swift
+//  Drinkz
+//
+//  Created by Peter Vail Driscoll II on 3/29/20.
+//  Copyright © 2020 Peter Vail Driscoll II. All rights reserved.
+//
+
+import UIKit
+import Alamofire
+import os
+
+class DrinkListTableViewController: UITableViewController {
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        self.view.backgroundColor = .systemBackground
+        for drink in CheckoutCart.shared.userBusiness!.drinks!.allObjects{
+//            print("drink",drink)
+        }
+
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("coder not set up")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tableView.translatesAutoresizingMaskIntoConstraints = false
+        self.navigationItem.setHidesBackButton(false, animated: true)
+        self.tableView.register(DrinkTableViewCell.self, forCellReuseIdentifier: "Cell")
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return CheckoutCart.shared.userBusinessDrinks.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! DrinkTableViewCell
+        cell.name.text = CheckoutCart.shared.userBusinessDrinks[indexPath.row].name
+//        print("CheckoutCart.shared.userBusinessDrinks[indexPath.row]", CheckoutCart.shared.userBusinessDrinks[indexPath.row])
+        cell.drinkImageView.image = UIImage(named: CheckoutCart.shared.userBusinessDrinks[indexPath.row].name!.lowercased())
+        cell.miscellaneousText.text = CheckoutCart.shared.userBusinessDrinks[indexPath.row].detail
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return (tableView.frame.height/8)
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedDrink = CheckoutCart.shared.userBusinessDrinks[indexPath.row].copy() as! Drink
+            navigationController!.pushViewController(DrinkViewController(drink:selectedDrink), animated: true)
+    }
+}
