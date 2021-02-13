@@ -1,39 +1,39 @@
 dependencies: \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/STDSIntegrityChecker.m \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Stripe.build/module.modulemap \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Target\ Support\ Files/Stripe/Stripe-prefix.pch \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/STDSIntegrityChecker.m \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Stripe.build/module.modulemap \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Target\ Support\ Files/Stripe/Stripe-prefix.pch \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSIntegrityChecker.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/Stripe3DS2.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSConfigParameters.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDS2Service.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSUICustomization.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCustomization.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSButtonCustomization.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSNavigationBarCustomization.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSLabelCustomization.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTextFieldCustomization.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSFooterCustomization.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSelectionCustomization.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSWarning.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAlreadyInitializedException.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSException.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSInvalidInputException.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSNotInitializedException.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSRuntimeException.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSErrorMessage.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONEncodable.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONDecodable.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSProtocolErrorEvent.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSRuntimeErrorEvent.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSStripe3DS2Error.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDSProtocolVersion.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationRequestParameters.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationResponse.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeParameters.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeStatusReceiver.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCompletionEvent.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONEncoder.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTransaction.h \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSwiftTryCatch.h
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSIntegrityChecker.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/Stripe3DS2.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSConfigParameters.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDS2Service.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSUICustomization.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCustomization.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSButtonCustomization.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSNavigationBarCustomization.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSLabelCustomization.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTextFieldCustomization.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSFooterCustomization.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSelectionCustomization.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSWarning.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAlreadyInitializedException.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSException.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSInvalidInputException.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSNotInitializedException.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSRuntimeException.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSErrorMessage.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONEncodable.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONDecodable.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSProtocolErrorEvent.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSRuntimeErrorEvent.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSStripe3DS2Error.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDSProtocolVersion.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationRequestParameters.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationResponse.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeParameters.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeStatusReceiver.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCompletionEvent.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONEncoder.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTransaction.h \
+  /Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSwiftTryCatch.h

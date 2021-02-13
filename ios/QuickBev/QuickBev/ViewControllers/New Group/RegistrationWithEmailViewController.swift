@@ -8,17 +8,17 @@
 
 import UIKit
 
-class RegistrationWithEmailViewController: UIViewController {
-    
+class RegistrationWithEmailViewController: UIViewController, WebSocketConnectionDelegate {
     @UsesAutoLayout var firstNameTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Your first name"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
     @UsesAutoLayout var lastNameTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Your last name"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
-    @UsesAutoLayout var emailTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Your email adress"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
+    @UsesAutoLayout var emailTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Your email address"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
+    @UsesAutoLayout var confirmEmailTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Confirm your email address"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
     @UsesAutoLayout var passwordTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Your password"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
     @UsesAutoLayout var confirmPasswordTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Confirm your password"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
-    @UsesAutoLayout var firstNameLabel = UILabel(theme: Theme.UILabel(props: [.text("First Name"), .font(nil) ]))
-    @UsesAutoLayout var lastNameLabel =  UILabel(theme: Theme.UILabel(props: [.text("Last Name"), .font(nil)]))
-    @UsesAutoLayout var emailLabel =  UILabel(theme: Theme.UILabel(props: [.text("Email"), .font(nil), ]))
-    @UsesAutoLayout var passwordLabel =  UILabel(theme: Theme.UILabel(props: [.text("Password"), .font(nil) ]))
+    @UsesAutoLayout var firstNameLabel = UILabel(theme: Theme.UILabel(props: [.text("First Name"), .font(nil), .textColor ]))
+    @UsesAutoLayout var lastNameLabel =  UILabel(theme: Theme.UILabel(props: [.text("Last Name"), .font(nil), .textColor]))
+    @UsesAutoLayout var emailLabel =  UILabel(theme: Theme.UILabel(props: [.text("Email"), .font(nil), .textColor ]))
+    @UsesAutoLayout var passwordLabel =  UILabel(theme: Theme.UILabel(props: [.text("Password"), .font(nil), .textColor ]))
     @UsesAutoLayout var confirmPasswordLabel =  UILabel(theme: Theme.UILabel(props: [.text("Confirm Password"), .font(nil)]))
     @UsesAutoLayout var registrationStackView = UIStackView(theme: Theme.UIStackView(props: [.vertical, .spacing(10)]))
     @UsesAutoLayout var submitButton = RoundButton(theme: Theme.RoundButton(props: [ .color, .text("Submit"), .titleLabelFont(nil)]))
@@ -26,7 +26,8 @@ class RegistrationWithEmailViewController: UIViewController {
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        self.view.backgroundColor = .systemBackground
+        self.view.backgroundColor = .white
+        
     }
     
     required init?(coder: NSCoder) {
@@ -34,6 +35,7 @@ class RegistrationWithEmailViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        WebSocketTaskConnection.shared.delegate = self
         self.view.addSubview(registrationStackView)
         self.view.addSubview(submitButton)
         self.view.addSubview(activityIndicator)
@@ -76,20 +78,47 @@ class RegistrationWithEmailViewController: UIViewController {
         )
         submitButton.addTarget(self, action: #selector(submitRegistration), for: .touchUpInside)
     }
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        WebSocketTaskConnection.shared.disconnect()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        WebSocketTaskConnection.shared.connect()
+    }
+    func onConnected(connection: WebSocketConnection) {
+        print("successful websocket connection")
+    }
+
+    func onDisconnected(connection: WebSocketConnection, error: Error?) {
+        print("web socket disconnected", error ?? "no error")
+    }
+
+    func onError(connection: WebSocketConnection, error: Error) {
+        print("web socket error", error)
+    }
+
+    func onMessage(connection: WebSocketConnection, text: String) {
+        print("string message received", text)
+    }
+
+    func onMessage(connection: WebSocketConnection, data: Data) {
+        print("data received", (try? JSONDecoder().decode(String.self, from: data)) ?? "couldnt decode message")
+    }
+
     @objc private func submitRegistration(_ sender: RoundButton) {
         activityIndicator.startAnimating()
         let requestedNewUser: User  = {
             // regular registration process
             if CheckoutCart.shared.isGuest == false {
                 print("checkout card stripeId is nil")
-                return  User(Email : emailTextField.text!, FirstName: firstNameTextField.text!,LastName: lastNameTextField.text!,Password: passwordTextField.text!)
+                return  User(Email : emailTextField.text!, FirstName: firstNameTextField.text!,LastName: lastNameTextField.text!,Password: passwordTextField.text!, EmailVerified: false)
             }
             // guest registration process because the stripe id was acquired at home page when a user did not yet exist
             else {
-                return User(Email : emailTextField.text!, FirstName: firstNameTextField.text!,LastName: lastNameTextField.text!,Password: passwordTextField.text!, StripeId: CheckoutCart.shared.stripeId!)
+                return User(Email : emailTextField.text!, FirstName: firstNameTextField.text!,LastName: lastNameTextField.text!,Password: passwordTextField.text!, StripeId: CheckoutCart.shared.stripeId!, EmailVerified: false)
             }
         }()
+        WebSocketTaskConnection.shared.send(data: requestedNewUser)
+
         let request = try! APIRequest(method: .post, path:"/customer", body: requestedNewUser)
         APIClient().perform(request) {result in
             switch result {
@@ -98,7 +127,7 @@ class RegistrationWithEmailViewController: UIViewController {
                     let responseJson = response.body
                     CheckoutCart.shared.user = requestedNewUser
                     CheckoutCart.shared.userId = requestedNewUser.email
-                    
+
                     // when changing UI based on asynchronous operation, or when updating core data need to wrap in dispatch queue because both are asynchronous ops themselves
                     DispatchQueue.main.async
                     {

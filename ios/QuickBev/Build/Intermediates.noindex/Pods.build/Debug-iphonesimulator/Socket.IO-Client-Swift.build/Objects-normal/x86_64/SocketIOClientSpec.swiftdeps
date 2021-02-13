@@ -1,0 +1,218 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SocketIOClientSpec"
+- "SocketClientEvent"
+provides-nominal:
+- "8SocketIO0A12IOClientSpecP"
+- "8SocketIO0A11ClientEventO"
+provides-member:
+- ["8SocketIO0A12IOClientSpecP", ""]
+- ["8SocketIO0A11ClientEventO", ""]
+- ["8SocketIO0A12IOClientSpecP", "didError"]
+provides-dynamic-lookup:
+depends-top-level:
+- "=="
+- "AnyObject"
+- !private "Array"
+- "Bool"
+- !private "DefaultSocketLogger"
+- "Double"
+- !private "FloatLiteralType"
+- "Int"
+- !private "IntegerLiteralType"
+- "NormalCallback"
+- "OnAckCallback"
+- "SocketAnyEvent"
+- "SocketClientEvent"
+- "SocketData"
+- "SocketEventHandler"
+- "SocketIOClientSpec"
+- "SocketIOStatus"
+- "SocketManagerSpec"
+- "SocketPacket"
+- "SocketRawView"
+- "String"
+- "StringLiteralType"
+- "UUID"
+- !private "_findStringSwitchCase"
+- !private "handleClientEvent"
+- !private "~="
+depends-member:
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["8SocketIO07DefaultA6LoggerC", "Logger"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- ["SQ", "=="]
+- ["SQ", "Default_RawValue"]
+- ["SQ", "RawValue"]
+- ["SQ", ""]
+- ["SQ", "_Default_RawValue"]
+- !private ["SQ", "_findStringSwitchCase"]
+- ["SQ", "_rawHashValue"]
+- !private ["SQ", "error"]
+- !private ["SQ", "findStringSwitchCase"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- ["SQ", "init"]
+- ["SQ", "rawValue"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
+- ["SH", "=="]
+- ["SH", "Default_RawValue"]
+- ["SH", "RawValue"]
+- ["SH", ""]
+- ["SH", "_Default_RawValue"]
+- !private ["SH", "_findStringSwitchCase"]
+- ["SH", "_rawHashValue"]
+- !private ["SH", "error"]
+- !private ["SH", "findStringSwitchCase"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- ["SH", "init"]
+- ["SH", "rawValue"]
+- ["SY", "=="]
+- ["SY", "Default_RawValue"]
+- ["SY", "RawValue"]
+- ["SY", ""]
+- ["SY", "_Default_RawValue"]
+- !private ["SY", "_findStringSwitchCase"]
+- ["SY", "_rawHashValue"]
+- !private ["SY", "error"]
+- !private ["SY", "findStringSwitchCase"]
+- ["SY", "hash"]
+- ["SY", "hashValue"]
+- ["SY", "init"]
+- ["SY", "rawValue"]
+- ["8SocketIO0A11ClientEventO", "=="]
+- ["8SocketIO0A11ClientEventO", "Default_RawValue"]
+- ["8SocketIO0A11ClientEventO", "RawValue"]
+- ["8SocketIO0A11ClientEventO", ""]
+- ["8SocketIO0A11ClientEventO", "_Default_RawValue"]
+- !private ["8SocketIO0A11ClientEventO", "_findStringSwitchCase"]
+- ["8SocketIO0A11ClientEventO", "_rawHashValue"]
+- ["8SocketIO0A11ClientEventO", "connect"]
+- ["8SocketIO0A11ClientEventO", "disconnect"]
+- ["8SocketIO0A11ClientEventO", "error"]
+- !private ["8SocketIO0A11ClientEventO", "findStringSwitchCase"]
+- ["8SocketIO0A11ClientEventO", "hash"]
+- ["8SocketIO0A11ClientEventO", "hashValue"]
+- ["8SocketIO0A11ClientEventO", "init"]
+- ["8SocketIO0A11ClientEventO", "ping"]
+- ["8SocketIO0A11ClientEventO", "pong"]
+- ["8SocketIO0A11ClientEventO", "rawValue"]
+- ["8SocketIO0A11ClientEventO", "reconnect"]
+- ["8SocketIO0A11ClientEventO", "reconnectAttempt"]
+- ["8SocketIO0A11ClientEventO", "statusChange"]
+- ["8SocketIO0A11ClientEventO", "websocketUpgrade"]
+- ["8SocketIO0A12EngineClientP", ""]
+- ["8SocketIO0A12IOClientSpecP", "Bool"]
+- !private ["8SocketIO0A12IOClientSpecP", "DefaultSocketLogger"]
+- ["8SocketIO0A12IOClientSpecP", "Double"]
+- ["8SocketIO0A12IOClientSpecP", "Int"]
+- ["8SocketIO0A12IOClientSpecP", "NormalCallback"]
+- ["8SocketIO0A12IOClientSpecP", "OnAckCallback"]
+- ["8SocketIO0A12IOClientSpecP", "SocketAnyEvent"]
+- ["8SocketIO0A12IOClientSpecP", "SocketClientEvent"]
+- ["8SocketIO0A12IOClientSpecP", "SocketData"]
+- ["8SocketIO0A12IOClientSpecP", "SocketEventHandler"]
+- ["8SocketIO0A12IOClientSpecP", "SocketIOStatus"]
+- ["8SocketIO0A12IOClientSpecP", "SocketManagerSpec"]
+- ["8SocketIO0A12IOClientSpecP", "SocketPacket"]
+- ["8SocketIO0A12IOClientSpecP", "SocketRawView"]
+- ["8SocketIO0A12IOClientSpecP", "String"]
+- ["8SocketIO0A12IOClientSpecP", "UUID"]
+- ["8SocketIO0A12IOClientSpecP", ""]
+- ["8SocketIO0A12IOClientSpecP", "anyHandler"]
+- ["8SocketIO0A12IOClientSpecP", "connect"]
+- ["8SocketIO0A12IOClientSpecP", "didConnect"]
+- ["8SocketIO0A12IOClientSpecP", "didDisconnect"]
+- ["8SocketIO0A12IOClientSpecP", "didError"]
+- ["8SocketIO0A12IOClientSpecP", "disconnect"]
+- ["8SocketIO0A12IOClientSpecP", "emit"]
+- ["8SocketIO0A12IOClientSpecP", "emitAck"]
+- ["8SocketIO0A12IOClientSpecP", "emitWithAck"]
+- ["8SocketIO0A12IOClientSpecP", "handleAck"]
+- ["8SocketIO0A12IOClientSpecP", "handleClientEvent"]
+- ["8SocketIO0A12IOClientSpecP", "handleEvent"]
+- ["8SocketIO0A12IOClientSpecP", "handlePacket"]
+- ["8SocketIO0A12IOClientSpecP", "handlers"]
+- ["8SocketIO0A12IOClientSpecP", "joinNamespace"]
+- ["8SocketIO0A12IOClientSpecP", "leaveNamespace"]
+- ["8SocketIO0A12IOClientSpecP", "manager"]
+- ["8SocketIO0A12IOClientSpecP", "nsp"]
+- ["8SocketIO0A12IOClientSpecP", "off"]
+- ["8SocketIO0A12IOClientSpecP", "on"]
+- ["8SocketIO0A12IOClientSpecP", "onAny"]
+- ["8SocketIO0A12IOClientSpecP", "once"]
+- ["8SocketIO0A12IOClientSpecP", "rawEmitView"]
+- ["8SocketIO0A12IOClientSpecP", "removeAllHandlers"]
+- ["8SocketIO0A12IOClientSpecP", "setReconnecting"]
+- ["8SocketIO0A12IOClientSpecP", "sid"]
+- ["8SocketIO0A12IOClientSpecP", "status"]
+- !private ["8SocketIO0A6LoggerP", "Logger"]
+- !private ["8SocketIO0A6LoggerP", "error"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s27StringInterpolationProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+depends-nominal:
+- !private "s23CustomStringConvertibleP"
+- !private "8SocketIO07DefaultA6LoggerC"
+- !private "s26DefaultStringInterpolationV"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- "SH"
+- "SY"
+- "8SocketIO0A11ClientEventO"
+- "8SocketIO0A12EngineClientP"
+- "8SocketIO0A12IOClientSpecP"
+- !private "8SocketIO0A6LoggerP"
+- !private "s27StringInterpolationProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Starscream/Starscream.framework/Modules/Starscream.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Target Support Files/Starscream/Starscream-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Target Support Files/Socket.IO-Client-Swift/Socket.IO-Client-Swift-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Starscream/Starscream.framework/Headers/Starscream-Swift.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Socket.IO-Client-Swift.build/unextended-module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Starscream.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "4c60a7b40b65c150e4ce729e0b63f470"

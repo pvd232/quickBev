@@ -16,28 +16,28 @@ class LoginViewController: UIViewController {
     @UsesAutoLayout var letsGetStartedStackView = UIStackView()
     @UsesAutoLayout var letsGetStartedLabel : UILabel
         = {
-           let label = UILabel()
+           let label = UILabel(theme:Theme.UILabel(props: [.textColor]))
             label.font = UIFont.largeThemeLabelFont
             return label
         }()
-    @UsesAutoLayout var ellipsisLabel = UILabel()
+    @UsesAutoLayout var ellipsisLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
     // this label is in all caps so it needs to be smaller
     @UsesAutoLayout var signInToQuickBevLabel: UILabel  = {
         if UIViewController.screenSize.height <= 736 {
-            let smallFontUILabel = UILabel()
+            let smallFontUILabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
             smallFontUILabel.font =  UIFont(name: "Charter-Roman", size: 20.0)
             return smallFontUILabel
         }
         else {
-            let largeFontUILabel = UILabel()
+            let largeFontUILabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
             largeFontUILabel.font = UIFont(name: "Charter-Roman", size: 22.0)
             return largeFontUILabel
         }
     }()
     @UsesAutoLayout var logoImageView = UIImageView()
-    @UsesAutoLayout var emailAddressLabel = UILabel()
+    @UsesAutoLayout var emailAddressLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
     @UsesAutoLayout var emailTextField = UITextField()
-    @UsesAutoLayout var passwordLabel = UILabel()
+    @UsesAutoLayout var passwordLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
     @UsesAutoLayout var passwordTextField = UITextField()
     @UsesAutoLayout var forgotPasswordButton = UIButton()
     @UsesAutoLayout var submitButton = RoundButton()
@@ -47,7 +47,7 @@ class LoginViewController: UIViewController {
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        self.view.backgroundColor = .systemBackground
+        self.view.backgroundColor = .white
     }
     
     required init?(coder: NSCoder) {
@@ -63,25 +63,42 @@ class LoginViewController: UIViewController {
         
         letsGetStartedLabel.text = "Let's Get Started"
         letsGetStartedLabel.textAlignment = .center
+        letsGetStartedLabel.textColor = .black
         
         ellipsisLabel.text = "· · ·"
         ellipsisLabel.font = UIFont(name: "System-Bold", size: 20.0)
         ellipsisLabel.textAlignment = .center
+        ellipsisLabel.textColor = .black
         
         signInToQuickBevLabel.text = "SIGN IN TO QUICKBEV"
         signInToQuickBevLabel.textAlignment = .center
+        signInToQuickBevLabel.textColor = .black
         
         emailAddressLabel.text = "Email Address"
         emailAddressLabel.font = UIFont.themeLabelFont
+        emailAddressLabel.textColor = .black
+        
         emailTextField.borderStyle = .roundedRect
         emailTextField.autocapitalizationType = .none
         emailTextField.backgroundColor = UIColor.clear
         
+        
+        emailTextField.addLeftBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
+        emailTextField.addRightBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
+        emailTextField.addTopBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
+        emailTextField.addBottomBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
+        
         passwordLabel.text = "Password"
+        passwordLabel.textColor = .black
         passwordLabel.font = UIFont.themeLabelFont
         passwordTextField.borderStyle = .roundedRect
         passwordTextField.autocapitalizationType = .none
         passwordTextField.backgroundColor = UIColor.clear
+        
+        passwordTextField.addLeftBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
+        passwordTextField.addRightBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
+        passwordTextField.addTopBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
+        passwordTextField.addBottomBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
         
         forgotPasswordButton.setTitle("Forgot Password?", for: .normal)
         forgotPasswordButton.titleLabel?.font = UIFont(name: "Charter-Roman", size: 18.0)

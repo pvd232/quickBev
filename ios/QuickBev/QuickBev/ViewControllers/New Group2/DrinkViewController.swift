@@ -14,12 +14,12 @@ class DrinkViewController: UIViewController {
     var drink : Drink
     @UsesAutoLayout var drinkImageStackView = UIStackView()
     @UsesAutoLayout var drinkDescriptionLabel = UITextView()
-    @UsesAutoLayout var drinkPriceLabel = UILabel()
+    @UsesAutoLayout var drinkPriceLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
     @UsesAutoLayout var drinkImageView = UIImageView()
     @UsesAutoLayout var drinkQuantityStackView = UIStackView()
     @UsesAutoLayout var minusButton = RoundButton()
     @UsesAutoLayout var plusButton = RoundButton()
-    @UsesAutoLayout var drinkQuantityLabel = UILabel()
+    @UsesAutoLayout var drinkQuantityLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
     @UsesAutoLayout var addToOrderButton = UIButton()
     // let testAPIKey = pk_test_51I0xFxFseFjpsgWvepMo3sJRNB4CCbFPhkxj2gEKgHUhIGBnciTqNVzjz1wz68Btbd5zAb2KC9eXpYaiOwLDA5QH00SZhtKPLT
     
@@ -38,7 +38,7 @@ class DrinkViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .systemBackground
+        self.view.backgroundColor = .white
 
         self.view.addSubview(drinkImageStackView)
         self.view.addSubview(drinkQuantityStackView)

@@ -25,7 +25,7 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        self.view.backgroundColor = .systemBackground
+        self.view.backgroundColor = .white
         makeBusinessServiceCall()
     }
     

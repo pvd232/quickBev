@@ -1,2 +1,2 @@
 dependencies: \
-  /Users/machina/Developer/quickbev/ios/Drinkz/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Stripe.build/DerivedSources/Stripe_vers.c
+  /Users/machina/Developer/quickbev/ios/QuickBev/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Stripe.build/DerivedSources/Stripe_vers.c

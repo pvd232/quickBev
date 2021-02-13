@@ -13,7 +13,7 @@ class AccountTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    let myLabel = UILabel()
+    let myLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
     let mySeparator = UIView()
     var path: UIBezierPath!
     let strokeColor = UIColor.lightGray.cgColor

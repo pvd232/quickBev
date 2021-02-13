@@ -1,0 +1,315 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "FoundationHTTPServerHandler"
+provides-nominal:
+- "10Starscream27FoundationHTTPServerHandlerC"
+provides-member:
+- ["10Starscream27FoundationHTTPServerHandlerC", ""]
+provides-dynamic-lookup:
+- "buffer"
+- "createResponse"
+- "delegate"
+- "getVerb"
+- "parse"
+- "parseContent"
+- "register"
+depends-top-level:
+- !private "!"
+- !private "!="
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- !private "CFHTTPMessageAppendBytes"
+- !private "CFHTTPMessageCopyAllHeaderFields"
+- !private "CFHTTPMessageCopyRequestMethod"
+- !private "CFHTTPMessageCopySerializedMessage"
+- !private "CFHTTPMessageCreateEmpty"
+- !private "CFHTTPMessageCreateResponse"
+- !private "CFHTTPMessageIsHeaderComplete"
+- !private "CFHTTPMessageSetHeaderFieldValue"
+- "CFString"
+- "CastingPrecedence"
+- "Data"
+- "FoundationHTTPServerHandler"
+- "HTTPServerDelegate"
+- "HTTPServerHandler"
+- !private "HTTPUpgradeError"
+- !private "HTTPWSHeader"
+- "NSDictionary"
+- "NSString"
+- "String"
+- "StringLiteralType"
+- !private "UInt8"
+- !private "buffer"
+- !private "delegate"
+- !private "getVerb"
+- !private "kCFAllocatorDefault"
+- !private "kCFHTTPVersion1_1"
+- !private "parseContent"
+depends-member:
+- !private ["Sa", "append"]
+- !private ["Sa", "init"]
+- ["SK", ""]
+- !private ["SK", "append"]
+- !private ["SK", "count"]
+- ["SK", "init"]
+- !private ["SK", "withUnsafeBytes"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "subscript"]
+- ["Sl", ""]
+- !private ["Sl", "append"]
+- !private ["Sl", "count"]
+- ["Sl", "init"]
+- !private ["Sl", "subscript"]
+- !private ["Sl", "withUnsafeBytes"]
+- !private ["10Foundation15ContiguousBytesP", "append"]
+- !private ["10Foundation15ContiguousBytesP", "count"]
+- ["10Foundation15ContiguousBytesP", "init"]
+- !private ["10Foundation15ContiguousBytesP", "withUnsafeBytes"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "withUnsafeBytes"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "count"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "withUnsafeBytes"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "withUnsafeBytes"]
+- !private ["10Foundation4DataV", "append"]
+- !private ["10Foundation4DataV", "count"]
+- ["10Foundation4DataV", "init"]
+- !private ["10Foundation4DataV", "withUnsafeBytes"]
+- ["10Foundation12DataProtocolP", ""]
+- !private ["10Foundation12DataProtocolP", "append"]
+- !private ["10Foundation12DataProtocolP", "count"]
+- ["10Foundation12DataProtocolP", "init"]
+- !private ["10Foundation12DataProtocolP", "withUnsafeBytes"]
+- !private ["Se", "append"]
+- !private ["Se", "count"]
+- ["Se", "init"]
+- !private ["Se", "subscript"]
+- !private ["Se", "withUnsafeBytes"]
+- !private ["SD", "init"]
+- !private ["SD", "subscript"]
+- !private ["SE", "append"]
+- !private ["SE", "count"]
+- ["SE", "init"]
+- !private ["SE", "subscript"]
+- !private ["SE", "withUnsafeBytes"]
+- ["SQ", ""]
+- !private ["SQ", "append"]
+- !private ["SQ", "count"]
+- ["SQ", "init"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "withUnsafeBytes"]
+- !private ["s5ErrorP", "invalidData"]
+- !private ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- ["s26ExpressibleByStringLiteralP", "StringLiteralType"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["10Starscream27FoundationHTTPServerHandlerC", "Bool"]
+- !private ["10Starscream27FoundationHTTPServerHandlerC", "CFHTTPMessageAppendBytes"]
+- !private ["10Starscream27FoundationHTTPServerHandlerC", "CFHTTPMessageCopyAllHeaderFields"]
+- !private ["10Starscream27FoundationHTTPServerHandlerC", "CFHTTPMessageCopyRequestMethod"]
+- !private ["10Starscream27FoundationHTTPServerHandlerC", "CFHTTPMessageCopySerializedMessage"]
+- !private ["10Starscream27FoundationHTTPServerHandlerC", "CFHTTPMessageCreateEmpty"]
+- !private ["10Starscream27FoundationHTTPServerHandlerC", "CFHTTPMessageCreateResponse"]
+- !private ["10Starscream27FoundationHTTPServerHandlerC", "CFHTTPMessageIsHeaderComplete"]
+- !private ["10Starscream27FoundationHTTPServerHandlerC", "CFHTTPMessageSetHeaderFieldValue"]
+- !private ["10Starscream27FoundationHTTPServerHandlerC", "CFString"]
+- ["10Starscream27FoundationHTTPServerHandlerC", "Data"]
+- ["10Starscream27FoundationHTTPServerHandlerC", "HTTPServerDelegate"]
+- !private ["10Starscream27FoundationHTTPServerHandlerC", "HTTPUpgradeError"]
+- !private ["10Starscream27FoundationHTTPServerHandlerC", "HTTPWSHeader"]
+- !private ["10Starscream27FoundationHTTPServerHandlerC", "NSDictionary"]
+- ["10Starscream27FoundationHTTPServerHandlerC", "NSString"]
+- ["10Starscream27FoundationHTTPServerHandlerC", "String"]
+- !private ["10Starscream27FoundationHTTPServerHandlerC", "UInt8"]
+- ["10Starscream27FoundationHTTPServerHandlerC", "buffer"]
+- ["10Starscream27FoundationHTTPServerHandlerC", "createResponse"]
+- ["10Starscream27FoundationHTTPServerHandlerC", "deinit"]
+- ["10Starscream27FoundationHTTPServerHandlerC", "delegate"]
+- ["10Starscream27FoundationHTTPServerHandlerC", "getVerb"]
+- ["10Starscream27FoundationHTTPServerHandlerC", "init"]
+- !private ["10Starscream27FoundationHTTPServerHandlerC", "kCFAllocatorDefault"]
+- !private ["10Starscream27FoundationHTTPServerHandlerC", "kCFHTTPVersion1_1"]
+- ["10Starscream27FoundationHTTPServerHandlerC", "parse"]
+- ["10Starscream27FoundationHTTPServerHandlerC", "parseContent"]
+- ["10Starscream27FoundationHTTPServerHandlerC", "register"]
+- !private ["10Starscream9HTTPEventO", "failure"]
+- !private ["10Starscream9HTTPEventO", "success"]
+- !private ["10Starscream18HTTPServerDelegateP", "didReceive"]
+- !private ["10Starscream17HTTPServerHandlerP", "CFHTTPMessageAppendBytes"]
+- !private ["10Starscream17HTTPServerHandlerP", "CFHTTPMessageCopyAllHeaderFields"]
+- !private ["10Starscream17HTTPServerHandlerP", "CFHTTPMessageCopyRequestMethod"]
+- !private ["10Starscream17HTTPServerHandlerP", "CFHTTPMessageCopySerializedMessage"]
+- !private ["10Starscream17HTTPServerHandlerP", "CFHTTPMessageCreateEmpty"]
+- !private ["10Starscream17HTTPServerHandlerP", "CFHTTPMessageCreateResponse"]
+- !private ["10Starscream17HTTPServerHandlerP", "CFHTTPMessageIsHeaderComplete"]
+- !private ["10Starscream17HTTPServerHandlerP", "CFHTTPMessageSetHeaderFieldValue"]
+- ["10Starscream17HTTPServerHandlerP", "Data"]
+- !private ["10Starscream17HTTPServerHandlerP", "HTTPUpgradeError"]
+- !private ["10Starscream17HTTPServerHandlerP", "HTTPWSHeader"]
+- !private ["10Starscream17HTTPServerHandlerP", "String"]
+- !private ["10Starscream17HTTPServerHandlerP", "UInt8"]
+- ["10Starscream17HTTPServerHandlerP", ""]
+- !private ["10Starscream17HTTPServerHandlerP", "buffer"]
+- ["10Starscream17HTTPServerHandlerP", "createResponse"]
+- !private ["10Starscream17HTTPServerHandlerP", "delegate"]
+- !private ["10Starscream17HTTPServerHandlerP", "getVerb"]
+- !private ["10Starscream17HTTPServerHandlerP", "kCFAllocatorDefault"]
+- !private ["10Starscream17HTTPServerHandlerP", "kCFHTTPVersion1_1"]
+- ["10Starscream17HTTPServerHandlerP", "parse"]
+- !private ["10Starscream17HTTPServerHandlerP", "parseContent"]
+- ["10Starscream17HTTPServerHandlerP", "register"]
+- !private ["10Starscream16HTTPUpgradeErrorO", ""]
+- !private ["10Starscream16HTTPUpgradeErrorO", "invalidData"]
+- !private ["10Starscream12HTTPWSHeaderV", "switchProtocolCode"]
+- ["SH", ""]
+- !private ["SH", "append"]
+- !private ["SH", "count"]
+- ["SH", "init"]
+- !private ["SH", "subscript"]
+- !private ["SH", "withUnsafeBytes"]
+- ["SM", ""]
+- !private ["SM", "append"]
+- !private ["SM", "count"]
+- ["SM", "init"]
+- !private ["SM", "withUnsafeBytes"]
+- !private ["10Foundation19MutableDataProtocolP", "append"]
+- !private ["10Foundation19MutableDataProtocolP", "count"]
+- ["10Foundation19MutableDataProtocolP", "init"]
+- !private ["10Foundation19MutableDataProtocolP", "withUnsafeBytes"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectP", ""]
+- ["Sk", ""]
+- !private ["Sk", "append"]
+- !private ["Sk", "count"]
+- ["Sk", "init"]
+- !private ["Sk", "withUnsafeBytes"]
+- ["Sm", ""]
+- !private ["Sm", "append"]
+- !private ["Sm", "count"]
+- ["Sm", "init"]
+- !private ["Sm", "withUnsafeBytes"]
+- !private ["10Foundation20ReferenceConvertibleP", "append"]
+- !private ["10Foundation20ReferenceConvertibleP", "count"]
+- ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "withUnsafeBytes"]
+- !private ["ST", "Element"]
+- !private ["ST", "Iterator"]
+- ["ST", ""]
+- !private ["ST", "append"]
+- !private ["ST", "count"]
+- ["ST", "init"]
+- !private ["ST", "subscript"]
+- !private ["ST", "withUnsafeBytes"]
+- !private ["s9UnmanagedV", "takeRetainedValue"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s19_HasContiguousBytesP", "append"]
+- !private ["s19_HasContiguousBytesP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- ["s21_ObjectiveCBridgeableP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "withUnsafeBytes"]
+depends-nominal:
+- !private "Sa"
+- "SK"
+- !private "s7CVarArgP"
+- "Sl"
+- "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "10Foundation4DataV"
+- "10Foundation12DataProtocolP"
+- "Se"
+- !private "SD"
+- "SE"
+- "SQ"
+- !private "s5ErrorP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "10Starscream27FoundationHTTPServerHandlerC"
+- !private "10Starscream9HTTPEventO"
+- !private "10Starscream18HTTPServerDelegateP"
+- "10Starscream17HTTPServerHandlerP"
+- !private "10Starscream16HTTPUpgradeErrorO"
+- !private "10Starscream12HTTPWSHeaderV"
+- "SH"
+- "SM"
+- "10Foundation19MutableDataProtocolP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "Sk"
+- "Sm"
+- "10Foundation20ReferenceConvertibleP"
+- "ST"
+- !private "s9UnmanagedV"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Target Support Files/Starscream/Starscream-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/module.map"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Starscream.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "12b2d890a1c17f4c6863527a73e43077"

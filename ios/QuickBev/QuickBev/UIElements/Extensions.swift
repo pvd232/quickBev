@@ -169,6 +169,8 @@ extension UIView {
                         self.textAlignment = .center
                     case .text(let value):
                         self.text = value
+                    case .textColor:
+                        self.textColor = .black
                     }
                 }
             default:

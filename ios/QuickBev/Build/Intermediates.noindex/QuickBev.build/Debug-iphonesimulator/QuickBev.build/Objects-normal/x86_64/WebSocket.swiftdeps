@@ -1,0 +1,821 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "WebSocketConnection"
+- "WebSocketConnectionDelegate"
+- "WebSocketTaskConnection"
+provides-nominal:
+- "8QuickBev19WebSocketConnectionP"
+- "8QuickBev27WebSocketConnectionDelegateP"
+- "8QuickBev23WebSocketTaskConnectionC"
+provides-member:
+- ["8QuickBev19WebSocketConnectionP", ""]
+- ["8QuickBev27WebSocketConnectionDelegateP", ""]
+- ["8QuickBev23WebSocketTaskConnectionC", ""]
+provides-dynamic-lookup:
+- "connect"
+- "delegate"
+- "delegateQueue"
+- "disconnect"
+- "isConnected"
+- "listen"
+- "ping"
+- "send"
+- "shared"
+- "urlSession"
+- "webSocketTask"
+depends-top-level:
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- "CastingPrecedence"
+- "Data"
+- "Encodable"
+- "Error"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- !private "JSONEncoder"
+- "NSObject"
+- "OperationQueue"
+- "String"
+- "StringLiteralType"
+- "URL"
+- "URLSession"
+- "URLSessionWebSocketDelegate"
+- "URLSessionWebSocketTask"
+- "Void"
+- "WebSocketConnection"
+- "WebSocketConnectionDelegate"
+- "WebSocketTaskConnection"
+- !private "delegateQueue"
+- "fatalError"
+- !private "isConnected"
+- !private "listen"
+- !private "ping"
+- "print"
+- !private "urlSession"
+- !private "webSocketTask"
+depends-member:
+- !private ["9Alamofire0A8ExtendedP", "default"]
+- ["s7CVarArgP", "CloseCode"]
+- !private ["s7CVarArgP", "JSONEncoder"]
+- !private ["s7CVarArgP", "Message"]
+- ["s7CVarArgP", "OperationQueue"]
+- !private ["s7CVarArgP", "URL"]
+- ["s7CVarArgP", "URLSession"]
+- ["s7CVarArgP", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["s7CVarArgP", "URLSessionWebSocketTask"]
+- ["s7CVarArgP", "WebSocketTaskConnection"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "cancel"]
+- ["s7CVarArgP", "connect"]
+- !private ["s7CVarArgP", "default"]
+- ["s7CVarArgP", "delegate"]
+- !private ["s7CVarArgP", "delegateQueue"]
+- ["s7CVarArgP", "disconnect"]
+- !private ["s7CVarArgP", "fatalError"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isConnected"]
+- !private ["s7CVarArgP", "listen"]
+- !private ["s7CVarArgP", "ping"]
+- !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "receive"]
+- !private ["s7CVarArgP", "resume"]
+- ["s7CVarArgP", "send"]
+- !private ["s7CVarArgP", "sendPing"]
+- ["s7CVarArgP", "urlSession"]
+- ["s7CVarArgP", "urlSessionDidFinishEvents"]
+- !private ["s7CVarArgP", "webSocketTask"]
+- !private ["So30NSURLSessionWebSocketCloseCodeV", "goingAway"]
+- ["s28CustomDebugStringConvertibleP", "CloseCode"]
+- !private ["s28CustomDebugStringConvertibleP", "JSONEncoder"]
+- !private ["s28CustomDebugStringConvertibleP", "Message"]
+- ["s28CustomDebugStringConvertibleP", "OperationQueue"]
+- !private ["s28CustomDebugStringConvertibleP", "URL"]
+- ["s28CustomDebugStringConvertibleP", "URLSession"]
+- ["s28CustomDebugStringConvertibleP", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["s28CustomDebugStringConvertibleP", "URLSessionWebSocketTask"]
+- ["s28CustomDebugStringConvertibleP", "WebSocketTaskConnection"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "cancel"]
+- ["s28CustomDebugStringConvertibleP", "connect"]
+- !private ["s28CustomDebugStringConvertibleP", "default"]
+- ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "delegateQueue"]
+- ["s28CustomDebugStringConvertibleP", "disconnect"]
+- !private ["s28CustomDebugStringConvertibleP", "fatalError"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isConnected"]
+- !private ["s28CustomDebugStringConvertibleP", "listen"]
+- !private ["s28CustomDebugStringConvertibleP", "ping"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "receive"]
+- !private ["s28CustomDebugStringConvertibleP", "resume"]
+- ["s28CustomDebugStringConvertibleP", "send"]
+- !private ["s28CustomDebugStringConvertibleP", "sendPing"]
+- ["s28CustomDebugStringConvertibleP", "urlSession"]
+- ["s28CustomDebugStringConvertibleP", "urlSessionDidFinishEvents"]
+- !private ["s28CustomDebugStringConvertibleP", "webSocketTask"]
+- !private ["s17CustomReflectableP", "cancel"]
+- !private ["s17CustomReflectableP", "receive"]
+- !private ["s17CustomReflectableP", "resume"]
+- !private ["s17CustomReflectableP", "send"]
+- !private ["s17CustomReflectableP", "sendPing"]
+- !private ["s17CustomReflectableP", "webSocketTask"]
+- ["s23CustomStringConvertibleP", "CloseCode"]
+- !private ["s23CustomStringConvertibleP", "JSONEncoder"]
+- !private ["s23CustomStringConvertibleP", "Message"]
+- ["s23CustomStringConvertibleP", "OperationQueue"]
+- !private ["s23CustomStringConvertibleP", "URL"]
+- ["s23CustomStringConvertibleP", "URLSession"]
+- ["s23CustomStringConvertibleP", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["s23CustomStringConvertibleP", "URLSessionWebSocketTask"]
+- ["s23CustomStringConvertibleP", "WebSocketTaskConnection"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["s23CustomStringConvertibleP", "cancel"]
+- ["s23CustomStringConvertibleP", "connect"]
+- !private ["s23CustomStringConvertibleP", "default"]
+- ["s23CustomStringConvertibleP", "delegate"]
+- !private ["s23CustomStringConvertibleP", "delegateQueue"]
+- ["s23CustomStringConvertibleP", "disconnect"]
+- !private ["s23CustomStringConvertibleP", "fatalError"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isConnected"]
+- !private ["s23CustomStringConvertibleP", "listen"]
+- !private ["s23CustomStringConvertibleP", "ping"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "receive"]
+- !private ["s23CustomStringConvertibleP", "resume"]
+- ["s23CustomStringConvertibleP", "send"]
+- !private ["s23CustomStringConvertibleP", "sendPing"]
+- ["s23CustomStringConvertibleP", "urlSession"]
+- ["s23CustomStringConvertibleP", "urlSessionDidFinishEvents"]
+- !private ["s23CustomStringConvertibleP", "webSocketTask"]
+- !private ["Se", "cancel"]
+- !private ["Se", "init"]
+- !private ["Se", "receive"]
+- !private ["Se", "resume"]
+- !private ["Se", "send"]
+- !private ["Se", "sendPing"]
+- !private ["Se", "webSocketTask"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- !private ["SE", "cancel"]
+- !private ["SE", "init"]
+- !private ["SE", "receive"]
+- !private ["SE", "resume"]
+- !private ["SE", "send"]
+- !private ["SE", "sendPing"]
+- !private ["SE", "webSocketTask"]
+- ["SQ", "CloseCode"]
+- !private ["SQ", "JSONEncoder"]
+- !private ["SQ", "Message"]
+- ["SQ", "OperationQueue"]
+- !private ["SQ", "URL"]
+- ["SQ", "URLSession"]
+- ["SQ", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["SQ", "URLSessionWebSocketTask"]
+- ["SQ", "WebSocketTaskConnection"]
+- ["SQ", ""]
+- !private ["SQ", "cancel"]
+- ["SQ", "connect"]
+- !private ["SQ", "default"]
+- ["SQ", "delegate"]
+- !private ["SQ", "delegateQueue"]
+- ["SQ", "disconnect"]
+- !private ["SQ", "failure"]
+- !private ["SQ", "fatalError"]
+- !private ["SQ", "goingAway"]
+- ["SQ", "init"]
+- !private ["SQ", "isConnected"]
+- !private ["SQ", "listen"]
+- !private ["SQ", "ping"]
+- !private ["SQ", "print"]
+- !private ["SQ", "receive"]
+- !private ["SQ", "resume"]
+- ["SQ", "send"]
+- !private ["SQ", "sendPing"]
+- !private ["SQ", "success"]
+- ["SQ", "urlSession"]
+- ["SQ", "urlSessionDidFinishEvents"]
+- !private ["SQ", "webSocketTask"]
+- !private ["s23ExpressibleByNilLiteralP", "cancel"]
+- !private ["s23ExpressibleByNilLiteralP", "receive"]
+- !private ["s23ExpressibleByNilLiteralP", "resume"]
+- !private ["s23ExpressibleByNilLiteralP", "send"]
+- !private ["s23ExpressibleByNilLiteralP", "sendPing"]
+- !private ["s23ExpressibleByNilLiteralP", "webSocketTask"]
+- !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
+- ["SH", "CloseCode"]
+- !private ["SH", "JSONEncoder"]
+- !private ["SH", "Message"]
+- ["SH", "OperationQueue"]
+- !private ["SH", "URL"]
+- ["SH", "URLSession"]
+- ["SH", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["SH", "URLSessionWebSocketTask"]
+- ["SH", "WebSocketTaskConnection"]
+- ["SH", ""]
+- !private ["SH", "cancel"]
+- ["SH", "connect"]
+- !private ["SH", "default"]
+- ["SH", "delegate"]
+- !private ["SH", "delegateQueue"]
+- ["SH", "disconnect"]
+- !private ["SH", "failure"]
+- !private ["SH", "fatalError"]
+- !private ["SH", "goingAway"]
+- ["SH", "init"]
+- !private ["SH", "isConnected"]
+- !private ["SH", "listen"]
+- !private ["SH", "ping"]
+- !private ["SH", "print"]
+- !private ["SH", "receive"]
+- !private ["SH", "resume"]
+- ["SH", "send"]
+- !private ["SH", "sendPing"]
+- !private ["SH", "success"]
+- ["SH", "urlSession"]
+- ["SH", "urlSessionDidFinishEvents"]
+- !private ["SH", "webSocketTask"]
+- !private ["10Foundation11JSONEncoderC", "encode"]
+- !private ["10Foundation11JSONEncoderC", "init"]
+- !private ["So25NSURLSessionWebSocketTaskC10FoundationE7MessageO", "data"]
+- !private ["So25NSURLSessionWebSocketTaskC10FoundationE7MessageO", "string"]
+- ["So8NSCodingP", ""]
+- ["So9NSCopyingP", "CloseCode"]
+- !private ["So9NSCopyingP", "Message"]
+- !private ["So9NSCopyingP", "cancel"]
+- !private ["So9NSCopyingP", "cancelWithCloseCode"]
+- !private ["So9NSCopyingP", "default"]
+- !private ["So9NSCopyingP", "receive"]
+- !private ["So9NSCopyingP", "resume"]
+- !private ["So9NSCopyingP", "send"]
+- !private ["So9NSCopyingP", "sendPing"]
+- !private ["So9NSCopyingP", "sendPingWithPongReceiveHandler"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "CloseCode"]
+- ["So8NSObjectC", "Data"]
+- ["So8NSObjectC", "Encodable"]
+- !private ["So8NSObjectC", "JSONEncoder"]
+- !private ["So8NSObjectC", "Message"]
+- ["So8NSObjectC", "OperationQueue"]
+- ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "URL"]
+- ["So8NSObjectC", "URLSession"]
+- ["So8NSObjectC", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- ["So8NSObjectC", "URLSessionWebSocketTask"]
+- ["So8NSObjectC", "Void"]
+- ["So8NSObjectC", "WebSocketConnectionDelegate"]
+- ["So8NSObjectC", "WebSocketTaskConnection"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "cancel"]
+- !private ["So8NSObjectC", "cancelWithCloseCode"]
+- ["So8NSObjectC", "connect"]
+- !private ["So8NSObjectC", "default"]
+- ["So8NSObjectC", "delegate"]
+- ["So8NSObjectC", "delegateQueue"]
+- ["So8NSObjectC", "disconnect"]
+- !private ["So8NSObjectC", "fatalError"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "isConnected"]
+- ["So8NSObjectC", "listen"]
+- ["So8NSObjectC", "ping"]
+- !private ["So8NSObjectC", "print"]
+- !private ["So8NSObjectC", "receive"]
+- !private ["So8NSObjectC", "resume"]
+- ["So8NSObjectC", "send"]
+- !private ["So8NSObjectC", "sendPing"]
+- !private ["So8NSObjectC", "sendPingWithPongReceiveHandler"]
+- !private ["So8NSObjectC", "sessionWithConfiguration"]
+- ["So8NSObjectC", "shared"]
+- ["So8NSObjectC", "urlSession"]
+- ["So8NSObjectC", "urlSessionDidFinishEvents"]
+- ["So8NSObjectC", "webSocketTask"]
+- !private ["So8NSObjectC", "webSocketTaskWithRequest"]
+- !private ["So8NSObjectC", "webSocketTaskWithURL"]
+- ["So8NSObjectP", "CloseCode"]
+- ["So8NSObjectP", "Data"]
+- ["So8NSObjectP", "Encodable"]
+- !private ["So8NSObjectP", "JSONEncoder"]
+- !private ["So8NSObjectP", "Message"]
+- ["So8NSObjectP", "OperationQueue"]
+- !private ["So8NSObjectP", "URL"]
+- ["So8NSObjectP", "URLSession"]
+- ["So8NSObjectP", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- ["So8NSObjectP", "URLSessionWebSocketTask"]
+- ["So8NSObjectP", "WebSocketConnectionDelegate"]
+- ["So8NSObjectP", "WebSocketTaskConnection"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "cancel"]
+- !private ["So8NSObjectP", "cancelWithCloseCode"]
+- ["So8NSObjectP", "connect"]
+- !private ["So8NSObjectP", "default"]
+- ["So8NSObjectP", "deinit"]
+- ["So8NSObjectP", "delegate"]
+- ["So8NSObjectP", "delegateQueue"]
+- ["So8NSObjectP", "disconnect"]
+- !private ["So8NSObjectP", "fatalError"]
+- ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "isConnected"]
+- ["So8NSObjectP", "listen"]
+- ["So8NSObjectP", "ping"]
+- !private ["So8NSObjectP", "print"]
+- !private ["So8NSObjectP", "receive"]
+- !private ["So8NSObjectP", "resume"]
+- ["So8NSObjectP", "send"]
+- !private ["So8NSObjectP", "sendPing"]
+- !private ["So8NSObjectP", "sendPingWithPongReceiveHandler"]
+- !private ["So8NSObjectP", "sessionWithConfiguration"]
+- ["So8NSObjectP", "shared"]
+- ["So8NSObjectP", "urlSession"]
+- ["So8NSObjectP", "urlSessionDidFinishEvents"]
+- ["So8NSObjectP", "webSocketTask"]
+- !private ["So8NSObjectP", "webSocketTaskWithRequest"]
+- !private ["So8NSObjectP", "webSocketTaskWithURL"]
+- ["So16NSOperationQueueC", "init"]
+- !private ["Sq", "cancel"]
+- !private ["Sq", "receive"]
+- !private ["Sq", "resume"]
+- !private ["Sq", "send"]
+- !private ["Sq", "sendPing"]
+- !private ["Sq", "webSocketTask"]
+- ["So19NSProgressReportingP", "CloseCode"]
+- !private ["So19NSProgressReportingP", "Message"]
+- !private ["So19NSProgressReportingP", "cancel"]
+- !private ["So19NSProgressReportingP", "cancelWithCloseCode"]
+- ["So19NSProgressReportingP", "init"]
+- !private ["So19NSProgressReportingP", "receive"]
+- !private ["So19NSProgressReportingP", "resume"]
+- !private ["So19NSProgressReportingP", "send"]
+- !private ["So19NSProgressReportingP", "sendPing"]
+- !private ["So19NSProgressReportingP", "sendPingWithPongReceiveHandler"]
+- !private ["SY", "goingAway"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["s6ResultO", "failure"]
+- !private ["s6ResultO", "success"]
+- ["7Combine9SchedulerP", "init"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s27StringInterpolationProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- !private ["7Combine15TopLevelEncoderP", "encode"]
+- !private ["7Combine15TopLevelEncoderP", "init"]
+- !private ["10Foundation3URLV", "init"]
+- !private ["9Alamofire14URLConvertibleP", "init"]
+- !private ["So12NSURLSessionC", "init"]
+- !private ["So12NSURLSessionC", "webSocketTask"]
+- !private ["So25NSURLSessionConfigurationC", "default"]
+- !private ["So20NSURLSessionDelegateP", "JSONEncoder"]
+- ["So20NSURLSessionDelegateP", "OperationQueue"]
+- !private ["So20NSURLSessionDelegateP", "URL"]
+- ["So20NSURLSessionDelegateP", "URLSession"]
+- ["So20NSURLSessionDelegateP", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["So20NSURLSessionDelegateP", "URLSessionWebSocketTask"]
+- ["So20NSURLSessionDelegateP", "WebSocketTaskConnection"]
+- ["So20NSURLSessionDelegateP", ""]
+- ["So20NSURLSessionDelegateP", "connect"]
+- ["So20NSURLSessionDelegateP", "deinit"]
+- ["So20NSURLSessionDelegateP", "delegate"]
+- ["So20NSURLSessionDelegateP", "delegateQueue"]
+- ["So20NSURLSessionDelegateP", "disconnect"]
+- !private ["So20NSURLSessionDelegateP", "fatalError"]
+- ["So20NSURLSessionDelegateP", "init"]
+- ["So20NSURLSessionDelegateP", "isConnected"]
+- ["So20NSURLSessionDelegateP", "listen"]
+- ["So20NSURLSessionDelegateP", "ping"]
+- !private ["So20NSURLSessionDelegateP", "print"]
+- ["So20NSURLSessionDelegateP", "send"]
+- ["So20NSURLSessionDelegateP", "shared"]
+- ["So20NSURLSessionDelegateP", "urlSession"]
+- ["So20NSURLSessionDelegateP", "urlSessionDidFinishEvents"]
+- ["So20NSURLSessionDelegateP", "webSocketTask"]
+- ["So16NSURLSessionTaskC", "CloseCode"]
+- !private ["So16NSURLSessionTaskC", "Message"]
+- ["So16NSURLSessionTaskC", ""]
+- !private ["So16NSURLSessionTaskC", "cancel"]
+- !private ["So16NSURLSessionTaskC", "cancelWithCloseCode"]
+- !private ["So16NSURLSessionTaskC", "receive"]
+- !private ["So16NSURLSessionTaskC", "resume"]
+- !private ["So16NSURLSessionTaskC", "send"]
+- !private ["So16NSURLSessionTaskC", "sendPing"]
+- !private ["So16NSURLSessionTaskC", "sendPingWithPongReceiveHandler"]
+- !private ["So24NSURLSessionTaskDelegateP", "JSONEncoder"]
+- ["So24NSURLSessionTaskDelegateP", "OperationQueue"]
+- !private ["So24NSURLSessionTaskDelegateP", "URL"]
+- ["So24NSURLSessionTaskDelegateP", "URLSession"]
+- ["So24NSURLSessionTaskDelegateP", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["So24NSURLSessionTaskDelegateP", "URLSessionWebSocketTask"]
+- ["So24NSURLSessionTaskDelegateP", "WebSocketTaskConnection"]
+- ["So24NSURLSessionTaskDelegateP", ""]
+- ["So24NSURLSessionTaskDelegateP", "connect"]
+- ["So24NSURLSessionTaskDelegateP", "deinit"]
+- ["So24NSURLSessionTaskDelegateP", "delegate"]
+- ["So24NSURLSessionTaskDelegateP", "delegateQueue"]
+- ["So24NSURLSessionTaskDelegateP", "disconnect"]
+- !private ["So24NSURLSessionTaskDelegateP", "fatalError"]
+- ["So24NSURLSessionTaskDelegateP", "init"]
+- ["So24NSURLSessionTaskDelegateP", "isConnected"]
+- ["So24NSURLSessionTaskDelegateP", "listen"]
+- ["So24NSURLSessionTaskDelegateP", "ping"]
+- !private ["So24NSURLSessionTaskDelegateP", "print"]
+- ["So24NSURLSessionTaskDelegateP", "send"]
+- ["So24NSURLSessionTaskDelegateP", "shared"]
+- ["So24NSURLSessionTaskDelegateP", "urlSession"]
+- ["So24NSURLSessionTaskDelegateP", "urlSessionDidFinishEvents"]
+- ["So24NSURLSessionTaskDelegateP", "webSocketTask"]
+- !private ["So29NSURLSessionWebSocketDelegateP", "JSONEncoder"]
+- ["So29NSURLSessionWebSocketDelegateP", "OperationQueue"]
+- !private ["So29NSURLSessionWebSocketDelegateP", "URL"]
+- ["So29NSURLSessionWebSocketDelegateP", "URLSession"]
+- ["So29NSURLSessionWebSocketDelegateP", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["So29NSURLSessionWebSocketDelegateP", "URLSessionWebSocketTask"]
+- ["So29NSURLSessionWebSocketDelegateP", "WebSocketTaskConnection"]
+- ["So29NSURLSessionWebSocketDelegateP", ""]
+- ["So29NSURLSessionWebSocketDelegateP", "connect"]
+- ["So29NSURLSessionWebSocketDelegateP", "deinit"]
+- ["So29NSURLSessionWebSocketDelegateP", "delegate"]
+- ["So29NSURLSessionWebSocketDelegateP", "delegateQueue"]
+- ["So29NSURLSessionWebSocketDelegateP", "disconnect"]
+- !private ["So29NSURLSessionWebSocketDelegateP", "fatalError"]
+- ["So29NSURLSessionWebSocketDelegateP", "init"]
+- ["So29NSURLSessionWebSocketDelegateP", "isConnected"]
+- ["So29NSURLSessionWebSocketDelegateP", "listen"]
+- ["So29NSURLSessionWebSocketDelegateP", "ping"]
+- !private ["So29NSURLSessionWebSocketDelegateP", "print"]
+- ["So29NSURLSessionWebSocketDelegateP", "send"]
+- ["So29NSURLSessionWebSocketDelegateP", "shared"]
+- ["So29NSURLSessionWebSocketDelegateP", "urlSession"]
+- ["So29NSURLSessionWebSocketDelegateP", "urlSessionDidFinishEvents"]
+- ["So29NSURLSessionWebSocketDelegateP", "webSocketTask"]
+- ["So25NSURLSessionWebSocketTaskC", "CloseCode"]
+- !private ["So25NSURLSessionWebSocketTaskC", "Message"]
+- !private ["So25NSURLSessionWebSocketTaskC", "cancel"]
+- !private ["So25NSURLSessionWebSocketTaskC", "receive"]
+- !private ["So25NSURLSessionWebSocketTaskC", "resume"]
+- !private ["So25NSURLSessionWebSocketTaskC", "send"]
+- !private ["So25NSURLSessionWebSocketTaskC", "sendPing"]
+- ["8QuickBev19WebSocketConnectionP", "Encodable"]
+- !private ["8QuickBev19WebSocketConnectionP", "JSONEncoder"]
+- ["8QuickBev19WebSocketConnectionP", "OperationQueue"]
+- ["8QuickBev19WebSocketConnectionP", "String"]
+- !private ["8QuickBev19WebSocketConnectionP", "URL"]
+- ["8QuickBev19WebSocketConnectionP", "URLSession"]
+- ["8QuickBev19WebSocketConnectionP", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["8QuickBev19WebSocketConnectionP", "URLSessionWebSocketTask"]
+- ["8QuickBev19WebSocketConnectionP", "WebSocketConnectionDelegate"]
+- ["8QuickBev19WebSocketConnectionP", "WebSocketTaskConnection"]
+- ["8QuickBev19WebSocketConnectionP", ""]
+- ["8QuickBev19WebSocketConnectionP", "connect"]
+- ["8QuickBev19WebSocketConnectionP", "delegate"]
+- !private ["8QuickBev19WebSocketConnectionP", "delegateQueue"]
+- ["8QuickBev19WebSocketConnectionP", "disconnect"]
+- !private ["8QuickBev19WebSocketConnectionP", "fatalError"]
+- ["8QuickBev19WebSocketConnectionP", "init"]
+- !private ["8QuickBev19WebSocketConnectionP", "isConnected"]
+- !private ["8QuickBev19WebSocketConnectionP", "listen"]
+- !private ["8QuickBev19WebSocketConnectionP", "ping"]
+- !private ["8QuickBev19WebSocketConnectionP", "print"]
+- ["8QuickBev19WebSocketConnectionP", "send"]
+- ["8QuickBev19WebSocketConnectionP", "urlSession"]
+- ["8QuickBev19WebSocketConnectionP", "urlSessionDidFinishEvents"]
+- !private ["8QuickBev19WebSocketConnectionP", "webSocketTask"]
+- ["8QuickBev27WebSocketConnectionDelegateP", "Data"]
+- ["8QuickBev27WebSocketConnectionDelegateP", "Error"]
+- ["8QuickBev27WebSocketConnectionDelegateP", "String"]
+- ["8QuickBev27WebSocketConnectionDelegateP", "WebSocketConnection"]
+- ["8QuickBev27WebSocketConnectionDelegateP", "onConnected"]
+- ["8QuickBev27WebSocketConnectionDelegateP", "onDisconnected"]
+- ["8QuickBev27WebSocketConnectionDelegateP", "onError"]
+- ["8QuickBev27WebSocketConnectionDelegateP", "onMessage"]
+- ["8QuickBev23WebSocketTaskConnectionC", "Bool"]
+- ["8QuickBev23WebSocketTaskConnectionC", "Data"]
+- ["8QuickBev23WebSocketTaskConnectionC", "Encodable"]
+- !private ["8QuickBev23WebSocketTaskConnectionC", "JSONEncoder"]
+- ["8QuickBev23WebSocketTaskConnectionC", "OperationQueue"]
+- ["8QuickBev23WebSocketTaskConnectionC", "String"]
+- !private ["8QuickBev23WebSocketTaskConnectionC", "URL"]
+- ["8QuickBev23WebSocketTaskConnectionC", "URLSession"]
+- ["8QuickBev23WebSocketTaskConnectionC", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- ["8QuickBev23WebSocketTaskConnectionC", "URLSessionWebSocketTask"]
+- ["8QuickBev23WebSocketTaskConnectionC", "Void"]
+- ["8QuickBev23WebSocketTaskConnectionC", "WebSocketConnectionDelegate"]
+- ["8QuickBev23WebSocketTaskConnectionC", "WebSocketTaskConnection"]
+- ["8QuickBev23WebSocketTaskConnectionC", ""]
+- ["8QuickBev23WebSocketTaskConnectionC", "connect"]
+- ["8QuickBev23WebSocketTaskConnectionC", "deinit"]
+- ["8QuickBev23WebSocketTaskConnectionC", "delegate"]
+- !private ["8QuickBev23WebSocketTaskConnectionC", "delegateQueue"]
+- ["8QuickBev23WebSocketTaskConnectionC", "disconnect"]
+- !private ["8QuickBev23WebSocketTaskConnectionC", "fatalError"]
+- ["8QuickBev23WebSocketTaskConnectionC", "init"]
+- !private ["8QuickBev23WebSocketTaskConnectionC", "isConnected"]
+- ["8QuickBev23WebSocketTaskConnectionC", "listen"]
+- ["8QuickBev23WebSocketTaskConnectionC", "ping"]
+- !private ["8QuickBev23WebSocketTaskConnectionC", "print"]
+- ["8QuickBev23WebSocketTaskConnectionC", "send"]
+- ["8QuickBev23WebSocketTaskConnectionC", "shared"]
+- ["8QuickBev23WebSocketTaskConnectionC", "urlSession"]
+- ["8QuickBev23WebSocketTaskConnectionC", "urlSessionDidFinishEvents"]
+- !private ["8QuickBev23WebSocketTaskConnectionC", "webSocketTask"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CloseCode"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "JSONEncoder"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Message"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "OperationQueue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "URL"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "URLSession"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "URLSessionWebSocketTask"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "WebSocketTaskConnection"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cancel"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "connect"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "default"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delegateQueue"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "disconnect"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isConnected"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "listen"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ping"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "receive"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "resume"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "send"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sendPing"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "urlSession"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "urlSessionDidFinishEvents"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "webSocketTask"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CloseCode"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "JSONEncoder"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Message"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "OperationQueue"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "URL"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "URLSession"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "URLSessionWebSocketTask"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "WebSocketTaskConnection"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cancel"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "connect"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "default"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "delegate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "delegateQueue"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "disconnect"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "fatalError"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isConnected"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "listen"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ping"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "print"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "receive"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "resume"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "send"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sendPing"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "urlSession"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "urlSessionDidFinishEvents"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "webSocketTask"]
+- !private ["s21_ObjectiveCBridgeableP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "cancel"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "receive"]
+- !private ["s21_ObjectiveCBridgeableP", "resume"]
+- !private ["s21_ObjectiveCBridgeableP", "send"]
+- !private ["s21_ObjectiveCBridgeableP", "sendPing"]
+- !private ["s21_ObjectiveCBridgeableP", "webSocketTask"]
+depends-nominal:
+- !private "9Alamofire0A8ExtendedP"
+- "s7CVarArgP"
+- !private "So30NSURLSessionWebSocketCloseCodeV"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "s26DefaultStringInterpolationV"
+- !private "SE"
+- "SQ"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- "SH"
+- !private "10Foundation11JSONEncoderC"
+- !private "So25NSURLSessionWebSocketTaskC10FoundationE7MessageO"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "So16NSOperationQueueC"
+- !private "Sq"
+- "So19NSProgressReportingP"
+- !private "SY"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s6ResultO"
+- "7Combine9SchedulerP"
+- !private "s27StringInterpolationProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "7Combine15TopLevelEncoderP"
+- !private "10Foundation3URLV"
+- !private "9Alamofire14URLConvertibleP"
+- !private "So12NSURLSessionC"
+- !private "So25NSURLSessionConfigurationC"
+- "So20NSURLSessionDelegateP"
+- "So16NSURLSessionTaskC"
+- "So24NSURLSessionTaskDelegateP"
+- "So29NSURLSessionWebSocketDelegateP"
+- "So25NSURLSessionWebSocketTaskC"
+- "8QuickBev19WebSocketConnectionP"
+- "8QuickBev27WebSocketConnectionDelegateP"
+- "8QuickBev23WebSocketTaskConnectionC"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s34_ExpressibleByFileReferenceLiteralP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Modules/BadgeHub.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Vision.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/AVFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/os.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/MapKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIViewController+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSError+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDS2Service.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseImage.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSErrorMessage.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONDecodable.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONEncodable.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONWebSignature.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponse.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAuthenticationResponse.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDirectoryServerCertificate.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDSProtocolVersion+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTransaction+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformationParameter+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSString+EmptyChecking.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWarning.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSLocalizedString.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSEphemeralKeyPair+Testing.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSwiftTryCatch.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSErrorMessage+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDirectoryServerCertificate+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSException+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseMessageExtension.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformation.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIButton+CustomInitialization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSUICustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTextFieldCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSLabelCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSelectionCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSButtonCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSNavigationBarCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSFooterCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTransaction.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSNotInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAlreadyInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSRuntimeException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSInvalidInputException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONWebEncryption.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSelectionButton.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfo.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe3DS2-Bridging-Header.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSImageLoader.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJSONEncoder.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSACSNetworkingManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSynchronousLocationManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformationManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSJailbreakChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSOSVersionChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDebuggerChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSimulatorChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSIntegrityChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSCategoryLinker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseViewController.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSProgressViewController.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformationParameter.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDirectoryServer.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSEphemeralKeyPair.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSStripe3DS2Error.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSBundleLocator.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSecTypeUtilities.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSData+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSString+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSDictionary+DecodingHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSConfigParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIColor+DefaultColors.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSIPAddress.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIFont+DefaultFonts.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseImageObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSAuthenticationResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseMessageExtensionObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfoObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSCompletionEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSEllipticCurvePoint.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIColor+ThirteenSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSLayoutConstraint+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIView+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWebView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSTextChallengeView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSBrandingView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSProcessingView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSStackView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSExpandableInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeSelectionView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSpacerView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWhitelistView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/module.map"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "c586863d6ba20be81fe98137a1ed2b92"

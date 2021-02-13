@@ -1,0 +1,728 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "NativeEngine"
+provides-nominal:
+- "10Starscream12NativeEngineC"
+provides-member:
+- ["10Starscream12NativeEngineC", ""]
+provides-dynamic-lookup:
+- "broadcast"
+- "delegate"
+- "doRead"
+- "forceStop"
+- "register"
+- "start"
+- "stop"
+- "task"
+- "urlSession"
+- "write"
+depends-top-level:
+- !private "??"
+- "AssignmentPrecedence"
+- "Data"
+- !private "Dictionary"
+- "Engine"
+- "EngineDelegate"
+- "FrameOpCode"
+- !private "HTTPWSHeader"
+- !private "Int"
+- "NSObject"
+- "NativeEngine"
+- "String"
+- !private "StringLiteralType"
+- "UInt16"
+- "URLRequest"
+- "URLSession"
+- !private "URLSessionConfiguration"
+- "URLSessionDataDelegate"
+- "URLSessionWebSocketDelegate"
+- "URLSessionWebSocketTask"
+- "WebSocketEvent"
+- !private "broadcast"
+- !private "delegate"
+- !private "doRead"
+- !private "stop"
+- !private "task"
+- !private "write"
+depends-member:
+- !private ["s18AdditiveArithmeticP", ""]
+- !private ["s18AdditiveArithmeticP", "init"]
+- !private ["SK", ""]
+- !private ["SK", "init"]
+- !private ["Sz", ""]
+- !private ["Sz", "init"]
+- ["s7CVarArgP", "CloseCode"]
+- !private ["s7CVarArgP", "HTTPWSHeader"]
+- !private ["s7CVarArgP", "Int"]
+- !private ["s7CVarArgP", "String"]
+- !private ["s7CVarArgP", "UInt16"]
+- ["s7CVarArgP", "URLSession"]
+- !private ["s7CVarArgP", "URLSessionConfiguration"]
+- ["s7CVarArgP", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["s7CVarArgP", "URLSessionWebSocketTask"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "broadcast"]
+- !private ["s7CVarArgP", "cancel"]
+- !private ["s7CVarArgP", "default"]
+- !private ["s7CVarArgP", "delegate"]
+- !private ["s7CVarArgP", "doRead"]
+- ["s7CVarArgP", "forceStop"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "receive"]
+- ["s7CVarArgP", "register"]
+- !private ["s7CVarArgP", "resume"]
+- !private ["s7CVarArgP", "send"]
+- !private ["s7CVarArgP", "sendPing"]
+- ["s7CVarArgP", "start"]
+- ["s7CVarArgP", "stop"]
+- !private ["s7CVarArgP", "task"]
+- ["s7CVarArgP", "urlSession"]
+- ["s7CVarArgP", "urlSessionDidFinishEvents"]
+- !private ["s7CVarArgP", "webSocketTask"]
+- ["s7CVarArgP", "write"]
+- !private ["So30NSURLSessionWebSocketCloseCodeV", "RawValue"]
+- !private ["So30NSURLSessionWebSocketCloseCodeV", "abnormalClosure"]
+- !private ["So30NSURLSessionWebSocketCloseCodeV", "init"]
+- !private ["So30NSURLSessionWebSocketCloseCodeV", "normalClosure"]
+- !private ["So30NSURLSessionWebSocketCloseCodeV", "rawValue"]
+- !private ["Sl", ""]
+- !private ["Sl", "init"]
+- !private ["SL", ""]
+- !private ["SL", "init"]
+- ["s28CustomDebugStringConvertibleP", "CloseCode"]
+- !private ["s28CustomDebugStringConvertibleP", "HTTPWSHeader"]
+- !private ["s28CustomDebugStringConvertibleP", "Int"]
+- !private ["s28CustomDebugStringConvertibleP", "String"]
+- !private ["s28CustomDebugStringConvertibleP", "UInt16"]
+- ["s28CustomDebugStringConvertibleP", "URLSession"]
+- !private ["s28CustomDebugStringConvertibleP", "URLSessionConfiguration"]
+- ["s28CustomDebugStringConvertibleP", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["s28CustomDebugStringConvertibleP", "URLSessionWebSocketTask"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "broadcast"]
+- !private ["s28CustomDebugStringConvertibleP", "cancel"]
+- !private ["s28CustomDebugStringConvertibleP", "default"]
+- !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "doRead"]
+- ["s28CustomDebugStringConvertibleP", "forceStop"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "normalClosure"]
+- !private ["s28CustomDebugStringConvertibleP", "receive"]
+- ["s28CustomDebugStringConvertibleP", "register"]
+- !private ["s28CustomDebugStringConvertibleP", "resume"]
+- !private ["s28CustomDebugStringConvertibleP", "send"]
+- !private ["s28CustomDebugStringConvertibleP", "sendPing"]
+- ["s28CustomDebugStringConvertibleP", "start"]
+- ["s28CustomDebugStringConvertibleP", "stop"]
+- !private ["s28CustomDebugStringConvertibleP", "task"]
+- ["s28CustomDebugStringConvertibleP", "urlSession"]
+- ["s28CustomDebugStringConvertibleP", "urlSessionDidFinishEvents"]
+- !private ["s28CustomDebugStringConvertibleP", "webSocketTask"]
+- ["s28CustomDebugStringConvertibleP", "write"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "normalClosure"]
+- ["s23CustomStringConvertibleP", "CloseCode"]
+- !private ["s23CustomStringConvertibleP", "HTTPWSHeader"]
+- !private ["s23CustomStringConvertibleP", "Int"]
+- !private ["s23CustomStringConvertibleP", "String"]
+- !private ["s23CustomStringConvertibleP", "UInt16"]
+- ["s23CustomStringConvertibleP", "URLSession"]
+- !private ["s23CustomStringConvertibleP", "URLSessionConfiguration"]
+- ["s23CustomStringConvertibleP", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["s23CustomStringConvertibleP", "URLSessionWebSocketTask"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "broadcast"]
+- !private ["s23CustomStringConvertibleP", "cancel"]
+- !private ["s23CustomStringConvertibleP", "default"]
+- !private ["s23CustomStringConvertibleP", "delegate"]
+- !private ["s23CustomStringConvertibleP", "doRead"]
+- ["s23CustomStringConvertibleP", "forceStop"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "receive"]
+- ["s23CustomStringConvertibleP", "register"]
+- !private ["s23CustomStringConvertibleP", "resume"]
+- !private ["s23CustomStringConvertibleP", "send"]
+- !private ["s23CustomStringConvertibleP", "sendPing"]
+- ["s23CustomStringConvertibleP", "start"]
+- ["s23CustomStringConvertibleP", "stop"]
+- !private ["s23CustomStringConvertibleP", "task"]
+- ["s23CustomStringConvertibleP", "urlSession"]
+- ["s23CustomStringConvertibleP", "urlSessionDidFinishEvents"]
+- !private ["s23CustomStringConvertibleP", "utf8"]
+- !private ["s23CustomStringConvertibleP", "webSocketTask"]
+- ["s23CustomStringConvertibleP", "write"]
+- !private ["Se", "init"]
+- !private ["Se", "normalClosure"]
+- !private ["SE", "init"]
+- !private ["SE", "normalClosure"]
+- !private ["SS10FoundationE8EncodingV", "utf8"]
+- !private ["10Starscream6EngineP", "HTTPWSHeader"]
+- !private ["10Starscream6EngineP", "Int"]
+- !private ["10Starscream6EngineP", "String"]
+- !private ["10Starscream6EngineP", "UInt16"]
+- ["10Starscream6EngineP", "URLSession"]
+- !private ["10Starscream6EngineP", "URLSessionConfiguration"]
+- ["10Starscream6EngineP", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["10Starscream6EngineP", "URLSessionWebSocketTask"]
+- ["10Starscream6EngineP", ""]
+- !private ["10Starscream6EngineP", "broadcast"]
+- !private ["10Starscream6EngineP", "delegate"]
+- !private ["10Starscream6EngineP", "doRead"]
+- ["10Starscream6EngineP", "forceStop"]
+- ["10Starscream6EngineP", "register"]
+- ["10Starscream6EngineP", "start"]
+- ["10Starscream6EngineP", "stop"]
+- !private ["10Starscream6EngineP", "task"]
+- ["10Starscream6EngineP", "urlSession"]
+- ["10Starscream6EngineP", "urlSessionDidFinishEvents"]
+- ["10Starscream6EngineP", "write"]
+- !private ["10Starscream14EngineDelegateP", "didReceive"]
+- ["SQ", "CloseCode"]
+- !private ["SQ", "HTTPWSHeader"]
+- !private ["SQ", "Int"]
+- !private ["SQ", "RawValue"]
+- !private ["SQ", "String"]
+- !private ["SQ", "UInt16"]
+- ["SQ", "URLSession"]
+- !private ["SQ", "URLSessionConfiguration"]
+- ["SQ", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["SQ", "URLSessionWebSocketTask"]
+- ["SQ", ""]
+- !private ["SQ", "abnormalClosure"]
+- ["SQ", "binaryFrame"]
+- !private ["SQ", "broadcast"]
+- !private ["SQ", "cancel"]
+- !private ["SQ", "default"]
+- !private ["SQ", "delegate"]
+- !private ["SQ", "doRead"]
+- !private ["SQ", "failure"]
+- ["SQ", "forceStop"]
+- !private ["SQ", "init"]
+- !private ["SQ", "normalClosure"]
+- ["SQ", "ping"]
+- !private ["SQ", "rawValue"]
+- !private ["SQ", "receive"]
+- ["SQ", "register"]
+- !private ["SQ", "resume"]
+- !private ["SQ", "send"]
+- !private ["SQ", "sendPing"]
+- ["SQ", "start"]
+- ["SQ", "stop"]
+- !private ["SQ", "success"]
+- !private ["SQ", "task"]
+- ["SQ", "textFrame"]
+- ["SQ", "urlSession"]
+- ["SQ", "urlSessionDidFinishEvents"]
+- !private ["SQ", "utf8"]
+- !private ["SQ", "webSocketTask"]
+- ["SQ", "write"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Key"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Value"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", ""]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "normalClosure"]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- ["10Starscream11FrameOpCodeO", "binaryFrame"]
+- ["10Starscream11FrameOpCodeO", "ping"]
+- ["10Starscream11FrameOpCodeO", "textFrame"]
+- !private ["10Starscream12HTTPWSHeaderV", "protocolName"]
+- ["SH", "CloseCode"]
+- !private ["SH", "HTTPWSHeader"]
+- !private ["SH", "Int"]
+- !private ["SH", "RawValue"]
+- !private ["SH", "String"]
+- !private ["SH", "UInt16"]
+- ["SH", "URLSession"]
+- !private ["SH", "URLSessionConfiguration"]
+- ["SH", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["SH", "URLSessionWebSocketTask"]
+- ["SH", ""]
+- !private ["SH", "abnormalClosure"]
+- ["SH", "binaryFrame"]
+- !private ["SH", "broadcast"]
+- !private ["SH", "cancel"]
+- !private ["SH", "default"]
+- !private ["SH", "delegate"]
+- !private ["SH", "doRead"]
+- !private ["SH", "failure"]
+- ["SH", "forceStop"]
+- !private ["SH", "init"]
+- !private ["SH", "normalClosure"]
+- ["SH", "ping"]
+- !private ["SH", "rawValue"]
+- !private ["SH", "receive"]
+- ["SH", "register"]
+- !private ["SH", "resume"]
+- !private ["SH", "send"]
+- !private ["SH", "sendPing"]
+- ["SH", "start"]
+- ["SH", "stop"]
+- !private ["SH", "success"]
+- !private ["SH", "task"]
+- ["SH", "textFrame"]
+- ["SH", "urlSession"]
+- ["SH", "urlSessionDidFinishEvents"]
+- !private ["SH", "utf8"]
+- !private ["SH", "webSocketTask"]
+- ["SH", "write"]
+- !private ["Si", "init"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["So25NSURLSessionWebSocketTaskC10FoundationE7MessageO", "data"]
+- !private ["So25NSURLSessionWebSocketTaskC10FoundationE7MessageO", "string"]
+- !private ["s10MirrorPathP", "init"]
+- ["So8NSCodingP", ""]
+- ["So9NSCopyingP", "CloseCode"]
+- !private ["So9NSCopyingP", "cancel"]
+- !private ["So9NSCopyingP", "cancelWithCloseCode"]
+- !private ["So9NSCopyingP", "default"]
+- !private ["So9NSCopyingP", "receive"]
+- !private ["So9NSCopyingP", "resume"]
+- !private ["So9NSCopyingP", "send"]
+- !private ["So9NSCopyingP", "sendPing"]
+- !private ["So9NSCopyingP", "sendPingWithPongReceiveHandler"]
+- ["So8NSObjectC", "CloseCode"]
+- ["So8NSObjectC", "Data"]
+- ["So8NSObjectC", "EngineDelegate"]
+- ["So8NSObjectC", "FrameOpCode"]
+- !private ["So8NSObjectC", "HTTPWSHeader"]
+- !private ["So8NSObjectC", "Int"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "UInt16"]
+- ["So8NSObjectC", "URLRequest"]
+- ["So8NSObjectC", "URLSession"]
+- !private ["So8NSObjectC", "URLSessionConfiguration"]
+- ["So8NSObjectC", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- ["So8NSObjectC", "URLSessionWebSocketTask"]
+- ["So8NSObjectC", "WebSocketEvent"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "broadcast"]
+- !private ["So8NSObjectC", "cancel"]
+- !private ["So8NSObjectC", "cancelWithCloseCode"]
+- !private ["So8NSObjectC", "default"]
+- ["So8NSObjectC", "delegate"]
+- ["So8NSObjectC", "doRead"]
+- ["So8NSObjectC", "forceStop"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "receive"]
+- ["So8NSObjectC", "register"]
+- !private ["So8NSObjectC", "resume"]
+- !private ["So8NSObjectC", "send"]
+- !private ["So8NSObjectC", "sendPing"]
+- !private ["So8NSObjectC", "sendPingWithPongReceiveHandler"]
+- !private ["So8NSObjectC", "sessionWithConfiguration"]
+- ["So8NSObjectC", "start"]
+- ["So8NSObjectC", "stop"]
+- ["So8NSObjectC", "task"]
+- ["So8NSObjectC", "urlSession"]
+- ["So8NSObjectC", "urlSessionDidFinishEvents"]
+- !private ["So8NSObjectC", "webSocketTask"]
+- !private ["So8NSObjectC", "webSocketTaskWithRequest"]
+- !private ["So8NSObjectC", "webSocketTaskWithURL"]
+- ["So8NSObjectC", "write"]
+- ["So8NSObjectP", "CloseCode"]
+- ["So8NSObjectP", "Data"]
+- ["So8NSObjectP", "EngineDelegate"]
+- ["So8NSObjectP", "FrameOpCode"]
+- !private ["So8NSObjectP", "HTTPWSHeader"]
+- !private ["So8NSObjectP", "Int"]
+- ["So8NSObjectP", "String"]
+- ["So8NSObjectP", "UInt16"]
+- ["So8NSObjectP", "URLRequest"]
+- ["So8NSObjectP", "URLSession"]
+- !private ["So8NSObjectP", "URLSessionConfiguration"]
+- ["So8NSObjectP", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- ["So8NSObjectP", "URLSessionWebSocketTask"]
+- ["So8NSObjectP", "WebSocketEvent"]
+- ["So8NSObjectP", ""]
+- ["So8NSObjectP", "broadcast"]
+- !private ["So8NSObjectP", "cancel"]
+- !private ["So8NSObjectP", "cancelWithCloseCode"]
+- !private ["So8NSObjectP", "default"]
+- ["So8NSObjectP", "deinit"]
+- ["So8NSObjectP", "delegate"]
+- ["So8NSObjectP", "doRead"]
+- ["So8NSObjectP", "forceStop"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "receive"]
+- ["So8NSObjectP", "register"]
+- !private ["So8NSObjectP", "resume"]
+- !private ["So8NSObjectP", "send"]
+- !private ["So8NSObjectP", "sendPing"]
+- !private ["So8NSObjectP", "sendPingWithPongReceiveHandler"]
+- !private ["So8NSObjectP", "sessionWithConfiguration"]
+- ["So8NSObjectP", "start"]
+- ["So8NSObjectP", "stop"]
+- ["So8NSObjectP", "task"]
+- ["So8NSObjectP", "urlSession"]
+- ["So8NSObjectP", "urlSessionDidFinishEvents"]
+- !private ["So8NSObjectP", "webSocketTask"]
+- !private ["So8NSObjectP", "webSocketTaskWithRequest"]
+- !private ["So8NSObjectP", "webSocketTaskWithURL"]
+- ["So8NSObjectP", "write"]
+- ["10Starscream12NativeEngineC", "Data"]
+- ["10Starscream12NativeEngineC", "EngineDelegate"]
+- ["10Starscream12NativeEngineC", "FrameOpCode"]
+- !private ["10Starscream12NativeEngineC", "HTTPWSHeader"]
+- !private ["10Starscream12NativeEngineC", "Int"]
+- ["10Starscream12NativeEngineC", "String"]
+- ["10Starscream12NativeEngineC", "UInt16"]
+- ["10Starscream12NativeEngineC", "URLRequest"]
+- ["10Starscream12NativeEngineC", "URLSession"]
+- !private ["10Starscream12NativeEngineC", "URLSessionConfiguration"]
+- ["10Starscream12NativeEngineC", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- ["10Starscream12NativeEngineC", "URLSessionWebSocketTask"]
+- ["10Starscream12NativeEngineC", "WebSocketEvent"]
+- ["10Starscream12NativeEngineC", ""]
+- !private ["10Starscream12NativeEngineC", "broadcast"]
+- ["10Starscream12NativeEngineC", "deinit"]
+- ["10Starscream12NativeEngineC", "delegate"]
+- !private ["10Starscream12NativeEngineC", "doRead"]
+- ["10Starscream12NativeEngineC", "forceStop"]
+- ["10Starscream12NativeEngineC", "init"]
+- ["10Starscream12NativeEngineC", "register"]
+- ["10Starscream12NativeEngineC", "start"]
+- ["10Starscream12NativeEngineC", "stop"]
+- !private ["10Starscream12NativeEngineC", "task"]
+- ["10Starscream12NativeEngineC", "urlSession"]
+- ["10Starscream12NativeEngineC", "urlSessionDidFinishEvents"]
+- ["10Starscream12NativeEngineC", "write"]
+- !private ["Sj", ""]
+- !private ["Sj", "init"]
+- !private ["Sq", "normalClosure"]
+- ["So19NSProgressReportingP", "CloseCode"]
+- !private ["So19NSProgressReportingP", "cancel"]
+- !private ["So19NSProgressReportingP", "cancelWithCloseCode"]
+- !private ["So19NSProgressReportingP", "receive"]
+- !private ["So19NSProgressReportingP", "resume"]
+- !private ["So19NSProgressReportingP", "send"]
+- !private ["So19NSProgressReportingP", "sendPing"]
+- !private ["So19NSProgressReportingP", "sendPingWithPongReceiveHandler"]
+- !private ["Sm", "init"]
+- !private ["SY", "RawValue"]
+- !private ["SY", "abnormalClosure"]
+- ["SY", "binaryFrame"]
+- !private ["SY", "init"]
+- !private ["SY", "normalClosure"]
+- ["SY", "ping"]
+- !private ["SY", "rawValue"]
+- ["SY", "textFrame"]
+- !private ["SY", "utf8"]
+- !private ["s6ResultO", "failure"]
+- !private ["s6ResultO", "success"]
+- !private ["s10SIMDScalarP", "init"]
+- !private ["ST", ""]
+- !private ["ST", "init"]
+- !private ["SZ", "init"]
+- !private ["s13SignedNumericP", ""]
+- !private ["s13SignedNumericP", "init"]
+- !private ["Sx", ""]
+- !private ["Sx", "init"]
+- !private ["SS", "init"]
+- !private ["Sy", "init"]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", ""]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s6UInt16V", "init"]
+- !private ["So12NSURLSessionC", "init"]
+- !private ["So12NSURLSessionC", "webSocketTask"]
+- !private ["So25NSURLSessionConfigurationC", "default"]
+- !private ["So24NSURLSessionDataDelegateP", "HTTPWSHeader"]
+- !private ["So24NSURLSessionDataDelegateP", "Int"]
+- !private ["So24NSURLSessionDataDelegateP", "String"]
+- !private ["So24NSURLSessionDataDelegateP", "UInt16"]
+- ["So24NSURLSessionDataDelegateP", "URLSession"]
+- !private ["So24NSURLSessionDataDelegateP", "URLSessionConfiguration"]
+- ["So24NSURLSessionDataDelegateP", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["So24NSURLSessionDataDelegateP", "URLSessionWebSocketTask"]
+- ["So24NSURLSessionDataDelegateP", ""]
+- ["So24NSURLSessionDataDelegateP", "broadcast"]
+- ["So24NSURLSessionDataDelegateP", "deinit"]
+- ["So24NSURLSessionDataDelegateP", "delegate"]
+- ["So24NSURLSessionDataDelegateP", "doRead"]
+- ["So24NSURLSessionDataDelegateP", "forceStop"]
+- ["So24NSURLSessionDataDelegateP", "init"]
+- ["So24NSURLSessionDataDelegateP", "register"]
+- ["So24NSURLSessionDataDelegateP", "start"]
+- ["So24NSURLSessionDataDelegateP", "stop"]
+- ["So24NSURLSessionDataDelegateP", "task"]
+- ["So24NSURLSessionDataDelegateP", "urlSession"]
+- ["So24NSURLSessionDataDelegateP", "urlSessionDidFinishEvents"]
+- ["So24NSURLSessionDataDelegateP", "write"]
+- !private ["So20NSURLSessionDelegateP", "HTTPWSHeader"]
+- !private ["So20NSURLSessionDelegateP", "Int"]
+- !private ["So20NSURLSessionDelegateP", "String"]
+- !private ["So20NSURLSessionDelegateP", "UInt16"]
+- ["So20NSURLSessionDelegateP", "URLSession"]
+- !private ["So20NSURLSessionDelegateP", "URLSessionConfiguration"]
+- ["So20NSURLSessionDelegateP", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["So20NSURLSessionDelegateP", "URLSessionWebSocketTask"]
+- ["So20NSURLSessionDelegateP", ""]
+- ["So20NSURLSessionDelegateP", "broadcast"]
+- ["So20NSURLSessionDelegateP", "deinit"]
+- ["So20NSURLSessionDelegateP", "delegate"]
+- ["So20NSURLSessionDelegateP", "doRead"]
+- ["So20NSURLSessionDelegateP", "forceStop"]
+- ["So20NSURLSessionDelegateP", "init"]
+- ["So20NSURLSessionDelegateP", "register"]
+- ["So20NSURLSessionDelegateP", "start"]
+- ["So20NSURLSessionDelegateP", "stop"]
+- ["So20NSURLSessionDelegateP", "task"]
+- ["So20NSURLSessionDelegateP", "urlSession"]
+- ["So20NSURLSessionDelegateP", "urlSessionDidFinishEvents"]
+- ["So20NSURLSessionDelegateP", "write"]
+- ["So16NSURLSessionTaskC", "CloseCode"]
+- ["So16NSURLSessionTaskC", ""]
+- !private ["So16NSURLSessionTaskC", "cancel"]
+- !private ["So16NSURLSessionTaskC", "cancelWithCloseCode"]
+- !private ["So16NSURLSessionTaskC", "receive"]
+- !private ["So16NSURLSessionTaskC", "resume"]
+- !private ["So16NSURLSessionTaskC", "send"]
+- !private ["So16NSURLSessionTaskC", "sendPing"]
+- !private ["So16NSURLSessionTaskC", "sendPingWithPongReceiveHandler"]
+- !private ["So24NSURLSessionTaskDelegateP", "HTTPWSHeader"]
+- !private ["So24NSURLSessionTaskDelegateP", "Int"]
+- !private ["So24NSURLSessionTaskDelegateP", "String"]
+- !private ["So24NSURLSessionTaskDelegateP", "UInt16"]
+- ["So24NSURLSessionTaskDelegateP", "URLSession"]
+- !private ["So24NSURLSessionTaskDelegateP", "URLSessionConfiguration"]
+- ["So24NSURLSessionTaskDelegateP", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["So24NSURLSessionTaskDelegateP", "URLSessionWebSocketTask"]
+- ["So24NSURLSessionTaskDelegateP", ""]
+- ["So24NSURLSessionTaskDelegateP", "broadcast"]
+- ["So24NSURLSessionTaskDelegateP", "deinit"]
+- ["So24NSURLSessionTaskDelegateP", "delegate"]
+- ["So24NSURLSessionTaskDelegateP", "doRead"]
+- ["So24NSURLSessionTaskDelegateP", "forceStop"]
+- ["So24NSURLSessionTaskDelegateP", "init"]
+- ["So24NSURLSessionTaskDelegateP", "register"]
+- ["So24NSURLSessionTaskDelegateP", "start"]
+- ["So24NSURLSessionTaskDelegateP", "stop"]
+- ["So24NSURLSessionTaskDelegateP", "task"]
+- ["So24NSURLSessionTaskDelegateP", "urlSession"]
+- ["So24NSURLSessionTaskDelegateP", "urlSessionDidFinishEvents"]
+- ["So24NSURLSessionTaskDelegateP", "write"]
+- !private ["So29NSURLSessionWebSocketDelegateP", "HTTPWSHeader"]
+- !private ["So29NSURLSessionWebSocketDelegateP", "Int"]
+- !private ["So29NSURLSessionWebSocketDelegateP", "String"]
+- !private ["So29NSURLSessionWebSocketDelegateP", "UInt16"]
+- ["So29NSURLSessionWebSocketDelegateP", "URLSession"]
+- !private ["So29NSURLSessionWebSocketDelegateP", "URLSessionConfiguration"]
+- ["So29NSURLSessionWebSocketDelegateP", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["So29NSURLSessionWebSocketDelegateP", "URLSessionWebSocketTask"]
+- ["So29NSURLSessionWebSocketDelegateP", ""]
+- ["So29NSURLSessionWebSocketDelegateP", "broadcast"]
+- ["So29NSURLSessionWebSocketDelegateP", "deinit"]
+- ["So29NSURLSessionWebSocketDelegateP", "delegate"]
+- ["So29NSURLSessionWebSocketDelegateP", "doRead"]
+- ["So29NSURLSessionWebSocketDelegateP", "forceStop"]
+- ["So29NSURLSessionWebSocketDelegateP", "init"]
+- ["So29NSURLSessionWebSocketDelegateP", "register"]
+- ["So29NSURLSessionWebSocketDelegateP", "start"]
+- ["So29NSURLSessionWebSocketDelegateP", "stop"]
+- ["So29NSURLSessionWebSocketDelegateP", "task"]
+- ["So29NSURLSessionWebSocketDelegateP", "urlSession"]
+- ["So29NSURLSessionWebSocketDelegateP", "urlSessionDidFinishEvents"]
+- ["So29NSURLSessionWebSocketDelegateP", "write"]
+- ["So25NSURLSessionWebSocketTaskC", "CloseCode"]
+- !private ["So25NSURLSessionWebSocketTaskC", "cancel"]
+- !private ["So25NSURLSessionWebSocketTaskC", "receive"]
+- !private ["So25NSURLSessionWebSocketTaskC", "resume"]
+- !private ["So25NSURLSessionWebSocketTaskC", "send"]
+- !private ["So25NSURLSessionWebSocketTaskC", "sendPing"]
+- !private ["SU", "init"]
+- !private ["10Starscream14WebSocketEventO", "binary"]
+- !private ["10Starscream14WebSocketEventO", "connected"]
+- !private ["10Starscream14WebSocketEventO", "disconnected"]
+- !private ["10Starscream14WebSocketEventO", "error"]
+- !private ["10Starscream14WebSocketEventO", "text"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s19_HasContiguousBytesP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CloseCode"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "HTTPWSHeader"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Int"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "String"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UInt16"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "URLSession"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "URLSessionConfiguration"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "URLSessionWebSocketTask"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "broadcast"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cancel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "default"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "doRead"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "forceStop"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "receive"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "register"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "resume"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "send"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sendPing"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "start"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "stop"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "task"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "urlSession"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "urlSessionDidFinishEvents"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "webSocketTask"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "write"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CloseCode"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "HTTPWSHeader"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Int"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "String"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UInt16"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "URLSession"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "URLSessionConfiguration"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "URLSessionDidFinishEventsForBackgroundURLSession"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "URLSessionWebSocketTask"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "broadcast"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cancel"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "default"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "delegate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "doRead"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "forceStop"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "receive"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "register"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "resume"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "send"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sendPing"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "start"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stop"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "task"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "urlSession"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "urlSessionDidFinishEvents"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "webSocketTask"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "write"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "normalClosure"]
+- !private ["s14_StringElementP", "init"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- !private "SK"
+- !private "Sz"
+- "s7CVarArgP"
+- !private "So30NSURLSessionWebSocketCloseCodeV"
+- !private "Sl"
+- !private "SL"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SE"
+- !private "SS10FoundationE8EncodingV"
+- "10Starscream6EngineP"
+- !private "10Starscream14EngineDelegateP"
+- "SQ"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "10Starscream11FrameOpCodeO"
+- !private "10Starscream12HTTPWSHeaderV"
+- "SH"
+- !private "Si"
+- !private "s25LosslessStringConvertibleP"
+- !private "So25NSURLSessionWebSocketTaskC10FoundationE7MessageO"
+- !private "s10MirrorPathP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "10Starscream12NativeEngineC"
+- !private "Sj"
+- !private "Sq"
+- "So19NSProgressReportingP"
+- !private "Sm"
+- "SY"
+- !private "s6ResultO"
+- !private "s10SIMDScalarP"
+- !private "ST"
+- !private "SZ"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "SS"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s6UInt16V"
+- !private "So12NSURLSessionC"
+- !private "So25NSURLSessionConfigurationC"
+- "So24NSURLSessionDataDelegateP"
+- "So20NSURLSessionDelegateP"
+- "So16NSURLSessionTaskC"
+- "So24NSURLSessionTaskDelegateP"
+- "So29NSURLSessionWebSocketDelegateP"
+- "So25NSURLSessionWebSocketTaskC"
+- !private "SU"
+- !private "10Starscream14WebSocketEventO"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s14_StringElementP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Target Support Files/Starscream/Starscream-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/module.map"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Starscream.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "041674b75b9b81bf4dde84e26a92004f"

@@ -16,16 +16,16 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
     @UsesAutoLayout var bottomButtonsViewContainer = ToolbarView()
     
     @UsesAutoLayout var theNightIsYoungStackView = UIStackView()
-    @UsesAutoLayout var goodEveningLabel = UILabel()
-    @UsesAutoLayout var ellipsisLabel = UILabel()
-    @UsesAutoLayout var theNightisYoungLabel = UILabel()
+    @UsesAutoLayout var goodEveningLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
+    @UsesAutoLayout var ellipsisLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
+    @UsesAutoLayout var theNightisYoungLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
     
     @UsesAutoLayout var centerButton = RoundButton()
     
     @UsesAutoLayout var navigationBarChevronArrowImageView = UIImageView()
     @UsesAutoLayout var navigationBarLocationArrowImageView = UIImageView()
     @UsesAutoLayout var navigationBarStackView = UIStackView()
-    @UsesAutoLayout var navigationBarLabel = UILabel()
+    @UsesAutoLayout var navigationBarLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
     var didLayoutBadgeNotification = false
     
     var businesses = [Business]()
@@ -33,7 +33,7 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        self.view.backgroundColor = .systemBackground
+        self.view.backgroundColor = .white
     }
     
     required init?(coder: NSCoder) {

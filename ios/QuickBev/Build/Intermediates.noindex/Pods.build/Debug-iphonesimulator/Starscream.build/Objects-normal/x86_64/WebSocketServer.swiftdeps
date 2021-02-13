@@ -1,0 +1,625 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "WebSocketServer"
+- "ServerConnection"
+provides-nominal:
+- "10Starscream15WebSocketServerC"
+- "10Starscream16ServerConnectionC"
+provides-member:
+- ["10Starscream15WebSocketServerC", ""]
+- ["10Starscream16ServerConnectionC", ""]
+provides-dynamic-lookup:
+- "connectionChanged"
+- "connections"
+- "decompress"
+- "delegate"
+- "didForm"
+- "didReceive"
+- "didUpgrade"
+- "frameHandler"
+- "frameProcessed"
+- "framer"
+- "httpHandler"
+- "id"
+- "listener"
+- "onEvent"
+- "queue"
+- "start"
+- "transport"
+- "uuid"
+- "write"
+depends-top-level:
+- !private "??"
+- "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- "CastingPrecedence"
+- "Connection"
+- "ConnectionDelegate"
+- "ConnectionEvent"
+- "ConnectionState"
+- "Data"
+- !private "Dictionary"
+- "DispatchQueue"
+- "Error"
+- !private "FloatLiteralType"
+- "FoundationHTTPServerHandler"
+- "FrameCollector"
+- "FrameCollectorDelegate"
+- "FrameEvent"
+- "FrameOpCode"
+- "FramerEventClient"
+- "HTTPEvent"
+- "HTTPServerDelegate"
+- !private "IntegerLiteralType"
+- !private "NWEndpoint"
+- "NWListener"
+- !private "NWParameters"
+- !private "NWProtocolTCP"
+- "Server"
+- "ServerConnection"
+- "ServerEvent"
+- "String"
+- "StringLiteralType"
+- "TCPTransport"
+- "TransportEventClient"
+- "UInt16"
+- !private "UUID"
+- !private "UnicodeScalarType"
+- "Void"
+- !private "WSError"
+- "WSFramer"
+- "WebSocketServer"
+- !private "connections"
+- !private "delegate"
+- !private "didUpgrade"
+- !private "frameHandler"
+- !private "framer"
+- !private "httpHandler"
+- !private "id"
+- !private "onEvent"
+- !private "print"
+- !private "queue"
+- !private "transport"
+depends-member:
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "removeValue"]
+- !private ["s7CVarArgP", "subscript"]
+- ["Sl", "init"]
+- !private ["Sl", "removeValue"]
+- !private ["Sl", "subscript"]
+- ["10Starscream10ConnectionP", "FoundationHTTPServerHandler"]
+- ["10Starscream10ConnectionP", "FrameCollector"]
+- !private ["10Starscream10ConnectionP", "UUID"]
+- !private ["10Starscream10ConnectionP", "WSError"]
+- ["10Starscream10ConnectionP", "WSFramer"]
+- ["10Starscream10ConnectionP", ""]
+- ["10Starscream10ConnectionP", "connectionChanged"]
+- ["10Starscream10ConnectionP", "decompress"]
+- !private ["10Starscream10ConnectionP", "delegate"]
+- ["10Starscream10ConnectionP", "didForm"]
+- ["10Starscream10ConnectionP", "didReceive"]
+- !private ["10Starscream10ConnectionP", "didUpgrade"]
+- !private ["10Starscream10ConnectionP", "frameHandler"]
+- ["10Starscream10ConnectionP", "frameProcessed"]
+- !private ["10Starscream10ConnectionP", "framer"]
+- !private ["10Starscream10ConnectionP", "httpHandler"]
+- !private ["10Starscream10ConnectionP", "id"]
+- !private ["10Starscream10ConnectionP", "init"]
+- !private ["10Starscream10ConnectionP", "onEvent"]
+- !private ["10Starscream10ConnectionP", "print"]
+- !private ["10Starscream10ConnectionP", "transport"]
+- !private ["10Starscream10ConnectionP", "uuid"]
+- ["10Starscream10ConnectionP", "write"]
+- ["10Starscream18ConnectionDelegateP", "DispatchQueue"]
+- !private ["10Starscream18ConnectionDelegateP", "NWEndpoint"]
+- !private ["10Starscream18ConnectionDelegateP", "NWListener"]
+- !private ["10Starscream18ConnectionDelegateP", "NWParameters"]
+- !private ["10Starscream18ConnectionDelegateP", "NWProtocolTCP"]
+- ["10Starscream18ConnectionDelegateP", "ServerConnection"]
+- ["10Starscream18ConnectionDelegateP", "String"]
+- !private ["10Starscream18ConnectionDelegateP", "TCPTransport"]
+- !private ["10Starscream18ConnectionDelegateP", "WSError"]
+- ["10Starscream18ConnectionDelegateP", ""]
+- !private ["10Starscream18ConnectionDelegateP", "connections"]
+- ["10Starscream18ConnectionDelegateP", "didReceive"]
+- !private ["10Starscream18ConnectionDelegateP", "listener"]
+- !private ["10Starscream18ConnectionDelegateP", "onEvent"]
+- !private ["10Starscream18ConnectionDelegateP", "queue"]
+- ["10Starscream18ConnectionDelegateP", "start"]
+- !private ["10Starscream15ConnectionEventO", "binary"]
+- !private ["10Starscream15ConnectionEventO", "connected"]
+- !private ["10Starscream15ConnectionEventO", "disconnected"]
+- !private ["10Starscream15ConnectionEventO", "error"]
+- !private ["10Starscream15ConnectionEventO", "ping"]
+- !private ["10Starscream15ConnectionEventO", "pong"]
+- !private ["10Starscream15ConnectionEventO", "text"]
+- ["10Starscream15ConnectionStateO", "cancelled"]
+- ["10Starscream15ConnectionStateO", "connected"]
+- ["10Starscream15ConnectionStateO", "failed"]
+- ["10Starscream15ConnectionStateO", "receive"]
+- ["10Starscream15ConnectionStateO", "shouldReconnect"]
+- ["10Starscream15ConnectionStateO", "viability"]
+- ["10Starscream15ConnectionStateO", "waiting"]
+- !private ["s28CustomDebugStringConvertibleP", "Host"]
+- !private ["s28CustomDebugStringConvertibleP", "Port"]
+- !private ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "hostPort"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "name"]
+- !private ["s28CustomDebugStringConvertibleP", "newConnectionHandler"]
+- !private ["s28CustomDebugStringConvertibleP", "removeValue"]
+- !private ["s28CustomDebugStringConvertibleP", "requiredLocalEndpoint"]
+- !private ["s28CustomDebugStringConvertibleP", "start"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "uuidString"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "removeValue"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "uuidString"]
+- !private ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "removeValue"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "uuidString"]
+- ["Se", "init"]
+- !private ["Se", "removeValue"]
+- !private ["Se", "subscript"]
+- !private ["Se", "uuidString"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- ["SD", "init"]
+- !private ["SD", "removeValue"]
+- !private ["SD", "subscript"]
+- ["So18OS_dispatch_objectC", ""]
+- ["So18OS_dispatch_objectC", "init"]
+- ["So17OS_dispatch_queueC", "init"]
+- ["SE", "init"]
+- !private ["SE", "removeValue"]
+- !private ["SE", "subscript"]
+- !private ["SE", "uuidString"]
+- !private ["SQ", "Host"]
+- !private ["SQ", "Port"]
+- ["SQ", ""]
+- !private ["SQ", "hostPort"]
+- ["SQ", "init"]
+- !private ["SQ", "name"]
+- !private ["SQ", "protocolError"]
+- !private ["SQ", "removeValue"]
+- !private ["SQ", "serverError"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "uuidString"]
+- !private ["s5ErrorP", "init"]
+- !private ["s5ErrorP", "protocolError"]
+- !private ["s5ErrorP", "serverError"]
+- !private ["10Starscream9ErrorTypeO", "protocolError"]
+- !private ["10Starscream9ErrorTypeO", "serverError"]
+- ["10Starscream14FrameCollectorC5EventO", "binary"]
+- ["10Starscream14FrameCollectorC5EventO", "closed"]
+- ["10Starscream14FrameCollectorC5EventO", "error"]
+- ["10Starscream14FrameCollectorC5EventO", "ping"]
+- ["10Starscream14FrameCollectorC5EventO", "pong"]
+- ["10Starscream14FrameCollectorC5EventO", "text"]
+- ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Key"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Value"]
+- ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "removeValue"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "name"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "name"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "name"]
+- !private ["10Starscream27FoundationHTTPServerHandlerC", ""]
+- !private ["10Starscream27FoundationHTTPServerHandlerC", "createResponse"]
+- ["10Starscream27FoundationHTTPServerHandlerC", "init"]
+- !private ["10Starscream27FoundationHTTPServerHandlerC", "parse"]
+- !private ["10Starscream27FoundationHTTPServerHandlerC", "register"]
+- ["10Starscream14FrameCollectorC", "Event"]
+- !private ["10Starscream14FrameCollectorC", "add"]
+- !private ["10Starscream14FrameCollectorC", "delegate"]
+- ["10Starscream14FrameCollectorC", "init"]
+- ["10Starscream22FrameCollectorDelegateP", "FoundationHTTPServerHandler"]
+- ["10Starscream22FrameCollectorDelegateP", "FrameCollector"]
+- !private ["10Starscream22FrameCollectorDelegateP", "UUID"]
+- !private ["10Starscream22FrameCollectorDelegateP", "WSError"]
+- ["10Starscream22FrameCollectorDelegateP", "WSFramer"]
+- ["10Starscream22FrameCollectorDelegateP", ""]
+- ["10Starscream22FrameCollectorDelegateP", "connectionChanged"]
+- ["10Starscream22FrameCollectorDelegateP", "decompress"]
+- !private ["10Starscream22FrameCollectorDelegateP", "delegate"]
+- ["10Starscream22FrameCollectorDelegateP", "didForm"]
+- ["10Starscream22FrameCollectorDelegateP", "didReceive"]
+- !private ["10Starscream22FrameCollectorDelegateP", "didUpgrade"]
+- !private ["10Starscream22FrameCollectorDelegateP", "frameHandler"]
+- ["10Starscream22FrameCollectorDelegateP", "frameProcessed"]
+- !private ["10Starscream22FrameCollectorDelegateP", "framer"]
+- !private ["10Starscream22FrameCollectorDelegateP", "httpHandler"]
+- !private ["10Starscream22FrameCollectorDelegateP", "id"]
+- !private ["10Starscream22FrameCollectorDelegateP", "init"]
+- !private ["10Starscream22FrameCollectorDelegateP", "onEvent"]
+- !private ["10Starscream22FrameCollectorDelegateP", "print"]
+- !private ["10Starscream22FrameCollectorDelegateP", "transport"]
+- !private ["10Starscream22FrameCollectorDelegateP", "uuid"]
+- ["10Starscream22FrameCollectorDelegateP", "write"]
+- ["10Starscream10FrameEventO", "error"]
+- ["10Starscream10FrameEventO", "frame"]
+- !private ["10Starscream6FramerP", "add"]
+- !private ["10Starscream6FramerP", "createWriteFrame"]
+- ["10Starscream6FramerP", "init"]
+- !private ["10Starscream6FramerP", "register"]
+- ["10Starscream17FramerEventClientP", "FoundationHTTPServerHandler"]
+- ["10Starscream17FramerEventClientP", "FrameCollector"]
+- !private ["10Starscream17FramerEventClientP", "UUID"]
+- !private ["10Starscream17FramerEventClientP", "WSError"]
+- ["10Starscream17FramerEventClientP", "WSFramer"]
+- ["10Starscream17FramerEventClientP", ""]
+- ["10Starscream17FramerEventClientP", "connectionChanged"]
+- ["10Starscream17FramerEventClientP", "decompress"]
+- !private ["10Starscream17FramerEventClientP", "delegate"]
+- ["10Starscream17FramerEventClientP", "didForm"]
+- ["10Starscream17FramerEventClientP", "didReceive"]
+- !private ["10Starscream17FramerEventClientP", "didUpgrade"]
+- !private ["10Starscream17FramerEventClientP", "frameHandler"]
+- ["10Starscream17FramerEventClientP", "frameProcessed"]
+- !private ["10Starscream17FramerEventClientP", "framer"]
+- !private ["10Starscream17FramerEventClientP", "httpHandler"]
+- !private ["10Starscream17FramerEventClientP", "id"]
+- !private ["10Starscream17FramerEventClientP", "init"]
+- !private ["10Starscream17FramerEventClientP", "onEvent"]
+- !private ["10Starscream17FramerEventClientP", "print"]
+- !private ["10Starscream17FramerEventClientP", "transport"]
+- !private ["10Starscream17FramerEventClientP", "uuid"]
+- ["10Starscream17FramerEventClientP", "write"]
+- ["10Starscream9HTTPEventO", "failure"]
+- ["10Starscream9HTTPEventO", "success"]
+- ["10Starscream18HTTPServerDelegateP", "FoundationHTTPServerHandler"]
+- ["10Starscream18HTTPServerDelegateP", "FrameCollector"]
+- !private ["10Starscream18HTTPServerDelegateP", "UUID"]
+- !private ["10Starscream18HTTPServerDelegateP", "WSError"]
+- ["10Starscream18HTTPServerDelegateP", "WSFramer"]
+- ["10Starscream18HTTPServerDelegateP", ""]
+- ["10Starscream18HTTPServerDelegateP", "connectionChanged"]
+- ["10Starscream18HTTPServerDelegateP", "decompress"]
+- !private ["10Starscream18HTTPServerDelegateP", "delegate"]
+- ["10Starscream18HTTPServerDelegateP", "didForm"]
+- ["10Starscream18HTTPServerDelegateP", "didReceive"]
+- !private ["10Starscream18HTTPServerDelegateP", "didUpgrade"]
+- !private ["10Starscream18HTTPServerDelegateP", "frameHandler"]
+- ["10Starscream18HTTPServerDelegateP", "frameProcessed"]
+- !private ["10Starscream18HTTPServerDelegateP", "framer"]
+- !private ["10Starscream18HTTPServerDelegateP", "httpHandler"]
+- !private ["10Starscream18HTTPServerDelegateP", "id"]
+- !private ["10Starscream18HTTPServerDelegateP", "init"]
+- !private ["10Starscream18HTTPServerDelegateP", "onEvent"]
+- !private ["10Starscream18HTTPServerDelegateP", "print"]
+- !private ["10Starscream18HTTPServerDelegateP", "transport"]
+- !private ["10Starscream18HTTPServerDelegateP", "uuid"]
+- ["10Starscream18HTTPServerDelegateP", "write"]
+- !private ["10Starscream17HTTPServerHandlerP", "createResponse"]
+- ["10Starscream17HTTPServerHandlerP", "init"]
+- !private ["10Starscream17HTTPServerHandlerP", "parse"]
+- !private ["10Starscream17HTTPServerHandlerP", "register"]
+- !private ["SH", "Host"]
+- !private ["SH", "Port"]
+- !private ["SH", ""]
+- !private ["SH", "hostPort"]
+- ["SH", "init"]
+- !private ["SH", "name"]
+- !private ["SH", "protocolError"]
+- !private ["SH", "removeValue"]
+- !private ["SH", "serverError"]
+- !private ["SH", "subscript"]
+- !private ["SH", "uuidString"]
+- !private ["7Network10NWEndpointO4HostO", "name"]
+- ["So8NSCodingP", ""]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectP", "init"]
+- !private ["7Network10NWEndpointO", "Host"]
+- !private ["7Network10NWEndpointO", "Port"]
+- !private ["7Network10NWEndpointO", "hostPort"]
+- !private ["7Network10NWListenerC", "init"]
+- !private ["7Network10NWListenerC", "newConnectionHandler"]
+- !private ["7Network10NWListenerC", "start"]
+- !private ["7Network12NWParametersC", "init"]
+- !private ["7Network12NWParametersC", "requiredLocalEndpoint"]
+- !private ["7Network10NWProtocolC", "Options"]
+- ["7Network17NWProtocolOptionsC", ""]
+- !private ["7Network17NWProtocolOptionsC", "init"]
+- !private ["7Network13NWProtocolTCPC", "Options"]
+- ["So9OS_objectC", ""]
+- ["So9OS_objectC", "init"]
+- ["s9OptionSetP", "contains"]
+- ["s9OptionSetP", "formIntersection"]
+- ["s9OptionSetP", "formSymmetricDifference"]
+- ["s9OptionSetP", "formUnion"]
+- ["s9OptionSetP", "init"]
+- ["s9OptionSetP", "insert"]
+- ["s9OptionSetP", "intersection"]
+- ["s9OptionSetP", "remove"]
+- ["s9OptionSetP", "symmetricDifference"]
+- ["s9OptionSetP", "union"]
+- ["s9OptionSetP", "update"]
+- !private ["7Network13NWProtocolTCPC7OptionsC", "init"]
+- !private ["7Network10NWEndpointO4PortV", "init"]
+- !private ["SY", "init"]
+- !private ["SY", "rawValue"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "uuidString"]
+- ["7Combine9SchedulerP", "init"]
+- ["ST", ""]
+- ["ST", "init"]
+- !private ["ST", "removeValue"]
+- !private ["ST", "subscript"]
+- ["10Starscream6ServerP", "DispatchQueue"]
+- !private ["10Starscream6ServerP", "NWEndpoint"]
+- !private ["10Starscream6ServerP", "NWListener"]
+- !private ["10Starscream6ServerP", "NWParameters"]
+- !private ["10Starscream6ServerP", "NWProtocolTCP"]
+- ["10Starscream6ServerP", "ServerConnection"]
+- ["10Starscream6ServerP", "String"]
+- !private ["10Starscream6ServerP", "TCPTransport"]
+- !private ["10Starscream6ServerP", "WSError"]
+- ["10Starscream6ServerP", ""]
+- !private ["10Starscream6ServerP", "connections"]
+- ["10Starscream6ServerP", "didReceive"]
+- !private ["10Starscream6ServerP", "listener"]
+- !private ["10Starscream6ServerP", "onEvent"]
+- !private ["10Starscream6ServerP", "queue"]
+- ["10Starscream6ServerP", "start"]
+- ["10Starscream16ServerConnectionC", "Bool"]
+- ["10Starscream16ServerConnectionC", "ConnectionDelegate"]
+- ["10Starscream16ServerConnectionC", "ConnectionEvent"]
+- ["10Starscream16ServerConnectionC", "ConnectionState"]
+- ["10Starscream16ServerConnectionC", "Data"]
+- ["10Starscream16ServerConnectionC", "FoundationHTTPServerHandler"]
+- ["10Starscream16ServerConnectionC", "FrameCollector"]
+- ["10Starscream16ServerConnectionC", "FrameEvent"]
+- ["10Starscream16ServerConnectionC", "FrameOpCode"]
+- ["10Starscream16ServerConnectionC", "HTTPEvent"]
+- ["10Starscream16ServerConnectionC", "String"]
+- ["10Starscream16ServerConnectionC", "TCPTransport"]
+- !private ["10Starscream16ServerConnectionC", "UUID"]
+- ["10Starscream16ServerConnectionC", "Void"]
+- !private ["10Starscream16ServerConnectionC", "WSError"]
+- ["10Starscream16ServerConnectionC", "WSFramer"]
+- !private ["10Starscream16ServerConnectionC", ""]
+- ["10Starscream16ServerConnectionC", "connectionChanged"]
+- ["10Starscream16ServerConnectionC", "decompress"]
+- ["10Starscream16ServerConnectionC", "deinit"]
+- ["10Starscream16ServerConnectionC", "delegate"]
+- ["10Starscream16ServerConnectionC", "didForm"]
+- ["10Starscream16ServerConnectionC", "didReceive"]
+- !private ["10Starscream16ServerConnectionC", "didUpgrade"]
+- !private ["10Starscream16ServerConnectionC", "frameHandler"]
+- ["10Starscream16ServerConnectionC", "frameProcessed"]
+- !private ["10Starscream16ServerConnectionC", "framer"]
+- !private ["10Starscream16ServerConnectionC", "httpHandler"]
+- !private ["10Starscream16ServerConnectionC", "id"]
+- ["10Starscream16ServerConnectionC", "init"]
+- ["10Starscream16ServerConnectionC", "onEvent"]
+- !private ["10Starscream16ServerConnectionC", "print"]
+- ["10Starscream16ServerConnectionC", "transport"]
+- ["10Starscream16ServerConnectionC", "uuid"]
+- ["10Starscream16ServerConnectionC", "write"]
+- !private ["10Starscream11ServerEventO", "binary"]
+- !private ["10Starscream11ServerEventO", "connected"]
+- ["10Starscream11ServerEventO", "disconnected"]
+- !private ["10Starscream11ServerEventO", "ping"]
+- !private ["10Starscream11ServerEventO", "pong"]
+- !private ["10Starscream11ServerEventO", "text"]
+- ["s10SetAlgebraP", "contains"]
+- ["s10SetAlgebraP", "formIntersection"]
+- ["s10SetAlgebraP", "formSymmetricDifference"]
+- ["s10SetAlgebraP", "formUnion"]
+- ["s10SetAlgebraP", "init"]
+- ["s10SetAlgebraP", "insert"]
+- ["s10SetAlgebraP", "intersection"]
+- ["s10SetAlgebraP", "isDisjoint"]
+- ["s10SetAlgebraP", "isEmpty"]
+- ["s10SetAlgebraP", "isSubset"]
+- ["s10SetAlgebraP", "isSuperset"]
+- ["s10SetAlgebraP", "remove"]
+- ["s10SetAlgebraP", "subtract"]
+- ["s10SetAlgebraP", "subtracting"]
+- ["s10SetAlgebraP", "symmetricDifference"]
+- ["s10SetAlgebraP", "union"]
+- ["s10SetAlgebraP", "update"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s27StringInterpolationProtocolP", "init"]
+- !private ["10Starscream12TCPTransportC", ""]
+- !private ["10Starscream12TCPTransportC", "init"]
+- !private ["10Starscream12TCPTransportC", "register"]
+- !private ["10Starscream12TCPTransportC", "write"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- !private ["10Starscream9TransportP", "init"]
+- !private ["10Starscream9TransportP", "register"]
+- !private ["10Starscream9TransportP", "write"]
+- ["10Starscream20TransportEventClientP", "FoundationHTTPServerHandler"]
+- ["10Starscream20TransportEventClientP", "FrameCollector"]
+- !private ["10Starscream20TransportEventClientP", "UUID"]
+- !private ["10Starscream20TransportEventClientP", "WSError"]
+- ["10Starscream20TransportEventClientP", "WSFramer"]
+- ["10Starscream20TransportEventClientP", ""]
+- ["10Starscream20TransportEventClientP", "connectionChanged"]
+- ["10Starscream20TransportEventClientP", "decompress"]
+- !private ["10Starscream20TransportEventClientP", "delegate"]
+- ["10Starscream20TransportEventClientP", "didForm"]
+- ["10Starscream20TransportEventClientP", "didReceive"]
+- !private ["10Starscream20TransportEventClientP", "didUpgrade"]
+- !private ["10Starscream20TransportEventClientP", "frameHandler"]
+- ["10Starscream20TransportEventClientP", "frameProcessed"]
+- !private ["10Starscream20TransportEventClientP", "framer"]
+- !private ["10Starscream20TransportEventClientP", "httpHandler"]
+- !private ["10Starscream20TransportEventClientP", "id"]
+- !private ["10Starscream20TransportEventClientP", "init"]
+- !private ["10Starscream20TransportEventClientP", "onEvent"]
+- !private ["10Starscream20TransportEventClientP", "print"]
+- !private ["10Starscream20TransportEventClientP", "transport"]
+- !private ["10Starscream20TransportEventClientP", "uuid"]
+- ["10Starscream20TransportEventClientP", "write"]
+- !private ["10Foundation4UUIDV", "init"]
+- !private ["10Foundation4UUIDV", "uuidString"]
+- !private ["10Starscream7WSErrorV", ""]
+- !private ["10Starscream7WSErrorV", "init"]
+- !private ["10Starscream8WSFramerC", ""]
+- !private ["10Starscream8WSFramerC", "add"]
+- !private ["10Starscream8WSFramerC", "createWriteFrame"]
+- ["10Starscream8WSFramerC", "init"]
+- !private ["10Starscream8WSFramerC", "register"]
+- ["10Starscream15WebSocketServerC", "DispatchQueue"]
+- ["10Starscream15WebSocketServerC", "Error"]
+- !private ["10Starscream15WebSocketServerC", "NWEndpoint"]
+- ["10Starscream15WebSocketServerC", "NWListener"]
+- !private ["10Starscream15WebSocketServerC", "NWParameters"]
+- !private ["10Starscream15WebSocketServerC", "NWProtocolTCP"]
+- ["10Starscream15WebSocketServerC", "ServerConnection"]
+- ["10Starscream15WebSocketServerC", "ServerEvent"]
+- ["10Starscream15WebSocketServerC", "String"]
+- !private ["10Starscream15WebSocketServerC", "TCPTransport"]
+- ["10Starscream15WebSocketServerC", "UInt16"]
+- ["10Starscream15WebSocketServerC", "Void"]
+- !private ["10Starscream15WebSocketServerC", "WSError"]
+- !private ["10Starscream15WebSocketServerC", ""]
+- !private ["10Starscream15WebSocketServerC", "connections"]
+- ["10Starscream15WebSocketServerC", "deinit"]
+- ["10Starscream15WebSocketServerC", "didReceive"]
+- ["10Starscream15WebSocketServerC", "init"]
+- !private ["10Starscream15WebSocketServerC", "listener"]
+- ["10Starscream15WebSocketServerC", "onEvent"]
+- !private ["10Starscream15WebSocketServerC", "queue"]
+- ["10Starscream15WebSocketServerC", "start"]
+- ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "removeValue"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", ""]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "removeValue"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "uuidString"]
+depends-nominal:
+- "s7CVarArgP"
+- "Sl"
+- "10Starscream10ConnectionP"
+- "10Starscream18ConnectionDelegateP"
+- !private "10Starscream15ConnectionEventO"
+- "10Starscream15ConnectionStateO"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- !private "s26DefaultStringInterpolationV"
+- "SD"
+- "So18OS_dispatch_objectC"
+- "So17OS_dispatch_queueC"
+- "SE"
+- "SQ"
+- !private "s5ErrorP"
+- !private "10Starscream9ErrorTypeO"
+- "10Starscream14FrameCollectorC5EventO"
+- "s25ExpressibleByArrayLiteralP"
+- "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "10Starscream27FoundationHTTPServerHandlerC"
+- "10Starscream14FrameCollectorC"
+- "10Starscream22FrameCollectorDelegateP"
+- "10Starscream10FrameEventO"
+- "10Starscream6FramerP"
+- "10Starscream17FramerEventClientP"
+- "10Starscream9HTTPEventO"
+- "10Starscream18HTTPServerDelegateP"
+- "10Starscream17HTTPServerHandlerP"
+- "SH"
+- !private "7Network10NWEndpointO4HostO"
+- "So8NSCodingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "7Network10NWEndpointO"
+- !private "7Network10NWListenerC"
+- !private "7Network12NWParametersC"
+- !private "7Network10NWProtocolC"
+- "7Network17NWProtocolOptionsC"
+- !private "7Network13NWProtocolTCPC"
+- "So9OS_objectC"
+- "s9OptionSetP"
+- !private "7Network13NWProtocolTCPC7OptionsC"
+- !private "7Network10NWEndpointO4PortV"
+- !private "SY"
+- !private "10Foundation20ReferenceConvertibleP"
+- "7Combine9SchedulerP"
+- "ST"
+- "10Starscream6ServerP"
+- "10Starscream16ServerConnectionC"
+- "10Starscream11ServerEventO"
+- "s10SetAlgebraP"
+- !private "s27StringInterpolationProtocolP"
+- !private "10Starscream12TCPTransportC"
+- !private "s16TextOutputStreamP"
+- !private "10Starscream9TransportP"
+- "10Starscream20TransportEventClientP"
+- !private "10Foundation4UUIDV"
+- !private "10Starscream7WSErrorV"
+- "10Starscream8WSFramerC"
+- "10Starscream15WebSocketServerC"
+- "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Target Support Files/Starscream/Starscream-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/module.map"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Starscream.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "341f9f08d3c7556890ee01926919bac8"

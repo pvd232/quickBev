@@ -11,9 +11,15 @@ from werkzeug.utils import secure_filename
 from flask_httpauth import HTTPBasicAuth
 from werkzeug.security import generate_password_hash, check_password_hash
 import base64
+import asyncio
+import websockets
+
 
 app = Flask(__name__)
 auth = HTTPBasicAuth()
+
+
+app = Flask(__name__)
 
 users = {
     "john": generate_password_hash("hello"),
@@ -295,6 +301,26 @@ def add_menu():
     return response
 
 
+async def hello(websocket, path):
+    remote_ip = websocket.remote_address[0]
+    remote_ip_list = websocket.remote_address
+    print('remote_ip_list',remote_ip_list)
+
+    print('remote_ip',remote_ip)
+    
+    name = await websocket.recv()
+    # print(f"< {name}")
+    print("data recieved", name)
+
+
+    greeting = f"Hello {name}!"
+
+    await websocket.send(greeting)
+    print(f"> {greeting}")
+
+start_server = websockets.serve(hello, "localhost", 8765)
+
+asyncio.get_event_loop().run_until_complete(start_server)
+asyncio.get_event_loop().run_forever()
 if __name__ == '__main__':
-    app.debug = True
-    app.run()
+    app.run(debug=True)

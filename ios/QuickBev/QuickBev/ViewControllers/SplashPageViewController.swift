@@ -15,7 +15,7 @@ class SplashPageViewController: UIViewController {
 
     init() {
         super.init(nibName: nil, bundle: nil)
-        self.view.backgroundColor = .systemBackground
+        self.view.backgroundColor = .white
         
     }
     
@@ -24,7 +24,7 @@ class SplashPageViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        splashView = SignInOrSignUpView(frame: self.view.frame, props: SignInAndSignUpProps.UserAction( action: .splash))
+        splashView = SignInOrSignUpView(frame: self.view.frame)
         self.view.addSubview(splashView)
         print("screenSize.height", UIViewController.screenSize.height)
 

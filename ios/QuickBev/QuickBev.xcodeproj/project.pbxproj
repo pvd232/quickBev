@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,7 +22,6 @@
 		1D52A37225C3C27D00BA5A43 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D52A37125C3C27D00BA5A43 /* Business.swift */; };
 		1D52A37A25C3FA0000BA5A43 /* BusinessMapViewCotroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D52A37925C3FA0000BA5A43 /* BusinessMapViewCotroller.swift */; };
 		1D52A39625C40B4200BA5A43 /* Drink+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D52A38C25C40B4200BA5A43 /* Drink+CoreDataProperties.swift */; };
-		1D52A39825C40B4200BA5A43 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D52A38E25C40B4200BA5A43 /* User+CoreDataProperties.swift */; };
 		1D52A39A25C40B4200BA5A43 /* Business+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D52A39025C40B4200BA5A43 /* Business+CoreDataProperties.swift */; };
 		1D52A39C25C40B4200BA5A43 /* Order+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D52A39225C40B4200BA5A43 /* Order+CoreDataProperties.swift */; };
 		1D56E7822592FFB300BE9F13 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D56E7812592FFB300BE9F13 /* CheckoutViewController.swift */; };
@@ -35,6 +34,7 @@
 		1D7865D92487A03200389C54 /* SplashPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7865D82487A03200389C54 /* SplashPageViewController.swift */; };
 		1D7865DF2489CDC800389C54 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7865DE2489CDC800389C54 /* CustomAnnotation.swift */; };
 		1D7865E12489D73200389C54 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7865E02489D73200389C54 /* MapKit.framework */; };
+		1D7AD1F425D76FAC00F22D83 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7AD1F225D76FAC00F22D83 /* User+CoreDataProperties.swift */; };
 		1D82D35B25A3D28400468378 /* Tab+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D82D35725A3D28400468378 /* Tab+CoreDataProperties.swift */; };
 		1D9019362431913400289FA5 /* DrinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9019352431913400289FA5 /* DrinkTableViewCell.swift */; };
 		1D90193A243191E200289FA5 /* DrinkListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D901939243191E200289FA5 /* DrinkListTableViewController.swift */; };
@@ -48,7 +48,9 @@
 		1DACFB402591774A00D0C7B2 /* StripeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACFB3F2591774A00D0C7B2 /* StripeAPIClient.swift */; };
 		1DB05C3425CDC03500823511 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB05C3325CDC03500823511 /* Theme.swift */; };
 		1DB8C2A5259FD22D0092FE49 /* ReviewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB8C2A4259FD22D0092FE49 /* ReviewOrderViewController.swift */; };
-		1DBFC67925D1D1A700009A42 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 1DBFC67825D1D1A700009A42 /* SwiftPackageProductDependency */; };
+		1DBC17E825D5FF0400CE594E /* QuickBev.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DBC17E625D5FF0400CE594E /* QuickBev.xcdatamodeld */; };
+		1DBC17EB25D6114B00CE594E /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBC17EA25D6114B00CE594E /* KeychainPasswordItem.swift */; };
+		1DBC17EE25D61A6400CE594E /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBC17ED25D61A6400CE594E /* WebSocket.swift */; };
 		1DD5D63D25A79B8400B3E7F7 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD5D63C25A79B8400B3E7F7 /* OrderConfirmationViewController.swift */; };
 		1DDBAD7525A8C07000DC95F4 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDBAD7425A8C07000DC95F4 /* RoundButton.swift */; };
 		1DDBAD7A25A8D14500DC95F4 /* SignInSplashPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDBAD7925A8D14500DC95F4 /* SignInSplashPageViewController.swift */; };
@@ -60,7 +62,6 @@
 		1DE913EE2485FC2F0034094D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE913ED2485FC2F0034094D /* LoginViewController.swift */; };
 		1DE913F02485FD1F0034094D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE913EF2485FD1F0034094D /* User.swift */; };
 		1DEF0F0A2596DF9800DA5BEB /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEF0F092596DF9800DA5BEB /* Drink.swift */; };
-		1DEF0F372596E6CE00DA5BEB /* QuickBev.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DEF0F352596E6CE00DA5BEB /* QuickBev.xcdatamodeld */; };
 		1DF1C42324BAE8E200483914 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF1C42224BAE8E200483914 /* AccountViewController.swift */; };
 		7A37D329418718786F19D147 /* Pods_QuickBev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADECEF80F332C6E5CE14B6C /* Pods_QuickBev.framework */; };
 /* End PBXBuildFile section */
@@ -83,7 +84,6 @@
 		1D52A37125C3C27D00BA5A43 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		1D52A37925C3FA0000BA5A43 /* BusinessMapViewCotroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessMapViewCotroller.swift; sourceTree = "<group>"; };
 		1D52A38C25C40B4200BA5A43 /* Drink+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Drink+CoreDataProperties.swift"; path = "QuickBev/Models/Drink+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		1D52A38E25C40B4200BA5A43 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "QuickBev/Models/User+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		1D52A39025C40B4200BA5A43 /* Business+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Business+CoreDataProperties.swift"; path = "QuickBev/Models/Business+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		1D52A39225C40B4200BA5A43 /* Order+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Order+CoreDataProperties.swift"; path = "QuickBev/Models/Order+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		1D56E7812592FFB300BE9F13 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +96,7 @@
 		1D7865D82487A03200389C54 /* SplashPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPageViewController.swift; sourceTree = "<group>"; };
 		1D7865DE2489CDC800389C54 /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		1D7865E02489D73200389C54 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1D7AD1F225D76FAC00F22D83 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		1D82D35725A3D28400468378 /* Tab+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Tab+CoreDataProperties.swift"; path = "QuickBev/Models/Tab+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		1D9019352431913400289FA5 /* DrinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTableViewCell.swift; sourceTree = "<group>"; };
 		1D901939243191E200289FA5 /* DrinkListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkListTableViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +110,9 @@
 		1DACFB3F2591774A00D0C7B2 /* StripeAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeAPIClient.swift; sourceTree = "<group>"; };
 		1DB05C3325CDC03500823511 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		1DB8C2A4259FD22D0092FE49 /* ReviewOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewOrderViewController.swift; path = "../New Group2/ReviewOrderViewController.swift"; sourceTree = "<group>"; };
+		1DBC17E725D5FF0400CE594E /* QuickBev.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuickBev.xcdatamodel; sourceTree = "<group>"; };
+		1DBC17EA25D6114B00CE594E /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeychainPasswordItem.swift; path = QuickBev/ViewControllers/KeychainPasswordItem.swift; sourceTree = SOURCE_ROOT; };
+		1DBC17ED25D61A6400CE594E /* WebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 		1DD5D63C25A79B8400B3E7F7 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OrderConfirmationViewController.swift; path = "../New Group2/OrderConfirmationViewController.swift"; sourceTree = "<group>"; };
 		1DDBAD7425A8C07000DC95F4 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoundButton.swift; path = "../New Group/RoundButton.swift"; sourceTree = "<group>"; };
 		1DDBAD7925A8D14500DC95F4 /* SignInSplashPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInSplashPageViewController.swift; path = "QuickBev/ViewControllers/New Group1/SignInSplashPageViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -120,7 +124,6 @@
 		1DE913ED2485FC2F0034094D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1DE913EF2485FD1F0034094D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1DEF0F092596DF9800DA5BEB /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
-		1DEF0F362596E6CE00DA5BEB /* Drinkz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Drinkz.xcdatamodel; sourceTree = "<group>"; };
 		1DF1C42224BAE8E200483914 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		3853466877A1473F3853950F /* Pods-QuickBev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickBev.debug.xcconfig"; path = "Target Support Files/Pods-QuickBev/Pods-QuickBev.debug.xcconfig"; sourceTree = "<group>"; };
 		3ADECEF80F332C6E5CE14B6C /* Pods_QuickBev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickBev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,7 +138,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D7865E12489D73200389C54 /* MapKit.framework in Frameworks */,
-				1DBFC67925D1D1A700009A42 /* BuildFile in Frameworks */,
 				7A37D329418718786F19D147 /* Pods_QuickBev.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,9 +170,9 @@
 				1DE2909725CCA51800F4235B /* Extensions.swift */,
 				1DB05C3325CDC03500823511 /* Theme.swift */,
 				1DE4E51525CA14FB00F53D6A /* Models */,
-				1DEF0F352596E6CE00DA5BEB /* QuickBev.xcdatamodeld */,
 				1DE4E51625CA153B00F53D6A /* Singletons */,
 				1D236D0F2430204B00BF3412 /* LaunchScreen.storyboard */,
+				1DBC17E625D5FF0400CE594E /* QuickBev.xcdatamodeld */,
 				1D236D0D2430204B00BF3412 /* Assets.xcassets */,
 				1D236D122430204B00BF3412 /* Info.plist */,
 				1DE4E51925CA193A00F53D6A /* UIElements */,
@@ -230,6 +232,8 @@
 		1DE4E51525CA14FB00F53D6A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1D7AD1F225D76FAC00F22D83 /* User+CoreDataProperties.swift */,
+				1DBC17EA25D6114B00CE594E /* KeychainPasswordItem.swift */,
 				1DE290B025CCAF4100F4235B /* APIClient.swift */,
 				1D52A38C25C40B4200BA5A43 /* Drink+CoreDataProperties.swift */,
 				1DEF0F092596DF9800DA5BEB /* Drink.swift */,
@@ -239,7 +243,6 @@
 				1D5A5EBC24494A81009579BD /* Order.swift */,
 				1D82D35725A3D28400468378 /* Tab+CoreDataProperties.swift */,
 				1D3BF3A5258D011A007CB39B /* Tab.swift */,
-				1D52A38E25C40B4200BA5A43 /* User+CoreDataProperties.swift */,
 				1DE913EF2485FD1F0034094D /* User.swift */,
 			);
 			path = Models;
@@ -249,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				1D236D032430204800BF3412 /* SceneDelegate.swift */,
+				1DBC17ED25D61A6400CE594E /* WebSocket.swift */,
 				1D236D012430204800BF3412 /* AppDelegate.swift */,
 				1D446A6125C9A01D005B8202 /* CheckoutCart+CoreDataProperties.swift */,
 				1D56E784259304BE00BE9F13 /* CheckoutCart.swift */,
@@ -325,7 +329,6 @@
 			);
 			name = QuickBev;
 			packageProductDependencies = (
-				1DBFC67825D1D1A700009A42 /* SwiftPackageProductDependency */,
 			);
 			productName = Drinkz;
 			productReference = 1D236CFE2430204800BF3412 /* QuickBev.app */;
@@ -356,7 +359,6 @@
 			);
 			mainGroup = 1D236CF52430204800BF3412;
 			packageReferences = (
-				1DBFC67725D1D1A600009A42 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 1D236CFF2430204800BF3412 /* Products */;
 			projectDirPath = "";
@@ -433,12 +435,14 @@
 				1D7865D92487A03200389C54 /* SplashPageViewController.swift in Sources */,
 				1DE913F02485FD1F0034094D /* User.swift in Sources */,
 				1D921037258C06D100C9676D /* BusinessArrayTableViewCell.swift in Sources */,
-				1D52A39825C40B4200BA5A43 /* User+CoreDataProperties.swift in Sources */,
+				1DBC17EB25D6114B00CE594E /* KeychainPasswordItem.swift in Sources */,
 				1D52A37A25C3FA0000BA5A43 /* BusinessMapViewCotroller.swift in Sources */,
 				1D155671258C1A1F004EE769 /* EventCreationViewController.swift in Sources */,
 				1DF1C42324BAE8E200483914 /* AccountViewController.swift in Sources */,
+				1D7AD1F425D76FAC00F22D83 /* User+CoreDataProperties.swift in Sources */,
 				1D7460362593F19A00BDEF84 /* CoreDataManger.swift in Sources */,
 				1D56E785259304BE00BE9F13 /* CheckoutCart.swift in Sources */,
+				1DBC17E825D5FF0400CE594E /* QuickBev.xcdatamodeld in Sources */,
 				1DE4E51325CA138800F53D6A /* ToolbarView.swift in Sources */,
 				1DE913EE2485FC2F0034094D /* LoginViewController.swift in Sources */,
 				1D9A649124DBDB8900952B29 /* AccountTableViewCell.swift in Sources */,
@@ -457,13 +461,13 @@
 				1D6A7A6E2487978E00517300 /* HomePageViewController.swift in Sources */,
 				1D7865DF2489CDC800389C54 /* CustomAnnotation.swift in Sources */,
 				1D52A39A25C40B4200BA5A43 /* Business+CoreDataProperties.swift in Sources */,
-				1DEF0F372596E6CE00DA5BEB /* QuickBev.xcdatamodeld in Sources */,
 				1D90193E24319DB000289FA5 /* DrinkViewController.swift in Sources */,
 				1D236D022430204800BF3412 /* AppDelegate.swift in Sources */,
 				1D9019362431913400289FA5 /* DrinkTableViewCell.swift in Sources */,
 				1DDBAD7A25A8D14500DC95F4 /* SignInSplashPageViewController.swift in Sources */,
 				1D52A37225C3C27D00BA5A43 /* Business.swift in Sources */,
 				1D446A6325C9A01D005B8202 /* CheckoutCart+CoreDataProperties.swift in Sources */,
+				1DBC17EE25D61A6400CE594E /* WebSocket.swift in Sources */,
 				1DE290B125CCAF4100F4235B /* APIClient.swift in Sources */,
 				1D921035258C056B00C9676D /* BusinessArrayViewController.swift in Sources */,
 				1D927C082489DAC8009C13A3 /* RegistrationWithEmailViewController.swift in Sources */,
@@ -625,15 +629,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6YGH9XK378;
-				INFOPLIST_FILE = Drinkz/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/QuickBev/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = EntertainmentTechnologies.QuickBev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quickTechnologies.QuickBev;
 				PRODUCT_NAME = QuickBev;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -644,15 +649,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6YGH9XK378;
-				INFOPLIST_FILE = Drinkz/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/QuickBev/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = EntertainmentTechnologies.QuickBev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quickTechnologies.QuickBev;
 				PRODUCT_NAME = QuickBev;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -679,32 +685,13 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		1DBFC67725D1D1A600009A42 /* RemoteSwiftPackageReference */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		1DBFC67825D1D1A700009A42 /* SwiftPackageProductDependency */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1DBFC67725D1D1A600009A42 /* RemoteSwiftPackageReference */;
-			productName = FacebookLogin;
-		};
-/* End XCSwiftPackageProductDependency section */
-
 /* Begin XCVersionGroup section */
-		1DEF0F352596E6CE00DA5BEB /* QuickBev.xcdatamodeld */ = {
+		1DBC17E625D5FF0400CE594E /* QuickBev.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				1DEF0F362596E6CE00DA5BEB /* Drinkz.xcdatamodel */,
+				1DBC17E725D5FF0400CE594E /* QuickBev.xcdatamodel */,
 			);
-			currentVersion = 1DEF0F362596E6CE00DA5BEB /* Drinkz.xcdatamodel */;
+			currentVersion = 1DBC17E725D5FF0400CE594E /* QuickBev.xcdatamodel */;
 			path = QuickBev.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

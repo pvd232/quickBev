@@ -34,6 +34,7 @@ enum Theme {
         case font(UIFont?)
         case center
         case text(String)
+        case textColor
         var rawValue: Any {
             switch self {
             case .font(nil):

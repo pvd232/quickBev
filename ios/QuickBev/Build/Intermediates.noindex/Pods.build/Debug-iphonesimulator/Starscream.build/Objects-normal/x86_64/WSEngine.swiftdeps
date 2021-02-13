@@ -1,0 +1,879 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "WSEngine"
+provides-nominal:
+- "10Starscream8WSEngineC"
+provides-member:
+- ["10Starscream8WSEngineC", ""]
+provides-dynamic-lookup:
+- "broadcast"
+- "canSend"
+- "certPinner"
+- "compressionHandler"
+- "connectionChanged"
+- "decompress"
+- "delegate"
+- "didForm"
+- "didReceiveHTTP"
+- "didUpgrade"
+- "forceStop"
+- "frameHandler"
+- "frameProcessed"
+- "framer"
+- "handleError"
+- "headerChecker"
+- "httpHandler"
+- "mutex"
+- "register"
+- "request"
+- "reset"
+- "respondToPingWithPong"
+- "secKeyValue"
+- "start"
+- "stop"
+- "transport"
+- "write"
+- "writeQueue"
+depends-top-level:
+- "!"
+- !private "!="
+- !private "..<"
+- !private ">"
+- !private "??"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- "CastingPrecedence"
+- "CertificatePinning"
+- "CloseCode"
+- "CompressionHandler"
+- "ConnectionState"
+- "Data"
+- "DispatchQueue"
+- "DispatchSemaphore"
+- "Engine"
+- "EngineDelegate"
+- "Error"
+- "FloatLiteralType"
+- "FoundationHTTPHandler"
+- "FoundationSecurity"
+- "FrameCollector"
+- "FrameCollectorDelegate"
+- "FrameEvent"
+- "FrameOpCode"
+- "Framer"
+- "FramerEventClient"
+- !private "HTTPCookie"
+- "HTTPCookieStorage"
+- "HTTPEvent"
+- "HTTPHandler"
+- "HTTPHandlerDelegate"
+- !private "HTTPWSHeader"
+- "HeaderValidator"
+- "IntegerLiteralType"
+- !private "MemoryLayout"
+- "String"
+- "StringLiteralType"
+- "Transport"
+- "TransportEventClient"
+- "UInt16"
+- !private "UInt8"
+- "URLRequest"
+- "WSEngine"
+- "WSError"
+- "WSFramer"
+- "WebSocketEvent"
+- !private "broadcast"
+- !private "canSend"
+- !private "certPinner"
+- !private "compressionHandler"
+- !private "delegate"
+- !private "didUpgrade"
+- !private "frameHandler"
+- !private "framer"
+- !private "handleError"
+- !private "headerChecker"
+- !private "httpHandler"
+- !private "mutex"
+- !private "request"
+- !private "respondToPingWithPong"
+- !private "secKeyValue"
+- !private "stop"
+- !private "transport"
+- !private "write"
+- !private "writeQueue"
+- !private "writeUint16"
+depends-member:
+- !private ["Sa", "forEach"]
+- !private ["Sa", "init"]
+- !private ["SK", ""]
+- !private ["SK", "data"]
+- !private ["SK", "distance"]
+- !private ["SK", "endIndex"]
+- !private ["SK", "forEach"]
+- !private ["SK", "formIndex"]
+- !private ["SK", "index"]
+- !private ["SK", "indices"]
+- !private ["SK", "init"]
+- !private ["SK", "startIndex"]
+- !private ["SK", "subdata"]
+- !private ["SK", "subscript"]
+- !private ["s7CVarArgP", "async"]
+- !private ["s7CVarArgP", "cookies"]
+- !private ["s7CVarArgP", "data"]
+- !private ["s7CVarArgP", "forEach"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "setCookie"]
+- !private ["s7CVarArgP", "shared"]
+- !private ["s7CVarArgP", "signal"]
+- !private ["s7CVarArgP", "wait"]
+- !private ["10Starscream18CertificatePinningP", "init"]
+- ["10Starscream9CloseCodeO", ""]
+- !private ["10Starscream9CloseCodeO", "normal"]
+- !private ["10Starscream9CloseCodeO", "rawValue"]
+- !private ["Sl", ""]
+- !private ["Sl", "data"]
+- !private ["Sl", "endIndex"]
+- !private ["Sl", "forEach"]
+- !private ["Sl", "init"]
+- !private ["Sl", "subdata"]
+- !private ["SL", ""]
+- !private ["SL", "data"]
+- !private ["10Starscream18CompressionHandlerP", "compress"]
+- !private ["10Starscream18CompressionHandlerP", "decompress"]
+- !private ["10Starscream18CompressionHandlerP", "load"]
+- ["10Starscream15ConnectionStateO", "cancelled"]
+- ["10Starscream15ConnectionStateO", "connected"]
+- ["10Starscream15ConnectionStateO", "failed"]
+- ["10Starscream15ConnectionStateO", "receive"]
+- ["10Starscream15ConnectionStateO", "shouldReconnect"]
+- ["10Starscream15ConnectionStateO", "viability"]
+- ["10Starscream15ConnectionStateO", "waiting"]
+- !private ["10Foundation15ContiguousBytesP", "endIndex"]
+- !private ["10Foundation15ContiguousBytesP", "forEach"]
+- !private ["10Foundation15ContiguousBytesP", "init"]
+- !private ["10Foundation15ContiguousBytesP", "subdata"]
+- !private ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
+- !private ["s28CustomDebugStringConvertibleP", "cookies"]
+- !private ["s28CustomDebugStringConvertibleP", "data"]
+- !private ["s28CustomDebugStringConvertibleP", "endIndex"]
+- !private ["s28CustomDebugStringConvertibleP", "forEach"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "setCookie"]
+- !private ["s28CustomDebugStringConvertibleP", "shared"]
+- !private ["s28CustomDebugStringConvertibleP", "signal"]
+- !private ["s28CustomDebugStringConvertibleP", "subdata"]
+- !private ["s28CustomDebugStringConvertibleP", "timeoutInterval"]
+- !private ["s28CustomDebugStringConvertibleP", "url"]
+- !private ["s28CustomDebugStringConvertibleP", "wait"]
+- !private ["s17CustomReflectableP", "data"]
+- !private ["s17CustomReflectableP", "endIndex"]
+- !private ["s17CustomReflectableP", "forEach"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subdata"]
+- !private ["s17CustomReflectableP", "timeoutInterval"]
+- !private ["s17CustomReflectableP", "url"]
+- !private ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "async"]
+- !private ["s23CustomStringConvertibleP", "cookies"]
+- !private ["s23CustomStringConvertibleP", "data"]
+- !private ["s23CustomStringConvertibleP", "endIndex"]
+- !private ["s23CustomStringConvertibleP", "forEach"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "setCookie"]
+- !private ["s23CustomStringConvertibleP", "shared"]
+- !private ["s23CustomStringConvertibleP", "signal"]
+- !private ["s23CustomStringConvertibleP", "subdata"]
+- !private ["s23CustomStringConvertibleP", "timeoutInterval"]
+- !private ["s23CustomStringConvertibleP", "url"]
+- !private ["s23CustomStringConvertibleP", "utf8"]
+- !private ["s23CustomStringConvertibleP", "wait"]
+- !private ["10Foundation4DataV", "endIndex"]
+- !private ["10Foundation4DataV", "init"]
+- !private ["10Foundation4DataV", "subdata"]
+- !private ["10Foundation12DataProtocolP", ""]
+- !private ["10Foundation12DataProtocolP", "endIndex"]
+- !private ["10Foundation12DataProtocolP", "forEach"]
+- !private ["10Foundation12DataProtocolP", "init"]
+- !private ["10Foundation12DataProtocolP", "subdata"]
+- !private ["Se", "data"]
+- !private ["Se", "endIndex"]
+- !private ["Se", "forEach"]
+- !private ["Se", "init"]
+- !private ["Se", "subdata"]
+- !private ["Se", "url"]
+- ["So18OS_dispatch_objectC", ""]
+- !private ["So18OS_dispatch_objectC", "async"]
+- ["So18OS_dispatch_objectC", "init"]
+- !private ["So18OS_dispatch_objectC", "signal"]
+- !private ["So18OS_dispatch_objectC", "wait"]
+- !private ["So17OS_dispatch_queueC", "async"]
+- ["So17OS_dispatch_queueC", "init"]
+- ["So21OS_dispatch_semaphoreC", "init"]
+- !private ["So21OS_dispatch_semaphoreC", "signal"]
+- !private ["So21OS_dispatch_semaphoreC", "wait"]
+- !private ["SE", "data"]
+- !private ["SE", "endIndex"]
+- !private ["SE", "forEach"]
+- !private ["SE", "init"]
+- !private ["SE", "subdata"]
+- !private ["SE", "url"]
+- !private ["SS10FoundationE8EncodingV", "utf8"]
+- !private ["10Starscream6EngineP", "CloseCode"]
+- !private ["10Starscream6EngineP", "Data"]
+- ["10Starscream6EngineP", "DispatchQueue"]
+- ["10Starscream6EngineP", "DispatchSemaphore"]
+- !private ["10Starscream6EngineP", "FoundationHTTPHandler"]
+- !private ["10Starscream6EngineP", "FoundationSecurity"]
+- ["10Starscream6EngineP", "FrameCollector"]
+- !private ["10Starscream6EngineP", "HTTPCookie"]
+- !private ["10Starscream6EngineP", "HTTPCookieStorage"]
+- !private ["10Starscream6EngineP", "HTTPWSHeader"]
+- !private ["10Starscream6EngineP", "MemoryLayout"]
+- !private ["10Starscream6EngineP", "UInt8"]
+- !private ["10Starscream6EngineP", "WSFramer"]
+- ["10Starscream6EngineP", ""]
+- !private ["10Starscream6EngineP", "broadcast"]
+- !private ["10Starscream6EngineP", "canSend"]
+- !private ["10Starscream6EngineP", "certPinner"]
+- !private ["10Starscream6EngineP", "compressionHandler"]
+- ["10Starscream6EngineP", "connectionChanged"]
+- ["10Starscream6EngineP", "decompress"]
+- !private ["10Starscream6EngineP", "delegate"]
+- ["10Starscream6EngineP", "didForm"]
+- ["10Starscream6EngineP", "didReceiveHTTP"]
+- !private ["10Starscream6EngineP", "didUpgrade"]
+- ["10Starscream6EngineP", "forceStop"]
+- !private ["10Starscream6EngineP", "frameHandler"]
+- ["10Starscream6EngineP", "frameProcessed"]
+- !private ["10Starscream6EngineP", "framer"]
+- !private ["10Starscream6EngineP", "handleError"]
+- !private ["10Starscream6EngineP", "headerChecker"]
+- !private ["10Starscream6EngineP", "httpHandler"]
+- !private ["10Starscream6EngineP", "mutex"]
+- ["10Starscream6EngineP", "register"]
+- !private ["10Starscream6EngineP", "request"]
+- !private ["10Starscream6EngineP", "reset"]
+- !private ["10Starscream6EngineP", "respondToPingWithPong"]
+- !private ["10Starscream6EngineP", "secKeyValue"]
+- ["10Starscream6EngineP", "start"]
+- ["10Starscream6EngineP", "stop"]
+- !private ["10Starscream6EngineP", "transport"]
+- ["10Starscream6EngineP", "write"]
+- !private ["10Starscream6EngineP", "writeQueue"]
+- !private ["10Starscream6EngineP", "writeUint16"]
+- !private ["10Starscream14EngineDelegateP", "didReceive"]
+- ["SQ", ""]
+- !private ["SQ", "async"]
+- !private ["SQ", "connectionClose"]
+- !private ["SQ", "cookies"]
+- !private ["SQ", "data"]
+- !private ["SQ", "endIndex"]
+- !private ["SQ", "forEach"]
+- ["SQ", "init"]
+- !private ["SQ", "normal"]
+- !private ["SQ", "pong"]
+- !private ["SQ", "rawValue"]
+- !private ["SQ", "setCookie"]
+- !private ["SQ", "shared"]
+- !private ["SQ", "signal"]
+- !private ["SQ", "subdata"]
+- !private ["SQ", "textFrame"]
+- !private ["SQ", "timeoutInterval"]
+- !private ["SQ", "url"]
+- !private ["SQ", "utf8"]
+- !private ["SQ", "wait"]
+- !private ["s5ErrorP", "code"]
+- ["10Starscream14FrameCollectorC5EventO", "binary"]
+- ["10Starscream14FrameCollectorC5EventO", "closed"]
+- ["10Starscream14FrameCollectorC5EventO", "error"]
+- ["10Starscream14FrameCollectorC5EventO", "ping"]
+- ["10Starscream14FrameCollectorC5EventO", "pong"]
+- ["10Starscream14FrameCollectorC5EventO", "text"]
+- !private ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "forEach"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "data"]
+- !private ["s23ExpressibleByNilLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "url"]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", "data"]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s26ExpressibleByStringLiteralP", "data"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "data"]
+- ["10Starscream21FoundationHTTPHandlerC", ""]
+- !private ["10Starscream21FoundationHTTPHandlerC", "init"]
+- ["10Starscream18FoundationSecurityC", ""]
+- !private ["10Starscream18FoundationSecurityC", "init"]
+- ["10Starscream14FrameCollectorC", "Event"]
+- !private ["10Starscream14FrameCollectorC", "add"]
+- !private ["10Starscream14FrameCollectorC", "delegate"]
+- ["10Starscream14FrameCollectorC", "init"]
+- !private ["10Starscream22FrameCollectorDelegateP", "CloseCode"]
+- !private ["10Starscream22FrameCollectorDelegateP", "Data"]
+- ["10Starscream22FrameCollectorDelegateP", "DispatchQueue"]
+- ["10Starscream22FrameCollectorDelegateP", "DispatchSemaphore"]
+- !private ["10Starscream22FrameCollectorDelegateP", "FoundationHTTPHandler"]
+- !private ["10Starscream22FrameCollectorDelegateP", "FoundationSecurity"]
+- ["10Starscream22FrameCollectorDelegateP", "FrameCollector"]
+- !private ["10Starscream22FrameCollectorDelegateP", "HTTPCookie"]
+- !private ["10Starscream22FrameCollectorDelegateP", "HTTPCookieStorage"]
+- !private ["10Starscream22FrameCollectorDelegateP", "HTTPWSHeader"]
+- !private ["10Starscream22FrameCollectorDelegateP", "MemoryLayout"]
+- !private ["10Starscream22FrameCollectorDelegateP", "UInt8"]
+- !private ["10Starscream22FrameCollectorDelegateP", "WSFramer"]
+- ["10Starscream22FrameCollectorDelegateP", ""]
+- !private ["10Starscream22FrameCollectorDelegateP", "broadcast"]
+- !private ["10Starscream22FrameCollectorDelegateP", "canSend"]
+- !private ["10Starscream22FrameCollectorDelegateP", "certPinner"]
+- !private ["10Starscream22FrameCollectorDelegateP", "compressionHandler"]
+- ["10Starscream22FrameCollectorDelegateP", "connectionChanged"]
+- ["10Starscream22FrameCollectorDelegateP", "decompress"]
+- !private ["10Starscream22FrameCollectorDelegateP", "delegate"]
+- ["10Starscream22FrameCollectorDelegateP", "didForm"]
+- ["10Starscream22FrameCollectorDelegateP", "didReceiveHTTP"]
+- !private ["10Starscream22FrameCollectorDelegateP", "didUpgrade"]
+- ["10Starscream22FrameCollectorDelegateP", "forceStop"]
+- !private ["10Starscream22FrameCollectorDelegateP", "frameHandler"]
+- ["10Starscream22FrameCollectorDelegateP", "frameProcessed"]
+- !private ["10Starscream22FrameCollectorDelegateP", "framer"]
+- !private ["10Starscream22FrameCollectorDelegateP", "handleError"]
+- !private ["10Starscream22FrameCollectorDelegateP", "headerChecker"]
+- !private ["10Starscream22FrameCollectorDelegateP", "httpHandler"]
+- !private ["10Starscream22FrameCollectorDelegateP", "mutex"]
+- ["10Starscream22FrameCollectorDelegateP", "register"]
+- !private ["10Starscream22FrameCollectorDelegateP", "request"]
+- !private ["10Starscream22FrameCollectorDelegateP", "reset"]
+- !private ["10Starscream22FrameCollectorDelegateP", "respondToPingWithPong"]
+- !private ["10Starscream22FrameCollectorDelegateP", "secKeyValue"]
+- ["10Starscream22FrameCollectorDelegateP", "start"]
+- ["10Starscream22FrameCollectorDelegateP", "stop"]
+- !private ["10Starscream22FrameCollectorDelegateP", "transport"]
+- ["10Starscream22FrameCollectorDelegateP", "write"]
+- !private ["10Starscream22FrameCollectorDelegateP", "writeQueue"]
+- !private ["10Starscream22FrameCollectorDelegateP", "writeUint16"]
+- ["10Starscream10FrameEventO", "error"]
+- ["10Starscream10FrameEventO", "frame"]
+- !private ["10Starscream11FrameOpCodeO", "connectionClose"]
+- !private ["10Starscream11FrameOpCodeO", "pong"]
+- !private ["10Starscream11FrameOpCodeO", "textFrame"]
+- !private ["10Starscream6FramerP", "add"]
+- !private ["10Starscream6FramerP", "createWriteFrame"]
+- !private ["10Starscream6FramerP", "init"]
+- !private ["10Starscream6FramerP", "register"]
+- !private ["10Starscream6FramerP", "supportsCompression"]
+- !private ["10Starscream6FramerP", "updateCompression"]
+- !private ["10Starscream17FramerEventClientP", "CloseCode"]
+- !private ["10Starscream17FramerEventClientP", "Data"]
+- ["10Starscream17FramerEventClientP", "DispatchQueue"]
+- ["10Starscream17FramerEventClientP", "DispatchSemaphore"]
+- !private ["10Starscream17FramerEventClientP", "FoundationHTTPHandler"]
+- !private ["10Starscream17FramerEventClientP", "FoundationSecurity"]
+- ["10Starscream17FramerEventClientP", "FrameCollector"]
+- !private ["10Starscream17FramerEventClientP", "HTTPCookie"]
+- !private ["10Starscream17FramerEventClientP", "HTTPCookieStorage"]
+- !private ["10Starscream17FramerEventClientP", "HTTPWSHeader"]
+- !private ["10Starscream17FramerEventClientP", "MemoryLayout"]
+- !private ["10Starscream17FramerEventClientP", "UInt8"]
+- !private ["10Starscream17FramerEventClientP", "WSFramer"]
+- ["10Starscream17FramerEventClientP", ""]
+- !private ["10Starscream17FramerEventClientP", "broadcast"]
+- !private ["10Starscream17FramerEventClientP", "canSend"]
+- !private ["10Starscream17FramerEventClientP", "certPinner"]
+- !private ["10Starscream17FramerEventClientP", "compressionHandler"]
+- ["10Starscream17FramerEventClientP", "connectionChanged"]
+- ["10Starscream17FramerEventClientP", "decompress"]
+- !private ["10Starscream17FramerEventClientP", "delegate"]
+- ["10Starscream17FramerEventClientP", "didForm"]
+- ["10Starscream17FramerEventClientP", "didReceiveHTTP"]
+- !private ["10Starscream17FramerEventClientP", "didUpgrade"]
+- ["10Starscream17FramerEventClientP", "forceStop"]
+- !private ["10Starscream17FramerEventClientP", "frameHandler"]
+- ["10Starscream17FramerEventClientP", "frameProcessed"]
+- !private ["10Starscream17FramerEventClientP", "framer"]
+- !private ["10Starscream17FramerEventClientP", "handleError"]
+- !private ["10Starscream17FramerEventClientP", "headerChecker"]
+- !private ["10Starscream17FramerEventClientP", "httpHandler"]
+- !private ["10Starscream17FramerEventClientP", "mutex"]
+- ["10Starscream17FramerEventClientP", "register"]
+- !private ["10Starscream17FramerEventClientP", "request"]
+- !private ["10Starscream17FramerEventClientP", "reset"]
+- !private ["10Starscream17FramerEventClientP", "respondToPingWithPong"]
+- !private ["10Starscream17FramerEventClientP", "secKeyValue"]
+- ["10Starscream17FramerEventClientP", "start"]
+- ["10Starscream17FramerEventClientP", "stop"]
+- !private ["10Starscream17FramerEventClientP", "transport"]
+- ["10Starscream17FramerEventClientP", "write"]
+- !private ["10Starscream17FramerEventClientP", "writeQueue"]
+- !private ["10Starscream17FramerEventClientP", "writeUint16"]
+- !private ["So12NSHTTPCookieC", "cookies"]
+- !private ["So19NSHTTPCookieStorageC", "setCookie"]
+- !private ["So19NSHTTPCookieStorageC", "shared"]
+- ["10Starscream9HTTPEventO", "failure"]
+- ["10Starscream9HTTPEventO", "success"]
+- !private ["10Starscream11HTTPHandlerP", "convert"]
+- !private ["10Starscream11HTTPHandlerP", "init"]
+- !private ["10Starscream11HTTPHandlerP", "parse"]
+- !private ["10Starscream11HTTPHandlerP", "register"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "CloseCode"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "Data"]
+- ["10Starscream19HTTPHandlerDelegateP", "DispatchQueue"]
+- ["10Starscream19HTTPHandlerDelegateP", "DispatchSemaphore"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "FoundationHTTPHandler"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "FoundationSecurity"]
+- ["10Starscream19HTTPHandlerDelegateP", "FrameCollector"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "HTTPCookie"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "HTTPCookieStorage"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "HTTPWSHeader"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "MemoryLayout"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "UInt8"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "WSFramer"]
+- ["10Starscream19HTTPHandlerDelegateP", ""]
+- !private ["10Starscream19HTTPHandlerDelegateP", "broadcast"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "canSend"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "certPinner"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "compressionHandler"]
+- ["10Starscream19HTTPHandlerDelegateP", "connectionChanged"]
+- ["10Starscream19HTTPHandlerDelegateP", "decompress"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "delegate"]
+- ["10Starscream19HTTPHandlerDelegateP", "didForm"]
+- ["10Starscream19HTTPHandlerDelegateP", "didReceiveHTTP"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "didUpgrade"]
+- ["10Starscream19HTTPHandlerDelegateP", "forceStop"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "frameHandler"]
+- ["10Starscream19HTTPHandlerDelegateP", "frameProcessed"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "framer"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "handleError"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "headerChecker"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "httpHandler"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "mutex"]
+- ["10Starscream19HTTPHandlerDelegateP", "register"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "request"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "reset"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "respondToPingWithPong"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "secKeyValue"]
+- ["10Starscream19HTTPHandlerDelegateP", "start"]
+- ["10Starscream19HTTPHandlerDelegateP", "stop"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "transport"]
+- ["10Starscream19HTTPHandlerDelegateP", "write"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "writeQueue"]
+- !private ["10Starscream19HTTPHandlerDelegateP", "writeUint16"]
+- !private ["10Starscream12HTTPWSHeaderV", "createUpgrade"]
+- !private ["10Starscream12HTTPWSHeaderV", "generateWebSocketKey"]
+- !private ["SH", ""]
+- !private ["SH", "async"]
+- !private ["SH", "connectionClose"]
+- !private ["SH", "cookies"]
+- !private ["SH", "data"]
+- !private ["SH", "endIndex"]
+- !private ["SH", "forEach"]
+- ["SH", "init"]
+- !private ["SH", "normal"]
+- !private ["SH", "pong"]
+- !private ["SH", "rawValue"]
+- !private ["SH", "setCookie"]
+- !private ["SH", "shared"]
+- !private ["SH", "signal"]
+- !private ["SH", "subdata"]
+- !private ["SH", "textFrame"]
+- !private ["SH", "timeoutInterval"]
+- !private ["SH", "url"]
+- !private ["SH", "utf8"]
+- !private ["SH", "wait"]
+- !private ["10Starscream15HeaderValidatorP", "init"]
+- !private ["10Starscream15HeaderValidatorP", "validate"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", "data"]
+- !private ["s12MemoryLayoutO", "size"]
+- !private ["s10MirrorPathP", "data"]
+- !private ["SM", ""]
+- !private ["SM", "endIndex"]
+- !private ["SM", "forEach"]
+- !private ["SM", "init"]
+- !private ["SM", "subdata"]
+- !private ["10Foundation19MutableDataProtocolP", "endIndex"]
+- !private ["10Foundation19MutableDataProtocolP", "forEach"]
+- !private ["10Foundation19MutableDataProtocolP", "init"]
+- !private ["10Foundation19MutableDataProtocolP", "subdata"]
+- !private ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "data"]
+- !private ["So9NSCopyingP", "data"]
+- !private ["So21NSItemProviderReadingP", "data"]
+- !private ["So21NSItemProviderWritingP", "data"]
+- !private ["So16NSMutableCopyingP", "data"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "async"]
+- !private ["So8NSObjectC", "cookies"]
+- !private ["So8NSObjectC", "cookiesWithResponseHeaderFields"]
+- !private ["So8NSObjectC", "data"]
+- !private ["So8NSObjectC", "dataUsingEncoding"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "setCookie"]
+- !private ["So8NSObjectC", "shared"]
+- !private ["So8NSObjectC", "signal"]
+- !private ["So8NSObjectC", "wait"]
+- !private ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "async"]
+- !private ["So8NSObjectP", "cookies"]
+- !private ["So8NSObjectP", "cookiesWithResponseHeaderFields"]
+- !private ["So8NSObjectP", "data"]
+- !private ["So8NSObjectP", "dataUsingEncoding"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "setCookie"]
+- !private ["So8NSObjectP", "shared"]
+- !private ["So8NSObjectP", "signal"]
+- !private ["So8NSObjectP", "wait"]
+- !private ["So14NSSecureCodingP", "data"]
+- !private ["So8NSStringC", "data"]
+- ["So9OS_objectC", ""]
+- !private ["So9OS_objectC", "async"]
+- ["So9OS_objectC", "init"]
+- !private ["So9OS_objectC", "signal"]
+- !private ["So9OS_objectC", "wait"]
+- !private ["Sq", "url"]
+- !private ["Sk", ""]
+- !private ["Sk", "distance"]
+- !private ["Sk", "endIndex"]
+- !private ["Sk", "forEach"]
+- !private ["Sk", "formIndex"]
+- !private ["Sk", "index"]
+- !private ["Sk", "indices"]
+- !private ["Sk", "init"]
+- !private ["Sk", "startIndex"]
+- !private ["Sk", "subdata"]
+- !private ["Sk", "subscript"]
+- !private ["Sm", ""]
+- !private ["Sm", "data"]
+- !private ["Sm", "endIndex"]
+- !private ["Sm", "forEach"]
+- !private ["Sm", "init"]
+- !private ["Sm", "subdata"]
+- !private ["SY", "connectionClose"]
+- !private ["SY", "normal"]
+- !private ["SY", "pong"]
+- !private ["SY", "rawValue"]
+- !private ["SY", "textFrame"]
+- !private ["SY", "utf8"]
+- !private ["10Foundation20ReferenceConvertibleP", "endIndex"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "subdata"]
+- !private ["10Foundation20ReferenceConvertibleP", "timeoutInterval"]
+- !private ["10Foundation20ReferenceConvertibleP", "url"]
+- !private ["7Combine9SchedulerP", "async"]
+- ["7Combine9SchedulerP", "init"]
+- !private ["ST", ""]
+- !private ["ST", "data"]
+- !private ["ST", "endIndex"]
+- !private ["ST", "forEach"]
+- !private ["ST", "init"]
+- !private ["ST", "subdata"]
+- !private ["SS", "data"]
+- !private ["Sy", "data"]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", "data"]
+- !private ["s20TextOutputStreamableP", ""]
+- !private ["s20TextOutputStreamableP", "data"]
+- !private ["10Starscream9TransportP", "connect"]
+- !private ["10Starscream9TransportP", "disconnect"]
+- !private ["10Starscream9TransportP", "register"]
+- !private ["10Starscream9TransportP", "write"]
+- !private ["10Starscream20TransportEventClientP", "CloseCode"]
+- !private ["10Starscream20TransportEventClientP", "Data"]
+- ["10Starscream20TransportEventClientP", "DispatchQueue"]
+- ["10Starscream20TransportEventClientP", "DispatchSemaphore"]
+- !private ["10Starscream20TransportEventClientP", "FoundationHTTPHandler"]
+- !private ["10Starscream20TransportEventClientP", "FoundationSecurity"]
+- ["10Starscream20TransportEventClientP", "FrameCollector"]
+- !private ["10Starscream20TransportEventClientP", "HTTPCookie"]
+- !private ["10Starscream20TransportEventClientP", "HTTPCookieStorage"]
+- !private ["10Starscream20TransportEventClientP", "HTTPWSHeader"]
+- !private ["10Starscream20TransportEventClientP", "MemoryLayout"]
+- !private ["10Starscream20TransportEventClientP", "UInt8"]
+- !private ["10Starscream20TransportEventClientP", "WSFramer"]
+- ["10Starscream20TransportEventClientP", ""]
+- !private ["10Starscream20TransportEventClientP", "broadcast"]
+- !private ["10Starscream20TransportEventClientP", "canSend"]
+- !private ["10Starscream20TransportEventClientP", "certPinner"]
+- !private ["10Starscream20TransportEventClientP", "compressionHandler"]
+- ["10Starscream20TransportEventClientP", "connectionChanged"]
+- ["10Starscream20TransportEventClientP", "decompress"]
+- !private ["10Starscream20TransportEventClientP", "delegate"]
+- ["10Starscream20TransportEventClientP", "didForm"]
+- ["10Starscream20TransportEventClientP", "didReceiveHTTP"]
+- !private ["10Starscream20TransportEventClientP", "didUpgrade"]
+- ["10Starscream20TransportEventClientP", "forceStop"]
+- !private ["10Starscream20TransportEventClientP", "frameHandler"]
+- ["10Starscream20TransportEventClientP", "frameProcessed"]
+- !private ["10Starscream20TransportEventClientP", "framer"]
+- !private ["10Starscream20TransportEventClientP", "handleError"]
+- !private ["10Starscream20TransportEventClientP", "headerChecker"]
+- !private ["10Starscream20TransportEventClientP", "httpHandler"]
+- !private ["10Starscream20TransportEventClientP", "mutex"]
+- ["10Starscream20TransportEventClientP", "register"]
+- !private ["10Starscream20TransportEventClientP", "request"]
+- !private ["10Starscream20TransportEventClientP", "reset"]
+- !private ["10Starscream20TransportEventClientP", "respondToPingWithPong"]
+- !private ["10Starscream20TransportEventClientP", "secKeyValue"]
+- ["10Starscream20TransportEventClientP", "start"]
+- ["10Starscream20TransportEventClientP", "stop"]
+- !private ["10Starscream20TransportEventClientP", "transport"]
+- ["10Starscream20TransportEventClientP", "write"]
+- !private ["10Starscream20TransportEventClientP", "writeQueue"]
+- !private ["10Starscream20TransportEventClientP", "writeUint16"]
+- !private ["10Foundation10URLRequestV", "timeoutInterval"]
+- !private ["10Foundation10URLRequestV", "url"]
+- ["10Starscream8WSEngineC", "Bool"]
+- ["10Starscream8WSEngineC", "CertificatePinning"]
+- !private ["10Starscream8WSEngineC", "CloseCode"]
+- ["10Starscream8WSEngineC", "CompressionHandler"]
+- ["10Starscream8WSEngineC", "ConnectionState"]
+- ["10Starscream8WSEngineC", "Data"]
+- ["10Starscream8WSEngineC", "DispatchQueue"]
+- ["10Starscream8WSEngineC", "DispatchSemaphore"]
+- ["10Starscream8WSEngineC", "EngineDelegate"]
+- ["10Starscream8WSEngineC", "Error"]
+- !private ["10Starscream8WSEngineC", "FoundationHTTPHandler"]
+- !private ["10Starscream8WSEngineC", "FoundationSecurity"]
+- ["10Starscream8WSEngineC", "FrameCollector"]
+- ["10Starscream8WSEngineC", "FrameEvent"]
+- ["10Starscream8WSEngineC", "FrameOpCode"]
+- ["10Starscream8WSEngineC", "Framer"]
+- !private ["10Starscream8WSEngineC", "HTTPCookie"]
+- !private ["10Starscream8WSEngineC", "HTTPCookieStorage"]
+- ["10Starscream8WSEngineC", "HTTPEvent"]
+- ["10Starscream8WSEngineC", "HTTPHandler"]
+- !private ["10Starscream8WSEngineC", "HTTPWSHeader"]
+- ["10Starscream8WSEngineC", "HeaderValidator"]
+- !private ["10Starscream8WSEngineC", "MemoryLayout"]
+- ["10Starscream8WSEngineC", "String"]
+- ["10Starscream8WSEngineC", "Transport"]
+- ["10Starscream8WSEngineC", "UInt16"]
+- !private ["10Starscream8WSEngineC", "UInt8"]
+- ["10Starscream8WSEngineC", "URLRequest"]
+- !private ["10Starscream8WSEngineC", "WSError"]
+- !private ["10Starscream8WSEngineC", "WSFramer"]
+- ["10Starscream8WSEngineC", "WebSocketEvent"]
+- !private ["10Starscream8WSEngineC", ""]
+- !private ["10Starscream8WSEngineC", "broadcast"]
+- !private ["10Starscream8WSEngineC", "canSend"]
+- !private ["10Starscream8WSEngineC", "certPinner"]
+- !private ["10Starscream8WSEngineC", "compressionHandler"]
+- ["10Starscream8WSEngineC", "connectionChanged"]
+- ["10Starscream8WSEngineC", "decompress"]
+- ["10Starscream8WSEngineC", "deinit"]
+- ["10Starscream8WSEngineC", "delegate"]
+- ["10Starscream8WSEngineC", "didForm"]
+- ["10Starscream8WSEngineC", "didReceiveHTTP"]
+- !private ["10Starscream8WSEngineC", "didUpgrade"]
+- ["10Starscream8WSEngineC", "forceStop"]
+- !private ["10Starscream8WSEngineC", "frameHandler"]
+- ["10Starscream8WSEngineC", "frameProcessed"]
+- !private ["10Starscream8WSEngineC", "framer"]
+- !private ["10Starscream8WSEngineC", "handleError"]
+- !private ["10Starscream8WSEngineC", "headerChecker"]
+- !private ["10Starscream8WSEngineC", "httpHandler"]
+- ["10Starscream8WSEngineC", "init"]
+- !private ["10Starscream8WSEngineC", "mutex"]
+- ["10Starscream8WSEngineC", "register"]
+- !private ["10Starscream8WSEngineC", "request"]
+- !private ["10Starscream8WSEngineC", "reset"]
+- ["10Starscream8WSEngineC", "respondToPingWithPong"]
+- !private ["10Starscream8WSEngineC", "secKeyValue"]
+- ["10Starscream8WSEngineC", "start"]
+- ["10Starscream8WSEngineC", "stop"]
+- !private ["10Starscream8WSEngineC", "transport"]
+- ["10Starscream8WSEngineC", "write"]
+- !private ["10Starscream8WSEngineC", "writeQueue"]
+- !private ["10Starscream8WSEngineC", "writeUint16"]
+- !private ["10Starscream7WSErrorV", ""]
+- !private ["10Starscream7WSErrorV", "code"]
+- ["10Starscream8WSFramerC", ""]
+- !private ["10Starscream8WSFramerC", "init"]
+- !private ["10Starscream14WebSocketEventO", "binary"]
+- !private ["10Starscream14WebSocketEventO", "cancelled"]
+- !private ["10Starscream14WebSocketEventO", "connected"]
+- !private ["10Starscream14WebSocketEventO", "disconnected"]
+- !private ["10Starscream14WebSocketEventO", "error"]
+- !private ["10Starscream14WebSocketEventO", "ping"]
+- !private ["10Starscream14WebSocketEventO", "pong"]
+- !private ["10Starscream14WebSocketEventO", "reconnectSuggested"]
+- !private ["10Starscream14WebSocketEventO", "text"]
+- !private ["10Starscream14WebSocketEventO", "viabilityChanged"]
+- !private ["s14_ArrayProtocolP", "forEach"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "data"]
+- !private ["s24_DestructorSafeContainerP", "forEach"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "data"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "data"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "data"]
+- !private ["s19_HasContiguousBytesP", "data"]
+- !private ["s19_HasContiguousBytesP", "forEach"]
+- !private ["s19_HasContiguousBytesP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "data"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "forEach"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cookies"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "data"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setCookie"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "signal"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "wait"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "async"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cookies"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "data"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setCookie"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "signal"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "wait"]
+- !private ["s21_ObjectiveCBridgeableP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
+- !private ["s21_ObjectiveCBridgeableP", "data"]
+- !private ["s21_ObjectiveCBridgeableP", "endIndex"]
+- !private ["s21_ObjectiveCBridgeableP", "forEach"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "subdata"]
+- !private ["s21_ObjectiveCBridgeableP", "timeoutInterval"]
+- !private ["s21_ObjectiveCBridgeableP", "url"]
+depends-nominal:
+- !private "Sa"
+- !private "SK"
+- "s7CVarArgP"
+- !private "10Starscream18CertificatePinningP"
+- "10Starscream9CloseCodeO"
+- !private "Sl"
+- !private "SL"
+- !private "10Starscream18CompressionHandlerP"
+- "10Starscream15ConnectionStateO"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- "So18OS_dispatch_objectC"
+- "So17OS_dispatch_queueC"
+- "So21OS_dispatch_semaphoreC"
+- !private "SE"
+- !private "SS10FoundationE8EncodingV"
+- "10Starscream6EngineP"
+- !private "10Starscream14EngineDelegateP"
+- "SQ"
+- !private "s5ErrorP"
+- "10Starscream14FrameCollectorC5EventO"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "10Starscream21FoundationHTTPHandlerC"
+- "10Starscream18FoundationSecurityC"
+- "10Starscream14FrameCollectorC"
+- "10Starscream22FrameCollectorDelegateP"
+- "10Starscream10FrameEventO"
+- !private "10Starscream11FrameOpCodeO"
+- !private "10Starscream6FramerP"
+- "10Starscream17FramerEventClientP"
+- !private "So12NSHTTPCookieC"
+- !private "So19NSHTTPCookieStorageC"
+- "10Starscream9HTTPEventO"
+- !private "10Starscream11HTTPHandlerP"
+- "10Starscream19HTTPHandlerDelegateP"
+- !private "10Starscream12HTTPWSHeaderV"
+- "SH"
+- !private "10Starscream15HeaderValidatorP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s12MemoryLayoutO"
+- !private "s10MirrorPathP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- "So9OS_objectC"
+- !private "Sq"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
+- !private "10Foundation20ReferenceConvertibleP"
+- "7Combine9SchedulerP"
+- !private "ST"
+- !private "SS"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "10Starscream9TransportP"
+- "10Starscream20TransportEventClientP"
+- !private "10Foundation10URLRequestV"
+- "10Starscream8WSEngineC"
+- !private "10Starscream7WSErrorV"
+- "10Starscream8WSFramerC"
+- !private "10Starscream14WebSocketEventO"
+- !private "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Target Support Files/Starscream/Starscream-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/module.map"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Starscream.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "787eb37cbdbad768beef76ab294d0c62"

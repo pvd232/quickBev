@@ -39,19 +39,21 @@ public class User: NSManagedObject, Codable {
     }
 }
 extension User {
-    convenience init (Email: String, FirstName: String, LastName:String, Password: String) {
+    convenience init (Email: String, FirstName: String, LastName:String, Password: String, EmailVerified: Bool) {
         self.init(context: CoreDataManager.sharedManager.managedContext)
         self.email = Email
         self.firstName = FirstName
         self.lastName = LastName
         self.password = Password
+        self.emailVerified = EmailVerified
     }
-    convenience init (Email: String, FirstName: String, LastName:String, Password: String, StripeId: String) {
+    convenience init (Email: String, FirstName: String, LastName:String, Password: String, StripeId: String, EmailVerified: Bool) {
         self.init(context: CoreDataManager.sharedManager.managedContext)
         self.email = Email
         self.firstName = FirstName
         self.lastName = LastName
         self.password = Password
         self.stripeId = StripeId
+        self.emailVerified = EmailVerified
     }
 }

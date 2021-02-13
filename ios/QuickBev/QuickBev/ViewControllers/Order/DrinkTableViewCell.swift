@@ -11,8 +11,8 @@ import UIKit
 class DrinkTableViewCell: UITableViewCell {
     
     let drinkImageView = UIImageView()
-    let name = UILabel()
-    let miscellaneousText = UILabel()
+    let name = UILabel(theme:Theme.UILabel(props: [.textColor]))
+    let miscellaneousText = UILabel(theme:Theme.UILabel(props: [.textColor]))
     
     override func awakeFromNib() {
         super.awakeFromNib()

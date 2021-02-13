@@ -9,8 +9,8 @@
 import UIKit
 
 class BusinessArrayTableViewCell: UITableViewCell {
-    let name = UILabel()
-    let address = UILabel()
+    let name = UILabel(theme:Theme.UILabel(props: [.textColor]))
+    let address = UILabel(theme:Theme.UILabel(props: [.textColor]))
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

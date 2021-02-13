@@ -11,8 +11,8 @@ import UIKit
 class CheckoutCartTableViewCell: UITableViewCell {
     
     let drinkImageView = UIImageView()
-    let name = UILabel()
-    let cost = UILabel()
+    let name = UILabel(theme:Theme.UILabel(props: [.textColor]))
+    let cost = UILabel(theme:Theme.UILabel(props: [.textColor]))
     let stackView = UIStackView()
 
     override func awakeFromNib() {

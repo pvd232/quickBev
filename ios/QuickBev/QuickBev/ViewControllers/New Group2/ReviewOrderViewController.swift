@@ -12,32 +12,32 @@ import Alamofire
 
 class ReviewOrderViewController: UIViewController {
     @UsesAutoLayout var orderSummaryStackView = UIStackView()
-    @UsesAutoLayout var orderSummaryLabel = UILabel()
+    @UsesAutoLayout var orderSummaryLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
     @UsesAutoLayout var subtotalStackView = UIStackView()
-    @UsesAutoLayout var subtotalHeaderLabel = UILabel()
+    @UsesAutoLayout var subtotalHeaderLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
     @UsesAutoLayout var salesTaxStackView = UIStackView()
-    @UsesAutoLayout var salesTaxHeaderLabel = UILabel()
+    @UsesAutoLayout var salesTaxHeaderLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
     @UsesAutoLayout var tipStackView = UIStackView()
-    @UsesAutoLayout var tipHeaderLabel = UILabel()
+    @UsesAutoLayout var tipHeaderLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
     @UsesAutoLayout var totalStackView = UIStackView()
-    @UsesAutoLayout var totalHeaderLabel = UILabel()
+    @UsesAutoLayout var totalHeaderLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
     
     @UsesAutoLayout var defaultPaymentMethodView = UIView()
     @UsesAutoLayout var cardLogoImageView = UIImageView()
-    @UsesAutoLayout var cardCompanyName = UILabel()
-    @UsesAutoLayout var orderSubtotalLabel = UILabel()
-    @UsesAutoLayout var salesTaxLabel = UILabel()
-    @UsesAutoLayout var tipAmountLabel = UILabel()
+    @UsesAutoLayout var cardCompanyName = UILabel(theme:Theme.UILabel(props: [.textColor]))
+    @UsesAutoLayout var orderSubtotalLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
+    @UsesAutoLayout var salesTaxLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
+    @UsesAutoLayout var tipAmountLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
     @UsesAutoLayout var addPaymentMethodButton = RoundButton()
     @UsesAutoLayout var changePaymentMethodButton = RoundButton()
-    @UsesAutoLayout var orderTotalLabel = UILabel()
+    @UsesAutoLayout var orderTotalLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
     @UsesAutoLayout private var activityIndicator = UIActivityIndicatorView(style: .large)
     
     // need to dynamically apply this based on business location the user is at, should probably store a list of states and associated sales taxes in core data when first loading the app
     var paymentContext: STPPaymentContext?
     init() {
         super.init(nibName: nil, bundle: nil)
-        self.view.backgroundColor = .systemBackground
+        self.view.backgroundColor = .white
     }
     
     required init?(coder: NSCoder) {

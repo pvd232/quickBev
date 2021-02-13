@@ -26,7 +26,7 @@ class CheckoutViewController : UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .systemBackground
+        self.view.backgroundColor = .white
         
         self.view.addSubview(tableView)
         self.view.addSubview(bottomButtonView)

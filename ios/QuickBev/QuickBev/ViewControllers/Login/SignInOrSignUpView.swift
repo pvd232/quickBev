@@ -12,25 +12,25 @@ class SignInOrSignUpView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    private lazy var navigationController: UINavigationController = {
+    private lazy var navController: UINavigationController = {
         return SceneDelegate.shared.rootViewController.current as! UINavigationController
     }()
-    
+
     var shouldSetupConstraints = true
-    var viewProps: SignInAndSignUpProps
+//    var viewProps: SignInAndSignUpProps
     let logoImage = UIImage(named:"charterRomanPurpleLogo-30")
     
     @UsesAutoLayout var logoImageView = UIImageView()
-    @UsesAutoLayout var centerLabel = UILabel(theme: Theme.UILabel(props: [.font(    UIFont.largeThemeLabelFont)]))
+    @UsesAutoLayout var centerLabel = UILabel(theme: Theme.UILabel(props: [.font(    UIFont.largeThemeLabelFont), .text("Lets get started"), .textColor]))
     @UsesAutoLayout var optionsStackView = UIStackView()
-    @UsesAutoLayout var firstButton = RoundButton()
-    @UsesAutoLayout var secondButton = RoundButton()
-    @UsesAutoLayout var thirdButton = RoundButton()
-    @UsesAutoLayout var orLabel = UILabel()
+    @UsesAutoLayout var firstButton = RoundButton(theme: Theme.RoundButton(props: [.color, .text("Sign in"), .titleLabelFont(UIFont.themeButtonFont)]))
+    @UsesAutoLayout var secondButton = RoundButton(theme: Theme.RoundButton(props: [.color, .text("Sign up"), .titleLabelFont(UIFont.themeButtonFont)]))
+    @UsesAutoLayout var thirdButton = RoundButton(theme: Theme.RoundButton(props: [.color, .text("Continue as a guest"), .titleLabelFont(UIFont.themeButtonFont)]))
+    @UsesAutoLayout var orLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
     
-    init(frame: CGRect, props: SignInAndSignUpProps){
+    override init(frame: CGRect){
         // have to initialize view controller properties before calling super.init
-        viewProps = props
+//        viewProps = props
         super.init(frame: frame)
         self.addSubview(logoImageView)
         self.addSubview(centerLabel)
@@ -41,30 +41,30 @@ class SignInOrSignUpView: UIView {
         optionsStackView.axis = .vertical
         optionsStackView.spacing = 14.0
         
-        firstButton.refreshTitle(newTitle: props.getButtonText(buttonIndex: SignInAndSignUpProps.ButtonIndex.first))
-        firstButton.titleLabel?.font = UIFont.themeButtonFont
-        firstButton.refreshColor(color:  UIColor.themeColor)
+//        firstButton.refreshTitle(newTitle: props.getButtonText())
+//        firstButton.titleLabel?.font = UIFont.themeButtonFont
+//        firstButton.refreshColor(color:  UIColor.themeColor)
         
-        secondButton.refreshTitle(newTitle: props.getButtonText(buttonIndex: SignInAndSignUpProps.ButtonIndex.second))
-        if props.getRawValue() == "splash"{
-            secondButton.refreshColor(color:  UIColor.themeColor)
-            secondButton.setTitleColor(UIColor.white, for: .normal)
+//        secondButton.refreshTitle(newTitle: props.getButtonText())
+//        if props.getRawValue() == "splash"{
+//            secondButton.refreshColor(color:  UIColor.themeColor)
+//            secondButton.setTitleColor(UIColor.white, for: .normal)
 
-        }
-        else {
-            secondButton.refreshColor(color: UIColor.white)
-            secondButton.setTitleColor(UIColor.black, for: .normal)
-        }
-        secondButton.titleLabel?.font = UIFont.themeButtonFont
-        thirdButton.refreshTitle(newTitle: props.getButtonText(buttonIndex: SignInAndSignUpProps.ButtonIndex.third))
-        thirdButton.titleLabel?.font = UIFont.themeButtonFont
-        thirdButton.refreshColor(color:  UIColor.themeColor)
+//        }
+//        else {
+//            secondButton.refreshColor(color: UIColor.white)
+//            secondButton.setTitleColor(UIColor.black, for: .normal)
+//        }
+//        secondButton.titleLabel?.font = UIFont.themeButtonFont
+//        thirdButton.refreshTitle(newTitle: props.getButtonText())
+//        thirdButton.titleLabel?.font = UIFont.themeButtonFont
+//        thirdButton.refreshColor(color:  UIColor.themeColor)
         
         orLabel.text = "OR"
         orLabel.font = UIFont(name: "Charter-Roman", size: 18.0)
         orLabel.textAlignment = .center
         
-        centerLabel.text = props.getCenterTitleText()
+//        centerLabel.text = props.getCenterTitleText()
         centerLabel.textAlignment = .center
         centerLabel.textColor = UIColor.black
         
@@ -109,13 +109,16 @@ class SignInOrSignUpView: UIView {
     
     @objc func firstButtonTouchUp () {
 
-        viewProps.launchNewViewController(buttonIndex: SignInAndSignUpProps.ButtonIndex.first)
+        navController.pushViewController(LoginViewController(), animated: true)
+
     }
     @objc func secondButtonTouchUp () {
-        viewProps.launchNewViewController(buttonIndex:  SignInAndSignUpProps.ButtonIndex.second)
+        navController.pushViewController(RegistrationWithEmailViewController(), animated: true)
     }
     @objc func thirdButtonTouchUp () {
-        viewProps.launchNewViewController(buttonIndex: SignInAndSignUpProps.ButtonIndex.third)
+        CheckoutCart.shared.isGuest = true
+        CoreDataManager.sharedManager.saveContext()
+        navController.pushViewController(HomePageViewController(), animated: true)
     }
 }
 

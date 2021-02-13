@@ -14,7 +14,7 @@ class DrinkListTableViewController: UITableViewController {
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        self.view.backgroundColor = .systemBackground
+        self.view.backgroundColor = .white
         for drink in CheckoutCart.shared.userBusiness!.drinks!.allObjects{
 //            print("drink",drink)
         }

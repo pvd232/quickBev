@@ -139,6 +139,7 @@ extension UIView {
         let border = UIView()
         border.backgroundColor = color
         border.frame = CGRect(x: 0, y: 0, width: borderWidth, height: frame.size.height)
+        
         border.autoresizingMask = [.flexibleHeight, .flexibleRightMargin]
         addSubview(border)
     }

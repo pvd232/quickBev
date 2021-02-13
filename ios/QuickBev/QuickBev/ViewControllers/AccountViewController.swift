@@ -33,7 +33,7 @@ class AccountViewController : UIViewController, UITableViewDelegate, UITableView
         imageView.translatesAutoresizingMaskIntoConstraints = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
         self.navigationItem.setHidesBackButton(false, animated: true)
-        self.view.backgroundColor = .systemBackground
+        self.view.backgroundColor = .white
         // add the table view to self.view
         self.view.addSubview(imageView)
         self.view.addSubview(tableView)

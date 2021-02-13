@@ -11,18 +11,18 @@ import UIKit
 class OrderConfirmationViewController: UIViewController {
     
     @UsesAutoLayout var pickupDetailsStackView = UIStackView()
-    @UsesAutoLayout var pickupDetailsLabel = UILabel()
-    @UsesAutoLayout var pickupAddressLabel = UILabel()
-    @UsesAutoLayout var businessNameLabel = UILabel()
-    @UsesAutoLayout var addressLabel = UILabel()
-    @UsesAutoLayout var pickupInstructionsLabel = UILabel()
-    @UsesAutoLayout var pickupInstructionsText = UILabel()
+    @UsesAutoLayout var pickupDetailsLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
+    @UsesAutoLayout var pickupAddressLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
+    @UsesAutoLayout var businessNameLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
+    @UsesAutoLayout var addressLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
+    @UsesAutoLayout var pickupInstructionsLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
+    @UsesAutoLayout var pickupInstructionsText = UILabel(theme:Theme.UILabel(props: [.textColor]))
     @UsesAutoLayout var toolbarView = ToolbarView()
     var didLayoutBadgeNotification = false
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        self.view.backgroundColor = .systemBackground
+        self.view.backgroundColor = .white
     }
     
     required init?(coder: NSCoder) {
