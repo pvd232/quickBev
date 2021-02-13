@@ -137,6 +137,7 @@ class Customer(db.Model):
     password = db.Column(db.String(80), nullable=False)
     first_name = db.Column(db.String(80), nullable=False)
     last_name = db.Column(db.String(80), nullable=False)
+    email_verified = db.Column(db.Boolean(), nullable=False)
     order = relationship('Order', lazy=True, backref="order")
     tab = relationship('Tab', lazy=True, backref="tab")
 
@@ -311,7 +312,7 @@ def create_business():
     new_stripe_customer = stripe.Customer.create()
     new_stripe_customer_id = Stripe_Customer(id=new_stripe_customer.id)
     new_customer = Customer(id="a", password="a",
-                            first_name="peter", last_name="driscoll", stripe_id=new_stripe_customer.id)
+                            first_name="peter", last_name="driscoll", stripe_id=new_stripe_customer.id, email_verified=False)
     db.session.add(new_stripe_customer_id)
     db.session.add(new_customer)
     # commit the session to my DB.
@@ -351,4 +352,4 @@ def create_everything():
     create_drink()
 
 
-# create_everything()
+create_everything()

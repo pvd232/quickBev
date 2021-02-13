@@ -8,37 +8,18 @@ import uuid
 import stripe
 import os
 from werkzeug.utils import secure_filename
-from flask_httpauth import HTTPBasicAuth
-from werkzeug.security import generate_password_hash, check_password_hash
 import base64
 import asyncio
 import websockets
-
-
-app = Flask(__name__)
-auth = HTTPBasicAuth()
-
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
 app = Flask(__name__)
 
-users = {
-    "john": generate_password_hash("hello"),
-    "susan": generate_password_hash("bye")
-}
-
-
-@auth.verify_password
-def verify_password(username, password):
-    if username in users and \
-            check_password_hash(users.get(username), password):
-        return username
-
-
-UPLOAD_FOLDER = os.getcwd() + "/files"
+merchant_menu_upload_folder = os.getcwd() + "/files"
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
-
-app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['UPLOAD_FOLDER'] = merchant_menu_upload_folder
 
 stripe.api_key = "sk_test_51I0xFxFseFjpsgWvh9b1munh6nIea6f5Z8bYlIDfmKyNq6zzrgg8iqeKEHwmRi5PqIelVkx4XWcYHAYc1omtD7wz00JiwbEKzj"
 # publicly accessible local host URL!!! - http://machina-8c11dd2e.localhost.run/
@@ -107,6 +88,37 @@ def orders():
         print('customer_orders', merchant_orders)
         response = {"orders": merchant_orders}
         return Response(status=200, response=json.dumps(response), headers=header)
+
+
+def send_confirmation_email(self, customer):
+    mail_header = '<!DOCTYPE html><html lang="en" style="height: 100%;"><head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><style>p{margin-top: 15px; margin-bottom: 15px;}</style><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script></head>'
+    mail_body_text = f'<p>Hey {customer.first_name},</p><p>Welcome to QuickBev!</p><p>Please click the link below to verify your account</p><br /><p>Let the good times begin,</p><p>—The QuickBev Team</p></div><div className = "row" style="display:flex; justify-content: center;"><button type="button" class="btn btn-outline-*" style="background-color:white; border-color:#8682E6; font-weight:bold; align-self:center;">VERIFY EMAIL</button>'
+    mail_body = f'<body style="height: 100%;"><divstyle="width: 100%;height: 100%;display: flex;justify-content: center;background-color: #e8e8e8;"><divclassName="container-fluid"style="width: 100%;max-width: 500px;margin-top: 3%;margin-bottom: 10%;background-color: white;"><div className="row" style="width: 100%; padding:30px 30px 30px 30px"><div className="row" style="display: flex; width:100%; justify-content: center"><img src="src/static/landscape-logo-purple.png" style="width:50%; height:12%" /></div><div className="row" style="margin-top: 30px;">{mail_body_text}</div></div></div></div></body></html>'
+
+    logo = os.path.join(os.getcwd(), "src/static/landscape-logo-purple.png")
+
+    sender_address = 'confirmation@crepenshake.com'
+    email = 'crepenshake@yahoo.com'
+
+    # Setup the MIME
+    message = MIMEMultipart()
+    message['From'] = sender_address
+    message['To'] = email
+
+    message['Subject'] = 'Order From'  # The subject line
+
+    mail_content = mail_header + mail_body
+    # The body and the attachments for the mail
+    message.attach(MIMEText(mail_content, 'html'))
+    # Create SMTP session for sending the mail
+    s = smtplib.SMTP('localhost')
+
+    # s = smtplib.SMTP('smtp.mailgun.org', 587)
+    s.starttls()
+    # s.login('postmaster@crepenshake.com',
+    #         '6695313d8a619bc44dce00ad7184960a-ba042922-f2a8cfbb')
+    s.sendmail(message['From'], message['To'], message.as_string())
+    s.quit()
 
 
 @app.route('/customer', methods=['POST', 'GET', 'OPTIONS'])
@@ -304,23 +316,22 @@ def add_menu():
 async def hello(websocket, path):
     remote_ip = websocket.remote_address[0]
     remote_ip_list = websocket.remote_address
-    print('remote_ip_list',remote_ip_list)
+    print('remote_ip_list', remote_ip_list)
 
-    print('remote_ip',remote_ip)
-    
+    print('remote_ip', remote_ip)
+
     name = await websocket.recv()
     # print(f"< {name}")
     print("data recieved", name)
-
 
     greeting = f"Hello {name}!"
 
     await websocket.send(greeting)
     print(f"> {greeting}")
 
-start_server = websockets.serve(hello, "localhost", 8765)
 
-asyncio.get_event_loop().run_until_complete(start_server)
-asyncio.get_event_loop().run_forever()
 if __name__ == '__main__':
     app.run(debug=True)
+    start_server = websockets.serve(hello, "localhost", 8765)
+    asyncio.get_event_loop().run_until_complete(start_server)
+    asyncio.get_event_loop().run_forever()

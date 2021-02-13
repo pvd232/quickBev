@@ -10,6 +10,7 @@ import requests
 import base64
 from sqlalchemy.sql import text
 from sqlalchemy.inspection import inspect
+from werkzeug.security import generate_password_hash, check_password_hash
 
 stripe.api_key = "sk_test_51I0xFxFseFjpsgWvh9b1munh6nIea6f5Z8bYlIDfmKyNq6zzrgg8iqeKEHwmRi5PqIelVkx4XWcYHAYc1omtD7wz00JiwbEKzj"
 
@@ -134,7 +135,7 @@ class Customer_Repository(object):
       # check to see if the customer exists in the database by querying the Customer_Info table for the giver username and password
       # if they don't exist this will return a null value for customer which i check for in line 80
         customer = session.query(Customer).filter(
-            Customer.id == email, Customer.password == password).first()
+            check_password_hash(Customer.id, email), check_password_hash(Customer.password, password)).first()
         if customer:
             return customer
         else:
@@ -142,7 +143,7 @@ class Customer_Repository(object):
 
     def register_new_customer(self, session, customer):
         test_customer = session.query(Customer).filter(
-            Customer.id == customer.id).first()
+            check_password_hash(Customer.id, customer.id)).first()
         test_stripe_id = session.query(Stripe_Customer).filter(
             Stripe_Customer.id == customer.stripe_id).first()
         print('test_stripe_id', test_stripe_id)
@@ -150,7 +151,7 @@ class Customer_Repository(object):
 
         if not test_customer and test_stripe_id:
             new_customer = Customer(id=customer.id, password=customer.password,
-                                    first_name=customer.first_name, last_name=customer.last_name, stripe_id=test_stripe_id.id)
+                                    first_name=customer.first_name, last_name=customer.last_name, stripe_id=test_stripe_id.id, email_verified=customer.email_verified)
             session.add(new_customer)
             return True
         elif not test_customer and not test_stripe_id:
@@ -158,7 +159,7 @@ class Customer_Repository(object):
             new_stripe = Stripe_Customer(id=new_customer.id)
             session.add(new_stripe)
             new_customer = Customer(id=customer.id, password=customer.password,
-                                    first_name=customer.first_name, last_name=customer.last_name, stripe_id=new_stripe.id)
+                                    first_name=customer.first_name, last_name=customer.last_name, stripe_id=new_stripe.id, email_verified=customer.email_verified)
             session.add(new_customer)
             return {"stripe_id": new_stripe.id}
         else:

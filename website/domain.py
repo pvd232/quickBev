@@ -1,4 +1,5 @@
 from datetime import datetime
+from werkzeug.security import generate_password_hash, check_password_hash
 
 
 class Drink_Domain(object):
@@ -177,14 +178,26 @@ class Customer_Domain(object):
             self.id = customer_object.id
             self.first_name = customer_object.first_name
             self.last_name = customer_object.last_name
+            self.email_verified = customer_object.email_verified
             # might not want to send this sensitive information in every request
             if "password" in customer_object.__dict__.keys():
                 self.password = customer_object.password
             if "stripe_id" in customer_object.__dict__.keys():
                 self.stripe_id = customer_object.stripe_id
         elif customer_json:
-            self.id = customer_json["id"]
-            self.password = customer_json["password"]
+            print()
+            print('customer_json["id"]', customer_json["id"])
+            print()
+            print('generate_password_hash(customer_json["id"], "sha256") ', generate_password_hash(
+                customer_json["id"], "sha256"))
+            self.id = generate_password_hash(customer_json["id"], "sha256")
+            self.password = generate_password_hash(
+                customer_json["password"], "sha256")
+            print()
+            print('check_password_hash(self.password, customer_json["password"])', check_password_hash(
+                self.password, customer_json["password"]))
+            print()
+            self.email_verified = customer_json["email_verified"]
             self.first_name = customer_json["first_name"]
             self.last_name = customer_json["last_name"]
             self.stripe_id = customer_json["stripe_id"]
