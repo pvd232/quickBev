@@ -17,6 +17,7 @@ public class CheckoutCart: NSManagedObject {
             }
         }
     }
+    static var guestDrink: Drink? = nil
 }
 extension CheckoutCart {
     public var cart: [Drink] {

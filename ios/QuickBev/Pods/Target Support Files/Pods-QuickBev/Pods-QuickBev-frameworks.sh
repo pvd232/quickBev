@@ -178,19 +178,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/BadgeHub/BadgeHub.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/NWWebSocket/NWWebSocket.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/PusherSwift/PusherSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/TweetNacl/TweetNacl.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/BadgeHub/BadgeHub.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/NWWebSocket/NWWebSocket.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/PusherSwift/PusherSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/TweetNacl/TweetNacl.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

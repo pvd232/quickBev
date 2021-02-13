@@ -82,7 +82,7 @@ depends-member:
 - !private ["8QuickBev20AccountTableViewCellC", "updateShapeLayer"]
 - !private ["9Alamofire0A8ExtendedP", "init"]
 - !private ["Sa", "init"]
-- !private ["SK", ""]
+- ["SK", ""]
 - !private ["SK", "init"]
 - ["So7CALayerC", ""]
 - !private ["So7CALayerC", "addSublayer"]
@@ -97,7 +97,9 @@ depends-member:
 - !private ["So15CALayerDelegateP", "CGPoint"]
 - ["So15CALayerDelegateP", "CellStyle"]
 - ["So15CALayerDelegateP", "Int"]
+- ["So15CALayerDelegateP", "NSCoder"]
 - !private ["So15CALayerDelegateP", "NSLayoutConstraint"]
+- ["So15CALayerDelegateP", "String"]
 - ["So15CALayerDelegateP", "Theme"]
 - ["So15CALayerDelegateP", "UIBezierPath"]
 - ["So15CALayerDelegateP", "UIColor"]
@@ -179,8 +181,9 @@ depends-member:
 - !private ["s7CVarArgP", "strokeEnd"]
 - !private ["s7CVarArgP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["s7CVarArgP", "updateShapeLayer"]
-- !private ["Sl", ""]
+- ["Sl", ""]
 - !private ["Sl", "init"]
+- ["SL", ""]
 - !private ["10Foundation15ContiguousBytesP", "init"]
 - ["s28CustomDebugStringConvertibleP", "CAShapeLayer"]
 - !private ["s28CustomDebugStringConvertibleP", "CGPoint"]
@@ -328,11 +331,15 @@ depends-member:
 - !private ["s30ExpressibleByDictionaryLiteralP", "Key"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "Value"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "cgPath"]
+- ["s32ExpressibleByStringInterpolationP", ""]
+- ["s26ExpressibleByStringLiteralP", ""]
+- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["So21NSLayoutFormatOptionsV", "ArrayLiteralElement"]
 - !private ["So21NSLayoutFormatOptionsV", "Element"]
 - !private ["So21NSLayoutFormatOptionsV", "init"]
@@ -374,6 +381,7 @@ depends-member:
 - !private ["SH", "strokeEnd"]
 - !private ["SH", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["SH", "updateShapeLayer"]
+- ["s25LosslessStringConvertibleP", ""]
 - !private ["SM", ""]
 - !private ["SM", "init"]
 - !private ["10Foundation19MutableDataProtocolP", "init"]
@@ -382,7 +390,9 @@ depends-member:
 - !private ["So8NSCodingP", "CGPoint"]
 - ["So8NSCodingP", "CellStyle"]
 - ["So8NSCodingP", "Int"]
+- ["So8NSCodingP", "NSCoder"]
 - !private ["So8NSCodingP", "NSLayoutConstraint"]
+- ["So8NSCodingP", "String"]
 - ["So8NSCodingP", "Theme"]
 - ["So8NSCodingP", "UIBezierPath"]
 - ["So8NSCodingP", "UIColor"]
@@ -444,6 +454,7 @@ depends-member:
 - ["So8NSObjectC", "UIView"]
 - ["So8NSObjectC", ""]
 - !private ["So8NSObjectC", "activate"]
+- !private ["So8NSObjectC", "activateConstraints"]
 - !private ["So8NSObjectC", "addLine"]
 - !private ["So8NSObjectC", "addLineToPoint"]
 - !private ["So8NSObjectC", "addSublayer"]
@@ -463,6 +474,7 @@ depends-member:
 - ["So8NSObjectC", "drawFirstPath"]
 - !private ["So8NSObjectC", "fatalError"]
 - !private ["So8NSObjectC", "frame"]
+- !private ["So8NSObjectC", "frameForAlignmentRect"]
 - ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "layer"]
 - ["So8NSObjectC", "lightGray"]
@@ -485,7 +497,9 @@ depends-member:
 - !private ["So8NSObjectP", "CGPoint"]
 - ["So8NSObjectP", "CellStyle"]
 - ["So8NSObjectP", "Int"]
+- ["So8NSObjectP", "NSCoder"]
 - !private ["So8NSObjectP", "NSLayoutConstraint"]
+- ["So8NSObjectP", "String"]
 - ["So8NSObjectP", "Theme"]
 - ["So8NSObjectP", "UIBezierPath"]
 - ["So8NSObjectP", "UIColor"]
@@ -494,6 +508,7 @@ depends-member:
 - ["So8NSObjectP", "UIView"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "activate"]
+- !private ["So8NSObjectP", "activateConstraints"]
 - !private ["So8NSObjectP", "addLine"]
 - !private ["So8NSObjectP", "addLineToPoint"]
 - !private ["So8NSObjectP", "addSublayer"]
@@ -513,6 +528,7 @@ depends-member:
 - ["So8NSObjectP", "drawFirstPath"]
 - !private ["So8NSObjectP", "fatalError"]
 - !private ["So8NSObjectP", "frame"]
+- !private ["So8NSObjectP", "frameForAlignmentRect"]
 - ["So8NSObjectP", "init"]
 - ["So8NSObjectP", "layer"]
 - ["So8NSObjectP", "lightGray"]
@@ -555,19 +571,23 @@ depends-member:
 - !private ["SY", "Element"]
 - !private ["SY", ""]
 - !private ["SY", "init"]
-- !private ["ST", ""]
+- ["ST", ""]
 - !private ["ST", "init"]
 - !private ["s10SetAlgebraP", "ArrayLiteralElement"]
 - !private ["s10SetAlgebraP", "Element"]
 - !private ["s10SetAlgebraP", ""]
 - !private ["s10SetAlgebraP", "init"]
+- ["s16TextOutputStreamP", ""]
+- ["s20TextOutputStreamableP", ""]
 - ["8QuickBev5ThemeO", "UILabel"]
 - ["So29UIAccessibilityIdentificationP", "Bool"]
 - ["So29UIAccessibilityIdentificationP", "CAShapeLayer"]
 - !private ["So29UIAccessibilityIdentificationP", "CGPoint"]
 - ["So29UIAccessibilityIdentificationP", "CellStyle"]
 - ["So29UIAccessibilityIdentificationP", "Int"]
+- ["So29UIAccessibilityIdentificationP", "NSCoder"]
 - !private ["So29UIAccessibilityIdentificationP", "NSLayoutConstraint"]
+- ["So29UIAccessibilityIdentificationP", "String"]
 - ["So29UIAccessibilityIdentificationP", "Theme"]
 - ["So29UIAccessibilityIdentificationP", "UIBezierPath"]
 - ["So29UIAccessibilityIdentificationP", "UIColor"]
@@ -597,7 +617,9 @@ depends-member:
 - !private ["So12UIAppearanceP", "CGPoint"]
 - ["So12UIAppearanceP", "CellStyle"]
 - ["So12UIAppearanceP", "Int"]
+- ["So12UIAppearanceP", "NSCoder"]
 - !private ["So12UIAppearanceP", "NSLayoutConstraint"]
+- ["So12UIAppearanceP", "String"]
 - ["So12UIAppearanceP", "Theme"]
 - ["So12UIAppearanceP", "UIBezierPath"]
 - ["So12UIAppearanceP", "UIColor"]
@@ -627,7 +649,9 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "CGPoint"]
 - ["So21UIAppearanceContainerP", "CellStyle"]
 - ["So21UIAppearanceContainerP", "Int"]
+- ["So21UIAppearanceContainerP", "NSCoder"]
 - !private ["So21UIAppearanceContainerP", "NSLayoutConstraint"]
+- ["So21UIAppearanceContainerP", "String"]
 - ["So21UIAppearanceContainerP", "Theme"]
 - ["So21UIAppearanceContainerP", "UIBezierPath"]
 - ["So21UIAppearanceContainerP", "UIColor"]
@@ -665,7 +689,9 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "CGPoint"]
 - ["So17UICoordinateSpaceP", "CellStyle"]
 - ["So17UICoordinateSpaceP", "Int"]
+- ["So17UICoordinateSpaceP", "NSCoder"]
 - !private ["So17UICoordinateSpaceP", "NSLayoutConstraint"]
+- ["So17UICoordinateSpaceP", "String"]
 - ["So17UICoordinateSpaceP", "Theme"]
 - ["So17UICoordinateSpaceP", "UIBezierPath"]
 - ["So17UICoordinateSpaceP", "UIColor"]
@@ -695,7 +721,9 @@ depends-member:
 - !private ["So13UIDynamicItemP", "CGPoint"]
 - ["So13UIDynamicItemP", "CellStyle"]
 - ["So13UIDynamicItemP", "Int"]
+- ["So13UIDynamicItemP", "NSCoder"]
 - !private ["So13UIDynamicItemP", "NSLayoutConstraint"]
+- ["So13UIDynamicItemP", "String"]
 - ["So13UIDynamicItemP", "Theme"]
 - ["So13UIDynamicItemP", "UIBezierPath"]
 - ["So13UIDynamicItemP", "UIColor"]
@@ -725,7 +753,9 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "CGPoint"]
 - ["So18UIFocusEnvironmentP", "CellStyle"]
 - ["So18UIFocusEnvironmentP", "Int"]
+- ["So18UIFocusEnvironmentP", "NSCoder"]
 - !private ["So18UIFocusEnvironmentP", "NSLayoutConstraint"]
+- ["So18UIFocusEnvironmentP", "String"]
 - ["So18UIFocusEnvironmentP", "Theme"]
 - ["So18UIFocusEnvironmentP", "UIBezierPath"]
 - ["So18UIFocusEnvironmentP", "UIColor"]
@@ -755,7 +785,9 @@ depends-member:
 - !private ["So11UIFocusItemP", "CGPoint"]
 - ["So11UIFocusItemP", "CellStyle"]
 - ["So11UIFocusItemP", "Int"]
+- ["So11UIFocusItemP", "NSCoder"]
 - !private ["So11UIFocusItemP", "NSLayoutConstraint"]
+- ["So11UIFocusItemP", "String"]
 - ["So11UIFocusItemP", "Theme"]
 - ["So11UIFocusItemP", "UIBezierPath"]
 - ["So11UIFocusItemP", "UIColor"]
@@ -785,7 +817,9 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "CGPoint"]
 - ["So20UIFocusItemContainerP", "CellStyle"]
 - ["So20UIFocusItemContainerP", "Int"]
+- ["So20UIFocusItemContainerP", "NSCoder"]
 - !private ["So20UIFocusItemContainerP", "NSLayoutConstraint"]
+- ["So20UIFocusItemContainerP", "String"]
 - ["So20UIFocusItemContainerP", "Theme"]
 - ["So20UIFocusItemContainerP", "UIBezierPath"]
 - ["So20UIFocusItemContainerP", "UIColor"]
@@ -848,7 +882,9 @@ depends-member:
 - !private ["So24UILargeContentViewerItemP", "CGPoint"]
 - ["So24UILargeContentViewerItemP", "CellStyle"]
 - ["So24UILargeContentViewerItemP", "Int"]
+- ["So24UILargeContentViewerItemP", "NSCoder"]
 - !private ["So24UILargeContentViewerItemP", "NSLayoutConstraint"]
+- ["So24UILargeContentViewerItemP", "String"]
 - ["So24UILargeContentViewerItemP", "Theme"]
 - ["So24UILargeContentViewerItemP", "UIBezierPath"]
 - ["So24UILargeContentViewerItemP", "UIColor"]
@@ -878,7 +914,9 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "CGPoint"]
 - ["So30UIPasteConfigurationSupportingP", "CellStyle"]
 - ["So30UIPasteConfigurationSupportingP", "Int"]
+- ["So30UIPasteConfigurationSupportingP", "NSCoder"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSLayoutConstraint"]
+- ["So30UIPasteConfigurationSupportingP", "String"]
 - ["So30UIPasteConfigurationSupportingP", "Theme"]
 - ["So30UIPasteConfigurationSupportingP", "UIBezierPath"]
 - ["So30UIPasteConfigurationSupportingP", "UIColor"]
@@ -892,6 +930,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "drawFirstPath"]
 - !private ["So30UIPasteConfigurationSupportingP", "fatalError"]
 - !private ["So30UIPasteConfigurationSupportingP", "frame"]
+- !private ["So30UIPasteConfigurationSupportingP", "frameForAlignmentRect"]
 - ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "layer"]
 - ["So30UIPasteConfigurationSupportingP", "myLabel"]
@@ -924,6 +963,7 @@ depends-member:
 - ["So11UIResponderC", "drawFirstPath"]
 - !private ["So11UIResponderC", "fatalError"]
 - !private ["So11UIResponderC", "frame"]
+- !private ["So11UIResponderC", "frameForAlignmentRect"]
 - ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "layer"]
 - ["So11UIResponderC", "myLabel"]
@@ -940,7 +980,9 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "CGPoint"]
 - ["So30UIResponderStandardEditActionsP", "CellStyle"]
 - ["So30UIResponderStandardEditActionsP", "Int"]
+- ["So30UIResponderStandardEditActionsP", "NSCoder"]
 - !private ["So30UIResponderStandardEditActionsP", "NSLayoutConstraint"]
+- ["So30UIResponderStandardEditActionsP", "String"]
 - ["So30UIResponderStandardEditActionsP", "Theme"]
 - ["So30UIResponderStandardEditActionsP", "UIBezierPath"]
 - ["So30UIResponderStandardEditActionsP", "UIColor"]
@@ -954,6 +996,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "drawFirstPath"]
 - !private ["So30UIResponderStandardEditActionsP", "fatalError"]
 - !private ["So30UIResponderStandardEditActionsP", "frame"]
+- !private ["So30UIResponderStandardEditActionsP", "frameForAlignmentRect"]
 - ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "layer"]
 - ["So30UIResponderStandardEditActionsP", "myLabel"]
@@ -1000,7 +1043,9 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "CGPoint"]
 - ["So18UITraitEnvironmentP", "CellStyle"]
 - ["So18UITraitEnvironmentP", "Int"]
+- ["So18UITraitEnvironmentP", "NSCoder"]
 - !private ["So18UITraitEnvironmentP", "NSLayoutConstraint"]
+- ["So18UITraitEnvironmentP", "String"]
 - ["So18UITraitEnvironmentP", "Theme"]
 - ["So18UITraitEnvironmentP", "UIBezierPath"]
 - ["So18UITraitEnvironmentP", "UIColor"]
@@ -1030,7 +1075,9 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "CGPoint"]
 - ["So23UIUserActivityRestoringP", "CellStyle"]
 - ["So23UIUserActivityRestoringP", "Int"]
+- ["So23UIUserActivityRestoringP", "NSCoder"]
 - !private ["So23UIUserActivityRestoringP", "NSLayoutConstraint"]
+- ["So23UIUserActivityRestoringP", "String"]
 - ["So23UIUserActivityRestoringP", "Theme"]
 - ["So23UIUserActivityRestoringP", "UIBezierPath"]
 - ["So23UIUserActivityRestoringP", "UIColor"]
@@ -1044,6 +1091,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "drawFirstPath"]
 - !private ["So23UIUserActivityRestoringP", "fatalError"]
 - !private ["So23UIUserActivityRestoringP", "frame"]
+- !private ["So23UIUserActivityRestoringP", "frameForAlignmentRect"]
 - ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "layer"]
 - ["So23UIUserActivityRestoringP", "myLabel"]
@@ -1094,9 +1142,11 @@ depends-member:
 - !private ["s30_CustomPlaygroundQuickLookableP", "width"]
 - !private ["s24_DestructorSafeContainerP", "init"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
-- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - ["s26_ExpressibleByColorLiteralP", "cgColor"]
 - ["s26_ExpressibleByColorLiteralP", "lightGray"]
 - !private ["s19_HasContiguousBytesP", "init"]
@@ -1213,7 +1263,7 @@ depends-nominal:
 - "8QuickBev20AccountTableViewCellC"
 - !private "9Alamofire0A8ExtendedP"
 - !private "Sa"
-- !private "SK"
+- "SK"
 - "So7CALayerC"
 - "So15CALayerDelegateP"
 - "So13CAMediaTimingP"
@@ -1223,7 +1273,8 @@ depends-nominal:
 - !private "So6CGSizeV"
 - !private "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
-- !private "Sl"
+- "Sl"
+- "SL"
 - !private "10Foundation15ContiguousBytesP"
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
@@ -1234,11 +1285,16 @@ depends-nominal:
 - "SQ"
 - "s25ExpressibleByArrayLiteralP"
 - !private "s30ExpressibleByDictionaryLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
+- "s32ExpressibleByStringInterpolationP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "So21NSLayoutFormatOptionsV"
 - "SH"
+- "s25LosslessStringConvertibleP"
 - !private "SM"
 - !private "10Foundation19MutableDataProtocolP"
 - "So8NSCodingP"
@@ -1254,8 +1310,10 @@ depends-nominal:
 - !private "Sk"
 - !private "Sm"
 - !private "SY"
-- !private "ST"
+- "ST"
 - !private "s10SetAlgebraP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
 - "8QuickBev5ThemeO"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
@@ -1283,9 +1341,11 @@ depends-nominal:
 - !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
-- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - "s26_ExpressibleByColorLiteralP"
 - !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
@@ -1432,7 +1492,6 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeSelectionView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSpacerView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWhitelistView.h"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/module.map"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"

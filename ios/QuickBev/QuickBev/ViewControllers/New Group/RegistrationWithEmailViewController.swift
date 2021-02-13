@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistrationWithEmailViewController: UIViewController, WebSocketConnectionDelegate {
+class RegistrationWithEmailViewController: UIViewController {
     @UsesAutoLayout var firstNameTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Your first name"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
     @UsesAutoLayout var lastNameTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Your last name"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
     @UsesAutoLayout var emailTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Your email address"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
@@ -19,6 +19,7 @@ class RegistrationWithEmailViewController: UIViewController, WebSocketConnection
     @UsesAutoLayout var lastNameLabel =  UILabel(theme: Theme.UILabel(props: [.text("Last Name"), .font(nil), .textColor]))
     @UsesAutoLayout var emailLabel =  UILabel(theme: Theme.UILabel(props: [.text("Email"), .font(nil), .textColor ]))
     @UsesAutoLayout var passwordLabel =  UILabel(theme: Theme.UILabel(props: [.text("Password"), .font(nil), .textColor ]))
+    @UsesAutoLayout var confirmEmailLabel =  UILabel(theme: Theme.UILabel(props: [.text("Confirm Email"), .font(nil)]))
     @UsesAutoLayout var confirmPasswordLabel =  UILabel(theme: Theme.UILabel(props: [.text("Confirm Password"), .font(nil)]))
     @UsesAutoLayout var registrationStackView = UIStackView(theme: Theme.UIStackView(props: [.vertical, .spacing(10)]))
     @UsesAutoLayout var submitButton = RoundButton(theme: Theme.RoundButton(props: [ .color, .text("Submit"), .titleLabelFont(nil)]))
@@ -35,7 +36,7 @@ class RegistrationWithEmailViewController: UIViewController, WebSocketConnection
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        WebSocketTaskConnection.shared.delegate = self
+        //        WebSocketTaskConnection.shared.delegate = self
         self.view.addSubview(registrationStackView)
         self.view.addSubview(submitButton)
         self.view.addSubview(activityIndicator)
@@ -47,6 +48,8 @@ class RegistrationWithEmailViewController: UIViewController, WebSocketConnection
         registrationStackView.addArrangedSubview(lastNameTextField)
         registrationStackView.addArrangedSubview(emailLabel)
         registrationStackView.addArrangedSubview(emailTextField)
+        registrationStackView.addArrangedSubview(confirmEmailLabel)
+        registrationStackView.addArrangedSubview(confirmEmailTextField)
         registrationStackView.addArrangedSubview(passwordLabel)
         registrationStackView.addArrangedSubview(passwordTextField)
         registrationStackView.addArrangedSubview(confirmPasswordLabel)
@@ -68,42 +71,43 @@ class RegistrationWithEmailViewController: UIViewController, WebSocketConnection
             firstNameTextField.widthAnchor.constraint(equalTo: firstNameTextField.heightAnchor, multiplier: (197/25)),
             lastNameTextField.widthAnchor.constraint(equalTo: lastNameTextField.heightAnchor, multiplier: (197/25)),
             emailTextField.widthAnchor.constraint(equalTo: emailTextField.heightAnchor, multiplier: (197/25)),
+            confirmEmailTextField.widthAnchor.constraint(equalTo: confirmEmailTextField.heightAnchor, multiplier: (197/25)),
             passwordTextField.widthAnchor.constraint(equalTo: passwordTextField.heightAnchor, multiplier: (197/25)),
             confirmPasswordTextField.widthAnchor.constraint(equalTo: confirmPasswordTextField.heightAnchor, multiplier: (197/25)),
             
             registrationStackView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -10.0),
             registrationStackView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 10.0),
-            registrationStackView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 35),
+            registrationStackView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 10),
         ]
         )
         submitButton.addTarget(self, action: #selector(submitRegistration), for: .touchUpInside)
     }
-    override func viewWillDisappear(_ animated: Bool) {
-        WebSocketTaskConnection.shared.disconnect()
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        WebSocketTaskConnection.shared.connect()
-    }
-    func onConnected(connection: WebSocketConnection) {
-        print("successful websocket connection")
-    }
-
-    func onDisconnected(connection: WebSocketConnection, error: Error?) {
-        print("web socket disconnected", error ?? "no error")
-    }
-
-    func onError(connection: WebSocketConnection, error: Error) {
-        print("web socket error", error)
-    }
-
-    func onMessage(connection: WebSocketConnection, text: String) {
-        print("string message received", text)
-    }
-
-    func onMessage(connection: WebSocketConnection, data: Data) {
-        print("data received", (try? JSONDecoder().decode(String.self, from: data)) ?? "couldnt decode message")
-    }
-
+    //    override func viewWillDisappear(_ animated: Bool) {
+    //        WebSocketTaskConnection.shared.disconnect()
+    //    }
+    //    override func viewWillAppear(_ animated: Bool) {
+    //        WebSocketTaskConnection.shared.connect()
+    //    }
+    //    func onConnected(connection: WebSocketConnection) {
+    //        print("successful websocket connection")
+    //    }
+    //
+    //    func onDisconnected(connection: WebSocketConnection, error: Error?) {
+    //        print("web socket disconnected", error ?? "no error")
+    //    }
+    //
+    //    func onError(connection: WebSocketConnection, error: Error) {
+    //        print("web socket error", error)
+    //    }
+    //
+    //    func onMessage(connection: WebSocketConnection, text: String) {
+    //        print("string message received", text)
+    //    }
+    //
+    //    func onMessage(connection: WebSocketConnection, data: Data) {
+    //        print("data received", (try? JSONDecoder().decode(String.self, from: data)) ?? "couldnt decode message")
+    //    }
+    //
     @objc private func submitRegistration(_ sender: RoundButton) {
         activityIndicator.startAnimating()
         let requestedNewUser: User  = {
@@ -117,8 +121,37 @@ class RegistrationWithEmailViewController: UIViewController, WebSocketConnection
                 return User(Email : emailTextField.text!, FirstName: firstNameTextField.text!,LastName: lastNameTextField.text!,Password: passwordTextField.text!, StripeId: CheckoutCart.shared.stripeId!, EmailVerified: false)
             }
         }()
-        WebSocketTaskConnection.shared.send(data: requestedNewUser)
+        if self.emailTextField.text != self.confirmEmailTextField.text || self.passwordTextField.text != self.passwordTextField.text {
+            var title = ""
+            var message = ""
+            
+            if self.emailTextField.text != self.confirmEmailTextField.text && self.passwordTextField.text == self.passwordTextField.text {
+                title = "Email mismatch"
+                message = "Email and confirmation email are different. Please correct them and resubmit"
+            }
+            else if self.passwordTextField.text != self.passwordTextField.text && self.emailTextField.text == self.confirmEmailTextField.text {
+                title = "Password mismatch"
+                message = "Password and confirmation password are different. Please correct them and resubmit"
+            }
+            else if self.emailTextField.text != self.confirmEmailTextField.text && self.passwordTextField.text != self.passwordTextField.text {
+                title = "Email and password mismatch"
+                message = "Email, confirmation email, password and confirmation password are different. Please correct them and resubmit"
+            }
+            DispatchQueue.main.async {
+                let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Try again", style: .cancel) { action in
+                    self.dismiss( animated: true)
+                })
+                self.activityIndicator.stopAnimating()
+                self.present(alertController, animated: true, completion: nil)
 
+            }
+            
+        }
+        //        TODO: Do email confirmation web socket stuff on a new page, reset database in backend to include isVerified property and then set up timeout in websocket function that will test every 2 seconds if the users email has been verified. when the user verifies their email it will post a true value along with the associated email to the database. if the email is not verified before the timeout occurs, the user will be notified and given the option to send another email or register with a new email
+        // can also create another websocket function that registers to another socket in backend for front end to call when email is verified maybe
+        //        WebSocketTaskConnection.shared.send(data: requestedNewUser)
+        else {
         let request = try! APIRequest(method: .post, path:"/customer", body: requestedNewUser)
         APIClient().perform(request) {result in
             switch result {
@@ -127,7 +160,7 @@ class RegistrationWithEmailViewController: UIViewController, WebSocketConnection
                     let responseJson = response.body
                     CheckoutCart.shared.user = requestedNewUser
                     CheckoutCart.shared.userId = requestedNewUser.email
-
+                    
                     // when changing UI based on asynchronous operation, or when updating core data need to wrap in dispatch queue because both are asynchronous ops themselves
                     DispatchQueue.main.async
                     {
@@ -169,37 +202,38 @@ class RegistrationWithEmailViewController: UIViewController, WebSocketConnection
             }
         }
     }
-    
-    private func alertAccountCreationForGuest() {
-        return self.alert(
-            title: "",
-            message: "Welcome to QuickBev! You may now proceed with your order.",
-            alertType: "accountCreationGuest"
-        )
     }
-    private func alertAccountCreation() {
-        return self.alert(
-            title: "",
-            message: "Welcome to QuickBev!",
-            alertType: "accountCreation"
-        )
+
+private func alertAccountCreationForGuest() {
+    return self.alert(
+        title: "",
+        message: "Welcome to QuickBev! You may now proceed with your order.",
+        alertType: "accountCreationGuest"
+    )
+}
+private func alertAccountCreation() {
+    return self.alert(
+        title: "",
+        message: "Welcome to QuickBev!",
+        alertType: "accountCreation"
+    )
+}
+private func alert(title: String, message: String, alertType: String) {
+    let alertCtrl = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    if alertType == "accountCreationGuest"{
+        alertCtrl.addAction(UIAlertAction(title: "Okay", style: .cancel) { action in
+            let drinkViewController =  DrinkViewController(drink: CheckoutCart.guestDrink!)
+            let homePageViewController =  HomePageViewController()
+            let drinkListTableViewController =  DrinkListTableViewController()
+            let navigationController = self.navigationController!
+            navigationController.setViewControllers([drinkViewController, drinkListTableViewController, homePageViewController], animated: true)
+        })
     }
-    private func alert(title: String, message: String, alertType: String) {
-        let alertCtrl = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        if alertType == "accountCreationGuest"{
-            alertCtrl.addAction(UIAlertAction(title: "Okay", style: .cancel) { action in
-                let drinkViewController =  self.storyboard!.instantiateViewController(identifier: "DrinkViewController") as! DrinkViewController
-                let homePageViewController =  self.storyboard!.instantiateViewController(identifier: "HomePageViewController") as! HomePageViewController
-                let drinkListTableViewController =  self.storyboard!.instantiateViewController(identifier: "DrinkListTableViewController") as! DrinkListTableViewController
-                let navigationController = self.navigationController!
-                navigationController.setViewControllers([drinkViewController, drinkListTableViewController, homePageViewController], animated: true)
-            })
-        }
-        else if alertType == "accountCreation" {
-            alertCtrl.addAction(UIAlertAction(title: "Okay", style: .cancel) { action in
-                SceneDelegate.shared.rootViewController.switchToHomePageViewController()
-            })
-        }
-        present(alertCtrl, animated: true, completion: nil)
+    else if alertType == "accountCreation" {
+        alertCtrl.addAction(UIAlertAction(title: "Okay", style: .cancel) { action in
+            SceneDelegate.shared.rootViewController.switchToHomePageViewController()
+        })
     }
+    present(alertCtrl, animated: true, completion: nil)
+}
 }

@@ -10,6 +10,7 @@ provides-member:
 - ["8QuickBev4UserC", "lastName"]
 - ["8QuickBev4UserC", "password"]
 - ["8QuickBev4UserC", "stripeId"]
+- ["8QuickBev4UserC", "emailVerified"]
 - ["8QuickBev4UserC", "relationship"]
 - ["8QuickBev4UserC", "userToOrder"]
 - ["8QuickBev4UserC", "userToTab"]
@@ -25,6 +26,7 @@ provides-dynamic-lookup:
 - "addToUserToOrder"
 - "addToUserToTab"
 - "email"
+- "emailVerified"
 - "fetchRequest"
 - "firstName"
 - "lastName"
@@ -36,6 +38,7 @@ provides-dynamic-lookup:
 - "userToOrder"
 - "userToTab"
 depends-top-level:
+- "Bool"
 - "CheckoutCart"
 - "Identifiable"
 - "NSFetchRequest"
@@ -96,7 +99,6 @@ depends-member:
 - !private ["So8NSCodingP", "init"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So14NSFetchRequestC", "init"]
-- ["So20NSFetchRequestResultP", "CheckoutCart"]
 - ["So20NSFetchRequestResultP", "Default_ID"]
 - ["So20NSFetchRequestResultP", "ID"]
 - !private ["So20NSFetchRequestResultP", "NSFetchRequest"]
@@ -105,6 +107,7 @@ depends-member:
 - ["So20NSFetchRequestResultP", "addToUserToOrder"]
 - ["So20NSFetchRequestResultP", "addToUserToTab"]
 - ["So20NSFetchRequestResultP", "email"]
+- ["So20NSFetchRequestResultP", "emailVerified"]
 - ["So20NSFetchRequestResultP", "firstName"]
 - ["So20NSFetchRequestResultP", "id"]
 - ["So20NSFetchRequestResultP", "lastName"]
@@ -115,6 +118,7 @@ depends-member:
 - ["So20NSFetchRequestResultP", "stripeId"]
 - ["So20NSFetchRequestResultP", "userToOrder"]
 - ["So20NSFetchRequestResultP", "userToTab"]
+- ["So15NSManagedObjectC", "Bool"]
 - ["So15NSManagedObjectC", "CheckoutCart"]
 - ["So15NSManagedObjectC", "Default_ID"]
 - ["So15NSManagedObjectC", "ID"]
@@ -129,6 +133,7 @@ depends-member:
 - ["So15NSManagedObjectC", "addToUserToOrder"]
 - ["So15NSManagedObjectC", "addToUserToTab"]
 - ["So15NSManagedObjectC", "email"]
+- ["So15NSManagedObjectC", "emailVerified"]
 - ["So15NSManagedObjectC", "fetchRequest"]
 - ["So15NSManagedObjectC", "firstName"]
 - ["So15NSManagedObjectC", "id"]
@@ -140,6 +145,7 @@ depends-member:
 - ["So15NSManagedObjectC", "stripeId"]
 - ["So15NSManagedObjectC", "userToOrder"]
 - ["So15NSManagedObjectC", "userToTab"]
+- ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "CheckoutCart"]
 - ["So8NSObjectC", "Default_ID"]
 - ["So8NSObjectC", "ID"]
@@ -154,6 +160,7 @@ depends-member:
 - ["So8NSObjectC", "addToUserToOrder"]
 - ["So8NSObjectC", "addToUserToTab"]
 - ["So8NSObjectC", "email"]
+- ["So8NSObjectC", "emailVerified"]
 - ["So8NSObjectC", "fetchRequest"]
 - ["So8NSObjectC", "firstName"]
 - ["So8NSObjectC", "id"]
@@ -166,16 +173,15 @@ depends-member:
 - ["So8NSObjectC", "stripeId"]
 - ["So8NSObjectC", "userToOrder"]
 - ["So8NSObjectC", "userToTab"]
-- ["So8NSObjectP", "CheckoutCart"]
 - ["So8NSObjectP", "Default_ID"]
 - ["So8NSObjectP", "ID"]
 - !private ["So8NSObjectP", "NSFetchRequest"]
-- ["So8NSObjectP", "Tab"]
 - ["So8NSObjectP", ""]
 - ["So8NSObjectP", "_Default_ID"]
 - ["So8NSObjectP", "addToUserToOrder"]
 - ["So8NSObjectP", "addToUserToTab"]
 - ["So8NSObjectP", "email"]
+- ["So8NSObjectP", "emailVerified"]
 - ["So8NSObjectP", "firstName"]
 - ["So8NSObjectP", "id"]
 - !private ["So8NSObjectP", "init"]
@@ -194,6 +200,7 @@ depends-member:
 - !private ["7Combine16ObservableObjectP", "NSFetchRequest"]
 - ["7Combine16ObservableObjectP", "_Default_ID"]
 - ["7Combine16ObservableObjectP", "id"]
+- ["8QuickBev4UserC", "Bool"]
 - ["8QuickBev4UserC", "CheckoutCart"]
 - ["8QuickBev4UserC", "Default_ID"]
 - ["8QuickBev4UserC", "ID"]
@@ -208,6 +215,7 @@ depends-member:
 - ["8QuickBev4UserC", "addToUserToOrder"]
 - ["8QuickBev4UserC", "addToUserToTab"]
 - ["8QuickBev4UserC", "email"]
+- ["8QuickBev4UserC", "emailVerified"]
 - ["8QuickBev4UserC", "fetchRequest"]
 - ["8QuickBev4UserC", "firstName"]
 - ["8QuickBev4UserC", "id"]
@@ -393,7 +401,6 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeSelectionView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSpacerView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWhitelistView.h"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/module.map"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
@@ -430,4 +437,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "2ab8fb8b7f0316fc7e482125d9fdaf69"
+interface-hash: "b9be0c5d1319b3a5ab5ea886bd21d1b3"

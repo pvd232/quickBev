@@ -55,6 +55,7 @@ class DrinkListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedDrink = CheckoutCart.shared.userBusinessDrinks[indexPath.row].copy() as! Drink
+        CheckoutCart.guestDrink = selectedDrink
             navigationController!.pushViewController(DrinkViewController(drink:selectedDrink), animated: true)
     }
 }

@@ -12,12 +12,12 @@ import CoreData
 public class User: NSManagedObject, Codable {
     
     enum CodingKeys: String, CodingKey {
-        //        case userResponse = "user"
         case email = "id"
         case password = "password"
         case firstName = "first_name"
         case lastName = "last_name"
         case stripeId = "stripe_id"
+        case emailVerified = "email_verified"
     }
     required public convenience init(from decoder: Decoder) throws {
         self.init(context: CoreDataManager.sharedManager.managedContext)

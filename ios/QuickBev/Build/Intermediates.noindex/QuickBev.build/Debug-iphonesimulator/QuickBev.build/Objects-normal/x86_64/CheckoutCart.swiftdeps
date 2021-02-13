@@ -18,6 +18,7 @@ provides-dynamic-lookup:
 - "cart"
 - "customerContext"
 - "emptyCart"
+- "guestDrink"
 - "shared"
 - "userBusinessDrinks"
 depends-top-level:
@@ -125,6 +126,7 @@ depends-member:
 - ["8QuickBev12CheckoutCartC", "deinit"]
 - !private ["8QuickBev12CheckoutCartC", "drinks"]
 - ["8QuickBev12CheckoutCartC", "emptyCart"]
+- ["8QuickBev12CheckoutCartC", "guestDrink"]
 - ["8QuickBev12CheckoutCartC", "init"]
 - !private ["8QuickBev12CheckoutCartC", "salesTax"]
 - ["8QuickBev12CheckoutCartC", "shared"]
@@ -365,6 +367,7 @@ depends-member:
 - ["So20NSFetchRequestResultP", "customerContext"]
 - !private ["So20NSFetchRequestResultP", "drinks"]
 - ["So20NSFetchRequestResultP", "emptyCart"]
+- ["So20NSFetchRequestResultP", "guestDrink"]
 - ["So20NSFetchRequestResultP", "init"]
 - !private ["So20NSFetchRequestResultP", "name"]
 - !private ["So20NSFetchRequestResultP", "salesTax"]
@@ -395,6 +398,7 @@ depends-member:
 - ["So15NSManagedObjectC", "customerContext"]
 - !private ["So15NSManagedObjectC", "drinks"]
 - ["So15NSManagedObjectC", "emptyCart"]
+- ["So15NSManagedObjectC", "guestDrink"]
 - ["So15NSManagedObjectC", "init"]
 - !private ["So15NSManagedObjectC", "name"]
 - !private ["So15NSManagedObjectC", "salesTax"]
@@ -426,6 +430,7 @@ depends-member:
 - ["So8NSObjectC", "customerContext"]
 - !private ["So8NSObjectC", "drinks"]
 - ["So8NSObjectC", "emptyCart"]
+- ["So8NSObjectC", "guestDrink"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "name"]
 - !private ["So8NSObjectC", "salesTax"]
@@ -459,6 +464,7 @@ depends-member:
 - ["So8NSObjectP", "customerContext"]
 - !private ["So8NSObjectP", "drinks"]
 - ["So8NSObjectP", "emptyCart"]
+- ["So8NSObjectP", "guestDrink"]
 - ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "name"]
 - !private ["So8NSObjectP", "salesTax"]
@@ -828,7 +834,6 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeSelectionView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSpacerView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWhitelistView.h"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/module.map"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
@@ -865,4 +870,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "4473a861c97242699a514786ebea477d"
+interface-hash: "03a87d809820aa365799f2be526dbdab"

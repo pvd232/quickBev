@@ -15,6 +15,7 @@ depends-top-level:
 - "=="
 - !private "Array"
 - "AssignmentPrecedence"
+- "Bool"
 - "Codable"
 - "CodingKey"
 - !private "CodingKeys"
@@ -36,6 +37,7 @@ depends-member:
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "_findStringSwitchCase"]
 - !private ["s7CVarArgP", "email"]
+- !private ["s7CVarArgP", "emailVerified"]
 - ["s7CVarArgP", "encode"]
 - !private ["s7CVarArgP", "findStringSwitchCase"]
 - !private ["s7CVarArgP", "firstName"]
@@ -100,6 +102,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "debugDescription"]
 - ["s28CustomDebugStringConvertibleP", "description"]
 - !private ["s28CustomDebugStringConvertibleP", "email"]
+- !private ["s28CustomDebugStringConvertibleP", "emailVerified"]
 - ["s28CustomDebugStringConvertibleP", "encode"]
 - !private ["s28CustomDebugStringConvertibleP", "findStringSwitchCase"]
 - !private ["s28CustomDebugStringConvertibleP", "firstName"]
@@ -125,6 +128,7 @@ depends-member:
 - ["s23CustomStringConvertibleP", "debugDescription"]
 - ["s23CustomStringConvertibleP", "description"]
 - !private ["s23CustomStringConvertibleP", "email"]
+- !private ["s23CustomStringConvertibleP", "emailVerified"]
 - ["s23CustomStringConvertibleP", "encode"]
 - !private ["s23CustomStringConvertibleP", "findStringSwitchCase"]
 - !private ["s23CustomStringConvertibleP", "firstName"]
@@ -143,6 +147,7 @@ depends-member:
 - ["Se", ""]
 - !private ["Se", "_findStringSwitchCase"]
 - !private ["Se", "email"]
+- !private ["Se", "emailVerified"]
 - ["Se", "encode"]
 - !private ["Se", "findStringSwitchCase"]
 - !private ["Se", "firstName"]
@@ -157,6 +162,7 @@ depends-member:
 - ["SE", ""]
 - !private ["SE", "_findStringSwitchCase"]
 - !private ["SE", "email"]
+- !private ["SE", "emailVerified"]
 - ["SE", "encode"]
 - !private ["SE", "findStringSwitchCase"]
 - !private ["SE", "firstName"]
@@ -178,6 +184,7 @@ depends-member:
 - ["SQ", "debugDescription"]
 - ["SQ", "description"]
 - !private ["SQ", "email"]
+- !private ["SQ", "emailVerified"]
 - ["SQ", "encode"]
 - !private ["SQ", "findStringSwitchCase"]
 - !private ["SQ", "firstName"]
@@ -204,6 +211,7 @@ depends-member:
 - ["SH", "debugDescription"]
 - ["SH", "description"]
 - !private ["SH", "email"]
+- !private ["SH", "emailVerified"]
 - ["SH", "encode"]
 - !private ["SH", "findStringSwitchCase"]
 - !private ["SH", "firstName"]
@@ -221,6 +229,7 @@ depends-member:
 - !private ["s12IdentifiableP", "String"]
 - !private ["s12IdentifiableP", "_findStringSwitchCase"]
 - !private ["s12IdentifiableP", "email"]
+- !private ["s12IdentifiableP", "emailVerified"]
 - ["s12IdentifiableP", "encode"]
 - !private ["s12IdentifiableP", "findStringSwitchCase"]
 - !private ["s12IdentifiableP", "firstName"]
@@ -233,6 +242,7 @@ depends-member:
 - !private ["s22KeyedEncodingContainerV", "encode"]
 - !private ["s30KeyedEncodingContainerProtocolP", "encode"]
 - ["So8NSCodingP", ""]
+- ["So20NSFetchRequestResultP", "Bool"]
 - ["So20NSFetchRequestResultP", "CodingKey"]
 - !private ["So20NSFetchRequestResultP", "CodingKeys"]
 - !private ["So20NSFetchRequestResultP", "CoreDataManager"]
@@ -242,6 +252,7 @@ depends-member:
 - ["So20NSFetchRequestResultP", ""]
 - !private ["So20NSFetchRequestResultP", "_findStringSwitchCase"]
 - !private ["So20NSFetchRequestResultP", "email"]
+- !private ["So20NSFetchRequestResultP", "emailVerified"]
 - ["So20NSFetchRequestResultP", "encode"]
 - !private ["So20NSFetchRequestResultP", "findStringSwitchCase"]
 - !private ["So20NSFetchRequestResultP", "firstName"]
@@ -249,6 +260,7 @@ depends-member:
 - !private ["So20NSFetchRequestResultP", "lastName"]
 - !private ["So20NSFetchRequestResultP", "password"]
 - !private ["So20NSFetchRequestResultP", "stripeId"]
+- ["So15NSManagedObjectC", "Bool"]
 - ["So15NSManagedObjectC", "CodingKey"]
 - !private ["So15NSManagedObjectC", "CodingKeys"]
 - !private ["So15NSManagedObjectC", "CoreDataManager"]
@@ -258,6 +270,7 @@ depends-member:
 - ["So15NSManagedObjectC", ""]
 - !private ["So15NSManagedObjectC", "_findStringSwitchCase"]
 - !private ["So15NSManagedObjectC", "email"]
+- !private ["So15NSManagedObjectC", "emailVerified"]
 - ["So15NSManagedObjectC", "encode"]
 - !private ["So15NSManagedObjectC", "findStringSwitchCase"]
 - !private ["So15NSManagedObjectC", "firstName"]
@@ -265,6 +278,7 @@ depends-member:
 - !private ["So15NSManagedObjectC", "lastName"]
 - !private ["So15NSManagedObjectC", "password"]
 - !private ["So15NSManagedObjectC", "stripeId"]
+- ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "CodingKey"]
 - !private ["So8NSObjectC", "CodingKeys"]
 - !private ["So8NSObjectC", "CoreDataManager"]
@@ -274,6 +288,7 @@ depends-member:
 - ["So8NSObjectC", ""]
 - !private ["So8NSObjectC", "_findStringSwitchCase"]
 - !private ["So8NSObjectC", "email"]
+- !private ["So8NSObjectC", "emailVerified"]
 - ["So8NSObjectC", "encode"]
 - !private ["So8NSObjectC", "findStringSwitchCase"]
 - !private ["So8NSObjectC", "firstName"]
@@ -281,6 +296,7 @@ depends-member:
 - !private ["So8NSObjectC", "lastName"]
 - !private ["So8NSObjectC", "password"]
 - !private ["So8NSObjectC", "stripeId"]
+- ["So8NSObjectP", "Bool"]
 - ["So8NSObjectP", "CodingKey"]
 - !private ["So8NSObjectP", "CodingKeys"]
 - !private ["So8NSObjectP", "CoreDataManager"]
@@ -290,6 +306,7 @@ depends-member:
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "_findStringSwitchCase"]
 - !private ["So8NSObjectP", "email"]
+- !private ["So8NSObjectP", "emailVerified"]
 - ["So8NSObjectP", "encode"]
 - !private ["So8NSObjectP", "findStringSwitchCase"]
 - !private ["So8NSObjectP", "firstName"]
@@ -303,6 +320,7 @@ depends-member:
 - ["7Combine16ObservableObjectP", ""]
 - !private ["7Combine16ObservableObjectP", "_findStringSwitchCase"]
 - !private ["7Combine16ObservableObjectP", "email"]
+- !private ["7Combine16ObservableObjectP", "emailVerified"]
 - ["7Combine16ObservableObjectP", "encode"]
 - !private ["7Combine16ObservableObjectP", "findStringSwitchCase"]
 - !private ["7Combine16ObservableObjectP", "firstName"]
@@ -331,6 +349,7 @@ depends-member:
 - ["SY", "rawValue"]
 - ["SY", "stringValue"]
 - !private ["SY", "stripeId"]
+- ["8QuickBev4UserC", "Bool"]
 - ["8QuickBev4UserC", "CodingKey"]
 - ["8QuickBev4UserC", "CodingKeys"]
 - !private ["8QuickBev4UserC", "CoreDataManager"]
@@ -341,6 +360,7 @@ depends-member:
 - !private ["8QuickBev4UserC", "_findStringSwitchCase"]
 - ["8QuickBev4UserC", "deinit"]
 - !private ["8QuickBev4UserC", "email"]
+- !private ["8QuickBev4UserC", "emailVerified"]
 - ["8QuickBev4UserC", "encode"]
 - !private ["8QuickBev4UserC", "findStringSwitchCase"]
 - !private ["8QuickBev4UserC", "firstName"]
@@ -356,6 +376,7 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "_findStringSwitchCase"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "email"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "emailVerified"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "encode"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "findStringSwitchCase"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "firstName"]
@@ -369,6 +390,7 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_findStringSwitchCase"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "email"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "emailVerified"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "encode"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "findStringSwitchCase"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "firstName"]
@@ -546,7 +568,6 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeSelectionView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSpacerView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWhitelistView.h"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/module.map"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
@@ -583,4 +604,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "8ea4784d3949fc198c1eeb848b140353"
+interface-hash: "0f3b78c800545fd56170dfa0e8669675"
