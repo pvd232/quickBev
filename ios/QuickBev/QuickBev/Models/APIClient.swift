@@ -121,6 +121,8 @@ struct APIClient {
 
         let task = session.dataTask(with: urlRequest) { (data, response, error) in
             // this is where the APIResponse is declared using optional binding to downcast the type. the new variable httpResponse is declared and binded to the value of the response on the condition that it is of the type HTTPURLResponse
+            debugPrint("response", response ?? "no response")
+
             guard let httpResponse = response as? HTTPURLResponse else {
                 completion(.failure(.requestFailed)); return
             }
@@ -128,40 +130,8 @@ struct APIClient {
                       error == nil else {
                       debugPrint(error?.localizedDescription ?? "Response Error")
                       return }
-                do{
-                    //here dataResponse received from a network request
-                    let jsonResponse = try JSONSerialization.jsonObject(with:
-                                           dataResponse, options: [])
-                    debugPrint("jsonResposne", jsonResponse) //Response result
-                 } catch let parsingError {
-                    debugPrint("Error", parsingError)
-                    debugPrint("response",response)
-               }
-
             completion(.success(APIResponse<Data?>(statusCode: httpResponse.statusCode, body: data)))
         }
         task.resume()
     }
 }
-//struct Post: Decodable {
-//    let userId: Int
-//    let id: Int
-//    let title: String
-//    let body: String
-//}
-//
-//let request = APIRequest(method: .get, path: "posts")
-//
-//APIClient().perform(request) { (result) in
-//    switch result {
-//    case .success(let response):
-//        if let response = try? response.decode(to: [Post].self) {
-//            let posts = response.body
-//            print("Received posts: \(posts.first?.title ?? "")")
-//        } else {
-//            print("Failed to decode response")
-//        }
-//    case .failure:
-//        print("Error perform network request")
-//    }
-//}

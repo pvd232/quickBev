@@ -110,12 +110,21 @@ class Customer_Service(object):
             else:
                 return False
 
+    def authenticate_username(self, username=None, hashed_username=None):
+        with session_scope() as session:
+            customer_object = self.customer_repository.authenticate_username(
+                session, username, hashed_username)
+            if customer_object:
+                return True
+            else:
+                return False
+
     def register_new_customer(self, customer):
         with session_scope() as session:
             requested_new_customer = Customer_Domain(customer_json=customer)
-            registered_customer_status = self.customer_repository.register_new_customer(
+            registered_new_customer = self.customer_repository.register_new_customer(
                 session, requested_new_customer)
-            return registered_customer_status
+            return registered_new_customer
 
     def get_customers(self, merchant_id):
         with session_scope() as session:

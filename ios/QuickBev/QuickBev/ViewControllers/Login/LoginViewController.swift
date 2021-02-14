@@ -11,7 +11,7 @@ import Alamofire
 import Stripe
 import CoreData
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController,  UITextFieldDelegate {
     @UsesAutoLayout var signInButtonsStackView = UIStackView()
     @UsesAutoLayout var letsGetStartedStackView = UIStackView()
     @UsesAutoLayout var letsGetStartedLabel : UILabel
@@ -45,6 +45,7 @@ class LoginViewController: UIViewController {
     
     let logoImage = UIImage(named:"charterRomanPurpleLogo-30")
     
+    var formValue: [String:String] = [:]
     init() {
         super.init(nibName: nil, bundle: nil)
         self.view.backgroundColor = .white
@@ -81,8 +82,8 @@ class LoginViewController: UIViewController {
         emailTextField.borderStyle = .roundedRect
         emailTextField.autocapitalizationType = .none
         emailTextField.backgroundColor = UIColor.clear
-        
-        
+        // in order to identify the textfield when extracting information for form value
+        emailTextField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedString.Key.foregroundColor: UIColor.clear])
         emailTextField.addLeftBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
         emailTextField.addRightBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
         emailTextField.addTopBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
@@ -94,7 +95,9 @@ class LoginViewController: UIViewController {
         passwordTextField.borderStyle = .roundedRect
         passwordTextField.autocapitalizationType = .none
         passwordTextField.backgroundColor = UIColor.clear
+        passwordTextField.isSecureTextEntry = true
         
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.clear])
         passwordTextField.addLeftBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
         passwordTextField.addRightBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
         passwordTextField.addTopBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
@@ -132,6 +135,9 @@ class LoginViewController: UIViewController {
         self.view.addSubview(signInButtonsStackView)
         self.view.bringSubviewToFront(activityIndicator
         )
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
         let safeArea = self.view.safeAreaLayoutGuide
         
 
@@ -166,6 +172,27 @@ class LoginViewController: UIViewController {
         ])
         submitButton.addTarget(self, action: #selector(submitButtonPressed), for: .touchUpInside)
     }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("text field editing")
+        if textField.placeholder == "email" {
+            formValue["email"] = textField.text!
+        }
+        else if textField.placeholder == "password" {
+            formValue["password"] = textField.text!
+        }
+            return true
+
+    }
+    func textFieldDidEndEditing(_ textField: UITextField){
+        print("did end")
+        if textField.placeholder == "email" {
+            formValue["email"] = textField.text!
+        }
+        else if textField.placeholder == "password" {
+            formValue["password"] = textField.text!
+        }
+    }
     
     @objc private func submitButtonPressed(_ sender: RoundButton) {
         activityIndicator.startAnimating()
@@ -173,12 +200,20 @@ class LoginViewController: UIViewController {
         let userCredentials: [HTTPHeader] = [HTTPHeader(field: "email", value:emailTextField.text! ), HTTPHeader(field:"password", value:passwordTextField.text! )]
         let request = APIRequest(method: .get, path:"/login")
         request.headers = userCredentials
-        
-        APIClient().perform(request) {result in // this bracket is the trailing closure that is being passed into the APIClient perform function as an argument for the completion parameter. the data is the parameter that was passed into the completion by the APIClient perform function, which was in turn returned the data by the URL session task
+        print("email", formValue["email"])
+        print("password", formValue["password"])
+
+        APIClient().perform(request) { result in // this bracket is the trailing closure that is being passed into the APIClient perform function as an argument for the completion parameter. the data is the parameter that was passed into the completion by the APIClient perform function, which was in turn returned the data by the URL session task
             switch result {
             case .success (let response): // the response is the APIResponse struct parameter that was passed into the APIResult instance for the .success case
                 if response.statusCode == 200, let response = try? response.decode(to: User.self)  {
                     var user = response.body
+                    print("self.formValue[email]", self.formValue["email"])
+                    print("self.formValue[password]", self.formValue["password"])
+
+                    user.email = self.formValue["email"]
+                    user.password = self.formValue["password"]
+//                    user.email = emailTextField.text
                     if let fetchedUsers = CoreDataManager.sharedManager.fetchEntities(entityName: "User") as? [User] {
                         for fetchedUser in fetchedUsers{
                             if fetchedUser.id == user.id{

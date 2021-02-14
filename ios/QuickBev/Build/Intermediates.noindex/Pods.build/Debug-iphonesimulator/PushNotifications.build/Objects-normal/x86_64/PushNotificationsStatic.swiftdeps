@@ -1,0 +1,774 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "PushNotificationsStatic"
+provides-nominal:
+- "17PushNotifications0aB6StaticC"
+provides-member:
+- ["17PushNotifications0aB6StaticC", ""]
+provides-dynamic-lookup:
+- "addDeviceInterest"
+- "clearAllState"
+- "clearDeviceInterests"
+- "getDeviceInterests"
+- "handleNotification"
+- "instance"
+- "registerDeviceToken"
+- "registerForPushNotifications"
+- "registerForRemoteNotifications"
+- "removeDeviceInterest"
+- "setDeviceInterests"
+- "setUserId"
+- "start"
+- "stop"
+- "tokenProvider"
+depends-top-level:
+- !private "!"
+- !private "!="
+- !private "=="
+- "AnyHashable"
+- !private "Array"
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- "Data"
+- !private "DeviceStateStore"
+- "Dictionary"
+- !private "DispatchGroup"
+- "DispatchQueue"
+- "Error"
+- !private "EventTypeHandler"
+- !private "FeatureFlags"
+- !private "FloatLiteralType"
+- !private "InstanceDeviceStateStore"
+- !private "IntegerLiteralType"
+- "NSObject"
+- "PushNotifications"
+- "PushNotificationsStatic"
+- "RemoteNotificationType"
+- !private "ServerSyncJob"
+- !private "ServerSyncProcessHandler"
+- "String"
+- !private "StringLiteralType"
+- "TokenProvider"
+- "UIApplication"
+- "UNAuthorizationOptions"
+- !private "UNUserNotificationCenter"
+- !private "UnicodeScalarType"
+- "Void"
+- !private "fatalError"
+- !private "instance"
+- "print"
+depends-member:
+- !private ["SK", ""]
+- !private ["SK", "hexadecimalRepresentation"]
+- !private ["s7CVarArgP", "DeviceStateStore"]
+- ["s7CVarArgP", "Dictionary"]
+- !private ["s7CVarArgP", "DispatchGroup"]
+- !private ["s7CVarArgP", "DispatchQueue"]
+- !private ["s7CVarArgP", "EventTypeHandler"]
+- !private ["s7CVarArgP", "FeatureFlags"]
+- !private ["s7CVarArgP", "InstanceDeviceStateStore"]
+- !private ["s7CVarArgP", "PushNotifications"]
+- !private ["s7CVarArgP", "ServerSyncJob"]
+- !private ["s7CVarArgP", "ServerSyncProcessHandler"]
+- !private ["s7CVarArgP", "UIApplication"]
+- !private ["s7CVarArgP", "UNUserNotificationCenter"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "addDeviceInterest"]
+- !private ["s7CVarArgP", "applicationState"]
+- !private ["s7CVarArgP", "async"]
+- !private ["s7CVarArgP", "clearAllState"]
+- !private ["s7CVarArgP", "clearDeviceInterests"]
+- !private ["s7CVarArgP", "current"]
+- !private ["s7CVarArgP", "enter"]
+- !private ["s7CVarArgP", "fatalError"]
+- !private ["s7CVarArgP", "getDeviceInterests"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "instance"]
+- !private ["s7CVarArgP", "instanceId"]
+- !private ["s7CVarArgP", "leave"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "notify"]
+- !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "registerDeviceToken"]
+- !private ["s7CVarArgP", "registerForPushNotifications"]
+- !private ["s7CVarArgP", "registerForRemoteNotifications"]
+- !private ["s7CVarArgP", "removeDeviceInterest"]
+- !private ["s7CVarArgP", "requestAuthorization"]
+- !private ["s7CVarArgP", "setDeviceInterests"]
+- !private ["s7CVarArgP", "setUserId"]
+- !private ["s7CVarArgP", "shared"]
+- !private ["s7CVarArgP", "start"]
+- !private ["s7CVarArgP", "stop"]
+- !private ["Sl", ""]
+- !private ["Sl", "hexadecimalRepresentation"]
+- ["Sl", "init"]
+- !private ["SL", ""]
+- !private ["10Foundation15ContiguousBytesP", "hexadecimalRepresentation"]
+- !private ["s28CustomDebugStringConvertibleP", "DeviceStateStore"]
+- ["s28CustomDebugStringConvertibleP", "Dictionary"]
+- !private ["s28CustomDebugStringConvertibleP", "DispatchGroup"]
+- !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
+- !private ["s28CustomDebugStringConvertibleP", "EventTypeHandler"]
+- !private ["s28CustomDebugStringConvertibleP", "FeatureFlags"]
+- !private ["s28CustomDebugStringConvertibleP", "InstanceDeviceStateStore"]
+- !private ["s28CustomDebugStringConvertibleP", "PushNotifications"]
+- !private ["s28CustomDebugStringConvertibleP", "ServerSyncJob"]
+- !private ["s28CustomDebugStringConvertibleP", "ServerSyncProcessHandler"]
+- !private ["s28CustomDebugStringConvertibleP", "UIApplication"]
+- !private ["s28CustomDebugStringConvertibleP", "UNUserNotificationCenter"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "addDeviceInterest"]
+- !private ["s28CustomDebugStringConvertibleP", "applicationState"]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
+- !private ["s28CustomDebugStringConvertibleP", "clearAllState"]
+- !private ["s28CustomDebugStringConvertibleP", "clearDeviceInterests"]
+- !private ["s28CustomDebugStringConvertibleP", "current"]
+- !private ["s28CustomDebugStringConvertibleP", "enter"]
+- !private ["s28CustomDebugStringConvertibleP", "fatalError"]
+- !private ["s28CustomDebugStringConvertibleP", "getDeviceInterests"]
+- !private ["s28CustomDebugStringConvertibleP", "hexadecimalRepresentation"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "instance"]
+- !private ["s28CustomDebugStringConvertibleP", "instanceId"]
+- !private ["s28CustomDebugStringConvertibleP", "leave"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "notify"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "registerDeviceToken"]
+- !private ["s28CustomDebugStringConvertibleP", "registerForPushNotifications"]
+- !private ["s28CustomDebugStringConvertibleP", "registerForRemoteNotifications"]
+- !private ["s28CustomDebugStringConvertibleP", "removeDeviceInterest"]
+- !private ["s28CustomDebugStringConvertibleP", "requestAuthorization"]
+- !private ["s28CustomDebugStringConvertibleP", "setDeviceInterests"]
+- !private ["s28CustomDebugStringConvertibleP", "setUserId"]
+- !private ["s28CustomDebugStringConvertibleP", "shared"]
+- !private ["s28CustomDebugStringConvertibleP", "start"]
+- !private ["s28CustomDebugStringConvertibleP", "stop"]
+- !private ["s17CustomReflectableP", "hexadecimalRepresentation"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "DeviceStateStore"]
+- ["s23CustomStringConvertibleP", "Dictionary"]
+- !private ["s23CustomStringConvertibleP", "DispatchGroup"]
+- !private ["s23CustomStringConvertibleP", "DispatchQueue"]
+- !private ["s23CustomStringConvertibleP", "EventTypeHandler"]
+- !private ["s23CustomStringConvertibleP", "FeatureFlags"]
+- !private ["s23CustomStringConvertibleP", "InstanceDeviceStateStore"]
+- !private ["s23CustomStringConvertibleP", "PushNotifications"]
+- !private ["s23CustomStringConvertibleP", "ServerSyncJob"]
+- !private ["s23CustomStringConvertibleP", "ServerSyncProcessHandler"]
+- !private ["s23CustomStringConvertibleP", "UIApplication"]
+- !private ["s23CustomStringConvertibleP", "UNUserNotificationCenter"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "addDeviceInterest"]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["s23CustomStringConvertibleP", "applicationState"]
+- !private ["s23CustomStringConvertibleP", "async"]
+- !private ["s23CustomStringConvertibleP", "clearAllState"]
+- !private ["s23CustomStringConvertibleP", "clearDeviceInterests"]
+- !private ["s23CustomStringConvertibleP", "current"]
+- !private ["s23CustomStringConvertibleP", "enter"]
+- !private ["s23CustomStringConvertibleP", "fatalError"]
+- !private ["s23CustomStringConvertibleP", "getDeviceInterests"]
+- !private ["s23CustomStringConvertibleP", "hexadecimalRepresentation"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "instance"]
+- !private ["s23CustomStringConvertibleP", "instanceId"]
+- !private ["s23CustomStringConvertibleP", "leave"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "notify"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "registerDeviceToken"]
+- !private ["s23CustomStringConvertibleP", "registerForPushNotifications"]
+- !private ["s23CustomStringConvertibleP", "registerForRemoteNotifications"]
+- !private ["s23CustomStringConvertibleP", "removeDeviceInterest"]
+- !private ["s23CustomStringConvertibleP", "requestAuthorization"]
+- !private ["s23CustomStringConvertibleP", "setDeviceInterests"]
+- !private ["s23CustomStringConvertibleP", "setUserId"]
+- !private ["s23CustomStringConvertibleP", "shared"]
+- !private ["s23CustomStringConvertibleP", "start"]
+- !private ["s23CustomStringConvertibleP", "stop"]
+- !private ["10Foundation4DataV", "hexadecimalRepresentation"]
+- !private ["10Foundation12DataProtocolP", ""]
+- !private ["10Foundation12DataProtocolP", "hexadecimalRepresentation"]
+- !private ["Se", "ReportEventJob"]
+- !private ["Se", "StartJob"]
+- !private ["Se", "hexadecimalRepresentation"]
+- ["Se", "init"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- !private ["17PushNotifications16DeviceStateStoreC", "getInstanceIds"]
+- !private ["17PushNotifications16DeviceStateStoreC", "init"]
+- ["SD", "init"]
+- !private ["So17OS_dispatch_groupC", "enter"]
+- !private ["So17OS_dispatch_groupC", "init"]
+- !private ["So17OS_dispatch_groupC", "leave"]
+- !private ["So17OS_dispatch_groupC", "notify"]
+- ["So18OS_dispatch_objectC", ""]
+- !private ["So18OS_dispatch_objectC", "async"]
+- !private ["So18OS_dispatch_objectC", "enter"]
+- !private ["So18OS_dispatch_objectC", "init"]
+- !private ["So18OS_dispatch_objectC", "leave"]
+- !private ["So18OS_dispatch_objectC", "main"]
+- !private ["So18OS_dispatch_objectC", "notify"]
+- !private ["So18OS_dispatch_objectC", "sync"]
+- !private ["So17OS_dispatch_queueC", "async"]
+- !private ["So17OS_dispatch_queueC", "main"]
+- !private ["SE", "ReportEventJob"]
+- !private ["SE", "StartJob"]
+- ["SE", ""]
+- !private ["SE", "getInstanceId"]
+- !private ["SE", "hexadecimalRepresentation"]
+- ["SE", "init"]
+- !private ["SQ", "ArrayLiteralElement"]
+- !private ["SQ", "DeviceStateStore"]
+- ["SQ", "Dictionary"]
+- !private ["SQ", "DispatchGroup"]
+- !private ["SQ", "DispatchQueue"]
+- !private ["SQ", "Element"]
+- !private ["SQ", "EventTypeHandler"]
+- !private ["SQ", "FeatureFlags"]
+- !private ["SQ", "InstanceDeviceStateStore"]
+- !private ["SQ", "PushNotifications"]
+- !private ["SQ", "ServerSyncJob"]
+- !private ["SQ", "ServerSyncProcessHandler"]
+- !private ["SQ", "ShouldProcess"]
+- !private ["SQ", "UIApplication"]
+- !private ["SQ", "UNUserNotificationCenter"]
+- ["SQ", ""]
+- !private ["SQ", "addDeviceInterest"]
+- !private ["SQ", "alert"]
+- !private ["SQ", "applicationState"]
+- !private ["SQ", "async"]
+- !private ["SQ", "badge"]
+- !private ["SQ", "clearAllState"]
+- !private ["SQ", "clearDeviceInterests"]
+- !private ["SQ", "current"]
+- !private ["SQ", "enter"]
+- !private ["SQ", "fatalError"]
+- !private ["SQ", "getDeviceInterests"]
+- !private ["SQ", "hexadecimalRepresentation"]
+- ["SQ", "init"]
+- !private ["SQ", "instance"]
+- !private ["SQ", "instanceId"]
+- !private ["SQ", "leave"]
+- !private ["SQ", "main"]
+- !private ["SQ", "notify"]
+- !private ["SQ", "print"]
+- !private ["SQ", "registerDeviceToken"]
+- !private ["SQ", "registerForPushNotifications"]
+- !private ["SQ", "registerForRemoteNotifications"]
+- !private ["SQ", "removeDeviceInterest"]
+- !private ["SQ", "requestAuthorization"]
+- !private ["SQ", "setDeviceInterests"]
+- !private ["SQ", "setUserId"]
+- !private ["SQ", "shared"]
+- !private ["SQ", "sound"]
+- !private ["SQ", "start"]
+- !private ["SQ", "stop"]
+- !private ["s5ErrorP", "localizedDescription"]
+- !private ["17PushNotifications16EventTypeHandlerV", "getNotificationEventType"]
+- !private ["17PushNotifications16EventTypeHandlerV", "getRemoteNotificationType"]
+- !private ["s25ExpressibleByArrayLiteralP", "ArrayLiteralElement"]
+- !private ["s25ExpressibleByArrayLiteralP", "Element"]
+- !private ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "alert"]
+- !private ["s25ExpressibleByArrayLiteralP", "badge"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "sound"]
+- ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s23ExpressibleByNilLiteralP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["17PushNotifications12FeatureFlagsV", "DeliveryTrackingEnabled"]
+- !private ["SH", "DeviceStateStore"]
+- ["SH", "Dictionary"]
+- !private ["SH", "DispatchGroup"]
+- !private ["SH", "DispatchQueue"]
+- !private ["SH", "EventTypeHandler"]
+- !private ["SH", "FeatureFlags"]
+- !private ["SH", "InstanceDeviceStateStore"]
+- !private ["SH", "PushNotifications"]
+- !private ["SH", "ServerSyncJob"]
+- !private ["SH", "ServerSyncProcessHandler"]
+- !private ["SH", "ShouldProcess"]
+- !private ["SH", "UIApplication"]
+- !private ["SH", "UNUserNotificationCenter"]
+- ["SH", ""]
+- !private ["SH", "addDeviceInterest"]
+- !private ["SH", "applicationState"]
+- !private ["SH", "async"]
+- !private ["SH", "clearAllState"]
+- !private ["SH", "clearDeviceInterests"]
+- !private ["SH", "current"]
+- !private ["SH", "enter"]
+- !private ["SH", "fatalError"]
+- !private ["SH", "getDeviceInterests"]
+- !private ["SH", "hexadecimalRepresentation"]
+- ["SH", "init"]
+- !private ["SH", "instance"]
+- !private ["SH", "instanceId"]
+- !private ["SH", "leave"]
+- !private ["SH", "main"]
+- !private ["SH", "notify"]
+- !private ["SH", "print"]
+- !private ["SH", "registerDeviceToken"]
+- !private ["SH", "registerForPushNotifications"]
+- !private ["SH", "registerForRemoteNotifications"]
+- !private ["SH", "removeDeviceInterest"]
+- !private ["SH", "requestAuthorization"]
+- !private ["SH", "setDeviceInterests"]
+- !private ["SH", "setUserId"]
+- !private ["SH", "shared"]
+- !private ["SH", "start"]
+- !private ["SH", "stop"]
+- !private ["17PushNotifications24InstanceDeviceStateStoreC", "getStartJobHasBeenEnqueued"]
+- !private ["17PushNotifications24InstanceDeviceStateStoreC", "init"]
+- !private ["17PushNotifications24InstanceDeviceStateStoreC", "persistAPNsToken"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- !private ["SM", ""]
+- !private ["SM", "hexadecimalRepresentation"]
+- !private ["10Foundation19MutableDataProtocolP", "hexadecimalRepresentation"]
+- ["So8NSObjectC", "AnyHashable"]
+- ["So8NSObjectC", "Data"]
+- !private ["So8NSObjectC", "DeviceStateStore"]
+- ["So8NSObjectC", "Dictionary"]
+- !private ["So8NSObjectC", "DispatchGroup"]
+- !private ["So8NSObjectC", "DispatchQueue"]
+- ["So8NSObjectC", "Error"]
+- !private ["So8NSObjectC", "EventTypeHandler"]
+- !private ["So8NSObjectC", "FeatureFlags"]
+- !private ["So8NSObjectC", "InstanceDeviceStateStore"]
+- ["So8NSObjectC", "PushNotifications"]
+- ["So8NSObjectC", "RemoteNotificationType"]
+- !private ["So8NSObjectC", "ServerSyncJob"]
+- !private ["So8NSObjectC", "ServerSyncProcessHandler"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "TokenProvider"]
+- !private ["So8NSObjectC", "UIApplication"]
+- ["So8NSObjectC", "UNAuthorizationOptions"]
+- !private ["So8NSObjectC", "UNUserNotificationCenter"]
+- ["So8NSObjectC", "Void"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "activate"]
+- ["So8NSObjectC", "addDeviceInterest"]
+- !private ["So8NSObjectC", "applicationState"]
+- !private ["So8NSObjectC", "async"]
+- ["So8NSObjectC", "clearAllState"]
+- ["So8NSObjectC", "clearDeviceInterests"]
+- !private ["So8NSObjectC", "current"]
+- !private ["So8NSObjectC", "currentNotificationCenter"]
+- !private ["So8NSObjectC", "enter"]
+- !private ["So8NSObjectC", "fatalError"]
+- ["So8NSObjectC", "getDeviceInterests"]
+- ["So8NSObjectC", "handleNotification"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "instance"]
+- !private ["So8NSObjectC", "instanceId"]
+- !private ["So8NSObjectC", "leave"]
+- !private ["So8NSObjectC", "main"]
+- !private ["So8NSObjectC", "notify"]
+- !private ["So8NSObjectC", "print"]
+- ["So8NSObjectC", "registerDeviceToken"]
+- ["So8NSObjectC", "registerForPushNotifications"]
+- !private ["So8NSObjectC", "registerForRemoteNotificationTypes"]
+- ["So8NSObjectC", "registerForRemoteNotifications"]
+- ["So8NSObjectC", "removeDeviceInterest"]
+- !private ["So8NSObjectC", "requestAuthorization"]
+- !private ["So8NSObjectC", "requestAuthorizationWithOptions"]
+- !private ["So8NSObjectC", "resume"]
+- ["So8NSObjectC", "setDeviceInterests"]
+- !private ["So8NSObjectC", "setTarget"]
+- ["So8NSObjectC", "setUserId"]
+- !private ["So8NSObjectC", "shared"]
+- ["So8NSObjectC", "start"]
+- ["So8NSObjectC", "stop"]
+- !private ["So8NSObjectC", "suspend"]
+- !private ["So8NSObjectC", "sync"]
+- ["So8NSObjectC", "tokenProvider"]
+- !private ["So8NSObjectP", "DeviceStateStore"]
+- ["So8NSObjectP", "Dictionary"]
+- !private ["So8NSObjectP", "DispatchGroup"]
+- !private ["So8NSObjectP", "DispatchQueue"]
+- !private ["So8NSObjectP", "EventTypeHandler"]
+- !private ["So8NSObjectP", "FeatureFlags"]
+- !private ["So8NSObjectP", "InstanceDeviceStateStore"]
+- !private ["So8NSObjectP", "PushNotifications"]
+- !private ["So8NSObjectP", "ServerSyncJob"]
+- !private ["So8NSObjectP", "ServerSyncProcessHandler"]
+- ["So8NSObjectP", "TokenProvider"]
+- !private ["So8NSObjectP", "UIApplication"]
+- !private ["So8NSObjectP", "UNUserNotificationCenter"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "activate"]
+- ["So8NSObjectP", "addDeviceInterest"]
+- !private ["So8NSObjectP", "applicationState"]
+- !private ["So8NSObjectP", "async"]
+- ["So8NSObjectP", "clearAllState"]
+- ["So8NSObjectP", "clearDeviceInterests"]
+- !private ["So8NSObjectP", "current"]
+- !private ["So8NSObjectP", "currentNotificationCenter"]
+- !private ["So8NSObjectP", "enter"]
+- !private ["So8NSObjectP", "fatalError"]
+- ["So8NSObjectP", "getDeviceInterests"]
+- ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "instance"]
+- !private ["So8NSObjectP", "instanceId"]
+- !private ["So8NSObjectP", "leave"]
+- !private ["So8NSObjectP", "main"]
+- !private ["So8NSObjectP", "notify"]
+- !private ["So8NSObjectP", "print"]
+- !private ["So8NSObjectP", "registerDeviceToken"]
+- ["So8NSObjectP", "registerForPushNotifications"]
+- !private ["So8NSObjectP", "registerForRemoteNotificationTypes"]
+- !private ["So8NSObjectP", "registerForRemoteNotifications"]
+- ["So8NSObjectP", "removeDeviceInterest"]
+- !private ["So8NSObjectP", "requestAuthorization"]
+- !private ["So8NSObjectP", "requestAuthorizationWithOptions"]
+- !private ["So8NSObjectP", "resume"]
+- ["So8NSObjectP", "setDeviceInterests"]
+- !private ["So8NSObjectP", "setTarget"]
+- ["So8NSObjectP", "setUserId"]
+- !private ["So8NSObjectP", "shared"]
+- ["So8NSObjectP", "start"]
+- ["So8NSObjectP", "stop"]
+- !private ["So8NSObjectP", "suspend"]
+- !private ["So8NSObjectP", "sync"]
+- ["So8NSObjectP", "tokenProvider"]
+- ["So9OS_objectC", ""]
+- !private ["So9OS_objectC", "activate"]
+- !private ["So9OS_objectC", "async"]
+- !private ["So9OS_objectC", "enter"]
+- !private ["So9OS_objectC", "init"]
+- !private ["So9OS_objectC", "leave"]
+- !private ["So9OS_objectC", "main"]
+- !private ["So9OS_objectC", "notify"]
+- !private ["So9OS_objectC", "resume"]
+- !private ["So9OS_objectC", "setTarget"]
+- !private ["So9OS_objectC", "suspend"]
+- !private ["So9OS_objectC", "sync"]
+- !private ["s9OptionSetP", "ArrayLiteralElement"]
+- !private ["s9OptionSetP", "Element"]
+- !private ["s9OptionSetP", "alert"]
+- !private ["s9OptionSetP", "badge"]
+- !private ["s9OptionSetP", "init"]
+- !private ["s9OptionSetP", "sound"]
+- !private ["17PushNotificationsAAC", ""]
+- !private ["17PushNotificationsAAC", "addDeviceInterest"]
+- !private ["17PushNotificationsAAC", "clearAllState"]
+- !private ["17PushNotificationsAAC", "clearDeviceInterests"]
+- !private ["17PushNotificationsAAC", "getDeviceInterests"]
+- !private ["17PushNotificationsAAC", "init"]
+- !private ["17PushNotificationsAAC", "instanceId"]
+- !private ["17PushNotificationsAAC", "removeDeviceInterest"]
+- !private ["17PushNotificationsAAC", "setDeviceInterests"]
+- !private ["17PushNotificationsAAC", "setUserId"]
+- !private ["17PushNotificationsAAC", "start"]
+- !private ["17PushNotificationsAAC", "stop"]
+- ["17PushNotifications0aB6StaticC", "AnyHashable"]
+- ["17PushNotifications0aB6StaticC", "Data"]
+- !private ["17PushNotifications0aB6StaticC", "DeviceStateStore"]
+- ["17PushNotifications0aB6StaticC", "Dictionary"]
+- !private ["17PushNotifications0aB6StaticC", "DispatchGroup"]
+- !private ["17PushNotifications0aB6StaticC", "DispatchQueue"]
+- ["17PushNotifications0aB6StaticC", "Error"]
+- !private ["17PushNotifications0aB6StaticC", "EventTypeHandler"]
+- !private ["17PushNotifications0aB6StaticC", "FeatureFlags"]
+- !private ["17PushNotifications0aB6StaticC", "InstanceDeviceStateStore"]
+- ["17PushNotifications0aB6StaticC", "PushNotifications"]
+- ["17PushNotifications0aB6StaticC", "RemoteNotificationType"]
+- !private ["17PushNotifications0aB6StaticC", "ServerSyncJob"]
+- !private ["17PushNotifications0aB6StaticC", "ServerSyncProcessHandler"]
+- ["17PushNotifications0aB6StaticC", "String"]
+- ["17PushNotifications0aB6StaticC", "TokenProvider"]
+- !private ["17PushNotifications0aB6StaticC", "UIApplication"]
+- ["17PushNotifications0aB6StaticC", "UNAuthorizationOptions"]
+- !private ["17PushNotifications0aB6StaticC", "UNUserNotificationCenter"]
+- ["17PushNotifications0aB6StaticC", "Void"]
+- ["17PushNotifications0aB6StaticC", ""]
+- ["17PushNotifications0aB6StaticC", "addDeviceInterest"]
+- ["17PushNotifications0aB6StaticC", "clearAllState"]
+- ["17PushNotifications0aB6StaticC", "clearDeviceInterests"]
+- ["17PushNotifications0aB6StaticC", "deinit"]
+- !private ["17PushNotifications0aB6StaticC", "fatalError"]
+- ["17PushNotifications0aB6StaticC", "getDeviceInterests"]
+- ["17PushNotifications0aB6StaticC", "handleNotification"]
+- !private ["17PushNotifications0aB6StaticC", "init"]
+- !private ["17PushNotifications0aB6StaticC", "instance"]
+- !private ["17PushNotifications0aB6StaticC", "print"]
+- ["17PushNotifications0aB6StaticC", "registerDeviceToken"]
+- !private ["17PushNotifications0aB6StaticC", "registerForPushNotifications"]
+- ["17PushNotifications0aB6StaticC", "registerForRemoteNotifications"]
+- ["17PushNotifications0aB6StaticC", "removeDeviceInterest"]
+- ["17PushNotifications0aB6StaticC", "setDeviceInterests"]
+- ["17PushNotifications0aB6StaticC", "setUserId"]
+- ["17PushNotifications0aB6StaticC", "start"]
+- ["17PushNotifications0aB6StaticC", "stop"]
+- ["17PushNotifications0aB6StaticC", "tokenProvider"]
+- !private ["Sk", ""]
+- !private ["Sk", "hexadecimalRepresentation"]
+- !private ["Sm", ""]
+- !private ["Sm", "hexadecimalRepresentation"]
+- !private ["SY", "ArrayLiteralElement"]
+- !private ["SY", "Element"]
+- !private ["SY", "ShouldProcess"]
+- !private ["SY", ""]
+- !private ["SY", "alert"]
+- !private ["SY", "badge"]
+- !private ["SY", "init"]
+- !private ["SY", "sound"]
+- !private ["10Foundation20ReferenceConvertibleP", "hexadecimalRepresentation"]
+- !private ["17PushNotifications22RemoteNotificationTypeO", "ShouldProcess"]
+- !private ["17PushNotifications15ReportEventTypeP", "getInstanceId"]
+- !private ["7Combine9SchedulerP", "async"]
+- !private ["7Combine9SchedulerP", "main"]
+- !private ["ST", "Element"]
+- !private ["ST", "Iterator"]
+- ["ST", ""]
+- !private ["ST", "hexadecimalRepresentation"]
+- ["ST", "init"]
+- !private ["ST", "makeIterator"]
+- !private ["17PushNotifications13ServerSyncJobO", "ReportEventJob"]
+- !private ["17PushNotifications13ServerSyncJobO", "StartJob"]
+- !private ["17PushNotifications24ServerSyncProcessHandlerC", "obtain"]
+- !private ["17PushNotifications24ServerSyncProcessHandlerC", "sendMessage"]
+- !private ["s10SetAlgebraP", "ArrayLiteralElement"]
+- !private ["s10SetAlgebraP", "Element"]
+- !private ["s10SetAlgebraP", ""]
+- !private ["s10SetAlgebraP", "alert"]
+- !private ["s10SetAlgebraP", "badge"]
+- !private ["s10SetAlgebraP", "init"]
+- !private ["s10SetAlgebraP", "sound"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s27StringInterpolationProtocolP", "init"]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- !private ["s20TextOutputStreamableP", ""]
+- !private ["So13UIApplicationC", "applicationState"]
+- !private ["So13UIApplicationC", "registerForRemoteNotifications"]
+- !private ["So13UIApplicationC", "shared"]
+- !private ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "applicationState"]
+- !private ["So30UIPasteConfigurationSupportingP", "registerForRemoteNotificationTypes"]
+- !private ["So30UIPasteConfigurationSupportingP", "registerForRemoteNotifications"]
+- !private ["So30UIPasteConfigurationSupportingP", "shared"]
+- ["So11UIResponderC", ""]
+- !private ["So11UIResponderC", "applicationState"]
+- !private ["So11UIResponderC", "registerForRemoteNotificationTypes"]
+- !private ["So11UIResponderC", "registerForRemoteNotifications"]
+- !private ["So11UIResponderC", "shared"]
+- !private ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "applicationState"]
+- !private ["So30UIResponderStandardEditActionsP", "registerForRemoteNotificationTypes"]
+- !private ["So30UIResponderStandardEditActionsP", "registerForRemoteNotifications"]
+- !private ["So30UIResponderStandardEditActionsP", "shared"]
+- !private ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "applicationState"]
+- !private ["So23UIUserActivityRestoringP", "registerForRemoteNotificationTypes"]
+- !private ["So23UIUserActivityRestoringP", "registerForRemoteNotifications"]
+- !private ["So23UIUserActivityRestoringP", "shared"]
+- !private ["So22UNAuthorizationOptionsV", "ArrayLiteralElement"]
+- !private ["So22UNAuthorizationOptionsV", "Element"]
+- !private ["So22UNAuthorizationOptionsV", "alert"]
+- !private ["So22UNAuthorizationOptionsV", "badge"]
+- !private ["So22UNAuthorizationOptionsV", "init"]
+- !private ["So22UNAuthorizationOptionsV", "sound"]
+- !private ["So24UNUserNotificationCenterC", "current"]
+- !private ["So24UNUserNotificationCenterC", "requestAuthorization"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DeviceStateStore"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Dictionary"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchGroup"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "EventTypeHandler"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "FeatureFlags"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "InstanceDeviceStateStore"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "PushNotifications"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ServerSyncJob"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ServerSyncProcessHandler"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIApplication"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UNUserNotificationCenter"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addDeviceInterest"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "applicationState"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "clearAllState"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "clearDeviceInterests"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "current"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "enter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getDeviceInterests"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "instance"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "instanceId"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "leave"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "notify"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "registerDeviceToken"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "registerForPushNotifications"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "registerForRemoteNotifications"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "removeDeviceInterest"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "requestAuthorization"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setDeviceInterests"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setUserId"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "start"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stop"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "DeviceStateStore"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Dictionary"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "DispatchGroup"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "DispatchQueue"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "EventTypeHandler"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "FeatureFlags"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "InstanceDeviceStateStore"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PushNotifications"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ServerSyncJob"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ServerSyncProcessHandler"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIApplication"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UNUserNotificationCenter"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addDeviceInterest"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applicationState"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "async"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "clearAllState"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "clearDeviceInterests"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "current"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "enter"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "fatalError"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getDeviceInterests"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "instance"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "instanceId"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "leave"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "main"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "notify"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "print"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "registerDeviceToken"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "registerForPushNotifications"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "registerForRemoteNotifications"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "removeDeviceInterest"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "requestAuthorization"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setDeviceInterests"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setUserId"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "start"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stop"]
+- !private ["s21_ObjectiveCBridgeableP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "hexadecimalRepresentation"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+depends-nominal:
+- !private "SK"
+- "s7CVarArgP"
+- "Sl"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- !private "10Foundation12DataProtocolP"
+- "Se"
+- !private "s26DefaultStringInterpolationV"
+- !private "17PushNotifications16DeviceStateStoreC"
+- "SD"
+- !private "So17OS_dispatch_groupC"
+- "So18OS_dispatch_objectC"
+- !private "So17OS_dispatch_queueC"
+- "SE"
+- "SQ"
+- !private "s5ErrorP"
+- !private "17PushNotifications16EventTypeHandlerV"
+- !private "s25ExpressibleByArrayLiteralP"
+- "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "17PushNotifications12FeatureFlagsV"
+- "SH"
+- !private "17PushNotifications24InstanceDeviceStateStoreC"
+- !private "s25LosslessStringConvertibleP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "So9OS_objectC"
+- !private "s9OptionSetP"
+- !private "17PushNotificationsAAC"
+- "17PushNotifications0aB6StaticC"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "17PushNotifications22RemoteNotificationTypeO"
+- !private "17PushNotifications15ReportEventTypeP"
+- !private "7Combine9SchedulerP"
+- "ST"
+- !private "17PushNotifications13ServerSyncJobO"
+- !private "17PushNotifications24ServerSyncProcessHandlerC"
+- !private "s10SetAlgebraP"
+- !private "s27StringInterpolationProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So13UIApplicationC"
+- !private "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So23UIUserActivityRestoringP"
+- !private "So22UNAuthorizationOptionsV"
+- !private "So24UNUserNotificationCenterC"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Target Support Files/PushNotifications/PushNotifications-umbrella.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/PushNotifications.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "4c389ffe12e9abc677e22126208651b3"

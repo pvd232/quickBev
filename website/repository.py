@@ -132,18 +132,41 @@ class Order_Repository(object):
 
 class Customer_Repository(object):
     def authenticate_customer(self, session, email, password):
+        print('password', password)
+        print('email', email)
       # check to see if the customer exists in the database by querying the Customer_Info table for the giver username and password
       # if they don't exist this will return a null value for customer which i check for in line 80
-        customer = session.query(Customer).filter(
-            check_password_hash(Customer.id, email), check_password_hash(Customer.password, password)).first()
-        if customer:
-            return customer
+
+        for customer in session.query(Customer):
+            if check_password_hash(customer.id, email) and check_password_hash(customer.password, password):
+                return customer
         else:
+            return False
+
+    def authenticate_username(self, session, username, hashed_username):
+        print('username', username)
+        # the usernamebeing passed in from the confirmation email is the hashed version
+        if not username and hashed_username:
+            customer = session.query(Customer).filter(
+                Customer.id == hashed_username)
+            if customer:
+                return True
+            else:
+                return False
+        elif username and not hashed_username:
+
+            for customer in session.query(Customer):
+                print('check_password_hash(customer.id, username)',
+                      check_password_hash(customer.id, username))
+                print('customer.id', customer.id)
+
+                if check_password_hash(customer.id, username):
+                    return True
             return False
 
     def register_new_customer(self, session, customer):
         test_customer = session.query(Customer).filter(
-            check_password_hash(Customer.id, customer.id)).first()
+            Customer.id == customer.id).first()
         test_stripe_id = session.query(Stripe_Customer).filter(
             Stripe_Customer.id == customer.stripe_id).first()
         print('test_stripe_id', test_stripe_id)
@@ -153,7 +176,7 @@ class Customer_Repository(object):
             new_customer = Customer(id=customer.id, password=customer.password,
                                     first_name=customer.first_name, last_name=customer.last_name, stripe_id=test_stripe_id.id, email_verified=customer.email_verified)
             session.add(new_customer)
-            return True
+            return customer
         elif not test_customer and not test_stripe_id:
             new_customer = stripe.Customer.create()
             new_stripe = Stripe_Customer(id=new_customer.id)
@@ -161,7 +184,7 @@ class Customer_Repository(object):
             new_customer = Customer(id=customer.id, password=customer.password,
                                     first_name=customer.first_name, last_name=customer.last_name, stripe_id=new_stripe.id, email_verified=customer.email_verified)
             session.add(new_customer)
-            return {"stripe_id": new_stripe.id}
+            return customer
         else:
             return False
 

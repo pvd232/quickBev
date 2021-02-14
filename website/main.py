@@ -14,14 +14,33 @@ import websockets
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from flask import Flask
+import pusher
+from pusher_push_notifications import PushNotifications
+
 
 app = Flask(__name__)
+# app.config['SECRET_KEY'] = 'secret!'
+# socketio = SocketIO(app)
 
 merchant_menu_upload_folder = os.getcwd() + "/files"
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 app.config['UPLOAD_FOLDER'] = merchant_menu_upload_folder
 
 stripe.api_key = "sk_test_51I0xFxFseFjpsgWvh9b1munh6nIea6f5Z8bYlIDfmKyNq6zzrgg8iqeKEHwmRi5PqIelVkx4XWcYHAYc1omtD7wz00JiwbEKzj"
+
+beams_client = PushNotifications(
+    instance_id='YOUR_INSTANCE_ID_HERE',
+    secret_key='4f53e118637f02042caa',
+)
+
+pusher_client = pusher.Pusher(
+    app_id='1155759',
+    key='7b5e34392e1404447668',
+    secret='4f53e118637f02042caa',
+    cluster='us2',
+    ssl=True
+)
 # publicly accessible local host URL!!! - http://machina-8c11dd2e.localhost.run/
 # theme color RGB = rgb(134,130,230), hex = #8682E6
 # TODO: need to finish the add_business function by adding the new business address and returning the unique identifier to main.py so i can dynamically set the files path of the new image using the UUID of the business address
@@ -90,15 +109,22 @@ def orders():
         return Response(status=200, response=json.dumps(response), headers=header)
 
 
-def send_confirmation_email(self, customer):
-    mail_header = '<!DOCTYPE html><html lang="en" style="height: 100%;"><head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><style>p{margin-top: 15px; margin-bottom: 15px;}</style><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script></head>'
-    mail_body_text = f'<p>Hey {customer.first_name},</p><p>Welcome to QuickBev!</p><p>Please click the link below to verify your account</p><br /><p>Let the good times begin,</p><p>—The QuickBev Team</p></div><div className = "row" style="display:flex; justify-content: center;"><button type="button" class="btn btn-outline-*" style="background-color:white; border-color:#8682E6; font-weight:bold; align-self:center;">VERIFY EMAIL</button>'
-    mail_body = f'<body style="height: 100%;"><divstyle="width: 100%;height: 100%;display: flex;justify-content: center;background-color: #e8e8e8;"><divclassName="container-fluid"style="width: 100%;max-width: 500px;margin-top: 3%;margin-bottom: 10%;background-color: white;"><div className="row" style="width: 100%; padding:30px 30px 30px 30px"><div className="row" style="display: flex; width:100%; justify-content: center"><img src="src/static/landscape-logo-purple.png" style="width:50%; height:12%" /></div><div className="row" style="margin-top: 30px;">{mail_body_text}</div></div></div></div></body></html>'
+def send_confirmation_email(customer, url):
+    # gmail left pad = 20px, right pad = 16px
+    host = request.headers.get('Host')
+    button_url = f"http://{host}/verify-email/{customer.id}"
 
-    logo = os.path.join(os.getcwd(), "src/static/landscape-logo-purple.png")
+    logo = os.path.join(os.path.dirname(os.path.abspath(
+        __file__)), "./src/static/landscape-logo-purple.png")
 
-    sender_address = 'confirmation@crepenshake.com'
-    email = 'crepenshake@yahoo.com'
+    with open(logo, "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read())
+
+    mail_body_text = f'<p style="margin-top: 15px;margin-bottom: 15px;">Hey {customer.first_name},</p><p style="margin-top: 15px;margin-bottom: 15px;">Welcome to QuickBev!</p><p style="margin-top: 15px;margin-bottom: 15px;">Please click the link below to verify your account</p><br /><p style="margin-top: 15px;margin-bottom: 15px;">Let the good times begin,</p><p style="margin-top: 15px;margin-bottom: 15px;">—The QuickBev Team</p></div><div style="display:flex; justify-content: center;"><a style="background-color:white; border-color:#8682E6; font-weight:bold; align-self:center;" href="{button_url}"><button type="button" class="btn btn-outline-*" style="background-color:white; border-color:#8682E6; font-weight:bold; align-self:center;">VERIFY EMAIL</button></a>'
+    mail_body = f'<div style="height: 100%;"><div style="width: 100%;height: 100%;display: flex;justify-content: center;background-color: #e8e8e8;"><div style="width: 100%;max-width: 500px;margin-top: 3%;margin-bottom: 10%; margin-right:auto; margin-left:auto; background-color: white;"><div  style="width: 100%; padding:30px 30px 30px 30px"><div  style="display: flex; width:100%; justify-content: center; text-align:center;"><img src="data:image/png;base64,f{encoded_string} style="width:50%; height:12%" alt="img" /></div><div  style="margin-top: 30px;">{mail_body_text}</div></div></div></div>'
+
+    sender_address = 'patardriscoll@gmail.com'
+    email = 'patardriscoll@gmail.com'
 
     # Setup the MIME
     message = MIMEMultipart()
@@ -107,14 +133,16 @@ def send_confirmation_email(self, customer):
 
     message['Subject'] = 'Order From'  # The subject line
 
-    mail_content = mail_header + mail_body
+    mail_content = mail_body
     # The body and the attachments for the mail
     message.attach(MIMEText(mail_content, 'html'))
     # Create SMTP session for sending the mail
-    s = smtplib.SMTP('localhost')
-
-    # s = smtplib.SMTP('smtp.mailgun.org', 587)
+    s = smtplib.SMTP('smtp.gmail.com', 587)
+    # s.connect('smtp.gmail.com', 587)
     s.starttls()
+
+    s.login(user="patardriscoll@gmail.com", password="Iqopaogh23!")
+    # s = smtplib.SMTP('smtp.mailgun.org', 587)
     # s.login('postmaster@crepenshake.com',
     #         '6695313d8a619bc44dce00ad7184960a-ba042922-f2a8cfbb')
     s.sendmail(message['From'], message['To'], message.as_string())
@@ -133,9 +161,13 @@ def customer():
     if request.method == 'POST':
         new_customer = json.loads(request.data)  # load JSON data from request
         response = customer_service.register_new_customer(new_customer)
-        print('response', response)
+        print('response', response.serialize())
         if response:
-            return jsonify(response), 200
+            # send the hashed user ID as a crypted key embedded in the activation link for security
+            print('request.url', request.url)
+
+            send_confirmation_email(response, request.url)
+            return jsonify(response.serialize()), 200
         else:
             return jsonify(response), 400
     if request.method == 'OPTIONS':
@@ -154,6 +186,32 @@ def customer():
         print('customer', customers)
         response = {"customers": customers}
         return Response(status=200, response=json.dumps(response), headers=header)
+
+
+# strongly typed url argument ;)
+@app.route("/verify-email/<string:username>")
+def verify_email(username):
+    print('username', username)
+    status = Customer_Service().authenticate_username(
+        username=None, hashed_username=username)
+    print('status', status)
+    response = {"status": status}
+    pusher_client.trigger(
+        'email-verificatin-channel', 'account-status', json.dumps(response)
+    )  # trigger `new-request` event on `patientRequests` channel
+    return Response(response=json.dumps(response), status=200)
+
+
+@app.route('/pusher/beams-auth', methods=['GET'])
+def beams_auth():
+    # Do your normal auth checks here 🔒
+    user_id = ''  # get it from your auth system
+    user_id_in_query_param = request.args.get('user_id')
+    if user_id != user_id_in_query_param:
+        return 'Inconsistent request', 401
+
+    beams_token = beams_client.generate_token(user_id)
+    return jsonify(beams_token)
 
 
 @app.route('/business', methods=['GET'])
@@ -313,25 +371,72 @@ def add_menu():
     return response
 
 
-async def hello(websocket, path):
-    remote_ip = websocket.remote_address[0]
-    remote_ip_list = websocket.remote_address
-    print('remote_ip_list', remote_ip_list)
+# @socketio.on_error_default
+# def default_error_handler(e):
+#     print(request.event["message"])  # "my error event"
+#     print(request.event["args"])    # (data,)
 
-    print('remote_ip', remote_ip)
 
-    name = await websocket.recv()
-    # print(f"< {name}")
-    print("data recieved", name)
+# @socketio.on('connect')
+# def test_connect():
+#     print(request)
+#     emit('my response', {'data': 'Connected'})
 
-    greeting = f"Hello {name}!"
 
-    await websocket.send(greeting)
-    print(f"> {greeting}")
+# @socketio.on('disconnect')
+# def test_disconnect():
+#     print('Client disconnected')
+
+
+# @socketio.on('json')
+# def handle_json(json):
+#     print('received json: ' + str(json))
+
+# async def hello(websocket, path):
+#     remote_ip = websocket.remote_address[0]
+#     remote_ip_list = websocket.remote_address
+#     print('remote_ip_list', remote_ip_list)
+
+#     print('remote_ip', remote_ip)
+
+#     name = await websocket.recv()
+#     # print(f"< {name}")
+#     print("data recieved", name)
+
+#     greeting = f"Hello {name}!"
+
+#     await websocket.send(greeting)
+#     print(f"> {greeting}")
+
+
+# app = Flask(__name__)
+# ws = WebSocket(app)
+
+
+# @ws.on('click')
+# def click(data):
+#     print(data)
+# def run_websocket():
+#     start_server = websockets.serve(hello, "localhost", 8765)
+#     asyncio.get_event_loop().run_until_complete(start_server)
+#     asyncio.get_event_loop().run_forever()
+
+
+# def run_flask_app():
+#     app.run(debug=True)
+
+
+# p_flask = multiprocessing.Process(target=run_flask_app)
+# p_ws = multiprocessing.Process(target=run_websocket)
+
+
+# def run_everything():
+#     p_ws.start()
+#     p_flask.start()
+#     p_ws.join()
+
+#     p_flask.join()
 
 
 if __name__ == '__main__':
     app.run(debug=True)
-    start_server = websockets.serve(hello, "localhost", 8765)
-    asyncio.get_event_loop().run_until_complete(start_server)
-    asyncio.get_event_loop().run_forever()

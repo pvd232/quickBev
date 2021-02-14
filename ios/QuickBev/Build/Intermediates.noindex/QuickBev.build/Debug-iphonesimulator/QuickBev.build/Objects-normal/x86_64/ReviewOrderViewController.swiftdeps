@@ -158,8 +158,8 @@ depends-member:
 - ["So15CALayerDelegateP", "init"]
 - !private ["So15CALayerDelegateP", "isHidden"]
 - !private ["So15CALayerDelegateP", "leadingAnchor"]
-- ["So15CALayerDelegateP", "refreshColor"]
-- ["So15CALayerDelegateP", "refreshTitle"]
+- !private ["So15CALayerDelegateP", "refreshColor"]
+- !private ["So15CALayerDelegateP", "refreshTitle"]
 - !private ["So15CALayerDelegateP", "safeAreaLayoutGuide"]
 - !private ["So15CALayerDelegateP", "setContentHuggingPriority"]
 - !private ["So15CALayerDelegateP", "spacing"]
@@ -570,10 +570,8 @@ depends-member:
 - !private ["SE", "safeAreaLayoutGuide"]
 - !private ["SE", "white"]
 - !private ["SQ", "AF"]
-- !private ["SQ", "ArrayLiteralElement"]
 - !private ["SQ", "CheckoutCart"]
 - !private ["SQ", "CoreDataManager"]
-- !private ["SQ", "Element"]
 - !private ["SQ", "Int"]
 - !private ["SQ", "JSONEncoder"]
 - !private ["SQ", "JSONEncoding"]
@@ -707,8 +705,6 @@ depends-member:
 - !private ["SQ", "widthAnchor"]
 - !private ["s5ErrorP", "localizedDescription"]
 - !private ["So15UIControlEventsV", "touchUpInside"]
-- !private ["s25ExpressibleByArrayLiteralP", "ArrayLiteralElement"]
-- !private ["s25ExpressibleByArrayLiteralP", "Element"]
 - !private ["s25ExpressibleByArrayLiteralP", ""]
 - ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "touchUpInside"]
@@ -985,8 +981,8 @@ depends-member:
 - ["So8NSCodingP", "paymentContextDidChange"]
 - !private ["So8NSCodingP", "present"]
 - !private ["So8NSCodingP", "print"]
-- ["So8NSCodingP", "refreshColor"]
-- ["So8NSCodingP", "refreshTitle"]
+- !private ["So8NSCodingP", "refreshColor"]
+- !private ["So8NSCodingP", "refreshTitle"]
 - !private ["So8NSCodingP", "safeAreaLayoutGuide"]
 - ["So8NSCodingP", "salesTaxHeaderLabel"]
 - ["So8NSCodingP", "salesTaxLabel"]
@@ -1111,7 +1107,7 @@ depends-member:
 - !private ["So20NSFetchRequestResultP", "cost"]
 - !private ["So20NSFetchRequestResultP", "customerContext"]
 - ["So20NSFetchRequestResultP", "emptyCart"]
-- ["So20NSFetchRequestResultP", "init"]
+- !private ["So20NSFetchRequestResultP", "init"]
 - !private ["So20NSFetchRequestResultP", "salesTax"]
 - !private ["So20NSFetchRequestResultP", "shared"]
 - !private ["So20NSFetchRequestResultP", "subtotal"]
@@ -1145,8 +1141,6 @@ depends-member:
 - !private ["So8NSObjectC", "Int"]
 - !private ["So8NSObjectC", "JSONEncoder"]
 - !private ["So8NSObjectC", "JSONEncoding"]
-- !private ["So8NSObjectC", "JSONObjectWithData"]
-- !private ["So8NSObjectC", "JSONObjectWithStream"]
 - !private ["So8NSObjectC", "JSONSerialization"]
 - ["So8NSObjectC", "NSCoder"]
 - !private ["So8NSObjectC", "NSLayoutConstraint"]
@@ -1297,12 +1291,9 @@ depends-member:
 - !private ["So8NSObjectP", "AF"]
 - !private ["So8NSObjectP", "CheckoutCart"]
 - !private ["So8NSObjectP", "CoreDataManager"]
-- ["So8NSObjectP", "Error"]
 - !private ["So8NSObjectP", "Int"]
 - !private ["So8NSObjectP", "JSONEncoder"]
 - !private ["So8NSObjectP", "JSONEncoding"]
-- !private ["So8NSObjectP", "JSONObjectWithData"]
-- !private ["So8NSObjectP", "JSONObjectWithStream"]
 - !private ["So8NSObjectP", "JSONSerialization"]
 - !private ["So8NSObjectP", "NSLayoutConstraint"]
 - !private ["So8NSObjectP", "Order"]
@@ -1383,7 +1374,7 @@ depends-member:
 - !private ["So8NSObjectP", "confirmPayment"]
 - !private ["So8NSObjectP", "constraint"]
 - !private ["So8NSObjectP", "cost"]
-- ["So8NSObjectP", "createPaymentIntent"]
+- !private ["So8NSObjectP", "createPaymentIntent"]
 - !private ["So8NSObjectP", "customerContext"]
 - !private ["So8NSObjectP", "debugPrint"]
 - ["So8NSObjectP", "defaultPaymentMethodView"]
@@ -1414,8 +1405,8 @@ depends-member:
 - !private ["So8NSObjectP", "presentPaymentOptionsViewController"]
 - !private ["So8NSObjectP", "presentViewController"]
 - !private ["So8NSObjectP", "print"]
-- ["So8NSObjectP", "refreshColor"]
-- ["So8NSObjectP", "refreshTitle"]
+- !private ["So8NSObjectP", "refreshColor"]
+- !private ["So8NSObjectP", "refreshTitle"]
 - !private ["So8NSObjectP", "requestPayment"]
 - !private ["So8NSObjectP", "safeAreaLayoutGuide"]
 - !private ["So8NSObjectP", "salesTax"]
@@ -1466,9 +1457,6 @@ depends-member:
 - !private ["7Combine16ObservableObjectP", "shared"]
 - !private ["7Combine16ObservableObjectP", "subtotal"]
 - !private ["7Combine16ObservableObjectP", "tipAmount"]
-- !private ["s9OptionSetP", "ArrayLiteralElement"]
-- !private ["s9OptionSetP", "Element"]
-- !private ["s9OptionSetP", "init"]
 - !private ["s9OptionSetP", "touchUpInside"]
 - !private ["Sq", "addSubview"]
 - !private ["Sq", "backgroundColor"]
@@ -1481,8 +1469,6 @@ depends-member:
 - !private ["8QuickBev31OrderConfirmationViewControllerC", "init"]
 - !private ["9Alamofire17ParameterEncodingP", "default"]
 - !private ["Sm", "init"]
-- !private ["SY", "ArrayLiteralElement"]
-- !private ["SY", "Element"]
 - !private ["SY", "RawValue"]
 - !private ["SY", ""]
 - !private ["SY", "alert"]
@@ -1499,9 +1485,6 @@ depends-member:
 - !private ["SY", "touchUpInside"]
 - ["SY", "userCancellation"]
 - !private ["SY", "vertical"]
-- !private ["So20NSJSONReadingOptionsV", "ArrayLiteralElement"]
-- !private ["So20NSJSONReadingOptionsV", "Element"]
-- !private ["So20NSJSONReadingOptionsV", "init"]
 - !private ["10Foundation20ReferenceConvertibleP", "rounded"]
 - ["9Alamofire7RequestC", ""]
 - !private ["9Alamofire7RequestC", "responseJSON"]
@@ -1622,7 +1605,7 @@ depends-member:
 - !private ["6Stripe24STPAuthenticationContextP", "presentPaymentOptionsViewController"]
 - !private ["6Stripe24STPAuthenticationContextP", "requestPayment"]
 - !private ["6Stripe24STPAuthenticationContextP", "selectedPaymentOption"]
-- ["6Stripe31STPCustomerEphemeralKeyProviderP", "createPaymentIntent"]
+- !private ["6Stripe31STPCustomerEphemeralKeyProviderP", "createPaymentIntent"]
 - !private ["6Stripe31STPCustomerEphemeralKeyProviderP", "sharedAPIClient"]
 - !private ["6Stripe16STPFormEncodableP", "init"]
 - !private ["6Stripe16STPFormEncodableP", "paymentMethodId"]
@@ -1749,10 +1732,7 @@ depends-member:
 - !private ["ST", "init"]
 - !private ["9Alamofire7SessionC", "request"]
 - !private ["9Alamofire20SessionStateProviderP", "request"]
-- !private ["s10SetAlgebraP", "ArrayLiteralElement"]
-- !private ["s10SetAlgebraP", "Element"]
 - !private ["s10SetAlgebraP", ""]
-- !private ["s10SetAlgebraP", "init"]
 - !private ["s10SetAlgebraP", "touchUpInside"]
 - !private ["SZ", "init"]
 - !private ["SZ", "rounded"]
@@ -1784,8 +1764,8 @@ depends-member:
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "image"]
 - ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "init"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "leadingAnchor"]
-- ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "refreshColor"]
-- ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "refreshTitle"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "refreshColor"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "refreshTitle"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "superview"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "titleLabel"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "trailingAnchor"]
@@ -1806,8 +1786,8 @@ depends-member:
 - ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "isHidden"]
 - !private ["So29UIAccessibilityIdentificationP", "leadingAnchor"]
-- ["So29UIAccessibilityIdentificationP", "refreshColor"]
-- ["So29UIAccessibilityIdentificationP", "refreshTitle"]
+- !private ["So29UIAccessibilityIdentificationP", "refreshColor"]
+- !private ["So29UIAccessibilityIdentificationP", "refreshTitle"]
 - !private ["So29UIAccessibilityIdentificationP", "safeAreaLayoutGuide"]
 - !private ["So29UIAccessibilityIdentificationP", "setContentHuggingPriority"]
 - !private ["So29UIAccessibilityIdentificationP", "spacing"]
@@ -1848,8 +1828,8 @@ depends-member:
 - ["So12UIAppearanceP", "init"]
 - !private ["So12UIAppearanceP", "isHidden"]
 - !private ["So12UIAppearanceP", "leadingAnchor"]
-- ["So12UIAppearanceP", "refreshColor"]
-- ["So12UIAppearanceP", "refreshTitle"]
+- !private ["So12UIAppearanceP", "refreshColor"]
+- !private ["So12UIAppearanceP", "refreshTitle"]
 - !private ["So12UIAppearanceP", "safeAreaLayoutGuide"]
 - !private ["So12UIAppearanceP", "setContentHuggingPriority"]
 - !private ["So12UIAppearanceP", "spacing"]
@@ -1952,8 +1932,8 @@ depends-member:
 - ["So21UIAppearanceContainerP", "paymentContextDidChange"]
 - !private ["So21UIAppearanceContainerP", "present"]
 - !private ["So21UIAppearanceContainerP", "print"]
-- ["So21UIAppearanceContainerP", "refreshColor"]
-- ["So21UIAppearanceContainerP", "refreshTitle"]
+- !private ["So21UIAppearanceContainerP", "refreshColor"]
+- !private ["So21UIAppearanceContainerP", "refreshTitle"]
 - !private ["So21UIAppearanceContainerP", "safeAreaLayoutGuide"]
 - ["So21UIAppearanceContainerP", "salesTaxHeaderLabel"]
 - ["So21UIAppearanceContainerP", "salesTaxLabel"]
@@ -2091,15 +2071,14 @@ depends-member:
 - !private ["So30UIContentSizeCategoryAdjustingP", "superview"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "text"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "widthAnchor"]
-- !private ["So32UIContextMenuInteractionDelegateP", ""]
 - !private ["So32UIContextMenuInteractionDelegateP", "addTarget"]
 - !private ["So32UIContextMenuInteractionDelegateP", "bottomAnchor"]
 - !private ["So32UIContextMenuInteractionDelegateP", "centerYAnchor"]
 - !private ["So32UIContextMenuInteractionDelegateP", "heightAnchor"]
 - ["So32UIContextMenuInteractionDelegateP", "init"]
 - !private ["So32UIContextMenuInteractionDelegateP", "leadingAnchor"]
-- ["So32UIContextMenuInteractionDelegateP", "refreshColor"]
-- ["So32UIContextMenuInteractionDelegateP", "refreshTitle"]
+- !private ["So32UIContextMenuInteractionDelegateP", "refreshColor"]
+- !private ["So32UIContextMenuInteractionDelegateP", "refreshTitle"]
 - !private ["So32UIContextMenuInteractionDelegateP", "superview"]
 - !private ["So32UIContextMenuInteractionDelegateP", "titleLabel"]
 - !private ["So32UIContextMenuInteractionDelegateP", "trailingAnchor"]
@@ -2133,8 +2112,8 @@ depends-member:
 - ["So17UICoordinateSpaceP", "init"]
 - !private ["So17UICoordinateSpaceP", "isHidden"]
 - !private ["So17UICoordinateSpaceP", "leadingAnchor"]
-- ["So17UICoordinateSpaceP", "refreshColor"]
-- ["So17UICoordinateSpaceP", "refreshTitle"]
+- !private ["So17UICoordinateSpaceP", "refreshColor"]
+- !private ["So17UICoordinateSpaceP", "refreshTitle"]
 - !private ["So17UICoordinateSpaceP", "safeAreaLayoutGuide"]
 - !private ["So17UICoordinateSpaceP", "setContentHuggingPriority"]
 - !private ["So17UICoordinateSpaceP", "spacing"]
@@ -2162,8 +2141,8 @@ depends-member:
 - ["So13UIDynamicItemP", "init"]
 - !private ["So13UIDynamicItemP", "isHidden"]
 - !private ["So13UIDynamicItemP", "leadingAnchor"]
-- ["So13UIDynamicItemP", "refreshColor"]
-- ["So13UIDynamicItemP", "refreshTitle"]
+- !private ["So13UIDynamicItemP", "refreshColor"]
+- !private ["So13UIDynamicItemP", "refreshTitle"]
 - !private ["So13UIDynamicItemP", "safeAreaLayoutGuide"]
 - !private ["So13UIDynamicItemP", "setContentHuggingPriority"]
 - !private ["So13UIDynamicItemP", "spacing"]
@@ -2266,8 +2245,8 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "paymentContextDidChange"]
 - !private ["So18UIFocusEnvironmentP", "present"]
 - !private ["So18UIFocusEnvironmentP", "print"]
-- ["So18UIFocusEnvironmentP", "refreshColor"]
-- ["So18UIFocusEnvironmentP", "refreshTitle"]
+- !private ["So18UIFocusEnvironmentP", "refreshColor"]
+- !private ["So18UIFocusEnvironmentP", "refreshTitle"]
 - !private ["So18UIFocusEnvironmentP", "safeAreaLayoutGuide"]
 - ["So18UIFocusEnvironmentP", "salesTaxHeaderLabel"]
 - ["So18UIFocusEnvironmentP", "salesTaxLabel"]
@@ -2308,8 +2287,8 @@ depends-member:
 - ["So11UIFocusItemP", "init"]
 - !private ["So11UIFocusItemP", "isHidden"]
 - !private ["So11UIFocusItemP", "leadingAnchor"]
-- ["So11UIFocusItemP", "refreshColor"]
-- ["So11UIFocusItemP", "refreshTitle"]
+- !private ["So11UIFocusItemP", "refreshColor"]
+- !private ["So11UIFocusItemP", "refreshTitle"]
 - !private ["So11UIFocusItemP", "safeAreaLayoutGuide"]
 - !private ["So11UIFocusItemP", "setContentHuggingPriority"]
 - !private ["So11UIFocusItemP", "spacing"]
@@ -2337,8 +2316,8 @@ depends-member:
 - ["So20UIFocusItemContainerP", "init"]
 - !private ["So20UIFocusItemContainerP", "isHidden"]
 - !private ["So20UIFocusItemContainerP", "leadingAnchor"]
-- ["So20UIFocusItemContainerP", "refreshColor"]
-- ["So20UIFocusItemContainerP", "refreshTitle"]
+- !private ["So20UIFocusItemContainerP", "refreshColor"]
+- !private ["So20UIFocusItemContainerP", "refreshTitle"]
 - !private ["So20UIFocusItemContainerP", "safeAreaLayoutGuide"]
 - !private ["So20UIFocusItemContainerP", "setContentHuggingPriority"]
 - !private ["So20UIFocusItemContainerP", "spacing"]
@@ -2384,8 +2363,8 @@ depends-member:
 - ["So24UILargeContentViewerItemP", "init"]
 - !private ["So24UILargeContentViewerItemP", "isHidden"]
 - !private ["So24UILargeContentViewerItemP", "leadingAnchor"]
-- ["So24UILargeContentViewerItemP", "refreshColor"]
-- ["So24UILargeContentViewerItemP", "refreshTitle"]
+- !private ["So24UILargeContentViewerItemP", "refreshColor"]
+- !private ["So24UILargeContentViewerItemP", "refreshTitle"]
 - !private ["So24UILargeContentViewerItemP", "safeAreaLayoutGuide"]
 - !private ["So24UILargeContentViewerItemP", "setContentHuggingPriority"]
 - !private ["So24UILargeContentViewerItemP", "spacing"]
@@ -2500,8 +2479,8 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "present"]
 - !private ["So30UIPasteConfigurationSupportingP", "presentViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "print"]
-- ["So30UIPasteConfigurationSupportingP", "refreshColor"]
-- ["So30UIPasteConfigurationSupportingP", "refreshTitle"]
+- !private ["So30UIPasteConfigurationSupportingP", "refreshColor"]
+- !private ["So30UIPasteConfigurationSupportingP", "refreshTitle"]
 - !private ["So30UIPasteConfigurationSupportingP", "safeAreaLayoutGuide"]
 - ["So30UIPasteConfigurationSupportingP", "salesTaxHeaderLabel"]
 - ["So30UIPasteConfigurationSupportingP", "salesTaxLabel"]
@@ -2737,8 +2716,8 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "present"]
 - !private ["So30UIResponderStandardEditActionsP", "presentViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "print"]
-- ["So30UIResponderStandardEditActionsP", "refreshColor"]
-- ["So30UIResponderStandardEditActionsP", "refreshTitle"]
+- !private ["So30UIResponderStandardEditActionsP", "refreshColor"]
+- !private ["So30UIResponderStandardEditActionsP", "refreshTitle"]
 - !private ["So30UIResponderStandardEditActionsP", "safeAreaLayoutGuide"]
 - ["So30UIResponderStandardEditActionsP", "salesTaxHeaderLabel"]
 - ["So30UIResponderStandardEditActionsP", "salesTaxLabel"]
@@ -2770,8 +2749,8 @@ depends-member:
 - !private ["So35UISpringLoadedInteractionSupportingP", "heightAnchor"]
 - ["So35UISpringLoadedInteractionSupportingP", "init"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "leadingAnchor"]
-- ["So35UISpringLoadedInteractionSupportingP", "refreshColor"]
-- ["So35UISpringLoadedInteractionSupportingP", "refreshTitle"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "refreshColor"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "refreshTitle"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "superview"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "titleLabel"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "trailingAnchor"]
@@ -2965,8 +2944,8 @@ depends-member:
 - ["So18UITraitEnvironmentP", "paymentContextDidChange"]
 - !private ["So18UITraitEnvironmentP", "present"]
 - !private ["So18UITraitEnvironmentP", "print"]
-- ["So18UITraitEnvironmentP", "refreshColor"]
-- ["So18UITraitEnvironmentP", "refreshTitle"]
+- !private ["So18UITraitEnvironmentP", "refreshColor"]
+- !private ["So18UITraitEnvironmentP", "refreshTitle"]
 - !private ["So18UITraitEnvironmentP", "safeAreaLayoutGuide"]
 - ["So18UITraitEnvironmentP", "salesTaxHeaderLabel"]
 - ["So18UITraitEnvironmentP", "salesTaxLabel"]
@@ -3083,8 +3062,8 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "present"]
 - !private ["So23UIUserActivityRestoringP", "presentViewController"]
 - !private ["So23UIUserActivityRestoringP", "print"]
-- ["So23UIUserActivityRestoringP", "refreshColor"]
-- ["So23UIUserActivityRestoringP", "refreshTitle"]
+- !private ["So23UIUserActivityRestoringP", "refreshColor"]
+- !private ["So23UIUserActivityRestoringP", "refreshTitle"]
 - !private ["So23UIUserActivityRestoringP", "safeAreaLayoutGuide"]
 - ["So23UIUserActivityRestoringP", "salesTaxHeaderLabel"]
 - ["So23UIUserActivityRestoringP", "salesTaxLabel"]
@@ -3596,7 +3575,6 @@ depends-nominal:
 - !private "9Alamofire17ParameterEncodingP"
 - !private "Sm"
 - "SY"
-- !private "So20NSJSONReadingOptionsV"
 - !private "10Foundation20ReferenceConvertibleP"
 - "9Alamofire7RequestC"
 - !private "9Alamofire15RequestDelegateP"
@@ -3607,7 +3585,7 @@ depends-nominal:
 - !private "s10SIMDScalarP"
 - !private "6Stripe23STPAPIResponseDecodableP"
 - !private "6Stripe24STPAuthenticationContextP"
-- "6Stripe31STPCustomerEphemeralKeyProviderP"
+- !private "6Stripe31STPCustomerEphemeralKeyProviderP"
 - !private "6Stripe16STPFormEncodableP"
 - !private "6Stripe17STPPaymentContextC"
 - "6Stripe25STPPaymentContextDelegateP"
@@ -3709,7 +3687,9 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Modules/TweetNacl.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Vision.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -3718,11 +3698,14 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Modules/PushNotifications.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/os.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Modules/NWWebSocket.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Modules/PusherSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -3734,7 +3717,11 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Headers/PusherSwift-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDS2Service.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseImage.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSErrorMessage.h"
@@ -3755,6 +3742,7 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSErrorMessage+Internal.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDirectoryServerCertificate+Internal.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSException+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseMessageExtension.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDSProtocolVersion.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformation.h"
@@ -3815,7 +3803,11 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Headers/PusherSwift-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSCompletionEvent.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSRuntimeErrorEvent.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSProtocolErrorEvent.h"
@@ -3833,11 +3825,16 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeSelectionView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSpacerView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWhitelistView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/module.map"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
@@ -3847,6 +3844,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"

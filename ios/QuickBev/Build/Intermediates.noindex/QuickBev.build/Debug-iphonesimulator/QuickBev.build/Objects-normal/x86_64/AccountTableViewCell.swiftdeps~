@@ -19,7 +19,6 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "+="
 - "AccountTableViewCell"
-- "Array"
 - "AssignmentPrecedence"
 - "Bool"
 - !private "BooleanLiteralType"
@@ -92,7 +91,6 @@ depends-member:
 - !private ["So7CALayerC", "path"]
 - !private ["So7CALayerC", "strokeColor"]
 - !private ["So7CALayerC", "strokeEnd"]
-- ["So15CALayerDelegateP", "Bool"]
 - ["So15CALayerDelegateP", "CAShapeLayer"]
 - !private ["So15CALayerDelegateP", "CGPoint"]
 - ["So15CALayerDelegateP", "CellStyle"]
@@ -102,7 +100,6 @@ depends-member:
 - ["So15CALayerDelegateP", "UIBezierPath"]
 - ["So15CALayerDelegateP", "UIColor"]
 - ["So15CALayerDelegateP", "UILabel"]
-- ["So15CALayerDelegateP", "UITableViewCell"]
 - ["So15CALayerDelegateP", "UIView"]
 - ["So15CALayerDelegateP", ""]
 - !private ["So15CALayerDelegateP", "addSubview"]
@@ -116,7 +113,7 @@ depends-member:
 - ["So15CALayerDelegateP", "myLabel"]
 - ["So15CALayerDelegateP", "mySeparator"]
 - ["So15CALayerDelegateP", "path"]
-- ["So15CALayerDelegateP", "render"]
+- !private ["So15CALayerDelegateP", "render"]
 - ["So15CALayerDelegateP", "sLayer"]
 - ["So15CALayerDelegateP", "setSelected"]
 - ["So15CALayerDelegateP", "strokeColor"]
@@ -324,7 +321,7 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "ArrayLiteralElement"]
 - !private ["s25ExpressibleByArrayLiteralP", "Element"]
 - !private ["s25ExpressibleByArrayLiteralP", ""]
-- ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "Key"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "Value"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "init"]
@@ -377,7 +374,6 @@ depends-member:
 - !private ["SM", ""]
 - !private ["SM", "init"]
 - !private ["10Foundation19MutableDataProtocolP", "init"]
-- ["So8NSCodingP", "Bool"]
 - ["So8NSCodingP", "CAShapeLayer"]
 - !private ["So8NSCodingP", "CGPoint"]
 - ["So8NSCodingP", "CellStyle"]
@@ -387,7 +383,6 @@ depends-member:
 - ["So8NSCodingP", "UIBezierPath"]
 - ["So8NSCodingP", "UIColor"]
 - ["So8NSCodingP", "UILabel"]
-- ["So8NSCodingP", "UITableViewCell"]
 - ["So8NSCodingP", "UIView"]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "addLine"]
@@ -409,7 +404,7 @@ depends-member:
 - ["So8NSCodingP", "myLabel"]
 - ["So8NSCodingP", "mySeparator"]
 - ["So8NSCodingP", "path"]
-- ["So8NSCodingP", "render"]
+- !private ["So8NSCodingP", "render"]
 - ["So8NSCodingP", "sLayer"]
 - ["So8NSCodingP", "setSelected"]
 - ["So8NSCodingP", "strokeColor"]
@@ -480,17 +475,14 @@ depends-member:
 - !private ["So8NSObjectC", "strokeEnd"]
 - !private ["So8NSObjectC", "translatesAutoresizingMaskIntoConstraints"]
 - ["So8NSObjectC", "updateShapeLayer"]
-- ["So8NSObjectP", "Bool"]
 - ["So8NSObjectP", "CAShapeLayer"]
 - !private ["So8NSObjectP", "CGPoint"]
 - ["So8NSObjectP", "CellStyle"]
-- ["So8NSObjectP", "Int"]
 - !private ["So8NSObjectP", "NSLayoutConstraint"]
 - ["So8NSObjectP", "Theme"]
 - ["So8NSObjectP", "UIBezierPath"]
 - ["So8NSObjectP", "UIColor"]
 - ["So8NSObjectP", "UILabel"]
-- ["So8NSObjectP", "UITableViewCell"]
 - ["So8NSObjectP", "UIView"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "activate"]
@@ -514,7 +506,7 @@ depends-member:
 - !private ["So8NSObjectP", "fatalError"]
 - !private ["So8NSObjectP", "frame"]
 - ["So8NSObjectP", "init"]
-- ["So8NSObjectP", "layer"]
+- !private ["So8NSObjectP", "layer"]
 - ["So8NSObjectP", "lightGray"]
 - !private ["So8NSObjectP", "lineDashPattern"]
 - !private ["So8NSObjectP", "lineWidth"]
@@ -523,7 +515,7 @@ depends-member:
 - ["So8NSObjectP", "myLabel"]
 - ["So8NSObjectP", "mySeparator"]
 - ["So8NSObjectP", "path"]
-- ["So8NSObjectP", "render"]
+- !private ["So8NSObjectP", "render"]
 - ["So8NSObjectP", "sLayer"]
 - ["So8NSObjectP", "setSelected"]
 - ["So8NSObjectP", "strokeColor"]
@@ -562,7 +554,6 @@ depends-member:
 - !private ["s10SetAlgebraP", ""]
 - !private ["s10SetAlgebraP", "init"]
 - ["8QuickBev5ThemeO", "UILabel"]
-- ["So29UIAccessibilityIdentificationP", "Bool"]
 - ["So29UIAccessibilityIdentificationP", "CAShapeLayer"]
 - !private ["So29UIAccessibilityIdentificationP", "CGPoint"]
 - ["So29UIAccessibilityIdentificationP", "CellStyle"]
@@ -572,7 +563,6 @@ depends-member:
 - ["So29UIAccessibilityIdentificationP", "UIBezierPath"]
 - ["So29UIAccessibilityIdentificationP", "UIColor"]
 - ["So29UIAccessibilityIdentificationP", "UILabel"]
-- ["So29UIAccessibilityIdentificationP", "UITableViewCell"]
 - ["So29UIAccessibilityIdentificationP", "UIView"]
 - ["So29UIAccessibilityIdentificationP", ""]
 - !private ["So29UIAccessibilityIdentificationP", "addSubview"]
@@ -586,13 +576,12 @@ depends-member:
 - ["So29UIAccessibilityIdentificationP", "myLabel"]
 - ["So29UIAccessibilityIdentificationP", "mySeparator"]
 - ["So29UIAccessibilityIdentificationP", "path"]
-- ["So29UIAccessibilityIdentificationP", "render"]
+- !private ["So29UIAccessibilityIdentificationP", "render"]
 - ["So29UIAccessibilityIdentificationP", "sLayer"]
 - ["So29UIAccessibilityIdentificationP", "setSelected"]
 - ["So29UIAccessibilityIdentificationP", "strokeColor"]
 - !private ["So29UIAccessibilityIdentificationP", "translatesAutoresizingMaskIntoConstraints"]
 - ["So29UIAccessibilityIdentificationP", "updateShapeLayer"]
-- ["So12UIAppearanceP", "Bool"]
 - ["So12UIAppearanceP", "CAShapeLayer"]
 - !private ["So12UIAppearanceP", "CGPoint"]
 - ["So12UIAppearanceP", "CellStyle"]
@@ -602,7 +591,6 @@ depends-member:
 - ["So12UIAppearanceP", "UIBezierPath"]
 - ["So12UIAppearanceP", "UIColor"]
 - ["So12UIAppearanceP", "UILabel"]
-- ["So12UIAppearanceP", "UITableViewCell"]
 - ["So12UIAppearanceP", "UIView"]
 - ["So12UIAppearanceP", ""]
 - !private ["So12UIAppearanceP", "addSubview"]
@@ -616,13 +604,12 @@ depends-member:
 - ["So12UIAppearanceP", "myLabel"]
 - ["So12UIAppearanceP", "mySeparator"]
 - ["So12UIAppearanceP", "path"]
-- ["So12UIAppearanceP", "render"]
+- !private ["So12UIAppearanceP", "render"]
 - ["So12UIAppearanceP", "sLayer"]
 - ["So12UIAppearanceP", "setSelected"]
 - ["So12UIAppearanceP", "strokeColor"]
 - !private ["So12UIAppearanceP", "translatesAutoresizingMaskIntoConstraints"]
 - ["So12UIAppearanceP", "updateShapeLayer"]
-- ["So21UIAppearanceContainerP", "Bool"]
 - ["So21UIAppearanceContainerP", "CAShapeLayer"]
 - !private ["So21UIAppearanceContainerP", "CGPoint"]
 - ["So21UIAppearanceContainerP", "CellStyle"]
@@ -632,7 +619,6 @@ depends-member:
 - ["So21UIAppearanceContainerP", "UIBezierPath"]
 - ["So21UIAppearanceContainerP", "UIColor"]
 - ["So21UIAppearanceContainerP", "UILabel"]
-- ["So21UIAppearanceContainerP", "UITableViewCell"]
 - ["So21UIAppearanceContainerP", "UIView"]
 - ["So21UIAppearanceContainerP", ""]
 - !private ["So21UIAppearanceContainerP", "addSubview"]
@@ -646,7 +632,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "myLabel"]
 - ["So21UIAppearanceContainerP", "mySeparator"]
 - ["So21UIAppearanceContainerP", "path"]
-- ["So21UIAppearanceContainerP", "render"]
+- !private ["So21UIAppearanceContainerP", "render"]
 - ["So21UIAppearanceContainerP", "sLayer"]
 - ["So21UIAppearanceContainerP", "setSelected"]
 - ["So21UIAppearanceContainerP", "strokeColor"]
@@ -660,7 +646,6 @@ depends-member:
 - ["So7UIColorC", "lightGray"]
 - ["So30UIContentSizeCategoryAdjustingP", "init"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "translatesAutoresizingMaskIntoConstraints"]
-- ["So17UICoordinateSpaceP", "Bool"]
 - ["So17UICoordinateSpaceP", "CAShapeLayer"]
 - !private ["So17UICoordinateSpaceP", "CGPoint"]
 - ["So17UICoordinateSpaceP", "CellStyle"]
@@ -670,7 +655,6 @@ depends-member:
 - ["So17UICoordinateSpaceP", "UIBezierPath"]
 - ["So17UICoordinateSpaceP", "UIColor"]
 - ["So17UICoordinateSpaceP", "UILabel"]
-- ["So17UICoordinateSpaceP", "UITableViewCell"]
 - ["So17UICoordinateSpaceP", "UIView"]
 - ["So17UICoordinateSpaceP", ""]
 - !private ["So17UICoordinateSpaceP", "addSubview"]
@@ -684,13 +668,12 @@ depends-member:
 - ["So17UICoordinateSpaceP", "myLabel"]
 - ["So17UICoordinateSpaceP", "mySeparator"]
 - ["So17UICoordinateSpaceP", "path"]
-- ["So17UICoordinateSpaceP", "render"]
+- !private ["So17UICoordinateSpaceP", "render"]
 - ["So17UICoordinateSpaceP", "sLayer"]
 - ["So17UICoordinateSpaceP", "setSelected"]
 - ["So17UICoordinateSpaceP", "strokeColor"]
 - !private ["So17UICoordinateSpaceP", "translatesAutoresizingMaskIntoConstraints"]
 - ["So17UICoordinateSpaceP", "updateShapeLayer"]
-- ["So13UIDynamicItemP", "Bool"]
 - ["So13UIDynamicItemP", "CAShapeLayer"]
 - !private ["So13UIDynamicItemP", "CGPoint"]
 - ["So13UIDynamicItemP", "CellStyle"]
@@ -700,7 +683,6 @@ depends-member:
 - ["So13UIDynamicItemP", "UIBezierPath"]
 - ["So13UIDynamicItemP", "UIColor"]
 - ["So13UIDynamicItemP", "UILabel"]
-- ["So13UIDynamicItemP", "UITableViewCell"]
 - ["So13UIDynamicItemP", "UIView"]
 - ["So13UIDynamicItemP", ""]
 - !private ["So13UIDynamicItemP", "addSubview"]
@@ -714,13 +696,12 @@ depends-member:
 - ["So13UIDynamicItemP", "myLabel"]
 - ["So13UIDynamicItemP", "mySeparator"]
 - ["So13UIDynamicItemP", "path"]
-- ["So13UIDynamicItemP", "render"]
+- !private ["So13UIDynamicItemP", "render"]
 - ["So13UIDynamicItemP", "sLayer"]
 - ["So13UIDynamicItemP", "setSelected"]
 - ["So13UIDynamicItemP", "strokeColor"]
 - !private ["So13UIDynamicItemP", "translatesAutoresizingMaskIntoConstraints"]
 - ["So13UIDynamicItemP", "updateShapeLayer"]
-- ["So18UIFocusEnvironmentP", "Bool"]
 - ["So18UIFocusEnvironmentP", "CAShapeLayer"]
 - !private ["So18UIFocusEnvironmentP", "CGPoint"]
 - ["So18UIFocusEnvironmentP", "CellStyle"]
@@ -730,7 +711,6 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "UIBezierPath"]
 - ["So18UIFocusEnvironmentP", "UIColor"]
 - ["So18UIFocusEnvironmentP", "UILabel"]
-- ["So18UIFocusEnvironmentP", "UITableViewCell"]
 - ["So18UIFocusEnvironmentP", "UIView"]
 - ["So18UIFocusEnvironmentP", ""]
 - !private ["So18UIFocusEnvironmentP", "addSubview"]
@@ -744,13 +724,12 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "myLabel"]
 - ["So18UIFocusEnvironmentP", "mySeparator"]
 - ["So18UIFocusEnvironmentP", "path"]
-- ["So18UIFocusEnvironmentP", "render"]
+- !private ["So18UIFocusEnvironmentP", "render"]
 - ["So18UIFocusEnvironmentP", "sLayer"]
 - ["So18UIFocusEnvironmentP", "setSelected"]
 - ["So18UIFocusEnvironmentP", "strokeColor"]
 - !private ["So18UIFocusEnvironmentP", "translatesAutoresizingMaskIntoConstraints"]
 - ["So18UIFocusEnvironmentP", "updateShapeLayer"]
-- ["So11UIFocusItemP", "Bool"]
 - ["So11UIFocusItemP", "CAShapeLayer"]
 - !private ["So11UIFocusItemP", "CGPoint"]
 - ["So11UIFocusItemP", "CellStyle"]
@@ -760,7 +739,6 @@ depends-member:
 - ["So11UIFocusItemP", "UIBezierPath"]
 - ["So11UIFocusItemP", "UIColor"]
 - ["So11UIFocusItemP", "UILabel"]
-- ["So11UIFocusItemP", "UITableViewCell"]
 - ["So11UIFocusItemP", "UIView"]
 - ["So11UIFocusItemP", ""]
 - !private ["So11UIFocusItemP", "addSubview"]
@@ -774,13 +752,12 @@ depends-member:
 - ["So11UIFocusItemP", "myLabel"]
 - ["So11UIFocusItemP", "mySeparator"]
 - ["So11UIFocusItemP", "path"]
-- ["So11UIFocusItemP", "render"]
+- !private ["So11UIFocusItemP", "render"]
 - ["So11UIFocusItemP", "sLayer"]
 - ["So11UIFocusItemP", "setSelected"]
 - ["So11UIFocusItemP", "strokeColor"]
 - !private ["So11UIFocusItemP", "translatesAutoresizingMaskIntoConstraints"]
 - ["So11UIFocusItemP", "updateShapeLayer"]
-- ["So20UIFocusItemContainerP", "Bool"]
 - ["So20UIFocusItemContainerP", "CAShapeLayer"]
 - !private ["So20UIFocusItemContainerP", "CGPoint"]
 - ["So20UIFocusItemContainerP", "CellStyle"]
@@ -790,7 +767,6 @@ depends-member:
 - ["So20UIFocusItemContainerP", "UIBezierPath"]
 - ["So20UIFocusItemContainerP", "UIColor"]
 - ["So20UIFocusItemContainerP", "UILabel"]
-- ["So20UIFocusItemContainerP", "UITableViewCell"]
 - ["So20UIFocusItemContainerP", "UIView"]
 - ["So20UIFocusItemContainerP", ""]
 - !private ["So20UIFocusItemContainerP", "addSubview"]
@@ -804,25 +780,21 @@ depends-member:
 - ["So20UIFocusItemContainerP", "myLabel"]
 - ["So20UIFocusItemContainerP", "mySeparator"]
 - ["So20UIFocusItemContainerP", "path"]
-- ["So20UIFocusItemContainerP", "render"]
+- !private ["So20UIFocusItemContainerP", "render"]
 - ["So20UIFocusItemContainerP", "sLayer"]
 - ["So20UIFocusItemContainerP", "setSelected"]
 - ["So20UIFocusItemContainerP", "strokeColor"]
 - !private ["So20UIFocusItemContainerP", "translatesAutoresizingMaskIntoConstraints"]
 - ["So20UIFocusItemContainerP", "updateShapeLayer"]
-- ["So27UIGestureRecognizerDelegateP", "Bool"]
 - ["So27UIGestureRecognizerDelegateP", "CAShapeLayer"]
 - !private ["So27UIGestureRecognizerDelegateP", "CGPoint"]
 - ["So27UIGestureRecognizerDelegateP", "CellStyle"]
 - ["So27UIGestureRecognizerDelegateP", "Int"]
-- ["So27UIGestureRecognizerDelegateP", "NSCoder"]
 - !private ["So27UIGestureRecognizerDelegateP", "NSLayoutConstraint"]
-- ["So27UIGestureRecognizerDelegateP", "String"]
 - ["So27UIGestureRecognizerDelegateP", "Theme"]
 - ["So27UIGestureRecognizerDelegateP", "UIBezierPath"]
 - ["So27UIGestureRecognizerDelegateP", "UIColor"]
 - ["So27UIGestureRecognizerDelegateP", "UILabel"]
-- ["So27UIGestureRecognizerDelegateP", "UITableViewCell"]
 - ["So27UIGestureRecognizerDelegateP", "UIView"]
 - ["So27UIGestureRecognizerDelegateP", ""]
 - ["So27UIGestureRecognizerDelegateP", "awakeFromNib"]
@@ -835,7 +807,7 @@ depends-member:
 - ["So27UIGestureRecognizerDelegateP", "myLabel"]
 - ["So27UIGestureRecognizerDelegateP", "mySeparator"]
 - ["So27UIGestureRecognizerDelegateP", "path"]
-- ["So27UIGestureRecognizerDelegateP", "render"]
+- !private ["So27UIGestureRecognizerDelegateP", "render"]
 - ["So27UIGestureRecognizerDelegateP", "sLayer"]
 - ["So27UIGestureRecognizerDelegateP", "setSelected"]
 - ["So27UIGestureRecognizerDelegateP", "strokeColor"]
@@ -843,7 +815,6 @@ depends-member:
 - ["So7UILabelC", "init"]
 - !private ["So7UILabelC", "translatesAutoresizingMaskIntoConstraints"]
 - ["8QuickBev5ThemeO12UILabelPropsO", "textColor"]
-- ["So24UILargeContentViewerItemP", "Bool"]
 - ["So24UILargeContentViewerItemP", "CAShapeLayer"]
 - !private ["So24UILargeContentViewerItemP", "CGPoint"]
 - ["So24UILargeContentViewerItemP", "CellStyle"]
@@ -853,7 +824,6 @@ depends-member:
 - ["So24UILargeContentViewerItemP", "UIBezierPath"]
 - ["So24UILargeContentViewerItemP", "UIColor"]
 - ["So24UILargeContentViewerItemP", "UILabel"]
-- ["So24UILargeContentViewerItemP", "UITableViewCell"]
 - ["So24UILargeContentViewerItemP", "UIView"]
 - ["So24UILargeContentViewerItemP", ""]
 - !private ["So24UILargeContentViewerItemP", "addSubview"]
@@ -867,23 +837,20 @@ depends-member:
 - ["So24UILargeContentViewerItemP", "myLabel"]
 - ["So24UILargeContentViewerItemP", "mySeparator"]
 - ["So24UILargeContentViewerItemP", "path"]
-- ["So24UILargeContentViewerItemP", "render"]
+- !private ["So24UILargeContentViewerItemP", "render"]
 - ["So24UILargeContentViewerItemP", "sLayer"]
 - ["So24UILargeContentViewerItemP", "setSelected"]
 - ["So24UILargeContentViewerItemP", "strokeColor"]
 - !private ["So24UILargeContentViewerItemP", "translatesAutoresizingMaskIntoConstraints"]
 - ["So24UILargeContentViewerItemP", "updateShapeLayer"]
-- ["So30UIPasteConfigurationSupportingP", "Bool"]
 - ["So30UIPasteConfigurationSupportingP", "CAShapeLayer"]
 - !private ["So30UIPasteConfigurationSupportingP", "CGPoint"]
 - ["So30UIPasteConfigurationSupportingP", "CellStyle"]
-- ["So30UIPasteConfigurationSupportingP", "Int"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSLayoutConstraint"]
 - ["So30UIPasteConfigurationSupportingP", "Theme"]
 - ["So30UIPasteConfigurationSupportingP", "UIBezierPath"]
 - ["So30UIPasteConfigurationSupportingP", "UIColor"]
 - ["So30UIPasteConfigurationSupportingP", "UILabel"]
-- ["So30UIPasteConfigurationSupportingP", "UITableViewCell"]
 - ["So30UIPasteConfigurationSupportingP", "UIView"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "addSubview"]
@@ -897,7 +864,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "myLabel"]
 - ["So30UIPasteConfigurationSupportingP", "mySeparator"]
 - ["So30UIPasteConfigurationSupportingP", "path"]
-- ["So30UIPasteConfigurationSupportingP", "render"]
+- !private ["So30UIPasteConfigurationSupportingP", "render"]
 - ["So30UIPasteConfigurationSupportingP", "sLayer"]
 - ["So30UIPasteConfigurationSupportingP", "setSelected"]
 - ["So30UIPasteConfigurationSupportingP", "strokeColor"]
@@ -935,17 +902,14 @@ depends-member:
 - ["So11UIResponderC", "strokeColor"]
 - !private ["So11UIResponderC", "translatesAutoresizingMaskIntoConstraints"]
 - ["So11UIResponderC", "updateShapeLayer"]
-- ["So30UIResponderStandardEditActionsP", "Bool"]
 - ["So30UIResponderStandardEditActionsP", "CAShapeLayer"]
 - !private ["So30UIResponderStandardEditActionsP", "CGPoint"]
 - ["So30UIResponderStandardEditActionsP", "CellStyle"]
-- ["So30UIResponderStandardEditActionsP", "Int"]
 - !private ["So30UIResponderStandardEditActionsP", "NSLayoutConstraint"]
 - ["So30UIResponderStandardEditActionsP", "Theme"]
 - ["So30UIResponderStandardEditActionsP", "UIBezierPath"]
 - ["So30UIResponderStandardEditActionsP", "UIColor"]
 - ["So30UIResponderStandardEditActionsP", "UILabel"]
-- ["So30UIResponderStandardEditActionsP", "UITableViewCell"]
 - ["So30UIResponderStandardEditActionsP", "UIView"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "addSubview"]
@@ -959,7 +923,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "myLabel"]
 - ["So30UIResponderStandardEditActionsP", "mySeparator"]
 - ["So30UIResponderStandardEditActionsP", "path"]
-- ["So30UIResponderStandardEditActionsP", "render"]
+- !private ["So30UIResponderStandardEditActionsP", "render"]
 - ["So30UIResponderStandardEditActionsP", "sLayer"]
 - ["So30UIResponderStandardEditActionsP", "setSelected"]
 - ["So30UIResponderStandardEditActionsP", "strokeColor"]
@@ -995,7 +959,6 @@ depends-member:
 - ["So15UITableViewCellC", "setSelected"]
 - ["So15UITableViewCellC", "strokeColor"]
 - ["So15UITableViewCellC", "updateShapeLayer"]
-- ["So18UITraitEnvironmentP", "Bool"]
 - ["So18UITraitEnvironmentP", "CAShapeLayer"]
 - !private ["So18UITraitEnvironmentP", "CGPoint"]
 - ["So18UITraitEnvironmentP", "CellStyle"]
@@ -1005,7 +968,6 @@ depends-member:
 - ["So18UITraitEnvironmentP", "UIBezierPath"]
 - ["So18UITraitEnvironmentP", "UIColor"]
 - ["So18UITraitEnvironmentP", "UILabel"]
-- ["So18UITraitEnvironmentP", "UITableViewCell"]
 - ["So18UITraitEnvironmentP", "UIView"]
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "addSubview"]
@@ -1019,23 +981,20 @@ depends-member:
 - ["So18UITraitEnvironmentP", "myLabel"]
 - ["So18UITraitEnvironmentP", "mySeparator"]
 - ["So18UITraitEnvironmentP", "path"]
-- ["So18UITraitEnvironmentP", "render"]
+- !private ["So18UITraitEnvironmentP", "render"]
 - ["So18UITraitEnvironmentP", "sLayer"]
 - ["So18UITraitEnvironmentP", "setSelected"]
 - ["So18UITraitEnvironmentP", "strokeColor"]
 - !private ["So18UITraitEnvironmentP", "translatesAutoresizingMaskIntoConstraints"]
 - ["So18UITraitEnvironmentP", "updateShapeLayer"]
-- ["So23UIUserActivityRestoringP", "Bool"]
 - ["So23UIUserActivityRestoringP", "CAShapeLayer"]
 - !private ["So23UIUserActivityRestoringP", "CGPoint"]
 - ["So23UIUserActivityRestoringP", "CellStyle"]
-- ["So23UIUserActivityRestoringP", "Int"]
 - !private ["So23UIUserActivityRestoringP", "NSLayoutConstraint"]
 - ["So23UIUserActivityRestoringP", "Theme"]
 - ["So23UIUserActivityRestoringP", "UIBezierPath"]
 - ["So23UIUserActivityRestoringP", "UIColor"]
 - ["So23UIUserActivityRestoringP", "UILabel"]
-- ["So23UIUserActivityRestoringP", "UITableViewCell"]
 - ["So23UIUserActivityRestoringP", "UIView"]
 - ["So23UIUserActivityRestoringP", ""]
 - !private ["So23UIUserActivityRestoringP", "addSubview"]
@@ -1049,7 +1008,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "myLabel"]
 - ["So23UIUserActivityRestoringP", "mySeparator"]
 - ["So23UIUserActivityRestoringP", "path"]
-- ["So23UIUserActivityRestoringP", "render"]
+- !private ["So23UIUserActivityRestoringP", "render"]
 - ["So23UIUserActivityRestoringP", "sLayer"]
 - ["So23UIUserActivityRestoringP", "setSelected"]
 - ["So23UIUserActivityRestoringP", "strokeColor"]
@@ -1232,7 +1191,7 @@ depends-nominal:
 - !private "Se"
 - !private "SE"
 - "SQ"
-- "s25ExpressibleByArrayLiteralP"
+- !private "s25ExpressibleByArrayLiteralP"
 - !private "s30ExpressibleByDictionaryLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
@@ -1308,7 +1267,9 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Modules/TweetNacl.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Vision.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -1317,11 +1278,14 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Modules/PushNotifications.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/os.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Modules/NWWebSocket.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Modules/PusherSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -1333,7 +1297,11 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Headers/PusherSwift-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDS2Service.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseImage.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSErrorMessage.h"
@@ -1354,6 +1322,7 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSErrorMessage+Internal.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDirectoryServerCertificate+Internal.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSException+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseMessageExtension.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDSProtocolVersion.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformation.h"
@@ -1414,7 +1383,11 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Headers/PusherSwift-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSCompletionEvent.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSRuntimeErrorEvent.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSProtocolErrorEvent.h"
@@ -1432,11 +1405,16 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeSelectionView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSpacerView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWhitelistView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/module.map"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
@@ -1446,6 +1424,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"

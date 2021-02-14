@@ -19,6 +19,7 @@ provides-dynamic-lookup:
 - "customerContext"
 - "emptyCart"
 - "guestDrink"
+- "pusher"
 - "shared"
 - "userBusinessDrinks"
 depends-top-level:
@@ -41,6 +42,8 @@ depends-top-level:
 - !private "IntegerLiteralType"
 - "NSManagedObject"
 - !private "NSSet"
+- "Pusher"
+- !private "PusherClientOptions"
 - "STPCustomerContext"
 - "Set"
 - !private "StringLiteralType"
@@ -83,6 +86,8 @@ depends-member:
 - !private ["s7CVarArgP", "CoreDataManager"]
 - !private ["s7CVarArgP", "Drink"]
 - !private ["s7CVarArgP", "NSSet"]
+- !private ["s7CVarArgP", "Pusher"]
+- !private ["s7CVarArgP", "PusherClientOptions"]
 - ["s7CVarArgP", "STPCustomerContext"]
 - ["s7CVarArgP", "StripeAPIClient"]
 - ["s7CVarArgP", ""]
@@ -94,6 +99,7 @@ depends-member:
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isEmpty"]
 - !private ["s7CVarArgP", "name"]
+- !private ["s7CVarArgP", "pusher"]
 - !private ["s7CVarArgP", "reduce"]
 - !private ["s7CVarArgP", "rounded"]
 - !private ["s7CVarArgP", "salesTax"]
@@ -112,6 +118,8 @@ depends-member:
 - !private ["8QuickBev12CheckoutCartC", "Double"]
 - ["8QuickBev12CheckoutCartC", "Drink"]
 - !private ["8QuickBev12CheckoutCartC", "NSSet"]
+- ["8QuickBev12CheckoutCartC", "Pusher"]
+- !private ["8QuickBev12CheckoutCartC", "PusherClientOptions"]
 - ["8QuickBev12CheckoutCartC", "STPCustomerContext"]
 - !private ["8QuickBev12CheckoutCartC", "Set"]
 - ["8QuickBev12CheckoutCartC", "StripeAPIClient"]
@@ -128,6 +136,7 @@ depends-member:
 - ["8QuickBev12CheckoutCartC", "emptyCart"]
 - ["8QuickBev12CheckoutCartC", "guestDrink"]
 - ["8QuickBev12CheckoutCartC", "init"]
+- ["8QuickBev12CheckoutCartC", "pusher"]
 - !private ["8QuickBev12CheckoutCartC", "salesTax"]
 - ["8QuickBev12CheckoutCartC", "shared"]
 - !private ["8QuickBev12CheckoutCartC", "subtotal"]
@@ -156,6 +165,8 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "CoreDataManager"]
 - !private ["s28CustomDebugStringConvertibleP", "Drink"]
 - !private ["s28CustomDebugStringConvertibleP", "NSSet"]
+- !private ["s28CustomDebugStringConvertibleP", "Pusher"]
+- !private ["s28CustomDebugStringConvertibleP", "PusherClientOptions"]
 - ["s28CustomDebugStringConvertibleP", "STPCustomerContext"]
 - ["s28CustomDebugStringConvertibleP", "StripeAPIClient"]
 - ["s28CustomDebugStringConvertibleP", ""]
@@ -167,6 +178,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
 - !private ["s28CustomDebugStringConvertibleP", "name"]
+- !private ["s28CustomDebugStringConvertibleP", "pusher"]
 - !private ["s28CustomDebugStringConvertibleP", "reduce"]
 - !private ["s28CustomDebugStringConvertibleP", "rounded"]
 - !private ["s28CustomDebugStringConvertibleP", "salesTax"]
@@ -189,6 +201,8 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "CoreDataManager"]
 - !private ["s23CustomStringConvertibleP", "Drink"]
 - !private ["s23CustomStringConvertibleP", "NSSet"]
+- !private ["s23CustomStringConvertibleP", "Pusher"]
+- !private ["s23CustomStringConvertibleP", "PusherClientOptions"]
 - ["s23CustomStringConvertibleP", "STPCustomerContext"]
 - ["s23CustomStringConvertibleP", "StripeAPIClient"]
 - ["s23CustomStringConvertibleP", ""]
@@ -200,6 +214,7 @@ depends-member:
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isEmpty"]
 - !private ["s23CustomStringConvertibleP", "name"]
+- !private ["s23CustomStringConvertibleP", "pusher"]
 - !private ["s23CustomStringConvertibleP", "reduce"]
 - !private ["s23CustomStringConvertibleP", "rounded"]
 - !private ["s23CustomStringConvertibleP", "salesTax"]
@@ -247,6 +262,8 @@ depends-member:
 - !private ["SQ", "CoreDataManager"]
 - !private ["SQ", "Drink"]
 - !private ["SQ", "NSSet"]
+- !private ["SQ", "Pusher"]
+- !private ["SQ", "PusherClientOptions"]
 - ["SQ", "STPCustomerContext"]
 - ["SQ", "StripeAPIClient"]
 - ["SQ", ""]
@@ -258,6 +275,7 @@ depends-member:
 - ["SQ", "init"]
 - !private ["SQ", "isEmpty"]
 - !private ["SQ", "name"]
+- !private ["SQ", "pusher"]
 - !private ["SQ", "reduce"]
 - !private ["SQ", "rounded"]
 - !private ["SQ", "salesTax"]
@@ -290,6 +308,8 @@ depends-member:
 - !private ["SH", "CoreDataManager"]
 - !private ["SH", "Drink"]
 - !private ["SH", "NSSet"]
+- !private ["SH", "Pusher"]
+- !private ["SH", "PusherClientOptions"]
 - ["SH", "STPCustomerContext"]
 - ["SH", "StripeAPIClient"]
 - ["SH", ""]
@@ -301,6 +321,7 @@ depends-member:
 - ["SH", "init"]
 - !private ["SH", "isEmpty"]
 - !private ["SH", "name"]
+- !private ["SH", "pusher"]
 - !private ["SH", "reduce"]
 - !private ["SH", "rounded"]
 - !private ["SH", "salesTax"]
@@ -316,6 +337,8 @@ depends-member:
 - !private ["s12IdentifiableP", "CoreDataManager"]
 - !private ["s12IdentifiableP", "Drink"]
 - !private ["s12IdentifiableP", "NSSet"]
+- !private ["s12IdentifiableP", "Pusher"]
+- !private ["s12IdentifiableP", "PusherClientOptions"]
 - ["s12IdentifiableP", "STPCustomerContext"]
 - ["s12IdentifiableP", "StripeAPIClient"]
 - !private ["s12IdentifiableP", "business"]
@@ -354,6 +377,8 @@ depends-member:
 - !private ["So20NSFetchRequestResultP", "CoreDataManager"]
 - !private ["So20NSFetchRequestResultP", "Drink"]
 - !private ["So20NSFetchRequestResultP", "NSSet"]
+- ["So20NSFetchRequestResultP", "Pusher"]
+- !private ["So20NSFetchRequestResultP", "PusherClientOptions"]
 - ["So20NSFetchRequestResultP", "STPCustomerContext"]
 - !private ["So20NSFetchRequestResultP", "Set"]
 - ["So20NSFetchRequestResultP", "StripeAPIClient"]
@@ -370,6 +395,7 @@ depends-member:
 - ["So20NSFetchRequestResultP", "guestDrink"]
 - ["So20NSFetchRequestResultP", "init"]
 - !private ["So20NSFetchRequestResultP", "name"]
+- ["So20NSFetchRequestResultP", "pusher"]
 - !private ["So20NSFetchRequestResultP", "salesTax"]
 - !private ["So20NSFetchRequestResultP", "salesTaxRate"]
 - ["So20NSFetchRequestResultP", "shared"]
@@ -385,6 +411,8 @@ depends-member:
 - !private ["So15NSManagedObjectC", "Double"]
 - ["So15NSManagedObjectC", "Drink"]
 - !private ["So15NSManagedObjectC", "NSSet"]
+- ["So15NSManagedObjectC", "Pusher"]
+- !private ["So15NSManagedObjectC", "PusherClientOptions"]
 - ["So15NSManagedObjectC", "STPCustomerContext"]
 - !private ["So15NSManagedObjectC", "Set"]
 - ["So15NSManagedObjectC", "StripeAPIClient"]
@@ -401,6 +429,7 @@ depends-member:
 - ["So15NSManagedObjectC", "guestDrink"]
 - ["So15NSManagedObjectC", "init"]
 - !private ["So15NSManagedObjectC", "name"]
+- ["So15NSManagedObjectC", "pusher"]
 - !private ["So15NSManagedObjectC", "salesTax"]
 - !private ["So15NSManagedObjectC", "salesTaxRate"]
 - ["So15NSManagedObjectC", "shared"]
@@ -417,6 +446,8 @@ depends-member:
 - !private ["So8NSObjectC", "Double"]
 - ["So8NSObjectC", "Drink"]
 - !private ["So8NSObjectC", "NSSet"]
+- ["So8NSObjectC", "Pusher"]
+- !private ["So8NSObjectC", "PusherClientOptions"]
 - ["So8NSObjectC", "STPCustomerContext"]
 - !private ["So8NSObjectC", "Set"]
 - ["So8NSObjectC", "StripeAPIClient"]
@@ -433,6 +464,7 @@ depends-member:
 - ["So8NSObjectC", "guestDrink"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "name"]
+- ["So8NSObjectC", "pusher"]
 - !private ["So8NSObjectC", "salesTax"]
 - !private ["So8NSObjectC", "salesTaxRate"]
 - !private ["So8NSObjectC", "set"]
@@ -451,6 +483,8 @@ depends-member:
 - !private ["So8NSObjectP", "CoreDataManager"]
 - !private ["So8NSObjectP", "Drink"]
 - !private ["So8NSObjectP", "NSSet"]
+- ["So8NSObjectP", "Pusher"]
+- !private ["So8NSObjectP", "PusherClientOptions"]
 - ["So8NSObjectP", "STPCustomerContext"]
 - !private ["So8NSObjectP", "Set"]
 - ["So8NSObjectP", "StripeAPIClient"]
@@ -467,6 +501,7 @@ depends-member:
 - ["So8NSObjectP", "guestDrink"]
 - ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "name"]
+- ["So8NSObjectP", "pusher"]
 - !private ["So8NSObjectP", "salesTax"]
 - !private ["So8NSObjectP", "salesTaxRate"]
 - !private ["So8NSObjectP", "set"]
@@ -489,6 +524,8 @@ depends-member:
 - !private ["7Combine16ObservableObjectP", "CoreDataManager"]
 - !private ["7Combine16ObservableObjectP", "Drink"]
 - !private ["7Combine16ObservableObjectP", "NSSet"]
+- !private ["7Combine16ObservableObjectP", "Pusher"]
+- !private ["7Combine16ObservableObjectP", "PusherClientOptions"]
 - ["7Combine16ObservableObjectP", "STPCustomerContext"]
 - ["7Combine16ObservableObjectP", "StripeAPIClient"]
 - ["7Combine16ObservableObjectP", ""]
@@ -498,12 +535,16 @@ depends-member:
 - !private ["7Combine16ObservableObjectP", "drinks"]
 - !private ["7Combine16ObservableObjectP", "init"]
 - !private ["7Combine16ObservableObjectP", "name"]
+- !private ["7Combine16ObservableObjectP", "pusher"]
 - !private ["7Combine16ObservableObjectP", "salesTax"]
 - !private ["7Combine16ObservableObjectP", "salesTaxRate"]
 - !private ["7Combine16ObservableObjectP", "subtotal"]
 - !private ["7Combine16ObservableObjectP", "tipAmount"]
 - !private ["7Combine16ObservableObjectP", "tipPercentage"]
 - !private ["7Combine16ObservableObjectP", "userBusiness"]
+- !private ["11PusherSwift0A0C", "init"]
+- !private ["11PusherSwift0A13ClientOptionsC", "init"]
+- !private ["11PusherSwift0A4HostO", "cluster"]
 - !private ["Sk", ""]
 - !private ["Sk", "count"]
 - !private ["Sk", "init"]
@@ -574,6 +615,8 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CoreDataManager"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Drink"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSSet"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Pusher"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "PusherClientOptions"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "STPCustomerContext"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "StripeAPIClient"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
@@ -583,6 +626,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "drinks"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "pusher"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "salesTax"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "salesTaxRate"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "sharedAPIClient"]
@@ -594,6 +638,8 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CoreDataManager"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Drink"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSSet"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Pusher"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PusherClientOptions"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPCustomerContext"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "StripeAPIClient"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
@@ -603,6 +649,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "drinks"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "name"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "pusher"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "salesTax"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "salesTaxRate"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sharedAPIClient"]
@@ -666,6 +713,9 @@ depends-nominal:
 - !private "So5NSSetC"
 - !private "Sj"
 - "7Combine16ObservableObjectP"
+- !private "11PusherSwift0A0C"
+- !private "11PusherSwift0A13ClientOptionsC"
+- !private "11PusherSwift0A4HostO"
 - !private "Sk"
 - !private "Sm"
 - !private "s10SIMDScalarP"
@@ -710,7 +760,9 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Modules/TweetNacl.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Vision.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -719,11 +771,14 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Modules/PushNotifications.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/os.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Modules/NWWebSocket.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Modules/PusherSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -735,7 +790,11 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Headers/PusherSwift-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDS2Service.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseImage.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSErrorMessage.h"
@@ -756,6 +815,7 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSErrorMessage+Internal.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDirectoryServerCertificate+Internal.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSException+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseMessageExtension.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDSProtocolVersion.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformation.h"
@@ -816,7 +876,11 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Headers/PusherSwift-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSCompletionEvent.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSRuntimeErrorEvent.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSProtocolErrorEvent.h"
@@ -834,11 +898,16 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeSelectionView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSpacerView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWhitelistView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/module.map"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
@@ -848,6 +917,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
@@ -870,4 +940,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "03a87d809820aa365799f2be526dbdab"
+interface-hash: "7513e31f56fa0f321cc534e2f92e27ba"

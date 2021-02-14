@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistrationWithEmailViewController: UIViewController {
+class RegistrationWithEmailViewController: UIViewController, UITextFieldDelegate {
     @UsesAutoLayout var firstNameTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Your first name"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
     @UsesAutoLayout var lastNameTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Your last name"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
     @UsesAutoLayout var emailTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Your email address"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
@@ -25,6 +25,10 @@ class RegistrationWithEmailViewController: UIViewController {
     @UsesAutoLayout var submitButton = RoundButton(theme: Theme.RoundButton(props: [ .color, .text("Submit"), .titleLabelFont(nil)]))
     @UsesAutoLayout private var activityIndicator = UIActivityIndicatorView(style: .large)
     
+    var formValues: [String: String] = [:]
+    private lazy var navController: UINavigationController = {
+        return SceneDelegate.shared.rootViewController.current as! UINavigationController
+    }()
     init() {
         super.init(nibName: nil, bundle: nil)
         self.view.backgroundColor = .white
@@ -36,7 +40,6 @@ class RegistrationWithEmailViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        WebSocketTaskConnection.shared.delegate = self
         self.view.addSubview(registrationStackView)
         self.view.addSubview(submitButton)
         self.view.addSubview(activityIndicator)
@@ -54,6 +57,13 @@ class RegistrationWithEmailViewController: UIViewController {
         registrationStackView.addArrangedSubview(passwordTextField)
         registrationStackView.addArrangedSubview(confirmPasswordLabel)
         registrationStackView.addArrangedSubview(confirmPasswordTextField)
+        
+        firstNameTextField.delegate = self
+        lastNameTextField.delegate = self
+        emailTextField.delegate = self
+        confirmEmailTextField.delegate = self
+        passwordTextField.delegate = self
+        confirmPasswordTextField.delegate = self
         
         let safeArea = self.view.safeAreaLayoutGuide
         
@@ -82,34 +92,53 @@ class RegistrationWithEmailViewController: UIViewController {
         )
         submitButton.addTarget(self, action: #selector(submitRegistration), for: .touchUpInside)
     }
-    //    override func viewWillDisappear(_ animated: Bool) {
-    //        WebSocketTaskConnection.shared.disconnect()
-    //    }
-    //    override func viewWillAppear(_ animated: Bool) {
-    //        WebSocketTaskConnection.shared.connect()
-    //    }
-    //    func onConnected(connection: WebSocketConnection) {
-    //        print("successful websocket connection")
-    //    }
-    //
-    //    func onDisconnected(connection: WebSocketConnection, error: Error?) {
-    //        print("web socket disconnected", error ?? "no error")
-    //    }
-    //
-    //    func onError(connection: WebSocketConnection, error: Error) {
-    //        print("web socket error", error)
-    //    }
-    //
-    //    func onMessage(connection: WebSocketConnection, text: String) {
-    //        print("string message received", text)
-    //    }
-    //
-    //    func onMessage(connection: WebSocketConnection, data: Data) {
-    //        print("data received", (try? JSONDecoder().decode(String.self, from: data)) ?? "couldnt decode message")
-    //    }
-    //
+    
+    func textFieldDidEndEditing(_ textField: UITextField){
+        print("did end")
+        if textField.placeholder == "Your first name" {
+            formValues["firstName"] = textField.text
+        }
+        if textField.placeholder == "Your last name" {
+            formValues["lastName"] = textField.text
+        }
+        if textField.placeholder == "Your email address" {
+            formValues["email"] = textField.text
+        }
+        if textField.placeholder == "Confirm your email address" {
+            formValues["confirmEmail"] = textField.text
+        }
+        if textField.placeholder == "Your password" {
+            formValues["password"] = textField.text
+        }
+        if textField.placeholder == "Confirm your password" {
+            formValues["confirmPassword"] = textField.text
+        }
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.placeholder == "Your first name" {
+            formValues["firstName"] = textField.text
+        }
+        if textField.placeholder == "Your last name" {
+            formValues["lastName"] = textField.text
+        }
+        if textField.placeholder == "Your email address" {
+            formValues["email"] = textField.text
+        }
+        if textField.placeholder == "Confirm your email address" {
+            formValues["confirmEmail"] = textField.text
+        }
+        if textField.placeholder == "Your password" {
+            formValues["password"] = textField.text
+        }
+        if textField.placeholder == "Confirm your password" {
+            formValues["confirmPassword"] = textField.text
+        }
+        return true
+    }
     @objc private func submitRegistration(_ sender: RoundButton) {
-        activityIndicator.startAnimating()
+        DispatchQueue.main.async {
+            self.activityIndicator.startAnimating()
+        }
         let requestedNewUser: User  = {
             // regular registration process
             if CheckoutCart.shared.isGuest == false {
@@ -121,119 +150,126 @@ class RegistrationWithEmailViewController: UIViewController {
                 return User(Email : emailTextField.text!, FirstName: firstNameTextField.text!,LastName: lastNameTextField.text!,Password: passwordTextField.text!, StripeId: CheckoutCart.shared.stripeId!, EmailVerified: false)
             }
         }()
-        if self.emailTextField.text != self.confirmEmailTextField.text || self.passwordTextField.text != self.passwordTextField.text {
+        if formValues["email"] != formValues["confirmEmail"] || formValues["password"] != formValues["confirmPassword"] {
             var title = ""
             var message = ""
             
-            if self.emailTextField.text != self.confirmEmailTextField.text && self.passwordTextField.text == self.passwordTextField.text {
+            if formValues["email"] != formValues["confirmEmail"] && formValues["password"] == formValues["confirmPassword"] {
                 title = "Email mismatch"
                 message = "Email and confirmation email are different. Please correct them and resubmit"
             }
-            else if self.passwordTextField.text != self.passwordTextField.text && self.emailTextField.text == self.confirmEmailTextField.text {
+            else if formValues["password"] != formValues["confirmPassword"] && formValues["email"] == formValues["confirmEmail"] {
                 title = "Password mismatch"
                 message = "Password and confirmation password are different. Please correct them and resubmit"
             }
-            else if self.emailTextField.text != self.confirmEmailTextField.text && self.passwordTextField.text != self.passwordTextField.text {
+            else if formValues["email"] != formValues["confirmEmail"] && formValues["password"] != formValues["confirmPassword"] {
                 title = "Email and password mismatch"
                 message = "Email, confirmation email, password and confirmation password are different. Please correct them and resubmit"
             }
+            
+            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Try again", style: .cancel) { action in
+                self.dismiss( animated: true)
+            })
             DispatchQueue.main.async {
-                let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "Try again", style: .cancel) { action in
-                    self.dismiss( animated: true)
-                })
                 self.activityIndicator.stopAnimating()
                 self.present(alertController, animated: true, completion: nil)
-
             }
-            
         }
         //        TODO: Do email confirmation web socket stuff on a new page, reset database in backend to include isVerified property and then set up timeout in websocket function that will test every 2 seconds if the users email has been verified. when the user verifies their email it will post a true value along with the associated email to the database. if the email is not verified before the timeout occurs, the user will be notified and given the option to send another email or register with a new email
         // can also create another websocket function that registers to another socket in backend for front end to call when email is verified maybe
         //        WebSocketTaskConnection.shared.send(data: requestedNewUser)
         else {
-        let request = try! APIRequest(method: .post, path:"/customer", body: requestedNewUser)
-        APIClient().perform(request) {result in
-            switch result {
-            case .success (let response):
-                if response.statusCode == 200, let response = try? response.decode(to: [String: String].self)  {
-                    let responseJson = response.body
-                    CheckoutCart.shared.user = requestedNewUser
-                    CheckoutCart.shared.userId = requestedNewUser.email
-                    
-                    // when changing UI based on asynchronous operation, or when updating core data need to wrap in dispatch queue because both are asynchronous ops themselves
-                    DispatchQueue.main.async
-                    {
+            let request = try! APIRequest(method: .post, path:"/customer", body: requestedNewUser)
+            APIClient().perform(request) {result in
+                switch result {
+                case .success (let response):
+                    if response.statusCode == 200, let response = try? response.decode(to: User.self)  {
+                        let fetchedUser = response.body as User
+                        print("fetchedUser",fetchedUser)
+                        print("response", response)
+                        CheckoutCart.shared.user = requestedNewUser
+                        CheckoutCart.shared.userId = requestedNewUser.email
+                        
+                        // when changing UI based on asynchronous operation, or when updating core data need to wrap in dispatch queue because both are asynchronous ops themselves
                         if CheckoutCart.shared.isGuest == false {
                             // if the new user's stripe id is nill then this is the regular user creation process and a stripe id will be sent from the backend
-                            CheckoutCart.shared.stripeId = responseJson["stripe_id"]
-                            requestedNewUser.stripeId = responseJson["stripe_id"]
-                            self.alertAccountCreation()
+                            CheckoutCart.shared.stripeId = fetchedUser.stripeId
+                            requestedNewUser.stripeId = fetchedUser.stripeId
+                            DispatchQueue.main.async
+                            {
+                                self.alertAccountCreation()
+                            }
                         }
                         // the user is creating an account without having ordered something prior as a guest. this is the typical process which redirects to the home page
                         else {
-                            self.alertAccountCreationForGuest()
+                            DispatchQueue.main.async
+                            {
+                                self.activityIndicator.stopAnimating()
+                                self.alertAccountCreationForGuest()
+                                CoreDataManager.sharedManager.saveContext()
+                            }
                         }
-                        CoreDataManager.sharedManager.saveContext()
-                        SceneDelegate.shared.rootViewController.switchToHomePageViewController()
-                        self.activityIndicator.stopAnimating()
+                        
                     }
-                }
-                else {
-                    let alertController = UIAlertController(title: "Username already exists", message: "Your username is taken. Please choose another", preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title: "Try again", style: .cancel) { action in
-                        self.dismiss( animated: true)
-                    })
+                    else {
+                        DispatchQueue.main.async {
+                            self.activityIndicator.stopAnimating()
+                            self.alertError(message: "Your username is taken. Please choose another", title: "Username already exists")
+                        }
+                    }
+                case .failure(let error): // if the API fails the enum API result will be of the type failure
                     DispatchQueue.main.async {
                         self.activityIndicator.stopAnimating()
-                        self.present(alertController, animated: true, completion: nil)
+                        self.alertError(message: "A network error has occured. Check your internet connection and if necessary, restart the app.", title: "Network Error")
+                        print("error case .failure", error)
                     }
-                }
-            case .failure(let error):                    // if the API fails the enum API result will be of the type failure
-                let alertController = UIAlertController(title: "Network Error", message: "A network error has occured. Check your internet connection and if necessary, restart the app.", preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "Okay", style: .cancel) { action in
-                    self.dismiss( animated: true)
-                })
-                DispatchQueue.main.async {
-                    self.activityIndicator.stopAnimating()
-                    self.present(alertController, animated: true, completion: nil)
-                    print("error case .failure", error)
                 }
             }
         }
     }
+    
+    private func alertAccountCreationForGuest() {
+        return self.alert(
+            title: "",
+            message: "Welcome to QuickBev! You may now proceed with your order.",
+            alertType: "accountCreationGuest"
+        )
     }
-
-private func alertAccountCreationForGuest() {
-    return self.alert(
-        title: "",
-        message: "Welcome to QuickBev! You may now proceed with your order.",
-        alertType: "accountCreationGuest"
-    )
-}
-private func alertAccountCreation() {
-    return self.alert(
-        title: "",
-        message: "Welcome to QuickBev!",
-        alertType: "accountCreation"
-    )
-}
-private func alert(title: String, message: String, alertType: String) {
-    let alertCtrl = UIAlertController(title: title, message: message, preferredStyle: .alert)
-    if alertType == "accountCreationGuest"{
-        alertCtrl.addAction(UIAlertAction(title: "Okay", style: .cancel) { action in
-            let drinkViewController =  DrinkViewController(drink: CheckoutCart.guestDrink!)
-            let homePageViewController =  HomePageViewController()
-            let drinkListTableViewController =  DrinkListTableViewController()
-            let navigationController = self.navigationController!
-            navigationController.setViewControllers([drinkViewController, drinkListTableViewController, homePageViewController], animated: true)
-        })
+    private func alertAccountCreation() {
+        return self.alert(
+            title: "",
+            message: "Welcome to QuickBev!",
+            alertType: "accountCreation"
+        )
     }
-    else if alertType == "accountCreation" {
-        alertCtrl.addAction(UIAlertAction(title: "Okay", style: .cancel) { action in
-            SceneDelegate.shared.rootViewController.switchToHomePageViewController()
-        })
+    private func alertError(message: String, title:String) {
+        return self.alert(
+            title: title,
+            message: message,
+            alertType: "error"
+        )
     }
-    present(alertCtrl, animated: true, completion: nil)
-}
+    private func alert(title: String, message: String, alertType: String) {
+        let alertCtrl = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        if alertType == "accountCreationGuest"{
+            alertCtrl.addAction(UIAlertAction(title: "Okay", style: .cancel) { action in
+                let drinkViewController =  DrinkViewController(drink: CheckoutCart.guestDrink!)
+                let homePageViewController =  HomePageViewController()
+                let drinkListTableViewController =  DrinkListTableViewController()
+                self.navController.setViewControllers([drinkViewController, drinkListTableViewController, homePageViewController], animated: true)
+            })
+        }
+        else if alertType == "accountCreation" {
+            alertCtrl.addAction(UIAlertAction(title: "Okay", style: .cancel) { action in
+                self.navController.pushViewController(VerifyEmailViewController(), animated: true)
+            })
+        }
+        else if alertType == "error" {
+            alertCtrl.addAction(UIAlertAction(title: "Okay", style: .cancel) { action in
+                self.dismiss(animated: true, completion: nil)
+            })
+        }
+        present(alertCtrl, animated: true, completion: nil)
+    }
 }

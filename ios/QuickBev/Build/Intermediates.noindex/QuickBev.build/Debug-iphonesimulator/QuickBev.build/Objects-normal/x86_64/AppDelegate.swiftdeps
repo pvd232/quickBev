@@ -8,32 +8,43 @@ provides-member:
 provides-dynamic-lookup:
 - "application"
 - "applicationWillTerminate"
+- "pushNotifications"
 depends-top-level:
+- "AnyHashable"
 - "AppDelegate"
 - "AssignmentPrecedence"
 - "Bool"
 - !private "BooleanLiteralType"
 - !private "CoreDataManager"
+- "Data"
 - !private "IQKeyboardManager"
+- "PushNotifications"
 - "Set"
 - !private "StringLiteralType"
 - !private "StripeAPI"
 - "UIApplication"
 - "UIApplicationDelegate"
+- "UIBackgroundFetchResult"
 - "UIResponder"
 - "UIScene"
 - "UISceneConfiguration"
 - "UISceneSession"
+- "Void"
 depends-member:
+- ["8QuickBev11AppDelegateC", "AnyHashable"]
 - ["8QuickBev11AppDelegateC", "Bool"]
 - !private ["8QuickBev11AppDelegateC", "CoreDataManager"]
+- ["8QuickBev11AppDelegateC", "Data"]
 - !private ["8QuickBev11AppDelegateC", "IQKeyboardManager"]
+- ["8QuickBev11AppDelegateC", "PushNotifications"]
 - ["8QuickBev11AppDelegateC", "Set"]
 - !private ["8QuickBev11AppDelegateC", "StripeAPI"]
 - ["8QuickBev11AppDelegateC", "UIApplication"]
+- ["8QuickBev11AppDelegateC", "UIBackgroundFetchResult"]
 - ["8QuickBev11AppDelegateC", "UIScene"]
 - ["8QuickBev11AppDelegateC", "UISceneConfiguration"]
 - ["8QuickBev11AppDelegateC", "UISceneSession"]
+- ["8QuickBev11AppDelegateC", "Void"]
 - ["8QuickBev11AppDelegateC", ""]
 - ["8QuickBev11AppDelegateC", "application"]
 - ["8QuickBev11AppDelegateC", "applicationDidBecomeActive"]
@@ -49,15 +60,18 @@ depends-member:
 - ["8QuickBev11AppDelegateC", "applicationWillTerminate"]
 - ["8QuickBev11AppDelegateC", "deinit"]
 - ["8QuickBev11AppDelegateC", "init"]
+- ["8QuickBev11AppDelegateC", "pushNotifications"]
 - ["8QuickBev11AppDelegateC", "window"]
 - ["SK", ""]
 - ["s7CVarArgP", "ConnectionOptions"]
 - !private ["s7CVarArgP", "CoreDataManager"]
 - !private ["s7CVarArgP", "IQKeyboardManager"]
 - ["s7CVarArgP", "LaunchOptionsKey"]
+- ["s7CVarArgP", "PushNotifications"]
 - !private ["s7CVarArgP", "StripeAPI"]
 - !private ["s7CVarArgP", "UISceneConfiguration"]
 - ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "addDeviceInterest"]
 - ["s7CVarArgP", "application"]
 - ["s7CVarArgP", "applicationDidBecomeActive"]
 - ["s7CVarArgP", "applicationDidEnterBackground"]
@@ -72,9 +86,14 @@ depends-member:
 - ["s7CVarArgP", "applicationWillTerminate"]
 - !private ["s7CVarArgP", "defaultPublishableKey"]
 - !private ["s7CVarArgP", "enable"]
+- !private ["s7CVarArgP", "handleNotification"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "pushNotifications"]
+- !private ["s7CVarArgP", "registerDeviceToken"]
+- !private ["s7CVarArgP", "registerForRemoteNotifications"]
 - !private ["s7CVarArgP", "role"]
-- !private ["s7CVarArgP", "shared"]
+- ["s7CVarArgP", "shared"]
+- !private ["s7CVarArgP", "start"]
 - ["s7CVarArgP", "window"]
 - ["Sl", ""]
 - ["SL", ""]
@@ -84,9 +103,11 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "CoreDataManager"]
 - !private ["s28CustomDebugStringConvertibleP", "IQKeyboardManager"]
 - ["s28CustomDebugStringConvertibleP", "LaunchOptionsKey"]
+- ["s28CustomDebugStringConvertibleP", "PushNotifications"]
 - !private ["s28CustomDebugStringConvertibleP", "StripeAPI"]
 - !private ["s28CustomDebugStringConvertibleP", "UISceneConfiguration"]
 - ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "addDeviceInterest"]
 - ["s28CustomDebugStringConvertibleP", "application"]
 - ["s28CustomDebugStringConvertibleP", "applicationDidBecomeActive"]
 - ["s28CustomDebugStringConvertibleP", "applicationDidEnterBackground"]
@@ -101,17 +122,24 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "applicationWillTerminate"]
 - !private ["s28CustomDebugStringConvertibleP", "defaultPublishableKey"]
 - !private ["s28CustomDebugStringConvertibleP", "enable"]
+- !private ["s28CustomDebugStringConvertibleP", "handleNotification"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "pushNotifications"]
+- !private ["s28CustomDebugStringConvertibleP", "registerDeviceToken"]
+- !private ["s28CustomDebugStringConvertibleP", "registerForRemoteNotifications"]
 - !private ["s28CustomDebugStringConvertibleP", "role"]
-- !private ["s28CustomDebugStringConvertibleP", "shared"]
+- ["s28CustomDebugStringConvertibleP", "shared"]
+- !private ["s28CustomDebugStringConvertibleP", "start"]
 - ["s28CustomDebugStringConvertibleP", "window"]
 - ["s23CustomStringConvertibleP", "ConnectionOptions"]
 - !private ["s23CustomStringConvertibleP", "CoreDataManager"]
 - !private ["s23CustomStringConvertibleP", "IQKeyboardManager"]
 - ["s23CustomStringConvertibleP", "LaunchOptionsKey"]
+- ["s23CustomStringConvertibleP", "PushNotifications"]
 - !private ["s23CustomStringConvertibleP", "StripeAPI"]
 - !private ["s23CustomStringConvertibleP", "UISceneConfiguration"]
 - ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "addDeviceInterest"]
 - ["s23CustomStringConvertibleP", "application"]
 - ["s23CustomStringConvertibleP", "applicationDidBecomeActive"]
 - ["s23CustomStringConvertibleP", "applicationDidEnterBackground"]
@@ -126,17 +154,24 @@ depends-member:
 - ["s23CustomStringConvertibleP", "applicationWillTerminate"]
 - !private ["s23CustomStringConvertibleP", "defaultPublishableKey"]
 - !private ["s23CustomStringConvertibleP", "enable"]
+- !private ["s23CustomStringConvertibleP", "handleNotification"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "pushNotifications"]
+- !private ["s23CustomStringConvertibleP", "registerDeviceToken"]
+- !private ["s23CustomStringConvertibleP", "registerForRemoteNotifications"]
 - !private ["s23CustomStringConvertibleP", "role"]
-- !private ["s23CustomStringConvertibleP", "shared"]
+- ["s23CustomStringConvertibleP", "shared"]
+- !private ["s23CustomStringConvertibleP", "start"]
 - ["s23CustomStringConvertibleP", "window"]
 - ["SQ", "ConnectionOptions"]
 - !private ["SQ", "CoreDataManager"]
 - !private ["SQ", "IQKeyboardManager"]
 - ["SQ", "LaunchOptionsKey"]
+- ["SQ", "PushNotifications"]
 - !private ["SQ", "StripeAPI"]
 - !private ["SQ", "UISceneConfiguration"]
 - ["SQ", ""]
+- !private ["SQ", "addDeviceInterest"]
 - ["SQ", "application"]
 - ["SQ", "applicationDidBecomeActive"]
 - ["SQ", "applicationDidEnterBackground"]
@@ -151,9 +186,14 @@ depends-member:
 - ["SQ", "applicationWillTerminate"]
 - !private ["SQ", "defaultPublishableKey"]
 - !private ["SQ", "enable"]
+- !private ["SQ", "handleNotification"]
 - !private ["SQ", "init"]
+- !private ["SQ", "pushNotifications"]
+- !private ["SQ", "registerDeviceToken"]
+- !private ["SQ", "registerForRemoteNotifications"]
 - !private ["SQ", "role"]
-- !private ["SQ", "shared"]
+- ["SQ", "shared"]
+- !private ["SQ", "start"]
 - ["SQ", "window"]
 - ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - ["s32ExpressibleByStringInterpolationP", ""]
@@ -163,9 +203,11 @@ depends-member:
 - !private ["SH", "CoreDataManager"]
 - !private ["SH", "IQKeyboardManager"]
 - ["SH", "LaunchOptionsKey"]
+- ["SH", "PushNotifications"]
 - !private ["SH", "StripeAPI"]
 - !private ["SH", "UISceneConfiguration"]
 - ["SH", ""]
+- !private ["SH", "addDeviceInterest"]
 - ["SH", "application"]
 - ["SH", "applicationDidBecomeActive"]
 - ["SH", "applicationDidEnterBackground"]
@@ -180,9 +222,14 @@ depends-member:
 - ["SH", "applicationWillTerminate"]
 - !private ["SH", "defaultPublishableKey"]
 - !private ["SH", "enable"]
+- !private ["SH", "handleNotification"]
 - !private ["SH", "init"]
+- !private ["SH", "pushNotifications"]
+- !private ["SH", "registerDeviceToken"]
+- !private ["SH", "registerForRemoteNotifications"]
 - !private ["SH", "role"]
-- !private ["SH", "shared"]
+- ["SH", "shared"]
+- !private ["SH", "start"]
 - ["SH", "window"]
 - !private ["22IQKeyboardManagerSwift0aB0C", "enable"]
 - !private ["22IQKeyboardManagerSwift0aB0C", "shared"]
@@ -191,18 +238,24 @@ depends-member:
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "role"]
 - !private ["So9NSCopyingP", "init"]
+- ["So8NSObjectC", "AnyHashable"]
 - ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "ConnectionOptions"]
 - !private ["So8NSObjectC", "CoreDataManager"]
+- ["So8NSObjectC", "Data"]
 - !private ["So8NSObjectC", "IQKeyboardManager"]
 - ["So8NSObjectC", "LaunchOptionsKey"]
+- ["So8NSObjectC", "PushNotifications"]
 - ["So8NSObjectC", "Set"]
 - !private ["So8NSObjectC", "StripeAPI"]
 - ["So8NSObjectC", "UIApplication"]
+- ["So8NSObjectC", "UIBackgroundFetchResult"]
 - ["So8NSObjectC", "UIScene"]
 - ["So8NSObjectC", "UISceneConfiguration"]
 - ["So8NSObjectC", "UISceneSession"]
+- ["So8NSObjectC", "Void"]
 - ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "addDeviceInterest"]
 - ["So8NSObjectC", "application"]
 - ["So8NSObjectC", "applicationDidBecomeActive"]
 - ["So8NSObjectC", "applicationDidEnterBackground"]
@@ -218,21 +271,30 @@ depends-member:
 - !private ["So8NSObjectC", "configurationWithName"]
 - !private ["So8NSObjectC", "defaultPublishableKey"]
 - !private ["So8NSObjectC", "enable"]
+- !private ["So8NSObjectC", "handleNotification"]
 - ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "pushNotifications"]
+- !private ["So8NSObjectC", "registerDeviceToken"]
+- !private ["So8NSObjectC", "registerForRemoteNotifications"]
 - !private ["So8NSObjectC", "role"]
-- !private ["So8NSObjectC", "shared"]
+- ["So8NSObjectC", "shared"]
+- !private ["So8NSObjectC", "start"]
 - ["So8NSObjectC", "window"]
+- ["So8NSObjectP", "AnyHashable"]
 - ["So8NSObjectP", "ConnectionOptions"]
 - !private ["So8NSObjectP", "CoreDataManager"]
 - !private ["So8NSObjectP", "IQKeyboardManager"]
 - ["So8NSObjectP", "LaunchOptionsKey"]
+- ["So8NSObjectP", "PushNotifications"]
 - ["So8NSObjectP", "Set"]
 - !private ["So8NSObjectP", "StripeAPI"]
 - ["So8NSObjectP", "UIApplication"]
+- ["So8NSObjectP", "UIBackgroundFetchResult"]
 - ["So8NSObjectP", "UIScene"]
 - ["So8NSObjectP", "UISceneConfiguration"]
 - ["So8NSObjectP", "UISceneSession"]
 - ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "addDeviceInterest"]
 - ["So8NSObjectP", "application"]
 - ["So8NSObjectP", "applicationDidBecomeActive"]
 - ["So8NSObjectP", "applicationDidEnterBackground"]
@@ -249,12 +311,23 @@ depends-member:
 - !private ["So8NSObjectP", "defaultPublishableKey"]
 - ["So8NSObjectP", "deinit"]
 - !private ["So8NSObjectP", "enable"]
+- !private ["So8NSObjectP", "handleNotification"]
 - ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "pushNotifications"]
+- !private ["So8NSObjectP", "registerDeviceToken"]
+- !private ["So8NSObjectP", "registerForRemoteNotifications"]
 - !private ["So8NSObjectP", "role"]
-- !private ["So8NSObjectP", "shared"]
+- ["So8NSObjectP", "shared"]
+- !private ["So8NSObjectP", "start"]
 - ["So8NSObjectP", "window"]
 - !private ["So14NSSecureCodingP", "init"]
 - !private ["So14NSSecureCodingP", "role"]
+- ["17PushNotificationsAAC", "shared"]
+- !private ["17PushNotifications0aB6StaticC", "addDeviceInterest"]
+- !private ["17PushNotifications0aB6StaticC", "handleNotification"]
+- !private ["17PushNotifications0aB6StaticC", "registerDeviceToken"]
+- !private ["17PushNotifications0aB6StaticC", "registerForRemoteNotifications"]
+- !private ["17PushNotifications0aB6StaticC", "start"]
 - ["ST", ""]
 - !private ["6Stripe0A3APIC", "defaultPublishableKey"]
 - ["s16TextOutputStreamP", ""]
@@ -262,6 +335,7 @@ depends-member:
 - ["So13UIApplicationC", "LaunchOptionsKey"]
 - !private ["So21UIApplicationDelegateP", "CoreDataManager"]
 - !private ["So21UIApplicationDelegateP", "IQKeyboardManager"]
+- ["So21UIApplicationDelegateP", "PushNotifications"]
 - !private ["So21UIApplicationDelegateP", "StripeAPI"]
 - !private ["So21UIApplicationDelegateP", "UISceneConfiguration"]
 - ["So21UIApplicationDelegateP", ""]
@@ -279,16 +353,20 @@ depends-member:
 - ["So21UIApplicationDelegateP", "applicationWillTerminate"]
 - ["So21UIApplicationDelegateP", "deinit"]
 - ["So21UIApplicationDelegateP", "init"]
+- ["So21UIApplicationDelegateP", "pushNotifications"]
 - ["So21UIApplicationDelegateP", "window"]
 - !private ["So27UIGestureRecognizerDelegateP", "enable"]
 - !private ["So27UIGestureRecognizerDelegateP", "shared"]
+- ["So30UIPasteConfigurationSupportingP", "AnyHashable"]
 - ["So30UIPasteConfigurationSupportingP", "ConnectionOptions"]
 - !private ["So30UIPasteConfigurationSupportingP", "CoreDataManager"]
 - !private ["So30UIPasteConfigurationSupportingP", "IQKeyboardManager"]
 - ["So30UIPasteConfigurationSupportingP", "LaunchOptionsKey"]
+- ["So30UIPasteConfigurationSupportingP", "PushNotifications"]
 - ["So30UIPasteConfigurationSupportingP", "Set"]
 - !private ["So30UIPasteConfigurationSupportingP", "StripeAPI"]
 - ["So30UIPasteConfigurationSupportingP", "UIApplication"]
+- ["So30UIPasteConfigurationSupportingP", "UIBackgroundFetchResult"]
 - ["So30UIPasteConfigurationSupportingP", "UIScene"]
 - ["So30UIPasteConfigurationSupportingP", "UISceneConfiguration"]
 - ["So30UIPasteConfigurationSupportingP", "UISceneSession"]
@@ -307,18 +385,24 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "applicationWillTerminate"]
 - ["So30UIPasteConfigurationSupportingP", "deinit"]
 - ["So30UIPasteConfigurationSupportingP", "init"]
+- ["So30UIPasteConfigurationSupportingP", "pushNotifications"]
 - ["So30UIPasteConfigurationSupportingP", "window"]
+- ["So11UIResponderC", "AnyHashable"]
 - ["So11UIResponderC", "Bool"]
 - ["So11UIResponderC", "ConnectionOptions"]
 - !private ["So11UIResponderC", "CoreDataManager"]
+- ["So11UIResponderC", "Data"]
 - !private ["So11UIResponderC", "IQKeyboardManager"]
 - ["So11UIResponderC", "LaunchOptionsKey"]
+- ["So11UIResponderC", "PushNotifications"]
 - ["So11UIResponderC", "Set"]
 - !private ["So11UIResponderC", "StripeAPI"]
 - ["So11UIResponderC", "UIApplication"]
+- ["So11UIResponderC", "UIBackgroundFetchResult"]
 - ["So11UIResponderC", "UIScene"]
 - ["So11UIResponderC", "UISceneConfiguration"]
 - ["So11UIResponderC", "UISceneSession"]
+- ["So11UIResponderC", "Void"]
 - ["So11UIResponderC", ""]
 - ["So11UIResponderC", "application"]
 - ["So11UIResponderC", "applicationDidBecomeActive"]
@@ -333,14 +417,18 @@ depends-member:
 - ["So11UIResponderC", "applicationWillResignActive"]
 - ["So11UIResponderC", "applicationWillTerminate"]
 - ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "pushNotifications"]
 - ["So11UIResponderC", "window"]
+- ["So30UIResponderStandardEditActionsP", "AnyHashable"]
 - ["So30UIResponderStandardEditActionsP", "ConnectionOptions"]
 - !private ["So30UIResponderStandardEditActionsP", "CoreDataManager"]
 - !private ["So30UIResponderStandardEditActionsP", "IQKeyboardManager"]
 - ["So30UIResponderStandardEditActionsP", "LaunchOptionsKey"]
+- ["So30UIResponderStandardEditActionsP", "PushNotifications"]
 - ["So30UIResponderStandardEditActionsP", "Set"]
 - !private ["So30UIResponderStandardEditActionsP", "StripeAPI"]
 - ["So30UIResponderStandardEditActionsP", "UIApplication"]
+- ["So30UIResponderStandardEditActionsP", "UIBackgroundFetchResult"]
 - ["So30UIResponderStandardEditActionsP", "UIScene"]
 - ["So30UIResponderStandardEditActionsP", "UISceneConfiguration"]
 - ["So30UIResponderStandardEditActionsP", "UISceneSession"]
@@ -359,17 +447,21 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "applicationWillTerminate"]
 - ["So30UIResponderStandardEditActionsP", "deinit"]
 - ["So30UIResponderStandardEditActionsP", "init"]
+- ["So30UIResponderStandardEditActionsP", "pushNotifications"]
 - ["So30UIResponderStandardEditActionsP", "window"]
 - ["So7UISceneC", "ConnectionOptions"]
 - !private ["So20UISceneConfigurationC", "init"]
 - !private ["So14UISceneSessionC", "role"]
+- ["So23UIUserActivityRestoringP", "AnyHashable"]
 - ["So23UIUserActivityRestoringP", "ConnectionOptions"]
 - !private ["So23UIUserActivityRestoringP", "CoreDataManager"]
 - !private ["So23UIUserActivityRestoringP", "IQKeyboardManager"]
 - ["So23UIUserActivityRestoringP", "LaunchOptionsKey"]
+- ["So23UIUserActivityRestoringP", "PushNotifications"]
 - ["So23UIUserActivityRestoringP", "Set"]
 - !private ["So23UIUserActivityRestoringP", "StripeAPI"]
 - ["So23UIUserActivityRestoringP", "UIApplication"]
+- ["So23UIUserActivityRestoringP", "UIBackgroundFetchResult"]
 - ["So23UIUserActivityRestoringP", "UIScene"]
 - ["So23UIUserActivityRestoringP", "UISceneConfiguration"]
 - ["So23UIUserActivityRestoringP", "UISceneSession"]
@@ -388,6 +480,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "applicationWillTerminate"]
 - ["So23UIUserActivityRestoringP", "deinit"]
 - ["So23UIUserActivityRestoringP", "init"]
+- ["So23UIUserActivityRestoringP", "pushNotifications"]
 - ["So23UIUserActivityRestoringP", "window"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
@@ -397,9 +490,11 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CoreDataManager"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "IQKeyboardManager"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "LaunchOptionsKey"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "PushNotifications"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "StripeAPI"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UISceneConfiguration"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addDeviceInterest"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "application"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "applicationDidBecomeActive"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "applicationDidEnterBackground"]
@@ -414,17 +509,24 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "applicationWillTerminate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "defaultPublishableKey"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "enable"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "handleNotification"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "pushNotifications"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "registerDeviceToken"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "registerForRemoteNotifications"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "role"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "start"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "window"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ConnectionOptions"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CoreDataManager"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "IQKeyboardManager"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "LaunchOptionsKey"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PushNotifications"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "StripeAPI"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UISceneConfiguration"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addDeviceInterest"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "application"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applicationDidBecomeActive"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applicationDidEnterBackground"]
@@ -439,9 +541,14 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applicationWillTerminate"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "defaultPublishableKey"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "enable"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "handleNotification"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "pushNotifications"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "registerDeviceToken"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "registerForRemoteNotifications"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "role"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "start"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "window"]
 depends-nominal:
 - "8QuickBev11AppDelegateC"
@@ -465,6 +572,8 @@ depends-nominal:
 - "So8NSObjectC"
 - "So8NSObjectP"
 - !private "So14NSSecureCodingP"
+- "17PushNotificationsAAC"
+- !private "17PushNotifications0aB6StaticC"
 - "ST"
 - !private "6Stripe0A3APIC"
 - "s16TextOutputStreamP"
@@ -500,7 +609,9 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Modules/TweetNacl.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Vision.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -509,11 +620,14 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Modules/PushNotifications.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/os.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Modules/NWWebSocket.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Modules/PusherSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -525,7 +639,11 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Headers/PusherSwift-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDS2Service.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseImage.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSErrorMessage.h"
@@ -546,6 +664,7 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSErrorMessage+Internal.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDirectoryServerCertificate+Internal.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSException+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseMessageExtension.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDSProtocolVersion.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformation.h"
@@ -606,7 +725,11 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Headers/PusherSwift-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSCompletionEvent.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSRuntimeErrorEvent.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSProtocolErrorEvent.h"
@@ -624,11 +747,16 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeSelectionView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSpacerView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWhitelistView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/module.map"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
@@ -638,6 +766,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
@@ -660,4 +789,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "ad1891f73e96fd03a650e82dbbf49b0c"
+interface-hash: "963c4896d25a4bb4a4ee56f2c84535f0"

@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import Stripe
 import IQKeyboardManagerSwift
+import PushNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,14 +27,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-    
+    let pushNotifications = PushNotifications.shared
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         StripeAPI.defaultPublishableKey = "pk_test_51I0xFxFseFjpsgWvepMo3sJRNB4CCbFPhkxj2gEKgHUhIGBnciTqNVzjz1wz68Btbd5zAb2KC9eXpYaiOwLDA5QH00SZhtKPLT"
         IQKeyboardManager.shared.enable = true
-
+        self.pushNotifications.start(instanceId: "4cce943d-df75-44c6-98b2-2b95ab34bd27")
+            self.pushNotifications.registerForRemoteNotifications()
+            try? self.pushNotifications.addDeviceInterest(interest: "hello")
         return true
     }
-    // MARK: - Core Data stack
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        self.pushNotifications.registerDeviceToken(deviceToken)
+    }
+
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        self.pushNotifications.handleNotification(userInfo: userInfo)
+    }
     
     func applicationWillTerminate(_ application: UIApplication) {
 //        let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext

@@ -1,6 +1,6 @@
 import CoreData
 import Stripe
-
+import PusherSwift
 public class CheckoutCart: NSManagedObject {
     private convenience init() {
         self.init(context: CoreDataManager.sharedManager.managedContext)
@@ -18,6 +18,12 @@ public class CheckoutCart: NSManagedObject {
         }
     }
     static var guestDrink: Drink? = nil
+    
+    static var pusher: Pusher {
+        let options = PusherClientOptions(
+            host: .cluster("us2"))
+        return Pusher(key: "7b5e34392e1404447668", options: options)
+    }
 }
 extension CheckoutCart {
     public var cart: [Drink] {

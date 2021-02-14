@@ -11,7 +11,8 @@ import uuid
 import json
 from datetime import date
 import stripe
-
+from werkzeug.security import generate_password_hash, check_password_hash
+from sqlalchemy.ext.hybrid import hybrid_method
 #   https://stackoverflow.com/questions/38678336/sqlalchemy-how-to-implement-drop-table-cascade
 
 stripe.api_key = "sk_test_51I0xFxFseFjpsgWvh9b1munh6nIea6f5Z8bYlIDfmKyNq6zzrgg8iqeKEHwmRi5PqIelVkx4XWcYHAYc1omtD7wz00JiwbEKzj"
@@ -100,7 +101,7 @@ class Business(db.Model):
 class Merchant(db.Model):
     id = db.Column(db.String(80), primary_key=True,
                    unique=True, nullable=False)
-    password = db.Column(db.String(80), nullable=False)
+    password = db.Column(db.String(200), nullable=False)
     first_name = db.Column(db.String(80), nullable=False)
     last_name = db.Column(db.String(80), nullable=False)
     phone_number = db.Column(db.BigInteger(), nullable=False)
@@ -130,11 +131,11 @@ class Merchant_Stripe(db.Model):
 
 class Customer(db.Model):
     __tablename__ = 'customer'
-    id = db.Column(db.String(80), primary_key=True,
+    id = db.Column(db.String(200), primary_key=True,
                    unique=True, nullable=False)
     stripe_id = db.Column(db.String(80), db.ForeignKey('stripe_customer.id'),
                           nullable=False)
-    password = db.Column(db.String(80), nullable=False)
+    password = db.Column(db.String(200), nullable=False)
     first_name = db.Column(db.String(80), nullable=False)
     last_name = db.Column(db.String(80), nullable=False)
     email_verified = db.Column(db.Boolean(), nullable=False)
@@ -154,7 +155,7 @@ class Customer(db.Model):
 class Order(db.Model):
     id = db.Column(UUID(as_uuid=True), primary_key=True,
                    unique=True, nullable=False)
-    customer_id = db.Column(db.String(80), db.ForeignKey(
+    customer_id = db.Column(db.String(200), db.ForeignKey(
         'customer.id'), nullable=False)
     business_id = db.Column(UUID(as_uuid=True), db.ForeignKey(
         'business.id'), nullable=False)
@@ -311,7 +312,9 @@ def create_business():
 
     new_stripe_customer = stripe.Customer.create()
     new_stripe_customer_id = Stripe_Customer(id=new_stripe_customer.id)
-    new_customer = Customer(id="a", password="a",
+    id = generate_password_hash("a", "sha256")
+    password = generate_password_hash("a", "sha256")
+    new_customer = Customer(id=id, password=password,
                             first_name="peter", last_name="driscoll", stripe_id=new_stripe_customer.id, email_verified=False)
     db.session.add(new_stripe_customer_id)
     db.session.add(new_customer)
@@ -352,4 +355,4 @@ def create_everything():
     create_drink()
 
 
-create_everything()
+# create_everything()

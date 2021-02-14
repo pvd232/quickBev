@@ -27,6 +27,7 @@ public class User: NSManagedObject, Codable {
         self.lastName = try container.decode(String.self, forKey: .lastName)
         self.password = try container.decode(String.self, forKey: .password)
         self.stripeId = try container.decode(String.self, forKey: .stripeId)
+        self.emailVerified = try container.decode(Bool.self, forKey: .emailVerified)
     }
     
     public func encode(to encoder: Encoder) throws {
@@ -36,6 +37,7 @@ public class User: NSManagedObject, Codable {
         try container.encode(self.lastName, forKey: .lastName)
         try container.encode(self.password, forKey: .password)
         try container.encode(self.stripeId, forKey: .stripeId)
+        try container.encode(self.emailVerified, forKey: .emailVerified)
     }
 }
 extension User {

@@ -130,7 +130,7 @@ depends-member:
 - !private ["So15CALayerDelegateP", "UIBarButtonItem"]
 - !private ["So15CALayerDelegateP", "UIDatePicker"]
 - !private ["So15CALayerDelegateP", "UIImage"]
-- !private ["So15CALayerDelegateP", "UIImageView"]
+- ["So15CALayerDelegateP", "UIImageView"]
 - !private ["So15CALayerDelegateP", "UIScreen"]
 - !private ["So15CALayerDelegateP", "UITextField"]
 - !private ["So15CALayerDelegateP", "UIToolbar"]
@@ -622,7 +622,7 @@ depends-member:
 - ["So8NSCodingP", "UIColor"]
 - !private ["So8NSCodingP", "UIDatePicker"]
 - !private ["So8NSCodingP", "UIImage"]
-- !private ["So8NSCodingP", "UIImageView"]
+- ["So8NSCodingP", "UIImageView"]
 - !private ["So8NSCodingP", "UIScreen"]
 - !private ["So8NSCodingP", "UITextField"]
 - !private ["So8NSCodingP", "UIToolbar"]
@@ -733,15 +733,6 @@ depends-member:
 - !private ["So8NSObjectC", "borderStyle"]
 - !private ["So8NSObjectC", "bounds"]
 - !private ["So8NSObjectC", "capitalizingFirstLetter"]
-- !private ["So8NSObjectC", "colorNamed"]
-- !private ["So8NSObjectC", "colorWithCGColor"]
-- !private ["So8NSObjectC", "colorWithCIColor"]
-- !private ["So8NSObjectC", "colorWithDisplayP3Red"]
-- !private ["So8NSObjectC", "colorWithDynamicProvider"]
-- !private ["So8NSObjectC", "colorWithHue"]
-- !private ["So8NSObjectC", "colorWithPatternImage"]
-- !private ["So8NSObjectC", "colorWithRed"]
-- !private ["So8NSObjectC", "colorWithWhite"]
 - !private ["So8NSObjectC", "constraints"]
 - !private ["So8NSObjectC", "datePickerMode"]
 - !private ["So8NSObjectC", "dropFirst"]
@@ -793,8 +784,8 @@ depends-member:
 - !private ["So8NSObjectP", "UIImageView"]
 - ["So8NSObjectP", "UILayoutPriority"]
 - !private ["So8NSObjectP", "UIScreen"]
-- !private ["So8NSObjectP", "UITextField"]
 - !private ["So8NSObjectP", "UIToolbar"]
+- ["So8NSObjectP", "UIView"]
 - !private ["So8NSObjectP", "UIViewController"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "autocapitalizationType"]
@@ -804,15 +795,6 @@ depends-member:
 - !private ["So8NSObjectP", "borderStyle"]
 - !private ["So8NSObjectP", "bounds"]
 - !private ["So8NSObjectP", "capitalizingFirstLetter"]
-- !private ["So8NSObjectP", "colorNamed"]
-- !private ["So8NSObjectP", "colorWithCGColor"]
-- !private ["So8NSObjectP", "colorWithCIColor"]
-- !private ["So8NSObjectP", "colorWithDisplayP3Red"]
-- !private ["So8NSObjectP", "colorWithDynamicProvider"]
-- !private ["So8NSObjectP", "colorWithHue"]
-- !private ["So8NSObjectP", "colorWithPatternImage"]
-- !private ["So8NSObjectP", "colorWithRed"]
-- !private ["So8NSObjectP", "colorWithWhite"]
 - !private ["So8NSObjectP", "constraints"]
 - !private ["So8NSObjectP", "datePickerMode"]
 - !private ["So8NSObjectP", "dropFirst"]
@@ -904,7 +886,6 @@ depends-member:
 - !private ["ST", "capitalized"]
 - !private ["ST", "capitalizingFirstLetter"]
 - !private ["ST", "dropFirst"]
-- !private ["ST", "makeIterator"]
 - !private ["ST", "prefix"]
 - !private ["s13SignedNumericP", "-"]
 - !private ["s13SignedNumericP", "Darwin"]
@@ -965,7 +946,7 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "UIBarButtonItem"]
 - !private ["So29UIAccessibilityIdentificationP", "UIDatePicker"]
 - !private ["So29UIAccessibilityIdentificationP", "UIImage"]
-- !private ["So29UIAccessibilityIdentificationP", "UIImageView"]
+- ["So29UIAccessibilityIdentificationP", "UIImageView"]
 - !private ["So29UIAccessibilityIdentificationP", "UIScreen"]
 - !private ["So29UIAccessibilityIdentificationP", "UITextField"]
 - !private ["So29UIAccessibilityIdentificationP", "UIToolbar"]
@@ -1007,7 +988,7 @@ depends-member:
 - !private ["So12UIAppearanceP", "UIBarButtonItem"]
 - !private ["So12UIAppearanceP", "UIDatePicker"]
 - !private ["So12UIAppearanceP", "UIImage"]
-- !private ["So12UIAppearanceP", "UIImageView"]
+- ["So12UIAppearanceP", "UIImageView"]
 - !private ["So12UIAppearanceP", "UIScreen"]
 - !private ["So12UIAppearanceP", "UITextField"]
 - !private ["So12UIAppearanceP", "UIToolbar"]
@@ -1049,7 +1030,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "UIBarButtonItem"]
 - !private ["So21UIAppearanceContainerP", "UIDatePicker"]
 - !private ["So21UIAppearanceContainerP", "UIImage"]
-- !private ["So21UIAppearanceContainerP", "UIImageView"]
+- ["So21UIAppearanceContainerP", "UIImageView"]
 - !private ["So21UIAppearanceContainerP", "UIScreen"]
 - !private ["So21UIAppearanceContainerP", "UITextField"]
 - !private ["So21UIAppearanceContainerP", "UIToolbar"]
@@ -1180,7 +1161,7 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "UIBarButtonItem"]
 - !private ["So17UICoordinateSpaceP", "UIDatePicker"]
 - !private ["So17UICoordinateSpaceP", "UIImage"]
-- !private ["So17UICoordinateSpaceP", "UIImageView"]
+- ["So17UICoordinateSpaceP", "UIImageView"]
 - !private ["So17UICoordinateSpaceP", "UIScreen"]
 - !private ["So17UICoordinateSpaceP", "UITextField"]
 - !private ["So17UICoordinateSpaceP", "UIToolbar"]
@@ -1228,7 +1209,7 @@ depends-member:
 - !private ["So13UIDynamicItemP", "UIBarButtonItem"]
 - !private ["So13UIDynamicItemP", "UIDatePicker"]
 - !private ["So13UIDynamicItemP", "UIImage"]
-- !private ["So13UIDynamicItemP", "UIImageView"]
+- ["So13UIDynamicItemP", "UIImageView"]
 - !private ["So13UIDynamicItemP", "UIScreen"]
 - !private ["So13UIDynamicItemP", "UITextField"]
 - !private ["So13UIDynamicItemP", "UIToolbar"]
@@ -1270,7 +1251,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "UIBarButtonItem"]
 - !private ["So18UIFocusEnvironmentP", "UIDatePicker"]
 - !private ["So18UIFocusEnvironmentP", "UIImage"]
-- !private ["So18UIFocusEnvironmentP", "UIImageView"]
+- ["So18UIFocusEnvironmentP", "UIImageView"]
 - !private ["So18UIFocusEnvironmentP", "UIScreen"]
 - !private ["So18UIFocusEnvironmentP", "UITextField"]
 - !private ["So18UIFocusEnvironmentP", "UIToolbar"]
@@ -1314,7 +1295,7 @@ depends-member:
 - !private ["So11UIFocusItemP", "UIBarButtonItem"]
 - !private ["So11UIFocusItemP", "UIDatePicker"]
 - !private ["So11UIFocusItemP", "UIImage"]
-- !private ["So11UIFocusItemP", "UIImageView"]
+- ["So11UIFocusItemP", "UIImageView"]
 - !private ["So11UIFocusItemP", "UIScreen"]
 - !private ["So11UIFocusItemP", "UITextField"]
 - !private ["So11UIFocusItemP", "UIToolbar"]
@@ -1356,7 +1337,7 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "UIBarButtonItem"]
 - !private ["So20UIFocusItemContainerP", "UIDatePicker"]
 - !private ["So20UIFocusItemContainerP", "UIImage"]
-- !private ["So20UIFocusItemContainerP", "UIImageView"]
+- ["So20UIFocusItemContainerP", "UIImageView"]
 - !private ["So20UIFocusItemContainerP", "UIScreen"]
 - !private ["So20UIFocusItemContainerP", "UITextField"]
 - !private ["So20UIFocusItemContainerP", "UIToolbar"]
@@ -1443,7 +1424,7 @@ depends-member:
 - !private ["So24UILargeContentViewerItemP", "UIBarButtonItem"]
 - !private ["So24UILargeContentViewerItemP", "UIDatePicker"]
 - !private ["So24UILargeContentViewerItemP", "UIImage"]
-- !private ["So24UILargeContentViewerItemP", "UIImageView"]
+- ["So24UILargeContentViewerItemP", "UIImageView"]
 - !private ["So24UILargeContentViewerItemP", "UIScreen"]
 - !private ["So24UILargeContentViewerItemP", "UITextField"]
 - !private ["So24UILargeContentViewerItemP", "UIToolbar"]
@@ -1486,9 +1467,9 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "UIImage"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIImageView"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIScreen"]
-- !private ["So30UIPasteConfigurationSupportingP", "UITextField"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIToolbar"]
-- ["So30UIPasteConfigurationSupportingP", ""]
+- ["So30UIPasteConfigurationSupportingP", "UIView"]
+- !private ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "autocapitalizationType"]
 - !private ["So30UIPasteConfigurationSupportingP", "axis"]
 - !private ["So30UIPasteConfigurationSupportingP", "backgroundColor"]
@@ -1576,8 +1557,8 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "UIImage"]
 - !private ["So30UIResponderStandardEditActionsP", "UIImageView"]
 - !private ["So30UIResponderStandardEditActionsP", "UIScreen"]
-- !private ["So30UIResponderStandardEditActionsP", "UITextField"]
 - !private ["So30UIResponderStandardEditActionsP", "UIToolbar"]
+- ["So30UIResponderStandardEditActionsP", "UIView"]
 - !private ["So30UIResponderStandardEditActionsP", "autocapitalizationType"]
 - !private ["So30UIResponderStandardEditActionsP", "axis"]
 - !private ["So30UIResponderStandardEditActionsP", "backgroundColor"]
@@ -1686,7 +1667,7 @@ depends-member:
 - !private ["So11UITextInputP", "UIDatePicker"]
 - !private ["So11UITextInputP", "UIScreen"]
 - !private ["So11UITextInputP", "UIToolbar"]
-- ["So11UITextInputP", ""]
+- !private ["So11UITextInputP", ""]
 - !private ["So11UITextInputP", "autocapitalizationType"]
 - !private ["So11UITextInputP", "backgroundColor"]
 - !private ["So11UITextInputP", "borderStyle"]
@@ -1722,7 +1703,7 @@ depends-member:
 - !private ["So34UITextPasteConfigurationSupportingP", "UIDatePicker"]
 - !private ["So34UITextPasteConfigurationSupportingP", "UIScreen"]
 - !private ["So34UITextPasteConfigurationSupportingP", "UIToolbar"]
-- ["So34UITextPasteConfigurationSupportingP", ""]
+- !private ["So34UITextPasteConfigurationSupportingP", ""]
 - !private ["So34UITextPasteConfigurationSupportingP", "autocapitalizationType"]
 - !private ["So34UITextPasteConfigurationSupportingP", "backgroundColor"]
 - !private ["So34UITextPasteConfigurationSupportingP", "borderStyle"]
@@ -1745,7 +1726,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "UIBarButtonItem"]
 - !private ["So18UITraitEnvironmentP", "UIDatePicker"]
 - !private ["So18UITraitEnvironmentP", "UIImage"]
-- !private ["So18UITraitEnvironmentP", "UIImageView"]
+- ["So18UITraitEnvironmentP", "UIImageView"]
 - !private ["So18UITraitEnvironmentP", "UIScreen"]
 - !private ["So18UITraitEnvironmentP", "UITextField"]
 - !private ["So18UITraitEnvironmentP", "UIToolbar"]
@@ -1791,8 +1772,8 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "UIImage"]
 - !private ["So23UIUserActivityRestoringP", "UIImageView"]
 - !private ["So23UIUserActivityRestoringP", "UIScreen"]
-- !private ["So23UIUserActivityRestoringP", "UITextField"]
 - !private ["So23UIUserActivityRestoringP", "UIToolbar"]
+- ["So23UIUserActivityRestoringP", "UIView"]
 - !private ["So23UIUserActivityRestoringP", "autocapitalizationType"]
 - !private ["So23UIUserActivityRestoringP", "axis"]
 - !private ["So23UIUserActivityRestoringP", "backgroundColor"]
@@ -2229,7 +2210,9 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Modules/TweetNacl.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Vision.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -2238,11 +2221,14 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Modules/PushNotifications.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/os.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Modules/NWWebSocket.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Modules/PusherSwift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -2254,7 +2240,11 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Headers/PusherSwift-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDS2Service.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseImage.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSErrorMessage.h"
@@ -2275,6 +2265,7 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSErrorMessage+Internal.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDirectoryServerCertificate+Internal.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSException+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseMessageExtension.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSThreeDSProtocolVersion.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSDeviceInformation.h"
@@ -2335,7 +2326,11 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Headers/PusherSwift-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSCompletionEvent.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSRuntimeErrorEvent.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSProtocolErrorEvent.h"
@@ -2353,11 +2348,16 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeSelectionView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSpacerView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWhitelistView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/module.map"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
@@ -2367,6 +2367,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
