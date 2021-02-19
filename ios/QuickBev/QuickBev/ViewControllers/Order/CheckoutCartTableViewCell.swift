@@ -10,10 +10,10 @@ import UIKit
 
 class CheckoutCartTableViewCell: UITableViewCell {
     
-    let drinkImageView = UIImageView()
-    let name = UILabel(theme:Theme.UILabel(props: [.textColor]))
-    let cost = UILabel(theme:Theme.UILabel(props: [.textColor]))
-    let stackView = UIStackView()
+    @UsesAutoLayout var drinkImageView = UIImageView()
+    @UsesAutoLayout var name = UILabel(theme:Theme.UILabel(props: [.textColor]))
+    @UsesAutoLayout var cost = UILabel(theme:Theme.UILabel(props: [.textColor]))
+    @UsesAutoLayout var stackView = UIStackView()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,20 +22,16 @@ class CheckoutCartTableViewCell: UITableViewCell {
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.contentView.addSubview(drinkImageView)
-        
-        name.translatesAutoresizingMaskIntoConstraints = false
+        self.backgroundColor = .clear
         name.font =  UIFont(name: "Charter-Roman", size: 22)
-        drinkImageView.translatesAutoresizingMaskIntoConstraints = false
         drinkImageView.contentMode = .scaleToFill
         drinkImageView.clipsToBounds = true
-        cost.translatesAutoresizingMaskIntoConstraints = false
         cost.font = UIFont(name: "Charter-Roman", size: 22)
         
         let safeArea = self.contentView.safeAreaLayoutGuide
         stackView.axis = .horizontal
         stackView.alignment = .fill
         stackView.distribution = .fill
-        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.addArrangedSubview(name)
         stackView.addArrangedSubview(cost)
         stackView.spacing = 0

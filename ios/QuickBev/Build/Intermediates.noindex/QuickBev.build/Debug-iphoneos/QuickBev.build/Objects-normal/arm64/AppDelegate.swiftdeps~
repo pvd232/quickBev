@@ -1,0 +1,792 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AppDelegate"
+provides-nominal:
+- "8QuickBev11AppDelegateC"
+provides-member:
+- ["8QuickBev11AppDelegateC", ""]
+provides-dynamic-lookup:
+- "application"
+- "applicationWillTerminate"
+- "pushNotifications"
+depends-top-level:
+- "AnyHashable"
+- "AppDelegate"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- !private "CoreDataManager"
+- "Data"
+- !private "IQKeyboardManager"
+- "PushNotifications"
+- "Set"
+- !private "StringLiteralType"
+- !private "StripeAPI"
+- "UIApplication"
+- "UIApplicationDelegate"
+- "UIBackgroundFetchResult"
+- "UIResponder"
+- "UIScene"
+- "UISceneConfiguration"
+- "UISceneSession"
+- "Void"
+depends-member:
+- ["8QuickBev11AppDelegateC", "AnyHashable"]
+- ["8QuickBev11AppDelegateC", "Bool"]
+- !private ["8QuickBev11AppDelegateC", "CoreDataManager"]
+- ["8QuickBev11AppDelegateC", "Data"]
+- !private ["8QuickBev11AppDelegateC", "IQKeyboardManager"]
+- ["8QuickBev11AppDelegateC", "PushNotifications"]
+- ["8QuickBev11AppDelegateC", "Set"]
+- !private ["8QuickBev11AppDelegateC", "StripeAPI"]
+- ["8QuickBev11AppDelegateC", "UIApplication"]
+- ["8QuickBev11AppDelegateC", "UIBackgroundFetchResult"]
+- ["8QuickBev11AppDelegateC", "UIScene"]
+- ["8QuickBev11AppDelegateC", "UISceneConfiguration"]
+- ["8QuickBev11AppDelegateC", "UISceneSession"]
+- ["8QuickBev11AppDelegateC", "Void"]
+- ["8QuickBev11AppDelegateC", ""]
+- ["8QuickBev11AppDelegateC", "application"]
+- ["8QuickBev11AppDelegateC", "applicationDidBecomeActive"]
+- ["8QuickBev11AppDelegateC", "applicationDidEnterBackground"]
+- ["8QuickBev11AppDelegateC", "applicationDidFinishLaunching"]
+- ["8QuickBev11AppDelegateC", "applicationDidReceiveMemoryWarning"]
+- ["8QuickBev11AppDelegateC", "applicationProtectedDataDidBecomeAvailable"]
+- ["8QuickBev11AppDelegateC", "applicationProtectedDataWillBecomeUnavailable"]
+- ["8QuickBev11AppDelegateC", "applicationShouldRequestHealthAuthorization"]
+- ["8QuickBev11AppDelegateC", "applicationSignificantTimeChange"]
+- ["8QuickBev11AppDelegateC", "applicationWillEnterForeground"]
+- ["8QuickBev11AppDelegateC", "applicationWillResignActive"]
+- ["8QuickBev11AppDelegateC", "applicationWillTerminate"]
+- ["8QuickBev11AppDelegateC", "deinit"]
+- ["8QuickBev11AppDelegateC", "init"]
+- ["8QuickBev11AppDelegateC", "pushNotifications"]
+- ["8QuickBev11AppDelegateC", "window"]
+- ["SK", ""]
+- ["s7CVarArgP", "ConnectionOptions"]
+- !private ["s7CVarArgP", "CoreDataManager"]
+- !private ["s7CVarArgP", "IQKeyboardManager"]
+- ["s7CVarArgP", "LaunchOptionsKey"]
+- ["s7CVarArgP", "PushNotifications"]
+- !private ["s7CVarArgP", "StripeAPI"]
+- !private ["s7CVarArgP", "UISceneConfiguration"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "addDeviceInterest"]
+- ["s7CVarArgP", "application"]
+- ["s7CVarArgP", "applicationDidBecomeActive"]
+- ["s7CVarArgP", "applicationDidEnterBackground"]
+- ["s7CVarArgP", "applicationDidFinishLaunching"]
+- ["s7CVarArgP", "applicationDidReceiveMemoryWarning"]
+- ["s7CVarArgP", "applicationProtectedDataDidBecomeAvailable"]
+- ["s7CVarArgP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["s7CVarArgP", "applicationShouldRequestHealthAuthorization"]
+- ["s7CVarArgP", "applicationSignificantTimeChange"]
+- ["s7CVarArgP", "applicationWillEnterForeground"]
+- ["s7CVarArgP", "applicationWillResignActive"]
+- ["s7CVarArgP", "applicationWillTerminate"]
+- !private ["s7CVarArgP", "defaultPublishableKey"]
+- !private ["s7CVarArgP", "enable"]
+- !private ["s7CVarArgP", "handleNotification"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "pushNotifications"]
+- !private ["s7CVarArgP", "registerDeviceToken"]
+- !private ["s7CVarArgP", "registerForRemoteNotifications"]
+- !private ["s7CVarArgP", "role"]
+- ["s7CVarArgP", "shared"]
+- !private ["s7CVarArgP", "start"]
+- ["s7CVarArgP", "window"]
+- ["Sl", ""]
+- ["SL", ""]
+- !private ["8QuickBev15CoreDataManagerC", "saveContext"]
+- !private ["8QuickBev15CoreDataManagerC", "sharedManager"]
+- ["s28CustomDebugStringConvertibleP", "ConnectionOptions"]
+- !private ["s28CustomDebugStringConvertibleP", "CoreDataManager"]
+- !private ["s28CustomDebugStringConvertibleP", "IQKeyboardManager"]
+- ["s28CustomDebugStringConvertibleP", "LaunchOptionsKey"]
+- ["s28CustomDebugStringConvertibleP", "PushNotifications"]
+- !private ["s28CustomDebugStringConvertibleP", "StripeAPI"]
+- !private ["s28CustomDebugStringConvertibleP", "UISceneConfiguration"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "addDeviceInterest"]
+- ["s28CustomDebugStringConvertibleP", "application"]
+- ["s28CustomDebugStringConvertibleP", "applicationDidBecomeActive"]
+- ["s28CustomDebugStringConvertibleP", "applicationDidEnterBackground"]
+- ["s28CustomDebugStringConvertibleP", "applicationDidFinishLaunching"]
+- ["s28CustomDebugStringConvertibleP", "applicationDidReceiveMemoryWarning"]
+- ["s28CustomDebugStringConvertibleP", "applicationProtectedDataDidBecomeAvailable"]
+- ["s28CustomDebugStringConvertibleP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["s28CustomDebugStringConvertibleP", "applicationShouldRequestHealthAuthorization"]
+- ["s28CustomDebugStringConvertibleP", "applicationSignificantTimeChange"]
+- ["s28CustomDebugStringConvertibleP", "applicationWillEnterForeground"]
+- ["s28CustomDebugStringConvertibleP", "applicationWillResignActive"]
+- ["s28CustomDebugStringConvertibleP", "applicationWillTerminate"]
+- !private ["s28CustomDebugStringConvertibleP", "defaultPublishableKey"]
+- !private ["s28CustomDebugStringConvertibleP", "enable"]
+- !private ["s28CustomDebugStringConvertibleP", "handleNotification"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "pushNotifications"]
+- !private ["s28CustomDebugStringConvertibleP", "registerDeviceToken"]
+- !private ["s28CustomDebugStringConvertibleP", "registerForRemoteNotifications"]
+- !private ["s28CustomDebugStringConvertibleP", "role"]
+- ["s28CustomDebugStringConvertibleP", "shared"]
+- !private ["s28CustomDebugStringConvertibleP", "start"]
+- ["s28CustomDebugStringConvertibleP", "window"]
+- ["s23CustomStringConvertibleP", "ConnectionOptions"]
+- !private ["s23CustomStringConvertibleP", "CoreDataManager"]
+- !private ["s23CustomStringConvertibleP", "IQKeyboardManager"]
+- ["s23CustomStringConvertibleP", "LaunchOptionsKey"]
+- ["s23CustomStringConvertibleP", "PushNotifications"]
+- !private ["s23CustomStringConvertibleP", "StripeAPI"]
+- !private ["s23CustomStringConvertibleP", "UISceneConfiguration"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "addDeviceInterest"]
+- ["s23CustomStringConvertibleP", "application"]
+- ["s23CustomStringConvertibleP", "applicationDidBecomeActive"]
+- ["s23CustomStringConvertibleP", "applicationDidEnterBackground"]
+- ["s23CustomStringConvertibleP", "applicationDidFinishLaunching"]
+- ["s23CustomStringConvertibleP", "applicationDidReceiveMemoryWarning"]
+- ["s23CustomStringConvertibleP", "applicationProtectedDataDidBecomeAvailable"]
+- ["s23CustomStringConvertibleP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["s23CustomStringConvertibleP", "applicationShouldRequestHealthAuthorization"]
+- ["s23CustomStringConvertibleP", "applicationSignificantTimeChange"]
+- ["s23CustomStringConvertibleP", "applicationWillEnterForeground"]
+- ["s23CustomStringConvertibleP", "applicationWillResignActive"]
+- ["s23CustomStringConvertibleP", "applicationWillTerminate"]
+- !private ["s23CustomStringConvertibleP", "defaultPublishableKey"]
+- !private ["s23CustomStringConvertibleP", "enable"]
+- !private ["s23CustomStringConvertibleP", "handleNotification"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "pushNotifications"]
+- !private ["s23CustomStringConvertibleP", "registerDeviceToken"]
+- !private ["s23CustomStringConvertibleP", "registerForRemoteNotifications"]
+- !private ["s23CustomStringConvertibleP", "role"]
+- ["s23CustomStringConvertibleP", "shared"]
+- !private ["s23CustomStringConvertibleP", "start"]
+- ["s23CustomStringConvertibleP", "window"]
+- ["SQ", "ConnectionOptions"]
+- !private ["SQ", "CoreDataManager"]
+- !private ["SQ", "IQKeyboardManager"]
+- ["SQ", "LaunchOptionsKey"]
+- ["SQ", "PushNotifications"]
+- !private ["SQ", "StripeAPI"]
+- !private ["SQ", "UISceneConfiguration"]
+- ["SQ", ""]
+- !private ["SQ", "addDeviceInterest"]
+- ["SQ", "application"]
+- ["SQ", "applicationDidBecomeActive"]
+- ["SQ", "applicationDidEnterBackground"]
+- ["SQ", "applicationDidFinishLaunching"]
+- ["SQ", "applicationDidReceiveMemoryWarning"]
+- ["SQ", "applicationProtectedDataDidBecomeAvailable"]
+- ["SQ", "applicationProtectedDataWillBecomeUnavailable"]
+- ["SQ", "applicationShouldRequestHealthAuthorization"]
+- ["SQ", "applicationSignificantTimeChange"]
+- ["SQ", "applicationWillEnterForeground"]
+- ["SQ", "applicationWillResignActive"]
+- ["SQ", "applicationWillTerminate"]
+- !private ["SQ", "defaultPublishableKey"]
+- !private ["SQ", "enable"]
+- !private ["SQ", "handleNotification"]
+- !private ["SQ", "init"]
+- !private ["SQ", "pushNotifications"]
+- !private ["SQ", "registerDeviceToken"]
+- !private ["SQ", "registerForRemoteNotifications"]
+- !private ["SQ", "role"]
+- ["SQ", "shared"]
+- !private ["SQ", "start"]
+- ["SQ", "window"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- ["s32ExpressibleByStringInterpolationP", ""]
+- ["s26ExpressibleByStringLiteralP", ""]
+- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- ["SH", "ConnectionOptions"]
+- !private ["SH", "CoreDataManager"]
+- !private ["SH", "IQKeyboardManager"]
+- ["SH", "LaunchOptionsKey"]
+- ["SH", "PushNotifications"]
+- !private ["SH", "StripeAPI"]
+- !private ["SH", "UISceneConfiguration"]
+- ["SH", ""]
+- !private ["SH", "addDeviceInterest"]
+- ["SH", "application"]
+- ["SH", "applicationDidBecomeActive"]
+- ["SH", "applicationDidEnterBackground"]
+- ["SH", "applicationDidFinishLaunching"]
+- ["SH", "applicationDidReceiveMemoryWarning"]
+- ["SH", "applicationProtectedDataDidBecomeAvailable"]
+- ["SH", "applicationProtectedDataWillBecomeUnavailable"]
+- ["SH", "applicationShouldRequestHealthAuthorization"]
+- ["SH", "applicationSignificantTimeChange"]
+- ["SH", "applicationWillEnterForeground"]
+- ["SH", "applicationWillResignActive"]
+- ["SH", "applicationWillTerminate"]
+- !private ["SH", "defaultPublishableKey"]
+- !private ["SH", "enable"]
+- !private ["SH", "handleNotification"]
+- !private ["SH", "init"]
+- !private ["SH", "pushNotifications"]
+- !private ["SH", "registerDeviceToken"]
+- !private ["SH", "registerForRemoteNotifications"]
+- !private ["SH", "role"]
+- ["SH", "shared"]
+- !private ["SH", "start"]
+- ["SH", "window"]
+- !private ["22IQKeyboardManagerSwift0aB0C", "enable"]
+- !private ["22IQKeyboardManagerSwift0aB0C", "shared"]
+- ["s25LosslessStringConvertibleP", ""]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "role"]
+- !private ["So9NSCopyingP", "init"]
+- ["So8NSObjectC", "AnyHashable"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "ConnectionOptions"]
+- !private ["So8NSObjectC", "CoreDataManager"]
+- ["So8NSObjectC", "Data"]
+- !private ["So8NSObjectC", "IQKeyboardManager"]
+- ["So8NSObjectC", "LaunchOptionsKey"]
+- ["So8NSObjectC", "PushNotifications"]
+- ["So8NSObjectC", "Set"]
+- !private ["So8NSObjectC", "StripeAPI"]
+- ["So8NSObjectC", "UIApplication"]
+- ["So8NSObjectC", "UIBackgroundFetchResult"]
+- ["So8NSObjectC", "UIScene"]
+- ["So8NSObjectC", "UISceneConfiguration"]
+- ["So8NSObjectC", "UISceneSession"]
+- ["So8NSObjectC", "Void"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "addDeviceInterest"]
+- ["So8NSObjectC", "application"]
+- ["So8NSObjectC", "applicationDidBecomeActive"]
+- ["So8NSObjectC", "applicationDidEnterBackground"]
+- ["So8NSObjectC", "applicationDidFinishLaunching"]
+- ["So8NSObjectC", "applicationDidReceiveMemoryWarning"]
+- ["So8NSObjectC", "applicationProtectedDataDidBecomeAvailable"]
+- ["So8NSObjectC", "applicationProtectedDataWillBecomeUnavailable"]
+- ["So8NSObjectC", "applicationShouldRequestHealthAuthorization"]
+- ["So8NSObjectC", "applicationSignificantTimeChange"]
+- ["So8NSObjectC", "applicationWillEnterForeground"]
+- ["So8NSObjectC", "applicationWillResignActive"]
+- ["So8NSObjectC", "applicationWillTerminate"]
+- !private ["So8NSObjectC", "configurationWithName"]
+- !private ["So8NSObjectC", "defaultPublishableKey"]
+- !private ["So8NSObjectC", "enable"]
+- !private ["So8NSObjectC", "handleNotification"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "pushNotifications"]
+- !private ["So8NSObjectC", "registerDeviceToken"]
+- !private ["So8NSObjectC", "registerForRemoteNotifications"]
+- !private ["So8NSObjectC", "role"]
+- ["So8NSObjectC", "shared"]
+- !private ["So8NSObjectC", "start"]
+- ["So8NSObjectC", "window"]
+- ["So8NSObjectP", "AnyHashable"]
+- ["So8NSObjectP", "ConnectionOptions"]
+- !private ["So8NSObjectP", "CoreDataManager"]
+- !private ["So8NSObjectP", "IQKeyboardManager"]
+- ["So8NSObjectP", "LaunchOptionsKey"]
+- ["So8NSObjectP", "PushNotifications"]
+- ["So8NSObjectP", "Set"]
+- !private ["So8NSObjectP", "StripeAPI"]
+- ["So8NSObjectP", "UIApplication"]
+- ["So8NSObjectP", "UIBackgroundFetchResult"]
+- ["So8NSObjectP", "UIScene"]
+- ["So8NSObjectP", "UISceneConfiguration"]
+- ["So8NSObjectP", "UISceneSession"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "addDeviceInterest"]
+- ["So8NSObjectP", "application"]
+- ["So8NSObjectP", "applicationDidBecomeActive"]
+- ["So8NSObjectP", "applicationDidEnterBackground"]
+- ["So8NSObjectP", "applicationDidFinishLaunching"]
+- ["So8NSObjectP", "applicationDidReceiveMemoryWarning"]
+- ["So8NSObjectP", "applicationProtectedDataDidBecomeAvailable"]
+- ["So8NSObjectP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["So8NSObjectP", "applicationShouldRequestHealthAuthorization"]
+- ["So8NSObjectP", "applicationSignificantTimeChange"]
+- ["So8NSObjectP", "applicationWillEnterForeground"]
+- ["So8NSObjectP", "applicationWillResignActive"]
+- ["So8NSObjectP", "applicationWillTerminate"]
+- !private ["So8NSObjectP", "configurationWithName"]
+- !private ["So8NSObjectP", "defaultPublishableKey"]
+- ["So8NSObjectP", "deinit"]
+- !private ["So8NSObjectP", "enable"]
+- !private ["So8NSObjectP", "handleNotification"]
+- ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "pushNotifications"]
+- !private ["So8NSObjectP", "registerDeviceToken"]
+- !private ["So8NSObjectP", "registerForRemoteNotifications"]
+- !private ["So8NSObjectP", "role"]
+- ["So8NSObjectP", "shared"]
+- !private ["So8NSObjectP", "start"]
+- ["So8NSObjectP", "window"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "role"]
+- ["17PushNotificationsAAC", "shared"]
+- !private ["17PushNotifications0aB6StaticC", "addDeviceInterest"]
+- !private ["17PushNotifications0aB6StaticC", "handleNotification"]
+- !private ["17PushNotifications0aB6StaticC", "registerDeviceToken"]
+- !private ["17PushNotifications0aB6StaticC", "registerForRemoteNotifications"]
+- !private ["17PushNotifications0aB6StaticC", "start"]
+- ["ST", ""]
+- !private ["6Stripe0A3APIC", "defaultPublishableKey"]
+- ["s16TextOutputStreamP", ""]
+- ["s20TextOutputStreamableP", ""]
+- ["So13UIApplicationC", "LaunchOptionsKey"]
+- !private ["So21UIApplicationDelegateP", "CoreDataManager"]
+- !private ["So21UIApplicationDelegateP", "IQKeyboardManager"]
+- ["So21UIApplicationDelegateP", "PushNotifications"]
+- !private ["So21UIApplicationDelegateP", "StripeAPI"]
+- !private ["So21UIApplicationDelegateP", "UISceneConfiguration"]
+- ["So21UIApplicationDelegateP", ""]
+- ["So21UIApplicationDelegateP", "application"]
+- ["So21UIApplicationDelegateP", "applicationDidBecomeActive"]
+- ["So21UIApplicationDelegateP", "applicationDidEnterBackground"]
+- ["So21UIApplicationDelegateP", "applicationDidFinishLaunching"]
+- ["So21UIApplicationDelegateP", "applicationDidReceiveMemoryWarning"]
+- ["So21UIApplicationDelegateP", "applicationProtectedDataDidBecomeAvailable"]
+- ["So21UIApplicationDelegateP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["So21UIApplicationDelegateP", "applicationShouldRequestHealthAuthorization"]
+- ["So21UIApplicationDelegateP", "applicationSignificantTimeChange"]
+- ["So21UIApplicationDelegateP", "applicationWillEnterForeground"]
+- ["So21UIApplicationDelegateP", "applicationWillResignActive"]
+- ["So21UIApplicationDelegateP", "applicationWillTerminate"]
+- ["So21UIApplicationDelegateP", "deinit"]
+- ["So21UIApplicationDelegateP", "init"]
+- ["So21UIApplicationDelegateP", "pushNotifications"]
+- ["So21UIApplicationDelegateP", "window"]
+- !private ["So27UIGestureRecognizerDelegateP", "enable"]
+- !private ["So27UIGestureRecognizerDelegateP", "shared"]
+- ["So30UIPasteConfigurationSupportingP", "AnyHashable"]
+- ["So30UIPasteConfigurationSupportingP", "ConnectionOptions"]
+- !private ["So30UIPasteConfigurationSupportingP", "CoreDataManager"]
+- !private ["So30UIPasteConfigurationSupportingP", "IQKeyboardManager"]
+- ["So30UIPasteConfigurationSupportingP", "LaunchOptionsKey"]
+- ["So30UIPasteConfigurationSupportingP", "PushNotifications"]
+- ["So30UIPasteConfigurationSupportingP", "Set"]
+- !private ["So30UIPasteConfigurationSupportingP", "StripeAPI"]
+- ["So30UIPasteConfigurationSupportingP", "UIApplication"]
+- ["So30UIPasteConfigurationSupportingP", "UIBackgroundFetchResult"]
+- ["So30UIPasteConfigurationSupportingP", "UIScene"]
+- ["So30UIPasteConfigurationSupportingP", "UISceneConfiguration"]
+- ["So30UIPasteConfigurationSupportingP", "UISceneSession"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- ["So30UIPasteConfigurationSupportingP", "application"]
+- ["So30UIPasteConfigurationSupportingP", "applicationDidBecomeActive"]
+- ["So30UIPasteConfigurationSupportingP", "applicationDidEnterBackground"]
+- ["So30UIPasteConfigurationSupportingP", "applicationDidFinishLaunching"]
+- ["So30UIPasteConfigurationSupportingP", "applicationDidReceiveMemoryWarning"]
+- ["So30UIPasteConfigurationSupportingP", "applicationProtectedDataDidBecomeAvailable"]
+- ["So30UIPasteConfigurationSupportingP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["So30UIPasteConfigurationSupportingP", "applicationShouldRequestHealthAuthorization"]
+- ["So30UIPasteConfigurationSupportingP", "applicationSignificantTimeChange"]
+- ["So30UIPasteConfigurationSupportingP", "applicationWillEnterForeground"]
+- ["So30UIPasteConfigurationSupportingP", "applicationWillResignActive"]
+- ["So30UIPasteConfigurationSupportingP", "applicationWillTerminate"]
+- ["So30UIPasteConfigurationSupportingP", "deinit"]
+- ["So30UIPasteConfigurationSupportingP", "init"]
+- ["So30UIPasteConfigurationSupportingP", "pushNotifications"]
+- ["So30UIPasteConfigurationSupportingP", "window"]
+- ["So11UIResponderC", "AnyHashable"]
+- ["So11UIResponderC", "Bool"]
+- ["So11UIResponderC", "ConnectionOptions"]
+- !private ["So11UIResponderC", "CoreDataManager"]
+- ["So11UIResponderC", "Data"]
+- !private ["So11UIResponderC", "IQKeyboardManager"]
+- ["So11UIResponderC", "LaunchOptionsKey"]
+- ["So11UIResponderC", "PushNotifications"]
+- ["So11UIResponderC", "Set"]
+- !private ["So11UIResponderC", "StripeAPI"]
+- ["So11UIResponderC", "UIApplication"]
+- ["So11UIResponderC", "UIBackgroundFetchResult"]
+- ["So11UIResponderC", "UIScene"]
+- ["So11UIResponderC", "UISceneConfiguration"]
+- ["So11UIResponderC", "UISceneSession"]
+- ["So11UIResponderC", "Void"]
+- ["So11UIResponderC", ""]
+- ["So11UIResponderC", "application"]
+- ["So11UIResponderC", "applicationDidBecomeActive"]
+- ["So11UIResponderC", "applicationDidEnterBackground"]
+- ["So11UIResponderC", "applicationDidFinishLaunching"]
+- ["So11UIResponderC", "applicationDidReceiveMemoryWarning"]
+- ["So11UIResponderC", "applicationProtectedDataDidBecomeAvailable"]
+- ["So11UIResponderC", "applicationProtectedDataWillBecomeUnavailable"]
+- ["So11UIResponderC", "applicationShouldRequestHealthAuthorization"]
+- ["So11UIResponderC", "applicationSignificantTimeChange"]
+- ["So11UIResponderC", "applicationWillEnterForeground"]
+- ["So11UIResponderC", "applicationWillResignActive"]
+- ["So11UIResponderC", "applicationWillTerminate"]
+- ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "pushNotifications"]
+- ["So11UIResponderC", "window"]
+- ["So30UIResponderStandardEditActionsP", "AnyHashable"]
+- ["So30UIResponderStandardEditActionsP", "ConnectionOptions"]
+- !private ["So30UIResponderStandardEditActionsP", "CoreDataManager"]
+- !private ["So30UIResponderStandardEditActionsP", "IQKeyboardManager"]
+- ["So30UIResponderStandardEditActionsP", "LaunchOptionsKey"]
+- ["So30UIResponderStandardEditActionsP", "PushNotifications"]
+- ["So30UIResponderStandardEditActionsP", "Set"]
+- !private ["So30UIResponderStandardEditActionsP", "StripeAPI"]
+- ["So30UIResponderStandardEditActionsP", "UIApplication"]
+- ["So30UIResponderStandardEditActionsP", "UIBackgroundFetchResult"]
+- ["So30UIResponderStandardEditActionsP", "UIScene"]
+- ["So30UIResponderStandardEditActionsP", "UISceneConfiguration"]
+- ["So30UIResponderStandardEditActionsP", "UISceneSession"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- ["So30UIResponderStandardEditActionsP", "application"]
+- ["So30UIResponderStandardEditActionsP", "applicationDidBecomeActive"]
+- ["So30UIResponderStandardEditActionsP", "applicationDidEnterBackground"]
+- ["So30UIResponderStandardEditActionsP", "applicationDidFinishLaunching"]
+- ["So30UIResponderStandardEditActionsP", "applicationDidReceiveMemoryWarning"]
+- ["So30UIResponderStandardEditActionsP", "applicationProtectedDataDidBecomeAvailable"]
+- ["So30UIResponderStandardEditActionsP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["So30UIResponderStandardEditActionsP", "applicationShouldRequestHealthAuthorization"]
+- ["So30UIResponderStandardEditActionsP", "applicationSignificantTimeChange"]
+- ["So30UIResponderStandardEditActionsP", "applicationWillEnterForeground"]
+- ["So30UIResponderStandardEditActionsP", "applicationWillResignActive"]
+- ["So30UIResponderStandardEditActionsP", "applicationWillTerminate"]
+- ["So30UIResponderStandardEditActionsP", "deinit"]
+- ["So30UIResponderStandardEditActionsP", "init"]
+- ["So30UIResponderStandardEditActionsP", "pushNotifications"]
+- ["So30UIResponderStandardEditActionsP", "window"]
+- ["So7UISceneC", "ConnectionOptions"]
+- !private ["So20UISceneConfigurationC", "init"]
+- !private ["So14UISceneSessionC", "role"]
+- ["So23UIUserActivityRestoringP", "AnyHashable"]
+- ["So23UIUserActivityRestoringP", "ConnectionOptions"]
+- !private ["So23UIUserActivityRestoringP", "CoreDataManager"]
+- !private ["So23UIUserActivityRestoringP", "IQKeyboardManager"]
+- ["So23UIUserActivityRestoringP", "LaunchOptionsKey"]
+- ["So23UIUserActivityRestoringP", "PushNotifications"]
+- ["So23UIUserActivityRestoringP", "Set"]
+- !private ["So23UIUserActivityRestoringP", "StripeAPI"]
+- ["So23UIUserActivityRestoringP", "UIApplication"]
+- ["So23UIUserActivityRestoringP", "UIBackgroundFetchResult"]
+- ["So23UIUserActivityRestoringP", "UIScene"]
+- ["So23UIUserActivityRestoringP", "UISceneConfiguration"]
+- ["So23UIUserActivityRestoringP", "UISceneSession"]
+- ["So23UIUserActivityRestoringP", ""]
+- ["So23UIUserActivityRestoringP", "application"]
+- ["So23UIUserActivityRestoringP", "applicationDidBecomeActive"]
+- ["So23UIUserActivityRestoringP", "applicationDidEnterBackground"]
+- ["So23UIUserActivityRestoringP", "applicationDidFinishLaunching"]
+- ["So23UIUserActivityRestoringP", "applicationDidReceiveMemoryWarning"]
+- ["So23UIUserActivityRestoringP", "applicationProtectedDataDidBecomeAvailable"]
+- ["So23UIUserActivityRestoringP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["So23UIUserActivityRestoringP", "applicationShouldRequestHealthAuthorization"]
+- ["So23UIUserActivityRestoringP", "applicationSignificantTimeChange"]
+- ["So23UIUserActivityRestoringP", "applicationWillEnterForeground"]
+- ["So23UIUserActivityRestoringP", "applicationWillResignActive"]
+- ["So23UIUserActivityRestoringP", "applicationWillTerminate"]
+- ["So23UIUserActivityRestoringP", "deinit"]
+- ["So23UIUserActivityRestoringP", "init"]
+- ["So23UIUserActivityRestoringP", "pushNotifications"]
+- ["So23UIUserActivityRestoringP", "window"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- ["10Foundation27_KeyValueCodingAndObservingP", "ConnectionOptions"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CoreDataManager"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "IQKeyboardManager"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "LaunchOptionsKey"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "PushNotifications"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "StripeAPI"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UISceneConfiguration"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addDeviceInterest"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "application"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "applicationDidBecomeActive"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "applicationDidEnterBackground"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "applicationDidFinishLaunching"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "applicationDidReceiveMemoryWarning"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "applicationProtectedDataDidBecomeAvailable"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "applicationShouldRequestHealthAuthorization"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "applicationSignificantTimeChange"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "applicationWillEnterForeground"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "applicationWillResignActive"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "applicationWillTerminate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "defaultPublishableKey"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "enable"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "handleNotification"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "pushNotifications"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "registerDeviceToken"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "registerForRemoteNotifications"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "role"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "start"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "window"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ConnectionOptions"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CoreDataManager"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "IQKeyboardManager"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "LaunchOptionsKey"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PushNotifications"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "StripeAPI"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UISceneConfiguration"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addDeviceInterest"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "application"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applicationDidBecomeActive"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applicationDidEnterBackground"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applicationDidFinishLaunching"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applicationDidReceiveMemoryWarning"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applicationProtectedDataDidBecomeAvailable"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applicationShouldRequestHealthAuthorization"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applicationSignificantTimeChange"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applicationWillEnterForeground"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applicationWillResignActive"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applicationWillTerminate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "defaultPublishableKey"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "enable"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "handleNotification"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "pushNotifications"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "registerDeviceToken"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "registerForRemoteNotifications"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "role"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "start"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "window"]
+depends-nominal:
+- "8QuickBev11AppDelegateC"
+- "SK"
+- "s7CVarArgP"
+- "Sl"
+- "SL"
+- !private "8QuickBev15CoreDataManagerC"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "SQ"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s32ExpressibleByStringInterpolationP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "SH"
+- !private "22IQKeyboardManagerSwift0aB0C"
+- "s25LosslessStringConvertibleP"
+- "So8NSCodingP"
+- !private "So9NSCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- "17PushNotificationsAAC"
+- !private "17PushNotifications0aB6StaticC"
+- "ST"
+- !private "6Stripe0A3APIC"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- "So13UIApplicationC"
+- "So21UIApplicationDelegateP"
+- !private "So27UIGestureRecognizerDelegateP"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So7UISceneC"
+- !private "So20UISceneConfigurationC"
+- !private "So14UISceneSessionC"
+- "So23UIUserActivityRestoringP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreMIDI.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreML.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreMedia.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreData.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/BadgeHub/BadgeHub.framework/Modules/BadgeHub.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/simd.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Network.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/TweetNacl/TweetNacl.framework/Modules/TweetNacl.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Vision.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreLocation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/AVFoundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreAudio.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/PushNotifications/PushNotifications.framework/Modules/PushNotifications.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/os.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Contacts.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/NWWebSocket/NWWebSocket.framework/Modules/NWWebSocket.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/PusherSwift/PusherSwift.framework/Modules/PusherSwift.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/WebKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CloudKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/MapKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/UIViewController+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/NSError+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/BadgeHub/BadgeHub.framework/Headers/BadgeHub-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/TweetNacl/TweetNacl.framework/Headers/TweetNacl-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/PushNotifications/PushNotifications.framework/Headers/PushNotifications-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/PusherSwift/PusherSwift.framework/Headers/PusherSwift-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSThreeDS2Service.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeResponseImage.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSErrorMessage.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSJSONDecodable.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSJSONEncodable.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSJSONWebSignature.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeResponse.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSAuthenticationResponse.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSDirectoryServerCertificate.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSThreeDSProtocolVersion+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSTransaction+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSDeviceInformationParameter+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/NSString+EmptyChecking.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSWarning.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSLocalizedString.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSEphemeralKeyPair+Testing.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSSwiftTryCatch.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSErrorMessage+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSDirectoryServerCertificate+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSException+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/TweetNacl/TweetNacl.framework/Headers/TweetNacl.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeResponseMessageExtension.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSDeviceInformation.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/UIButton+CustomInitialization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSUICustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSTextFieldCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSLabelCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSSelectionCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSButtonCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSNavigationBarCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSFooterCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSTransaction.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSNotInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSAlreadyInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSRuntimeException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSInvalidInputException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSJSONWebEncryption.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSSelectionButton.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfo.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/Stripe3DS2-Bridging-Header.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSImageLoader.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSJSONEncoder.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSACSNetworkingManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSSynchronousLocationManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSDeviceInformationManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSJailbreakChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSOSVersionChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSDebuggerChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSSimulatorChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSIntegrityChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSCategoryLinker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeResponseViewController.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSProgressViewController.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSDeviceInformationParameter.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSDirectoryServer.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSEphemeralKeyPair.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSStripe3DS2Error.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSBundleLocator.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSSecTypeUtilities.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/NSData+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/NSString+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/NSDictionary+DecodingHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSConfigParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/UIColor+DefaultColors.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSIPAddress.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/UIFont+DefaultFonts.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeResponseImageObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSAuthenticationResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeResponseMessageExtensionObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfoObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/BadgeHub/BadgeHub.framework/Headers/BadgeHub-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/TweetNacl/TweetNacl.framework/Headers/TweetNacl-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/PushNotifications/PushNotifications.framework/Headers/PushNotifications-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/PusherSwift/PusherSwift.framework/Headers/PusherSwift-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSCompletionEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSEllipticCurvePoint.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/UIColor+ThirteenSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/NSLayoutConstraint+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/UIView+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSWebView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSTextChallengeView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSBrandingView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSProcessingView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSStackView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSExpandableInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeSelectionView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSSpacerView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSWhitelistView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/module.map"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/BadgeHub/BadgeHub.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/TweetNacl/TweetNacl.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/PushNotifications/PushNotifications.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/NWWebSocket/NWWebSocket.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/PusherSwift/PusherSwift.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "963c4896d25a4bb4a4ee56f2c84535f0"

@@ -13,7 +13,6 @@ class CheckoutViewController : UIViewController, UITableViewDelegate, UITableVie
     @UsesAutoLayout var bottomButtonStackView = UIStackView()
     @UsesAutoLayout var addMoreItemsButton = RoundButton()
     @UsesAutoLayout var reviewOrderButton = RoundButton()
-    
     @UsesAutoLayout var tableView = UITableView()
     
     init() {
@@ -29,6 +28,7 @@ class CheckoutViewController : UIViewController, UITableViewDelegate, UITableVie
         self.view.backgroundColor = .white
         
         self.view.addSubview(tableView)
+        tableView.backgroundColor = .white
         self.view.addSubview(bottomButtonView)
         bottomButtonView.addSubview(bottomButtonStackView)
         bottomButtonStackView.addArrangedSubview(addMoreItemsButton)

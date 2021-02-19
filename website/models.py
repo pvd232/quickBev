@@ -61,7 +61,7 @@ class Drink(db.Model):
 
 class Business(db.Model):
     __tablename__ = 'business'
-    id = db.Column(UUID(as_uuid=True), default=uuid.uuid4, primary_key=True,  # https://stackoverflow.com/questions/55917056/how-to-prevent-uuid-primary-key-for-new-sqlalchemy-objects-being-created-with-th
+    id = db.Column(UUID(as_uuid=True), primary_key=True,  # https://stackoverflow.com/questions/55917056/how-to-prevent-uuid-primary-key-for-new-sqlalchemy-objects-being-created-with-th
                    unique=True, nullable=False)
     merchant_stripe_id = db.Column(db.String(80), db.ForeignKey(
         'stripe_account.id'), nullable=False)
@@ -304,7 +304,7 @@ def create_business():
         state = business['state']
         zipcode = business['zipcode']
         address = f"{street}, {city}, {state} {zipcode}"
-        new_business = Business(merchant_id=merchant_id, merchant_stripe_id=new_account.id,
+        new_business = Business(id = uuid.uuid4(), merchant_id=merchant_id, merchant_stripe_id=new_account.id,
                                 name=name, date_joined=date_joined, sales_tax_rate=sales_tax_rate, classification=classification, street=street, city=city,
                                 state=state, zipcode=zipcode, address=address, tablet=tablet, phone_number=phone_number)
         # After I create the drink, I can then add it to my session.
@@ -312,9 +312,9 @@ def create_business():
 
     new_stripe_customer = stripe.Customer.create()
     new_stripe_customer_id = Stripe_Customer(id=new_stripe_customer.id)
-    id = generate_password_hash("a", "sha256")
+    # id = generate_password_hash("a", "sha256")
     password = generate_password_hash("a", "sha256")
-    new_customer = Customer(id=id, password=password,
+    new_customer = Customer(id="a", password=password,
                             first_name="peter", last_name="driscoll", stripe_id=new_stripe_customer.id, email_verified=False)
     db.session.add(new_stripe_customer_id)
     db.session.add(new_customer)

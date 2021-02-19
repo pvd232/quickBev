@@ -49,27 +49,41 @@ public class Drink: NSManagedObject, Codable, NSCopying {
         try nestedContainer.encode(self.quantity, forKey: .quantity)
     }
     static func getDrinks(completion: @escaping ([Drink]?) -> Void) {
-        AF.request("http://127.0.0.1:5000/inventory", method: .get)
-            .validate()
-            .response { response in
-                switch response.result {
-                case .success:
-                    os_log("Successful API Inventory Call")
-                    guard let rawData = response.value
-                    else {
-                        os_log("failure to capture data")
-                        return completion(nil)
+        let request = APIRequest( method: .get, path:"/drink")
+        APIClient().perform(request)
+           { result in
+                switch result {
+                case .success(let response):
+                    if response.statusCode == 200, let response = try? response.decode(to: [String: [Drink]].self)  {
+                        let drinks =  response.body["drinks"]
+                        completion(drinks)
                     }
-                    let json = try! JSONSerialization.jsonObject(with: rawData!, options: []) as! NSDictionary
-                    let rawInventory = try! JSONSerialization.data(withJSONObject: json.value(forKey: "drinks")!, options: [])
-                    let jsonDecoder = JSONDecoder()
-                    let drinks = try! jsonDecoder.decode([Drink].self, from: rawInventory)
-                    completion(drinks)
                 case .failure(let error):
                     completion(nil)
                     print(error)
                 }
             }
+//        AF.request("http://127.0.0.1:5000/inventory", method: .get)
+//            .validate()
+//            .response { response in
+//                switch response.result {
+//                case .success:
+//                    os_log("Successful API Inventory Call")
+//                    guard let rawData = response.value
+//                    else {
+//                        os_log("failure to capture data")
+//                        return completion(nil)
+//                    }
+//                    let json = try! JSONSerialization.jsonObject(with: rawData!, options: []) as! NSDictionary
+//                    let rawInventory = try! JSONSerialization.data(withJSONObject: json.value(forKey: "drinks")!, options: [])
+//                    let jsonDecoder = JSONDecoder()
+//                    let drinks = try! jsonDecoder.decode([Drink].self, from: rawInventory)
+//                    completion(drinks)
+//                case .failure(let error):
+//                    completion(nil)
+//                    print(error)
+//                }
+//            }
     }
     public func copy(with zone: NSZone? = nil) -> Any {
 //        let copy = Drink(Id: self.id!, Name: self.name!, Detail: self.detail!, Price: self.price, businessAddressId: self.businessAddressId!)

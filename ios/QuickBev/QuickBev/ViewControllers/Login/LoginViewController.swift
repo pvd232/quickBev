@@ -36,9 +36,9 @@ class LoginViewController: UIViewController,  UITextFieldDelegate {
     }()
     @UsesAutoLayout var logoImageView = UIImageView()
     @UsesAutoLayout var emailAddressLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
-    @UsesAutoLayout var emailTextField = UITextField()
+    @UsesAutoLayout var emailTextField = RoundedUITextField(theme: Theme.UITextField(props: [.borderStyle(borderStyle: .roundedRect), .font(nil)]))
     @UsesAutoLayout var passwordLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
-    @UsesAutoLayout var passwordTextField = UITextField()
+    @UsesAutoLayout var passwordTextField = RoundedUITextField(theme: Theme.UITextField(props: [.borderStyle(borderStyle: .roundedRect), .font(nil)]))
     @UsesAutoLayout var forgotPasswordButton = UIButton()
     @UsesAutoLayout var submitButton = RoundButton()
     @UsesAutoLayout private var activityIndicator = UIActivityIndicatorView(style: .large)
@@ -84,10 +84,6 @@ class LoginViewController: UIViewController,  UITextFieldDelegate {
         emailTextField.backgroundColor = UIColor.clear
         // in order to identify the textfield when extracting information for form value
         emailTextField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedString.Key.foregroundColor: UIColor.clear])
-        emailTextField.addLeftBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
-        emailTextField.addRightBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
-        emailTextField.addTopBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
-        emailTextField.addBottomBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
         
         passwordLabel.text = "Password"
         passwordLabel.textColor = .black
@@ -98,10 +94,6 @@ class LoginViewController: UIViewController,  UITextFieldDelegate {
         passwordTextField.isSecureTextEntry = true
         
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.clear])
-        passwordTextField.addLeftBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
-        passwordTextField.addRightBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
-        passwordTextField.addTopBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
-        passwordTextField.addBottomBorder(with: UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0), andWidth: 1.0)
         
         forgotPasswordButton.setTitle("Forgot Password?", for: .normal)
         forgotPasswordButton.titleLabel?.font = UIFont(name: "Charter-Roman", size: 18.0)

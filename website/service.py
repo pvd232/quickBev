@@ -173,9 +173,11 @@ class Business_Service(object):
             business_domain = Business_Domain(business_json=business)
             business_database_object = self.business_repository.add_business(
                 session, business_domain)
-            # update the business domain id with the uuid that was created
-            business_domain.id = business_database_object.id
-            return business_domain
+            if business_database_object:
+                # the new business domain has a UUID that was created during initialization
+                return business_domain 
+            else:
+                return False
 
     def update_business(self, business):
         with session_scope() as session:

@@ -50,8 +50,7 @@ depends-top-level:
 - !private "view"
 depends-member:
 - ["s18AdditiveArithmeticP", ""]
-- ["SK", ""]
-- !private ["So15CALayerDelegateP", ""]
+- !private ["SK", ""]
 - !private ["So15CALayerDelegateP", "addSubview"]
 - !private ["So15CALayerDelegateP", "backgroundColor"]
 - !private ["So15CALayerDelegateP", "font"]
@@ -106,7 +105,7 @@ depends-member:
 - !private ["s7CVarArgP", "view"]
 - !private ["s7CVarArgP", "viewDidLoad"]
 - !private ["s7CVarArgP", "white"]
-- ["Sl", ""]
+- !private ["Sl", ""]
 - !private ["Sl", "subscript"]
 - ["SL", ""]
 - !private ["s28CustomDebugStringConvertibleP", "Bool"]
@@ -218,9 +217,7 @@ depends-member:
 - !private ["SD", "subscript"]
 - ["So18OS_dispatch_objectC", ""]
 - !private ["So18OS_dispatch_objectC", "async"]
-- !private ["So18OS_dispatch_objectC", "init"]
 - !private ["So18OS_dispatch_objectC", "main"]
-- !private ["So18OS_dispatch_objectC", "sync"]
 - !private ["So17OS_dispatch_queueC", "async"]
 - !private ["So17OS_dispatch_queueC", "main"]
 - !private ["SE", "addSubview"]
@@ -277,7 +274,7 @@ depends-member:
 - !private ["SQ", "white"]
 - ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
 - ["s25ExpressibleByFloatLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
@@ -291,9 +288,9 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "safeAreaLayoutGuide"]
 - !private ["s23ExpressibleByNilLiteralP", "subscribe"]
 - !private ["s23ExpressibleByNilLiteralP", "white"]
-- ["s32ExpressibleByStringInterpolationP", ""]
-- ["s26ExpressibleByStringLiteralP", ""]
-- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - ["SF", ""]
 - !private ["SH", "Bool"]
 - !private ["SH", "DispatchQueue"]
@@ -341,12 +338,11 @@ depends-member:
 - !private ["SH", "white"]
 - !private ["10Foundation11JSONDecoderC", "decode"]
 - !private ["10Foundation11JSONDecoderC", "init"]
-- ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", ""]
 - !private ["So8NSCodingP", "Bool"]
 - !private ["So8NSCodingP", "Data"]
 - !private ["So8NSCodingP", "DispatchQueue"]
 - !private ["So8NSCodingP", "JSONDecoder"]
-- ["So8NSCodingP", "NSCoder"]
 - !private ["So8NSCodingP", "NSLayoutConstraint"]
 - ["So8NSCodingP", "Pusher"]
 - !private ["So8NSCodingP", "SceneDelegate"]
@@ -366,18 +362,6 @@ depends-member:
 - !private ["So8NSCodingP", "backgroundColor"]
 - !private ["So8NSCodingP", "black"]
 - !private ["So8NSCodingP", "constraint"]
-- !private ["So8NSCodingP", "constraintEqualToSystemSpacingAfter"]
-- !private ["So8NSCodingP", "constraintEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSCodingP", "constraintEqualToSystemSpacingBelow"]
-- !private ["So8NSCodingP", "constraintEqualToSystemSpacingBelowAnchor"]
-- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
-- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
-- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
-- !private ["So8NSCodingP", "constraintLessThanOrEqualToSystemSpacingAfter"]
-- !private ["So8NSCodingP", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSCodingP", "constraintLessThanOrEqualToSystemSpacingBelow"]
-- !private ["So8NSCodingP", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - !private ["So8NSCodingP", "fatalError"]
 - !private ["So8NSCodingP", "font"]
 - ["So8NSCodingP", "init"]
@@ -398,25 +382,12 @@ depends-member:
 - !private ["So8NSCodingP", "white"]
 - !private ["So9NSCopyingP", "black"]
 - !private ["So9NSCopyingP", "constraint"]
-- !private ["So9NSCopyingP", "constraintEqualToSystemSpacingAfter"]
-- !private ["So9NSCopyingP", "constraintEqualToSystemSpacingAfterAnchor"]
-- !private ["So9NSCopyingP", "constraintEqualToSystemSpacingBelow"]
-- !private ["So9NSCopyingP", "constraintEqualToSystemSpacingBelowAnchor"]
-- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
-- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
-- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
-- !private ["So9NSCopyingP", "constraintLessThanOrEqualToSystemSpacingAfter"]
-- !private ["So9NSCopyingP", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So9NSCopyingP", "constraintLessThanOrEqualToSystemSpacingBelow"]
-- !private ["So9NSCopyingP", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "white"]
 - !private ["So26NSExtensionRequestHandlingP", "Bool"]
 - !private ["So26NSExtensionRequestHandlingP", "Data"]
 - !private ["So26NSExtensionRequestHandlingP", "DispatchQueue"]
 - !private ["So26NSExtensionRequestHandlingP", "JSONDecoder"]
-- ["So26NSExtensionRequestHandlingP", "NSCoder"]
 - !private ["So26NSExtensionRequestHandlingP", "NSLayoutConstraint"]
 - ["So26NSExtensionRequestHandlingP", "Pusher"]
 - !private ["So26NSExtensionRequestHandlingP", "SceneDelegate"]
@@ -448,18 +419,6 @@ depends-member:
 - !private ["So21NSItemProviderWritingP", "white"]
 - ["So14NSLayoutAnchorC", ""]
 - !private ["So14NSLayoutAnchorC", "constraint"]
-- !private ["So14NSLayoutAnchorC", "constraintEqualToSystemSpacingAfter"]
-- !private ["So14NSLayoutAnchorC", "constraintEqualToSystemSpacingAfterAnchor"]
-- !private ["So14NSLayoutAnchorC", "constraintEqualToSystemSpacingBelow"]
-- !private ["So14NSLayoutAnchorC", "constraintEqualToSystemSpacingBelowAnchor"]
-- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
-- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
-- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
-- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToSystemSpacingAfter"]
-- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToSystemSpacingBelow"]
-- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - !private ["So18NSLayoutConstraintC", "activate"]
 - !private ["So19NSLayoutXAxisAnchorC", "constraint"]
 - !private ["So19NSLayoutYAxisAnchorC", "constraint"]
@@ -484,7 +443,6 @@ depends-member:
 - ["So8NSObjectC", "_verifyEmailLabel"]
 - ["So8NSObjectC", "_verifyEmailTextView"]
 - !private ["So8NSObjectC", "activate"]
-- !private ["So8NSObjectC", "activateConstraints"]
 - !private ["So8NSObjectC", "addSubview"]
 - !private ["So8NSObjectC", "async"]
 - !private ["So8NSObjectC", "backgroundColor"]
@@ -492,39 +450,18 @@ depends-member:
 - !private ["So8NSObjectC", "black"]
 - !private ["So8NSObjectC", "connect"]
 - !private ["So8NSObjectC", "constraint"]
-- !private ["So8NSObjectC", "constraintEqualToAnchor"]
-- !private ["So8NSObjectC", "constraintEqualToSystemSpacingAfter"]
-- !private ["So8NSObjectC", "constraintEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSObjectC", "constraintEqualToSystemSpacingBelow"]
-- !private ["So8NSObjectC", "constraintEqualToSystemSpacingBelowAnchor"]
-- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToAnchor"]
-- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
-- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
-- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
-- !private ["So8NSObjectC", "constraintLessThanOrEqualToAnchor"]
-- !private ["So8NSObjectC", "constraintLessThanOrEqualToSystemSpacingAfter"]
-- !private ["So8NSObjectC", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSObjectC", "constraintLessThanOrEqualToSystemSpacingBelow"]
-- !private ["So8NSObjectC", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - !private ["So8NSObjectC", "fatalError"]
 - !private ["So8NSObjectC", "font"]
-- !private ["So8NSObjectC", "fontWithDescriptor"]
-- !private ["So8NSObjectC", "fontWithName"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "leadingAnchor"]
 - ["So8NSObjectC", "listenForEmailVerificationStatus"]
 - !private ["So8NSObjectC", "main"]
 - ["So8NSObjectC", "pusher"]
-- !private ["So8NSObjectC", "resume"]
 - !private ["So8NSObjectC", "rootViewController"]
 - !private ["So8NSObjectC", "safeAreaLayoutGuide"]
-- !private ["So8NSObjectC", "setTarget"]
 - !private ["So8NSObjectC", "shared"]
 - !private ["So8NSObjectC", "subscribe"]
-- !private ["So8NSObjectC", "suspend"]
 - !private ["So8NSObjectC", "switchToHomePageViewController"]
-- !private ["So8NSObjectC", "sync"]
 - !private ["So8NSObjectC", "text"]
 - !private ["So8NSObjectC", "textColor"]
 - !private ["So8NSObjectC", "topAnchor"]
@@ -539,7 +476,6 @@ depends-member:
 - !private ["So8NSObjectP", "Data"]
 - !private ["So8NSObjectP", "DispatchQueue"]
 - !private ["So8NSObjectP", "JSONDecoder"]
-- ["So8NSObjectP", "NSCoder"]
 - !private ["So8NSObjectP", "NSLayoutConstraint"]
 - ["So8NSObjectP", "Pusher"]
 - !private ["So8NSObjectP", "SceneDelegate"]
@@ -550,13 +486,11 @@ depends-member:
 - ["So8NSObjectP", "UIStackView"]
 - ["So8NSObjectP", "UITextView"]
 - ["So8NSObjectP", "UsesAutoLayout"]
-- !private ["So8NSObjectP", "Void"]
 - ["So8NSObjectP", ""]
 - ["So8NSObjectP", "_verificationStackView"]
 - ["So8NSObjectP", "_verifyEmailLabel"]
 - ["So8NSObjectP", "_verifyEmailTextView"]
 - !private ["So8NSObjectP", "activate"]
-- !private ["So8NSObjectP", "activateConstraints"]
 - !private ["So8NSObjectP", "addSubview"]
 - !private ["So8NSObjectP", "async"]
 - !private ["So8NSObjectP", "backgroundColor"]
@@ -564,39 +498,18 @@ depends-member:
 - !private ["So8NSObjectP", "black"]
 - !private ["So8NSObjectP", "connect"]
 - !private ["So8NSObjectP", "constraint"]
-- !private ["So8NSObjectP", "constraintEqualToAnchor"]
-- !private ["So8NSObjectP", "constraintEqualToSystemSpacingAfter"]
-- !private ["So8NSObjectP", "constraintEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSObjectP", "constraintEqualToSystemSpacingBelow"]
-- !private ["So8NSObjectP", "constraintEqualToSystemSpacingBelowAnchor"]
-- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToAnchor"]
-- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
-- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
-- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
-- !private ["So8NSObjectP", "constraintLessThanOrEqualToAnchor"]
-- !private ["So8NSObjectP", "constraintLessThanOrEqualToSystemSpacingAfter"]
-- !private ["So8NSObjectP", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSObjectP", "constraintLessThanOrEqualToSystemSpacingBelow"]
-- !private ["So8NSObjectP", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - !private ["So8NSObjectP", "fatalError"]
 - !private ["So8NSObjectP", "font"]
-- !private ["So8NSObjectP", "fontWithDescriptor"]
-- !private ["So8NSObjectP", "fontWithName"]
 - ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "leadingAnchor"]
 - ["So8NSObjectP", "listenForEmailVerificationStatus"]
 - !private ["So8NSObjectP", "main"]
 - ["So8NSObjectP", "pusher"]
-- !private ["So8NSObjectP", "resume"]
 - !private ["So8NSObjectP", "rootViewController"]
 - !private ["So8NSObjectP", "safeAreaLayoutGuide"]
-- !private ["So8NSObjectP", "setTarget"]
 - !private ["So8NSObjectP", "shared"]
 - !private ["So8NSObjectP", "subscribe"]
-- !private ["So8NSObjectP", "suspend"]
 - !private ["So8NSObjectP", "switchToHomePageViewController"]
-- !private ["So8NSObjectP", "sync"]
 - !private ["So8NSObjectP", "text"]
 - !private ["So8NSObjectP", "textColor"]
 - !private ["So8NSObjectP", "topAnchor"]
@@ -610,15 +523,8 @@ depends-member:
 - !private ["So14NSSecureCodingP", "black"]
 - !private ["So14NSSecureCodingP", "white"]
 - ["Sj", ""]
-- ["So9OS_objectC", ""]
-- !private ["So9OS_objectC", "activate"]
 - !private ["So9OS_objectC", "async"]
-- !private ["So9OS_objectC", "init"]
 - !private ["So9OS_objectC", "main"]
-- !private ["So9OS_objectC", "resume"]
-- !private ["So9OS_objectC", "setTarget"]
-- !private ["So9OS_objectC", "suspend"]
-- !private ["So9OS_objectC", "sync"]
 - !private ["Sq", "addSubview"]
 - !private ["Sq", "backgroundColor"]
 - !private ["Sq", "black"]
@@ -634,17 +540,16 @@ depends-member:
 - !private ["8QuickBev13SceneDelegateC", "shared"]
 - !private ["7Combine9SchedulerP", "async"]
 - !private ["7Combine9SchedulerP", "main"]
-- ["ST", ""]
+- !private ["ST", ""]
 - !private ["ST", "subscript"]
 - ["s13SignedNumericP", ""]
 - ["Sx", ""]
-- ["s16TextOutputStreamP", ""]
-- ["s20TextOutputStreamableP", ""]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s20TextOutputStreamableP", ""]
 - ["8QuickBev5ThemeO", "UILabel"]
 - ["8QuickBev5ThemeO", "UIStackView"]
 - !private ["7Combine15TopLevelDecoderP", "decode"]
 - !private ["7Combine15TopLevelDecoderP", "init"]
-- !private ["So29UIAccessibilityIdentificationP", ""]
 - !private ["So29UIAccessibilityIdentificationP", "addSubview"]
 - !private ["So29UIAccessibilityIdentificationP", "backgroundColor"]
 - !private ["So29UIAccessibilityIdentificationP", "font"]
@@ -655,7 +560,6 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "textColor"]
 - !private ["So29UIAccessibilityIdentificationP", "topAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "trailingAnchor"]
-- !private ["So12UIAppearanceP", ""]
 - !private ["So12UIAppearanceP", "addSubview"]
 - !private ["So12UIAppearanceP", "backgroundColor"]
 - !private ["So12UIAppearanceP", "font"]
@@ -670,7 +574,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "Data"]
 - !private ["So21UIAppearanceContainerP", "DispatchQueue"]
 - !private ["So21UIAppearanceContainerP", "JSONDecoder"]
-- ["So21UIAppearanceContainerP", "NSCoder"]
 - !private ["So21UIAppearanceContainerP", "NSLayoutConstraint"]
 - ["So21UIAppearanceContainerP", "Pusher"]
 - !private ["So21UIAppearanceContainerP", "SceneDelegate"]
@@ -711,7 +614,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "Data"]
 - !private ["So18UIContentContainerP", "DispatchQueue"]
 - !private ["So18UIContentContainerP", "JSONDecoder"]
-- ["So18UIContentContainerP", "NSCoder"]
 - !private ["So18UIContentContainerP", "NSLayoutConstraint"]
 - ["So18UIContentContainerP", "Pusher"]
 - !private ["So18UIContentContainerP", "SceneDelegate"]
@@ -741,7 +643,6 @@ depends-member:
 - ["So30UIContentSizeCategoryAdjustingP", "init"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "text"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "textColor"]
-- !private ["So17UICoordinateSpaceP", ""]
 - !private ["So17UICoordinateSpaceP", "addSubview"]
 - !private ["So17UICoordinateSpaceP", "backgroundColor"]
 - !private ["So17UICoordinateSpaceP", "font"]
@@ -752,7 +653,6 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "textColor"]
 - !private ["So17UICoordinateSpaceP", "topAnchor"]
 - !private ["So17UICoordinateSpaceP", "trailingAnchor"]
-- !private ["So13UIDynamicItemP", ""]
 - !private ["So13UIDynamicItemP", "addSubview"]
 - !private ["So13UIDynamicItemP", "backgroundColor"]
 - !private ["So13UIDynamicItemP", "font"]
@@ -767,7 +667,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "Data"]
 - !private ["So18UIFocusEnvironmentP", "DispatchQueue"]
 - !private ["So18UIFocusEnvironmentP", "JSONDecoder"]
-- ["So18UIFocusEnvironmentP", "NSCoder"]
 - !private ["So18UIFocusEnvironmentP", "NSLayoutConstraint"]
 - ["So18UIFocusEnvironmentP", "Pusher"]
 - !private ["So18UIFocusEnvironmentP", "SceneDelegate"]
@@ -802,7 +701,6 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "verifyEmailTextView"]
 - !private ["So18UIFocusEnvironmentP", "view"]
 - ["So18UIFocusEnvironmentP", "viewDidLoad"]
-- !private ["So11UIFocusItemP", ""]
 - !private ["So11UIFocusItemP", "addSubview"]
 - !private ["So11UIFocusItemP", "backgroundColor"]
 - !private ["So11UIFocusItemP", "font"]
@@ -839,7 +737,6 @@ depends-member:
 - ["8QuickBev5ThemeO12UILabelPropsO", "font"]
 - ["8QuickBev5ThemeO12UILabelPropsO", "text"]
 - ["8QuickBev5ThemeO12UILabelPropsO", "textColor"]
-- !private ["So24UILargeContentViewerItemP", ""]
 - !private ["So24UILargeContentViewerItemP", "addSubview"]
 - !private ["So24UILargeContentViewerItemP", "backgroundColor"]
 - !private ["So24UILargeContentViewerItemP", "font"]
@@ -857,7 +754,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "Data"]
 - !private ["So30UIPasteConfigurationSupportingP", "DispatchQueue"]
 - !private ["So30UIPasteConfigurationSupportingP", "JSONDecoder"]
-- ["So30UIPasteConfigurationSupportingP", "NSCoder"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSLayoutConstraint"]
 - ["So30UIPasteConfigurationSupportingP", "Pusher"]
 - !private ["So30UIPasteConfigurationSupportingP", "SceneDelegate"]
@@ -939,7 +835,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "Data"]
 - !private ["So30UIResponderStandardEditActionsP", "DispatchQueue"]
 - !private ["So30UIResponderStandardEditActionsP", "JSONDecoder"]
-- ["So30UIResponderStandardEditActionsP", "NSCoder"]
 - !private ["So30UIResponderStandardEditActionsP", "NSLayoutConstraint"]
 - ["So30UIResponderStandardEditActionsP", "Pusher"]
 - !private ["So30UIResponderStandardEditActionsP", "SceneDelegate"]
@@ -995,7 +890,6 @@ depends-member:
 - !private ["So16UIStateRestoringP", "Data"]
 - !private ["So16UIStateRestoringP", "DispatchQueue"]
 - !private ["So16UIStateRestoringP", "JSONDecoder"]
-- ["So16UIStateRestoringP", "NSCoder"]
 - !private ["So16UIStateRestoringP", "NSLayoutConstraint"]
 - ["So16UIStateRestoringP", "Pusher"]
 - !private ["So16UIStateRestoringP", "SceneDelegate"]
@@ -1052,7 +946,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "Data"]
 - !private ["So18UITraitEnvironmentP", "DispatchQueue"]
 - !private ["So18UITraitEnvironmentP", "JSONDecoder"]
-- ["So18UITraitEnvironmentP", "NSCoder"]
 - !private ["So18UITraitEnvironmentP", "NSLayoutConstraint"]
 - ["So18UITraitEnvironmentP", "Pusher"]
 - !private ["So18UITraitEnvironmentP", "SceneDelegate"]
@@ -1091,7 +984,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "Data"]
 - !private ["So23UIUserActivityRestoringP", "DispatchQueue"]
 - !private ["So23UIUserActivityRestoringP", "JSONDecoder"]
-- ["So23UIUserActivityRestoringP", "NSCoder"]
 - !private ["So23UIUserActivityRestoringP", "NSLayoutConstraint"]
 - ["So23UIUserActivityRestoringP", "Pusher"]
 - !private ["So23UIUserActivityRestoringP", "SceneDelegate"]
@@ -1172,7 +1064,6 @@ depends-member:
 - !private ["So21UIWindowSceneDelegateP", "rootViewController"]
 - !private ["So21UIWindowSceneDelegateP", "shared"]
 - ["8QuickBev14UsesAutoLayoutV", "init"]
-- ["8QuickBev14UsesAutoLayoutV", "subscript"]
 - ["8QuickBev14UsesAutoLayoutV", "wrappedValue"]
 - !private ["8QuickBev25VerifyEmailViewControllerC", "Bool"]
 - !private ["8QuickBev25VerifyEmailViewControllerC", "Data"]
@@ -1205,11 +1096,11 @@ depends-member:
 - !private ["8QuickBev25VerifyEmailViewControllerC", "view"]
 - ["8QuickBev25VerifyEmailViewControllerC", "viewDidLoad"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s26_ExpressibleByColorLiteralP", "black"]
 - !private ["s26_ExpressibleByColorLiteralP", "white"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
@@ -1319,10 +1210,10 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "trailingAnchor"]
 depends-nominal:
 - "s18AdditiveArithmeticP"
-- "SK"
+- !private "SK"
 - "So15CALayerDelegateP"
 - "s7CVarArgP"
-- "Sl"
+- !private "Sl"
 - "SL"
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
@@ -1336,17 +1227,17 @@ depends-nominal:
 - "SQ"
 - "s25ExpressibleByArrayLiteralP"
 - !private "s30ExpressibleByDictionaryLiteralP"
-- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - "s25ExpressibleByFloatLiteralP"
 - "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- "s32ExpressibleByStringInterpolationP"
-- "s26ExpressibleByStringLiteralP"
-- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
 - "SF"
 - "SH"
 - !private "10Foundation11JSONDecoderC"
-- "s25LosslessStringConvertibleP"
+- !private "s25LosslessStringConvertibleP"
 - "So8NSCodingP"
 - !private "So9NSCopyingP"
 - "So26NSExtensionRequestHandlingP"
@@ -1360,18 +1251,18 @@ depends-nominal:
 - "So8NSObjectP"
 - !private "So14NSSecureCodingP"
 - "Sj"
-- "So9OS_objectC"
+- !private "So9OS_objectC"
 - !private "Sq"
 - !private "11PusherSwift0A0C"
 - !private "11PusherSwift0A7ChannelC"
 - !private "8QuickBev18RootViewControllerC"
 - !private "8QuickBev13SceneDelegateC"
 - !private "7Combine9SchedulerP"
-- "ST"
+- !private "ST"
 - "s13SignedNumericP"
 - "Sx"
-- "s16TextOutputStreamP"
-- "s20TextOutputStreamableP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
 - "8QuickBev5ThemeO"
 - !private "7Combine15TopLevelDecoderP"
 - "So29UIAccessibilityIdentificationP"
@@ -1414,11 +1305,11 @@ depends-nominal:
 - "8QuickBev14UsesAutoLayoutV"
 - "8QuickBev25VerifyEmailViewControllerC"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
-- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - "s35_ExpressibleByBuiltinIntegerLiteralP"
 - "s34_ExpressibleByBuiltinStringLiteralP"
-- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
@@ -1579,7 +1470,7 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSpacerView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWhitelistView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/module.map"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
@@ -1588,36 +1479,36 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Modules/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "56815e99526101b98effb17daf64ed28"

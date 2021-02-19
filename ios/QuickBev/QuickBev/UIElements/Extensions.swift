@@ -20,6 +20,9 @@ extension UIColor {
     class var themeColor:UIColor {
         return UIColor.init(red: 134/255, green: 130/255, blue: 230/255, alpha: 1.0)
     }
+    class var greyBorderColor: UIColor {
+        return UIColor.init(red: 204.0/255.0, green:204.0/255.0, blue:204.0/255.0, alpha:1.0)
+    }
 }
 extension NSLayoutConstraint {
     func usingPriority(_ priority: UILayoutPriority) -> NSLayoutConstraint {
@@ -110,7 +113,7 @@ extension UITextField {
     }
 }
 extension UIView {
-    convenience init(theme: Theme, superview: UIView? = nil) {
+    convenience init(theme: Theme) {
         self.init()
         switch self {
         case let self as UIStackView :
@@ -139,15 +142,15 @@ extension UIView {
                     case .color:
                         let value = prop.rawValue as! UIColor
                         self.refreshColor(color: value)
-                   
+                        
                     case .titleLabelFont(var value):
                         if value == nil {
                             value  =  prop.rawValue as? UIFont
                         }
-                            self.titleLabel?.font = value
+                        self.titleLabel?.font = value
                     case .text(let value):
                         self.refreshTitle(newTitle: value)
-                   
+                        
                     }
                 }
             default:
@@ -189,7 +192,7 @@ extension UIView {
                         else {
                             self.font = value
                         }
-                
+                        
                     case .placeHolderText(let value):
                         self.placeholder = value
                     case .autocapitalizationType(let value):
@@ -203,17 +206,86 @@ extension UIView {
                             self.borderStyle = .roundedRect
                         }
                     case .backgroundColor(let value):
-                    self.backgroundColor = value
+                        self.backgroundColor = value
                     }
+                    self.textColor = .black
                 }
             default:
                 ()
             }
-            
+        case let self as RoundedUITextField:
+        switch theme {
+        case .UITextField(let props):
+            for prop in props{
+                print(prop)
+                switch prop{
+                case .font(let value):
+                    if value == nil {
+                        self.font  =  prop.rawValue as? UIFont
+                    }
+                    else {
+                        self.font = value
+                    }
+                    
+                case .placeHolderText(let value):
+                    self.placeholder = value
+                case .autocapitalizationType(let value):
+                    switch value {
+                    case .none:
+                        self.autocapitalizationType = .none
+                    }
+                case .borderStyle(let value):
+                    switch value {
+                    case .roundedRect:
+                        self.borderStyle = .roundedRect
+                    }
+                case .backgroundColor(let value):
+                    self.backgroundColor = value
+                }
+                self.textColor = .black
+            }
+        default:
+            ()
+        }
+        
             
         default:
             print("")
         }
+    }
+}
+extension UIView {
+    func addTopBorder(with color: UIColor?, andWidth borderWidth: CGFloat) {
+        let border = UIView()
+        border.backgroundColor = color
+        border.autoresizingMask = [.flexibleWidth, .flexibleBottomMargin]
+        border.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: borderWidth)
+        addSubview(border)
+    }
+    
+    func addBottomBorder(with color: UIColor?, andWidth borderWidth: CGFloat) {
+        let border = UIView()
+        border.backgroundColor = color
+        border.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
+        border.frame = CGRect(x: 0, y: frame.size.height - borderWidth, width: frame.size.width, height: borderWidth)
+        addSubview(border)
+    }
+    
+    func addLeftBorder(with color: UIColor?, andWidth borderWidth: CGFloat) {
+        let border = UIView()
+        border.backgroundColor = color
+        border.frame = CGRect(x: 0, y: 0, width: borderWidth, height: frame.size.height)
+        
+        border.autoresizingMask = [.flexibleHeight, .flexibleRightMargin]
+        addSubview(border)
+    }
+    
+    func addRightBorder(with color: UIColor?, andWidth borderWidth: CGFloat) {
+        let border = UIView()
+        border.backgroundColor = color
+        border.autoresizingMask = [.flexibleHeight, .flexibleLeftMargin]
+        border.frame = CGRect(x: frame.size.width - borderWidth, y: 0, width: borderWidth, height: frame.size.height)
+        addSubview(border)
     }
 }
 // 11 pro height = 812 - optimal font size for sign up view is 30

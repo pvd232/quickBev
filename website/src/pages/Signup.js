@@ -86,7 +86,7 @@ const CreateYourAccountFieldset = (props) => {
         const merchantData = { merchant: newMerchant };
         API.makeRequest(
           "POST",
-          "http://127.0.0.1:5000/validate-merchant",
+          "/validate-merchant",
           merchantData,
           false
         ).then((response) => {
@@ -744,7 +744,7 @@ const Signup = () => {
     // set in local storage if user has multiple businesses so we can display a tab to add more businesses late
     let response = await API.makeRequest(
       "POST",
-      "http://127.0.0.1:5000/signup",
+      "/signup",
       newForm,
       true
     );

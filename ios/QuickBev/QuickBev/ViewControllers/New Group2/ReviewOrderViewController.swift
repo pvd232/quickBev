@@ -212,24 +212,35 @@ extension ReviewOrderViewController: STPPaymentContextDelegate {
                     switch status {
                     case .succeeded:
                         // Your backend asynchronously fulfills the customer's order, e.g. via webhook
-                        let encoder = JSONEncoder()
-                        let encodedOrder = try! encoder.encode(orderToBeSubmitted)
-                        let orderJson = try! JSONSerialization.jsonObject(with:encodedOrder, options: []) as! Parameters
-                        
-                        AF.request("http://127.0.0.1:5000/order", method: .post, parameters: orderJson, encoding: JSONEncoding.default)
-                            .validate()
-                            .responseJSON { response in
-                                debugPrint("response", response)
-                                switch response.result {
-                                case .success:
-                                    print("successfully posted order")
-                                    completion(.success, nil)
-                                case .failure (let error):
-                                    completion(.error, nil)
-                                    print("error", error)
-                                    
-                                }
+                        let request = try! APIRequest(method: .post, path: "/order", body: orderToBeSubmitted)
+                        APIClient().perform(request) { result in
+                            switch result {
+                            case .success:
+                                print("successfully posted order")
+                                completion(.success, nil)
+                            case .failure (let error):
+                                completion(.error, nil)
+                                print("error", error)
                             }
+                        }
+//                        let encoder = JSONEncoder()
+//                        let encodedOrder = try! encoder.encode(orderToBeSubmitted)
+//                        let orderJson = try! JSONSerialization.jsonObject(with:encodedOrder, options: []) as! Parameters
+                        
+//                        AF.request("http://127.0.0.1:5000/order", method: .post, parameters: orderJson, encoding: JSONEncoding.default)
+//                            .validate()
+//                            .responseJSON { response in
+//                                debugPrint("response", response)
+//                                switch response.result {
+//                                case .success:
+//                                    print("successfully posted order")
+//                                    completion(.success, nil)
+//                                case .failure (let error):
+//                                    completion(.error, nil)
+//                                    print("error", error)
+
+//                                }
+//                            }
                     case .failed:
                         completion(.error, error) // Report error
                     case .canceled:

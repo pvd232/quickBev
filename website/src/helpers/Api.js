@@ -1,10 +1,16 @@
 import { Merchant } from "../Models.js";
 
 class Client {
-  async makeRequest(method, url, data, isForm = false) {
+  constructor(){
+    this.baseUrl = "http://192.168.0.58:5000"
+    this.url = ""
+  }
+  async makeRequest(method, path, data, isForm = false) {
     let requestData = data || {};
     try {
-      const response = await fetch(url, {
+      this.url = this.baseUrl + path
+      console.log("baseUrl",this.url)
+      const response = await fetch(this.url, {
         method: method,
         body:
           method === "POST" && !isForm
@@ -32,6 +38,7 @@ class Client {
     }
   }
   getOrders = async () => {
+    this.url = this.baseUrl + "/order"
     var headers = new Headers();
     const currentMerchant = new Merchant(
       "localStorage",
@@ -46,12 +53,13 @@ class Client {
       "Authorization",
       "Basic " + btoa("a:" + currentMerchant.password)
     );
-    return fetch("http://127.0.0.1:5000/order", {
+    return fetch(this.url, {
       credentials: "include",
       headers: headers,
     }).then((data) => data.json());
   };
   getCustomers = async () => {
+    this.url = this.baseUrl + "customer"
     var headers = new Headers();
     const currentMerchant = new Merchant(
       "localStorage",
@@ -61,7 +69,7 @@ class Client {
     // headers.set("Authorization", "Basic " + btoa(currentMerchant.id));
     headers.set("Authorization", "Basic " + btoa("a"));
 
-    return fetch("http://127.0.0.1:5000/customer", {
+    return fetch(this.url, {
       credentials: "include",
       headers: headers,
     }).then((data) => data.json());

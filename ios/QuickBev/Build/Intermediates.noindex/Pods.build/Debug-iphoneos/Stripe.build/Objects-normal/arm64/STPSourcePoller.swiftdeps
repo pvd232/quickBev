@@ -1,0 +1,1132 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "STPSourcePoller"
+provides-nominal:
+- "6Stripe15STPSourcePollerC"
+provides-member:
+- ["6Stripe15STPSourcePollerC", ""]
+provides-dynamic-lookup:
+- "_continue"
+- "_poll"
+- "apiClient"
+- "cleanupAndFireCompletion"
+- "clientSecret"
+- "completion"
+- "dataTask"
+- "latestSource"
+- "pausePolling"
+- "poll"
+- "pollInterval"
+- "pollingPaused"
+- "pollingStopped"
+- "requestCount"
+- "restartPolling"
+- "retryCount"
+- "shouldContinuePollingSource"
+- "sourceID"
+- "startTime"
+- "stopPolling"
+- "timeout"
+- "timer"
+depends-top-level:
+- !private "!"
+- !private "!="
+- "&&"
+- "*"
+- "+="
+- !private "<"
+- "=="
+- !private ">"
+- !private ">="
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- !private "CFNetworkErrors"
+- !private "CastingPrecedence"
+- "Date"
+- !private "DefaultPollInterval"
+- !private "DispatchQueue"
+- "Error"
+- "FloatLiteralType"
+- "HTTPURLResponse"
+- "Int"
+- "IntegerLiteralType"
+- !private "MaxPollInterval"
+- !private "MaxRetries"
+- !private "MaxTimeout"
+- "NSError"
+- "NSObject"
+- !private "NotificationCenter"
+- "STPAPIClient"
+- "STPSource"
+- "STPSourceCompletionBlock"
+- "STPSourcePoller"
+- "String"
+- "TimeInterval"
+- "Timer"
+- !private "UIApplication"
+- "UIBackgroundTaskIdentifier"
+- "URLSessionDataTask"
+- !private "_poll"
+- !private "apiClient"
+- !private "cleanupAndFireCompletion"
+- !private "clientSecret"
+- !private "dataTask"
+- !private "latestSource"
+- !private "min"
+- !private "pausePolling"
+- !private "poll"
+- !private "pollInterval"
+- !private "pollingPaused"
+- !private "pollingStopped"
+- !private "requestCount"
+- !private "restartPolling"
+- !private "retryCount"
+- !private "shouldContinuePollingSource"
+- !private "sourceID"
+- !private "startTime"
+- !private "stopPolling"
+- !private "timeout"
+- !private "timer"
+- !private "||"
+depends-member:
+- ["s18AdditiveArithmeticP", ""]
+- !private ["s18AdditiveArithmeticP", "init"]
+- !private ["SK", ""]
+- !private ["SB", "init"]
+- ["Sz", ""]
+- !private ["So15CFNetworkErrorsV", "RawValue"]
+- !private ["So15CFNetworkErrorsV", "cfurlErrorCancelled"]
+- !private ["So15CFNetworkErrorsV", "cfurlErrorNetworkConnectionLost"]
+- !private ["So15CFNetworkErrorsV", "cfurlErrorNotConnectedToInternet"]
+- !private ["So15CFNetworkErrorsV", "rawValue"]
+- !private ["s7CVarArgP", "CFNetworkErrors"]
+- !private ["s7CVarArgP", "Date"]
+- !private ["s7CVarArgP", "DefaultPollInterval"]
+- !private ["s7CVarArgP", "DispatchQueue"]
+- !private ["s7CVarArgP", "MaxPollInterval"]
+- !private ["s7CVarArgP", "MaxRetries"]
+- !private ["s7CVarArgP", "MaxTimeout"]
+- !private ["s7CVarArgP", "NSError"]
+- !private ["s7CVarArgP", "NotificationCenter"]
+- !private ["s7CVarArgP", "TimeInterval"]
+- !private ["s7CVarArgP", "Timer"]
+- !private ["s7CVarArgP", "UIApplication"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_continue"]
+- !private ["s7CVarArgP", "_poll"]
+- !private ["s7CVarArgP", "addObserver"]
+- !private ["s7CVarArgP", "apiClient"]
+- !private ["s7CVarArgP", "async"]
+- !private ["s7CVarArgP", "beginBackgroundTask"]
+- !private ["s7CVarArgP", "cancel"]
+- !private ["s7CVarArgP", "cleanupAndFireCompletion"]
+- !private ["s7CVarArgP", "clientSecret"]
+- !private ["s7CVarArgP", "code"]
+- !private ["s7CVarArgP", "completion"]
+- !private ["s7CVarArgP", "continue"]
+- !private ["s7CVarArgP", "dataTask"]
+- !private ["s7CVarArgP", "default"]
+- !private ["s7CVarArgP", "didBecomeActiveNotification"]
+- !private ["s7CVarArgP", "didEnterBackgroundNotification"]
+- !private ["s7CVarArgP", "endBackgroundTask"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "invalidate"]
+- !private ["s7CVarArgP", "latestSource"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "min"]
+- !private ["s7CVarArgP", "pausePolling"]
+- !private ["s7CVarArgP", "poll"]
+- !private ["s7CVarArgP", "pollInterval"]
+- !private ["s7CVarArgP", "pollingPaused"]
+- !private ["s7CVarArgP", "pollingStopped"]
+- !private ["s7CVarArgP", "removeObserver"]
+- !private ["s7CVarArgP", "requestCount"]
+- !private ["s7CVarArgP", "restartPolling"]
+- !private ["s7CVarArgP", "retrieveSource"]
+- !private ["s7CVarArgP", "retryCount"]
+- !private ["s7CVarArgP", "scheduledTimer"]
+- !private ["s7CVarArgP", "shared"]
+- !private ["s7CVarArgP", "shouldContinuePollingSource"]
+- !private ["s7CVarArgP", "sourceID"]
+- !private ["s7CVarArgP", "startTime"]
+- !private ["s7CVarArgP", "status"]
+- !private ["s7CVarArgP", "statusCode"]
+- !private ["s7CVarArgP", "stopPolling"]
+- !private ["s7CVarArgP", "stp_genericConnectionError"]
+- !private ["s7CVarArgP", "timeout"]
+- !private ["s7CVarArgP", "timer"]
+- !private ["s7CVarArgP", "willEnterForegroundNotification"]
+- !private ["s7CVarArgP", "willResignActiveNotification"]
+- !private ["Sl", ""]
+- ["SL", ""]
+- !private ["SL", "init"]
+- !private ["SL", "timeIntervalSince"]
+- !private ["s28CustomDebugStringConvertibleP", "CFNetworkErrors"]
+- !private ["s28CustomDebugStringConvertibleP", "Date"]
+- !private ["s28CustomDebugStringConvertibleP", "DefaultPollInterval"]
+- !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
+- !private ["s28CustomDebugStringConvertibleP", "MaxPollInterval"]
+- !private ["s28CustomDebugStringConvertibleP", "MaxRetries"]
+- !private ["s28CustomDebugStringConvertibleP", "MaxTimeout"]
+- !private ["s28CustomDebugStringConvertibleP", "NSError"]
+- !private ["s28CustomDebugStringConvertibleP", "NotificationCenter"]
+- !private ["s28CustomDebugStringConvertibleP", "TimeInterval"]
+- !private ["s28CustomDebugStringConvertibleP", "Timer"]
+- !private ["s28CustomDebugStringConvertibleP", "UIApplication"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "_continue"]
+- !private ["s28CustomDebugStringConvertibleP", "_poll"]
+- !private ["s28CustomDebugStringConvertibleP", "addObserver"]
+- !private ["s28CustomDebugStringConvertibleP", "apiClient"]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
+- !private ["s28CustomDebugStringConvertibleP", "beginBackgroundTask"]
+- !private ["s28CustomDebugStringConvertibleP", "cancel"]
+- !private ["s28CustomDebugStringConvertibleP", "cleanupAndFireCompletion"]
+- !private ["s28CustomDebugStringConvertibleP", "clientSecret"]
+- !private ["s28CustomDebugStringConvertibleP", "code"]
+- !private ["s28CustomDebugStringConvertibleP", "completion"]
+- !private ["s28CustomDebugStringConvertibleP", "continue"]
+- !private ["s28CustomDebugStringConvertibleP", "dataTask"]
+- !private ["s28CustomDebugStringConvertibleP", "default"]
+- !private ["s28CustomDebugStringConvertibleP", "didBecomeActiveNotification"]
+- !private ["s28CustomDebugStringConvertibleP", "didEnterBackgroundNotification"]
+- !private ["s28CustomDebugStringConvertibleP", "endBackgroundTask"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "invalidate"]
+- !private ["s28CustomDebugStringConvertibleP", "latestSource"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "min"]
+- !private ["s28CustomDebugStringConvertibleP", "pausePolling"]
+- !private ["s28CustomDebugStringConvertibleP", "pending"]
+- !private ["s28CustomDebugStringConvertibleP", "poll"]
+- !private ["s28CustomDebugStringConvertibleP", "pollInterval"]
+- !private ["s28CustomDebugStringConvertibleP", "pollingPaused"]
+- !private ["s28CustomDebugStringConvertibleP", "pollingStopped"]
+- !private ["s28CustomDebugStringConvertibleP", "removeObserver"]
+- !private ["s28CustomDebugStringConvertibleP", "requestCount"]
+- !private ["s28CustomDebugStringConvertibleP", "restartPolling"]
+- !private ["s28CustomDebugStringConvertibleP", "retrieveSource"]
+- !private ["s28CustomDebugStringConvertibleP", "retryCount"]
+- !private ["s28CustomDebugStringConvertibleP", "scheduledTimer"]
+- !private ["s28CustomDebugStringConvertibleP", "shared"]
+- !private ["s28CustomDebugStringConvertibleP", "shouldContinuePollingSource"]
+- !private ["s28CustomDebugStringConvertibleP", "sourceID"]
+- !private ["s28CustomDebugStringConvertibleP", "startTime"]
+- !private ["s28CustomDebugStringConvertibleP", "status"]
+- !private ["s28CustomDebugStringConvertibleP", "statusCode"]
+- !private ["s28CustomDebugStringConvertibleP", "stopPolling"]
+- !private ["s28CustomDebugStringConvertibleP", "stp_genericConnectionError"]
+- !private ["s28CustomDebugStringConvertibleP", "timeIntervalSince"]
+- !private ["s28CustomDebugStringConvertibleP", "timeout"]
+- !private ["s28CustomDebugStringConvertibleP", "timer"]
+- !private ["s28CustomDebugStringConvertibleP", "willEnterForegroundNotification"]
+- !private ["s28CustomDebugStringConvertibleP", "willResignActiveNotification"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "pending"]
+- !private ["s17CustomReflectableP", "timeIntervalSince"]
+- !private ["s23CustomStringConvertibleP", "CFNetworkErrors"]
+- !private ["s23CustomStringConvertibleP", "Date"]
+- !private ["s23CustomStringConvertibleP", "DefaultPollInterval"]
+- !private ["s23CustomStringConvertibleP", "DispatchQueue"]
+- !private ["s23CustomStringConvertibleP", "MaxPollInterval"]
+- !private ["s23CustomStringConvertibleP", "MaxRetries"]
+- !private ["s23CustomStringConvertibleP", "MaxTimeout"]
+- !private ["s23CustomStringConvertibleP", "NSError"]
+- !private ["s23CustomStringConvertibleP", "NotificationCenter"]
+- !private ["s23CustomStringConvertibleP", "TimeInterval"]
+- !private ["s23CustomStringConvertibleP", "Timer"]
+- !private ["s23CustomStringConvertibleP", "UIApplication"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_continue"]
+- !private ["s23CustomStringConvertibleP", "_poll"]
+- !private ["s23CustomStringConvertibleP", "addObserver"]
+- !private ["s23CustomStringConvertibleP", "apiClient"]
+- !private ["s23CustomStringConvertibleP", "async"]
+- !private ["s23CustomStringConvertibleP", "beginBackgroundTask"]
+- !private ["s23CustomStringConvertibleP", "cancel"]
+- !private ["s23CustomStringConvertibleP", "cleanupAndFireCompletion"]
+- !private ["s23CustomStringConvertibleP", "clientSecret"]
+- !private ["s23CustomStringConvertibleP", "code"]
+- !private ["s23CustomStringConvertibleP", "completion"]
+- !private ["s23CustomStringConvertibleP", "continue"]
+- !private ["s23CustomStringConvertibleP", "dataTask"]
+- !private ["s23CustomStringConvertibleP", "default"]
+- !private ["s23CustomStringConvertibleP", "didBecomeActiveNotification"]
+- !private ["s23CustomStringConvertibleP", "didEnterBackgroundNotification"]
+- !private ["s23CustomStringConvertibleP", "endBackgroundTask"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "invalidate"]
+- !private ["s23CustomStringConvertibleP", "latestSource"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "min"]
+- !private ["s23CustomStringConvertibleP", "pausePolling"]
+- !private ["s23CustomStringConvertibleP", "poll"]
+- !private ["s23CustomStringConvertibleP", "pollInterval"]
+- !private ["s23CustomStringConvertibleP", "pollingPaused"]
+- !private ["s23CustomStringConvertibleP", "pollingStopped"]
+- !private ["s23CustomStringConvertibleP", "removeObserver"]
+- !private ["s23CustomStringConvertibleP", "requestCount"]
+- !private ["s23CustomStringConvertibleP", "restartPolling"]
+- !private ["s23CustomStringConvertibleP", "retrieveSource"]
+- !private ["s23CustomStringConvertibleP", "retryCount"]
+- !private ["s23CustomStringConvertibleP", "scheduledTimer"]
+- !private ["s23CustomStringConvertibleP", "shared"]
+- !private ["s23CustomStringConvertibleP", "shouldContinuePollingSource"]
+- !private ["s23CustomStringConvertibleP", "sourceID"]
+- !private ["s23CustomStringConvertibleP", "startTime"]
+- !private ["s23CustomStringConvertibleP", "status"]
+- !private ["s23CustomStringConvertibleP", "statusCode"]
+- !private ["s23CustomStringConvertibleP", "stopPolling"]
+- !private ["s23CustomStringConvertibleP", "stp_genericConnectionError"]
+- !private ["s23CustomStringConvertibleP", "timeIntervalSince"]
+- !private ["s23CustomStringConvertibleP", "timeout"]
+- !private ["s23CustomStringConvertibleP", "timer"]
+- !private ["s23CustomStringConvertibleP", "willEnterForegroundNotification"]
+- !private ["s23CustomStringConvertibleP", "willResignActiveNotification"]
+- !private ["10Foundation4DateV", "init"]
+- !private ["10Foundation4DateV", "timeIntervalSince"]
+- !private ["Se", "init"]
+- !private ["Se", "pending"]
+- !private ["Se", "timeIntervalSince"]
+- ["So18OS_dispatch_objectC", ""]
+- !private ["So18OS_dispatch_objectC", "async"]
+- !private ["So18OS_dispatch_objectC", "init"]
+- !private ["So18OS_dispatch_objectC", "main"]
+- !private ["So18OS_dispatch_objectC", "sync"]
+- !private ["So17OS_dispatch_queueC", "async"]
+- !private ["So17OS_dispatch_queueC", "main"]
+- !private ["Sd", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "pending"]
+- !private ["SE", "timeIntervalSince"]
+- !private ["SQ", "CFNetworkErrors"]
+- !private ["SQ", "Date"]
+- !private ["SQ", "DefaultPollInterval"]
+- !private ["SQ", "DispatchQueue"]
+- !private ["SQ", "MaxPollInterval"]
+- !private ["SQ", "MaxRetries"]
+- !private ["SQ", "MaxTimeout"]
+- !private ["SQ", "NSError"]
+- !private ["SQ", "NotificationCenter"]
+- !private ["SQ", "RawValue"]
+- !private ["SQ", "TimeInterval"]
+- !private ["SQ", "Timer"]
+- !private ["SQ", "UIApplication"]
+- ["SQ", ""]
+- !private ["SQ", "_continue"]
+- !private ["SQ", "_poll"]
+- !private ["SQ", "addObserver"]
+- !private ["SQ", "apiClient"]
+- !private ["SQ", "async"]
+- !private ["SQ", "beginBackgroundTask"]
+- !private ["SQ", "cancel"]
+- !private ["SQ", "cfurlErrorCancelled"]
+- !private ["SQ", "cfurlErrorNetworkConnectionLost"]
+- !private ["SQ", "cfurlErrorNotConnectedToInternet"]
+- !private ["SQ", "cleanupAndFireCompletion"]
+- !private ["SQ", "clientSecret"]
+- !private ["SQ", "code"]
+- !private ["SQ", "completion"]
+- !private ["SQ", "continue"]
+- !private ["SQ", "dataTask"]
+- !private ["SQ", "default"]
+- !private ["SQ", "didBecomeActiveNotification"]
+- !private ["SQ", "didEnterBackgroundNotification"]
+- !private ["SQ", "endBackgroundTask"]
+- !private ["SQ", "init"]
+- !private ["SQ", "invalid"]
+- !private ["SQ", "invalidate"]
+- !private ["SQ", "latestSource"]
+- !private ["SQ", "main"]
+- !private ["SQ", "min"]
+- !private ["SQ", "pausePolling"]
+- !private ["SQ", "pending"]
+- !private ["SQ", "poll"]
+- !private ["SQ", "pollInterval"]
+- !private ["SQ", "pollingPaused"]
+- !private ["SQ", "pollingStopped"]
+- !private ["SQ", "rawValue"]
+- !private ["SQ", "removeObserver"]
+- !private ["SQ", "requestCount"]
+- !private ["SQ", "restartPolling"]
+- !private ["SQ", "retrieveSource"]
+- !private ["SQ", "retryCount"]
+- !private ["SQ", "scheduledTimer"]
+- !private ["SQ", "shared"]
+- !private ["SQ", "shouldContinuePollingSource"]
+- !private ["SQ", "sourceID"]
+- !private ["SQ", "startTime"]
+- !private ["SQ", "status"]
+- !private ["SQ", "statusCode"]
+- !private ["SQ", "stopPolling"]
+- !private ["SQ", "stp_genericConnectionError"]
+- !private ["SQ", "timeIntervalSince"]
+- !private ["SQ", "timeout"]
+- !private ["SQ", "timer"]
+- !private ["SQ", "willEnterForegroundNotification"]
+- !private ["SQ", "willResignActiveNotification"]
+- !private ["s5ErrorP", "code"]
+- !private ["s5ErrorP", "stp_genericConnectionError"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s25ExpressibleByFloatLiteralP", ""]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- ["s27ExpressibleByIntegerLiteralP", ""]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "pending"]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["SF", ""]
+- !private ["SF", "init"]
+- !private ["So17NSHTTPURLResponseC", "statusCode"]
+- !private ["SH", "CFNetworkErrors"]
+- !private ["SH", "Date"]
+- !private ["SH", "DefaultPollInterval"]
+- !private ["SH", "DispatchQueue"]
+- !private ["SH", "MaxPollInterval"]
+- !private ["SH", "MaxRetries"]
+- !private ["SH", "MaxTimeout"]
+- !private ["SH", "NSError"]
+- !private ["SH", "NotificationCenter"]
+- !private ["SH", "RawValue"]
+- !private ["SH", "TimeInterval"]
+- !private ["SH", "Timer"]
+- !private ["SH", "UIApplication"]
+- ["SH", ""]
+- !private ["SH", "_continue"]
+- !private ["SH", "_poll"]
+- !private ["SH", "addObserver"]
+- !private ["SH", "apiClient"]
+- !private ["SH", "async"]
+- !private ["SH", "beginBackgroundTask"]
+- !private ["SH", "cancel"]
+- !private ["SH", "cfurlErrorCancelled"]
+- !private ["SH", "cfurlErrorNetworkConnectionLost"]
+- !private ["SH", "cfurlErrorNotConnectedToInternet"]
+- !private ["SH", "cleanupAndFireCompletion"]
+- !private ["SH", "clientSecret"]
+- !private ["SH", "code"]
+- !private ["SH", "completion"]
+- !private ["SH", "continue"]
+- !private ["SH", "dataTask"]
+- !private ["SH", "default"]
+- !private ["SH", "didBecomeActiveNotification"]
+- !private ["SH", "didEnterBackgroundNotification"]
+- !private ["SH", "endBackgroundTask"]
+- !private ["SH", "init"]
+- !private ["SH", "invalid"]
+- !private ["SH", "invalidate"]
+- !private ["SH", "latestSource"]
+- !private ["SH", "main"]
+- !private ["SH", "min"]
+- !private ["SH", "pausePolling"]
+- !private ["SH", "pending"]
+- !private ["SH", "poll"]
+- !private ["SH", "pollInterval"]
+- !private ["SH", "pollingPaused"]
+- !private ["SH", "pollingStopped"]
+- !private ["SH", "rawValue"]
+- !private ["SH", "removeObserver"]
+- !private ["SH", "requestCount"]
+- !private ["SH", "restartPolling"]
+- !private ["SH", "retrieveSource"]
+- !private ["SH", "retryCount"]
+- !private ["SH", "scheduledTimer"]
+- !private ["SH", "shared"]
+- !private ["SH", "shouldContinuePollingSource"]
+- !private ["SH", "sourceID"]
+- !private ["SH", "startTime"]
+- !private ["SH", "status"]
+- !private ["SH", "statusCode"]
+- !private ["SH", "stopPolling"]
+- !private ["SH", "stp_genericConnectionError"]
+- !private ["SH", "timeIntervalSince"]
+- !private ["SH", "timeout"]
+- !private ["SH", "timer"]
+- !private ["SH", "willEnterForegroundNotification"]
+- !private ["SH", "willResignActiveNotification"]
+- ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "code"]
+- !private ["So8NSCodingP", "statusCode"]
+- !private ["So8NSCodingP", "stp_genericConnectionError"]
+- !private ["So9NSCopyingP", ""]
+- !private ["So9NSCopyingP", "cancel"]
+- !private ["So9NSCopyingP", "code"]
+- !private ["So9NSCopyingP", "statusCode"]
+- !private ["So9NSCopyingP", "stp_genericConnectionError"]
+- !private ["So7NSErrorC", "code"]
+- !private ["So7NSErrorC", "stp_genericConnectionError"]
+- ["So8NSObjectC", "Bool"]
+- !private ["So8NSObjectC", "CFNetworkErrors"]
+- ["So8NSObjectC", "Date"]
+- !private ["So8NSObjectC", "DefaultPollInterval"]
+- !private ["So8NSObjectC", "DispatchQueue"]
+- ["So8NSObjectC", "Error"]
+- ["So8NSObjectC", "HTTPURLResponse"]
+- !private ["So8NSObjectC", "MaxPollInterval"]
+- !private ["So8NSObjectC", "MaxRetries"]
+- !private ["So8NSObjectC", "MaxTimeout"]
+- ["So8NSObjectC", "NSError"]
+- !private ["So8NSObjectC", "NotificationCenter"]
+- ["So8NSObjectC", "STPAPIClient"]
+- ["So8NSObjectC", "STPSource"]
+- ["So8NSObjectC", "STPSourceCompletionBlock"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "TimeInterval"]
+- ["So8NSObjectC", "Timer"]
+- !private ["So8NSObjectC", "UIApplication"]
+- !private ["So8NSObjectC", "UIBackgroundTaskIdentifier"]
+- ["So8NSObjectC", "URLSessionDataTask"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "_continue"]
+- ["So8NSObjectC", "_poll"]
+- !private ["So8NSObjectC", "activate"]
+- !private ["So8NSObjectC", "addObserver"]
+- !private ["So8NSObjectC", "addObserverForName"]
+- ["So8NSObjectC", "apiClient"]
+- !private ["So8NSObjectC", "async"]
+- !private ["So8NSObjectC", "beginBackgroundTask"]
+- !private ["So8NSObjectC", "beginBackgroundTaskWithExpirationHandler"]
+- !private ["So8NSObjectC", "beginBackgroundTaskWithName"]
+- !private ["So8NSObjectC", "cancel"]
+- ["So8NSObjectC", "cleanupAndFireCompletion"]
+- ["So8NSObjectC", "clientSecret"]
+- !private ["So8NSObjectC", "code"]
+- ["So8NSObjectC", "completion"]
+- !private ["So8NSObjectC", "continue"]
+- ["So8NSObjectC", "dataTask"]
+- !private ["So8NSObjectC", "default"]
+- !private ["So8NSObjectC", "didBecomeActiveNotification"]
+- !private ["So8NSObjectC", "didEnterBackgroundNotification"]
+- !private ["So8NSObjectC", "endBackgroundTask"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "invalidate"]
+- ["So8NSObjectC", "latestSource"]
+- !private ["So8NSObjectC", "main"]
+- !private ["So8NSObjectC", "min"]
+- ["So8NSObjectC", "pausePolling"]
+- ["So8NSObjectC", "poll"]
+- ["So8NSObjectC", "pollInterval"]
+- ["So8NSObjectC", "pollingPaused"]
+- ["So8NSObjectC", "pollingStopped"]
+- !private ["So8NSObjectC", "removeObserver"]
+- ["So8NSObjectC", "requestCount"]
+- ["So8NSObjectC", "restartPolling"]
+- !private ["So8NSObjectC", "resume"]
+- !private ["So8NSObjectC", "retrieveSource"]
+- ["So8NSObjectC", "retryCount"]
+- !private ["So8NSObjectC", "scheduledTimer"]
+- !private ["So8NSObjectC", "scheduledTimerWithTimeInterval"]
+- !private ["So8NSObjectC", "setTarget"]
+- !private ["So8NSObjectC", "shared"]
+- ["So8NSObjectC", "shouldContinuePollingSource"]
+- ["So8NSObjectC", "sourceID"]
+- ["So8NSObjectC", "startTime"]
+- !private ["So8NSObjectC", "status"]
+- !private ["So8NSObjectC", "statusCode"]
+- ["So8NSObjectC", "stopPolling"]
+- !private ["So8NSObjectC", "stp_genericConnectionError"]
+- !private ["So8NSObjectC", "suspend"]
+- !private ["So8NSObjectC", "sync"]
+- ["So8NSObjectC", "timeout"]
+- ["So8NSObjectC", "timer"]
+- !private ["So8NSObjectC", "willEnterForegroundNotification"]
+- !private ["So8NSObjectC", "willResignActiveNotification"]
+- !private ["So8NSObjectP", "CFNetworkErrors"]
+- !private ["So8NSObjectP", "Date"]
+- !private ["So8NSObjectP", "DefaultPollInterval"]
+- !private ["So8NSObjectP", "DispatchQueue"]
+- ["So8NSObjectP", "HTTPURLResponse"]
+- !private ["So8NSObjectP", "MaxPollInterval"]
+- !private ["So8NSObjectP", "MaxRetries"]
+- !private ["So8NSObjectP", "MaxTimeout"]
+- !private ["So8NSObjectP", "NSError"]
+- !private ["So8NSObjectP", "NotificationCenter"]
+- ["So8NSObjectP", "STPAPIClient"]
+- ["So8NSObjectP", "STPSourceCompletionBlock"]
+- ["So8NSObjectP", "TimeInterval"]
+- ["So8NSObjectP", "Timer"]
+- !private ["So8NSObjectP", "UIApplication"]
+- !private ["So8NSObjectP", "UIBackgroundTaskIdentifier"]
+- ["So8NSObjectP", "URLSessionDataTask"]
+- ["So8NSObjectP", ""]
+- ["So8NSObjectP", "_continue"]
+- ["So8NSObjectP", "_poll"]
+- !private ["So8NSObjectP", "activate"]
+- !private ["So8NSObjectP", "addObserver"]
+- !private ["So8NSObjectP", "addObserverForName"]
+- ["So8NSObjectP", "apiClient"]
+- !private ["So8NSObjectP", "async"]
+- !private ["So8NSObjectP", "beginBackgroundTask"]
+- !private ["So8NSObjectP", "beginBackgroundTaskWithExpirationHandler"]
+- !private ["So8NSObjectP", "beginBackgroundTaskWithName"]
+- !private ["So8NSObjectP", "cancel"]
+- ["So8NSObjectP", "cleanupAndFireCompletion"]
+- ["So8NSObjectP", "clientSecret"]
+- !private ["So8NSObjectP", "code"]
+- ["So8NSObjectP", "completion"]
+- !private ["So8NSObjectP", "continue"]
+- ["So8NSObjectP", "dataTask"]
+- !private ["So8NSObjectP", "default"]
+- ["So8NSObjectP", "deinit"]
+- !private ["So8NSObjectP", "didBecomeActiveNotification"]
+- !private ["So8NSObjectP", "didEnterBackgroundNotification"]
+- !private ["So8NSObjectP", "endBackgroundTask"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "invalidate"]
+- ["So8NSObjectP", "latestSource"]
+- !private ["So8NSObjectP", "main"]
+- !private ["So8NSObjectP", "min"]
+- ["So8NSObjectP", "pausePolling"]
+- ["So8NSObjectP", "poll"]
+- ["So8NSObjectP", "pollInterval"]
+- ["So8NSObjectP", "pollingPaused"]
+- ["So8NSObjectP", "pollingStopped"]
+- !private ["So8NSObjectP", "removeObserver"]
+- ["So8NSObjectP", "requestCount"]
+- ["So8NSObjectP", "restartPolling"]
+- !private ["So8NSObjectP", "resume"]
+- ["So8NSObjectP", "retrieveSource"]
+- ["So8NSObjectP", "retryCount"]
+- !private ["So8NSObjectP", "scheduledTimer"]
+- !private ["So8NSObjectP", "scheduledTimerWithTimeInterval"]
+- !private ["So8NSObjectP", "setTarget"]
+- !private ["So8NSObjectP", "shared"]
+- ["So8NSObjectP", "shouldContinuePollingSource"]
+- ["So8NSObjectP", "sourceID"]
+- ["So8NSObjectP", "startTime"]
+- !private ["So8NSObjectP", "status"]
+- !private ["So8NSObjectP", "statusCode"]
+- ["So8NSObjectP", "stopPolling"]
+- !private ["So8NSObjectP", "stp_genericConnectionError"]
+- !private ["So8NSObjectP", "suspend"]
+- !private ["So8NSObjectP", "sync"]
+- ["So8NSObjectP", "timeout"]
+- ["So8NSObjectP", "timer"]
+- !private ["So8NSObjectP", "willEnterForegroundNotification"]
+- !private ["So8NSObjectP", "willResignActiveNotification"]
+- !private ["So14NSSecureCodingP", ""]
+- !private ["So14NSSecureCodingP", "code"]
+- !private ["So14NSSecureCodingP", "statusCode"]
+- !private ["So14NSSecureCodingP", "stp_genericConnectionError"]
+- !private ["So20NSNotificationCenterC", "addObserver"]
+- !private ["So20NSNotificationCenterC", "default"]
+- !private ["So20NSNotificationCenterC", "removeObserver"]
+- ["Sj", ""]
+- !private ["Sj", "init"]
+- ["So9OS_objectC", ""]
+- !private ["So9OS_objectC", "activate"]
+- !private ["So9OS_objectC", "async"]
+- !private ["So9OS_objectC", "init"]
+- !private ["So9OS_objectC", "main"]
+- !private ["So9OS_objectC", "resume"]
+- !private ["So9OS_objectC", "setTarget"]
+- !private ["So9OS_objectC", "suspend"]
+- !private ["So9OS_objectC", "sync"]
+- !private ["Sq", "pending"]
+- !private ["So19NSProgressReportingP", "cancel"]
+- !private ["SY", "RawValue"]
+- !private ["SY", ""]
+- !private ["SY", "cfurlErrorCancelled"]
+- !private ["SY", "cfurlErrorNetworkConnectionLost"]
+- !private ["SY", "cfurlErrorNotConnectedToInternet"]
+- !private ["SY", "invalid"]
+- !private ["SY", "pending"]
+- !private ["SY", "rawValue"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "timeIntervalSince"]
+- !private ["s10SIMDScalarP", "init"]
+- !private ["6Stripe12STPAPIClientC", ""]
+- !private ["6Stripe12STPAPIClientC", "retrieveSource"]
+- !private ["6Stripe23STPAPIResponseDecodableP", "status"]
+- !private ["6Stripe16STPPaymentOptionP", "status"]
+- !private ["6Stripe9STPSourceC", ""]
+- !private ["6Stripe9STPSourceC", "status"]
+- ["6Stripe15STPSourcePollerC", "Bool"]
+- !private ["6Stripe15STPSourcePollerC", "CFNetworkErrors"]
+- ["6Stripe15STPSourcePollerC", "Date"]
+- !private ["6Stripe15STPSourcePollerC", "DefaultPollInterval"]
+- !private ["6Stripe15STPSourcePollerC", "DispatchQueue"]
+- ["6Stripe15STPSourcePollerC", "Error"]
+- ["6Stripe15STPSourcePollerC", "HTTPURLResponse"]
+- !private ["6Stripe15STPSourcePollerC", "MaxPollInterval"]
+- !private ["6Stripe15STPSourcePollerC", "MaxRetries"]
+- !private ["6Stripe15STPSourcePollerC", "MaxTimeout"]
+- ["6Stripe15STPSourcePollerC", "NSError"]
+- !private ["6Stripe15STPSourcePollerC", "NotificationCenter"]
+- ["6Stripe15STPSourcePollerC", "STPAPIClient"]
+- ["6Stripe15STPSourcePollerC", "STPSource"]
+- ["6Stripe15STPSourcePollerC", "STPSourceCompletionBlock"]
+- ["6Stripe15STPSourcePollerC", "String"]
+- ["6Stripe15STPSourcePollerC", "TimeInterval"]
+- ["6Stripe15STPSourcePollerC", "Timer"]
+- !private ["6Stripe15STPSourcePollerC", "UIApplication"]
+- !private ["6Stripe15STPSourcePollerC", "UIBackgroundTaskIdentifier"]
+- ["6Stripe15STPSourcePollerC", "URLSessionDataTask"]
+- ["6Stripe15STPSourcePollerC", ""]
+- ["6Stripe15STPSourcePollerC", "_continue"]
+- ["6Stripe15STPSourcePollerC", "_poll"]
+- !private ["6Stripe15STPSourcePollerC", "apiClient"]
+- ["6Stripe15STPSourcePollerC", "cleanupAndFireCompletion"]
+- !private ["6Stripe15STPSourcePollerC", "clientSecret"]
+- !private ["6Stripe15STPSourcePollerC", "completion"]
+- !private ["6Stripe15STPSourcePollerC", "continue"]
+- !private ["6Stripe15STPSourcePollerC", "dataTask"]
+- ["6Stripe15STPSourcePollerC", "deinit"]
+- ["6Stripe15STPSourcePollerC", "init"]
+- !private ["6Stripe15STPSourcePollerC", "latestSource"]
+- !private ["6Stripe15STPSourcePollerC", "min"]
+- ["6Stripe15STPSourcePollerC", "pausePolling"]
+- ["6Stripe15STPSourcePollerC", "poll"]
+- !private ["6Stripe15STPSourcePollerC", "pollInterval"]
+- !private ["6Stripe15STPSourcePollerC", "pollingPaused"]
+- !private ["6Stripe15STPSourcePollerC", "pollingStopped"]
+- !private ["6Stripe15STPSourcePollerC", "requestCount"]
+- ["6Stripe15STPSourcePollerC", "restartPolling"]
+- !private ["6Stripe15STPSourcePollerC", "retryCount"]
+- ["6Stripe15STPSourcePollerC", "shouldContinuePollingSource"]
+- !private ["6Stripe15STPSourcePollerC", "sourceID"]
+- !private ["6Stripe15STPSourcePollerC", "startTime"]
+- ["6Stripe15STPSourcePollerC", "stopPolling"]
+- !private ["6Stripe15STPSourcePollerC", "timeout"]
+- !private ["6Stripe15STPSourcePollerC", "timer"]
+- !private ["6Stripe17STPSourceProtocolP", "status"]
+- !private ["6Stripe15STPSourceStatusO", ""]
+- !private ["6Stripe15STPSourceStatusO", "pending"]
+- !private ["7Combine9SchedulerP", "async"]
+- !private ["7Combine9SchedulerP", "main"]
+- !private ["ST", ""]
+- ["s13SignedNumericP", ""]
+- !private ["s13SignedNumericP", "init"]
+- ["Sx", ""]
+- !private ["Sx", "init"]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s20TextOutputStreamableP", ""]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["So7NSTimerC", "invalidate"]
+- !private ["So7NSTimerC", "scheduledTimer"]
+- !private ["So13UIApplicationC", "beginBackgroundTask"]
+- !private ["So13UIApplicationC", "didBecomeActiveNotification"]
+- !private ["So13UIApplicationC", "didEnterBackgroundNotification"]
+- !private ["So13UIApplicationC", "endBackgroundTask"]
+- !private ["So13UIApplicationC", "shared"]
+- !private ["So13UIApplicationC", "willEnterForegroundNotification"]
+- !private ["So13UIApplicationC", "willResignActiveNotification"]
+- !private ["So26UIBackgroundTaskIdentifiera", "invalid"]
+- !private ["So30UIPasteConfigurationSupportingP", "beginBackgroundTask"]
+- !private ["So30UIPasteConfigurationSupportingP", "beginBackgroundTaskWithExpirationHandler"]
+- !private ["So30UIPasteConfigurationSupportingP", "beginBackgroundTaskWithName"]
+- !private ["So30UIPasteConfigurationSupportingP", "didBecomeActiveNotification"]
+- !private ["So30UIPasteConfigurationSupportingP", "didEnterBackgroundNotification"]
+- !private ["So30UIPasteConfigurationSupportingP", "endBackgroundTask"]
+- !private ["So30UIPasteConfigurationSupportingP", "shared"]
+- !private ["So30UIPasteConfigurationSupportingP", "willEnterForegroundNotification"]
+- !private ["So30UIPasteConfigurationSupportingP", "willResignActiveNotification"]
+- ["So11UIResponderC", ""]
+- !private ["So11UIResponderC", "beginBackgroundTask"]
+- !private ["So11UIResponderC", "beginBackgroundTaskWithExpirationHandler"]
+- !private ["So11UIResponderC", "beginBackgroundTaskWithName"]
+- !private ["So11UIResponderC", "didBecomeActiveNotification"]
+- !private ["So11UIResponderC", "didEnterBackgroundNotification"]
+- !private ["So11UIResponderC", "endBackgroundTask"]
+- !private ["So11UIResponderC", "shared"]
+- !private ["So11UIResponderC", "willEnterForegroundNotification"]
+- !private ["So11UIResponderC", "willResignActiveNotification"]
+- !private ["So30UIResponderStandardEditActionsP", "beginBackgroundTask"]
+- !private ["So30UIResponderStandardEditActionsP", "beginBackgroundTaskWithExpirationHandler"]
+- !private ["So30UIResponderStandardEditActionsP", "beginBackgroundTaskWithName"]
+- !private ["So30UIResponderStandardEditActionsP", "didBecomeActiveNotification"]
+- !private ["So30UIResponderStandardEditActionsP", "didEnterBackgroundNotification"]
+- !private ["So30UIResponderStandardEditActionsP", "endBackgroundTask"]
+- !private ["So30UIResponderStandardEditActionsP", "shared"]
+- !private ["So30UIResponderStandardEditActionsP", "willEnterForegroundNotification"]
+- !private ["So30UIResponderStandardEditActionsP", "willResignActiveNotification"]
+- !private ["So23UIUserActivityRestoringP", "beginBackgroundTask"]
+- !private ["So23UIUserActivityRestoringP", "beginBackgroundTaskWithExpirationHandler"]
+- !private ["So23UIUserActivityRestoringP", "beginBackgroundTaskWithName"]
+- !private ["So23UIUserActivityRestoringP", "didBecomeActiveNotification"]
+- !private ["So23UIUserActivityRestoringP", "didEnterBackgroundNotification"]
+- !private ["So23UIUserActivityRestoringP", "endBackgroundTask"]
+- !private ["So23UIUserActivityRestoringP", "shared"]
+- !private ["So23UIUserActivityRestoringP", "willEnterForegroundNotification"]
+- !private ["So23UIUserActivityRestoringP", "willResignActiveNotification"]
+- ["So13NSURLResponseC", ""]
+- !private ["So13NSURLResponseC", "statusCode"]
+- !private ["So20NSURLSessionDataTaskC", "cancel"]
+- ["So16NSURLSessionTaskC", ""]
+- !private ["So16NSURLSessionTaskC", "cancel"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "timeIntervalSince"]
+- ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s35_HasCustomAnyHashableRepresentationP", ""]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "invalid"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CFNetworkErrors"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Date"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DefaultPollInterval"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "MaxPollInterval"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "MaxRetries"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "MaxTimeout"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NotificationCenter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "TimeInterval"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Timer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIApplication"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_continue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_poll"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addObserver"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "apiClient"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "beginBackgroundTask"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cancel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cleanupAndFireCompletion"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "clientSecret"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "code"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "completion"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "continue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dataTask"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "default"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "didBecomeActiveNotification"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "didEnterBackgroundNotification"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "endBackgroundTask"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "invalidate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "latestSource"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "min"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "pausePolling"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "poll"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "pollInterval"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "pollingPaused"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "pollingStopped"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "removeObserver"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "requestCount"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "restartPolling"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "retrieveSource"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "retryCount"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "scheduledTimer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shouldContinuePollingSource"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sourceID"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "startTime"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "status"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "statusCode"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stopPolling"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stp_genericConnectionError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "timeout"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "timer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "willEnterForegroundNotification"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "willResignActiveNotification"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CFNetworkErrors"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Date"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "DefaultPollInterval"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "DispatchQueue"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "MaxPollInterval"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "MaxRetries"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "MaxTimeout"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSError"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NotificationCenter"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "TimeInterval"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Timer"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIApplication"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_continue"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_poll"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addObserver"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "apiClient"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "async"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "beginBackgroundTask"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cancel"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cleanupAndFireCompletion"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "clientSecret"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "code"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "completion"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "continue"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dataTask"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "default"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "didBecomeActiveNotification"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "didEnterBackgroundNotification"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "endBackgroundTask"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "invalidate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "latestSource"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "main"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "min"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "pausePolling"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "poll"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "pollInterval"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "pollingPaused"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "pollingStopped"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "removeObserver"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "requestCount"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "restartPolling"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "retrieveSource"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "retryCount"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "scheduledTimer"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shouldContinuePollingSource"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sourceID"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "startTime"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "status"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "statusCode"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stopPolling"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stp_genericConnectionError"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "timeout"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "timer"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "willEnterForegroundNotification"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "willResignActiveNotification"]
+- !private ["s21_ObjectiveCBridgeableP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "invalid"]
+- !private ["s21_ObjectiveCBridgeableP", "pending"]
+- !private ["s21_ObjectiveCBridgeableP", "timeIntervalSince"]
+- !private ["s26_OptionalNilComparisonTypeV", "pending"]
+- !private ["s20_SwiftNewtypeWrapperP", "invalid"]
+depends-nominal:
+- "s18AdditiveArithmeticP"
+- !private "SK"
+- !private "SB"
+- "Sz"
+- !private "So15CFNetworkErrorsV"
+- "s7CVarArgP"
+- !private "Sl"
+- "SL"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation4DateV"
+- !private "Se"
+- "So18OS_dispatch_objectC"
+- !private "So17OS_dispatch_queueC"
+- !private "Sd"
+- !private "SE"
+- "SQ"
+- !private "s5ErrorP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "SF"
+- !private "So17NSHTTPURLResponseC"
+- "SH"
+- "s25LosslessStringConvertibleP"
+- "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So7NSErrorC"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So20NSNotificationCenterC"
+- "Sj"
+- "So9OS_objectC"
+- !private "Sq"
+- !private "So19NSProgressReportingP"
+- !private "SY"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s10SIMDScalarP"
+- !private "6Stripe12STPAPIClientC"
+- !private "6Stripe23STPAPIResponseDecodableP"
+- !private "6Stripe16STPPaymentOptionP"
+- !private "6Stripe9STPSourceC"
+- "6Stripe15STPSourcePollerC"
+- !private "6Stripe17STPSourceProtocolP"
+- !private "6Stripe15STPSourceStatusO"
+- !private "7Combine9SchedulerP"
+- !private "ST"
+- "s13SignedNumericP"
+- "Sx"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So7NSTimerC"
+- !private "So13UIApplicationC"
+- !private "So26UIBackgroundTaskIdentifiera"
+- !private "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So23UIUserActivityRestoringP"
+- "So13NSURLResponseC"
+- !private "So20NSURLSessionDataTaskC"
+- "So16NSURLSessionTaskC"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s33_ExpressibleByBuiltinFloatLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s26_OptionalNilComparisonTypeV"
+- !private "s20_SwiftNewtypeWrapperP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreMIDI.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreML.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreMedia.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/simd.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Vision.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreLocation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/AVFoundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreAudio.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Contacts.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/WebKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIViewController+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSError+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Target Support Files/Stripe/Stripe-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDS2Service.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseImage.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSErrorMessage.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONDecodable.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONEncodable.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONWebSignature.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponse.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationResponse.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDirectoryServerCertificate.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDSProtocolVersion+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTransaction+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformationParameter+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSString+EmptyChecking.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSWarning.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSLocalizedString.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSEphemeralKeyPair+Testing.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSwiftTryCatch.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSErrorMessage+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDirectoryServerCertificate+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSException+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseMessageExtension.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformation.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIButton+CustomInitialization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSUICustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTextFieldCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSLabelCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSelectionCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSButtonCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSNavigationBarCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSFooterCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTransaction.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSNotInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAlreadyInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSRuntimeException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSInvalidInputException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONWebEncryption.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSelectionButton.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseSelectionInfo.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/Stripe3DS2-Bridging-Header.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSImageLoader.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONEncoder.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSACSNetworkingManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSynchronousLocationManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformationManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJailbreakChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSOSVersionChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDebuggerChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSimulatorChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSIntegrityChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCategoryLinker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseViewController.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSProgressViewController.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformationParameter.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDirectoryServer.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSEphemeralKeyPair.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSStripe3DS2Error.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSBundleLocator.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSecTypeUtilities.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSData+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSString+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSDictionary+DecodingHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSConfigParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIColor+DefaultColors.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSIPAddress.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIFont+DefaultFonts.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseImageObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseMessageExtensionObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseSelectionInfoObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCompletionEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSEllipticCurvePoint.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIColor+ThirteenSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSLayoutConstraint+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIView+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSWebView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTextChallengeView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSBrandingView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSProcessingView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSStackView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSExpandableInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeSelectionView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSpacerView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSWhitelistView.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/Stripe.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "ecfe4f788354bb891350636768e3b143"

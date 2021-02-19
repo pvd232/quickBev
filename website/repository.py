@@ -138,29 +138,27 @@ class Customer_Repository(object):
       # if they don't exist this will return a null value for customer which i check for in line 80
 
         for customer in session.query(Customer):
-            if check_password_hash(customer.id, email) and check_password_hash(customer.password, password):
+            if customer.id == email and check_password_hash(customer.password, password):
                 return customer
         else:
             return False
 
     def authenticate_username(self, session, username, hashed_username):
         print('username', username)
-        # the usernamebeing passed in from the confirmation email is the hashed version
-        if not username and hashed_username:
+        # if a username is passed then we query the db to verify it, if the hashed version is passed then we use the check_password_hash to verify it
+        if username and not hashed_username:
             customer = session.query(Customer).filter(
-                Customer.id == hashed_username)
+                Customer.id == username).first()
             if customer:
                 return True
             else:
                 return False
-        elif username and not hashed_username:
-
+        elif not username and hashed_username:
             for customer in session.query(Customer):
                 print('check_password_hash(customer.id, username)',
-                      check_password_hash(customer.id, username))
+                      check_password_hash(hashed_username, customer.id))
                 print('customer.id', customer.id)
-
-                if check_password_hash(customer.id, username):
+                if check_password_hash(hashed_username, customer.id):
                     return True
             return False
 
@@ -202,7 +200,7 @@ class Business_Repository(object):
 
     def add_business(self, session, business):
         # will have to plug in an API here to dynamically pull information (avalara probs if i can get the freaking credentials to work)
-        new_business = Business(name=business.name, classification=business.classification, date_joined=date.today(
+        new_business = Business(id = business.id, name=business.name, classification=business.classification, date_joined=date.today(
         ), sales_tax_rate=business.sales_tax_rate, merchant_id=business.merchant_id, street=business.street, city=business.city,
             state=business.state, zipcode=business.zipcode, address=business.address, tablet=business.tablet, phone_number=business.phone_number, merchant_stripe_id=business.merchant_stripe_id)
         session.add(new_business)

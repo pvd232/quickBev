@@ -1,0 +1,662 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "NaclUtil"
+- "NaclSecretBox"
+- "NaclScalarMult"
+- "NaclBox"
+- "NaclSign"
+provides-nominal:
+- "9TweetNacl0B4UtilV"
+- "9TweetNacl0B4UtilV0bC5ErrorO"
+- "9TweetNacl0B9SecretBoxV"
+- "9TweetNacl0B9SecretBoxV0bcD5ErrorO"
+- "9TweetNacl0B10ScalarMultV"
+- "9TweetNacl0B10ScalarMultV0bcD5ErrorO"
+- "9TweetNacl0B3BoxV"
+- "9TweetNacl0B3BoxV0bC5ErrorO"
+- "9TweetNacl0B4SignV"
+- "9TweetNacl0B4SignV0bC5ErrorO"
+- "9TweetNacl0B4SignV7KeyPairV"
+provides-member:
+- ["9TweetNacl0B4UtilV", ""]
+- ["9TweetNacl0B4UtilV0bC5ErrorO", ""]
+- ["9TweetNacl0B9SecretBoxV", ""]
+- ["9TweetNacl0B9SecretBoxV0bcD5ErrorO", ""]
+- ["9TweetNacl0B10ScalarMultV", ""]
+- ["9TweetNacl0B10ScalarMultV0bcD5ErrorO", ""]
+- ["9TweetNacl0B3BoxV", ""]
+- ["9TweetNacl0B3BoxV0bC5ErrorO", ""]
+- ["9TweetNacl0B4SignV", ""]
+- ["9TweetNacl0B4SignV0bC5ErrorO", ""]
+- ["9TweetNacl0B4SignV7KeyPairV", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!="
+- !private "+"
+- !private "..<"
+- "=="
+- "Bool"
+- "CTweetNacl"
+- "CastingPrecedence"
+- "Data"
+- "Error"
+- !private "FloatLiteralType"
+- "Int"
+- "Int32"
+- !private "IntegerLiteralType"
+- "NaclBox"
+- !private "NaclBoxError"
+- "NaclScalarMult"
+- !private "NaclScalarMultError"
+- "NaclSecretBox"
+- !private "NaclSecretBoxError"
+- "NaclSign"
+- !private "NaclSignError"
+- "NaclUtil"
+- !private "NaclUtilError"
+- !private "NaclWrapper"
+- !private "NaclWrapperError"
+- "SecRandomCopyBytes"
+- "String"
+- "UInt64"
+- "UInt8"
+- "UnsafeMutablePointer"
+- "UnsafePointer"
+- !private "before"
+- !private "crypto_box_BEFORENMBYTES"
+- !private "crypto_box_PUBLICKEYBYTES"
+- !private "crypto_box_SECRETKEYBYTES"
+- !private "crypto_hash_BYTES"
+- !private "crypto_scalarmult_BYTES"
+- !private "crypto_scalarmult_SCALARBYTES"
+- !private "crypto_secretbox_BOXZEROBYTES"
+- !private "crypto_secretbox_KEYBYTES"
+- !private "crypto_secretbox_NONCEBYTES"
+- !private "crypto_secretbox_ZEROBYTES"
+- !private "crypto_sign_BYTES"
+- !private "crypto_sign_PUBLICKEYBYTES"
+- !private "crypto_sign_SECRETKEYBYTES"
+- !private "crypto_sign_keypair_seeded"
+- !private "errSecSuccess"
+- "kSecRandomDefault"
+- !private "sign"
+- !private "||"
+depends-member:
+- !private ["s18AdditiveArithmeticP", ""]
+- !private ["s18AdditiveArithmeticP", "init"]
+- !private ["SK", ""]
+- !private ["SK", "append"]
+- !private ["SK", "base64EncodedString"]
+- !private ["SK", "count"]
+- !private ["SK", "init"]
+- !private ["SK", "replaceSubrange"]
+- !private ["SK", "subdata"]
+- !private ["SK", "withUnsafeBytes"]
+- !private ["SK", "withUnsafeMutableBytes"]
+- !private ["Sz", ""]
+- !private ["Sz", "init"]
+- !private ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "allocate"]
+- !private ["s7CVarArgP", "init"]
+- !private ["Sl", ""]
+- !private ["Sl", "_copyToContiguousArray"]
+- !private ["Sl", "_customIndexOfEquatableElement"]
+- !private ["Sl", "_customLastIndexOfEquatableElement"]
+- !private ["Sl", "_failEarlyRangeCheck"]
+- !private ["Sl", "append"]
+- !private ["Sl", "base64EncodedString"]
+- !private ["Sl", "count"]
+- !private ["Sl", "distance"]
+- !private ["Sl", "endIndex"]
+- !private ["Sl", "formIndex"]
+- !private ["Sl", "index"]
+- !private ["Sl", "indices"]
+- !private ["Sl", "init"]
+- !private ["Sl", "isEmpty"]
+- !private ["Sl", "makeIterator"]
+- !private ["Sl", "replaceSubrange"]
+- !private ["Sl", "startIndex"]
+- !private ["Sl", "subdata"]
+- !private ["Sl", "subscript"]
+- !private ["Sl", "underestimatedCount"]
+- !private ["Sl", "withUnsafeBytes"]
+- !private ["Sl", "withUnsafeMutableBytes"]
+- !private ["SL", ""]
+- !private ["SL", "allocate"]
+- !private ["SL", "init"]
+- !private ["10Foundation15ContiguousBytesP", "append"]
+- !private ["10Foundation15ContiguousBytesP", "base64EncodedString"]
+- !private ["10Foundation15ContiguousBytesP", "count"]
+- !private ["10Foundation15ContiguousBytesP", "init"]
+- !private ["10Foundation15ContiguousBytesP", "replaceSubrange"]
+- !private ["10Foundation15ContiguousBytesP", "subdata"]
+- !private ["10Foundation15ContiguousBytesP", "withUnsafeBytes"]
+- !private ["10Foundation15ContiguousBytesP", "withUnsafeMutableBytes"]
+- !private ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "allocate"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "base64EncodedString"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "replaceSubrange"]
+- !private ["s28CustomDebugStringConvertibleP", "subdata"]
+- !private ["s28CustomDebugStringConvertibleP", "withUnsafeBytes"]
+- !private ["s28CustomDebugStringConvertibleP", "withUnsafeMutableBytes"]
+- !private ["s17CustomReflectableP", ""]
+- !private ["s17CustomReflectableP", "allocate"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "base64EncodedString"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "replaceSubrange"]
+- !private ["s17CustomReflectableP", "subdata"]
+- !private ["s17CustomReflectableP", "withUnsafeBytes"]
+- !private ["s17CustomReflectableP", "withUnsafeMutableBytes"]
+- !private ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "base64EncodedString"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "replaceSubrange"]
+- !private ["s23CustomStringConvertibleP", "subdata"]
+- !private ["s23CustomStringConvertibleP", "withUnsafeBytes"]
+- !private ["s23CustomStringConvertibleP", "withUnsafeMutableBytes"]
+- !private ["10Foundation4DataV", "append"]
+- !private ["10Foundation4DataV", "base64EncodedString"]
+- !private ["10Foundation4DataV", "count"]
+- !private ["10Foundation4DataV", "init"]
+- !private ["10Foundation4DataV", "replaceSubrange"]
+- !private ["10Foundation4DataV", "subdata"]
+- !private ["10Foundation4DataV", "withUnsafeBytes"]
+- !private ["10Foundation4DataV", "withUnsafeMutableBytes"]
+- !private ["10Foundation12DataProtocolP", ""]
+- !private ["10Foundation12DataProtocolP", "append"]
+- !private ["10Foundation12DataProtocolP", "base64EncodedString"]
+- !private ["10Foundation12DataProtocolP", "count"]
+- !private ["10Foundation12DataProtocolP", "init"]
+- !private ["10Foundation12DataProtocolP", "replaceSubrange"]
+- !private ["10Foundation12DataProtocolP", "subdata"]
+- !private ["10Foundation12DataProtocolP", "withUnsafeBytes"]
+- !private ["10Foundation12DataProtocolP", "withUnsafeMutableBytes"]
+- !private ["Se", "append"]
+- !private ["Se", "base64EncodedString"]
+- !private ["Se", "count"]
+- !private ["Se", "init"]
+- !private ["Se", "replaceSubrange"]
+- !private ["Se", "subdata"]
+- !private ["Se", "withUnsafeBytes"]
+- !private ["Se", "withUnsafeMutableBytes"]
+- !private ["SE", "append"]
+- !private ["SE", "base64EncodedString"]
+- !private ["SE", "count"]
+- !private ["SE", "init"]
+- !private ["SE", "replaceSubrange"]
+- !private ["SE", "subdata"]
+- !private ["SE", "withUnsafeBytes"]
+- !private ["SE", "withUnsafeMutableBytes"]
+- ["SQ", "=="]
+- ["SQ", ""]
+- ["SQ", "_code"]
+- ["SQ", "_domain"]
+- ["SQ", "_getEmbeddedNSError"]
+- ["SQ", "_rawHashValue"]
+- ["SQ", "_userInfo"]
+- !private ["SQ", "allocate"]
+- !private ["SQ", "append"]
+- !private ["SQ", "badKeySize"]
+- !private ["SQ", "badNonceSize"]
+- !private ["SQ", "badPublicKeySize"]
+- !private ["SQ", "badSecretKeySize"]
+- !private ["SQ", "base64EncodedString"]
+- ["SQ", "code"]
+- !private ["SQ", "count"]
+- !private ["SQ", "creationFailed"]
+- ["SQ", "domain"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- !private ["SQ", "init"]
+- !private ["SQ", "internalError"]
+- !private ["SQ", "invalidParameters"]
+- !private ["SQ", "replaceSubrange"]
+- !private ["SQ", "subdata"]
+- ["SQ", "userInfo"]
+- !private ["SQ", "withUnsafeBytes"]
+- !private ["SQ", "withUnsafeMutableBytes"]
+- ["s5ErrorP", "=="]
+- ["s5ErrorP", ""]
+- ["s5ErrorP", "_code"]
+- ["s5ErrorP", "_domain"]
+- ["s5ErrorP", "_getEmbeddedNSError"]
+- ["s5ErrorP", "_rawHashValue"]
+- ["s5ErrorP", "_userInfo"]
+- !private ["s5ErrorP", "badKeySize"]
+- !private ["s5ErrorP", "badNonceSize"]
+- !private ["s5ErrorP", "badPublicKeySize"]
+- !private ["s5ErrorP", "badSecretKeySize"]
+- ["s5ErrorP", "code"]
+- !private ["s5ErrorP", "creationFailed"]
+- ["s5ErrorP", "domain"]
+- ["s5ErrorP", "hash"]
+- ["s5ErrorP", "hashValue"]
+- !private ["s5ErrorP", "internalError"]
+- !private ["s5ErrorP", "invalidParameters"]
+- ["s5ErrorP", "userInfo"]
+- !private ["s27ExpressibleByIntegerLiteralP", ""]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- ["SH", "=="]
+- ["SH", ""]
+- ["SH", "_code"]
+- ["SH", "_domain"]
+- ["SH", "_getEmbeddedNSError"]
+- ["SH", "_rawHashValue"]
+- ["SH", "_userInfo"]
+- !private ["SH", "allocate"]
+- !private ["SH", "append"]
+- !private ["SH", "badKeySize"]
+- !private ["SH", "badNonceSize"]
+- !private ["SH", "badPublicKeySize"]
+- !private ["SH", "badSecretKeySize"]
+- !private ["SH", "base64EncodedString"]
+- ["SH", "code"]
+- !private ["SH", "count"]
+- !private ["SH", "creationFailed"]
+- ["SH", "domain"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- !private ["SH", "init"]
+- !private ["SH", "internalError"]
+- !private ["SH", "invalidParameters"]
+- !private ["SH", "replaceSubrange"]
+- !private ["SH", "subdata"]
+- ["SH", "userInfo"]
+- !private ["SH", "withUnsafeBytes"]
+- !private ["SH", "withUnsafeMutableBytes"]
+- !private ["s6HasherV", "combine"]
+- ["9TweetNacl0B4SignV7KeyPairV", "Data"]
+- !private ["9TweetNacl0B4SignV7KeyPairV", "NaclSignError"]
+- !private ["9TweetNacl0B4SignV7KeyPairV", "NaclWrapper"]
+- !private ["9TweetNacl0B4SignV7KeyPairV", "crypto_sign_PUBLICKEYBYTES"]
+- !private ["9TweetNacl0B4SignV7KeyPairV", "crypto_sign_SECRETKEYBYTES"]
+- ["9TweetNacl0B4SignV7KeyPairV", "init"]
+- ["9TweetNacl0B4SignV7KeyPairV", "keyPair"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["SM", ""]
+- !private ["SM", "append"]
+- !private ["SM", "base64EncodedString"]
+- !private ["SM", "count"]
+- !private ["SM", "init"]
+- !private ["SM", "replaceSubrange"]
+- !private ["SM", "subdata"]
+- !private ["SM", "withUnsafeBytes"]
+- !private ["SM", "withUnsafeMutableBytes"]
+- !private ["10Foundation19MutableDataProtocolP", "append"]
+- !private ["10Foundation19MutableDataProtocolP", "base64EncodedString"]
+- !private ["10Foundation19MutableDataProtocolP", "count"]
+- !private ["10Foundation19MutableDataProtocolP", "init"]
+- !private ["10Foundation19MutableDataProtocolP", "replaceSubrange"]
+- !private ["10Foundation19MutableDataProtocolP", "subdata"]
+- !private ["10Foundation19MutableDataProtocolP", "withUnsafeBytes"]
+- !private ["10Foundation19MutableDataProtocolP", "withUnsafeMutableBytes"]
+- ["So8NSCodingP", ""]
+- ["So8NSObjectP", ""]
+- !private ["9TweetNacl0B3BoxV", "CTweetNacl"]
+- ["9TweetNacl0B3BoxV", "Data"]
+- ["9TweetNacl0B3BoxV", "Error"]
+- !private ["9TweetNacl0B3BoxV", "Int32"]
+- ["9TweetNacl0B3BoxV", "NaclBoxError"]
+- !private ["9TweetNacl0B3BoxV", "NaclSecretBox"]
+- !private ["9TweetNacl0B3BoxV", "NaclUtil"]
+- !private ["9TweetNacl0B3BoxV", "NaclWrapper"]
+- !private ["9TweetNacl0B3BoxV", "UInt8"]
+- !private ["9TweetNacl0B3BoxV", "UnsafeMutablePointer"]
+- !private ["9TweetNacl0B3BoxV", "UnsafePointer"]
+- ["9TweetNacl0B3BoxV", "before"]
+- ["9TweetNacl0B3BoxV", "box"]
+- !private ["9TweetNacl0B3BoxV", "crypto_box_BEFORENMBYTES"]
+- !private ["9TweetNacl0B3BoxV", "crypto_box_SECRETKEYBYTES"]
+- !private ["9TweetNacl0B3BoxV", "crypto_sign_SECRETKEYBYTES"]
+- ["9TweetNacl0B3BoxV", "init"]
+- ["9TweetNacl0B3BoxV", "keyPair"]
+- ["9TweetNacl0B3BoxV", "open"]
+- ["9TweetNacl0B3BoxV0bC5ErrorO", "=="]
+- ["9TweetNacl0B3BoxV0bC5ErrorO", ""]
+- ["9TweetNacl0B3BoxV0bC5ErrorO", "__derived_enum_equals"]
+- ["9TweetNacl0B3BoxV0bC5ErrorO", "_code"]
+- ["9TweetNacl0B3BoxV0bC5ErrorO", "_domain"]
+- ["9TweetNacl0B3BoxV0bC5ErrorO", "_getEmbeddedNSError"]
+- ["9TweetNacl0B3BoxV0bC5ErrorO", "_rawHashValue"]
+- ["9TweetNacl0B3BoxV0bC5ErrorO", "_userInfo"]
+- ["9TweetNacl0B3BoxV0bC5ErrorO", "code"]
+- ["9TweetNacl0B3BoxV0bC5ErrorO", "creationFailed"]
+- ["9TweetNacl0B3BoxV0bC5ErrorO", "domain"]
+- ["9TweetNacl0B3BoxV0bC5ErrorO", "hash"]
+- ["9TweetNacl0B3BoxV0bC5ErrorO", "hashValue"]
+- ["9TweetNacl0B3BoxV0bC5ErrorO", "internalError"]
+- ["9TweetNacl0B3BoxV0bC5ErrorO", "invalidParameters"]
+- ["9TweetNacl0B3BoxV0bC5ErrorO", "userInfo"]
+- !private ["9TweetNacl0B10ScalarMultV", "CTweetNacl"]
+- ["9TweetNacl0B10ScalarMultV", "Data"]
+- ["9TweetNacl0B10ScalarMultV", "Error"]
+- !private ["9TweetNacl0B10ScalarMultV", "Int32"]
+- ["9TweetNacl0B10ScalarMultV", "NaclScalarMultError"]
+- !private ["9TweetNacl0B10ScalarMultV", "UInt8"]
+- !private ["9TweetNacl0B10ScalarMultV", "UnsafeMutablePointer"]
+- !private ["9TweetNacl0B10ScalarMultV", "UnsafePointer"]
+- ["9TweetNacl0B10ScalarMultV", "base"]
+- !private ["9TweetNacl0B10ScalarMultV", "crypto_scalarmult_BYTES"]
+- !private ["9TweetNacl0B10ScalarMultV", "crypto_scalarmult_SCALARBYTES"]
+- ["9TweetNacl0B10ScalarMultV", "init"]
+- ["9TweetNacl0B10ScalarMultV", "scalarMult"]
+- ["9TweetNacl0B10ScalarMultV0bcD5ErrorO", "=="]
+- ["9TweetNacl0B10ScalarMultV0bcD5ErrorO", ""]
+- ["9TweetNacl0B10ScalarMultV0bcD5ErrorO", "__derived_enum_equals"]
+- ["9TweetNacl0B10ScalarMultV0bcD5ErrorO", "_code"]
+- ["9TweetNacl0B10ScalarMultV0bcD5ErrorO", "_domain"]
+- ["9TweetNacl0B10ScalarMultV0bcD5ErrorO", "_getEmbeddedNSError"]
+- ["9TweetNacl0B10ScalarMultV0bcD5ErrorO", "_rawHashValue"]
+- ["9TweetNacl0B10ScalarMultV0bcD5ErrorO", "_userInfo"]
+- ["9TweetNacl0B10ScalarMultV0bcD5ErrorO", "code"]
+- ["9TweetNacl0B10ScalarMultV0bcD5ErrorO", "creationFailed"]
+- ["9TweetNacl0B10ScalarMultV0bcD5ErrorO", "domain"]
+- ["9TweetNacl0B10ScalarMultV0bcD5ErrorO", "hash"]
+- ["9TweetNacl0B10ScalarMultV0bcD5ErrorO", "hashValue"]
+- ["9TweetNacl0B10ScalarMultV0bcD5ErrorO", "internalError"]
+- ["9TweetNacl0B10ScalarMultV0bcD5ErrorO", "invalidParameters"]
+- ["9TweetNacl0B10ScalarMultV0bcD5ErrorO", "userInfo"]
+- !private ["9TweetNacl0B9SecretBoxV", "CTweetNacl"]
+- ["9TweetNacl0B9SecretBoxV", "Data"]
+- ["9TweetNacl0B9SecretBoxV", "Error"]
+- !private ["9TweetNacl0B9SecretBoxV", "Int32"]
+- ["9TweetNacl0B9SecretBoxV", "NaclSecretBoxError"]
+- !private ["9TweetNacl0B9SecretBoxV", "NaclUtil"]
+- !private ["9TweetNacl0B9SecretBoxV", "UInt64"]
+- !private ["9TweetNacl0B9SecretBoxV", "UInt8"]
+- !private ["9TweetNacl0B9SecretBoxV", "UnsafeMutablePointer"]
+- !private ["9TweetNacl0B9SecretBoxV", "UnsafePointer"]
+- !private ["9TweetNacl0B9SecretBoxV", "crypto_secretbox_BOXZEROBYTES"]
+- !private ["9TweetNacl0B9SecretBoxV", "crypto_secretbox_ZEROBYTES"]
+- ["9TweetNacl0B9SecretBoxV", "init"]
+- ["9TweetNacl0B9SecretBoxV", "open"]
+- ["9TweetNacl0B9SecretBoxV", "secretBox"]
+- ["9TweetNacl0B9SecretBoxV0bcD5ErrorO", "=="]
+- ["9TweetNacl0B9SecretBoxV0bcD5ErrorO", ""]
+- ["9TweetNacl0B9SecretBoxV0bcD5ErrorO", "__derived_enum_equals"]
+- ["9TweetNacl0B9SecretBoxV0bcD5ErrorO", "_code"]
+- ["9TweetNacl0B9SecretBoxV0bcD5ErrorO", "_domain"]
+- ["9TweetNacl0B9SecretBoxV0bcD5ErrorO", "_getEmbeddedNSError"]
+- ["9TweetNacl0B9SecretBoxV0bcD5ErrorO", "_rawHashValue"]
+- ["9TweetNacl0B9SecretBoxV0bcD5ErrorO", "_userInfo"]
+- ["9TweetNacl0B9SecretBoxV0bcD5ErrorO", "code"]
+- ["9TweetNacl0B9SecretBoxV0bcD5ErrorO", "creationFailed"]
+- ["9TweetNacl0B9SecretBoxV0bcD5ErrorO", "domain"]
+- ["9TweetNacl0B9SecretBoxV0bcD5ErrorO", "hash"]
+- ["9TweetNacl0B9SecretBoxV0bcD5ErrorO", "hashValue"]
+- ["9TweetNacl0B9SecretBoxV0bcD5ErrorO", "internalError"]
+- ["9TweetNacl0B9SecretBoxV0bcD5ErrorO", "invalidParameters"]
+- ["9TweetNacl0B9SecretBoxV0bcD5ErrorO", "userInfo"]
+- ["9TweetNacl0B4SignV", "Bool"]
+- !private ["9TweetNacl0B4SignV", "CTweetNacl"]
+- ["9TweetNacl0B4SignV", "Data"]
+- ["9TweetNacl0B4SignV", "Error"]
+- !private ["9TweetNacl0B4SignV", "Int32"]
+- ["9TweetNacl0B4SignV", "KeyPair"]
+- ["9TweetNacl0B4SignV", "NaclSignError"]
+- !private ["9TweetNacl0B4SignV", "NaclWrapper"]
+- !private ["9TweetNacl0B4SignV", "UInt64"]
+- !private ["9TweetNacl0B4SignV", "UInt8"]
+- !private ["9TweetNacl0B4SignV", "UnsafeMutablePointer"]
+- !private ["9TweetNacl0B4SignV", "UnsafePointer"]
+- !private ["9TweetNacl0B4SignV", "crypto_sign_BYTES"]
+- !private ["9TweetNacl0B4SignV", "crypto_sign_PUBLICKEYBYTES"]
+- !private ["9TweetNacl0B4SignV", "crypto_sign_SECRETKEYBYTES"]
+- ["9TweetNacl0B4SignV", "init"]
+- ["9TweetNacl0B4SignV", "sign"]
+- ["9TweetNacl0B4SignV", "signDetached"]
+- ["9TweetNacl0B4SignV", "signDetachedVerify"]
+- ["9TweetNacl0B4SignV", "signOpen"]
+- ["9TweetNacl0B4SignV0bC5ErrorO", "=="]
+- ["9TweetNacl0B4SignV0bC5ErrorO", ""]
+- ["9TweetNacl0B4SignV0bC5ErrorO", "__derived_enum_equals"]
+- ["9TweetNacl0B4SignV0bC5ErrorO", "_code"]
+- ["9TweetNacl0B4SignV0bC5ErrorO", "_domain"]
+- ["9TweetNacl0B4SignV0bC5ErrorO", "_getEmbeddedNSError"]
+- ["9TweetNacl0B4SignV0bC5ErrorO", "_rawHashValue"]
+- ["9TweetNacl0B4SignV0bC5ErrorO", "_userInfo"]
+- ["9TweetNacl0B4SignV0bC5ErrorO", "code"]
+- ["9TweetNacl0B4SignV0bC5ErrorO", "creationFailed"]
+- ["9TweetNacl0B4SignV0bC5ErrorO", "domain"]
+- ["9TweetNacl0B4SignV0bC5ErrorO", "hash"]
+- ["9TweetNacl0B4SignV0bC5ErrorO", "hashValue"]
+- ["9TweetNacl0B4SignV0bC5ErrorO", "internalError"]
+- ["9TweetNacl0B4SignV0bC5ErrorO", "invalidParameters"]
+- ["9TweetNacl0B4SignV0bC5ErrorO", "userInfo"]
+- ["9TweetNacl0B4UtilV", "Bool"]
+- !private ["9TweetNacl0B4UtilV", "CTweetNacl"]
+- ["9TweetNacl0B4UtilV", "Data"]
+- ["9TweetNacl0B4UtilV", "Error"]
+- ["9TweetNacl0B4UtilV", "Int"]
+- !private ["9TweetNacl0B4UtilV", "Int32"]
+- ["9TweetNacl0B4UtilV", "NaclUtilError"]
+- !private ["9TweetNacl0B4UtilV", "SecRandomCopyBytes"]
+- ["9TweetNacl0B4UtilV", "String"]
+- !private ["9TweetNacl0B4UtilV", "UInt64"]
+- !private ["9TweetNacl0B4UtilV", "UInt8"]
+- !private ["9TweetNacl0B4UtilV", "UnsafeMutablePointer"]
+- !private ["9TweetNacl0B4UtilV", "UnsafePointer"]
+- ["9TweetNacl0B4UtilV", "checkBoxLength"]
+- ["9TweetNacl0B4UtilV", "checkLengths"]
+- !private ["9TweetNacl0B4UtilV", "crypto_box_PUBLICKEYBYTES"]
+- !private ["9TweetNacl0B4UtilV", "crypto_box_SECRETKEYBYTES"]
+- !private ["9TweetNacl0B4UtilV", "crypto_hash_BYTES"]
+- !private ["9TweetNacl0B4UtilV", "crypto_secretbox_KEYBYTES"]
+- !private ["9TweetNacl0B4UtilV", "crypto_secretbox_NONCEBYTES"]
+- ["9TweetNacl0B4UtilV", "decodeBase64"]
+- ["9TweetNacl0B4UtilV", "encodeBase64"]
+- !private ["9TweetNacl0B4UtilV", "errSecSuccess"]
+- ["9TweetNacl0B4UtilV", "hash"]
+- ["9TweetNacl0B4UtilV", "init"]
+- !private ["9TweetNacl0B4UtilV", "kSecRandomDefault"]
+- ["9TweetNacl0B4UtilV", "randomBytes"]
+- ["9TweetNacl0B4UtilV", "verify"]
+- ["9TweetNacl0B4UtilV0bC5ErrorO", "=="]
+- ["9TweetNacl0B4UtilV0bC5ErrorO", ""]
+- ["9TweetNacl0B4UtilV0bC5ErrorO", "__derived_enum_equals"]
+- ["9TweetNacl0B4UtilV0bC5ErrorO", "_code"]
+- ["9TweetNacl0B4UtilV0bC5ErrorO", "_domain"]
+- ["9TweetNacl0B4UtilV0bC5ErrorO", "_getEmbeddedNSError"]
+- ["9TweetNacl0B4UtilV0bC5ErrorO", "_rawHashValue"]
+- ["9TweetNacl0B4UtilV0bC5ErrorO", "_userInfo"]
+- ["9TweetNacl0B4UtilV0bC5ErrorO", "badKeySize"]
+- ["9TweetNacl0B4UtilV0bC5ErrorO", "badNonceSize"]
+- ["9TweetNacl0B4UtilV0bC5ErrorO", "badPublicKeySize"]
+- ["9TweetNacl0B4UtilV0bC5ErrorO", "badSecretKeySize"]
+- ["9TweetNacl0B4UtilV0bC5ErrorO", "code"]
+- ["9TweetNacl0B4UtilV0bC5ErrorO", "domain"]
+- ["9TweetNacl0B4UtilV0bC5ErrorO", "hash"]
+- ["9TweetNacl0B4UtilV0bC5ErrorO", "hashValue"]
+- ["9TweetNacl0B4UtilV0bC5ErrorO", "internalError"]
+- ["9TweetNacl0B4UtilV0bC5ErrorO", "userInfo"]
+- ["9TweetNacl0B7Wrapper031_77810C570D0A9F860CE63E3F78B2D2L0LLV0bC5ErrorO", "=="]
+- ["9TweetNacl0B7Wrapper031_77810C570D0A9F860CE63E3F78B2D2L0LLV0bC5ErrorO", ""]
+- ["9TweetNacl0B7Wrapper031_77810C570D0A9F860CE63E3F78B2D2L0LLV0bC5ErrorO", "__derived_enum_equals"]
+- ["9TweetNacl0B7Wrapper031_77810C570D0A9F860CE63E3F78B2D2L0LLV0bC5ErrorO", "_code"]
+- ["9TweetNacl0B7Wrapper031_77810C570D0A9F860CE63E3F78B2D2L0LLV0bC5ErrorO", "_domain"]
+- ["9TweetNacl0B7Wrapper031_77810C570D0A9F860CE63E3F78B2D2L0LLV0bC5ErrorO", "_getEmbeddedNSError"]
+- ["9TweetNacl0B7Wrapper031_77810C570D0A9F860CE63E3F78B2D2L0LLV0bC5ErrorO", "_rawHashValue"]
+- ["9TweetNacl0B7Wrapper031_77810C570D0A9F860CE63E3F78B2D2L0LLV0bC5ErrorO", "_userInfo"]
+- ["9TweetNacl0B7Wrapper031_77810C570D0A9F860CE63E3F78B2D2L0LLV0bC5ErrorO", "code"]
+- ["9TweetNacl0B7Wrapper031_77810C570D0A9F860CE63E3F78B2D2L0LLV0bC5ErrorO", "creationFailed"]
+- ["9TweetNacl0B7Wrapper031_77810C570D0A9F860CE63E3F78B2D2L0LLV0bC5ErrorO", "domain"]
+- ["9TweetNacl0B7Wrapper031_77810C570D0A9F860CE63E3F78B2D2L0LLV0bC5ErrorO", "hash"]
+- ["9TweetNacl0B7Wrapper031_77810C570D0A9F860CE63E3F78B2D2L0LLV0bC5ErrorO", "hashValue"]
+- ["9TweetNacl0B7Wrapper031_77810C570D0A9F860CE63E3F78B2D2L0LLV0bC5ErrorO", "internalError"]
+- ["9TweetNacl0B7Wrapper031_77810C570D0A9F860CE63E3F78B2D2L0LLV0bC5ErrorO", "invalidParameters"]
+- ["9TweetNacl0B7Wrapper031_77810C570D0A9F860CE63E3F78B2D2L0LLV0bC5ErrorO", "userInfo"]
+- !private ["Sj", ""]
+- !private ["Sj", "init"]
+- !private ["Sk", ""]
+- !private ["Sk", "append"]
+- !private ["Sk", "base64EncodedString"]
+- !private ["Sk", "count"]
+- !private ["Sk", "distance"]
+- !private ["Sk", "index"]
+- !private ["Sk", "init"]
+- !private ["Sk", "replaceSubrange"]
+- !private ["Sk", "subdata"]
+- !private ["Sk", "withUnsafeBytes"]
+- !private ["Sk", "withUnsafeMutableBytes"]
+- !private ["Sm", ""]
+- !private ["Sm", "_customRemoveLast"]
+- !private ["Sm", "append"]
+- !private ["Sm", "base64EncodedString"]
+- !private ["Sm", "count"]
+- !private ["Sm", "init"]
+- !private ["Sm", "insert"]
+- !private ["Sm", "remove"]
+- !private ["Sm", "removeAll"]
+- !private ["Sm", "removeFirst"]
+- !private ["Sm", "removeSubrange"]
+- !private ["Sm", "replaceSubrange"]
+- !private ["Sm", "reserveCapacity"]
+- !private ["Sm", "subdata"]
+- !private ["Sm", "subscript"]
+- !private ["Sm", "withUnsafeBytes"]
+- !private ["Sm", "withUnsafeMutableBytes"]
+- !private ["10Foundation20ReferenceConvertibleP", "append"]
+- !private ["10Foundation20ReferenceConvertibleP", "base64EncodedString"]
+- !private ["10Foundation20ReferenceConvertibleP", "count"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "replaceSubrange"]
+- !private ["10Foundation20ReferenceConvertibleP", "subdata"]
+- !private ["10Foundation20ReferenceConvertibleP", "withUnsafeBytes"]
+- !private ["10Foundation20ReferenceConvertibleP", "withUnsafeMutableBytes"]
+- !private ["s10SIMDScalarP", "init"]
+- !private ["ST", ""]
+- !private ["ST", "_copyContents"]
+- !private ["ST", "_copyToContiguousArray"]
+- !private ["ST", "_customContainsEquatableElement"]
+- !private ["ST", "append"]
+- !private ["ST", "base64EncodedString"]
+- !private ["ST", "count"]
+- !private ["ST", "init"]
+- !private ["ST", "makeIterator"]
+- !private ["ST", "replaceSubrange"]
+- !private ["ST", "subdata"]
+- !private ["ST", "underestimatedCount"]
+- !private ["ST", "withContiguousStorageIfAvailable"]
+- !private ["ST", "withUnsafeBytes"]
+- !private ["ST", "withUnsafeMutableBytes"]
+- !private ["Sx", ""]
+- !private ["Sx", "allocate"]
+- !private ["Sx", "init"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["s6UInt64V", "init"]
+- !private ["Sp", "allocate"]
+- !private ["SU", "init"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "allocate"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "base64EncodedString"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "replaceSubrange"]
+- !private ["s21_ObjectiveCBridgeableP", "subdata"]
+- !private ["s21_ObjectiveCBridgeableP", "withUnsafeBytes"]
+- !private ["s21_ObjectiveCBridgeableP", "withUnsafeMutableBytes"]
+- !private ["s8_PointerP", "allocate"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- !private "SK"
+- !private "Sz"
+- !private "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- "s5ErrorP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "SH"
+- !private "s6HasherV"
+- "9TweetNacl0B4SignV7KeyPairV"
+- !private "s25LosslessStringConvertibleP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- "So8NSCodingP"
+- "So8NSObjectP"
+- "9TweetNacl0B3BoxV"
+- "9TweetNacl0B3BoxV0bC5ErrorO"
+- "9TweetNacl0B10ScalarMultV"
+- "9TweetNacl0B10ScalarMultV0bcD5ErrorO"
+- "9TweetNacl0B9SecretBoxV"
+- "9TweetNacl0B9SecretBoxV0bcD5ErrorO"
+- "9TweetNacl0B4SignV"
+- "9TweetNacl0B4SignV0bC5ErrorO"
+- "9TweetNacl0B4UtilV"
+- "9TweetNacl0B4UtilV0bC5ErrorO"
+- "9TweetNacl0B7Wrapper031_77810C570D0A9F860CE63E3F78B2D2L0LLV0bC5ErrorO"
+- !private "Sj"
+- !private "Sk"
+- !private "Sm"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s10SIMDScalarP"
+- !private "ST"
+- !private "Sx"
+- "So18UIFocusEnvironmentP"
+- !private "s6UInt64V"
+- !private "Sp"
+- !private "SU"
+- !private "s15_CVarArgAlignedP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s8_PointerP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Target Support Files/TweetNacl/TweetNacl-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/TweetNacl/TweetNacl.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/module.map"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/TweetNacl.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "430b9902d4da74f38efa46818843ba84"

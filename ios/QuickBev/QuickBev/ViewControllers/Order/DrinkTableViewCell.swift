@@ -10,10 +10,10 @@ import UIKit
 
 class DrinkTableViewCell: UITableViewCell {
     
-    let drinkImageView = UIImageView()
-    let name = UILabel(theme:Theme.UILabel(props: [.textColor]))
-    let miscellaneousText = UILabel(theme:Theme.UILabel(props: [.textColor]))
-    
+    @UsesAutoLayout var drinkImageView = UIImageView()
+    @UsesAutoLayout var name = UILabel(theme:Theme.UILabel(props: [.textColor]))
+    @UsesAutoLayout var miscellaneousText = UILabel(theme:Theme.UILabel(props: [.textColor]))
+    @UsesAutoLayout var stackView = UIStackView()
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -21,19 +21,12 @@ class DrinkTableViewCell: UITableViewCell {
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.contentView.addSubview(drinkImageView)
-        
-        name.translatesAutoresizingMaskIntoConstraints = false
-        drinkImageView.translatesAutoresizingMaskIntoConstraints = false
-        drinkImageView.contentMode = .scaleToFill
-        drinkImageView.clipsToBounds = true
-        miscellaneousText.translatesAutoresizingMaskIntoConstraints = false
+        self.backgroundColor = .clear
         
         let margins = self.contentView.safeAreaLayoutGuide
-        let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.alignment = .fill
         stackView.distribution = .fill
-        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.addArrangedSubview(name)
         stackView.addArrangedSubview(miscellaneousText)
         stackView.spacing = 10

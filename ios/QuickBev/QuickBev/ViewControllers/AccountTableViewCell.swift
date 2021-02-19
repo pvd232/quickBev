@@ -40,6 +40,7 @@ class AccountTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.backgroundColor = .clear
         sLayer.strokeColor = strokeColor
         sLayer.lineWidth = 1.5
         sLayer.strokeEnd = 1.0

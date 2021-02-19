@@ -66,7 +66,7 @@ def login():
         return Response(status=404, response=json.dumps(response))
 
 
-@app.route('/inventory', methods=['GET'])
+@app.route('/drink', methods=['GET'])
 def inventory():
     drink_list = []
     response = {}
@@ -159,15 +159,20 @@ def customer():
     print("request.headers", request.headers)
     print(json.loads(request.data))
     if request.method == 'POST':
-        new_customer = json.loads(request.data)  # load JSON data from request
-        response = customer_service.register_new_customer(new_customer)
+        requested_new_customer = json.loads(
+            request.data)  # load JSON data from request
+        generated_new_customer = customer_service.register_new_customer(
+            requested_new_customer)
+        # generate a secure JSON token using the user's unverified email address. then i embed this token in the url for the verify account link sent in the email. i then parse this string when the user navigates to the page, securely verifying their email by using the
+        generated_new_customer.id = generate_password_hash(
+            generated_new_customer.id, "sha256")
         print('response', response.serialize())
         if response:
             # send the hashed user ID as a crypted key embedded in the activation link for security
             print('request.url', request.url)
 
-            send_confirmation_email(response, request.url)
-            return jsonify(response.serialize()), 200
+            send_confirmation_email(requested_new_customer, request.url)
+            return jsonify(response.requested_new_customer()), 200
         else:
             return jsonify(response), 400
     if request.method == 'OPTIONS':
@@ -192,13 +197,14 @@ def customer():
 @app.route("/verify-email/<string:username>")
 def verify_email(username):
     print('username', username)
+    # verify the hashed username that was embedded in the verification link
     status = Customer_Service().authenticate_username(
         username=None, hashed_username=username)
     print('status', status)
     response = {"status": status}
     pusher_client.trigger(
-        'email-verificatin-channel', 'account-status', json.dumps(response)
-    )  # trigger `new-request` event on `patientRequests` channel
+        'email-verification-channel', 'account-status', json.dumps(response)
+    )  # trigger a `account-status` event on `email-verification-channel` channel
     return Response(response=json.dumps(response), status=200)
 
 
@@ -292,7 +298,7 @@ def signup():
     new_merchant = merchant_service.add_merchant(requested_merchant)
     new_business = business_service.add_business(requested_business)
     if new_merchant and new_business:
-        response['confirmed_new_business'] = new_business.serialize()
+        response['confirmed_new_business'] = new_business.dto_serialize()
 
         if 'file' not in request.files:
             response["msg"] = "No file part in request"
@@ -439,4 +445,4 @@ def add_menu():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="192.168.0.58", port=5000, debug=True)

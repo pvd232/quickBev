@@ -12,11 +12,11 @@ import Alamofire
 class DrinkViewController: UIViewController {
     
     var drink : Drink
-    @UsesAutoLayout var drinkImageStackView = UIStackView()
+    @UsesAutoLayout var drinkImageStackView = UIStackView(theme: Theme.UIStackView(props: [.vertical, .spacing(30)]))
     @UsesAutoLayout var drinkDescriptionLabel = UITextView()
     @UsesAutoLayout var drinkPriceLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
     @UsesAutoLayout var drinkImageView = UIImageView()
-    @UsesAutoLayout var drinkQuantityStackView = UIStackView()
+    @UsesAutoLayout var drinkQuantityStackView = UIStackView(theme: Theme.UIStackView(props: [.horizontal, .spacing(30)]))
     @UsesAutoLayout var minusButton = RoundButton()
     @UsesAutoLayout var plusButton = RoundButton()
     @UsesAutoLayout var drinkQuantityLabel = UILabel(theme:Theme.UILabel(props: [.textColor]))
@@ -56,6 +56,9 @@ class DrinkViewController: UIViewController {
         drinkQuantityStackView.addArrangedSubview(drinkQuantityLabel)
         
         drinkQuantityStackView.addArrangedSubview(plusButton)
+        
+        drinkDescriptionLabel.backgroundColor = .clear
+        drinkDescriptionLabel.textColor = .black
         
 
         let safeArea = self.view.safeAreaLayoutGuide

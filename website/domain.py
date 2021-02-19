@@ -1,6 +1,6 @@
 from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
-
+import uuid
 
 class Drink_Domain(object):
     def __init__(self, drink_object=None, drink_json=None, init=False):
@@ -190,7 +190,7 @@ class Customer_Domain(object):
             print()
             print('generate_password_hash(customer_json["id"], "sha256") ', generate_password_hash(
                 customer_json["id"], "sha256"))
-            self.id = generate_password_hash(customer_json["id"], "sha256")
+            self.id = customer_json["id"]
             self.password = generate_password_hash(
                 customer_json["password"], "sha256")
             print()
@@ -285,7 +285,7 @@ class Business_Domain(object):
             self.classification = business_object.classification
             self.merchant_stripe_id = business_object.merchant_stripe_id
         if business_json:
-            self.id = business_json["id"]
+            self.id = uuid.uuid4()
             self.merchant_id = business_json["merchant_id"]
             self.merchant_stripe_id = business_json["merchant_stripe_id"]
             self.name = business_json["name"]
@@ -318,6 +318,18 @@ class Business_Domain(object):
         serialized_attributes = {}
         for i in range(len(attributes)):
             serialized_attributes[attribute_names[i]] = attributes[i]
+        return serialized_attributes
+    
+    
+    def dto_serialize(self):
+        attribute_names = list(self.__dict__.keys())
+        attributes = list(self.__dict__.values())
+        serialized_attributes = {}
+        for i in range(len(attributes)):
+            if attribute_names[i] == 'id':
+                serialized_attributes['id'] = str(self.id)
+            else:
+                serialized_attributes[attribute_names[i]] = attributes[i]
         return serialized_attributes
 
 

@@ -1,0 +1,241 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "PusherLogger"
+provides-nominal:
+- "11PusherSwift0A6LoggerC"
+- "11PusherSwift0A6LoggerC12LoggingEventO"
+- "11PusherSwift0A6LoggerC12LoggingLevelO"
+provides-member:
+- ["11PusherSwift0A6LoggerC", ""]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", ""]
+- ["11PusherSwift0A6LoggerC12LoggingLevelO", ""]
+provides-dynamic-lookup:
+- "debug"
+- "delegate"
+- "error"
+- "info"
+- "message"
+- "shared"
+- "warning"
+depends-top-level:
+- !private "+="
+- "=="
+- !private "Array"
+- "CustomStringConvertible"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
+- "LoggingEvent"
+- "LoggingLevel"
+- "PusherDelegate"
+- "PusherLogger"
+- "String"
+- "StringLiteralType"
+- !private "UnicodeScalarType"
+- !private "_findStringSwitchCase"
+- !private "message"
+- !private "~="
+depends-member:
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- ["SQ", "=="]
+- ["SQ", "Default_RawValue"]
+- ["SQ", "RawValue"]
+- ["SQ", ""]
+- ["SQ", "_Default_RawValue"]
+- !private ["SQ", "_findStringSwitchCase"]
+- ["SQ", "_rawHashValue"]
+- !private ["SQ", "debug"]
+- !private ["SQ", "error"]
+- !private ["SQ", "findStringSwitchCase"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- !private ["SQ", "info"]
+- ["SQ", "init"]
+- ["SQ", "rawValue"]
+- !private ["SQ", "warning"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
+- ["SH", "=="]
+- ["SH", "Default_RawValue"]
+- ["SH", "RawValue"]
+- ["SH", ""]
+- ["SH", "_Default_RawValue"]
+- !private ["SH", "_findStringSwitchCase"]
+- ["SH", "_rawHashValue"]
+- !private ["SH", "debug"]
+- !private ["SH", "error"]
+- !private ["SH", "findStringSwitchCase"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- !private ["SH", "info"]
+- ["SH", "init"]
+- ["SH", "rawValue"]
+- !private ["SH", "warning"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "=="]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "Default_RawValue"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "RawValue"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", ""]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "_Default_RawValue"]
+- !private ["11PusherSwift0A6LoggerC12LoggingEventO", "_findStringSwitchCase"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "_rawHashValue"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "attemptReconnectionAfterWaiting"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "attemptReconnectionImmediately"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "authInfoForCompletionHandlerIsNil"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "authValueOnSubscriptionNotSupported"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "authenticationFailed"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "cannotSendClientEventForChannel"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "clientEventSent"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "clientEventsNotSupported"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "connectionEstablished"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "disconnectionWithoutError"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "errorReceived"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "eventSent"]
+- !private ["11PusherSwift0A6LoggerC12LoggingEventO", "findStringSwitchCase"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "genericError"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "hash"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "hashValue"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "init"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "intentionalDisconnection"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "maxReconnectAttemptsLimitReached"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "networkConnectionUnviable"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "networkConnectionViable"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "pingSent"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "pongReceived"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "presenceChannelSubscriptionAttemptWithoutChannelData"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "rawValue"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "receivedMessage"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "skippedEventAfterDecryptionFailure"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "subscriptionSucceededNoDataInPayload"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "unableToAddMemberToChannel"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "unableToHandleIncomingError"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "unableToHandleIncomingMessage"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "unableToParseStringAsJSON"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "unableToRemoveMemberFromChannel"]
+- ["11PusherSwift0A6LoggerC12LoggingEventO", "unableToSubscribeToChannel"]
+- ["11PusherSwift0A6LoggerC12LoggingLevelO", "=="]
+- ["11PusherSwift0A6LoggerC12LoggingLevelO", "Default_RawValue"]
+- ["11PusherSwift0A6LoggerC12LoggingLevelO", "RawValue"]
+- ["11PusherSwift0A6LoggerC12LoggingLevelO", ""]
+- ["11PusherSwift0A6LoggerC12LoggingLevelO", "_Default_RawValue"]
+- !private ["11PusherSwift0A6LoggerC12LoggingLevelO", "_findStringSwitchCase"]
+- ["11PusherSwift0A6LoggerC12LoggingLevelO", "_rawHashValue"]
+- ["11PusherSwift0A6LoggerC12LoggingLevelO", "debug"]
+- ["11PusherSwift0A6LoggerC12LoggingLevelO", "error"]
+- !private ["11PusherSwift0A6LoggerC12LoggingLevelO", "findStringSwitchCase"]
+- ["11PusherSwift0A6LoggerC12LoggingLevelO", "hash"]
+- ["11PusherSwift0A6LoggerC12LoggingLevelO", "hashValue"]
+- ["11PusherSwift0A6LoggerC12LoggingLevelO", "info"]
+- ["11PusherSwift0A6LoggerC12LoggingLevelO", "init"]
+- ["11PusherSwift0A6LoggerC12LoggingLevelO", "rawValue"]
+- ["11PusherSwift0A6LoggerC12LoggingLevelO", "warning"]
+- ["So8NSCodingP", ""]
+- ["So8NSObjectP", ""]
+- !private ["11PusherSwift0A8DelegateP", "debugLog"]
+- ["11PusherSwift0A6LoggerC", "CustomStringConvertible"]
+- ["11PusherSwift0A6LoggerC", "LoggingEvent"]
+- ["11PusherSwift0A6LoggerC", "LoggingLevel"]
+- ["11PusherSwift0A6LoggerC", "PusherDelegate"]
+- ["11PusherSwift0A6LoggerC", "PusherLogger"]
+- ["11PusherSwift0A6LoggerC", "String"]
+- !private ["11PusherSwift0A6LoggerC", "_findStringSwitchCase"]
+- ["11PusherSwift0A6LoggerC", "debug"]
+- ["11PusherSwift0A6LoggerC", "deinit"]
+- ["11PusherSwift0A6LoggerC", "delegate"]
+- ["11PusherSwift0A6LoggerC", "error"]
+- !private ["11PusherSwift0A6LoggerC", "findStringSwitchCase"]
+- ["11PusherSwift0A6LoggerC", "info"]
+- ["11PusherSwift0A6LoggerC", "init"]
+- !private ["11PusherSwift0A6LoggerC", "message"]
+- ["11PusherSwift0A6LoggerC", "shared"]
+- ["11PusherSwift0A6LoggerC", "warning"]
+- ["SY", "=="]
+- ["SY", "Default_RawValue"]
+- ["SY", "RawValue"]
+- ["SY", ""]
+- ["SY", "_Default_RawValue"]
+- !private ["SY", "_findStringSwitchCase"]
+- ["SY", "_rawHashValue"]
+- !private ["SY", "debug"]
+- !private ["SY", "error"]
+- !private ["SY", "findStringSwitchCase"]
+- ["SY", "hash"]
+- ["SY", "hashValue"]
+- !private ["SY", "info"]
+- ["SY", "init"]
+- ["SY", "rawValue"]
+- !private ["SY", "warning"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s27StringInterpolationProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+depends-nominal:
+- !private "s23CustomStringConvertibleP"
+- !private "s26DefaultStringInterpolationV"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- "SH"
+- "11PusherSwift0A6LoggerC12LoggingEventO"
+- "11PusherSwift0A6LoggerC12LoggingLevelO"
+- "So8NSCodingP"
+- "So8NSObjectP"
+- !private "11PusherSwift0A8DelegateP"
+- "11PusherSwift0A6LoggerC"
+- "SY"
+- !private "s27StringInterpolationProtocolP"
+- !private "s16TextOutputStreamP"
+- "So18UIFocusEnvironmentP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Network.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/TweetNacl/TweetNacl.framework/Modules/TweetNacl.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/NWWebSocket/NWWebSocket.framework/Modules/NWWebSocket.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Target Support Files/TweetNacl/TweetNacl-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Target Support Files/NWWebSocket/NWWebSocket-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Target Support Files/PusherSwift/PusherSwift-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/TweetNacl/TweetNacl.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/TweetNacl/TweetNacl.framework/Headers/TweetNacl-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/module.map"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/PusherSwift.build/unextended-module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/TweetNacl.build/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/NWWebSocket.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "6bf043ba4dce9e7aeeb0f26fc01ab587"

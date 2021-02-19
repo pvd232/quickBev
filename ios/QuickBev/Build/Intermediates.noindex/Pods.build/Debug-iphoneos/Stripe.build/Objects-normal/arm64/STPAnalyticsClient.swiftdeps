@@ -1,0 +1,1478 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "STPAnalyticsClient"
+provides-nominal:
+- "6Stripe18STPAnalyticsClientC"
+provides-member:
+- ["6Stripe18STPAnalyticsClientC", ""]
+- ["6Stripe18STPAnalyticsClientC", "logTokenCreationAttempt"]
+- ["6Stripe18STPAnalyticsClientC", "logSourceCreationAttempt"]
+- ["6Stripe18STPAnalyticsClientC", "logPaymentMethodCreationAttempt"]
+- ["6Stripe18STPAnalyticsClientC", "logPaymentIntentConfirmationAttempt"]
+- ["6Stripe18STPAnalyticsClientC", "logSetupIntentConfirmationAttempt"]
+- ["6Stripe18STPAnalyticsClientC", "log3DS2AuthenticateAttempt"]
+- ["6Stripe18STPAnalyticsClientC", "log3DS2FrictionlessFlow"]
+- ["6Stripe18STPAnalyticsClientC", "logURLRedirectNextAction"]
+- ["6Stripe18STPAnalyticsClientC", "log3DS2ChallengeFlowPresented"]
+- ["6Stripe18STPAnalyticsClientC", "log3DS2ChallengeFlowTimedOut"]
+- ["6Stripe18STPAnalyticsClientC", "log3DS2ChallengeFlowUserCanceled"]
+- ["6Stripe18STPAnalyticsClientC", "log3DS2ChallengeFlowCompleted"]
+- ["6Stripe18STPAnalyticsClientC", "log3DS2ChallengeFlowErrored"]
+- ["6Stripe18STPAnalyticsClientC", "logUserEnteredCompletePANBeforeMetadataLoaded"]
+- ["6Stripe18STPAnalyticsClientC", "logCardMetadataResponseFailure"]
+- ["6Stripe18STPAnalyticsClientC", "logCardMetadataMissingRange"]
+- ["6Stripe18STPAnalyticsClientC", "logCardScanSucceeded"]
+- ["6Stripe18STPAnalyticsClientC", "logCardScanCancelled"]
+provides-dynamic-lookup:
+- "addAdditionalInfo"
+- "addClass"
+- "additionalInfo"
+- "additionalInfoSet"
+- "clearAdditionalInfo"
+- "commonPayload"
+- "log3DS2AuthenticateAttempt"
+- "log3DS2ChallengeFlowCompleted"
+- "log3DS2ChallengeFlowErrored"
+- "log3DS2ChallengeFlowPresented"
+- "log3DS2ChallengeFlowTimedOut"
+- "log3DS2ChallengeFlowUserCanceled"
+- "log3DS2FrictionlessFlow"
+- "logCardMetadataMissingRange"
+- "logCardMetadataResponseFailure"
+- "logCardScanCancelled"
+- "logCardScanSucceeded"
+- "logPayload"
+- "logPaymentIntentConfirmationAttempt"
+- "logPaymentMethodCreationAttempt"
+- "logSetupIntentConfirmationAttempt"
+- "logSourceCreationAttempt"
+- "logTokenCreationAttempt"
+- "logURLRedirectNextAction"
+- "logUserEnteredCompletePANBeforeMetadataLoaded"
+- "productUsage"
+- "productUsageDictionary"
+- "serializeConfiguration"
+- "sharedClient"
+- "shouldCollectAnalytics"
+- "tokenType"
+- "urlSession"
+depends-top-level:
+- !private "!"
+- "!="
+- !private "&&"
+- "+"
+- !private "=="
+- !private ">"
+- "??"
+- "AnyClass"
+- "AnyHashable"
+- !private "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "Bundle"
+- "CastingPrecedence"
+- !private "FloatLiteralType"
+- "Int8"
+- !private "IntegerLiteralType"
+- !private "Mirror"
+- !private "NSClassFromString"
+- "NSMutableURLRequest"
+- !private "NSNumber"
+- "NSObject"
+- !private "NSStringFromClass"
+- "STPAPIClient"
+- "STPAnalyticsClient"
+- !private "STPCardScanner"
+- !private "STPPaymentCardTextField"
+- "STPPaymentConfiguration"
+- !private "STPPaymentContext"
+- "Set"
+- "String"
+- !private "StringLiteralType"
+- !private "StripeAPI"
+- "TernaryPrecedence"
+- "TimeInterval"
+- !private "UIDevice"
+- "UInt8"
+- !private "URL"
+- "URLRequest"
+- "URLSession"
+- "URLSessionDataTask"
+- "UnicodeScalar"
+- !private "UnicodeScalarType"
+- !private "additionalInfo"
+- !private "additionalInfoSet"
+- !private "fatalError"
+- !private "logPayload"
+- !private "objc_sync_enter"
+- !private "objc_sync_exit"
+- !private "productUsage"
+- !private "productUsageDictionary"
+- !private "round"
+- !private "type"
+- !private "uname"
+- !private "urlSession"
+- "utsname"
+depends-member:
+- !private ["s18AdditiveArithmeticP", ""]
+- !private ["s18AdditiveArithmeticP", "init"]
+- !private ["s13AnyCollectionV", "reduce"]
+- !private ["Sa", "append"]
+- !private ["Sa", "first"]
+- !private ["Sa", "isEmpty"]
+- !private ["Sa", "joined"]
+- !private ["SK", ""]
+- !private ["SK", "append"]
+- !private ["SK", "first"]
+- !private ["SK", "init"]
+- !private ["SK", "isEmpty"]
+- !private ["SK", "joined"]
+- !private ["Sz", ""]
+- !private ["Sz", "init"]
+- !private ["So8NSBundleC", "stp_applicationName"]
+- !private ["So8NSBundleC", "stp_applicationVersion"]
+- !private ["So15CNKeyDescriptorP", "isEmpty"]
+- !private ["s7CVarArgP", "Bundle"]
+- !private ["s7CVarArgP", "Mirror"]
+- !private ["s7CVarArgP", "NSClassFromString"]
+- !private ["s7CVarArgP", "NSMutableURLRequest"]
+- !private ["s7CVarArgP", "NSNumber"]
+- !private ["s7CVarArgP", "NSStringFromClass"]
+- ["s7CVarArgP", "STPAPIClient"]
+- ["s7CVarArgP", "STPAnalyticsClient"]
+- !private ["s7CVarArgP", "STPCardScanner"]
+- !private ["s7CVarArgP", "STPPaymentCardTextField"]
+- !private ["s7CVarArgP", "STPPaymentContext"]
+- !private ["s7CVarArgP", "STPSDKVersion"]
+- ["s7CVarArgP", "Set"]
+- !private ["s7CVarArgP", "String"]
+- !private ["s7CVarArgP", "StripeAPI"]
+- !private ["s7CVarArgP", "UIDevice"]
+- !private ["s7CVarArgP", "UInt8"]
+- !private ["s7CVarArgP", "URL"]
+- ["s7CVarArgP", "URLSession"]
+- !private ["s7CVarArgP", "UnicodeScalar"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "addAdditionalInfo"]
+- !private ["s7CVarArgP", "addClass"]
+- !private ["s7CVarArgP", "additionalInfo"]
+- !private ["s7CVarArgP", "additionalInfoSet"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "appleMerchantIdentifier"]
+- !private ["s7CVarArgP", "applePayEnabled"]
+- !private ["s7CVarArgP", "clearAdditionalInfo"]
+- !private ["s7CVarArgP", "commonPayload"]
+- !private ["s7CVarArgP", "companyName"]
+- !private ["s7CVarArgP", "contains"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "current"]
+- !private ["s7CVarArgP", "dataTask"]
+- !private ["s7CVarArgP", "deviceSupportsApplePay"]
+- !private ["s7CVarArgP", "emailAddress"]
+- !private ["s7CVarArgP", "fatalError"]
+- !private ["s7CVarArgP", "first"]
+- !private ["s7CVarArgP", "fpxEnabled"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "insert"]
+- !private ["s7CVarArgP", "isEmpty"]
+- !private ["s7CVarArgP", "joined"]
+- !private ["s7CVarArgP", "keys"]
+- !private ["s7CVarArgP", "logPayload"]
+- !private ["s7CVarArgP", "merge"]
+- !private ["s7CVarArgP", "name"]
+- !private ["s7CVarArgP", "objc_sync_enter"]
+- !private ["s7CVarArgP", "objc_sync_exit"]
+- !private ["s7CVarArgP", "phoneNumber"]
+- !private ["s7CVarArgP", "postalAddress"]
+- !private ["s7CVarArgP", "productUsage"]
+- !private ["s7CVarArgP", "productUsageDictionary"]
+- !private ["s7CVarArgP", "publishableKey"]
+- !private ["s7CVarArgP", "removeAll"]
+- !private ["s7CVarArgP", "requiredBillingAddressFields"]
+- !private ["s7CVarArgP", "requiredShippingAddressFields"]
+- !private ["s7CVarArgP", "resume"]
+- !private ["s7CVarArgP", "round"]
+- !private ["s7CVarArgP", "serializeConfiguration"]
+- !private ["s7CVarArgP", "shared"]
+- !private ["s7CVarArgP", "sharedClient"]
+- ["s7CVarArgP", "sharedUrlSessionConfiguration"]
+- !private ["s7CVarArgP", "shippingType"]
+- !private ["s7CVarArgP", "shouldCollectAnalytics"]
+- !private ["s7CVarArgP", "sorted"]
+- !private ["s7CVarArgP", "stp_addParameters"]
+- !private ["s7CVarArgP", "stp_applicationName"]
+- !private ["s7CVarArgP", "stp_applicationVersion"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "systemVersion"]
+- !private ["s7CVarArgP", "type"]
+- !private ["s7CVarArgP", "uname"]
+- !private ["s7CVarArgP", "urlSession"]
+- !private ["s7CVarArgP", "utsname"]
+- !private ["Sl", ""]
+- !private ["Sl", "append"]
+- !private ["Sl", "contains"]
+- !private ["Sl", "count"]
+- !private ["Sl", "first"]
+- ["Sl", "init"]
+- !private ["Sl", "insert"]
+- !private ["Sl", "isEmpty"]
+- !private ["Sl", "joined"]
+- !private ["Sl", "keys"]
+- !private ["Sl", "merge"]
+- !private ["Sl", "reduce"]
+- !private ["Sl", "removeAll"]
+- !private ["Sl", "sorted"]
+- !private ["Sl", "subscript"]
+- !private ["SL", ""]
+- !private ["SL", "init"]
+- !private ["SL", "isEmpty"]
+- !private ["10Foundation15ContiguousBytesP", "append"]
+- !private ["10Foundation15ContiguousBytesP", "first"]
+- !private ["10Foundation15ContiguousBytesP", "isEmpty"]
+- !private ["10Foundation15ContiguousBytesP", "joined"]
+- !private ["s28CustomDebugStringConvertibleP", "Bundle"]
+- !private ["s28CustomDebugStringConvertibleP", "Mirror"]
+- !private ["s28CustomDebugStringConvertibleP", "NSClassFromString"]
+- !private ["s28CustomDebugStringConvertibleP", "NSMutableURLRequest"]
+- !private ["s28CustomDebugStringConvertibleP", "NSNumber"]
+- !private ["s28CustomDebugStringConvertibleP", "NSStringFromClass"]
+- ["s28CustomDebugStringConvertibleP", "STPAPIClient"]
+- ["s28CustomDebugStringConvertibleP", "STPAnalyticsClient"]
+- !private ["s28CustomDebugStringConvertibleP", "STPCardScanner"]
+- !private ["s28CustomDebugStringConvertibleP", "STPPaymentCardTextField"]
+- !private ["s28CustomDebugStringConvertibleP", "STPPaymentContext"]
+- !private ["s28CustomDebugStringConvertibleP", "STPSDKVersion"]
+- ["s28CustomDebugStringConvertibleP", "Set"]
+- !private ["s28CustomDebugStringConvertibleP", "String"]
+- !private ["s28CustomDebugStringConvertibleP", "StripeAPI"]
+- !private ["s28CustomDebugStringConvertibleP", "UIDevice"]
+- !private ["s28CustomDebugStringConvertibleP", "UInt8"]
+- !private ["s28CustomDebugStringConvertibleP", "URL"]
+- ["s28CustomDebugStringConvertibleP", "URLSession"]
+- !private ["s28CustomDebugStringConvertibleP", "UnicodeScalar"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "addAdditionalInfo"]
+- !private ["s28CustomDebugStringConvertibleP", "addClass"]
+- !private ["s28CustomDebugStringConvertibleP", "additionalInfo"]
+- !private ["s28CustomDebugStringConvertibleP", "additionalInfoSet"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "appleMerchantIdentifier"]
+- !private ["s28CustomDebugStringConvertibleP", "applePayEnabled"]
+- !private ["s28CustomDebugStringConvertibleP", "callAsFunction"]
+- !private ["s28CustomDebugStringConvertibleP", "clearAdditionalInfo"]
+- !private ["s28CustomDebugStringConvertibleP", "commonPayload"]
+- !private ["s28CustomDebugStringConvertibleP", "companyName"]
+- !private ["s28CustomDebugStringConvertibleP", "contains"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "current"]
+- !private ["s28CustomDebugStringConvertibleP", "dataTask"]
+- !private ["s28CustomDebugStringConvertibleP", "deviceSupportsApplePay"]
+- !private ["s28CustomDebugStringConvertibleP", "emailAddress"]
+- !private ["s28CustomDebugStringConvertibleP", "fatalError"]
+- !private ["s28CustomDebugStringConvertibleP", "first"]
+- !private ["s28CustomDebugStringConvertibleP", "fpxEnabled"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "insert"]
+- !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
+- !private ["s28CustomDebugStringConvertibleP", "joined"]
+- !private ["s28CustomDebugStringConvertibleP", "keys"]
+- !private ["s28CustomDebugStringConvertibleP", "logPayload"]
+- !private ["s28CustomDebugStringConvertibleP", "merge"]
+- !private ["s28CustomDebugStringConvertibleP", "name"]
+- !private ["s28CustomDebugStringConvertibleP", "objc_sync_enter"]
+- !private ["s28CustomDebugStringConvertibleP", "objc_sync_exit"]
+- !private ["s28CustomDebugStringConvertibleP", "phoneNumber"]
+- !private ["s28CustomDebugStringConvertibleP", "postalAddress"]
+- !private ["s28CustomDebugStringConvertibleP", "productUsage"]
+- !private ["s28CustomDebugStringConvertibleP", "productUsageDictionary"]
+- !private ["s28CustomDebugStringConvertibleP", "publishableKey"]
+- !private ["s28CustomDebugStringConvertibleP", "removeAll"]
+- !private ["s28CustomDebugStringConvertibleP", "requiredBillingAddressFields"]
+- !private ["s28CustomDebugStringConvertibleP", "requiredShippingAddressFields"]
+- !private ["s28CustomDebugStringConvertibleP", "resume"]
+- !private ["s28CustomDebugStringConvertibleP", "round"]
+- !private ["s28CustomDebugStringConvertibleP", "serializeConfiguration"]
+- !private ["s28CustomDebugStringConvertibleP", "shared"]
+- !private ["s28CustomDebugStringConvertibleP", "sharedClient"]
+- ["s28CustomDebugStringConvertibleP", "sharedUrlSessionConfiguration"]
+- !private ["s28CustomDebugStringConvertibleP", "shippingType"]
+- !private ["s28CustomDebugStringConvertibleP", "shouldCollectAnalytics"]
+- !private ["s28CustomDebugStringConvertibleP", "sorted"]
+- !private ["s28CustomDebugStringConvertibleP", "stp_addParameters"]
+- !private ["s28CustomDebugStringConvertibleP", "stp_applicationName"]
+- !private ["s28CustomDebugStringConvertibleP", "stp_applicationVersion"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "systemVersion"]
+- !private ["s28CustomDebugStringConvertibleP", "type"]
+- !private ["s28CustomDebugStringConvertibleP", "uname"]
+- !private ["s28CustomDebugStringConvertibleP", "urlSession"]
+- !private ["s28CustomDebugStringConvertibleP", "utsname"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "callAsFunction"]
+- !private ["s17CustomReflectableP", "children"]
+- !private ["s17CustomReflectableP", "contains"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "first"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "insert"]
+- !private ["s17CustomReflectableP", "isEmpty"]
+- !private ["s17CustomReflectableP", "joined"]
+- !private ["s17CustomReflectableP", "keys"]
+- !private ["s17CustomReflectableP", "merge"]
+- !private ["s17CustomReflectableP", "removeAll"]
+- !private ["s17CustomReflectableP", "sorted"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "Bundle"]
+- !private ["s23CustomStringConvertibleP", "Mirror"]
+- !private ["s23CustomStringConvertibleP", "NSClassFromString"]
+- !private ["s23CustomStringConvertibleP", "NSMutableURLRequest"]
+- !private ["s23CustomStringConvertibleP", "NSNumber"]
+- !private ["s23CustomStringConvertibleP", "NSStringFromClass"]
+- ["s23CustomStringConvertibleP", "STPAPIClient"]
+- ["s23CustomStringConvertibleP", "STPAnalyticsClient"]
+- !private ["s23CustomStringConvertibleP", "STPCardScanner"]
+- !private ["s23CustomStringConvertibleP", "STPPaymentCardTextField"]
+- !private ["s23CustomStringConvertibleP", "STPPaymentContext"]
+- !private ["s23CustomStringConvertibleP", "STPSDKVersion"]
+- ["s23CustomStringConvertibleP", "Set"]
+- !private ["s23CustomStringConvertibleP", "String"]
+- !private ["s23CustomStringConvertibleP", "StripeAPI"]
+- !private ["s23CustomStringConvertibleP", "UIDevice"]
+- !private ["s23CustomStringConvertibleP", "UInt8"]
+- !private ["s23CustomStringConvertibleP", "URL"]
+- ["s23CustomStringConvertibleP", "URLSession"]
+- !private ["s23CustomStringConvertibleP", "UnicodeScalar"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "addAdditionalInfo"]
+- !private ["s23CustomStringConvertibleP", "addClass"]
+- !private ["s23CustomStringConvertibleP", "additionalInfo"]
+- !private ["s23CustomStringConvertibleP", "additionalInfoSet"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "appleMerchantIdentifier"]
+- !private ["s23CustomStringConvertibleP", "applePayEnabled"]
+- !private ["s23CustomStringConvertibleP", "children"]
+- !private ["s23CustomStringConvertibleP", "clearAdditionalInfo"]
+- !private ["s23CustomStringConvertibleP", "commonPayload"]
+- !private ["s23CustomStringConvertibleP", "companyName"]
+- !private ["s23CustomStringConvertibleP", "contains"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "current"]
+- !private ["s23CustomStringConvertibleP", "dataTask"]
+- !private ["s23CustomStringConvertibleP", "deviceSupportsApplePay"]
+- !private ["s23CustomStringConvertibleP", "emailAddress"]
+- !private ["s23CustomStringConvertibleP", "fatalError"]
+- !private ["s23CustomStringConvertibleP", "first"]
+- !private ["s23CustomStringConvertibleP", "fpxEnabled"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "insert"]
+- !private ["s23CustomStringConvertibleP", "isEmpty"]
+- !private ["s23CustomStringConvertibleP", "joined"]
+- !private ["s23CustomStringConvertibleP", "keys"]
+- !private ["s23CustomStringConvertibleP", "logPayload"]
+- !private ["s23CustomStringConvertibleP", "merge"]
+- !private ["s23CustomStringConvertibleP", "name"]
+- !private ["s23CustomStringConvertibleP", "objc_sync_enter"]
+- !private ["s23CustomStringConvertibleP", "objc_sync_exit"]
+- !private ["s23CustomStringConvertibleP", "phoneNumber"]
+- !private ["s23CustomStringConvertibleP", "postalAddress"]
+- !private ["s23CustomStringConvertibleP", "productUsage"]
+- !private ["s23CustomStringConvertibleP", "productUsageDictionary"]
+- !private ["s23CustomStringConvertibleP", "publishableKey"]
+- !private ["s23CustomStringConvertibleP", "removeAll"]
+- !private ["s23CustomStringConvertibleP", "requiredBillingAddressFields"]
+- !private ["s23CustomStringConvertibleP", "requiredShippingAddressFields"]
+- !private ["s23CustomStringConvertibleP", "resume"]
+- !private ["s23CustomStringConvertibleP", "round"]
+- !private ["s23CustomStringConvertibleP", "serializeConfiguration"]
+- !private ["s23CustomStringConvertibleP", "shared"]
+- !private ["s23CustomStringConvertibleP", "sharedClient"]
+- ["s23CustomStringConvertibleP", "sharedUrlSessionConfiguration"]
+- !private ["s23CustomStringConvertibleP", "shippingType"]
+- !private ["s23CustomStringConvertibleP", "shouldCollectAnalytics"]
+- !private ["s23CustomStringConvertibleP", "sorted"]
+- !private ["s23CustomStringConvertibleP", "stp_addParameters"]
+- !private ["s23CustomStringConvertibleP", "stp_applicationName"]
+- !private ["s23CustomStringConvertibleP", "stp_applicationVersion"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "systemVersion"]
+- !private ["s23CustomStringConvertibleP", "type"]
+- !private ["s23CustomStringConvertibleP", "uname"]
+- !private ["s23CustomStringConvertibleP", "urlSession"]
+- !private ["s23CustomStringConvertibleP", "utsname"]
+- !private ["10Foundation12DataProtocolP", ""]
+- !private ["10Foundation12DataProtocolP", "append"]
+- !private ["10Foundation12DataProtocolP", "first"]
+- !private ["10Foundation12DataProtocolP", "isEmpty"]
+- !private ["10Foundation12DataProtocolP", "joined"]
+- !private ["Se", "append"]
+- !private ["Se", "callAsFunction"]
+- !private ["Se", "contains"]
+- !private ["Se", "count"]
+- !private ["Se", "first"]
+- ["Se", "init"]
+- !private ["Se", "insert"]
+- !private ["Se", "isEmpty"]
+- !private ["Se", "joined"]
+- !private ["Se", "keys"]
+- !private ["Se", "merge"]
+- !private ["Se", "removeAll"]
+- !private ["Se", "sorted"]
+- !private ["Se", "subscript"]
+- !private ["SD", "keys"]
+- !private ["SD", "merge"]
+- !private ["SD", "subscript"]
+- !private ["SE", "append"]
+- !private ["SE", "callAsFunction"]
+- !private ["SE", "contains"]
+- !private ["SE", "count"]
+- !private ["SE", "first"]
+- ["SE", "init"]
+- !private ["SE", "insert"]
+- !private ["SE", "isEmpty"]
+- !private ["SE", "joined"]
+- !private ["SE", "keys"]
+- !private ["SE", "merge"]
+- !private ["SE", "removeAll"]
+- !private ["SE", "sorted"]
+- !private ["SE", "subscript"]
+- !private ["SQ", "Bundle"]
+- !private ["SQ", "Mirror"]
+- !private ["SQ", "NSClassFromString"]
+- !private ["SQ", "NSMutableURLRequest"]
+- !private ["SQ", "NSNumber"]
+- !private ["SQ", "NSStringFromClass"]
+- ["SQ", "STPAPIClient"]
+- ["SQ", "STPAnalyticsClient"]
+- !private ["SQ", "STPCardScanner"]
+- !private ["SQ", "STPPaymentCardTextField"]
+- !private ["SQ", "STPPaymentContext"]
+- !private ["SQ", "STPSDKVersion"]
+- ["SQ", "Set"]
+- !private ["SQ", "String"]
+- !private ["SQ", "StripeAPI"]
+- !private ["SQ", "UIDevice"]
+- !private ["SQ", "UInt8"]
+- !private ["SQ", "URL"]
+- ["SQ", "URLSession"]
+- !private ["SQ", "UnicodeScalar"]
+- ["SQ", ""]
+- !private ["SQ", "addAdditionalInfo"]
+- !private ["SQ", "addClass"]
+- !private ["SQ", "additionalInfo"]
+- !private ["SQ", "additionalInfoSet"]
+- !private ["SQ", "append"]
+- !private ["SQ", "appleMerchantIdentifier"]
+- !private ["SQ", "applePayEnabled"]
+- !private ["SQ", "callAsFunction"]
+- !private ["SQ", "clearAdditionalInfo"]
+- !private ["SQ", "commonPayload"]
+- !private ["SQ", "companyName"]
+- !private ["SQ", "contains"]
+- !private ["SQ", "count"]
+- !private ["SQ", "current"]
+- !private ["SQ", "dataTask"]
+- ["SQ", "delivery"]
+- !private ["SQ", "deviceSupportsApplePay"]
+- !private ["SQ", "emailAddress"]
+- !private ["SQ", "fatalError"]
+- !private ["SQ", "first"]
+- !private ["SQ", "fpxEnabled"]
+- ["SQ", "full"]
+- ["SQ", "init"]
+- !private ["SQ", "insert"]
+- !private ["SQ", "isEmpty"]
+- !private ["SQ", "joined"]
+- !private ["SQ", "keys"]
+- !private ["SQ", "logPayload"]
+- !private ["SQ", "merge"]
+- ["SQ", "name"]
+- ["SQ", "none"]
+- !private ["SQ", "objc_sync_enter"]
+- !private ["SQ", "objc_sync_exit"]
+- !private ["SQ", "phoneNumber"]
+- !private ["SQ", "postalAddress"]
+- ["SQ", "postalCode"]
+- !private ["SQ", "productUsage"]
+- !private ["SQ", "productUsageDictionary"]
+- !private ["SQ", "publishableKey"]
+- !private ["SQ", "removeAll"]
+- !private ["SQ", "requiredBillingAddressFields"]
+- !private ["SQ", "requiredShippingAddressFields"]
+- !private ["SQ", "resume"]
+- !private ["SQ", "round"]
+- !private ["SQ", "serializeConfiguration"]
+- !private ["SQ", "shared"]
+- !private ["SQ", "sharedClient"]
+- ["SQ", "sharedUrlSessionConfiguration"]
+- ["SQ", "shipping"]
+- !private ["SQ", "shippingType"]
+- !private ["SQ", "shouldCollectAnalytics"]
+- !private ["SQ", "sorted"]
+- !private ["SQ", "stp_addParameters"]
+- !private ["SQ", "stp_applicationName"]
+- !private ["SQ", "stp_applicationVersion"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "systemVersion"]
+- !private ["SQ", "type"]
+- !private ["SQ", "uname"]
+- !private ["SQ", "urlSession"]
+- !private ["SQ", "utsname"]
+- ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "contains"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "first"]
+- ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "insert"]
+- !private ["s25ExpressibleByArrayLiteralP", "isEmpty"]
+- !private ["s25ExpressibleByArrayLiteralP", "joined"]
+- !private ["s25ExpressibleByArrayLiteralP", "removeAll"]
+- !private ["s25ExpressibleByArrayLiteralP", "sorted"]
+- !private ["s27ExpressibleByBooleanLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Key"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Value"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "keys"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "merge"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "isEmpty"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", ""]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "callAsFunction"]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", "isEmpty"]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "isEmpty"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "isEmpty"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["SH", "Bundle"]
+- !private ["SH", "Mirror"]
+- !private ["SH", "NSClassFromString"]
+- !private ["SH", "NSMutableURLRequest"]
+- !private ["SH", "NSNumber"]
+- !private ["SH", "NSStringFromClass"]
+- ["SH", "STPAPIClient"]
+- ["SH", "STPAnalyticsClient"]
+- !private ["SH", "STPCardScanner"]
+- !private ["SH", "STPPaymentCardTextField"]
+- !private ["SH", "STPPaymentContext"]
+- !private ["SH", "STPSDKVersion"]
+- ["SH", "Set"]
+- !private ["SH", "String"]
+- !private ["SH", "StripeAPI"]
+- !private ["SH", "UIDevice"]
+- !private ["SH", "UInt8"]
+- !private ["SH", "URL"]
+- ["SH", "URLSession"]
+- !private ["SH", "UnicodeScalar"]
+- ["SH", ""]
+- !private ["SH", "addAdditionalInfo"]
+- !private ["SH", "addClass"]
+- !private ["SH", "additionalInfo"]
+- !private ["SH", "additionalInfoSet"]
+- !private ["SH", "append"]
+- !private ["SH", "appleMerchantIdentifier"]
+- !private ["SH", "applePayEnabled"]
+- !private ["SH", "callAsFunction"]
+- !private ["SH", "clearAdditionalInfo"]
+- !private ["SH", "commonPayload"]
+- !private ["SH", "companyName"]
+- !private ["SH", "contains"]
+- !private ["SH", "count"]
+- !private ["SH", "current"]
+- !private ["SH", "dataTask"]
+- ["SH", "delivery"]
+- !private ["SH", "deviceSupportsApplePay"]
+- !private ["SH", "emailAddress"]
+- !private ["SH", "fatalError"]
+- !private ["SH", "first"]
+- !private ["SH", "fpxEnabled"]
+- ["SH", "full"]
+- ["SH", "init"]
+- !private ["SH", "insert"]
+- !private ["SH", "isEmpty"]
+- !private ["SH", "joined"]
+- !private ["SH", "keys"]
+- !private ["SH", "logPayload"]
+- !private ["SH", "merge"]
+- ["SH", "name"]
+- ["SH", "none"]
+- !private ["SH", "objc_sync_enter"]
+- !private ["SH", "objc_sync_exit"]
+- !private ["SH", "phoneNumber"]
+- !private ["SH", "postalAddress"]
+- ["SH", "postalCode"]
+- !private ["SH", "productUsage"]
+- !private ["SH", "productUsageDictionary"]
+- !private ["SH", "publishableKey"]
+- !private ["SH", "removeAll"]
+- !private ["SH", "requiredBillingAddressFields"]
+- !private ["SH", "requiredShippingAddressFields"]
+- !private ["SH", "resume"]
+- !private ["SH", "round"]
+- !private ["SH", "serializeConfiguration"]
+- !private ["SH", "shared"]
+- !private ["SH", "sharedClient"]
+- ["SH", "sharedUrlSessionConfiguration"]
+- ["SH", "shipping"]
+- !private ["SH", "shippingType"]
+- !private ["SH", "shouldCollectAnalytics"]
+- !private ["SH", "sorted"]
+- !private ["SH", "stp_addParameters"]
+- !private ["SH", "stp_applicationName"]
+- !private ["SH", "stp_applicationVersion"]
+- !private ["SH", "subscript"]
+- !private ["SH", "systemVersion"]
+- !private ["SH", "type"]
+- !private ["SH", "uname"]
+- !private ["SH", "urlSession"]
+- !private ["SH", "utsname"]
+- !private ["SD4KeysV", "contains"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "isEmpty"]
+- !private ["s6MirrorV", "children"]
+- !private ["s6MirrorV", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "isEmpty"]
+- !private ["SM", ""]
+- !private ["SM", "append"]
+- !private ["SM", "first"]
+- !private ["SM", "isEmpty"]
+- !private ["SM", "joined"]
+- !private ["10Foundation19MutableDataProtocolP", "append"]
+- !private ["10Foundation19MutableDataProtocolP", "first"]
+- !private ["10Foundation19MutableDataProtocolP", "isEmpty"]
+- !private ["10Foundation19MutableDataProtocolP", "joined"]
+- !private ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "isEmpty"]
+- !private ["So8NSCodingP", "stp_addParameters"]
+- !private ["So9NSCopyingP", ""]
+- !private ["So9NSCopyingP", "appleMerchantIdentifier"]
+- !private ["So9NSCopyingP", "applePayEnabled"]
+- !private ["So9NSCopyingP", "companyName"]
+- !private ["So9NSCopyingP", "fpxEnabled"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "isEmpty"]
+- !private ["So9NSCopyingP", "requiredBillingAddressFields"]
+- !private ["So9NSCopyingP", "requiredShippingAddressFields"]
+- !private ["So9NSCopyingP", "resume"]
+- !private ["So9NSCopyingP", "shippingType"]
+- !private ["So9NSCopyingP", "stp_addParameters"]
+- !private ["So21NSItemProviderReadingP", "isEmpty"]
+- !private ["So21NSItemProviderWritingP", "isEmpty"]
+- !private ["So16NSMutableCopyingP", "init"]
+- !private ["So16NSMutableCopyingP", "isEmpty"]
+- !private ["So16NSMutableCopyingP", "stp_addParameters"]
+- !private ["So19NSMutableURLRequestC", "init"]
+- !private ["So19NSMutableURLRequestC", "stp_addParameters"]
+- !private ["So8NSNumberC", "init"]
+- ["So8NSObjectC", "AnyClass"]
+- ["So8NSObjectC", "AnyHashable"]
+- ["So8NSObjectC", "Bool"]
+- !private ["So8NSObjectC", "Bundle"]
+- !private ["So8NSObjectC", "Int8"]
+- !private ["So8NSObjectC", "Mirror"]
+- !private ["So8NSObjectC", "NSClassFromString"]
+- !private ["So8NSObjectC", "NSMutableURLRequest"]
+- !private ["So8NSObjectC", "NSNumber"]
+- !private ["So8NSObjectC", "NSStringFromClass"]
+- ["So8NSObjectC", "STPAPIClient"]
+- ["So8NSObjectC", "STPAnalyticsClient"]
+- !private ["So8NSObjectC", "STPCardScanner"]
+- !private ["So8NSObjectC", "STPPaymentCardTextField"]
+- ["So8NSObjectC", "STPPaymentConfiguration"]
+- !private ["So8NSObjectC", "STPPaymentContext"]
+- !private ["So8NSObjectC", "STPSDKVersion"]
+- ["So8NSObjectC", "Set"]
+- ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "StripeAPI"]
+- ["So8NSObjectC", "TimeInterval"]
+- !private ["So8NSObjectC", "UIDevice"]
+- !private ["So8NSObjectC", "UInt8"]
+- !private ["So8NSObjectC", "URL"]
+- !private ["So8NSObjectC", "URLRequest"]
+- ["So8NSObjectC", "URLSession"]
+- !private ["So8NSObjectC", "URLSessionDataTask"]
+- !private ["So8NSObjectC", "UnicodeScalar"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "addAdditionalInfo"]
+- ["So8NSObjectC", "addClass"]
+- ["So8NSObjectC", "additionalInfo"]
+- ["So8NSObjectC", "additionalInfoSet"]
+- !private ["So8NSObjectC", "appleMerchantIdentifier"]
+- !private ["So8NSObjectC", "applePayEnabled"]
+- ["So8NSObjectC", "clearAdditionalInfo"]
+- ["So8NSObjectC", "commonPayload"]
+- !private ["So8NSObjectC", "companyName"]
+- !private ["So8NSObjectC", "current"]
+- !private ["So8NSObjectC", "dataTask"]
+- !private ["So8NSObjectC", "deviceSupportsApplePay"]
+- !private ["So8NSObjectC", "emailAddress"]
+- !private ["So8NSObjectC", "fatalError"]
+- !private ["So8NSObjectC", "fpxEnabled"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "isEmpty"]
+- ["So8NSObjectC", "log3DS2AuthenticateAttempt"]
+- ["So8NSObjectC", "log3DS2ChallengeFlowCompleted"]
+- ["So8NSObjectC", "log3DS2ChallengeFlowErrored"]
+- ["So8NSObjectC", "log3DS2ChallengeFlowPresented"]
+- ["So8NSObjectC", "log3DS2ChallengeFlowTimedOut"]
+- ["So8NSObjectC", "log3DS2ChallengeFlowUserCanceled"]
+- ["So8NSObjectC", "log3DS2FrictionlessFlow"]
+- ["So8NSObjectC", "logCardMetadataMissingRange"]
+- ["So8NSObjectC", "logCardMetadataResponseFailure"]
+- ["So8NSObjectC", "logCardScanCancelled"]
+- ["So8NSObjectC", "logCardScanSucceeded"]
+- ["So8NSObjectC", "logPayload"]
+- ["So8NSObjectC", "logPaymentIntentConfirmationAttempt"]
+- ["So8NSObjectC", "logPaymentMethodCreationAttempt"]
+- ["So8NSObjectC", "logSetupIntentConfirmationAttempt"]
+- ["So8NSObjectC", "logSourceCreationAttempt"]
+- ["So8NSObjectC", "logTokenCreationAttempt"]
+- ["So8NSObjectC", "logURLRedirectNextAction"]
+- ["So8NSObjectC", "logUserEnteredCompletePANBeforeMetadataLoaded"]
+- !private ["So8NSObjectC", "name"]
+- !private ["So8NSObjectC", "objc_sync_enter"]
+- !private ["So8NSObjectC", "objc_sync_exit"]
+- !private ["So8NSObjectC", "phoneNumber"]
+- !private ["So8NSObjectC", "postalAddress"]
+- ["So8NSObjectC", "productUsage"]
+- ["So8NSObjectC", "productUsageDictionary"]
+- !private ["So8NSObjectC", "publishableKey"]
+- !private ["So8NSObjectC", "requestWithURL"]
+- !private ["So8NSObjectC", "requiredBillingAddressFields"]
+- !private ["So8NSObjectC", "requiredShippingAddressFields"]
+- !private ["So8NSObjectC", "resume"]
+- !private ["So8NSObjectC", "round"]
+- ["So8NSObjectC", "serializeConfiguration"]
+- !private ["So8NSObjectC", "shared"]
+- ["So8NSObjectC", "sharedClient"]
+- ["So8NSObjectC", "sharedUrlSessionConfiguration"]
+- !private ["So8NSObjectC", "shippingType"]
+- ["So8NSObjectC", "shouldCollectAnalytics"]
+- !private ["So8NSObjectC", "stp_addParameters"]
+- !private ["So8NSObjectC", "stp_applicationName"]
+- !private ["So8NSObjectC", "stp_applicationVersion"]
+- !private ["So8NSObjectC", "systemVersion"]
+- ["So8NSObjectC", "tokenType"]
+- !private ["So8NSObjectC", "type"]
+- !private ["So8NSObjectC", "uname"]
+- ["So8NSObjectC", "urlSession"]
+- !private ["So8NSObjectC", "utsname"]
+- ["So8NSObjectP", "AnyClass"]
+- !private ["So8NSObjectP", "Bundle"]
+- !private ["So8NSObjectP", "Int8"]
+- !private ["So8NSObjectP", "Mirror"]
+- !private ["So8NSObjectP", "NSClassFromString"]
+- !private ["So8NSObjectP", "NSMutableURLRequest"]
+- !private ["So8NSObjectP", "NSNumber"]
+- !private ["So8NSObjectP", "NSStringFromClass"]
+- ["So8NSObjectP", "STPAPIClient"]
+- ["So8NSObjectP", "STPAnalyticsClient"]
+- !private ["So8NSObjectP", "STPCardScanner"]
+- !private ["So8NSObjectP", "STPPaymentCardTextField"]
+- !private ["So8NSObjectP", "STPPaymentContext"]
+- !private ["So8NSObjectP", "STPSDKVersion"]
+- ["So8NSObjectP", "Set"]
+- !private ["So8NSObjectP", "String"]
+- !private ["So8NSObjectP", "StripeAPI"]
+- !private ["So8NSObjectP", "UIDevice"]
+- !private ["So8NSObjectP", "UInt8"]
+- !private ["So8NSObjectP", "URL"]
+- ["So8NSObjectP", "URLSession"]
+- !private ["So8NSObjectP", "UnicodeScalar"]
+- ["So8NSObjectP", ""]
+- ["So8NSObjectP", "addAdditionalInfo"]
+- !private ["So8NSObjectP", "addClass"]
+- ["So8NSObjectP", "additionalInfo"]
+- ["So8NSObjectP", "additionalInfoSet"]
+- !private ["So8NSObjectP", "appleMerchantIdentifier"]
+- !private ["So8NSObjectP", "applePayEnabled"]
+- !private ["So8NSObjectP", "clearAdditionalInfo"]
+- ["So8NSObjectP", "commonPayload"]
+- !private ["So8NSObjectP", "companyName"]
+- !private ["So8NSObjectP", "current"]
+- !private ["So8NSObjectP", "dataTask"]
+- !private ["So8NSObjectP", "deviceSupportsApplePay"]
+- !private ["So8NSObjectP", "emailAddress"]
+- !private ["So8NSObjectP", "fatalError"]
+- !private ["So8NSObjectP", "fpxEnabled"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "isEmpty"]
+- ["So8NSObjectP", "log3DS2AuthenticateAttempt"]
+- ["So8NSObjectP", "log3DS2ChallengeFlowCompleted"]
+- ["So8NSObjectP", "log3DS2ChallengeFlowErrored"]
+- ["So8NSObjectP", "log3DS2ChallengeFlowPresented"]
+- ["So8NSObjectP", "log3DS2ChallengeFlowTimedOut"]
+- ["So8NSObjectP", "log3DS2ChallengeFlowUserCanceled"]
+- ["So8NSObjectP", "log3DS2FrictionlessFlow"]
+- ["So8NSObjectP", "logCardMetadataMissingRange"]
+- ["So8NSObjectP", "logCardMetadataResponseFailure"]
+- ["So8NSObjectP", "logCardScanCancelled"]
+- ["So8NSObjectP", "logCardScanSucceeded"]
+- ["So8NSObjectP", "logPayload"]
+- ["So8NSObjectP", "logPaymentIntentConfirmationAttempt"]
+- ["So8NSObjectP", "logPaymentMethodCreationAttempt"]
+- ["So8NSObjectP", "logSetupIntentConfirmationAttempt"]
+- ["So8NSObjectP", "logSourceCreationAttempt"]
+- ["So8NSObjectP", "logTokenCreationAttempt"]
+- ["So8NSObjectP", "logURLRedirectNextAction"]
+- ["So8NSObjectP", "logUserEnteredCompletePANBeforeMetadataLoaded"]
+- !private ["So8NSObjectP", "name"]
+- !private ["So8NSObjectP", "objc_sync_enter"]
+- !private ["So8NSObjectP", "objc_sync_exit"]
+- !private ["So8NSObjectP", "phoneNumber"]
+- !private ["So8NSObjectP", "postalAddress"]
+- ["So8NSObjectP", "productUsage"]
+- ["So8NSObjectP", "productUsageDictionary"]
+- !private ["So8NSObjectP", "publishableKey"]
+- !private ["So8NSObjectP", "requestWithURL"]
+- !private ["So8NSObjectP", "requiredBillingAddressFields"]
+- !private ["So8NSObjectP", "requiredShippingAddressFields"]
+- !private ["So8NSObjectP", "resume"]
+- !private ["So8NSObjectP", "round"]
+- ["So8NSObjectP", "serializeConfiguration"]
+- !private ["So8NSObjectP", "shared"]
+- ["So8NSObjectP", "sharedClient"]
+- ["So8NSObjectP", "sharedUrlSessionConfiguration"]
+- !private ["So8NSObjectP", "shippingType"]
+- ["So8NSObjectP", "shouldCollectAnalytics"]
+- !private ["So8NSObjectP", "stp_addParameters"]
+- !private ["So8NSObjectP", "stp_applicationName"]
+- !private ["So8NSObjectP", "stp_applicationVersion"]
+- !private ["So8NSObjectP", "systemVersion"]
+- ["So8NSObjectP", "tokenType"]
+- !private ["So8NSObjectP", "type"]
+- !private ["So8NSObjectP", "uname"]
+- ["So8NSObjectP", "urlSession"]
+- !private ["So8NSObjectP", "utsname"]
+- !private ["So14NSSecureCodingP", ""]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "isEmpty"]
+- !private ["So14NSSecureCodingP", "stp_addParameters"]
+- !private ["So8NSStringC", "isEmpty"]
+- ["So12NSURLRequestC", ""]
+- !private ["So12NSURLRequestC", "init"]
+- !private ["So12NSURLRequestC", "stp_addParameters"]
+- ["So7NSValueC", ""]
+- !private ["So7NSValueC", "init"]
+- !private ["Sj", ""]
+- !private ["Sj", "init"]
+- !private ["Sq", "callAsFunction"]
+- !private ["So19NSProgressReportingP", "resume"]
+- !private ["Sk", ""]
+- !private ["Sk", "append"]
+- !private ["Sk", "first"]
+- !private ["Sk", "isEmpty"]
+- !private ["Sk", "joined"]
+- !private ["Sm", ""]
+- !private ["Sm", "append"]
+- !private ["Sm", "first"]
+- !private ["Sm", "init"]
+- !private ["Sm", "isEmpty"]
+- !private ["Sm", "joined"]
+- ["SY", "delivery"]
+- !private ["SY", "emailAddress"]
+- ["SY", "full"]
+- ["SY", "name"]
+- ["SY", "none"]
+- !private ["SY", "phoneNumber"]
+- !private ["SY", "postalAddress"]
+- ["SY", "postalCode"]
+- ["SY", "shipping"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["s10SIMDScalarP", "init"]
+- !private ["6Stripe12STPAPIClientC", "STPSDKVersion"]
+- !private ["6Stripe12STPAPIClientC", "publishableKey"]
+- !private ["6Stripe12STPAPIClientC", "shared"]
+- ["6Stripe12STPAPIClientC", "sharedUrlSessionConfiguration"]
+- ["6Stripe18STPAnalyticsClientC", "AnyClass"]
+- ["6Stripe18STPAnalyticsClientC", "AnyHashable"]
+- ["6Stripe18STPAnalyticsClientC", "Bool"]
+- !private ["6Stripe18STPAnalyticsClientC", "Bundle"]
+- !private ["6Stripe18STPAnalyticsClientC", "Int8"]
+- !private ["6Stripe18STPAnalyticsClientC", "Mirror"]
+- !private ["6Stripe18STPAnalyticsClientC", "NSClassFromString"]
+- !private ["6Stripe18STPAnalyticsClientC", "NSMutableURLRequest"]
+- !private ["6Stripe18STPAnalyticsClientC", "NSNumber"]
+- !private ["6Stripe18STPAnalyticsClientC", "NSStringFromClass"]
+- ["6Stripe18STPAnalyticsClientC", "STPAPIClient"]
+- ["6Stripe18STPAnalyticsClientC", "STPAnalyticsClient"]
+- !private ["6Stripe18STPAnalyticsClientC", "STPCardScanner"]
+- !private ["6Stripe18STPAnalyticsClientC", "STPPaymentCardTextField"]
+- ["6Stripe18STPAnalyticsClientC", "STPPaymentConfiguration"]
+- !private ["6Stripe18STPAnalyticsClientC", "STPPaymentContext"]
+- ["6Stripe18STPAnalyticsClientC", "Set"]
+- ["6Stripe18STPAnalyticsClientC", "String"]
+- !private ["6Stripe18STPAnalyticsClientC", "StripeAPI"]
+- ["6Stripe18STPAnalyticsClientC", "TimeInterval"]
+- !private ["6Stripe18STPAnalyticsClientC", "UIDevice"]
+- !private ["6Stripe18STPAnalyticsClientC", "UInt8"]
+- !private ["6Stripe18STPAnalyticsClientC", "URL"]
+- !private ["6Stripe18STPAnalyticsClientC", "URLRequest"]
+- ["6Stripe18STPAnalyticsClientC", "URLSession"]
+- !private ["6Stripe18STPAnalyticsClientC", "URLSessionDataTask"]
+- !private ["6Stripe18STPAnalyticsClientC", "UnicodeScalar"]
+- ["6Stripe18STPAnalyticsClientC", ""]
+- ["6Stripe18STPAnalyticsClientC", "addAdditionalInfo"]
+- ["6Stripe18STPAnalyticsClientC", "addClass"]
+- ["6Stripe18STPAnalyticsClientC", "additionalInfo"]
+- !private ["6Stripe18STPAnalyticsClientC", "additionalInfoSet"]
+- ["6Stripe18STPAnalyticsClientC", "clearAdditionalInfo"]
+- !private ["6Stripe18STPAnalyticsClientC", "commonPayload"]
+- ["6Stripe18STPAnalyticsClientC", "deinit"]
+- !private ["6Stripe18STPAnalyticsClientC", "fatalError"]
+- ["6Stripe18STPAnalyticsClientC", "init"]
+- ["6Stripe18STPAnalyticsClientC", "log3DS2AuthenticateAttempt"]
+- ["6Stripe18STPAnalyticsClientC", "log3DS2ChallengeFlowCompleted"]
+- ["6Stripe18STPAnalyticsClientC", "log3DS2ChallengeFlowErrored"]
+- ["6Stripe18STPAnalyticsClientC", "log3DS2ChallengeFlowPresented"]
+- ["6Stripe18STPAnalyticsClientC", "log3DS2ChallengeFlowTimedOut"]
+- ["6Stripe18STPAnalyticsClientC", "log3DS2ChallengeFlowUserCanceled"]
+- ["6Stripe18STPAnalyticsClientC", "log3DS2FrictionlessFlow"]
+- ["6Stripe18STPAnalyticsClientC", "logCardMetadataMissingRange"]
+- ["6Stripe18STPAnalyticsClientC", "logCardMetadataResponseFailure"]
+- ["6Stripe18STPAnalyticsClientC", "logCardScanCancelled"]
+- ["6Stripe18STPAnalyticsClientC", "logCardScanSucceeded"]
+- !private ["6Stripe18STPAnalyticsClientC", "logPayload"]
+- ["6Stripe18STPAnalyticsClientC", "logPaymentIntentConfirmationAttempt"]
+- ["6Stripe18STPAnalyticsClientC", "logPaymentMethodCreationAttempt"]
+- ["6Stripe18STPAnalyticsClientC", "logSetupIntentConfirmationAttempt"]
+- ["6Stripe18STPAnalyticsClientC", "logSourceCreationAttempt"]
+- ["6Stripe18STPAnalyticsClientC", "logTokenCreationAttempt"]
+- ["6Stripe18STPAnalyticsClientC", "logURLRedirectNextAction"]
+- ["6Stripe18STPAnalyticsClientC", "logUserEnteredCompletePANBeforeMetadataLoaded"]
+- !private ["6Stripe18STPAnalyticsClientC", "objc_sync_enter"]
+- !private ["6Stripe18STPAnalyticsClientC", "objc_sync_exit"]
+- ["6Stripe18STPAnalyticsClientC", "productUsage"]
+- ["6Stripe18STPAnalyticsClientC", "productUsageDictionary"]
+- !private ["6Stripe18STPAnalyticsClientC", "round"]
+- !private ["6Stripe18STPAnalyticsClientC", "serializeConfiguration"]
+- ["6Stripe18STPAnalyticsClientC", "sharedClient"]
+- ["6Stripe18STPAnalyticsClientC", "shouldCollectAnalytics"]
+- ["6Stripe18STPAnalyticsClientC", "tokenType"]
+- !private ["6Stripe18STPAnalyticsClientC", "type"]
+- !private ["6Stripe18STPAnalyticsClientC", "uname"]
+- !private ["6Stripe18STPAnalyticsClientC", "urlSession"]
+- !private ["6Stripe18STPAnalyticsClientC", "utsname"]
+- ["6Stripe23STPBillingAddressFieldsO", "full"]
+- ["6Stripe23STPBillingAddressFieldsO", "name"]
+- ["6Stripe23STPBillingAddressFieldsO", "none"]
+- ["6Stripe23STPBillingAddressFieldsO", "postalCode"]
+- !private ["6Stripe15STPContactFieldC", ""]
+- !private ["6Stripe15STPContactFieldC", "emailAddress"]
+- !private ["6Stripe15STPContactFieldC", "name"]
+- !private ["6Stripe15STPContactFieldC", "phoneNumber"]
+- !private ["6Stripe15STPContactFieldC", "postalAddress"]
+- !private ["6Stripe23STPPaymentConfigurationC", "appleMerchantIdentifier"]
+- !private ["6Stripe23STPPaymentConfigurationC", "applePayEnabled"]
+- !private ["6Stripe23STPPaymentConfigurationC", "companyName"]
+- !private ["6Stripe23STPPaymentConfigurationC", "fpxEnabled"]
+- !private ["6Stripe23STPPaymentConfigurationC", "requiredBillingAddressFields"]
+- !private ["6Stripe23STPPaymentConfigurationC", "requiredShippingAddressFields"]
+- !private ["6Stripe23STPPaymentConfigurationC", "shippingType"]
+- ["6Stripe15STPShippingTypeO", "delivery"]
+- ["6Stripe15STPShippingTypeO", "shipping"]
+- !private ["s7UnicodeO6ScalarV", "init"]
+- ["ST", ""]
+- !private ["ST", "append"]
+- !private ["ST", "contains"]
+- !private ["ST", "count"]
+- !private ["ST", "first"]
+- ["ST", "init"]
+- !private ["ST", "insert"]
+- !private ["ST", "isEmpty"]
+- !private ["ST", "joined"]
+- !private ["ST", "keys"]
+- !private ["ST", "merge"]
+- !private ["ST", "reduce"]
+- !private ["ST", "removeAll"]
+- !private ["ST", "sorted"]
+- !private ["ST", "subscript"]
+- !private ["Sh", "contains"]
+- !private ["Sh", "count"]
+- ["Sh", "init"]
+- !private ["Sh", "insert"]
+- !private ["Sh", "removeAll"]
+- !private ["Sh", "sorted"]
+- !private ["s10SetAlgebraP", "contains"]
+- !private ["s10SetAlgebraP", "count"]
+- ["s10SetAlgebraP", "init"]
+- !private ["s10SetAlgebraP", "insert"]
+- !private ["s10SetAlgebraP", "removeAll"]
+- !private ["s10SetAlgebraP", "sorted"]
+- !private ["Sx", ""]
+- !private ["Sx", "init"]
+- !private ["SS", "init"]
+- !private ["SS", "isEmpty"]
+- !private ["Sy", "init"]
+- !private ["Sy", "isEmpty"]
+- !private ["6Stripe0A3APIC", "deviceSupportsApplePay"]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "isEmpty"]
+- !private ["s20TextOutputStreamableP", ""]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "isEmpty"]
+- !private ["So8UIDeviceC", "current"]
+- !private ["So8UIDeviceC", "systemVersion"]
+- !private ["s5UInt8V", "init"]
+- !private ["10Foundation3URLV", "init"]
+- !private ["So12NSURLSessionC", "dataTask"]
+- ["So12NSURLSessionC", "init"]
+- !private ["So20NSURLSessionDataTaskC", "resume"]
+- ["So16NSURLSessionTaskC", ""]
+- !private ["So16NSURLSessionTaskC", "resume"]
+- !private ["SU", "init"]
+- !private ["s22_AnyCollectionProtocolP", "reduce"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "first"]
+- !private ["s14_ArrayProtocolP", "isEmpty"]
+- !private ["s14_ArrayProtocolP", "joined"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "isEmpty"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "first"]
+- !private ["s24_DestructorSafeContainerP", "isEmpty"]
+- !private ["s24_DestructorSafeContainerP", "joined"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "isEmpty"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "isEmpty"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "isEmpty"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
+- !private ["s19_HasContiguousBytesP", "append"]
+- !private ["s19_HasContiguousBytesP", "first"]
+- !private ["s19_HasContiguousBytesP", "init"]
+- !private ["s19_HasContiguousBytesP", "isEmpty"]
+- !private ["s19_HasContiguousBytesP", "joined"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "contains"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "first"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "insert"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "isEmpty"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "joined"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "keys"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "merge"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "removeAll"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "sorted"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "stp_addParameters"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Bundle"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Mirror"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSClassFromString"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSMutableURLRequest"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSNumber"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSStringFromClass"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "STPAPIClient"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "STPAnalyticsClient"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPCardScanner"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPPaymentCardTextField"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPPaymentContext"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPSDKVersion"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Set"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "String"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "StripeAPI"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIDevice"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UInt8"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "URL"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "URLSession"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UnicodeScalar"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addAdditionalInfo"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addClass"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "additionalInfo"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "additionalInfoSet"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "appleMerchantIdentifier"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "applePayEnabled"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "clearAdditionalInfo"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "commonPayload"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "companyName"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "current"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dataTask"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "deviceSupportsApplePay"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "emailAddress"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fpxEnabled"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isEmpty"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "logPayload"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "objc_sync_enter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "objc_sync_exit"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "phoneNumber"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "postalAddress"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "productUsage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "productUsageDictionary"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "publishableKey"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "requiredBillingAddressFields"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "requiredShippingAddressFields"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "resume"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "round"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "serializeConfiguration"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sharedClient"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "sharedUrlSessionConfiguration"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shippingType"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shouldCollectAnalytics"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stp_addParameters"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stp_applicationName"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stp_applicationVersion"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "systemVersion"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "type"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "uname"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "urlSession"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "utsname"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Bundle"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Mirror"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSClassFromString"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSMutableURLRequest"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSNumber"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSStringFromClass"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPAPIClient"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPAnalyticsClient"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPCardScanner"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPPaymentCardTextField"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPPaymentContext"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPSDKVersion"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Set"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "String"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "StripeAPI"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIDevice"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UInt8"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "URL"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "URLSession"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UnicodeScalar"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addAdditionalInfo"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addClass"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "additionalInfo"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "additionalInfoSet"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "appleMerchantIdentifier"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "applePayEnabled"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "clearAdditionalInfo"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "commonPayload"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "companyName"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "current"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dataTask"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "deviceSupportsApplePay"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "emailAddress"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "fatalError"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "fpxEnabled"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isEmpty"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "logPayload"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "name"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "objc_sync_enter"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "objc_sync_exit"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "phoneNumber"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "postalAddress"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "productUsage"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "productUsageDictionary"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "publishableKey"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "requiredBillingAddressFields"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "requiredShippingAddressFields"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "resume"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "round"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "serializeConfiguration"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sharedClient"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sharedUrlSessionConfiguration"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shippingType"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shouldCollectAnalytics"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stp_addParameters"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stp_applicationName"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stp_applicationVersion"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "systemVersion"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "type"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "uname"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "urlSession"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "utsname"]
+- !private ["s21_ObjectiveCBridgeableP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "callAsFunction"]
+- !private ["s21_ObjectiveCBridgeableP", "contains"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "first"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "insert"]
+- !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
+- !private ["s21_ObjectiveCBridgeableP", "joined"]
+- !private ["s21_ObjectiveCBridgeableP", "keys"]
+- !private ["s21_ObjectiveCBridgeableP", "merge"]
+- !private ["s21_ObjectiveCBridgeableP", "removeAll"]
+- !private ["s21_ObjectiveCBridgeableP", "sorted"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s14_StringElementP", "init"]
+- !private ["So7utsnameV", "init"]
+- !private ["So7utsnameV", "machine"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- !private "s13AnyCollectionV"
+- !private "Sa"
+- !private "SK"
+- !private "Sz"
+- !private "So8NSBundleC"
+- !private "So15CNKeyDescriptorP"
+- "s7CVarArgP"
+- "Sl"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- "Se"
+- !private "SD"
+- "SE"
+- "SQ"
+- "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "SH"
+- !private "SD4KeysV"
+- !private "s25LosslessStringConvertibleP"
+- !private "s6MirrorV"
+- !private "s10MirrorPathP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- !private "So19NSMutableURLRequestC"
+- !private "So8NSNumberC"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- "So12NSURLRequestC"
+- "So7NSValueC"
+- !private "Sj"
+- !private "Sq"
+- !private "So19NSProgressReportingP"
+- !private "Sk"
+- !private "Sm"
+- "SY"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s10SIMDScalarP"
+- "6Stripe12STPAPIClientC"
+- "6Stripe18STPAnalyticsClientC"
+- "6Stripe23STPBillingAddressFieldsO"
+- !private "6Stripe15STPContactFieldC"
+- !private "6Stripe23STPPaymentConfigurationC"
+- "6Stripe15STPShippingTypeO"
+- !private "s7UnicodeO6ScalarV"
+- "ST"
+- "Sh"
+- "s10SetAlgebraP"
+- !private "Sx"
+- !private "SS"
+- !private "Sy"
+- !private "6Stripe0A3APIC"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So8UIDeviceC"
+- !private "s5UInt8V"
+- !private "10Foundation3URLV"
+- "So12NSURLSessionC"
+- !private "So20NSURLSessionDataTaskC"
+- "So16NSURLSessionTaskC"
+- !private "SU"
+- !private "s22_AnyCollectionProtocolP"
+- !private "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s34_ExpressibleByFileReferenceLiteralP"
+- !private "s19_HasContiguousBytesP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- "s21_ObjectiveCBridgeableP"
+- !private "s14_StringElementP"
+- !private "So7utsnameV"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreMIDI.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreML.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreMedia.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/simd.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Vision.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreLocation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/AVFoundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreAudio.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Contacts.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/WebKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIViewController+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSError+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Target Support Files/Stripe/Stripe-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDS2Service.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseImage.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSErrorMessage.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONDecodable.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONEncodable.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONWebSignature.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponse.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationResponse.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDirectoryServerCertificate.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDSProtocolVersion+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTransaction+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformationParameter+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSString+EmptyChecking.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSWarning.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSLocalizedString.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSEphemeralKeyPair+Testing.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSwiftTryCatch.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSErrorMessage+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDirectoryServerCertificate+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSException+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseMessageExtension.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformation.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIButton+CustomInitialization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSUICustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTextFieldCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSLabelCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSelectionCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSButtonCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSNavigationBarCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSFooterCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTransaction.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSNotInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAlreadyInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSRuntimeException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSInvalidInputException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONWebEncryption.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSelectionButton.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseSelectionInfo.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/Stripe3DS2-Bridging-Header.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSImageLoader.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONEncoder.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSACSNetworkingManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSynchronousLocationManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformationManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJailbreakChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSOSVersionChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDebuggerChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSimulatorChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSIntegrityChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCategoryLinker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseViewController.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSProgressViewController.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformationParameter.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDirectoryServer.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSEphemeralKeyPair.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSStripe3DS2Error.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSBundleLocator.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSecTypeUtilities.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSData+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSString+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSDictionary+DecodingHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSConfigParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIColor+DefaultColors.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSIPAddress.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIFont+DefaultFonts.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseImageObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseMessageExtensionObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseSelectionInfoObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCompletionEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSEllipticCurvePoint.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIColor+ThirteenSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSLayoutConstraint+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIView+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSWebView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTextChallengeView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSBrandingView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSProcessingView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSStackView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSExpandableInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeSelectionView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSpacerView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSWhitelistView.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/Stripe.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "360d87a53149058dc7879ad78854585d"

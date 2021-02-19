@@ -10,7 +10,7 @@ const PayoutSetup = (props) => {
   const getRedirectInfo = async () => {
     return API.makeRequest(
       "GET",
-      `http://127.0.0.1:5000/create-stripe-account`
+      `/create-stripe-account`
     );
   };
   const onSubmit = async (event, merchantStripeId) => {
@@ -26,7 +26,7 @@ const PayoutSetup = (props) => {
       const dataObject = { business: currentBusiness };
       let result = await API.makeRequest(
         "POST",
-        "http://127.0.0.1:5000/signup-redirect",
+        "/signup-redirect",
         dataObject,
         false
       );

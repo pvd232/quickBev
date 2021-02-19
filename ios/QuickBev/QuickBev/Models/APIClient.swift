@@ -93,7 +93,7 @@ struct APIClient {
     typealias APIClientCompletion = (APIResult<Data?>) -> Void
 
     private let session = URLSession.shared
-    private let baseURL = URL(string: "http://127.0.0.1:5000")!
+    private let baseURL = URL(string: "http://192.168.0.58:5000")!
 
     func perform(_ request: APIRequest, _ completion: @escaping APIClientCompletion) {
         var urlComponents = URLComponents()
@@ -101,6 +101,7 @@ struct APIClient {
         if baseURL.port != nil {
             urlComponents.port = baseURL.port
         }
+        print("host", baseURL.host)
         urlComponents.host = baseURL.host
         urlComponents.path = baseURL.path
         urlComponents.queryItems = request.queryItems
@@ -110,9 +111,11 @@ struct APIClient {
         }
 
         var urlRequest = URLRequest(url: url)
+        print("urlRequest", urlRequest)
         urlRequest.httpMethod = request.method.rawValue
         urlRequest.httpBody = request.body
         if urlRequest.httpBody != nil {
+            print("body", request.body)
             urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
             urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
 
@@ -122,11 +125,12 @@ struct APIClient {
         let task = session.dataTask(with: urlRequest) { (data, response, error) in
             // this is where the APIResponse is declared using optional binding to downcast the type. the new variable httpResponse is declared and binded to the value of the response on the condition that it is of the type HTTPURLResponse
             debugPrint("response", response ?? "no response")
-
+            debugPrint("data", data ?? "data")
+            debugPrint("error", error ?? "error")
             guard let httpResponse = response as? HTTPURLResponse else {
                 completion(.failure(.requestFailed)); return
             }
-            guard let dataResponse = data,
+            guard let _ = data,
                       error == nil else {
                       debugPrint(error?.localizedDescription ?? "Response Error")
                       return }
