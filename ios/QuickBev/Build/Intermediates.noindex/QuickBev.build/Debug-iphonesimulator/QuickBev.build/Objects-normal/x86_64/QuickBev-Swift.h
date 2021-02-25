@@ -486,6 +486,19 @@ SWIFT_CLASS("_TtC8QuickBev19DrinkViewController")
 @end
 
 
+SWIFT_CLASS_NAMED("ETag")
+@interface ETag : NSManagedObject
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+@interface ETag (SWIFT_EXTENSION(QuickBev))
+@property (nonatomic) int64_t id;
+@property (nonatomic, copy) NSString * _Nullable category;
+@end
+
+
 SWIFT_CLASS("_TtC8QuickBev22HomePageViewController")
 @interface HomePageViewController : UIViewController
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -570,9 +583,9 @@ SWIFT_CLASS("_TtC8QuickBev18OrderTableViewCell")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified orderNumber;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified orderPrice;
 - (void)awakeFromNib;
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
-- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 @end
 
 
@@ -585,6 +598,15 @@ SWIFT_CLASS("_TtC8QuickBev24OrderTableViewController")
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8QuickBev27PasswordResetViewController")
+@interface PasswordResetViewController : UIViewController
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
 
@@ -602,8 +624,6 @@ SWIFT_CLASS("_TtC8QuickBev35RegistrationWithEmailViewController")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidLoad;
-- (void)textFieldDidEndEditing:(UITextField * _Nonnull)textField;
-- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
@@ -646,6 +666,14 @@ SWIFT_CLASS("_TtC8QuickBev11RoundButton")
 @property (nonatomic, strong) IBInspectable UIColor * _Nonnull backgroundImageColor;
 @property (nonatomic, strong) IBInspectable UIColor * _Nonnull borderColor;
 @property (nonatomic) IBInspectable CGFloat borderWidth;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)prepareForInterfaceBuilder;
+@end
+
+
+SWIFT_CLASS("_TtC8QuickBev18RoundedUITextField")
+@interface RoundedUITextField : UITextField
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)prepareForInterfaceBuilder;
@@ -800,14 +828,6 @@ SWIFT_CLASS("_TtC8QuickBev4User")
 
 
 @interface User (SWIFT_EXTENSION(QuickBev))
-- (void)addUserToOrderObject:(Order * _Nonnull)value;
-- (void)removeUserToOrderObject:(Order * _Nonnull)value;
-- (void)addUserToOrder:(NSSet * _Nonnull)values;
-- (void)removeUserToOrder:(NSSet * _Nonnull)values;
-@end
-
-
-@interface User (SWIFT_EXTENSION(QuickBev))
 - (void)addUserToTabObject:(Tab * _Nonnull)value;
 - (void)removeUserToTabObject:(Tab * _Nonnull)value;
 - (void)addUserToTab:(NSSet * _Nonnull)values;
@@ -816,11 +836,16 @@ SWIFT_CLASS("_TtC8QuickBev4User")
 
 
 @interface User (SWIFT_EXTENSION(QuickBev))
-@property (nonatomic, copy) NSString * _Nullable email;
+- (void)addUserToOrderObject:(Order * _Nonnull)value;
+- (void)removeUserToOrderObject:(Order * _Nonnull)value;
+- (void)addUserToOrder:(NSSet * _Nonnull)values;
+- (void)removeUserToOrder:(NSSet * _Nonnull)values;
+@end
+
+
+@interface User (SWIFT_EXTENSION(QuickBev))
 @property (nonatomic, copy) NSString * _Nullable firstName;
 @property (nonatomic, copy) NSString * _Nullable lastName;
-@property (nonatomic, copy) NSString * _Nullable password;
-@property (nonatomic, copy) NSString * _Nullable stripeId;
 @property (nonatomic) BOOL emailVerified;
 @property (nonatomic, strong) CheckoutCart * _Nullable relationship;
 @property (nonatomic, strong) NSSet * _Nullable userToOrder;

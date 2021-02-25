@@ -25,28 +25,36 @@ class AccountViewController : UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let attributes = [NSAttributedString.Key.font: UIFont(name: "Charter-Roman", size: 25)!]
-        self.navigationItem.standardAppearance?.titleTextAttributes = attributes
-        self.navigationItem.standardAppearance?.backgroundColor = UIColor.init(red: 134/255, green: 130/255, blue: 230/255, alpha: 1.0)
+//        let attributes = [NSAttributedString.Key.font: UIFont(name: "Charter-Roman", size: 25)!]
+//        self.navigationItem.standardAppearance?.titleTextAttributes = attributes
+//        self.navigationItem.standardAppearance?.backgroundColor = UIColor.init(red: 134/255, green: 130/255, blue: 230/255, alpha: 1.0)
     
-        self.navigationItem.setHidesBackButton(false, animated: true)
+//        self.navigationItem.setHidesBackButton(false, animated: true)
         self.view.backgroundColor = .white
         // add the table view to self.view
         self.view.addSubview(logoImageView)
         self.view.addSubview(tableView)
         tableView.backgroundColor = .clear
         
-        let margins = self.view.safeAreaLayoutGuide
+        let safeArea = self.view.safeAreaLayoutGuide
         //        let frame = self.view.safeAreaLayoutGuide.layoutFrame
-        logoImageView.heightAnchor.constraint(equalTo: margins.heightAnchor, multiplier: 0.148515).isActive = true
-        logoImageView.widthAnchor.constraint(equalTo: logoImageView.heightAnchor, multiplier: 1.0).isActive = true
-        logoImageView.topAnchor.constraint(equalTo: margins.topAnchor, constant: 20).isActive = true
-        logoImageView.centerXAnchor.constraint(equalTo: margins.centerXAnchor).isActive = true
+        NSLayoutConstraint.activate([
+            logoImageView.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: CGFloat(0.565217)),
+            logoImageView.heightAnchor.constraint(equalTo: logoImageView.widthAnchor),
+            logoImageView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
+//            logoImageView.bottomAnchor.constraint(lessThanOrEqualTo :letsGetStartedStackView.topAnchor , constant: -10.0),
+            logoImageView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: (0.02 * UIViewController.screenSize.height)),
+
+//        logoImageView.heightAnchor.constraint(equalTo: safeArea.heightAnchor, multiplier: 0.148515)
+//        logoImageView.widthAnchor.constraint(equalTo: logoImageView.heightAnchor, multiplier: 1.0)
+//        logoImageView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 20)
+//        logoImageView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor)
         
-        tableView.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 0).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: 0).isActive = true
-        tableView.topAnchor.constraint(equalTo: margins.topAnchor, constant: 140.0).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: 0).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 0),
+        tableView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: 0),
+            tableView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 140.0/UIViewController.screenSize.height),
+        tableView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: 0),
+        ])
         
         // set delegate and datasource
         tableView.delegate = self
@@ -113,7 +121,7 @@ class AccountViewController : UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedAccountOption = accountOptions[indexPath.row]
         if selectedAccountOption == "Sign Out" {
-            alert(title:"Log out of \(String(describing: CheckoutCart.shared.user!.email!))?", message:"")
+            alert(title:"Log out of \(String(describing: CheckoutCart.shared.user!.email))?", message:"")
         }
         // etc
     }

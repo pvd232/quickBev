@@ -2,6 +2,7 @@ from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
 import uuid
 
+
 class Drink_Domain(object):
     def __init__(self, drink_object=None, drink_json=None, init=False):
         self.quantity = 1
@@ -319,8 +320,7 @@ class Business_Domain(object):
         for i in range(len(attributes)):
             serialized_attributes[attribute_names[i]] = attributes[i]
         return serialized_attributes
-    
-    
+
     def dto_serialize(self):
         attribute_names = list(self.__dict__.keys())
         attributes = list(self.__dict__.values())
@@ -370,6 +370,24 @@ class Tab_Domain(object):
             self.description = tab_json["description"]
             self.minimum_contribution = tab_json["minimum_contribution"]
             self.fundraising_goal = tab_json["fundraising_goal"]
+
+    def serialize(self):
+        attribute_names = list(self.__dict__.keys())
+        attributes = list(self.__dict__.values())
+        serialized_attributes = {}
+        for i in range(len(attributes)):
+            serialized_attributes[attribute_names[i]] = attributes[i]
+        return serialized_attributes
+
+
+class ETag_Domain(object):
+    def __init__(self, etag_object=None, etag_json=None):
+        if etag_object:
+            self.id = etag_object.id
+            self.category = etag_object.category
+        elif etag_json:
+            self.id = etag_json["id"]
+            self.category = etag_json["category"]
 
     def serialize(self):
         attribute_names = list(self.__dict__.keys())

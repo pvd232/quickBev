@@ -123,6 +123,10 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "backgroundColor"]
 - !private ["s23ExpressibleByNilLiteralP", "safeAreaLayoutGuide"]
 - !private ["s23ExpressibleByNilLiteralP", "white"]
+- !private ["7SwiftUI7GestureP", "addSubview"]
+- !private ["7SwiftUI7GestureP", "backgroundColor"]
+- !private ["7SwiftUI7GestureP", "safeAreaLayoutGuide"]
+- !private ["7SwiftUI7GestureP", "white"]
 - !private ["SH", "NSLayoutConstraint"]
 - ["SH", "UIView"]
 - ["SH", "UsesAutoLayout"]
@@ -460,6 +464,10 @@ depends-member:
 - ["So16UIViewControllerC", "viewDidLoad"]
 - ["8QuickBev14UsesAutoLayoutV", "init"]
 - ["8QuickBev14UsesAutoLayoutV", "wrappedValue"]
+- !private ["7SwiftUI4ViewP", "addSubview"]
+- !private ["7SwiftUI4ViewP", "backgroundColor"]
+- !private ["7SwiftUI4ViewP", "safeAreaLayoutGuide"]
+- !private ["7SwiftUI4ViewP", "white"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s26_ExpressibleByColorLiteralP", "white"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSLayoutConstraint"]
@@ -523,6 +531,7 @@ depends-nominal:
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
+- !private "7SwiftUI7GestureP"
 - "SH"
 - "So8NSCodingP"
 - !private "So9NSCopyingP"
@@ -559,6 +568,7 @@ depends-nominal:
 - "So6UIViewC"
 - "So16UIViewControllerC"
 - "8QuickBev14UsesAutoLayoutV"
+- !private "7SwiftUI4ViewP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - "10Foundation27_KeyValueCodingAndObservingP"
@@ -569,6 +579,7 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -577,7 +588,6 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -602,13 +612,14 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/MapKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/DeveloperToolsSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIViewController+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSError+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-umbrella.h"
@@ -694,7 +705,6 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfoObject.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-Swift.h"
@@ -721,7 +731,6 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Modules/module.modulemap"

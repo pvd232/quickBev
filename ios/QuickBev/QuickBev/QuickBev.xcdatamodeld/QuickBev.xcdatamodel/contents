@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Business" representedClassName=".Business" syncable="YES">
         <attribute name="address" attributeType="String"/>
         <attribute name="coordinateString" attributeType="String" defaultValueString=""/>
@@ -39,6 +39,10 @@
         <relationship name="drinkToOrder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Order" inverseName="orderDrink" inverseEntity="Order"/>
         <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CheckoutCart" inverseName="drinks" inverseEntity="CheckoutCart"/>
     </entity>
+    <entity name="ETag" representedClassName="ETag" syncable="YES">
+        <attribute name="category" attributeType="String"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
     <entity name="Order" representedClassName=".Order" syncable="YES">
         <attribute name="businessId" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="cost" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
@@ -66,12 +70,9 @@
         <relationship name="tabToUser" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="userToTab" inverseEntity="User"/>
     </entity>
     <entity name="User" representedClassName=".User" syncable="YES">
-        <attribute name="email" attributeType="String"/>
         <attribute name="emailVerified" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="firstName" attributeType="String"/>
         <attribute name="lastName" attributeType="String"/>
-        <attribute name="password" attributeType="String"/>
-        <attribute name="stripeId" attributeType="String" defaultValueString=""/>
         <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CheckoutCart" inverseName="user" inverseEntity="CheckoutCart"/>
         <relationship name="userToOrder" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Order" inverseName="user" inverseEntity="Order"/>
         <relationship name="userToTab" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tab" inverseName="tabToUser" inverseEntity="Tab"/>
@@ -80,8 +81,9 @@
         <element name="Business" positionX="0" positionY="81" width="128" height="164"/>
         <element name="CheckoutCart" positionX="27" positionY="126" width="128" height="254"/>
         <element name="Drink" positionX="-36" positionY="9" width="128" height="164"/>
+        <element name="ETag" positionX="9" positionY="171" width="128" height="59"/>
         <element name="Order" positionX="18" positionY="162" width="128" height="209"/>
         <element name="Tab" positionX="9" positionY="135" width="128" height="179"/>
-        <element name="User" positionX="54" positionY="162" width="128" height="164"/>
+        <element name="User" positionX="54" positionY="162" width="128" height="119"/>
     </elements>
 </model>

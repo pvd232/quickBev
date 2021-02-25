@@ -84,8 +84,7 @@ depends-top-level:
 depends-member:
 - !private ["s18AdditiveArithmeticP", ""]
 - !private ["s18AdditiveArithmeticP", "init"]
-- ["9Alamofire0A8ExtendedP", "init"]
-- !private ["9Alamofire0A8ExtendedP", "subscript"]
+- !private ["7SwiftUI10AnimatableP", "init"]
 - ["Sa", "init"]
 - !private ["Sa", "subscript"]
 - !private ["s10ArraySliceV", "trimmingCharacters"]
@@ -171,6 +170,7 @@ depends-member:
 - !private ["8QuickBev25BusinessMapViewControllerC", "print"]
 - !private ["8QuickBev25BusinessMapViewControllerC", "view"]
 - ["8QuickBev25BusinessMapViewControllerC", "viewDidLoad"]
+- !private ["So15CALayerDelegateP", ""]
 - !private ["So15CALayerDelegateP", "addAnnotation"]
 - !private ["So15CALayerDelegateP", "addConstraint"]
 - !private ["So15CALayerDelegateP", "addSubview"]
@@ -887,6 +887,12 @@ depends-member:
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "trimmingCharacters"]
 - !private ["SF", ""]
 - !private ["SF", "init"]
+- !private ["7SwiftUI7GestureP", "addSubview"]
+- !private ["7SwiftUI7GestureP", "backgroundColor"]
+- !private ["7SwiftUI7GestureP", "bounds"]
+- !private ["7SwiftUI7GestureP", "params"]
+- !private ["7SwiftUI7GestureP", "safeAreaLayoutGuide"]
+- !private ["7SwiftUI7GestureP", "white"]
 - !private ["SH", "CGRect"]
 - !private ["SH", "CLLocationCoordinate2D"]
 - ["SH", "CLLocationManager"]
@@ -1165,6 +1171,12 @@ depends-member:
 - !private ["So8NSCodingP", "centerXAnchor"]
 - !private ["So8NSCodingP", "centerYAnchor"]
 - !private ["So8NSCodingP", "constraint"]
+- !private ["So8NSCodingP", "constraintEqualToAnchor"]
+- !private ["So8NSCodingP", "constraintEqualToConstant"]
+- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToAnchor"]
+- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToConstant"]
+- !private ["So8NSCodingP", "constraintLessThanOrEqualToAnchor"]
+- !private ["So8NSCodingP", "constraintLessThanOrEqualToConstant"]
 - ["So8NSCodingP", "customAnnotations"]
 - ["So8NSCodingP", "deinit"]
 - !private ["So8NSCodingP", "delegate"]
@@ -1222,6 +1234,12 @@ depends-member:
 - !private ["So9NSCopyingP", "black"]
 - !private ["So9NSCopyingP", "blue"]
 - !private ["So9NSCopyingP", "constraint"]
+- !private ["So9NSCopyingP", "constraintEqualToAnchor"]
+- !private ["So9NSCopyingP", "constraintEqualToConstant"]
+- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToAnchor"]
+- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToConstant"]
+- !private ["So9NSCopyingP", "constraintLessThanOrEqualToAnchor"]
+- !private ["So9NSCopyingP", "constraintLessThanOrEqualToConstant"]
 - !private ["So9NSCopyingP", "first"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "replacingOccurrences"]
@@ -1318,6 +1336,12 @@ depends-member:
 - !private ["So21NSItemProviderWritingP", "withTintColor"]
 - ["So14NSLayoutAnchorC", ""]
 - !private ["So14NSLayoutAnchorC", "constraint"]
+- !private ["So14NSLayoutAnchorC", "constraintEqualToAnchor"]
+- !private ["So14NSLayoutAnchorC", "constraintEqualToConstant"]
+- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToAnchor"]
+- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToConstant"]
+- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToAnchor"]
+- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToConstant"]
 - !private ["So18NSLayoutConstraintC", "activate"]
 - !private ["So18NSLayoutConstraintC", "init"]
 - !private ["So17NSLayoutDimensionC", "constraint"]
@@ -1404,6 +1428,12 @@ depends-member:
 - !private ["So8NSObjectC", "colorWithRed"]
 - !private ["So8NSObjectC", "colorWithWhite"]
 - !private ["So8NSObjectC", "constraint"]
+- !private ["So8NSObjectC", "constraintEqualToAnchor"]
+- !private ["So8NSObjectC", "constraintEqualToConstant"]
+- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToAnchor"]
+- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToConstant"]
+- !private ["So8NSObjectC", "constraintLessThanOrEqualToAnchor"]
+- !private ["So8NSObjectC", "constraintLessThanOrEqualToConstant"]
 - !private ["So8NSObjectC", "constraintWithItem"]
 - !private ["So8NSObjectC", "coordinate"]
 - !private ["So8NSObjectC", "coordinateString"]
@@ -1552,6 +1582,9 @@ depends-member:
 - !private ["So8NSObjectP", "colorWithRed"]
 - !private ["So8NSObjectP", "colorWithWhite"]
 - !private ["So8NSObjectP", "constraint"]
+- !private ["So8NSObjectP", "constraintEqualToConstant"]
+- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToConstant"]
+- !private ["So8NSObjectP", "constraintLessThanOrEqualToConstant"]
 - !private ["So8NSObjectP", "constraintWithItem"]
 - !private ["So8NSObjectP", "coordinate"]
 - !private ["So8NSObjectP", "coordinateString"]
@@ -1771,6 +1804,7 @@ depends-member:
 - ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "init"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "params"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "setTitle"]
+- !private ["So29UIAccessibilityIdentificationP", ""]
 - !private ["So29UIAccessibilityIdentificationP", "addAnnotation"]
 - !private ["So29UIAccessibilityIdentificationP", "addConstraint"]
 - !private ["So29UIAccessibilityIdentificationP", "addSubview"]
@@ -1814,6 +1848,7 @@ depends-member:
 - !private ["So23UIActivityIndicatorViewC", "stopAnimating"]
 - !private ["So23UIActivityIndicatorViewC", "superview"]
 - !private ["So23UIActivityIndicatorViewC", "widthAnchor"]
+- !private ["So12UIAppearanceP", ""]
 - !private ["So12UIAppearanceP", "addAnnotation"]
 - !private ["So12UIAppearanceP", "addConstraint"]
 - !private ["So12UIAppearanceP", "addSubview"]
@@ -2027,6 +2062,7 @@ depends-member:
 - !private ["So9UIControlC", "init"]
 - !private ["So9UIControlC", "params"]
 - !private ["So9UIControlC", "setTitle"]
+- !private ["So17UICoordinateSpaceP", ""]
 - !private ["So17UICoordinateSpaceP", "addAnnotation"]
 - !private ["So17UICoordinateSpaceP", "addConstraint"]
 - !private ["So17UICoordinateSpaceP", "addSubview"]
@@ -2059,6 +2095,7 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "stopAnimating"]
 - !private ["So17UICoordinateSpaceP", "superview"]
 - !private ["So17UICoordinateSpaceP", "widthAnchor"]
+- !private ["So13UIDynamicItemP", ""]
 - !private ["So13UIDynamicItemP", "addAnnotation"]
 - !private ["So13UIDynamicItemP", "addConstraint"]
 - !private ["So13UIDynamicItemP", "addSubview"]
@@ -2185,6 +2222,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "view"]
 - ["So18UIFocusEnvironmentP", "viewDidLoad"]
 - !private ["So18UIFocusEnvironmentP", "widthAnchor"]
+- !private ["So11UIFocusItemP", ""]
 - !private ["So11UIFocusItemP", "addAnnotation"]
 - !private ["So11UIFocusItemP", "addConstraint"]
 - !private ["So11UIFocusItemP", "addSubview"]
@@ -2217,6 +2255,7 @@ depends-member:
 - !private ["So11UIFocusItemP", "stopAnimating"]
 - !private ["So11UIFocusItemP", "superview"]
 - !private ["So11UIFocusItemP", "widthAnchor"]
+- !private ["So20UIFocusItemContainerP", ""]
 - !private ["So20UIFocusItemContainerP", "addAnnotation"]
 - !private ["So20UIFocusItemContainerP", "addConstraint"]
 - !private ["So20UIFocusItemContainerP", "addSubview"]
@@ -2312,6 +2351,7 @@ depends-member:
 - !private ["So11UIImageViewC", "init"]
 - !private ["So39UIItemProviderPresentationSizeProvidingP", "init"]
 - !private ["So39UIItemProviderPresentationSizeProvidingP", "withTintColor"]
+- !private ["So24UILargeContentViewerItemP", ""]
 - !private ["So24UILargeContentViewerItemP", "addAnnotation"]
 - !private ["So24UILargeContentViewerItemP", "addConstraint"]
 - !private ["So24UILargeContentViewerItemP", "addSubview"]
@@ -2990,12 +3030,16 @@ depends-member:
 - !private ["So16UIViewControllerC", "print"]
 - !private ["So16UIViewControllerC", "view"]
 - ["So16UIViewControllerC", "viewDidLoad"]
-- !private ["9Alamofire14URLConvertibleP", "init"]
-- !private ["9Alamofire14URLConvertibleP", "replacingOccurrences"]
-- !private ["9Alamofire14URLConvertibleP", "split"]
 - !private ["10Foundation4UUIDV", "uuidString"]
 - ["8QuickBev14UsesAutoLayoutV", "init"]
 - ["8QuickBev14UsesAutoLayoutV", "wrappedValue"]
+- !private ["7SwiftUI16VectorArithmeticP", "init"]
+- !private ["7SwiftUI4ViewP", "addSubview"]
+- !private ["7SwiftUI4ViewP", "backgroundColor"]
+- !private ["7SwiftUI4ViewP", "bounds"]
+- !private ["7SwiftUI4ViewP", "params"]
+- !private ["7SwiftUI4ViewP", "safeAreaLayoutGuide"]
+- !private ["7SwiftUI4ViewP", "white"]
 - ["s14_ArrayProtocolP", "init"]
 - !private ["s14_ArrayProtocolP", "subscript"]
 - !private ["s14_ArrayProtocolP", "trimmingCharacters"]
@@ -3028,6 +3072,7 @@ depends-member:
 - !private ["s26_ExpressibleByColorLiteralP", "white"]
 - !private ["s26_ExpressibleByImageLiteralP", "init"]
 - !private ["s26_ExpressibleByImageLiteralP", "withTintColor"]
+- !private ["7SwiftUI18_FormatSpecifiableP", "init"]
 - ["s19_HasContiguousBytesP", "init"]
 - !private ["s19_HasContiguousBytesP", "replacingOccurrences"]
 - !private ["s19_HasContiguousBytesP", "split"]
@@ -3315,7 +3360,7 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "widthAnchor"]
 depends-nominal:
 - !private "s18AdditiveArithmeticP"
-- "9Alamofire0A8ExtendedP"
+- !private "7SwiftUI10AnimatableP"
 - "Sa"
 - !private "s10ArraySliceV"
 - !private "So17NSLayoutAttributeV"
@@ -3362,6 +3407,7 @@ depends-nominal:
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "SF"
+- !private "7SwiftUI7GestureP"
 - "SH"
 - !private "s12IdentifiableP"
 - !private "s20LazySequenceProtocolP"
@@ -3457,9 +3503,10 @@ depends-nominal:
 - "So23UIUserActivityRestoringP"
 - "So6UIViewC"
 - "So16UIViewControllerC"
-- !private "9Alamofire14URLConvertibleP"
 - !private "10Foundation4UUIDV"
 - "8QuickBev14UsesAutoLayoutV"
+- !private "7SwiftUI16VectorArithmeticP"
+- !private "7SwiftUI4ViewP"
 - "s14_ArrayProtocolP"
 - !private "s15_CVarArgAlignedP"
 - !private "s22_CVarArgPassedAsDoubleP"
@@ -3473,6 +3520,7 @@ depends-nominal:
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - !private "s26_ExpressibleByImageLiteralP"
+- !private "7SwiftUI18_FormatSpecifiableP"
 - "s19_HasContiguousBytesP"
 - "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
@@ -3484,6 +3532,7 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -3492,7 +3541,6 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -3507,6 +3555,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Modules/PushNotifications.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/os.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Modules/NWWebSocket.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -3518,12 +3567,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/MapKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/DeveloperToolsSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIViewController+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSError+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-umbrella.h"
@@ -3609,7 +3658,6 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfoObject.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-Swift.h"
@@ -3636,7 +3684,6 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Modules/module.modulemap"
@@ -3674,4 +3721,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "8fc62c25e81cc4d1439a6ae247dd4829"
+interface-hash: "cb7f2522398207aeb064cd13f2a26760"

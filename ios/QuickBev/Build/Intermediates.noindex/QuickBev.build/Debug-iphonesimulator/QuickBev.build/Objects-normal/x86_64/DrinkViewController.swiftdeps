@@ -50,8 +50,8 @@ depends-top-level:
 - !private "Dictionary"
 - "Drink"
 - "DrinkViewController"
-- !private "FloatLiteralType"
-- !private "IntegerLiteralType"
+- "FloatLiteralType"
+- "IntegerLiteralType"
 - !private "NSAttributedString"
 - "NSCoder"
 - !private "NSLayoutConstraint"
@@ -93,8 +93,9 @@ depends-top-level:
 - !private "present"
 - !private "print"
 depends-member:
-- !private ["s18AdditiveArithmeticP", ""]
+- ["s18AdditiveArithmeticP", ""]
 - !private ["s18AdditiveArithmeticP", "description"]
+- !private ["7SwiftUI10AnimatableP", "width"]
 - !private ["So22UILayoutConstraintAxisV", "horizontal"]
 - !private ["So22UILayoutConstraintAxisV", "vertical"]
 - !private ["SK", ""]
@@ -127,6 +128,7 @@ depends-member:
 - !private ["So15CALayerDelegateP", "superview"]
 - !private ["So15CALayerDelegateP", "text"]
 - !private ["So15CALayerDelegateP", "textAlignment"]
+- !private ["So15CALayerDelegateP", "textColor"]
 - !private ["So15CALayerDelegateP", "titleLabel"]
 - !private ["So15CALayerDelegateP", "topAnchor"]
 - !private ["So15CALayerDelegateP", "trailingAnchor"]
@@ -170,10 +172,12 @@ depends-member:
 - !private ["s7CVarArgP", "alertSuccess"]
 - !private ["s7CVarArgP", "axis"]
 - !private ["s7CVarArgP", "backgroundColor"]
+- !private ["s7CVarArgP", "black"]
 - !private ["s7CVarArgP", "bottomAnchor"]
 - !private ["s7CVarArgP", "businessId"]
 - !private ["s7CVarArgP", "buyButtonPressed"]
 - !private ["s7CVarArgP", "centerXAnchor"]
+- !private ["s7CVarArgP", "clear"]
 - !private ["s7CVarArgP", "constraint"]
 - !private ["s7CVarArgP", "contentHorizontalAlignment"]
 - !private ["s7CVarArgP", "contentVerticalAlignment"]
@@ -222,6 +226,7 @@ depends-member:
 - !private ["s7CVarArgP", "systemFont"]
 - !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "textAlignment"]
+- !private ["s7CVarArgP", "textColor"]
 - !private ["s7CVarArgP", "themeColor"]
 - !private ["s7CVarArgP", "themeLabelFont"]
 - !private ["s7CVarArgP", "title"]
@@ -249,8 +254,7 @@ depends-member:
 - !private ["Sl", ""]
 - !private ["Sl", "init"]
 - !private ["Sl", "lowercased"]
-- !private ["SL", "RawValue"]
-- !private ["SL", ""]
+- ["SL", ""]
 - !private ["SL", "description"]
 - !private ["SL", "init"]
 - !private ["SL", "lowercased"]
@@ -293,10 +297,12 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "alertSuccess"]
 - !private ["s28CustomDebugStringConvertibleP", "axis"]
 - !private ["s28CustomDebugStringConvertibleP", "backgroundColor"]
+- !private ["s28CustomDebugStringConvertibleP", "black"]
 - !private ["s28CustomDebugStringConvertibleP", "bottomAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "businessId"]
 - !private ["s28CustomDebugStringConvertibleP", "buyButtonPressed"]
 - !private ["s28CustomDebugStringConvertibleP", "centerXAnchor"]
+- !private ["s28CustomDebugStringConvertibleP", "clear"]
 - !private ["s28CustomDebugStringConvertibleP", "constraint"]
 - !private ["s28CustomDebugStringConvertibleP", "contentHorizontalAlignment"]
 - !private ["s28CustomDebugStringConvertibleP", "contentVerticalAlignment"]
@@ -345,6 +351,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "systemFont"]
 - !private ["s28CustomDebugStringConvertibleP", "text"]
 - !private ["s28CustomDebugStringConvertibleP", "textAlignment"]
+- !private ["s28CustomDebugStringConvertibleP", "textColor"]
 - !private ["s28CustomDebugStringConvertibleP", "themeColor"]
 - !private ["s28CustomDebugStringConvertibleP", "themeLabelFont"]
 - !private ["s28CustomDebugStringConvertibleP", "title"]
@@ -365,6 +372,8 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "widthAnchor"]
 - !private ["s17CustomReflectableP", "addSubview"]
 - !private ["s17CustomReflectableP", "backgroundColor"]
+- !private ["s17CustomReflectableP", "black"]
+- !private ["s17CustomReflectableP", "clear"]
 - !private ["s17CustomReflectableP", "description"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "lowercased"]
@@ -408,10 +417,12 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "appendLiteral"]
 - !private ["s23CustomStringConvertibleP", "axis"]
 - !private ["s23CustomStringConvertibleP", "backgroundColor"]
+- !private ["s23CustomStringConvertibleP", "black"]
 - !private ["s23CustomStringConvertibleP", "bottomAnchor"]
 - !private ["s23CustomStringConvertibleP", "businessId"]
 - !private ["s23CustomStringConvertibleP", "buyButtonPressed"]
 - !private ["s23CustomStringConvertibleP", "centerXAnchor"]
+- !private ["s23CustomStringConvertibleP", "clear"]
 - !private ["s23CustomStringConvertibleP", "constraint"]
 - !private ["s23CustomStringConvertibleP", "contentHorizontalAlignment"]
 - !private ["s23CustomStringConvertibleP", "contentVerticalAlignment"]
@@ -460,6 +471,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "systemFont"]
 - !private ["s23CustomStringConvertibleP", "text"]
 - !private ["s23CustomStringConvertibleP", "textAlignment"]
+- !private ["s23CustomStringConvertibleP", "textColor"]
 - !private ["s23CustomStringConvertibleP", "themeColor"]
 - !private ["s23CustomStringConvertibleP", "themeLabelFont"]
 - !private ["s23CustomStringConvertibleP", "title"]
@@ -479,6 +491,8 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "widthAnchor"]
 - !private ["Se", "addSubview"]
 - !private ["Se", "backgroundColor"]
+- !private ["Se", "black"]
+- !private ["Se", "clear"]
 - !private ["Se", "description"]
 - !private ["Se", "detail"]
 - !private ["Se", "email"]
@@ -562,6 +576,8 @@ depends-member:
 - ["8QuickBev19DrinkViewControllerC", "viewWillDisappear"]
 - !private ["SE", "addSubview"]
 - !private ["SE", "backgroundColor"]
+- !private ["SE", "black"]
+- !private ["SE", "clear"]
 - !private ["SE", "description"]
 - !private ["SE", "detail"]
 - !private ["SE", "email"]
@@ -580,7 +596,6 @@ depends-member:
 - !private ["SQ", "Key"]
 - !private ["SQ", "NSAttributedString"]
 - !private ["SQ", "NSLayoutConstraint"]
-- !private ["SQ", "RawValue"]
 - !private ["SQ", "RegistrationSplashPageViewController"]
 - ["SQ", "RoundButton"]
 - !private ["SQ", "String"]
@@ -610,6 +625,7 @@ depends-member:
 - !private ["SQ", "alertSuccess"]
 - !private ["SQ", "axis"]
 - !private ["SQ", "backgroundColor"]
+- !private ["SQ", "black"]
 - !private ["SQ", "bottom"]
 - !private ["SQ", "bottomAnchor"]
 - !private ["SQ", "businessId"]
@@ -617,6 +633,7 @@ depends-member:
 - !private ["SQ", "cancel"]
 - !private ["SQ", "center"]
 - !private ["SQ", "centerXAnchor"]
+- !private ["SQ", "clear"]
 - !private ["SQ", "constraint"]
 - !private ["SQ", "contentHorizontalAlignment"]
 - !private ["SQ", "contentVerticalAlignment"]
@@ -667,6 +684,7 @@ depends-member:
 - !private ["SQ", "systemFont"]
 - !private ["SQ", "text"]
 - !private ["SQ", "textAlignment"]
+- !private ["SQ", "textColor"]
 - !private ["SQ", "themeColor"]
 - !private ["SQ", "themeLabelFont"]
 - !private ["SQ", "title"]
@@ -700,15 +718,17 @@ depends-member:
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "lowercased"]
 - !private ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
-- !private ["s25ExpressibleByFloatLiteralP", ""]
+- ["s25ExpressibleByFloatLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "description"]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
-- !private ["s27ExpressibleByIntegerLiteralP", ""]
+- ["s27ExpressibleByIntegerLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", "description"]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "addSubview"]
 - !private ["s23ExpressibleByNilLiteralP", "backgroundColor"]
+- !private ["s23ExpressibleByNilLiteralP", "black"]
+- !private ["s23ExpressibleByNilLiteralP", "clear"]
 - !private ["s23ExpressibleByNilLiteralP", "safeAreaLayoutGuide"]
 - !private ["s23ExpressibleByNilLiteralP", "white"]
 - !private ["s23ExpressibleByNilLiteralP", "widthAnchor"]
@@ -723,14 +743,20 @@ depends-member:
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "lowercased"]
 - !private ["s17FixedWidthIntegerP", "description"]
-- !private ["SF", ""]
+- ["SF", ""]
 - !private ["SF", "description"]
+- !private ["7SwiftUI7GestureP", "addSubview"]
+- !private ["7SwiftUI7GestureP", "backgroundColor"]
+- !private ["7SwiftUI7GestureP", "black"]
+- !private ["7SwiftUI7GestureP", "clear"]
+- !private ["7SwiftUI7GestureP", "safeAreaLayoutGuide"]
+- !private ["7SwiftUI7GestureP", "white"]
+- !private ["7SwiftUI7GestureP", "widthAnchor"]
 - !private ["SH", "CheckoutCart"]
 - !private ["SH", "CoreDataManager"]
 - !private ["SH", "Key"]
 - !private ["SH", "NSAttributedString"]
 - !private ["SH", "NSLayoutConstraint"]
-- !private ["SH", "RawValue"]
 - !private ["SH", "RegistrationSplashPageViewController"]
 - ["SH", "RoundButton"]
 - !private ["SH", "String"]
@@ -760,6 +786,7 @@ depends-member:
 - !private ["SH", "alertSuccess"]
 - !private ["SH", "axis"]
 - !private ["SH", "backgroundColor"]
+- !private ["SH", "black"]
 - !private ["SH", "bottom"]
 - !private ["SH", "bottomAnchor"]
 - !private ["SH", "businessId"]
@@ -767,6 +794,7 @@ depends-member:
 - !private ["SH", "cancel"]
 - !private ["SH", "center"]
 - !private ["SH", "centerXAnchor"]
+- !private ["SH", "clear"]
 - !private ["SH", "constraint"]
 - !private ["SH", "contentHorizontalAlignment"]
 - !private ["SH", "contentVerticalAlignment"]
@@ -816,6 +844,7 @@ depends-member:
 - !private ["SH", "systemFont"]
 - !private ["SH", "text"]
 - !private ["SH", "textAlignment"]
+- !private ["SH", "textColor"]
 - !private ["SH", "themeColor"]
 - !private ["SH", "themeLabelFont"]
 - !private ["SH", "title"]
@@ -895,14 +924,15 @@ depends-member:
 - ["So8NSCodingP", "addToOrderButton"]
 - ["So8NSCodingP", "alert"]
 - ["So8NSCodingP", "alertAccountCreation"]
-- !private ["So8NSCodingP", "alertControllerWithTitle"]
 - ["So8NSCodingP", "alertError"]
 - ["So8NSCodingP", "alertSuccess"]
 - !private ["So8NSCodingP", "axis"]
 - !private ["So8NSCodingP", "backgroundColor"]
+- !private ["So8NSCodingP", "black"]
 - !private ["So8NSCodingP", "bottomAnchor"]
 - ["So8NSCodingP", "buyButtonPressed"]
 - !private ["So8NSCodingP", "centerXAnchor"]
+- !private ["So8NSCodingP", "clear"]
 - !private ["So8NSCodingP", "constraint"]
 - !private ["So8NSCodingP", "contentHorizontalAlignment"]
 - !private ["So8NSCodingP", "contentVerticalAlignment"]
@@ -941,6 +971,7 @@ depends-member:
 - !private ["So8NSCodingP", "superview"]
 - !private ["So8NSCodingP", "text"]
 - !private ["So8NSCodingP", "textAlignment"]
+- !private ["So8NSCodingP", "textColor"]
 - !private ["So8NSCodingP", "themeColor"]
 - !private ["So8NSCodingP", "title"]
 - !private ["So8NSCodingP", "titleLabel"]
@@ -955,6 +986,8 @@ depends-member:
 - !private ["So8NSCodingP", "widthAnchor"]
 - !private ["So9NSCopyingP", "Key"]
 - !private ["So9NSCopyingP", ""]
+- !private ["So9NSCopyingP", "black"]
+- !private ["So9NSCopyingP", "clear"]
 - !private ["So9NSCopyingP", "constraint"]
 - !private ["So9NSCopyingP", "detail"]
 - !private ["So9NSCopyingP", "init"]
@@ -1001,7 +1034,6 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "addToOrderButton"]
 - ["So26NSExtensionRequestHandlingP", "alert"]
 - ["So26NSExtensionRequestHandlingP", "alertAccountCreation"]
-- !private ["So26NSExtensionRequestHandlingP", "alertControllerWithTitle"]
 - ["So26NSExtensionRequestHandlingP", "alertError"]
 - ["So26NSExtensionRequestHandlingP", "alertSuccess"]
 - ["So26NSExtensionRequestHandlingP", "buyButtonPressed"]
@@ -1044,11 +1076,15 @@ depends-member:
 - !private ["So20NSFetchRequestResultP", "userBusiness"]
 - !private ["So20NSFetchRequestResultP", "userId"]
 - !private ["So21NSItemProviderReadingP", "Key"]
+- !private ["So21NSItemProviderReadingP", "black"]
+- !private ["So21NSItemProviderReadingP", "clear"]
 - !private ["So21NSItemProviderReadingP", "init"]
 - !private ["So21NSItemProviderReadingP", "lowercased"]
 - !private ["So21NSItemProviderReadingP", "themeColor"]
 - !private ["So21NSItemProviderReadingP", "white"]
 - !private ["So21NSItemProviderWritingP", "Key"]
+- !private ["So21NSItemProviderWritingP", "black"]
+- !private ["So21NSItemProviderWritingP", "clear"]
 - !private ["So21NSItemProviderWritingP", "init"]
 - !private ["So21NSItemProviderWritingP", "lowercased"]
 - !private ["So21NSItemProviderWritingP", "themeColor"]
@@ -1111,7 +1147,6 @@ depends-member:
 - ["So8NSObjectC", "_drinkQuantityStackView"]
 - ["So8NSObjectC", "_minusButton"]
 - ["So8NSObjectC", "_plusButton"]
-- !private ["So8NSObjectC", "actionWithTitle"]
 - !private ["So8NSObjectC", "activate"]
 - !private ["So8NSObjectC", "addAction"]
 - !private ["So8NSObjectC", "addArrangedSubview"]
@@ -1121,15 +1156,16 @@ depends-member:
 - ["So8NSObjectC", "addToOrderButton"]
 - ["So8NSObjectC", "alert"]
 - ["So8NSObjectC", "alertAccountCreation"]
-- !private ["So8NSObjectC", "alertControllerWithTitle"]
 - ["So8NSObjectC", "alertError"]
 - ["So8NSObjectC", "alertSuccess"]
 - !private ["So8NSObjectC", "axis"]
 - !private ["So8NSObjectC", "backgroundColor"]
+- !private ["So8NSObjectC", "black"]
 - !private ["So8NSObjectC", "bottomAnchor"]
 - !private ["So8NSObjectC", "businessId"]
 - ["So8NSObjectC", "buyButtonPressed"]
 - !private ["So8NSObjectC", "centerXAnchor"]
+- !private ["So8NSObjectC", "clear"]
 - !private ["So8NSObjectC", "constraint"]
 - !private ["So8NSObjectC", "contentHorizontalAlignment"]
 - !private ["So8NSObjectC", "contentVerticalAlignment"]
@@ -1180,6 +1216,7 @@ depends-member:
 - !private ["So8NSObjectC", "systemFontOfSize"]
 - !private ["So8NSObjectC", "text"]
 - !private ["So8NSObjectC", "textAlignment"]
+- !private ["So8NSObjectC", "textColor"]
 - !private ["So8NSObjectC", "themeColor"]
 - !private ["So8NSObjectC", "themeLabelFont"]
 - !private ["So8NSObjectC", "title"]
@@ -1228,7 +1265,6 @@ depends-member:
 - ["So8NSObjectP", "_drinkQuantityStackView"]
 - ["So8NSObjectP", "_minusButton"]
 - ["So8NSObjectP", "_plusButton"]
-- !private ["So8NSObjectP", "actionWithTitle"]
 - !private ["So8NSObjectP", "activate"]
 - !private ["So8NSObjectP", "addAction"]
 - !private ["So8NSObjectP", "addArrangedSubview"]
@@ -1238,15 +1274,16 @@ depends-member:
 - ["So8NSObjectP", "addToOrderButton"]
 - ["So8NSObjectP", "alert"]
 - ["So8NSObjectP", "alertAccountCreation"]
-- !private ["So8NSObjectP", "alertControllerWithTitle"]
 - ["So8NSObjectP", "alertError"]
 - ["So8NSObjectP", "alertSuccess"]
 - !private ["So8NSObjectP", "axis"]
 - !private ["So8NSObjectP", "backgroundColor"]
+- !private ["So8NSObjectP", "black"]
 - !private ["So8NSObjectP", "bottomAnchor"]
 - !private ["So8NSObjectP", "businessId"]
 - ["So8NSObjectP", "buyButtonPressed"]
 - !private ["So8NSObjectP", "centerXAnchor"]
+- !private ["So8NSObjectP", "clear"]
 - !private ["So8NSObjectP", "constraint"]
 - !private ["So8NSObjectP", "contentHorizontalAlignment"]
 - !private ["So8NSObjectP", "contentVerticalAlignment"]
@@ -1297,6 +1334,7 @@ depends-member:
 - !private ["So8NSObjectP", "systemFontOfSize"]
 - !private ["So8NSObjectP", "text"]
 - !private ["So8NSObjectP", "textAlignment"]
+- !private ["So8NSObjectP", "textColor"]
 - !private ["So8NSObjectP", "themeColor"]
 - !private ["So8NSObjectP", "themeLabelFont"]
 - !private ["So8NSObjectP", "title"]
@@ -1316,6 +1354,8 @@ depends-member:
 - !private ["So8NSObjectP", "widthAnchor"]
 - !private ["So14NSSecureCodingP", "Key"]
 - !private ["So14NSSecureCodingP", ""]
+- !private ["So14NSSecureCodingP", "black"]
+- !private ["So14NSSecureCodingP", "clear"]
 - !private ["So14NSSecureCodingP", "init"]
 - !private ["So14NSSecureCodingP", "lowercased"]
 - !private ["So14NSSecureCodingP", "themeColor"]
@@ -1323,7 +1363,7 @@ depends-member:
 - !private ["So14NSSecureCodingP", "white"]
 - !private ["So8NSStringC", "lowercased"]
 - !private ["So15NSTextAlignmentV", "center"]
-- !private ["Sj", ""]
+- ["Sj", ""]
 - !private ["Sj", "description"]
 - !private ["7Combine16ObservableObjectP", "addToDrinks"]
 - !private ["7Combine16ObservableObjectP", "businessId"]
@@ -1342,12 +1382,13 @@ depends-member:
 - !private ["s9OptionSetP", "touchUpInside"]
 - !private ["Sq", "addSubview"]
 - !private ["Sq", "backgroundColor"]
+- !private ["Sq", "black"]
+- !private ["Sq", "clear"]
 - !private ["Sq", "safeAreaLayoutGuide"]
 - !private ["Sq", "white"]
 - !private ["Sq", "widthAnchor"]
 - !private ["Sm", "init"]
 - !private ["Sm", "lowercased"]
-- !private ["SY", "RawValue"]
 - !private ["SY", ""]
 - !private ["SY", "alert"]
 - !private ["SY", "bottom"]
@@ -1381,10 +1422,10 @@ depends-member:
 - !private ["s10SetAlgebraP", "normal"]
 - !private ["s10SetAlgebraP", "touchUpInside"]
 - !private ["SZ", "description"]
-- !private ["s13SignedNumericP", ""]
+- ["s13SignedNumericP", ""]
 - !private ["s13SignedNumericP", "description"]
 - !private ["So14UIControlStateV", "normal"]
-- !private ["Sx", ""]
+- ["Sx", ""]
 - !private ["Sx", "description"]
 - !private ["SS", "init"]
 - !private ["SS", "lowercased"]
@@ -1405,6 +1446,7 @@ depends-member:
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "lowercased"]
 - ["8QuickBev5ThemeO", "UILabel"]
+- ["8QuickBev5ThemeO", "UIStackView"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "addTarget"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "backgroundColor"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "bottomAnchor"]
@@ -1445,6 +1487,7 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "superview"]
 - !private ["So29UIAccessibilityIdentificationP", "text"]
 - !private ["So29UIAccessibilityIdentificationP", "textAlignment"]
+- !private ["So29UIAccessibilityIdentificationP", "textColor"]
 - !private ["So29UIAccessibilityIdentificationP", "titleLabel"]
 - !private ["So29UIAccessibilityIdentificationP", "topAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "trailingAnchor"]
@@ -1474,6 +1517,7 @@ depends-member:
 - !private ["So12UIAppearanceP", "superview"]
 - !private ["So12UIAppearanceP", "text"]
 - !private ["So12UIAppearanceP", "textAlignment"]
+- !private ["So12UIAppearanceP", "textColor"]
 - !private ["So12UIAppearanceP", "titleLabel"]
 - !private ["So12UIAppearanceP", "topAnchor"]
 - !private ["So12UIAppearanceP", "trailingAnchor"]
@@ -1515,7 +1559,6 @@ depends-member:
 - ["So21UIAppearanceContainerP", "addToOrderButton"]
 - ["So21UIAppearanceContainerP", "alert"]
 - ["So21UIAppearanceContainerP", "alertAccountCreation"]
-- !private ["So21UIAppearanceContainerP", "alertControllerWithTitle"]
 - ["So21UIAppearanceContainerP", "alertError"]
 - ["So21UIAppearanceContainerP", "alertSuccess"]
 - !private ["So21UIAppearanceContainerP", "axis"]
@@ -1558,6 +1601,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "superview"]
 - !private ["So21UIAppearanceContainerP", "text"]
 - !private ["So21UIAppearanceContainerP", "textAlignment"]
+- !private ["So21UIAppearanceContainerP", "textColor"]
 - !private ["So21UIAppearanceContainerP", "titleLabel"]
 - !private ["So21UIAppearanceContainerP", "topAnchor"]
 - !private ["So21UIAppearanceContainerP", "trailingAnchor"]
@@ -1587,6 +1631,8 @@ depends-member:
 - !private ["So8UIButtonC", "topAnchor"]
 - !private ["So8UIButtonC", "trailingAnchor"]
 - !private ["So8UIButtonC", "widthAnchor"]
+- !private ["So7UIColorC", "black"]
+- !private ["So7UIColorC", "clear"]
 - !private ["So7UIColorC", "themeColor"]
 - !private ["So7UIColorC", "white"]
 - !private ["So18UIContentContainerP", "CheckoutCart"]
@@ -1623,7 +1669,6 @@ depends-member:
 - ["So18UIContentContainerP", "addToOrderButton"]
 - ["So18UIContentContainerP", "alert"]
 - ["So18UIContentContainerP", "alertAccountCreation"]
-- !private ["So18UIContentContainerP", "alertControllerWithTitle"]
 - ["So18UIContentContainerP", "alertError"]
 - ["So18UIContentContainerP", "alertSuccess"]
 - ["So18UIContentContainerP", "buyButtonPressed"]
@@ -1652,10 +1697,12 @@ depends-member:
 - ["So18UIContentContainerP", "viewDidLoad"]
 - ["So18UIContentContainerP", "viewWillAppear"]
 - ["So18UIContentContainerP", "viewWillDisappear"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "backgroundColor"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "font"]
 - ["So30UIContentSizeCategoryAdjustingP", "init"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "text"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "textAlignment"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "textColor"]
 - !private ["So32UIContextMenuInteractionDelegateP", "addTarget"]
 - !private ["So32UIContextMenuInteractionDelegateP", "backgroundColor"]
 - !private ["So32UIContextMenuInteractionDelegateP", "bottomAnchor"]
@@ -1713,6 +1760,7 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "superview"]
 - !private ["So17UICoordinateSpaceP", "text"]
 - !private ["So17UICoordinateSpaceP", "textAlignment"]
+- !private ["So17UICoordinateSpaceP", "textColor"]
 - !private ["So17UICoordinateSpaceP", "titleLabel"]
 - !private ["So17UICoordinateSpaceP", "topAnchor"]
 - !private ["So17UICoordinateSpaceP", "trailingAnchor"]
@@ -1739,6 +1787,7 @@ depends-member:
 - !private ["So13UIDynamicItemP", "superview"]
 - !private ["So13UIDynamicItemP", "text"]
 - !private ["So13UIDynamicItemP", "textAlignment"]
+- !private ["So13UIDynamicItemP", "textColor"]
 - !private ["So13UIDynamicItemP", "titleLabel"]
 - !private ["So13UIDynamicItemP", "topAnchor"]
 - !private ["So13UIDynamicItemP", "trailingAnchor"]
@@ -1780,7 +1829,6 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "addToOrderButton"]
 - ["So18UIFocusEnvironmentP", "alert"]
 - ["So18UIFocusEnvironmentP", "alertAccountCreation"]
-- !private ["So18UIFocusEnvironmentP", "alertControllerWithTitle"]
 - ["So18UIFocusEnvironmentP", "alertError"]
 - ["So18UIFocusEnvironmentP", "alertSuccess"]
 - !private ["So18UIFocusEnvironmentP", "axis"]
@@ -1823,6 +1871,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "superview"]
 - !private ["So18UIFocusEnvironmentP", "text"]
 - !private ["So18UIFocusEnvironmentP", "textAlignment"]
+- !private ["So18UIFocusEnvironmentP", "textColor"]
 - !private ["So18UIFocusEnvironmentP", "titleLabel"]
 - !private ["So18UIFocusEnvironmentP", "topAnchor"]
 - !private ["So18UIFocusEnvironmentP", "trailingAnchor"]
@@ -1853,6 +1902,7 @@ depends-member:
 - !private ["So11UIFocusItemP", "superview"]
 - !private ["So11UIFocusItemP", "text"]
 - !private ["So11UIFocusItemP", "textAlignment"]
+- !private ["So11UIFocusItemP", "textColor"]
 - !private ["So11UIFocusItemP", "titleLabel"]
 - !private ["So11UIFocusItemP", "topAnchor"]
 - !private ["So11UIFocusItemP", "trailingAnchor"]
@@ -1880,14 +1930,18 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "superview"]
 - !private ["So20UIFocusItemContainerP", "text"]
 - !private ["So20UIFocusItemContainerP", "textAlignment"]
+- !private ["So20UIFocusItemContainerP", "textColor"]
 - !private ["So20UIFocusItemContainerP", "titleLabel"]
 - !private ["So20UIFocusItemContainerP", "topAnchor"]
 - !private ["So20UIFocusItemContainerP", "trailingAnchor"]
 - !private ["So20UIFocusItemContainerP", "widthAnchor"]
+- !private ["So30UIFocusItemScrollableContainerP", ""]
+- !private ["So30UIFocusItemScrollableContainerP", "backgroundColor"]
 - !private ["So30UIFocusItemScrollableContainerP", "font"]
 - ["So30UIFocusItemScrollableContainerP", "init"]
 - !private ["So30UIFocusItemScrollableContainerP", "text"]
 - !private ["So30UIFocusItemScrollableContainerP", "textAlignment"]
+- !private ["So30UIFocusItemScrollableContainerP", "textColor"]
 - !private ["So6UIFontC", "init"]
 - !private ["So6UIFontC", "systemFont"]
 - !private ["So6UIFontC", "themeLabelFont"]
@@ -1898,10 +1952,12 @@ depends-member:
 - !private ["So11UIImageViewC", "widthAnchor"]
 - !private ["So39UIItemProviderPresentationSizeProvidingP", "init"]
 - ["So10UIKeyInputP", ""]
+- !private ["So10UIKeyInputP", "backgroundColor"]
 - !private ["So10UIKeyInputP", "font"]
 - ["So10UIKeyInputP", "init"]
 - !private ["So10UIKeyInputP", "text"]
 - !private ["So10UIKeyInputP", "textAlignment"]
+- !private ["So10UIKeyInputP", "textColor"]
 - !private ["So7UILabelC", "font"]
 - ["So7UILabelC", "init"]
 - !private ["So7UILabelC", "text"]
@@ -1929,6 +1985,7 @@ depends-member:
 - !private ["So24UILargeContentViewerItemP", "superview"]
 - !private ["So24UILargeContentViewerItemP", "text"]
 - !private ["So24UILargeContentViewerItemP", "textAlignment"]
+- !private ["So24UILargeContentViewerItemP", "textColor"]
 - !private ["So24UILargeContentViewerItemP", "titleLabel"]
 - !private ["So24UILargeContentViewerItemP", "topAnchor"]
 - !private ["So24UILargeContentViewerItemP", "trailingAnchor"]
@@ -1939,7 +1996,6 @@ depends-member:
 - !private ["So13UILayoutGuideC", "topAnchor"]
 - !private ["So13UILayoutGuideC", "trailingAnchor"]
 - !private ["So13UILayoutGuideC", "widthAnchor"]
-- !private ["So16UILayoutPrioritya", "RawValue"]
 - !private ["So16UILayoutPrioritya", "init"]
 - !private ["So15UINavigationBarC", "standardAppearance"]
 - !private ["So25UINavigationBarAppearanceC", "titleTextAttributes"]
@@ -1984,7 +2040,6 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "addToOrderButton"]
 - ["So30UIPasteConfigurationSupportingP", "alert"]
 - ["So30UIPasteConfigurationSupportingP", "alertAccountCreation"]
-- !private ["So30UIPasteConfigurationSupportingP", "alertControllerWithTitle"]
 - ["So30UIPasteConfigurationSupportingP", "alertError"]
 - ["So30UIPasteConfigurationSupportingP", "alertSuccess"]
 - !private ["So30UIPasteConfigurationSupportingP", "axis"]
@@ -2027,6 +2082,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "superview"]
 - !private ["So30UIPasteConfigurationSupportingP", "text"]
 - !private ["So30UIPasteConfigurationSupportingP", "textAlignment"]
+- !private ["So30UIPasteConfigurationSupportingP", "textColor"]
 - !private ["So30UIPasteConfigurationSupportingP", "titleLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "topAnchor"]
 - !private ["So30UIPasteConfigurationSupportingP", "trailingAnchor"]
@@ -2075,7 +2131,6 @@ depends-member:
 - ["So11UIResponderC", "addToOrderButton"]
 - ["So11UIResponderC", "alert"]
 - ["So11UIResponderC", "alertAccountCreation"]
-- !private ["So11UIResponderC", "alertControllerWithTitle"]
 - ["So11UIResponderC", "alertError"]
 - ["So11UIResponderC", "alertSuccess"]
 - !private ["So11UIResponderC", "axis"]
@@ -2118,6 +2173,7 @@ depends-member:
 - !private ["So11UIResponderC", "superview"]
 - !private ["So11UIResponderC", "text"]
 - !private ["So11UIResponderC", "textAlignment"]
+- !private ["So11UIResponderC", "textColor"]
 - !private ["So11UIResponderC", "titleLabel"]
 - !private ["So11UIResponderC", "topAnchor"]
 - !private ["So11UIResponderC", "trailingAnchor"]
@@ -2163,7 +2219,6 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "addToOrderButton"]
 - ["So30UIResponderStandardEditActionsP", "alert"]
 - ["So30UIResponderStandardEditActionsP", "alertAccountCreation"]
-- !private ["So30UIResponderStandardEditActionsP", "alertControllerWithTitle"]
 - ["So30UIResponderStandardEditActionsP", "alertError"]
 - ["So30UIResponderStandardEditActionsP", "alertSuccess"]
 - !private ["So30UIResponderStandardEditActionsP", "axis"]
@@ -2206,6 +2261,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "superview"]
 - !private ["So30UIResponderStandardEditActionsP", "text"]
 - !private ["So30UIResponderStandardEditActionsP", "textAlignment"]
+- !private ["So30UIResponderStandardEditActionsP", "textColor"]
 - !private ["So30UIResponderStandardEditActionsP", "titleLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "topAnchor"]
 - !private ["So30UIResponderStandardEditActionsP", "trailingAnchor"]
@@ -2215,10 +2271,12 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "viewWillDisappear"]
 - !private ["So30UIResponderStandardEditActionsP", "widthAnchor"]
 - ["So12UIScrollViewC", ""]
+- !private ["So12UIScrollViewC", "backgroundColor"]
 - !private ["So12UIScrollViewC", "font"]
 - ["So12UIScrollViewC", "init"]
 - !private ["So12UIScrollViewC", "text"]
 - !private ["So12UIScrollViewC", "textAlignment"]
+- !private ["So12UIScrollViewC", "textColor"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "addAction"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "addTarget"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "backgroundColor"]
@@ -2245,6 +2303,9 @@ depends-member:
 - ["So11UIStackViewC", "init"]
 - !private ["So11UIStackViewC", "spacing"]
 - !private ["So11UIStackViewC", "topAnchor"]
+- ["8QuickBev5ThemeO16UIStackViewPropsO", "horizontal"]
+- ["8QuickBev5ThemeO16UIStackViewPropsO", "spacing"]
+- ["8QuickBev5ThemeO16UIStackViewPropsO", "vertical"]
 - !private ["So16UIStateRestoringP", "CheckoutCart"]
 - !private ["So16UIStateRestoringP", "CoreDataManager"]
 - !private ["So16UIStateRestoringP", "NSAttributedString"]
@@ -2279,7 +2340,6 @@ depends-member:
 - ["So16UIStateRestoringP", "addToOrderButton"]
 - ["So16UIStateRestoringP", "alert"]
 - ["So16UIStateRestoringP", "alertAccountCreation"]
-- !private ["So16UIStateRestoringP", "alertControllerWithTitle"]
 - ["So16UIStateRestoringP", "alertError"]
 - ["So16UIStateRestoringP", "alertSuccess"]
 - ["So16UIStateRestoringP", "buyButtonPressed"]
@@ -2308,33 +2368,45 @@ depends-member:
 - ["So16UIStateRestoringP", "viewDidLoad"]
 - ["So16UIStateRestoringP", "viewWillAppear"]
 - ["So16UIStateRestoringP", "viewWillDisappear"]
+- !private ["So15UITextDraggableP", "backgroundColor"]
 - !private ["So15UITextDraggableP", "font"]
 - ["So15UITextDraggableP", "init"]
 - !private ["So15UITextDraggableP", "text"]
 - !private ["So15UITextDraggableP", "textAlignment"]
+- !private ["So15UITextDraggableP", "textColor"]
+- !private ["So15UITextDroppableP", "backgroundColor"]
 - !private ["So15UITextDroppableP", "font"]
 - ["So15UITextDroppableP", "init"]
 - !private ["So15UITextDroppableP", "text"]
 - !private ["So15UITextDroppableP", "textAlignment"]
+- !private ["So15UITextDroppableP", "textColor"]
 - ["So11UITextInputP", ""]
+- !private ["So11UITextInputP", "backgroundColor"]
 - !private ["So11UITextInputP", "font"]
 - ["So11UITextInputP", "init"]
 - !private ["So11UITextInputP", "text"]
 - !private ["So11UITextInputP", "textAlignment"]
+- !private ["So11UITextInputP", "textColor"]
 - ["So17UITextInputTraitsP", ""]
+- !private ["So17UITextInputTraitsP", "backgroundColor"]
 - !private ["So17UITextInputTraitsP", "font"]
 - ["So17UITextInputTraitsP", "init"]
 - !private ["So17UITextInputTraitsP", "text"]
 - !private ["So17UITextInputTraitsP", "textAlignment"]
+- !private ["So17UITextInputTraitsP", "textColor"]
 - ["So34UITextPasteConfigurationSupportingP", ""]
+- !private ["So34UITextPasteConfigurationSupportingP", "backgroundColor"]
 - !private ["So34UITextPasteConfigurationSupportingP", "font"]
 - ["So34UITextPasteConfigurationSupportingP", "init"]
 - !private ["So34UITextPasteConfigurationSupportingP", "text"]
 - !private ["So34UITextPasteConfigurationSupportingP", "textAlignment"]
+- !private ["So34UITextPasteConfigurationSupportingP", "textColor"]
+- !private ["So10UITextViewC", "backgroundColor"]
 - !private ["So10UITextViewC", "font"]
 - ["So10UITextViewC", "init"]
 - !private ["So10UITextViewC", "text"]
 - !private ["So10UITextViewC", "textAlignment"]
+- !private ["So10UITextViewC", "textColor"]
 - !private ["So18UITraitEnvironmentP", "CheckoutCart"]
 - !private ["So18UITraitEnvironmentP", "CoreDataManager"]
 - !private ["So18UITraitEnvironmentP", "NSAttributedString"]
@@ -2372,7 +2444,6 @@ depends-member:
 - ["So18UITraitEnvironmentP", "addToOrderButton"]
 - ["So18UITraitEnvironmentP", "alert"]
 - ["So18UITraitEnvironmentP", "alertAccountCreation"]
-- !private ["So18UITraitEnvironmentP", "alertControllerWithTitle"]
 - ["So18UITraitEnvironmentP", "alertError"]
 - ["So18UITraitEnvironmentP", "alertSuccess"]
 - !private ["So18UITraitEnvironmentP", "axis"]
@@ -2415,6 +2486,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "superview"]
 - !private ["So18UITraitEnvironmentP", "text"]
 - !private ["So18UITraitEnvironmentP", "textAlignment"]
+- !private ["So18UITraitEnvironmentP", "textColor"]
 - !private ["So18UITraitEnvironmentP", "titleLabel"]
 - !private ["So18UITraitEnvironmentP", "topAnchor"]
 - !private ["So18UITraitEnvironmentP", "trailingAnchor"]
@@ -2460,7 +2532,6 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "addToOrderButton"]
 - ["So23UIUserActivityRestoringP", "alert"]
 - ["So23UIUserActivityRestoringP", "alertAccountCreation"]
-- !private ["So23UIUserActivityRestoringP", "alertControllerWithTitle"]
 - ["So23UIUserActivityRestoringP", "alertError"]
 - ["So23UIUserActivityRestoringP", "alertSuccess"]
 - !private ["So23UIUserActivityRestoringP", "axis"]
@@ -2503,6 +2574,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "superview"]
 - !private ["So23UIUserActivityRestoringP", "text"]
 - !private ["So23UIUserActivityRestoringP", "textAlignment"]
+- !private ["So23UIUserActivityRestoringP", "textColor"]
 - !private ["So23UIUserActivityRestoringP", "titleLabel"]
 - !private ["So23UIUserActivityRestoringP", "topAnchor"]
 - !private ["So23UIUserActivityRestoringP", "trailingAnchor"]
@@ -2534,6 +2606,7 @@ depends-member:
 - !private ["So6UIViewC", "superview"]
 - !private ["So6UIViewC", "text"]
 - !private ["So6UIViewC", "textAlignment"]
+- !private ["So6UIViewC", "textColor"]
 - !private ["So6UIViewC", "titleLabel"]
 - !private ["So6UIViewC", "topAnchor"]
 - !private ["So6UIViewC", "trailingAnchor"]
@@ -2575,7 +2648,6 @@ depends-member:
 - ["So16UIViewControllerC", "addToOrderButton"]
 - ["So16UIViewControllerC", "alert"]
 - ["So16UIViewControllerC", "alertAccountCreation"]
-- !private ["So16UIViewControllerC", "alertControllerWithTitle"]
 - ["So16UIViewControllerC", "alertError"]
 - ["So16UIViewControllerC", "alertSuccess"]
 - ["So16UIViewControllerC", "buyButtonPressed"]
@@ -2604,11 +2676,17 @@ depends-member:
 - ["So16UIViewControllerC", "viewDidLoad"]
 - ["So16UIViewControllerC", "viewWillAppear"]
 - ["So16UIViewControllerC", "viewWillDisappear"]
-- !private ["9Alamofire14URLConvertibleP", "init"]
-- !private ["9Alamofire14URLConvertibleP", "lowercased"]
 - !private ["8QuickBev4UserC", "email"]
 - ["8QuickBev14UsesAutoLayoutV", "init"]
 - ["8QuickBev14UsesAutoLayoutV", "wrappedValue"]
+- !private ["7SwiftUI16VectorArithmeticP", "description"]
+- !private ["7SwiftUI4ViewP", "addSubview"]
+- !private ["7SwiftUI4ViewP", "backgroundColor"]
+- !private ["7SwiftUI4ViewP", "black"]
+- !private ["7SwiftUI4ViewP", "clear"]
+- !private ["7SwiftUI4ViewP", "safeAreaLayoutGuide"]
+- !private ["7SwiftUI4ViewP", "white"]
+- !private ["7SwiftUI4ViewP", "widthAnchor"]
 - !private ["s15_CVarArgAlignedP", "description"]
 - !private ["s22_CVarArgPassedAsDoubleP", "description"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "description"]
@@ -2622,18 +2700,20 @@ depends-member:
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "description"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "description"]
-- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "lowercased"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "lowercased"]
+- !private ["s26_ExpressibleByColorLiteralP", "black"]
+- !private ["s26_ExpressibleByColorLiteralP", "clear"]
 - !private ["s26_ExpressibleByColorLiteralP", "themeColor"]
 - !private ["s26_ExpressibleByColorLiteralP", "white"]
 - !private ["s26_ExpressibleByImageLiteralP", "init"]
+- !private ["7SwiftUI18_FormatSpecifiableP", "description"]
 - !private ["s19_HasContiguousBytesP", "init"]
 - !private ["s19_HasContiguousBytesP", "lowercased"]
-- !private ["s35_HasCustomAnyHashableRepresentationP", "RawValue"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", ""]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "description"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "font"]
@@ -2673,10 +2753,12 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "alertSuccess"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "axis"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "backgroundColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "black"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "bottomAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "businessId"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "buyButtonPressed"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "centerXAnchor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "clear"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "constraint"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "contentHorizontalAlignment"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "contentVerticalAlignment"]
@@ -2724,6 +2806,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "systemFont"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "textAlignment"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "textColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "themeColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "themeLabelFont"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "title"]
@@ -2775,10 +2858,12 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "alertSuccess"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "axis"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "backgroundColor"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "black"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bottomAnchor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "businessId"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "buyButtonPressed"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "centerXAnchor"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "clear"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "constraint"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "contentHorizontalAlignment"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "contentVerticalAlignment"]
@@ -2826,6 +2911,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "systemFont"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "text"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "textAlignment"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "textColor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "themeColor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "themeLabelFont"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "title"]
@@ -2843,10 +2929,11 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewWillDisappear"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "white"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "widthAnchor"]
-- !private ["s21_ObjectiveCBridgeableP", "RawValue"]
 - !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
 - !private ["s21_ObjectiveCBridgeableP", "addSubview"]
 - !private ["s21_ObjectiveCBridgeableP", "backgroundColor"]
+- !private ["s21_ObjectiveCBridgeableP", "black"]
+- !private ["s21_ObjectiveCBridgeableP", "clear"]
 - !private ["s21_ObjectiveCBridgeableP", "description"]
 - !private ["s21_ObjectiveCBridgeableP", "font"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
@@ -2855,10 +2942,8 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "white"]
 - !private ["s21_ObjectiveCBridgeableP", "width"]
 - !private ["s21_ObjectiveCBridgeableP", "widthAnchor"]
-- !private ["s20_SwiftNewtypeWrapperP", "RawValue"]
 - !private ["s20_SwiftNewtypeWrapperP", "font"]
 - !private ["s20_SwiftNewtypeWrapperP", "init"]
-- !private ["5UIKit01_A23NumericRawRepresentableP", "RawValue"]
 - !private ["5UIKit01_A23NumericRawRepresentableP", "init"]
 - !private ["So13CKRecordValueP", "lowercased"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "addArrangedSubview"]
@@ -2883,12 +2968,14 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "superview"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "text"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "textAlignment"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "textColor"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "titleLabel"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "topAnchor"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "trailingAnchor"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "widthAnchor"]
 depends-nominal:
-- !private "s18AdditiveArithmeticP"
+- "s18AdditiveArithmeticP"
+- !private "7SwiftUI10AnimatableP"
 - !private "So22UILayoutConstraintAxisV"
 - !private "SK"
 - !private "SB"
@@ -2901,7 +2988,7 @@ depends-nominal:
 - "s7CVarArgP"
 - !private "8QuickBev12CheckoutCartC"
 - !private "Sl"
-- !private "SL"
+- "SL"
 - !private "So35UIControlContentHorizontalAlignmentV"
 - !private "So33UIControlContentVerticalAlignmentV"
 - !private "8QuickBev15CoreDataManagerC"
@@ -2919,14 +3006,15 @@ depends-nominal:
 - "s25ExpressibleByArrayLiteralP"
 - !private "s30ExpressibleByDictionaryLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
-- !private "s25ExpressibleByFloatLiteralP"
-- !private "s27ExpressibleByIntegerLiteralP"
+- "s25ExpressibleByFloatLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
 - !private "s32ExpressibleByStringInterpolationP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "s17FixedWidthIntegerP"
-- !private "SF"
+- "SF"
+- !private "7SwiftUI7GestureP"
 - "SH"
 - !private "s12IdentifiableP"
 - !private "s5Int16V"
@@ -2952,7 +3040,7 @@ depends-nominal:
 - !private "So14NSSecureCodingP"
 - !private "So8NSStringC"
 - !private "So15NSTextAlignmentV"
-- !private "Sj"
+- "Sj"
 - !private "7Combine16ObservableObjectP"
 - !private "s9OptionSetP"
 - !private "Sq"
@@ -2964,9 +3052,9 @@ depends-nominal:
 - !private "ST"
 - !private "s10SetAlgebraP"
 - !private "SZ"
-- !private "s13SignedNumericP"
+- "s13SignedNumericP"
 - !private "So14UIControlStateV"
-- !private "Sx"
+- "Sx"
 - !private "SS"
 - !private "s27StringInterpolationProtocolP"
 - !private "Sy"
@@ -3015,6 +3103,7 @@ depends-nominal:
 - "So12UIScrollViewC"
 - "So35UISpringLoadedInteractionSupportingP"
 - "So11UIStackViewC"
+- "8QuickBev5ThemeO16UIStackViewPropsO"
 - "So16UIStateRestoringP"
 - "So15UITextDraggableP"
 - "So15UITextDroppableP"
@@ -3026,20 +3115,22 @@ depends-nominal:
 - "So23UIUserActivityRestoringP"
 - "So6UIViewC"
 - "So16UIViewControllerC"
-- !private "9Alamofire14URLConvertibleP"
 - !private "8QuickBev4UserC"
 - "8QuickBev14UsesAutoLayoutV"
+- !private "7SwiftUI16VectorArithmeticP"
+- !private "7SwiftUI4ViewP"
 - !private "s15_CVarArgAlignedP"
 - !private "s22_CVarArgPassedAsDoubleP"
 - !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
-- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - !private "s26_ExpressibleByImageLiteralP"
+- !private "7SwiftUI18_FormatSpecifiableP"
 - !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
@@ -3053,6 +3144,7 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -3061,7 +3153,6 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -3088,12 +3179,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/MapKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/DeveloperToolsSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIViewController+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSError+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-umbrella.h"
@@ -3179,7 +3270,6 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfoObject.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-Swift.h"
@@ -3206,7 +3296,6 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Modules/module.modulemap"
@@ -3244,4 +3333,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "b63ef4c3ca59b0e7de0be88b67a72b96"
+interface-hash: "b1810b226286ec47ddee5633ee7c3775"

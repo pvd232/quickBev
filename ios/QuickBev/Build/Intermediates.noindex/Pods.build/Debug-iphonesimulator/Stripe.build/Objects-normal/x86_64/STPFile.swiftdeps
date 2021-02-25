@@ -55,6 +55,12 @@ depends-member:
 - !private ["SK", "first"]
 - !private ["SK", "hash"]
 - !private ["SK", "lowercased"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "callAsFunction"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "first"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "hash"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "intValue"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "lowercased"]
 - !private ["So15CNKeyDescriptorP", "hash"]
 - !private ["So15CNKeyDescriptorP", "lowercased"]
 - !private ["s7CVarArgP", "NSNumber"]
@@ -286,60 +292,37 @@ depends-member:
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "intValue"]
 - !private ["So8NSCodingP", "lowercased"]
-- !private ["So8NSCodingP", "numberWithBool"]
-- !private ["So8NSCodingP", "numberWithChar"]
-- !private ["So8NSCodingP", "numberWithDouble"]
-- !private ["So8NSCodingP", "numberWithFloat"]
-- !private ["So8NSCodingP", "numberWithInt"]
-- !private ["So8NSCodingP", "numberWithInteger"]
-- !private ["So8NSCodingP", "numberWithLong"]
-- !private ["So8NSCodingP", "numberWithLongLong"]
-- !private ["So8NSCodingP", "numberWithShort"]
-- !private ["So8NSCodingP", "numberWithUnsignedChar"]
-- !private ["So8NSCodingP", "numberWithUnsignedInt"]
-- !private ["So8NSCodingP", "numberWithUnsignedInteger"]
-- !private ["So8NSCodingP", "numberWithUnsignedLong"]
-- !private ["So8NSCodingP", "numberWithUnsignedLongLong"]
-- !private ["So8NSCodingP", "numberWithUnsignedShort"]
-- ["So8NSCodingP", "stp_date"]
-- ["So8NSCodingP", "stp_dictionaryByRemovingNulls"]
+- !private ["So8NSCodingP", "stp_date"]
+- !private ["So8NSCodingP", "stp_dictionaryByRemovingNulls"]
 - ["So8NSCodingP", "stp_number"]
-- ["So8NSCodingP", "stp_string"]
+- !private ["So8NSCodingP", "stp_string"]
 - !private ["So9NSCopyingP", ""]
 - !private ["So9NSCopyingP", "allKeys"]
 - !private ["So9NSCopyingP", "hash"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "intValue"]
 - !private ["So9NSCopyingP", "lowercased"]
-- !private ["So9NSCopyingP", "numberWithBool"]
-- !private ["So9NSCopyingP", "numberWithChar"]
-- !private ["So9NSCopyingP", "numberWithDouble"]
-- !private ["So9NSCopyingP", "numberWithFloat"]
-- !private ["So9NSCopyingP", "numberWithInt"]
-- !private ["So9NSCopyingP", "numberWithInteger"]
-- !private ["So9NSCopyingP", "numberWithLong"]
-- !private ["So9NSCopyingP", "numberWithLongLong"]
-- !private ["So9NSCopyingP", "numberWithShort"]
-- !private ["So9NSCopyingP", "numberWithUnsignedChar"]
-- !private ["So9NSCopyingP", "numberWithUnsignedInt"]
-- !private ["So9NSCopyingP", "numberWithUnsignedInteger"]
-- !private ["So9NSCopyingP", "numberWithUnsignedLong"]
-- !private ["So9NSCopyingP", "numberWithUnsignedLongLong"]
-- !private ["So9NSCopyingP", "numberWithUnsignedShort"]
-- ["So9NSCopyingP", "stp_date"]
-- ["So9NSCopyingP", "stp_dictionaryByRemovingNulls"]
+- !private ["So9NSCopyingP", "stp_date"]
+- !private ["So9NSCopyingP", "stp_dictionaryByRemovingNulls"]
 - ["So9NSCopyingP", "stp_number"]
-- ["So9NSCopyingP", "stp_string"]
+- !private ["So9NSCopyingP", "stp_string"]
 - !private ["So12NSDictionaryC", "allKeys"]
 - !private ["So12NSDictionaryC", "stp_date"]
 - !private ["So12NSDictionaryC", "stp_dictionaryByRemovingNulls"]
 - !private ["So12NSDictionaryC", "stp_number"]
 - !private ["So12NSDictionaryC", "stp_string"]
 - !private ["So17NSFastEnumerationP", "allKeys"]
-- ["So17NSFastEnumerationP", "stp_date"]
-- ["So17NSFastEnumerationP", "stp_dictionaryByRemovingNulls"]
+- !private ["So17NSFastEnumerationP", "stp_date"]
+- !private ["So17NSFastEnumerationP", "stp_dictionaryByRemovingNulls"]
 - ["So17NSFastEnumerationP", "stp_number"]
-- ["So17NSFastEnumerationP", "stp_string"]
+- !private ["So17NSFastEnumerationP", "stp_string"]
+- !private ["So20NSFetchRequestResultP", "allKeys"]
+- !private ["So20NSFetchRequestResultP", "init"]
+- !private ["So20NSFetchRequestResultP", "intValue"]
+- !private ["So20NSFetchRequestResultP", "stp_date"]
+- !private ["So20NSFetchRequestResultP", "stp_dictionaryByRemovingNulls"]
+- ["So20NSFetchRequestResultP", "stp_number"]
+- !private ["So20NSFetchRequestResultP", "stp_string"]
 - !private ["So21NSItemProviderReadingP", "hash"]
 - !private ["So21NSItemProviderReadingP", "lowercased"]
 - !private ["So21NSItemProviderWritingP", "hash"]
@@ -347,10 +330,10 @@ depends-member:
 - !private ["So16NSMutableCopyingP", "allKeys"]
 - !private ["So16NSMutableCopyingP", "hash"]
 - !private ["So16NSMutableCopyingP", "lowercased"]
-- ["So16NSMutableCopyingP", "stp_date"]
-- ["So16NSMutableCopyingP", "stp_dictionaryByRemovingNulls"]
+- !private ["So16NSMutableCopyingP", "stp_date"]
+- !private ["So16NSMutableCopyingP", "stp_dictionaryByRemovingNulls"]
 - ["So16NSMutableCopyingP", "stp_number"]
-- ["So16NSMutableCopyingP", "stp_string"]
+- !private ["So16NSMutableCopyingP", "stp_string"]
 - !private ["So8NSNumberC", "init"]
 - !private ["So8NSNumberC", "intValue"]
 - ["So8NSObjectC", "AnyHashable"]
@@ -374,23 +357,7 @@ depends-member:
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "intValue"]
 - ["So8NSObjectC", "isEqual"]
-- !private ["So8NSObjectC", "lowercaseStringWithLocale"]
 - !private ["So8NSObjectC", "lowercased"]
-- !private ["So8NSObjectC", "numberWithBool"]
-- !private ["So8NSObjectC", "numberWithChar"]
-- !private ["So8NSObjectC", "numberWithDouble"]
-- !private ["So8NSObjectC", "numberWithFloat"]
-- !private ["So8NSObjectC", "numberWithInt"]
-- !private ["So8NSObjectC", "numberWithInteger"]
-- !private ["So8NSObjectC", "numberWithLong"]
-- !private ["So8NSObjectC", "numberWithLongLong"]
-- !private ["So8NSObjectC", "numberWithShort"]
-- !private ["So8NSObjectC", "numberWithUnsignedChar"]
-- !private ["So8NSObjectC", "numberWithUnsignedInt"]
-- !private ["So8NSObjectC", "numberWithUnsignedInteger"]
-- !private ["So8NSObjectC", "numberWithUnsignedLong"]
-- !private ["So8NSObjectC", "numberWithUnsignedLongLong"]
-- !private ["So8NSObjectC", "numberWithUnsignedShort"]
 - ["So8NSObjectC", "purpose"]
 - ["So8NSObjectC", "size"]
 - !private ["So8NSObjectC", "stp_date"]
@@ -400,27 +367,7 @@ depends-member:
 - ["So8NSObjectC", "string"]
 - ["So8NSObjectC", "stringToPurposeMapping"]
 - ["So8NSObjectC", "type"]
-- !private ["So8NSObjectC", "value"]
-- !private ["So8NSObjectC", "valueWithBytes"]
-- !private ["So8NSObjectC", "valueWithCATransform3D"]
-- !private ["So8NSObjectC", "valueWithCGAffineTransform"]
-- !private ["So8NSObjectC", "valueWithCGPoint"]
-- !private ["So8NSObjectC", "valueWithCGRect"]
-- !private ["So8NSObjectC", "valueWithCGSize"]
-- !private ["So8NSObjectC", "valueWithCGVector"]
-- !private ["So8NSObjectC", "valueWithCMTime"]
-- !private ["So8NSObjectC", "valueWithCMTimeMapping"]
-- !private ["So8NSObjectC", "valueWithCMTimeRange"]
-- !private ["So8NSObjectC", "valueWithDirectionalEdgeInsets"]
-- !private ["So8NSObjectC", "valueWithNonretainedObject"]
-- !private ["So8NSObjectC", "valueWithPointer"]
-- !private ["So8NSObjectC", "valueWithRange"]
-- !private ["So8NSObjectC", "valueWithUIEdgeInsets"]
-- !private ["So8NSObjectC", "valueWithUIOffset"]
-- ["So8NSObjectP", "Date"]
-- ["So8NSObjectP", "Int"]
-- !private ["So8NSObjectP", "NSDictionary"]
-- ["So8NSObjectP", "NSNumber"]
+- !private ["So8NSObjectP", "NSNumber"]
 - ["So8NSObjectP", "STPFile"]
 - ["So8NSObjectP", "STPFilePurpose"]
 - ["So8NSObjectP", "Self"]
@@ -435,94 +382,31 @@ depends-member:
 - ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "intValue"]
 - ["So8NSObjectP", "isEqual"]
-- !private ["So8NSObjectP", "lowercaseStringWithLocale"]
 - !private ["So8NSObjectP", "lowercased"]
-- !private ["So8NSObjectP", "numberWithBool"]
-- !private ["So8NSObjectP", "numberWithChar"]
-- !private ["So8NSObjectP", "numberWithDouble"]
-- !private ["So8NSObjectP", "numberWithFloat"]
-- !private ["So8NSObjectP", "numberWithInt"]
-- !private ["So8NSObjectP", "numberWithInteger"]
-- !private ["So8NSObjectP", "numberWithLong"]
-- !private ["So8NSObjectP", "numberWithLongLong"]
-- !private ["So8NSObjectP", "numberWithShort"]
-- !private ["So8NSObjectP", "numberWithUnsignedChar"]
-- !private ["So8NSObjectP", "numberWithUnsignedInt"]
-- !private ["So8NSObjectP", "numberWithUnsignedInteger"]
-- !private ["So8NSObjectP", "numberWithUnsignedLong"]
-- !private ["So8NSObjectP", "numberWithUnsignedLongLong"]
-- !private ["So8NSObjectP", "numberWithUnsignedShort"]
 - ["So8NSObjectP", "purpose"]
 - ["So8NSObjectP", "size"]
-- ["So8NSObjectP", "stp_date"]
-- ["So8NSObjectP", "stp_dictionaryByRemovingNulls"]
+- !private ["So8NSObjectP", "stp_date"]
+- !private ["So8NSObjectP", "stp_dictionaryByRemovingNulls"]
 - ["So8NSObjectP", "stp_number"]
-- ["So8NSObjectP", "stp_string"]
+- !private ["So8NSObjectP", "stp_string"]
 - ["So8NSObjectP", "string"]
 - ["So8NSObjectP", "stringToPurposeMapping"]
 - ["So8NSObjectP", "type"]
-- !private ["So8NSObjectP", "value"]
-- !private ["So8NSObjectP", "valueWithBytes"]
-- !private ["So8NSObjectP", "valueWithCATransform3D"]
-- !private ["So8NSObjectP", "valueWithCGAffineTransform"]
-- !private ["So8NSObjectP", "valueWithCGPoint"]
-- !private ["So8NSObjectP", "valueWithCGRect"]
-- !private ["So8NSObjectP", "valueWithCGSize"]
-- !private ["So8NSObjectP", "valueWithCGVector"]
-- !private ["So8NSObjectP", "valueWithCMTime"]
-- !private ["So8NSObjectP", "valueWithCMTimeMapping"]
-- !private ["So8NSObjectP", "valueWithCMTimeRange"]
-- !private ["So8NSObjectP", "valueWithDirectionalEdgeInsets"]
-- !private ["So8NSObjectP", "valueWithNonretainedObject"]
-- !private ["So8NSObjectP", "valueWithPointer"]
-- !private ["So8NSObjectP", "valueWithRange"]
-- !private ["So8NSObjectP", "valueWithUIEdgeInsets"]
-- !private ["So8NSObjectP", "valueWithUIOffset"]
 - !private ["So14NSSecureCodingP", ""]
 - !private ["So14NSSecureCodingP", "allKeys"]
 - !private ["So14NSSecureCodingP", "hash"]
 - !private ["So14NSSecureCodingP", "init"]
 - !private ["So14NSSecureCodingP", "intValue"]
 - !private ["So14NSSecureCodingP", "lowercased"]
-- !private ["So14NSSecureCodingP", "numberWithBool"]
-- !private ["So14NSSecureCodingP", "numberWithChar"]
-- !private ["So14NSSecureCodingP", "numberWithDouble"]
-- !private ["So14NSSecureCodingP", "numberWithFloat"]
-- !private ["So14NSSecureCodingP", "numberWithInt"]
-- !private ["So14NSSecureCodingP", "numberWithInteger"]
-- !private ["So14NSSecureCodingP", "numberWithLong"]
-- !private ["So14NSSecureCodingP", "numberWithLongLong"]
-- !private ["So14NSSecureCodingP", "numberWithShort"]
-- !private ["So14NSSecureCodingP", "numberWithUnsignedChar"]
-- !private ["So14NSSecureCodingP", "numberWithUnsignedInt"]
-- !private ["So14NSSecureCodingP", "numberWithUnsignedInteger"]
-- !private ["So14NSSecureCodingP", "numberWithUnsignedLong"]
-- !private ["So14NSSecureCodingP", "numberWithUnsignedLongLong"]
-- !private ["So14NSSecureCodingP", "numberWithUnsignedShort"]
-- ["So14NSSecureCodingP", "stp_date"]
-- ["So14NSSecureCodingP", "stp_dictionaryByRemovingNulls"]
+- !private ["So14NSSecureCodingP", "stp_date"]
+- !private ["So14NSSecureCodingP", "stp_dictionaryByRemovingNulls"]
 - ["So14NSSecureCodingP", "stp_number"]
-- ["So14NSSecureCodingP", "stp_string"]
+- !private ["So14NSSecureCodingP", "stp_string"]
 - !private ["So8NSStringC", "hash"]
 - !private ["So8NSStringC", "lowercased"]
 - ["So7NSValueC", ""]
 - !private ["So7NSValueC", "init"]
 - !private ["So7NSValueC", "intValue"]
-- !private ["So7NSValueC", "numberWithBool"]
-- !private ["So7NSValueC", "numberWithChar"]
-- !private ["So7NSValueC", "numberWithDouble"]
-- !private ["So7NSValueC", "numberWithFloat"]
-- !private ["So7NSValueC", "numberWithInt"]
-- !private ["So7NSValueC", "numberWithInteger"]
-- !private ["So7NSValueC", "numberWithLong"]
-- !private ["So7NSValueC", "numberWithLongLong"]
-- !private ["So7NSValueC", "numberWithShort"]
-- !private ["So7NSValueC", "numberWithUnsignedChar"]
-- !private ["So7NSValueC", "numberWithUnsignedInt"]
-- !private ["So7NSValueC", "numberWithUnsignedInteger"]
-- !private ["So7NSValueC", "numberWithUnsignedLong"]
-- !private ["So7NSValueC", "numberWithUnsignedLongLong"]
-- !private ["So7NSValueC", "numberWithUnsignedShort"]
 - !private ["Sk", ""]
 - !private ["Sk", "callAsFunction"]
 - !private ["Sk", "first"]
@@ -703,9 +587,14 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "hash"]
 - !private ["s21_ObjectiveCBridgeableP", "lowercased"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["So13CKRecordValueP", "hash"]
+- !private ["So13CKRecordValueP", "init"]
+- !private ["So13CKRecordValueP", "intValue"]
+- !private ["So13CKRecordValueP", "lowercased"]
 depends-nominal:
 - !private "Sa"
 - !private "SK"
+- !private "8CloudKit21CKRecordValueProtocolP"
 - !private "So15CNKeyDescriptorP"
 - "s7CVarArgP"
 - !private "Sl"
@@ -738,6 +627,7 @@ depends-nominal:
 - "So9NSCopyingP"
 - !private "So12NSDictionaryC"
 - "So17NSFastEnumerationP"
+- "So20NSFetchRequestResultP"
 - !private "So21NSItemProviderReadingP"
 - !private "So21NSItemProviderWritingP"
 - "So16NSMutableCopyingP"
@@ -771,10 +661,15 @@ depends-nominal:
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"
 - !private "s21_ObjectiveCBridgeableP"
+- !private "So13CKRecordValueP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -785,14 +680,19 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Vision.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/AVFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/os.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/DeveloperToolsSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIViewController+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSError+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/Stripe3DS2.h"
@@ -899,6 +799,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
@@ -912,10 +813,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"

@@ -6,6 +6,10 @@ provides-nominal:
 provides-member:
 - ["8QuickBev25CheckoutCartTableViewCellC", ""]
 provides-dynamic-lookup:
+- "_cost"
+- "_drinkImageView"
+- "_name"
+- "_stackView"
 - "awakeFromNib"
 - "cost"
 - "drinkImageView"
@@ -30,6 +34,7 @@ depends-top-level:
 - "UILabel"
 - "UIStackView"
 - "UITableViewCell"
+- "UsesAutoLayout"
 - !private "cost"
 - !private "drinkImageView"
 - !private "fatalError"
@@ -50,12 +55,18 @@ depends-member:
 - ["So15CALayerDelegateP", "UILabel"]
 - ["So15CALayerDelegateP", "UIStackView"]
 - ["So15CALayerDelegateP", "UITableViewCell"]
+- ["So15CALayerDelegateP", "UsesAutoLayout"]
 - ["So15CALayerDelegateP", ""]
+- ["So15CALayerDelegateP", "_cost"]
+- ["So15CALayerDelegateP", "_drinkImageView"]
+- ["So15CALayerDelegateP", "_name"]
+- ["So15CALayerDelegateP", "_stackView"]
 - !private ["So15CALayerDelegateP", "addArrangedSubview"]
 - !private ["So15CALayerDelegateP", "addSubview"]
 - !private ["So15CALayerDelegateP", "alignment"]
 - ["So15CALayerDelegateP", "awakeFromNib"]
 - !private ["So15CALayerDelegateP", "axis"]
+- !private ["So15CALayerDelegateP", "backgroundColor"]
 - !private ["So15CALayerDelegateP", "bottomAnchor"]
 - !private ["So15CALayerDelegateP", "centerYAnchor"]
 - !private ["So15CALayerDelegateP", "clipsToBounds"]
@@ -76,7 +87,6 @@ depends-member:
 - !private ["So15CALayerDelegateP", "superview"]
 - !private ["So15CALayerDelegateP", "topAnchor"]
 - !private ["So15CALayerDelegateP", "trailingAnchor"]
-- !private ["So15CALayerDelegateP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So15CALayerDelegateP", "widthAnchor"]
 - ["s7CVarArgP", "CellStyle"]
 - !private ["s7CVarArgP", "NSLayoutConstraint"]
@@ -85,6 +95,7 @@ depends-member:
 - ["s7CVarArgP", "UIImageView"]
 - ["s7CVarArgP", "UILabel"]
 - ["s7CVarArgP", "UIStackView"]
+- ["s7CVarArgP", "UsesAutoLayout"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "activate"]
 - !private ["s7CVarArgP", "addArrangedSubview"]
@@ -92,8 +103,10 @@ depends-member:
 - !private ["s7CVarArgP", "alignment"]
 - !private ["s7CVarArgP", "awakeFromNib"]
 - !private ["s7CVarArgP", "axis"]
+- !private ["s7CVarArgP", "backgroundColor"]
 - !private ["s7CVarArgP", "bottomAnchor"]
 - !private ["s7CVarArgP", "centerYAnchor"]
+- !private ["s7CVarArgP", "clear"]
 - !private ["s7CVarArgP", "clipsToBounds"]
 - !private ["s7CVarArgP", "constraint"]
 - !private ["s7CVarArgP", "contentMode"]
@@ -113,7 +126,6 @@ depends-member:
 - !private ["s7CVarArgP", "superview"]
 - !private ["s7CVarArgP", "topAnchor"]
 - !private ["s7CVarArgP", "trailingAnchor"]
-- !private ["s7CVarArgP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["s7CVarArgP", "widthAnchor"]
 - ["8QuickBev25CheckoutCartTableViewCellC", "Bool"]
 - ["8QuickBev25CheckoutCartTableViewCellC", "NSCoder"]
@@ -125,8 +137,14 @@ depends-member:
 - ["8QuickBev25CheckoutCartTableViewCellC", "UILabel"]
 - ["8QuickBev25CheckoutCartTableViewCellC", "UIStackView"]
 - ["8QuickBev25CheckoutCartTableViewCellC", "UITableViewCell"]
+- ["8QuickBev25CheckoutCartTableViewCellC", "UsesAutoLayout"]
 - ["8QuickBev25CheckoutCartTableViewCellC", ""]
+- !private ["8QuickBev25CheckoutCartTableViewCellC", "_cost"]
+- !private ["8QuickBev25CheckoutCartTableViewCellC", "_drinkImageView"]
+- !private ["8QuickBev25CheckoutCartTableViewCellC", "_name"]
+- !private ["8QuickBev25CheckoutCartTableViewCellC", "_stackView"]
 - ["8QuickBev25CheckoutCartTableViewCellC", "awakeFromNib"]
+- !private ["8QuickBev25CheckoutCartTableViewCellC", "backgroundColor"]
 - !private ["8QuickBev25CheckoutCartTableViewCellC", "contentView"]
 - ["8QuickBev25CheckoutCartTableViewCellC", "cost"]
 - ["8QuickBev25CheckoutCartTableViewCellC", "deinit"]
@@ -146,6 +164,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "UIImageView"]
 - ["s28CustomDebugStringConvertibleP", "UILabel"]
 - ["s28CustomDebugStringConvertibleP", "UIStackView"]
+- ["s28CustomDebugStringConvertibleP", "UsesAutoLayout"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "activate"]
 - !private ["s28CustomDebugStringConvertibleP", "addArrangedSubview"]
@@ -153,8 +172,10 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "alignment"]
 - !private ["s28CustomDebugStringConvertibleP", "awakeFromNib"]
 - !private ["s28CustomDebugStringConvertibleP", "axis"]
+- !private ["s28CustomDebugStringConvertibleP", "backgroundColor"]
 - !private ["s28CustomDebugStringConvertibleP", "bottomAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "centerYAnchor"]
+- !private ["s28CustomDebugStringConvertibleP", "clear"]
 - !private ["s28CustomDebugStringConvertibleP", "clipsToBounds"]
 - !private ["s28CustomDebugStringConvertibleP", "constraint"]
 - !private ["s28CustomDebugStringConvertibleP", "contentMode"]
@@ -174,8 +195,8 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "superview"]
 - !private ["s28CustomDebugStringConvertibleP", "topAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "trailingAnchor"]
-- !private ["s28CustomDebugStringConvertibleP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["s28CustomDebugStringConvertibleP", "widthAnchor"]
+- !private ["s17CustomReflectableP", "clear"]
 - ["s23CustomStringConvertibleP", "CellStyle"]
 - !private ["s23CustomStringConvertibleP", "NSLayoutConstraint"]
 - ["s23CustomStringConvertibleP", "Theme"]
@@ -183,6 +204,7 @@ depends-member:
 - ["s23CustomStringConvertibleP", "UIImageView"]
 - ["s23CustomStringConvertibleP", "UILabel"]
 - ["s23CustomStringConvertibleP", "UIStackView"]
+- ["s23CustomStringConvertibleP", "UsesAutoLayout"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "activate"]
 - !private ["s23CustomStringConvertibleP", "addArrangedSubview"]
@@ -190,8 +212,10 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "alignment"]
 - !private ["s23CustomStringConvertibleP", "awakeFromNib"]
 - !private ["s23CustomStringConvertibleP", "axis"]
+- !private ["s23CustomStringConvertibleP", "backgroundColor"]
 - !private ["s23CustomStringConvertibleP", "bottomAnchor"]
 - !private ["s23CustomStringConvertibleP", "centerYAnchor"]
+- !private ["s23CustomStringConvertibleP", "clear"]
 - !private ["s23CustomStringConvertibleP", "clipsToBounds"]
 - !private ["s23CustomStringConvertibleP", "constraint"]
 - !private ["s23CustomStringConvertibleP", "contentMode"]
@@ -211,9 +235,10 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "superview"]
 - !private ["s23CustomStringConvertibleP", "topAnchor"]
 - !private ["s23CustomStringConvertibleP", "trailingAnchor"]
-- !private ["s23CustomStringConvertibleP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["s23CustomStringConvertibleP", "widthAnchor"]
+- !private ["Se", "clear"]
 - !private ["So23UIStackViewDistributionV", "fill"]
+- !private ["SE", "clear"]
 - ["SQ", "CellStyle"]
 - !private ["SQ", "NSLayoutConstraint"]
 - ["SQ", "Theme"]
@@ -221,6 +246,7 @@ depends-member:
 - ["SQ", "UIImageView"]
 - ["SQ", "UILabel"]
 - ["SQ", "UIStackView"]
+- ["SQ", "UsesAutoLayout"]
 - ["SQ", ""]
 - !private ["SQ", "activate"]
 - !private ["SQ", "addArrangedSubview"]
@@ -228,8 +254,10 @@ depends-member:
 - !private ["SQ", "alignment"]
 - !private ["SQ", "awakeFromNib"]
 - !private ["SQ", "axis"]
+- !private ["SQ", "backgroundColor"]
 - !private ["SQ", "bottomAnchor"]
 - !private ["SQ", "centerYAnchor"]
+- !private ["SQ", "clear"]
 - !private ["SQ", "clipsToBounds"]
 - !private ["SQ", "constraint"]
 - !private ["SQ", "contentMode"]
@@ -252,7 +280,6 @@ depends-member:
 - !private ["SQ", "superview"]
 - !private ["SQ", "topAnchor"]
 - !private ["SQ", "trailingAnchor"]
-- !private ["SQ", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["SQ", "widthAnchor"]
 - ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
@@ -262,10 +289,12 @@ depends-member:
 - !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
 - !private ["s27ExpressibleByIntegerLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "clear"]
 - !private ["s32ExpressibleByStringInterpolationP", ""]
 - !private ["s26ExpressibleByStringLiteralP", ""]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["SF", ""]
+- !private ["7SwiftUI7GestureP", "clear"]
 - ["SH", "CellStyle"]
 - !private ["SH", "NSLayoutConstraint"]
 - ["SH", "Theme"]
@@ -273,6 +302,7 @@ depends-member:
 - ["SH", "UIImageView"]
 - ["SH", "UILabel"]
 - ["SH", "UIStackView"]
+- ["SH", "UsesAutoLayout"]
 - ["SH", ""]
 - !private ["SH", "activate"]
 - !private ["SH", "addArrangedSubview"]
@@ -280,8 +310,10 @@ depends-member:
 - !private ["SH", "alignment"]
 - !private ["SH", "awakeFromNib"]
 - !private ["SH", "axis"]
+- !private ["SH", "backgroundColor"]
 - !private ["SH", "bottomAnchor"]
 - !private ["SH", "centerYAnchor"]
+- !private ["SH", "clear"]
 - !private ["SH", "clipsToBounds"]
 - !private ["SH", "constraint"]
 - !private ["SH", "contentMode"]
@@ -304,7 +336,6 @@ depends-member:
 - !private ["SH", "superview"]
 - !private ["SH", "topAnchor"]
 - !private ["SH", "trailingAnchor"]
-- !private ["SH", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["SH", "widthAnchor"]
 - !private ["s25LosslessStringConvertibleP", ""]
 - ["So8NSCodingP", "Bool"]
@@ -317,14 +348,21 @@ depends-member:
 - ["So8NSCodingP", "UILabel"]
 - ["So8NSCodingP", "UIStackView"]
 - ["So8NSCodingP", "UITableViewCell"]
+- ["So8NSCodingP", "UsesAutoLayout"]
 - ["So8NSCodingP", ""]
+- ["So8NSCodingP", "_cost"]
+- ["So8NSCodingP", "_drinkImageView"]
+- ["So8NSCodingP", "_name"]
+- ["So8NSCodingP", "_stackView"]
 - !private ["So8NSCodingP", "addArrangedSubview"]
 - !private ["So8NSCodingP", "addSubview"]
 - !private ["So8NSCodingP", "alignment"]
 - ["So8NSCodingP", "awakeFromNib"]
 - !private ["So8NSCodingP", "axis"]
+- !private ["So8NSCodingP", "backgroundColor"]
 - !private ["So8NSCodingP", "bottomAnchor"]
 - !private ["So8NSCodingP", "centerYAnchor"]
+- !private ["So8NSCodingP", "clear"]
 - !private ["So8NSCodingP", "clipsToBounds"]
 - !private ["So8NSCodingP", "constraint"]
 - !private ["So8NSCodingP", "contentMode"]
@@ -344,10 +382,12 @@ depends-member:
 - !private ["So8NSCodingP", "superview"]
 - !private ["So8NSCodingP", "topAnchor"]
 - !private ["So8NSCodingP", "trailingAnchor"]
-- !private ["So8NSCodingP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So8NSCodingP", "widthAnchor"]
+- !private ["So9NSCopyingP", "clear"]
 - !private ["So9NSCopyingP", "constraint"]
 - !private ["So9NSCopyingP", "init"]
+- !private ["So21NSItemProviderReadingP", "clear"]
+- !private ["So21NSItemProviderWritingP", "clear"]
 - ["So14NSLayoutAnchorC", ""]
 - !private ["So14NSLayoutAnchorC", "constraint"]
 - !private ["So18NSLayoutConstraintC", "activate"]
@@ -365,15 +405,22 @@ depends-member:
 - ["So8NSObjectC", "UILabel"]
 - ["So8NSObjectC", "UIStackView"]
 - ["So8NSObjectC", "UITableViewCell"]
+- ["So8NSObjectC", "UsesAutoLayout"]
 - ["So8NSObjectC", ""]
+- ["So8NSObjectC", "_cost"]
+- ["So8NSObjectC", "_drinkImageView"]
+- ["So8NSObjectC", "_name"]
+- ["So8NSObjectC", "_stackView"]
 - !private ["So8NSObjectC", "activate"]
 - !private ["So8NSObjectC", "addArrangedSubview"]
 - !private ["So8NSObjectC", "addSubview"]
 - !private ["So8NSObjectC", "alignment"]
 - ["So8NSObjectC", "awakeFromNib"]
 - !private ["So8NSObjectC", "axis"]
+- !private ["So8NSObjectC", "backgroundColor"]
 - !private ["So8NSObjectC", "bottomAnchor"]
 - !private ["So8NSObjectC", "centerYAnchor"]
+- !private ["So8NSObjectC", "clear"]
 - !private ["So8NSObjectC", "clipsToBounds"]
 - !private ["So8NSObjectC", "constraint"]
 - !private ["So8NSObjectC", "contentMode"]
@@ -395,7 +442,6 @@ depends-member:
 - !private ["So8NSObjectC", "superview"]
 - !private ["So8NSObjectC", "topAnchor"]
 - !private ["So8NSObjectC", "trailingAnchor"]
-- !private ["So8NSObjectC", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So8NSObjectC", "widthAnchor"]
 - ["So8NSObjectP", "CellStyle"]
 - !private ["So8NSObjectP", "NSLayoutConstraint"]
@@ -404,15 +450,22 @@ depends-member:
 - ["So8NSObjectP", "UIImageView"]
 - ["So8NSObjectP", "UILabel"]
 - ["So8NSObjectP", "UIStackView"]
+- ["So8NSObjectP", "UsesAutoLayout"]
 - ["So8NSObjectP", ""]
+- ["So8NSObjectP", "_cost"]
+- ["So8NSObjectP", "_drinkImageView"]
+- ["So8NSObjectP", "_name"]
+- ["So8NSObjectP", "_stackView"]
 - !private ["So8NSObjectP", "activate"]
 - !private ["So8NSObjectP", "addArrangedSubview"]
 - !private ["So8NSObjectP", "addSubview"]
 - !private ["So8NSObjectP", "alignment"]
 - ["So8NSObjectP", "awakeFromNib"]
 - !private ["So8NSObjectP", "axis"]
+- !private ["So8NSObjectP", "backgroundColor"]
 - !private ["So8NSObjectP", "bottomAnchor"]
 - !private ["So8NSObjectP", "centerYAnchor"]
+- !private ["So8NSObjectP", "clear"]
 - !private ["So8NSObjectP", "clipsToBounds"]
 - !private ["So8NSObjectP", "constraint"]
 - !private ["So8NSObjectP", "contentMode"]
@@ -434,9 +487,10 @@ depends-member:
 - !private ["So8NSObjectP", "superview"]
 - !private ["So8NSObjectP", "topAnchor"]
 - !private ["So8NSObjectP", "trailingAnchor"]
-- !private ["So8NSObjectP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So8NSObjectP", "widthAnchor"]
+- !private ["So14NSSecureCodingP", "clear"]
 - !private ["Sj", ""]
+- !private ["Sq", "clear"]
 - !private ["SY", "fill"]
 - !private ["SY", "horizontal"]
 - !private ["SY", "scaleToFill"]
@@ -454,7 +508,6 @@ depends-member:
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "superview"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "topAnchor"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "trailingAnchor"]
-- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "widthAnchor"]
 - ["So29UIAccessibilityIdentificationP", "Bool"]
 - ["So29UIAccessibilityIdentificationP", "CellStyle"]
@@ -466,12 +519,18 @@ depends-member:
 - ["So29UIAccessibilityIdentificationP", "UILabel"]
 - ["So29UIAccessibilityIdentificationP", "UIStackView"]
 - ["So29UIAccessibilityIdentificationP", "UITableViewCell"]
+- ["So29UIAccessibilityIdentificationP", "UsesAutoLayout"]
 - ["So29UIAccessibilityIdentificationP", ""]
+- ["So29UIAccessibilityIdentificationP", "_cost"]
+- ["So29UIAccessibilityIdentificationP", "_drinkImageView"]
+- ["So29UIAccessibilityIdentificationP", "_name"]
+- ["So29UIAccessibilityIdentificationP", "_stackView"]
 - !private ["So29UIAccessibilityIdentificationP", "addArrangedSubview"]
 - !private ["So29UIAccessibilityIdentificationP", "addSubview"]
 - !private ["So29UIAccessibilityIdentificationP", "alignment"]
 - ["So29UIAccessibilityIdentificationP", "awakeFromNib"]
 - !private ["So29UIAccessibilityIdentificationP", "axis"]
+- !private ["So29UIAccessibilityIdentificationP", "backgroundColor"]
 - !private ["So29UIAccessibilityIdentificationP", "bottomAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "centerYAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "clipsToBounds"]
@@ -492,7 +551,6 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "superview"]
 - !private ["So29UIAccessibilityIdentificationP", "topAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "trailingAnchor"]
-- !private ["So29UIAccessibilityIdentificationP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So29UIAccessibilityIdentificationP", "widthAnchor"]
 - ["So12UIAppearanceP", "Bool"]
 - ["So12UIAppearanceP", "CellStyle"]
@@ -504,12 +562,18 @@ depends-member:
 - ["So12UIAppearanceP", "UILabel"]
 - ["So12UIAppearanceP", "UIStackView"]
 - ["So12UIAppearanceP", "UITableViewCell"]
+- ["So12UIAppearanceP", "UsesAutoLayout"]
 - ["So12UIAppearanceP", ""]
+- ["So12UIAppearanceP", "_cost"]
+- ["So12UIAppearanceP", "_drinkImageView"]
+- ["So12UIAppearanceP", "_name"]
+- ["So12UIAppearanceP", "_stackView"]
 - !private ["So12UIAppearanceP", "addArrangedSubview"]
 - !private ["So12UIAppearanceP", "addSubview"]
 - !private ["So12UIAppearanceP", "alignment"]
 - ["So12UIAppearanceP", "awakeFromNib"]
 - !private ["So12UIAppearanceP", "axis"]
+- !private ["So12UIAppearanceP", "backgroundColor"]
 - !private ["So12UIAppearanceP", "bottomAnchor"]
 - !private ["So12UIAppearanceP", "centerYAnchor"]
 - !private ["So12UIAppearanceP", "clipsToBounds"]
@@ -530,7 +594,6 @@ depends-member:
 - !private ["So12UIAppearanceP", "superview"]
 - !private ["So12UIAppearanceP", "topAnchor"]
 - !private ["So12UIAppearanceP", "trailingAnchor"]
-- !private ["So12UIAppearanceP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So12UIAppearanceP", "widthAnchor"]
 - ["So21UIAppearanceContainerP", "Bool"]
 - ["So21UIAppearanceContainerP", "CellStyle"]
@@ -542,12 +605,18 @@ depends-member:
 - ["So21UIAppearanceContainerP", "UILabel"]
 - ["So21UIAppearanceContainerP", "UIStackView"]
 - ["So21UIAppearanceContainerP", "UITableViewCell"]
+- ["So21UIAppearanceContainerP", "UsesAutoLayout"]
 - ["So21UIAppearanceContainerP", ""]
+- ["So21UIAppearanceContainerP", "_cost"]
+- ["So21UIAppearanceContainerP", "_drinkImageView"]
+- ["So21UIAppearanceContainerP", "_name"]
+- ["So21UIAppearanceContainerP", "_stackView"]
 - !private ["So21UIAppearanceContainerP", "addArrangedSubview"]
 - !private ["So21UIAppearanceContainerP", "addSubview"]
 - !private ["So21UIAppearanceContainerP", "alignment"]
 - ["So21UIAppearanceContainerP", "awakeFromNib"]
 - !private ["So21UIAppearanceContainerP", "axis"]
+- !private ["So21UIAppearanceContainerP", "backgroundColor"]
 - !private ["So21UIAppearanceContainerP", "bottomAnchor"]
 - !private ["So21UIAppearanceContainerP", "centerYAnchor"]
 - !private ["So21UIAppearanceContainerP", "clipsToBounds"]
@@ -568,13 +637,12 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "superview"]
 - !private ["So21UIAppearanceContainerP", "topAnchor"]
 - !private ["So21UIAppearanceContainerP", "trailingAnchor"]
-- !private ["So21UIAppearanceContainerP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So21UIAppearanceContainerP", "widthAnchor"]
+- !private ["So7UIColorC", "clear"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "centerYAnchor"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "font"]
 - ["So30UIContentSizeCategoryAdjustingP", "init"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "superview"]
-- !private ["So30UIContentSizeCategoryAdjustingP", "translatesAutoresizingMaskIntoConstraints"]
 - ["So17UICoordinateSpaceP", "Bool"]
 - ["So17UICoordinateSpaceP", "CellStyle"]
 - !private ["So17UICoordinateSpaceP", "NSLayoutConstraint"]
@@ -585,12 +653,18 @@ depends-member:
 - ["So17UICoordinateSpaceP", "UILabel"]
 - ["So17UICoordinateSpaceP", "UIStackView"]
 - ["So17UICoordinateSpaceP", "UITableViewCell"]
+- ["So17UICoordinateSpaceP", "UsesAutoLayout"]
 - ["So17UICoordinateSpaceP", ""]
+- ["So17UICoordinateSpaceP", "_cost"]
+- ["So17UICoordinateSpaceP", "_drinkImageView"]
+- ["So17UICoordinateSpaceP", "_name"]
+- ["So17UICoordinateSpaceP", "_stackView"]
 - !private ["So17UICoordinateSpaceP", "addArrangedSubview"]
 - !private ["So17UICoordinateSpaceP", "addSubview"]
 - !private ["So17UICoordinateSpaceP", "alignment"]
 - ["So17UICoordinateSpaceP", "awakeFromNib"]
 - !private ["So17UICoordinateSpaceP", "axis"]
+- !private ["So17UICoordinateSpaceP", "backgroundColor"]
 - !private ["So17UICoordinateSpaceP", "bottomAnchor"]
 - !private ["So17UICoordinateSpaceP", "centerYAnchor"]
 - !private ["So17UICoordinateSpaceP", "clipsToBounds"]
@@ -611,7 +685,6 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "superview"]
 - !private ["So17UICoordinateSpaceP", "topAnchor"]
 - !private ["So17UICoordinateSpaceP", "trailingAnchor"]
-- !private ["So17UICoordinateSpaceP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So17UICoordinateSpaceP", "widthAnchor"]
 - ["So13UIDynamicItemP", "Bool"]
 - ["So13UIDynamicItemP", "CellStyle"]
@@ -623,12 +696,18 @@ depends-member:
 - ["So13UIDynamicItemP", "UILabel"]
 - ["So13UIDynamicItemP", "UIStackView"]
 - ["So13UIDynamicItemP", "UITableViewCell"]
+- ["So13UIDynamicItemP", "UsesAutoLayout"]
 - ["So13UIDynamicItemP", ""]
+- ["So13UIDynamicItemP", "_cost"]
+- ["So13UIDynamicItemP", "_drinkImageView"]
+- ["So13UIDynamicItemP", "_name"]
+- ["So13UIDynamicItemP", "_stackView"]
 - !private ["So13UIDynamicItemP", "addArrangedSubview"]
 - !private ["So13UIDynamicItemP", "addSubview"]
 - !private ["So13UIDynamicItemP", "alignment"]
 - ["So13UIDynamicItemP", "awakeFromNib"]
 - !private ["So13UIDynamicItemP", "axis"]
+- !private ["So13UIDynamicItemP", "backgroundColor"]
 - !private ["So13UIDynamicItemP", "bottomAnchor"]
 - !private ["So13UIDynamicItemP", "centerYAnchor"]
 - !private ["So13UIDynamicItemP", "clipsToBounds"]
@@ -649,7 +728,6 @@ depends-member:
 - !private ["So13UIDynamicItemP", "superview"]
 - !private ["So13UIDynamicItemP", "topAnchor"]
 - !private ["So13UIDynamicItemP", "trailingAnchor"]
-- !private ["So13UIDynamicItemP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So13UIDynamicItemP", "widthAnchor"]
 - ["So18UIFocusEnvironmentP", "Bool"]
 - ["So18UIFocusEnvironmentP", "CellStyle"]
@@ -661,12 +739,18 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "UILabel"]
 - ["So18UIFocusEnvironmentP", "UIStackView"]
 - ["So18UIFocusEnvironmentP", "UITableViewCell"]
+- ["So18UIFocusEnvironmentP", "UsesAutoLayout"]
 - ["So18UIFocusEnvironmentP", ""]
+- ["So18UIFocusEnvironmentP", "_cost"]
+- ["So18UIFocusEnvironmentP", "_drinkImageView"]
+- ["So18UIFocusEnvironmentP", "_name"]
+- ["So18UIFocusEnvironmentP", "_stackView"]
 - !private ["So18UIFocusEnvironmentP", "addArrangedSubview"]
 - !private ["So18UIFocusEnvironmentP", "addSubview"]
 - !private ["So18UIFocusEnvironmentP", "alignment"]
 - ["So18UIFocusEnvironmentP", "awakeFromNib"]
 - !private ["So18UIFocusEnvironmentP", "axis"]
+- !private ["So18UIFocusEnvironmentP", "backgroundColor"]
 - !private ["So18UIFocusEnvironmentP", "bottomAnchor"]
 - !private ["So18UIFocusEnvironmentP", "centerYAnchor"]
 - !private ["So18UIFocusEnvironmentP", "clipsToBounds"]
@@ -687,7 +771,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "superview"]
 - !private ["So18UIFocusEnvironmentP", "topAnchor"]
 - !private ["So18UIFocusEnvironmentP", "trailingAnchor"]
-- !private ["So18UIFocusEnvironmentP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So18UIFocusEnvironmentP", "widthAnchor"]
 - ["So11UIFocusItemP", "Bool"]
 - ["So11UIFocusItemP", "CellStyle"]
@@ -699,12 +782,18 @@ depends-member:
 - ["So11UIFocusItemP", "UILabel"]
 - ["So11UIFocusItemP", "UIStackView"]
 - ["So11UIFocusItemP", "UITableViewCell"]
+- ["So11UIFocusItemP", "UsesAutoLayout"]
 - ["So11UIFocusItemP", ""]
+- ["So11UIFocusItemP", "_cost"]
+- ["So11UIFocusItemP", "_drinkImageView"]
+- ["So11UIFocusItemP", "_name"]
+- ["So11UIFocusItemP", "_stackView"]
 - !private ["So11UIFocusItemP", "addArrangedSubview"]
 - !private ["So11UIFocusItemP", "addSubview"]
 - !private ["So11UIFocusItemP", "alignment"]
 - ["So11UIFocusItemP", "awakeFromNib"]
 - !private ["So11UIFocusItemP", "axis"]
+- !private ["So11UIFocusItemP", "backgroundColor"]
 - !private ["So11UIFocusItemP", "bottomAnchor"]
 - !private ["So11UIFocusItemP", "centerYAnchor"]
 - !private ["So11UIFocusItemP", "clipsToBounds"]
@@ -725,7 +814,6 @@ depends-member:
 - !private ["So11UIFocusItemP", "superview"]
 - !private ["So11UIFocusItemP", "topAnchor"]
 - !private ["So11UIFocusItemP", "trailingAnchor"]
-- !private ["So11UIFocusItemP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So11UIFocusItemP", "widthAnchor"]
 - ["So20UIFocusItemContainerP", "Bool"]
 - ["So20UIFocusItemContainerP", "CellStyle"]
@@ -737,12 +825,18 @@ depends-member:
 - ["So20UIFocusItemContainerP", "UILabel"]
 - ["So20UIFocusItemContainerP", "UIStackView"]
 - ["So20UIFocusItemContainerP", "UITableViewCell"]
+- ["So20UIFocusItemContainerP", "UsesAutoLayout"]
 - ["So20UIFocusItemContainerP", ""]
+- ["So20UIFocusItemContainerP", "_cost"]
+- ["So20UIFocusItemContainerP", "_drinkImageView"]
+- ["So20UIFocusItemContainerP", "_name"]
+- ["So20UIFocusItemContainerP", "_stackView"]
 - !private ["So20UIFocusItemContainerP", "addArrangedSubview"]
 - !private ["So20UIFocusItemContainerP", "addSubview"]
 - !private ["So20UIFocusItemContainerP", "alignment"]
 - ["So20UIFocusItemContainerP", "awakeFromNib"]
 - !private ["So20UIFocusItemContainerP", "axis"]
+- !private ["So20UIFocusItemContainerP", "backgroundColor"]
 - !private ["So20UIFocusItemContainerP", "bottomAnchor"]
 - !private ["So20UIFocusItemContainerP", "centerYAnchor"]
 - !private ["So20UIFocusItemContainerP", "clipsToBounds"]
@@ -763,7 +857,6 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "superview"]
 - !private ["So20UIFocusItemContainerP", "topAnchor"]
 - !private ["So20UIFocusItemContainerP", "trailingAnchor"]
-- !private ["So20UIFocusItemContainerP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So20UIFocusItemContainerP", "widthAnchor"]
 - !private ["So6UIFontC", "init"]
 - ["So27UIGestureRecognizerDelegateP", "Bool"]
@@ -777,8 +870,14 @@ depends-member:
 - ["So27UIGestureRecognizerDelegateP", "UILabel"]
 - ["So27UIGestureRecognizerDelegateP", "UIStackView"]
 - ["So27UIGestureRecognizerDelegateP", "UITableViewCell"]
+- ["So27UIGestureRecognizerDelegateP", "UsesAutoLayout"]
 - ["So27UIGestureRecognizerDelegateP", ""]
+- ["So27UIGestureRecognizerDelegateP", "_cost"]
+- ["So27UIGestureRecognizerDelegateP", "_drinkImageView"]
+- ["So27UIGestureRecognizerDelegateP", "_name"]
+- ["So27UIGestureRecognizerDelegateP", "_stackView"]
 - ["So27UIGestureRecognizerDelegateP", "awakeFromNib"]
+- !private ["So27UIGestureRecognizerDelegateP", "backgroundColor"]
 - !private ["So27UIGestureRecognizerDelegateP", "contentView"]
 - ["So27UIGestureRecognizerDelegateP", "cost"]
 - ["So27UIGestureRecognizerDelegateP", "drinkImageView"]
@@ -795,13 +894,11 @@ depends-member:
 - !private ["So11UIImageViewC", "superview"]
 - !private ["So11UIImageViewC", "topAnchor"]
 - !private ["So11UIImageViewC", "trailingAnchor"]
-- !private ["So11UIImageViewC", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So11UIImageViewC", "widthAnchor"]
 - !private ["So7UILabelC", "centerYAnchor"]
 - !private ["So7UILabelC", "font"]
 - ["So7UILabelC", "init"]
 - !private ["So7UILabelC", "superview"]
-- !private ["So7UILabelC", "translatesAutoresizingMaskIntoConstraints"]
 - ["8QuickBev5ThemeO12UILabelPropsO", "textColor"]
 - ["So24UILargeContentViewerItemP", "Bool"]
 - ["So24UILargeContentViewerItemP", "CellStyle"]
@@ -813,12 +910,18 @@ depends-member:
 - ["So24UILargeContentViewerItemP", "UILabel"]
 - ["So24UILargeContentViewerItemP", "UIStackView"]
 - ["So24UILargeContentViewerItemP", "UITableViewCell"]
+- ["So24UILargeContentViewerItemP", "UsesAutoLayout"]
 - ["So24UILargeContentViewerItemP", ""]
+- ["So24UILargeContentViewerItemP", "_cost"]
+- ["So24UILargeContentViewerItemP", "_drinkImageView"]
+- ["So24UILargeContentViewerItemP", "_name"]
+- ["So24UILargeContentViewerItemP", "_stackView"]
 - !private ["So24UILargeContentViewerItemP", "addArrangedSubview"]
 - !private ["So24UILargeContentViewerItemP", "addSubview"]
 - !private ["So24UILargeContentViewerItemP", "alignment"]
 - ["So24UILargeContentViewerItemP", "awakeFromNib"]
 - !private ["So24UILargeContentViewerItemP", "axis"]
+- !private ["So24UILargeContentViewerItemP", "backgroundColor"]
 - !private ["So24UILargeContentViewerItemP", "bottomAnchor"]
 - !private ["So24UILargeContentViewerItemP", "centerYAnchor"]
 - !private ["So24UILargeContentViewerItemP", "clipsToBounds"]
@@ -839,7 +942,6 @@ depends-member:
 - !private ["So24UILargeContentViewerItemP", "superview"]
 - !private ["So24UILargeContentViewerItemP", "topAnchor"]
 - !private ["So24UILargeContentViewerItemP", "trailingAnchor"]
-- !private ["So24UILargeContentViewerItemP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So24UILargeContentViewerItemP", "widthAnchor"]
 - !private ["So13UILayoutGuideC", "bottomAnchor"]
 - !private ["So13UILayoutGuideC", "leadingAnchor"]
@@ -851,12 +953,18 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "UIImageView"]
 - ["So30UIPasteConfigurationSupportingP", "UILabel"]
 - ["So30UIPasteConfigurationSupportingP", "UIStackView"]
+- ["So30UIPasteConfigurationSupportingP", "UsesAutoLayout"]
 - ["So30UIPasteConfigurationSupportingP", ""]
+- ["So30UIPasteConfigurationSupportingP", "_cost"]
+- ["So30UIPasteConfigurationSupportingP", "_drinkImageView"]
+- ["So30UIPasteConfigurationSupportingP", "_name"]
+- ["So30UIPasteConfigurationSupportingP", "_stackView"]
 - !private ["So30UIPasteConfigurationSupportingP", "addArrangedSubview"]
 - !private ["So30UIPasteConfigurationSupportingP", "addSubview"]
 - !private ["So30UIPasteConfigurationSupportingP", "alignment"]
 - ["So30UIPasteConfigurationSupportingP", "awakeFromNib"]
 - !private ["So30UIPasteConfigurationSupportingP", "axis"]
+- !private ["So30UIPasteConfigurationSupportingP", "backgroundColor"]
 - !private ["So30UIPasteConfigurationSupportingP", "bottomAnchor"]
 - !private ["So30UIPasteConfigurationSupportingP", "centerYAnchor"]
 - !private ["So30UIPasteConfigurationSupportingP", "clipsToBounds"]
@@ -877,7 +985,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "superview"]
 - !private ["So30UIPasteConfigurationSupportingP", "topAnchor"]
 - !private ["So30UIPasteConfigurationSupportingP", "trailingAnchor"]
-- !private ["So30UIPasteConfigurationSupportingP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So30UIPasteConfigurationSupportingP", "widthAnchor"]
 - ["So11UIResponderC", "Bool"]
 - ["So11UIResponderC", "CellStyle"]
@@ -890,12 +997,18 @@ depends-member:
 - ["So11UIResponderC", "UILabel"]
 - ["So11UIResponderC", "UIStackView"]
 - ["So11UIResponderC", "UITableViewCell"]
+- ["So11UIResponderC", "UsesAutoLayout"]
 - ["So11UIResponderC", ""]
+- ["So11UIResponderC", "_cost"]
+- ["So11UIResponderC", "_drinkImageView"]
+- ["So11UIResponderC", "_name"]
+- ["So11UIResponderC", "_stackView"]
 - !private ["So11UIResponderC", "addArrangedSubview"]
 - !private ["So11UIResponderC", "addSubview"]
 - !private ["So11UIResponderC", "alignment"]
 - ["So11UIResponderC", "awakeFromNib"]
 - !private ["So11UIResponderC", "axis"]
+- !private ["So11UIResponderC", "backgroundColor"]
 - !private ["So11UIResponderC", "bottomAnchor"]
 - !private ["So11UIResponderC", "centerYAnchor"]
 - !private ["So11UIResponderC", "clipsToBounds"]
@@ -916,7 +1029,6 @@ depends-member:
 - !private ["So11UIResponderC", "superview"]
 - !private ["So11UIResponderC", "topAnchor"]
 - !private ["So11UIResponderC", "trailingAnchor"]
-- !private ["So11UIResponderC", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So11UIResponderC", "widthAnchor"]
 - ["So30UIResponderStandardEditActionsP", "CellStyle"]
 - !private ["So30UIResponderStandardEditActionsP", "NSLayoutConstraint"]
@@ -925,12 +1037,18 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "UIImageView"]
 - ["So30UIResponderStandardEditActionsP", "UILabel"]
 - ["So30UIResponderStandardEditActionsP", "UIStackView"]
+- ["So30UIResponderStandardEditActionsP", "UsesAutoLayout"]
 - ["So30UIResponderStandardEditActionsP", ""]
+- ["So30UIResponderStandardEditActionsP", "_cost"]
+- ["So30UIResponderStandardEditActionsP", "_drinkImageView"]
+- ["So30UIResponderStandardEditActionsP", "_name"]
+- ["So30UIResponderStandardEditActionsP", "_stackView"]
 - !private ["So30UIResponderStandardEditActionsP", "addArrangedSubview"]
 - !private ["So30UIResponderStandardEditActionsP", "addSubview"]
 - !private ["So30UIResponderStandardEditActionsP", "alignment"]
 - ["So30UIResponderStandardEditActionsP", "awakeFromNib"]
 - !private ["So30UIResponderStandardEditActionsP", "axis"]
+- !private ["So30UIResponderStandardEditActionsP", "backgroundColor"]
 - !private ["So30UIResponderStandardEditActionsP", "bottomAnchor"]
 - !private ["So30UIResponderStandardEditActionsP", "centerYAnchor"]
 - !private ["So30UIResponderStandardEditActionsP", "clipsToBounds"]
@@ -951,7 +1069,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "superview"]
 - !private ["So30UIResponderStandardEditActionsP", "topAnchor"]
 - !private ["So30UIResponderStandardEditActionsP", "trailingAnchor"]
-- !private ["So30UIResponderStandardEditActionsP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So30UIResponderStandardEditActionsP", "widthAnchor"]
 - !private ["So11UIStackViewC", "addArrangedSubview"]
 - !private ["So11UIStackViewC", "alignment"]
@@ -963,7 +1080,6 @@ depends-member:
 - !private ["So11UIStackViewC", "spacing"]
 - !private ["So11UIStackViewC", "superview"]
 - !private ["So11UIStackViewC", "topAnchor"]
-- !private ["So11UIStackViewC", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So11UIStackViewC", "widthAnchor"]
 - ["So15UITableViewCellC", "Bool"]
 - ["So15UITableViewCellC", "CellStyle"]
@@ -976,8 +1092,14 @@ depends-member:
 - ["So15UITableViewCellC", "UILabel"]
 - ["So15UITableViewCellC", "UIStackView"]
 - ["So15UITableViewCellC", "UITableViewCell"]
+- ["So15UITableViewCellC", "UsesAutoLayout"]
 - ["So15UITableViewCellC", ""]
+- ["So15UITableViewCellC", "_cost"]
+- ["So15UITableViewCellC", "_drinkImageView"]
+- ["So15UITableViewCellC", "_name"]
+- ["So15UITableViewCellC", "_stackView"]
 - ["So15UITableViewCellC", "awakeFromNib"]
+- !private ["So15UITableViewCellC", "backgroundColor"]
 - !private ["So15UITableViewCellC", "contentView"]
 - ["So15UITableViewCellC", "cost"]
 - ["So15UITableViewCellC", "drinkImageView"]
@@ -996,12 +1118,18 @@ depends-member:
 - ["So18UITraitEnvironmentP", "UILabel"]
 - ["So18UITraitEnvironmentP", "UIStackView"]
 - ["So18UITraitEnvironmentP", "UITableViewCell"]
+- ["So18UITraitEnvironmentP", "UsesAutoLayout"]
 - ["So18UITraitEnvironmentP", ""]
+- ["So18UITraitEnvironmentP", "_cost"]
+- ["So18UITraitEnvironmentP", "_drinkImageView"]
+- ["So18UITraitEnvironmentP", "_name"]
+- ["So18UITraitEnvironmentP", "_stackView"]
 - !private ["So18UITraitEnvironmentP", "addArrangedSubview"]
 - !private ["So18UITraitEnvironmentP", "addSubview"]
 - !private ["So18UITraitEnvironmentP", "alignment"]
 - ["So18UITraitEnvironmentP", "awakeFromNib"]
 - !private ["So18UITraitEnvironmentP", "axis"]
+- !private ["So18UITraitEnvironmentP", "backgroundColor"]
 - !private ["So18UITraitEnvironmentP", "bottomAnchor"]
 - !private ["So18UITraitEnvironmentP", "centerYAnchor"]
 - !private ["So18UITraitEnvironmentP", "clipsToBounds"]
@@ -1022,7 +1150,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "superview"]
 - !private ["So18UITraitEnvironmentP", "topAnchor"]
 - !private ["So18UITraitEnvironmentP", "trailingAnchor"]
-- !private ["So18UITraitEnvironmentP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So18UITraitEnvironmentP", "widthAnchor"]
 - ["So23UIUserActivityRestoringP", "CellStyle"]
 - !private ["So23UIUserActivityRestoringP", "NSLayoutConstraint"]
@@ -1031,12 +1158,18 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "UIImageView"]
 - ["So23UIUserActivityRestoringP", "UILabel"]
 - ["So23UIUserActivityRestoringP", "UIStackView"]
+- ["So23UIUserActivityRestoringP", "UsesAutoLayout"]
 - ["So23UIUserActivityRestoringP", ""]
+- ["So23UIUserActivityRestoringP", "_cost"]
+- ["So23UIUserActivityRestoringP", "_drinkImageView"]
+- ["So23UIUserActivityRestoringP", "_name"]
+- ["So23UIUserActivityRestoringP", "_stackView"]
 - !private ["So23UIUserActivityRestoringP", "addArrangedSubview"]
 - !private ["So23UIUserActivityRestoringP", "addSubview"]
 - !private ["So23UIUserActivityRestoringP", "alignment"]
 - ["So23UIUserActivityRestoringP", "awakeFromNib"]
 - !private ["So23UIUserActivityRestoringP", "axis"]
+- !private ["So23UIUserActivityRestoringP", "backgroundColor"]
 - !private ["So23UIUserActivityRestoringP", "bottomAnchor"]
 - !private ["So23UIUserActivityRestoringP", "centerYAnchor"]
 - !private ["So23UIUserActivityRestoringP", "clipsToBounds"]
@@ -1057,7 +1190,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "superview"]
 - !private ["So23UIUserActivityRestoringP", "topAnchor"]
 - !private ["So23UIUserActivityRestoringP", "trailingAnchor"]
-- !private ["So23UIUserActivityRestoringP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So23UIUserActivityRestoringP", "widthAnchor"]
 - ["So6UIViewC", "Bool"]
 - ["So6UIViewC", "CellStyle"]
@@ -1070,12 +1202,18 @@ depends-member:
 - ["So6UIViewC", "UILabel"]
 - ["So6UIViewC", "UIStackView"]
 - ["So6UIViewC", "UITableViewCell"]
+- ["So6UIViewC", "UsesAutoLayout"]
 - ["So6UIViewC", ""]
+- ["So6UIViewC", "_cost"]
+- ["So6UIViewC", "_drinkImageView"]
+- ["So6UIViewC", "_name"]
+- ["So6UIViewC", "_stackView"]
 - !private ["So6UIViewC", "addArrangedSubview"]
 - !private ["So6UIViewC", "addSubview"]
 - !private ["So6UIViewC", "alignment"]
 - ["So6UIViewC", "awakeFromNib"]
 - !private ["So6UIViewC", "axis"]
+- !private ["So6UIViewC", "backgroundColor"]
 - !private ["So6UIViewC", "bottomAnchor"]
 - !private ["So6UIViewC", "centerYAnchor"]
 - !private ["So6UIViewC", "clipsToBounds"]
@@ -1096,14 +1234,17 @@ depends-member:
 - !private ["So6UIViewC", "superview"]
 - !private ["So6UIViewC", "topAnchor"]
 - !private ["So6UIViewC", "trailingAnchor"]
-- !private ["So6UIViewC", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So6UIViewC", "widthAnchor"]
+- ["8QuickBev14UsesAutoLayoutV", "init"]
+- ["8QuickBev14UsesAutoLayoutV", "wrappedValue"]
+- !private ["7SwiftUI4ViewP", "clear"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s26_ExpressibleByColorLiteralP", "clear"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "CellStyle"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSLayoutConstraint"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "Theme"]
@@ -1111,6 +1252,7 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "UIImageView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UILabel"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UIStackView"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "UsesAutoLayout"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "activate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addArrangedSubview"]
@@ -1118,8 +1260,10 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "alignment"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "awakeFromNib"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "axis"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "backgroundColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "bottomAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "centerYAnchor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "clear"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "clipsToBounds"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "constraint"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "contentMode"]
@@ -1139,7 +1283,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "superview"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "topAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "trailingAnchor"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "widthAnchor"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CellStyle"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSLayoutConstraint"]
@@ -1148,6 +1291,7 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIImageView"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UILabel"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIStackView"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UsesAutoLayout"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "activate"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addArrangedSubview"]
@@ -1155,8 +1299,10 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "alignment"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "awakeFromNib"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "axis"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "backgroundColor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bottomAnchor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "centerYAnchor"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "clear"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "clipsToBounds"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "constraint"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "contentMode"]
@@ -1176,8 +1322,8 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "superview"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "topAnchor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "trailingAnchor"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "widthAnchor"]
+- !private ["s21_ObjectiveCBridgeableP", "clear"]
 - ["s38__DefaultCustomPlaygroundQuickLookableP", "CellStyle"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "NSLayoutConstraint"]
 - ["s38__DefaultCustomPlaygroundQuickLookableP", "Theme"]
@@ -1185,12 +1331,14 @@ depends-member:
 - ["s38__DefaultCustomPlaygroundQuickLookableP", "UIImageView"]
 - ["s38__DefaultCustomPlaygroundQuickLookableP", "UILabel"]
 - ["s38__DefaultCustomPlaygroundQuickLookableP", "UIStackView"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "UsesAutoLayout"]
 - ["s38__DefaultCustomPlaygroundQuickLookableP", ""]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "addArrangedSubview"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "addSubview"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "alignment"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "awakeFromNib"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "axis"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "backgroundColor"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "bottomAnchor"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "centerYAnchor"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "clipsToBounds"]
@@ -1211,7 +1359,6 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "superview"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "topAnchor"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "trailingAnchor"]
-- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "widthAnchor"]
 depends-nominal:
 - !private "s18AdditiveArithmeticP"
@@ -1225,21 +1372,28 @@ depends-nominal:
 - !private "SL"
 - !private "So17UIViewContentModeV"
 - "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- !private "Se"
 - !private "So23UIStackViewDistributionV"
+- !private "SE"
 - "SQ"
 - "s25ExpressibleByArrayLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
 - !private "s32ExpressibleByStringInterpolationP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "SF"
+- !private "7SwiftUI7GestureP"
 - "SH"
 - !private "s25LosslessStringConvertibleP"
 - "So8NSCodingP"
 - !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
 - "So14NSLayoutAnchorC"
 - !private "So18NSLayoutConstraintC"
 - !private "So17NSLayoutDimensionC"
@@ -1247,7 +1401,9 @@ depends-nominal:
 - !private "So19NSLayoutYAxisAnchorC"
 - "So8NSObjectC"
 - "So8NSObjectP"
+- !private "So14NSSecureCodingP"
 - !private "Sj"
+- !private "Sq"
 - !private "SY"
 - !private "ST"
 - !private "s13SignedNumericP"
@@ -1259,6 +1415,7 @@ depends-nominal:
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
+- !private "So7UIColorC"
 - "So30UIContentSizeCategoryAdjustingP"
 - "So17UICoordinateSpaceP"
 - "So13UIDynamicItemP"
@@ -1280,19 +1437,24 @@ depends-nominal:
 - "So18UITraitEnvironmentP"
 - "So23UIUserActivityRestoringP"
 - "So6UIViewC"
+- "8QuickBev14UsesAutoLayoutV"
+- !private "7SwiftUI4ViewP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s26_ExpressibleByColorLiteralP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
 - "s38__DefaultCustomPlaygroundQuickLookableP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -1301,7 +1463,6 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -1328,12 +1489,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/MapKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/DeveloperToolsSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIViewController+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSError+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-umbrella.h"
@@ -1419,7 +1580,6 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfoObject.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-Swift.h"
@@ -1443,45 +1603,44 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSpacerView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWhitelistView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/module.map"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Modules/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "9b400198143b6896512fd3baf160d0b6"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "568aff4687101ff6b60b77f205908ebd"

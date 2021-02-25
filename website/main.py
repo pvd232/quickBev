@@ -70,15 +70,26 @@ def login():
 def inventory():
     drink_list = []
     response = {}
-    drink_service = Drink_Service()
-    drinks = drink_service.get_drinks()
-    for drink in drinks:
-        drinkDTO = {}
-        drinkDTO['drink'] = drink.serialize()
-        drink_list.append(drinkDTO)
-    print('drinkList', drink_list)
-    response['drinks'] = drink_list
-    return jsonify(response)
+    headers = {}
+    drinks = Drink_Service().get_drinks()
+    client_etag = json.loads(request.headers.get("If-None-Match"))
+    if client_etag:
+        if not ETag_Service().validate_etag(client_etag):
+            for drink in drinks:
+                drinkDTO = {}
+                drinkDTO['drink'] = drink.dto_serialize()
+                drink_list.append(drinkDTO)
+            response['drinks'] = drink_list
+
+            etag = ETag_Service().get_etag("drink")
+            headers["E-tag-id"] = etag.id
+            headers["E-tag-category"] = etag.category
+    else:
+        etag = ETag_Service().get_etag("drink")
+        headers["E-tag-id"] = etag.id
+        headers["E-tag-category"] = etag.category
+
+    return Response(status=200, response=json.dumps(response), headers=headers)
 
 
 @app.route('/order', methods=['POST', 'GET', 'OPTIONS'])
@@ -223,17 +234,36 @@ def beams_auth():
 @app.route('/business', methods=['GET'])
 def get_businesss():
     response = {}
+    headers = {}
     business_list = []
-    business_service = Business_Service()
-    businesss = business_service.get_businesss()
-    for business in businesss:
-        # turn into dictionaries
-        businessDTO = {}
-        businessDTO['business'] = business.serialize()
-        print('business.serialize()', business.serialize())
-        business_list.append(businessDTO)
-    response['businesses'] = business_list
-    return jsonify(response)
+    businesss = Business_Service().get_businesss()
+    client_etag = json.loads(request.headers.get("If-None-Match"))
+    print()
+    print('client_etag', client_etag)
+    print()
+
+    if client_etag:
+        print('ETag_Service().validate_etag(client_etag)',
+              ETag_Service().validate_etag(client_etag))
+        if not ETag_Service().validate_etag(client_etag):
+            for business in businesss:
+                # turn into dictionaries
+                businessDTO = {}
+                businessDTO['business'] = business.dto_serialize()
+                business_list.append(businessDTO)
+                response['businesses'] = business_list
+
+            etag = ETag_Service().get_etag("business")
+            headers["E-tag-category"] = etag.category
+            headers["E-tag-id"] = str(etag.id)
+
+            # headers["E-tag"] = json.dumps(headers["E-tag"])
+    else:
+        etag = ETag_Service().get_etag("business")
+        headers["E-tag-category"] = etag.category
+        headers["E-tag-id"] = str(etag.id)
+    print("response", response)
+    return Response(status=200, response=json.dumps(response), headers=headers)
 
 
 @app.route('/tabs', methods=['POST', 'GET'])
@@ -445,4 +475,5 @@ def add_menu():
 
 
 if __name__ == '__main__':
-    app.run(host="192.168.0.58", port=5000, debug=True)
+    # app.run(host="192.168.86.42", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)

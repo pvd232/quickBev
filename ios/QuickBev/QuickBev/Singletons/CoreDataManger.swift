@@ -46,6 +46,9 @@ class CoreDataManager {
             print("no changes to context")
         }
     }
+    func deleteEntity (entity: NSManagedObject) {
+        managedContext.delete(entity)
+    }
     func deleteEntities (entityName:String) {
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: entityName)
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)

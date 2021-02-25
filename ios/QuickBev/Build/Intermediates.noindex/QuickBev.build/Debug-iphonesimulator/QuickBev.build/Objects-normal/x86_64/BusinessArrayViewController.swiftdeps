@@ -72,11 +72,6 @@ depends-top-level:
 - "zip"
 - !private "||"
 depends-member:
-- ["s18AdditiveArithmeticP", ""]
-- !private ["9Alamofire0A8ExtendedP", "count"]
-- !private ["9Alamofire0A8ExtendedP", "filter"]
-- ["9Alamofire0A8ExtendedP", "init"]
-- !private ["9Alamofire0A8ExtendedP", "subscript"]
 - !private ["Sa", "count"]
 - !private ["Sa", "filter"]
 - ["Sa", "init"]
@@ -173,7 +168,6 @@ depends-member:
 - !private ["So11CAAnimationC", "timingFunction"]
 - !private ["So11CAAnimationC", "type"]
 - !private ["So7CALayerC", "add"]
-- !private ["So15CALayerDelegateP", ""]
 - !private ["So15CALayerDelegateP", "addSubview"]
 - !private ["So15CALayerDelegateP", "address"]
 - !private ["So15CALayerDelegateP", "backgroundColor"]
@@ -338,7 +332,7 @@ depends-member:
 - !private ["Sl", "lowercased"]
 - !private ["Sl", "row"]
 - !private ["Sl", "subscript"]
-- ["SL", ""]
+- !private ["SL", ""]
 - !private ["SL", "isEmpty"]
 - !private ["SL", "lowercased"]
 - !private ["SL", "row"]
@@ -424,6 +418,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "searchResultsUpdater"]
 - ["s28CustomDebugStringConvertibleP", "sectionIndexTitles"]
 - ["s28CustomDebugStringConvertibleP", "sectionIndexTitlesForTableView"]
+- !private ["s28CustomDebugStringConvertibleP", "selectedBusinessHandler"]
 - !private ["s28CustomDebugStringConvertibleP", "selectedScopeButtonIndex"]
 - !private ["s28CustomDebugStringConvertibleP", "setNeedsLayout"]
 - !private ["s28CustomDebugStringConvertibleP", "shared"]
@@ -459,6 +454,7 @@ depends-member:
 - !private ["s17CustomReflectableP", "lowercased"]
 - !private ["s17CustomReflectableP", "row"]
 - !private ["s17CustomReflectableP", "safeAreaLayoutGuide"]
+- !private ["s17CustomReflectableP", "selectedBusinessHandler"]
 - !private ["s17CustomReflectableP", "setNeedsLayout"]
 - !private ["s17CustomReflectableP", "subscript"]
 - ["s23CustomStringConvertibleP", "Business"]
@@ -583,6 +579,7 @@ depends-member:
 - !private ["Se", "name"]
 - !private ["Se", "row"]
 - !private ["Se", "safeAreaLayoutGuide"]
+- !private ["Se", "selectedBusinessHandler"]
 - !private ["Se", "setNeedsLayout"]
 - !private ["Se", "subscript"]
 - !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
@@ -599,6 +596,7 @@ depends-member:
 - !private ["SE", "name"]
 - !private ["SE", "row"]
 - !private ["SE", "safeAreaLayoutGuide"]
+- !private ["SE", "selectedBusinessHandler"]
 - !private ["SE", "setNeedsLayout"]
 - !private ["SE", "subscript"]
 - ["SQ", "Business"]
@@ -682,6 +680,7 @@ depends-member:
 - !private ["SQ", "searchResultsUpdater"]
 - ["SQ", "sectionIndexTitles"]
 - ["SQ", "sectionIndexTitlesForTableView"]
+- !private ["SQ", "selectedBusinessHandler"]
 - !private ["SQ", "selectedScopeButtonIndex"]
 - !private ["SQ", "setNeedsLayout"]
 - !private ["SQ", "shared"]
@@ -713,30 +712,34 @@ depends-member:
 - ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "row"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "isEmpty"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "lowercased"]
-- ["s25ExpressibleByFloatLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
-- ["s27ExpressibleByIntegerLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "addSubview"]
 - !private ["s23ExpressibleByNilLiteralP", "layer"]
 - !private ["s23ExpressibleByNilLiteralP", "layoutIfNeeded"]
 - !private ["s23ExpressibleByNilLiteralP", "safeAreaLayoutGuide"]
+- !private ["s23ExpressibleByNilLiteralP", "selectedBusinessHandler"]
 - !private ["s23ExpressibleByNilLiteralP", "setNeedsLayout"]
 - !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
-- ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
 - !private ["s32ExpressibleByStringInterpolationP", "init"]
 - !private ["s32ExpressibleByStringInterpolationP", "isEmpty"]
 - !private ["s32ExpressibleByStringInterpolationP", "lowercased"]
-- ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s26ExpressibleByStringLiteralP", ""]
 - !private ["s26ExpressibleByStringLiteralP", "isEmpty"]
 - !private ["s26ExpressibleByStringLiteralP", "lowercased"]
-- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "isEmpty"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "lowercased"]
-- ["SF", ""]
+- !private ["7SwiftUI7GestureP", "addSubview"]
+- !private ["7SwiftUI7GestureP", "layer"]
+- !private ["7SwiftUI7GestureP", "layoutIfNeeded"]
+- !private ["7SwiftUI7GestureP", "safeAreaLayoutGuide"]
+- !private ["7SwiftUI7GestureP", "selectedBusinessHandler"]
+- !private ["7SwiftUI7GestureP", "setNeedsLayout"]
 - ["SH", "Business"]
 - !private ["SH", "BusinessArrayTableViewCell"]
 - !private ["SH", "CAMediaTimingFunction"]
@@ -818,6 +821,7 @@ depends-member:
 - !private ["SH", "searchResultsUpdater"]
 - ["SH", "sectionIndexTitles"]
 - ["SH", "sectionIndexTitlesForTableView"]
+- !private ["SH", "selectedBusinessHandler"]
 - !private ["SH", "selectedScopeButtonIndex"]
 - !private ["SH", "setNeedsLayout"]
 - !private ["SH", "shared"]
@@ -848,7 +852,7 @@ depends-member:
 - !private ["s12IdentifiableP", "name"]
 - !private ["s12IdentifiableP", "shared"]
 - !private ["10Foundation9IndexPathV", "row"]
-- ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", ""]
 - !private ["s25LosslessStringConvertibleP", "isEmpty"]
 - !private ["s25LosslessStringConvertibleP", "lowercased"]
 - !private ["s10MirrorPathP", "isEmpty"]
@@ -863,7 +867,6 @@ depends-member:
 - !private ["10Foundation19MutableDataProtocolP", "filter"]
 - ["10Foundation19MutableDataProtocolP", "init"]
 - !private ["10Foundation19MutableDataProtocolP", "subscript"]
-- ["So8NSCodingP", "Bool"]
 - ["So8NSCodingP", "Business"]
 - !private ["So8NSCodingP", "BusinessArrayTableViewCell"]
 - ["So8NSCodingP", "BusinessPickerProtocol"]
@@ -872,11 +875,8 @@ depends-member:
 - !private ["So8NSCodingP", "CATransition"]
 - !private ["So8NSCodingP", "CATransitionSubtype"]
 - !private ["So8NSCodingP", "CATransitionType"]
-- ["So8NSCodingP", "CGFloat"]
 - !private ["So8NSCodingP", "CheckoutCart"]
 - ["So8NSCodingP", "IndexPath"]
-- ["So8NSCodingP", "Int"]
-- ["So8NSCodingP", "String"]
 - !private ["So8NSCodingP", "UIColor"]
 - ["So8NSCodingP", "UISearchController"]
 - ["So8NSCodingP", "UITableView"]
@@ -892,18 +892,6 @@ depends-member:
 - ["So8NSCodingP", "businessPickerDelegate"]
 - !private ["So8NSCodingP", "clear"]
 - !private ["So8NSCodingP", "constraint"]
-- !private ["So8NSCodingP", "constraintEqualToSystemSpacingAfter"]
-- !private ["So8NSCodingP", "constraintEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSCodingP", "constraintEqualToSystemSpacingBelow"]
-- !private ["So8NSCodingP", "constraintEqualToSystemSpacingBelowAnchor"]
-- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
-- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
-- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
-- !private ["So8NSCodingP", "constraintLessThanOrEqualToSystemSpacingAfter"]
-- !private ["So8NSCodingP", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSCodingP", "constraintLessThanOrEqualToSystemSpacingBelow"]
-- !private ["So8NSCodingP", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - !private ["So8NSCodingP", "dataSource"]
 - ["So8NSCodingP", "deinit"]
 - !private ["So8NSCodingP", "delegate"]
@@ -938,7 +926,6 @@ depends-member:
 - !private ["So8NSCodingP", "obscuresBackgroundDuringPresentation"]
 - !private ["So8NSCodingP", "placeholder"]
 - !private ["So8NSCodingP", "popViewController"]
-- !private ["So8NSCodingP", "popViewControllerAnimated"]
 - !private ["So8NSCodingP", "register"]
 - !private ["So8NSCodingP", "registerClass"]
 - !private ["So8NSCodingP", "registerNib"]
@@ -988,18 +975,6 @@ depends-member:
 - !private ["So9NSCopyingP", ""]
 - !private ["So9NSCopyingP", "clear"]
 - !private ["So9NSCopyingP", "constraint"]
-- !private ["So9NSCopyingP", "constraintEqualToSystemSpacingAfter"]
-- !private ["So9NSCopyingP", "constraintEqualToSystemSpacingAfterAnchor"]
-- !private ["So9NSCopyingP", "constraintEqualToSystemSpacingBelow"]
-- !private ["So9NSCopyingP", "constraintEqualToSystemSpacingBelowAnchor"]
-- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
-- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
-- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
-- !private ["So9NSCopyingP", "constraintLessThanOrEqualToSystemSpacingAfter"]
-- !private ["So9NSCopyingP", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So9NSCopyingP", "constraintLessThanOrEqualToSystemSpacingBelow"]
-- !private ["So9NSCopyingP", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - !private ["So9NSCopyingP", "duration"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "isEmpty"]
@@ -1008,7 +983,6 @@ depends-member:
 - !private ["So9NSCopyingP", "timingFunction"]
 - !private ["So9NSCopyingP", "type"]
 - !private ["So9NSCopyingP", "white"]
-- ["So26NSExtensionRequestHandlingP", "Bool"]
 - ["So26NSExtensionRequestHandlingP", "Business"]
 - !private ["So26NSExtensionRequestHandlingP", "BusinessArrayTableViewCell"]
 - ["So26NSExtensionRequestHandlingP", "BusinessPickerProtocol"]
@@ -1017,11 +991,8 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "CATransition"]
 - !private ["So26NSExtensionRequestHandlingP", "CATransitionSubtype"]
 - !private ["So26NSExtensionRequestHandlingP", "CATransitionType"]
-- ["So26NSExtensionRequestHandlingP", "CGFloat"]
 - !private ["So26NSExtensionRequestHandlingP", "CheckoutCart"]
 - ["So26NSExtensionRequestHandlingP", "IndexPath"]
-- ["So26NSExtensionRequestHandlingP", "Int"]
-- ["So26NSExtensionRequestHandlingP", "String"]
 - !private ["So26NSExtensionRequestHandlingP", "UIColor"]
 - ["So26NSExtensionRequestHandlingP", "UISearchController"]
 - ["So26NSExtensionRequestHandlingP", "UITableView"]
@@ -1050,7 +1021,6 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "numberOfSectionsInTableView"]
 - !private ["So26NSExtensionRequestHandlingP", "obscuresBackgroundDuringPresentation"]
 - !private ["So26NSExtensionRequestHandlingP", "popViewController"]
-- !private ["So26NSExtensionRequestHandlingP", "popViewControllerAnimated"]
 - ["So26NSExtensionRequestHandlingP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So26NSExtensionRequestHandlingP", "scrollViewDidEndDecelerating"]
 - ["So26NSExtensionRequestHandlingP", "scrollViewDidEndDragging"]
@@ -1094,22 +1064,9 @@ depends-member:
 - !private ["So21NSItemProviderWritingP", "white"]
 - ["So14NSLayoutAnchorC", ""]
 - !private ["So14NSLayoutAnchorC", "constraint"]
-- !private ["So14NSLayoutAnchorC", "constraintEqualToSystemSpacingAfter"]
-- !private ["So14NSLayoutAnchorC", "constraintEqualToSystemSpacingAfterAnchor"]
-- !private ["So14NSLayoutAnchorC", "constraintEqualToSystemSpacingBelow"]
-- !private ["So14NSLayoutAnchorC", "constraintEqualToSystemSpacingBelowAnchor"]
-- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
-- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
-- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
-- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToSystemSpacingAfter"]
-- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToSystemSpacingBelow"]
-- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - !private ["So18NSLayoutConstraintC", "isActive"]
 - !private ["So19NSLayoutXAxisAnchorC", "constraint"]
 - !private ["So19NSLayoutYAxisAnchorC", "constraint"]
-- ["So15NSManagedObjectC", ""]
 - !private ["So15NSManagedObjectC", "address"]
 - !private ["So15NSManagedObjectC", "businessArray"]
 - !private ["So15NSManagedObjectC", "name"]
@@ -1148,21 +1105,6 @@ depends-member:
 - ["So8NSObjectC", "businessPickerDelegate"]
 - !private ["So8NSObjectC", "clear"]
 - !private ["So8NSObjectC", "constraint"]
-- !private ["So8NSObjectC", "constraintEqualToAnchor"]
-- !private ["So8NSObjectC", "constraintEqualToSystemSpacingAfter"]
-- !private ["So8NSObjectC", "constraintEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSObjectC", "constraintEqualToSystemSpacingBelow"]
-- !private ["So8NSObjectC", "constraintEqualToSystemSpacingBelowAnchor"]
-- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToAnchor"]
-- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
-- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
-- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
-- !private ["So8NSObjectC", "constraintLessThanOrEqualToAnchor"]
-- !private ["So8NSObjectC", "constraintLessThanOrEqualToSystemSpacingAfter"]
-- !private ["So8NSObjectC", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSObjectC", "constraintLessThanOrEqualToSystemSpacingBelow"]
-- !private ["So8NSObjectC", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - !private ["So8NSObjectC", "dataSource"]
 - !private ["So8NSObjectC", "delegate"]
 - !private ["So8NSObjectC", "dequeueReusableCell"]
@@ -1188,7 +1130,6 @@ depends-member:
 - !private ["So8NSObjectC", "layer"]
 - !private ["So8NSObjectC", "layoutIfNeeded"]
 - !private ["So8NSObjectC", "leadingAnchor"]
-- !private ["So8NSObjectC", "lowercaseStringWithLocale"]
 - !private ["So8NSObjectC", "lowercased"]
 - !private ["So8NSObjectC", "name"]
 - !private ["So8NSObjectC", "navigationBar"]
@@ -1199,7 +1140,6 @@ depends-member:
 - !private ["So8NSObjectC", "obscuresBackgroundDuringPresentation"]
 - !private ["So8NSObjectC", "placeholder"]
 - !private ["So8NSObjectC", "popViewController"]
-- !private ["So8NSObjectC", "popViewControllerAnimated"]
 - !private ["So8NSObjectC", "register"]
 - !private ["So8NSObjectC", "registerClass"]
 - !private ["So8NSObjectC", "registerNib"]
@@ -1247,7 +1187,6 @@ depends-member:
 - ["So8NSObjectC", "viewWillDisappear"]
 - !private ["So8NSObjectC", "white"]
 - !private ["So8NSObjectC", "zip"]
-- ["So8NSObjectP", "Bool"]
 - ["So8NSObjectP", "Business"]
 - !private ["So8NSObjectP", "BusinessArrayTableViewCell"]
 - ["So8NSObjectP", "BusinessPickerProtocol"]
@@ -1256,11 +1195,8 @@ depends-member:
 - !private ["So8NSObjectP", "CATransition"]
 - !private ["So8NSObjectP", "CATransitionSubtype"]
 - !private ["So8NSObjectP", "CATransitionType"]
-- ["So8NSObjectP", "CGFloat"]
 - !private ["So8NSObjectP", "CheckoutCart"]
 - ["So8NSObjectP", "IndexPath"]
-- ["So8NSObjectP", "Int"]
-- ["So8NSObjectP", "String"]
 - !private ["So8NSObjectP", "UIColor"]
 - ["So8NSObjectP", "UISearchController"]
 - ["So8NSObjectP", "UITableView"]
@@ -1279,21 +1215,6 @@ depends-member:
 - ["So8NSObjectP", "businessPickerDelegate"]
 - !private ["So8NSObjectP", "clear"]
 - !private ["So8NSObjectP", "constraint"]
-- !private ["So8NSObjectP", "constraintEqualToAnchor"]
-- !private ["So8NSObjectP", "constraintEqualToSystemSpacingAfter"]
-- !private ["So8NSObjectP", "constraintEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSObjectP", "constraintEqualToSystemSpacingBelow"]
-- !private ["So8NSObjectP", "constraintEqualToSystemSpacingBelowAnchor"]
-- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToAnchor"]
-- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
-- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
-- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
-- !private ["So8NSObjectP", "constraintLessThanOrEqualToAnchor"]
-- !private ["So8NSObjectP", "constraintLessThanOrEqualToSystemSpacingAfter"]
-- !private ["So8NSObjectP", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSObjectP", "constraintLessThanOrEqualToSystemSpacingBelow"]
-- !private ["So8NSObjectP", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - !private ["So8NSObjectP", "dataSource"]
 - ["So8NSObjectP", "deinit"]
 - !private ["So8NSObjectP", "delegate"]
@@ -1320,7 +1241,6 @@ depends-member:
 - !private ["So8NSObjectP", "layer"]
 - !private ["So8NSObjectP", "layoutIfNeeded"]
 - !private ["So8NSObjectP", "leadingAnchor"]
-- !private ["So8NSObjectP", "lowercaseStringWithLocale"]
 - !private ["So8NSObjectP", "lowercased"]
 - !private ["So8NSObjectP", "name"]
 - !private ["So8NSObjectP", "navigationBar"]
@@ -1331,7 +1251,6 @@ depends-member:
 - !private ["So8NSObjectP", "obscuresBackgroundDuringPresentation"]
 - !private ["So8NSObjectP", "placeholder"]
 - !private ["So8NSObjectP", "popViewController"]
-- !private ["So8NSObjectP", "popViewControllerAnimated"]
 - !private ["So8NSObjectP", "register"]
 - !private ["So8NSObjectP", "registerClass"]
 - !private ["So8NSObjectP", "registerNib"]
@@ -1392,7 +1311,7 @@ depends-member:
 - !private ["So14NSSecureCodingP", "white"]
 - !private ["So8NSStringC", "isEmpty"]
 - !private ["So8NSStringC", "lowercased"]
-- ["Sj", ""]
+- !private ["Sj", ""]
 - !private ["7Combine16ObservableObjectP", "address"]
 - !private ["7Combine16ObservableObjectP", "businessArray"]
 - !private ["7Combine16ObservableObjectP", "name"]
@@ -1401,6 +1320,7 @@ depends-member:
 - !private ["Sq", "layer"]
 - !private ["Sq", "layoutIfNeeded"]
 - !private ["Sq", "safeAreaLayoutGuide"]
+- !private ["Sq", "selectedBusinessHandler"]
 - !private ["Sq", "setNeedsLayout"]
 - ["Sk", ""]
 - !private ["Sk", "count"]
@@ -1428,11 +1348,9 @@ depends-member:
 - ["ST", "init"]
 - !private ["ST", "isEmpty"]
 - !private ["ST", "lowercased"]
-- !private ["ST", "makeIterator"]
 - !private ["ST", "row"]
 - !private ["ST", "subscript"]
-- ["s13SignedNumericP", ""]
-- ["Sx", ""]
+- !private ["Sx", ""]
 - !private ["SS", "isEmpty"]
 - !private ["SS", "lowercased"]
 - !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
@@ -1440,15 +1358,14 @@ depends-member:
 - !private ["s27StringInterpolationProtocolP", "init"]
 - !private ["Sy", "isEmpty"]
 - !private ["Sy", "lowercased"]
-- ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", ""]
 - !private ["s16TextOutputStreamP", "appendInterpolation"]
 - !private ["s16TextOutputStreamP", "appendLiteral"]
 - !private ["s16TextOutputStreamP", "isEmpty"]
 - !private ["s16TextOutputStreamP", "lowercased"]
-- ["s20TextOutputStreamableP", ""]
+- !private ["s20TextOutputStreamableP", ""]
 - !private ["s20TextOutputStreamableP", "isEmpty"]
 - !private ["s20TextOutputStreamableP", "lowercased"]
-- !private ["So29UIAccessibilityIdentificationP", ""]
 - !private ["So29UIAccessibilityIdentificationP", "addSubview"]
 - !private ["So29UIAccessibilityIdentificationP", "address"]
 - !private ["So29UIAccessibilityIdentificationP", "backgroundColor"]
@@ -1477,7 +1394,6 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "trailingAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So29UIAccessibilityIdentificationP", "value"]
-- !private ["So12UIAppearanceP", ""]
 - !private ["So12UIAppearanceP", "addSubview"]
 - !private ["So12UIAppearanceP", "address"]
 - !private ["So12UIAppearanceP", "backgroundColor"]
@@ -1506,7 +1422,6 @@ depends-member:
 - !private ["So12UIAppearanceP", "trailingAnchor"]
 - !private ["So12UIAppearanceP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So12UIAppearanceP", "value"]
-- ["So21UIAppearanceContainerP", "Bool"]
 - ["So21UIAppearanceContainerP", "Business"]
 - !private ["So21UIAppearanceContainerP", "BusinessArrayTableViewCell"]
 - ["So21UIAppearanceContainerP", "BusinessPickerProtocol"]
@@ -1515,11 +1430,8 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "CATransition"]
 - !private ["So21UIAppearanceContainerP", "CATransitionSubtype"]
 - !private ["So21UIAppearanceContainerP", "CATransitionType"]
-- ["So21UIAppearanceContainerP", "CGFloat"]
 - !private ["So21UIAppearanceContainerP", "CheckoutCart"]
 - ["So21UIAppearanceContainerP", "IndexPath"]
-- ["So21UIAppearanceContainerP", "Int"]
-- ["So21UIAppearanceContainerP", "String"]
 - !private ["So21UIAppearanceContainerP", "UIColor"]
 - ["So21UIAppearanceContainerP", "UISearchController"]
 - ["So21UIAppearanceContainerP", "UITableView"]
@@ -1562,7 +1474,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "obscuresBackgroundDuringPresentation"]
 - !private ["So21UIAppearanceContainerP", "placeholder"]
 - !private ["So21UIAppearanceContainerP", "popViewController"]
-- !private ["So21UIAppearanceContainerP", "popViewControllerAnimated"]
 - !private ["So21UIAppearanceContainerP", "register"]
 - !private ["So21UIAppearanceContainerP", "registerClass"]
 - !private ["So21UIAppearanceContainerP", "registerNib"]
@@ -1612,7 +1523,6 @@ depends-member:
 - !private ["So16UIBarPositioningP", "value"]
 - !private ["So7UIColorC", "clear"]
 - !private ["So7UIColorC", "white"]
-- ["So18UIContentContainerP", "Bool"]
 - ["So18UIContentContainerP", "Business"]
 - !private ["So18UIContentContainerP", "BusinessArrayTableViewCell"]
 - ["So18UIContentContainerP", "BusinessPickerProtocol"]
@@ -1621,11 +1531,8 @@ depends-member:
 - !private ["So18UIContentContainerP", "CATransition"]
 - !private ["So18UIContentContainerP", "CATransitionSubtype"]
 - !private ["So18UIContentContainerP", "CATransitionType"]
-- ["So18UIContentContainerP", "CGFloat"]
 - !private ["So18UIContentContainerP", "CheckoutCart"]
 - ["So18UIContentContainerP", "IndexPath"]
-- ["So18UIContentContainerP", "Int"]
-- ["So18UIContentContainerP", "String"]
 - !private ["So18UIContentContainerP", "UIColor"]
 - ["So18UIContentContainerP", "UISearchController"]
 - ["So18UIContentContainerP", "UITableView"]
@@ -1654,7 +1561,6 @@ depends-member:
 - ["So18UIContentContainerP", "numberOfSectionsInTableView"]
 - !private ["So18UIContentContainerP", "obscuresBackgroundDuringPresentation"]
 - !private ["So18UIContentContainerP", "popViewController"]
-- !private ["So18UIContentContainerP", "popViewControllerAnimated"]
 - ["So18UIContentContainerP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So18UIContentContainerP", "scrollViewDidEndDecelerating"]
 - ["So18UIContentContainerP", "scrollViewDidEndDragging"]
@@ -1690,7 +1596,6 @@ depends-member:
 - !private ["So32UIContextMenuInteractionDelegateP", "backgroundColor"]
 - ["So9UIControlC", ""]
 - !private ["So9UIControlC", "backgroundColor"]
-- !private ["So17UICoordinateSpaceP", ""]
 - !private ["So17UICoordinateSpaceP", "addSubview"]
 - !private ["So17UICoordinateSpaceP", "address"]
 - !private ["So17UICoordinateSpaceP", "backgroundColor"]
@@ -1733,7 +1638,6 @@ depends-member:
 - !private ["So23UIDataSourceTranslatingP", "topAnchor"]
 - !private ["So23UIDataSourceTranslatingP", "trailingAnchor"]
 - !private ["So23UIDataSourceTranslatingP", "translatesAutoresizingMaskIntoConstraints"]
-- !private ["So13UIDynamicItemP", ""]
 - !private ["So13UIDynamicItemP", "addSubview"]
 - !private ["So13UIDynamicItemP", "address"]
 - !private ["So13UIDynamicItemP", "backgroundColor"]
@@ -1762,7 +1666,6 @@ depends-member:
 - !private ["So13UIDynamicItemP", "trailingAnchor"]
 - !private ["So13UIDynamicItemP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So13UIDynamicItemP", "value"]
-- ["So18UIFocusEnvironmentP", "Bool"]
 - ["So18UIFocusEnvironmentP", "Business"]
 - !private ["So18UIFocusEnvironmentP", "BusinessArrayTableViewCell"]
 - ["So18UIFocusEnvironmentP", "BusinessPickerProtocol"]
@@ -1771,11 +1674,8 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "CATransition"]
 - !private ["So18UIFocusEnvironmentP", "CATransitionSubtype"]
 - !private ["So18UIFocusEnvironmentP", "CATransitionType"]
-- ["So18UIFocusEnvironmentP", "CGFloat"]
 - !private ["So18UIFocusEnvironmentP", "CheckoutCart"]
 - ["So18UIFocusEnvironmentP", "IndexPath"]
-- ["So18UIFocusEnvironmentP", "Int"]
-- ["So18UIFocusEnvironmentP", "String"]
 - !private ["So18UIFocusEnvironmentP", "UIColor"]
 - ["So18UIFocusEnvironmentP", "UISearchController"]
 - ["So18UIFocusEnvironmentP", "UITableView"]
@@ -1818,7 +1718,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "obscuresBackgroundDuringPresentation"]
 - !private ["So18UIFocusEnvironmentP", "placeholder"]
 - !private ["So18UIFocusEnvironmentP", "popViewController"]
-- !private ["So18UIFocusEnvironmentP", "popViewControllerAnimated"]
 - !private ["So18UIFocusEnvironmentP", "register"]
 - !private ["So18UIFocusEnvironmentP", "registerClass"]
 - !private ["So18UIFocusEnvironmentP", "registerNib"]
@@ -1861,7 +1760,6 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "viewWillAppear"]
 - ["So18UIFocusEnvironmentP", "viewWillDisappear"]
 - !private ["So18UIFocusEnvironmentP", "zip"]
-- !private ["So11UIFocusItemP", ""]
 - !private ["So11UIFocusItemP", "addSubview"]
 - !private ["So11UIFocusItemP", "address"]
 - !private ["So11UIFocusItemP", "backgroundColor"]
@@ -1919,7 +1817,6 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "trailingAnchor"]
 - !private ["So20UIFocusItemContainerP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So20UIFocusItemContainerP", "value"]
-- !private ["So30UIFocusItemScrollableContainerP", ""]
 - !private ["So30UIFocusItemScrollableContainerP", "backgroundColor"]
 - !private ["So30UIFocusItemScrollableContainerP", "bottomAnchor"]
 - !private ["So30UIFocusItemScrollableContainerP", "dataSource"]
@@ -1998,7 +1895,6 @@ depends-member:
 - !private ["So10UIKeyInputP", ""]
 - !private ["So10UIKeyInputP", "backgroundColor"]
 - !private ["So7UILabelC", "text"]
-- !private ["So24UILargeContentViewerItemP", ""]
 - !private ["So24UILargeContentViewerItemP", "addSubview"]
 - !private ["So24UILargeContentViewerItemP", "address"]
 - !private ["So24UILargeContentViewerItemP", "backgroundColor"]
@@ -2037,7 +1933,6 @@ depends-member:
 - !private ["So22UINavigationControllerC", "view"]
 - !private ["So16UINavigationItemC", "hidesSearchBarWhenScrolling"]
 - !private ["So16UINavigationItemC", "searchController"]
-- ["So30UIPasteConfigurationSupportingP", "Bool"]
 - ["So30UIPasteConfigurationSupportingP", "Business"]
 - !private ["So30UIPasteConfigurationSupportingP", "BusinessArrayTableViewCell"]
 - ["So30UIPasteConfigurationSupportingP", "BusinessPickerProtocol"]
@@ -2046,11 +1941,8 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "CATransition"]
 - !private ["So30UIPasteConfigurationSupportingP", "CATransitionSubtype"]
 - !private ["So30UIPasteConfigurationSupportingP", "CATransitionType"]
-- ["So30UIPasteConfigurationSupportingP", "CGFloat"]
 - !private ["So30UIPasteConfigurationSupportingP", "CheckoutCart"]
 - ["So30UIPasteConfigurationSupportingP", "IndexPath"]
-- ["So30UIPasteConfigurationSupportingP", "Int"]
-- ["So30UIPasteConfigurationSupportingP", "String"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIColor"]
 - ["So30UIPasteConfigurationSupportingP", "UISearchController"]
 - ["So30UIPasteConfigurationSupportingP", "UITableView"]
@@ -2093,7 +1985,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "obscuresBackgroundDuringPresentation"]
 - !private ["So30UIPasteConfigurationSupportingP", "placeholder"]
 - !private ["So30UIPasteConfigurationSupportingP", "popViewController"]
-- !private ["So30UIPasteConfigurationSupportingP", "popViewControllerAnimated"]
 - !private ["So30UIPasteConfigurationSupportingP", "register"]
 - !private ["So30UIPasteConfigurationSupportingP", "registerClass"]
 - !private ["So30UIPasteConfigurationSupportingP", "registerNib"]
@@ -2191,7 +2082,6 @@ depends-member:
 - !private ["So11UIResponderC", "obscuresBackgroundDuringPresentation"]
 - !private ["So11UIResponderC", "placeholder"]
 - !private ["So11UIResponderC", "popViewController"]
-- !private ["So11UIResponderC", "popViewControllerAnimated"]
 - !private ["So11UIResponderC", "register"]
 - !private ["So11UIResponderC", "registerClass"]
 - !private ["So11UIResponderC", "registerNib"]
@@ -2234,7 +2124,6 @@ depends-member:
 - ["So11UIResponderC", "viewWillAppear"]
 - ["So11UIResponderC", "viewWillDisappear"]
 - !private ["So11UIResponderC", "zip"]
-- ["So30UIResponderStandardEditActionsP", "Bool"]
 - ["So30UIResponderStandardEditActionsP", "Business"]
 - !private ["So30UIResponderStandardEditActionsP", "BusinessArrayTableViewCell"]
 - ["So30UIResponderStandardEditActionsP", "BusinessPickerProtocol"]
@@ -2243,11 +2132,8 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "CATransition"]
 - !private ["So30UIResponderStandardEditActionsP", "CATransitionSubtype"]
 - !private ["So30UIResponderStandardEditActionsP", "CATransitionType"]
-- ["So30UIResponderStandardEditActionsP", "CGFloat"]
 - !private ["So30UIResponderStandardEditActionsP", "CheckoutCart"]
 - ["So30UIResponderStandardEditActionsP", "IndexPath"]
-- ["So30UIResponderStandardEditActionsP", "Int"]
-- ["So30UIResponderStandardEditActionsP", "String"]
 - !private ["So30UIResponderStandardEditActionsP", "UIColor"]
 - ["So30UIResponderStandardEditActionsP", "UISearchController"]
 - ["So30UIResponderStandardEditActionsP", "UITableView"]
@@ -2290,7 +2176,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "obscuresBackgroundDuringPresentation"]
 - !private ["So30UIResponderStandardEditActionsP", "placeholder"]
 - !private ["So30UIResponderStandardEditActionsP", "popViewController"]
-- !private ["So30UIResponderStandardEditActionsP", "popViewControllerAnimated"]
 - !private ["So30UIResponderStandardEditActionsP", "register"]
 - !private ["So30UIResponderStandardEditActionsP", "registerClass"]
 - !private ["So30UIResponderStandardEditActionsP", "registerNib"]
@@ -2487,7 +2372,6 @@ depends-member:
 - !private ["So35UISpringLoadedInteractionSupportingP", "topAnchor"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "trailingAnchor"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "translatesAutoresizingMaskIntoConstraints"]
-- ["So16UIStateRestoringP", "Bool"]
 - ["So16UIStateRestoringP", "Business"]
 - !private ["So16UIStateRestoringP", "BusinessArrayTableViewCell"]
 - ["So16UIStateRestoringP", "BusinessPickerProtocol"]
@@ -2496,11 +2380,8 @@ depends-member:
 - !private ["So16UIStateRestoringP", "CATransition"]
 - !private ["So16UIStateRestoringP", "CATransitionSubtype"]
 - !private ["So16UIStateRestoringP", "CATransitionType"]
-- ["So16UIStateRestoringP", "CGFloat"]
 - !private ["So16UIStateRestoringP", "CheckoutCart"]
 - ["So16UIStateRestoringP", "IndexPath"]
-- ["So16UIStateRestoringP", "Int"]
-- ["So16UIStateRestoringP", "String"]
 - !private ["So16UIStateRestoringP", "UIColor"]
 - ["So16UIStateRestoringP", "UISearchController"]
 - ["So16UIStateRestoringP", "UITableView"]
@@ -2529,7 +2410,6 @@ depends-member:
 - ["So16UIStateRestoringP", "numberOfSectionsInTableView"]
 - !private ["So16UIStateRestoringP", "obscuresBackgroundDuringPresentation"]
 - !private ["So16UIStateRestoringP", "popViewController"]
-- !private ["So16UIStateRestoringP", "popViewControllerAnimated"]
 - ["So16UIStateRestoringP", "scrollViewDidChangeAdjustedContentInset"]
 - ["So16UIStateRestoringP", "scrollViewDidEndDecelerating"]
 - ["So16UIStateRestoringP", "scrollViewDidEndDragging"]
@@ -2701,7 +2581,6 @@ depends-member:
 - !private ["So17UITextInputTraitsP", "value"]
 - !private ["So34UITextPasteConfigurationSupportingP", ""]
 - !private ["So34UITextPasteConfigurationSupportingP", "backgroundColor"]
-- ["So18UITraitEnvironmentP", "Bool"]
 - ["So18UITraitEnvironmentP", "Business"]
 - !private ["So18UITraitEnvironmentP", "BusinessArrayTableViewCell"]
 - ["So18UITraitEnvironmentP", "BusinessPickerProtocol"]
@@ -2710,11 +2589,8 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "CATransition"]
 - !private ["So18UITraitEnvironmentP", "CATransitionSubtype"]
 - !private ["So18UITraitEnvironmentP", "CATransitionType"]
-- ["So18UITraitEnvironmentP", "CGFloat"]
 - !private ["So18UITraitEnvironmentP", "CheckoutCart"]
 - ["So18UITraitEnvironmentP", "IndexPath"]
-- ["So18UITraitEnvironmentP", "Int"]
-- ["So18UITraitEnvironmentP", "String"]
 - !private ["So18UITraitEnvironmentP", "UIColor"]
 - ["So18UITraitEnvironmentP", "UISearchController"]
 - ["So18UITraitEnvironmentP", "UITableView"]
@@ -2757,7 +2633,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "obscuresBackgroundDuringPresentation"]
 - !private ["So18UITraitEnvironmentP", "placeholder"]
 - !private ["So18UITraitEnvironmentP", "popViewController"]
-- !private ["So18UITraitEnvironmentP", "popViewControllerAnimated"]
 - !private ["So18UITraitEnvironmentP", "register"]
 - !private ["So18UITraitEnvironmentP", "registerClass"]
 - !private ["So18UITraitEnvironmentP", "registerNib"]
@@ -2800,7 +2675,6 @@ depends-member:
 - ["So18UITraitEnvironmentP", "viewWillAppear"]
 - ["So18UITraitEnvironmentP", "viewWillDisappear"]
 - !private ["So18UITraitEnvironmentP", "zip"]
-- ["So23UIUserActivityRestoringP", "Bool"]
 - ["So23UIUserActivityRestoringP", "Business"]
 - !private ["So23UIUserActivityRestoringP", "BusinessArrayTableViewCell"]
 - ["So23UIUserActivityRestoringP", "BusinessPickerProtocol"]
@@ -2809,11 +2683,8 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "CATransition"]
 - !private ["So23UIUserActivityRestoringP", "CATransitionSubtype"]
 - !private ["So23UIUserActivityRestoringP", "CATransitionType"]
-- ["So23UIUserActivityRestoringP", "CGFloat"]
 - !private ["So23UIUserActivityRestoringP", "CheckoutCart"]
 - ["So23UIUserActivityRestoringP", "IndexPath"]
-- ["So23UIUserActivityRestoringP", "Int"]
-- ["So23UIUserActivityRestoringP", "String"]
 - !private ["So23UIUserActivityRestoringP", "UIColor"]
 - ["So23UIUserActivityRestoringP", "UISearchController"]
 - ["So23UIUserActivityRestoringP", "UITableView"]
@@ -2856,7 +2727,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "obscuresBackgroundDuringPresentation"]
 - !private ["So23UIUserActivityRestoringP", "placeholder"]
 - !private ["So23UIUserActivityRestoringP", "popViewController"]
-- !private ["So23UIUserActivityRestoringP", "popViewControllerAnimated"]
 - !private ["So23UIUserActivityRestoringP", "register"]
 - !private ["So23UIUserActivityRestoringP", "registerClass"]
 - !private ["So23UIUserActivityRestoringP", "registerNib"]
@@ -2969,7 +2839,6 @@ depends-member:
 - ["So16UIViewControllerC", "numberOfSectionsInTableView"]
 - !private ["So16UIViewControllerC", "obscuresBackgroundDuringPresentation"]
 - !private ["So16UIViewControllerC", "popViewController"]
-- !private ["So16UIViewControllerC", "popViewControllerAnimated"]
 - ["So16UIViewControllerC", "scrollViewDidChangeAdjustedContentInset"]
 - ["So16UIViewControllerC", "scrollViewDidEndDecelerating"]
 - ["So16UIViewControllerC", "scrollViewDidEndDragging"]
@@ -3011,8 +2880,12 @@ depends-member:
 - !private ["So37UIViewControllerTransitioningDelegateP", "obscuresBackgroundDuringPresentation"]
 - !private ["So37UIViewControllerTransitioningDelegateP", "searchBar"]
 - !private ["So37UIViewControllerTransitioningDelegateP", "searchResultsUpdater"]
-- !private ["9Alamofire14URLConvertibleP", "isEmpty"]
-- !private ["9Alamofire14URLConvertibleP", "lowercased"]
+- !private ["7SwiftUI4ViewP", "addSubview"]
+- !private ["7SwiftUI4ViewP", "layer"]
+- !private ["7SwiftUI4ViewP", "layoutIfNeeded"]
+- !private ["7SwiftUI4ViewP", "safeAreaLayoutGuide"]
+- !private ["7SwiftUI4ViewP", "selectedBusinessHandler"]
+- !private ["7SwiftUI4ViewP", "setNeedsLayout"]
 - !private ["s14_ArrayProtocolP", "count"]
 - !private ["s14_ArrayProtocolP", "filter"]
 - ["s14_ArrayProtocolP", "init"]
@@ -3024,15 +2897,15 @@ depends-member:
 - ["s24_DestructorSafeContainerP", "init"]
 - !private ["s24_DestructorSafeContainerP", "subscript"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "isEmpty"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "lowercased"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
-- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "isEmpty"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "lowercased"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "isEmpty"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "lowercased"]
 - !private ["s26_ExpressibleByColorLiteralP", "clear"]
@@ -3253,10 +3126,6 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "zip"]
 - !private ["s21_ObjectiveCBridgeableP", ""]
 - !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
-- !private ["s21_ObjectiveCBridgeableP", "_bridgeToObjectiveC"]
-- !private ["s21_ObjectiveCBridgeableP", "_conditionallyBridgeFromObjectiveC"]
-- !private ["s21_ObjectiveCBridgeableP", "_forceBridgeFromObjectiveC"]
-- !private ["s21_ObjectiveCBridgeableP", "_unconditionallyBridgeFromObjectiveC"]
 - !private ["s21_ObjectiveCBridgeableP", "addSubview"]
 - !private ["s21_ObjectiveCBridgeableP", "count"]
 - !private ["s21_ObjectiveCBridgeableP", "default"]
@@ -3270,6 +3139,7 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "push"]
 - !private ["s21_ObjectiveCBridgeableP", "row"]
 - !private ["s21_ObjectiveCBridgeableP", "safeAreaLayoutGuide"]
+- !private ["s21_ObjectiveCBridgeableP", "selectedBusinessHandler"]
 - !private ["s21_ObjectiveCBridgeableP", "setNeedsLayout"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s20_SwiftNewtypeWrapperP", "default"]
@@ -3303,8 +3173,6 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "value"]
 depends-nominal:
-- "s18AdditiveArithmeticP"
-- "9Alamofire0A8ExtendedP"
 - "Sa"
 - "SK"
 - "8QuickBev8BusinessC"
@@ -3326,7 +3194,7 @@ depends-nominal:
 - "s7CVarArgP"
 - !private "8QuickBev12CheckoutCartC"
 - "Sl"
-- "SL"
+- !private "SL"
 - "10Foundation15ContiguousBytesP"
 - "s28CustomDebugStringConvertibleP"
 - "s17CustomReflectableP"
@@ -3337,18 +3205,17 @@ depends-nominal:
 - "SE"
 - "SQ"
 - "s25ExpressibleByArrayLiteralP"
-- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
-- "s25ExpressibleByFloatLiteralP"
-- "s27ExpressibleByIntegerLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- "s32ExpressibleByStringInterpolationP"
-- "s26ExpressibleByStringLiteralP"
-- "s33ExpressibleByUnicodeScalarLiteralP"
-- "SF"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "7SwiftUI7GestureP"
 - "SH"
 - !private "s12IdentifiableP"
 - !private "10Foundation9IndexPathV"
-- "s25LosslessStringConvertibleP"
+- !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
 - "SM"
 - "10Foundation19MutableDataProtocolP"
@@ -3362,13 +3229,13 @@ depends-nominal:
 - !private "So18NSLayoutConstraintC"
 - !private "So19NSLayoutXAxisAnchorC"
 - !private "So19NSLayoutYAxisAnchorC"
-- "So15NSManagedObjectC"
+- !private "So15NSManagedObjectC"
 - !private "So16NSMutableCopyingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
 - !private "So14NSSecureCodingP"
 - !private "So8NSStringC"
-- "Sj"
+- !private "Sj"
 - !private "7Combine16ObservableObjectP"
 - !private "Sq"
 - "Sk"
@@ -3376,13 +3243,12 @@ depends-nominal:
 - !private "SY"
 - !private "10Foundation20ReferenceConvertibleP"
 - "ST"
-- "s13SignedNumericP"
-- "Sx"
+- !private "Sx"
 - !private "SS"
 - !private "s27StringInterpolationProtocolP"
 - !private "Sy"
-- "s16TextOutputStreamP"
-- "s20TextOutputStreamableP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
@@ -3434,16 +3300,16 @@ depends-nominal:
 - "So16UIViewControllerC"
 - "So37UIViewControllerAnimatedTransitioningP"
 - "So37UIViewControllerTransitioningDelegateP"
-- !private "9Alamofire14URLConvertibleP"
+- !private "7SwiftUI4ViewP"
 - "s14_ArrayProtocolP"
 - !private "s30_CustomPlaygroundQuickLookableP"
 - "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
-- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
-- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
-- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - "s19_HasContiguousBytesP"
 - "s35_HasCustomAnyHashableRepresentationP"
@@ -3457,6 +3323,7 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -3465,7 +3332,6 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -3490,13 +3356,14 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/MapKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/DeveloperToolsSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIViewController+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSError+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-umbrella.h"
@@ -3582,7 +3449,6 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfoObject.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-Swift.h"
@@ -3609,7 +3475,6 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Modules/module.modulemap"
@@ -3647,4 +3512,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "bc88059aad8614875e12f1ded51e3ea5"
+interface-hash: "8e1b11d66b717a56a2d044542c62a852"

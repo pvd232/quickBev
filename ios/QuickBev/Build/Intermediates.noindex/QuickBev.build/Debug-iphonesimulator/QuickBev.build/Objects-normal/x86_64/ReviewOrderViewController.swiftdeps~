@@ -57,25 +57,21 @@ depends-top-level:
 - !private "+"
 - !private "/"
 - !private "??"
-- "AF"
+- "APIClient"
+- "APIRequest"
 - "Array"
 - "AssignmentPrecedence"
 - !private "BooleanLiteralType"
-- !private "CastingPrecedence"
 - !private "CheckoutCart"
 - !private "CoreDataManager"
 - "Error"
 - !private "FloatLiteralType"
 - !private "Int"
 - !private "IntegerLiteralType"
-- "JSONEncoder"
-- "JSONEncoding"
-- "JSONSerialization"
 - "NSCoder"
 - !private "NSLayoutConstraint"
 - !private "Order"
 - "OrderConfirmationViewController"
-- "Parameters"
 - "ReviewOrderViewController"
 - "RoundButton"
 - "STPPaymentContext"
@@ -109,7 +105,6 @@ depends-top-level:
 - !private "changeDefaultPaymentMethodButtonClicked"
 - !private "changePaymentMethodButton"
 - !private "choosePaymentButtonTapped"
-- "debugPrint"
 - !private "defaultPaymentMethodView"
 - !private "fatalError"
 - !private "orderSubtotalLabel"
@@ -131,6 +126,11 @@ depends-top-level:
 - !private "totalStackView"
 - !private "view"
 depends-member:
+- !private ["8QuickBev9APIClientV", "init"]
+- !private ["8QuickBev9APIClientV", "perform"]
+- !private ["8QuickBev10APIRequestC", "init"]
+- !private ["8QuickBev9APIResultO", "failure"]
+- !private ["8QuickBev9APIResultO", "success"]
 - !private ["s18AdditiveArithmeticP", ""]
 - !private ["s18AdditiveArithmeticP", "init"]
 - !private ["s18AdditiveArithmeticP", "rounded"]
@@ -158,8 +158,8 @@ depends-member:
 - ["So15CALayerDelegateP", "init"]
 - !private ["So15CALayerDelegateP", "isHidden"]
 - !private ["So15CALayerDelegateP", "leadingAnchor"]
-- !private ["So15CALayerDelegateP", "refreshColor"]
-- !private ["So15CALayerDelegateP", "refreshTitle"]
+- ["So15CALayerDelegateP", "refreshColor"]
+- ["So15CALayerDelegateP", "refreshTitle"]
 - !private ["So15CALayerDelegateP", "safeAreaLayoutGuide"]
 - !private ["So15CALayerDelegateP", "setContentHuggingPriority"]
 - !private ["So15CALayerDelegateP", "spacing"]
@@ -173,13 +173,11 @@ depends-member:
 - !private ["So15CALayerDelegateP", "widthAnchor"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "init"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "rounded"]
-- !private ["s7CVarArgP", "AF"]
+- !private ["s7CVarArgP", "APIClient"]
+- !private ["s7CVarArgP", "APIRequest"]
 - !private ["s7CVarArgP", "CheckoutCart"]
 - !private ["s7CVarArgP", "CoreDataManager"]
 - !private ["s7CVarArgP", "Int"]
-- !private ["s7CVarArgP", "JSONEncoder"]
-- !private ["s7CVarArgP", "JSONEncoding"]
-- !private ["s7CVarArgP", "JSONSerialization"]
 - !private ["s7CVarArgP", "NSLayoutConstraint"]
 - !private ["s7CVarArgP", "Order"]
 - !private ["s7CVarArgP", "OrderConfirmationViewController"]
@@ -226,7 +224,6 @@ depends-member:
 - !private ["s7CVarArgP", "cost"]
 - !private ["s7CVarArgP", "createPaymentIntent"]
 - !private ["s7CVarArgP", "customerContext"]
-- !private ["s7CVarArgP", "debugPrint"]
 - !private ["s7CVarArgP", "defaultPaymentMethodView"]
 - !private ["s7CVarArgP", "delegate"]
 - !private ["s7CVarArgP", "emptyCart"]
@@ -238,7 +235,6 @@ depends-member:
 - !private ["s7CVarArgP", "image"]
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isHidden"]
-- !private ["s7CVarArgP", "jsonObject"]
 - !private ["s7CVarArgP", "leadingAnchor"]
 - !private ["s7CVarArgP", "navigationController"]
 - !private ["s7CVarArgP", "orderSubtotalLabel"]
@@ -306,13 +302,11 @@ depends-member:
 - !private ["SL", "rounded"]
 - !private ["8QuickBev15CoreDataManagerC", "saveContext"]
 - !private ["8QuickBev15CoreDataManagerC", "sharedManager"]
-- !private ["s28CustomDebugStringConvertibleP", "AF"]
+- !private ["s28CustomDebugStringConvertibleP", "APIClient"]
+- !private ["s28CustomDebugStringConvertibleP", "APIRequest"]
 - !private ["s28CustomDebugStringConvertibleP", "CheckoutCart"]
 - !private ["s28CustomDebugStringConvertibleP", "CoreDataManager"]
 - !private ["s28CustomDebugStringConvertibleP", "Int"]
-- !private ["s28CustomDebugStringConvertibleP", "JSONEncoder"]
-- !private ["s28CustomDebugStringConvertibleP", "JSONEncoding"]
-- !private ["s28CustomDebugStringConvertibleP", "JSONSerialization"]
 - !private ["s28CustomDebugStringConvertibleP", "NSLayoutConstraint"]
 - !private ["s28CustomDebugStringConvertibleP", "Order"]
 - !private ["s28CustomDebugStringConvertibleP", "OrderConfirmationViewController"]
@@ -359,7 +353,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "cost"]
 - !private ["s28CustomDebugStringConvertibleP", "createPaymentIntent"]
 - !private ["s28CustomDebugStringConvertibleP", "customerContext"]
-- !private ["s28CustomDebugStringConvertibleP", "debugPrint"]
 - !private ["s28CustomDebugStringConvertibleP", "defaultPaymentMethodView"]
 - !private ["s28CustomDebugStringConvertibleP", "delegate"]
 - !private ["s28CustomDebugStringConvertibleP", "emptyCart"]
@@ -371,7 +364,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "image"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isHidden"]
-- !private ["s28CustomDebugStringConvertibleP", "jsonObject"]
 - !private ["s28CustomDebugStringConvertibleP", "leadingAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "navigationController"]
 - !private ["s28CustomDebugStringConvertibleP", "orderSubtotalLabel"]
@@ -389,7 +381,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "refreshColor"]
 - !private ["s28CustomDebugStringConvertibleP", "refreshTitle"]
 - !private ["s28CustomDebugStringConvertibleP", "requestPayment"]
-- !private ["s28CustomDebugStringConvertibleP", "result"]
 - !private ["s28CustomDebugStringConvertibleP", "rounded"]
 - !private ["s28CustomDebugStringConvertibleP", "safeAreaLayoutGuide"]
 - !private ["s28CustomDebugStringConvertibleP", "salesTax"]
@@ -431,13 +422,11 @@ depends-member:
 - !private ["s17CustomReflectableP", "rounded"]
 - !private ["s17CustomReflectableP", "safeAreaLayoutGuide"]
 - !private ["s17CustomReflectableP", "white"]
-- !private ["s23CustomStringConvertibleP", "AF"]
+- !private ["s23CustomStringConvertibleP", "APIClient"]
+- !private ["s23CustomStringConvertibleP", "APIRequest"]
 - !private ["s23CustomStringConvertibleP", "CheckoutCart"]
 - !private ["s23CustomStringConvertibleP", "CoreDataManager"]
 - !private ["s23CustomStringConvertibleP", "Int"]
-- !private ["s23CustomStringConvertibleP", "JSONEncoder"]
-- !private ["s23CustomStringConvertibleP", "JSONEncoding"]
-- !private ["s23CustomStringConvertibleP", "JSONSerialization"]
 - !private ["s23CustomStringConvertibleP", "NSLayoutConstraint"]
 - !private ["s23CustomStringConvertibleP", "Order"]
 - !private ["s23CustomStringConvertibleP", "OrderConfirmationViewController"]
@@ -484,7 +473,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "cost"]
 - !private ["s23CustomStringConvertibleP", "createPaymentIntent"]
 - !private ["s23CustomStringConvertibleP", "customerContext"]
-- !private ["s23CustomStringConvertibleP", "debugPrint"]
 - !private ["s23CustomStringConvertibleP", "defaultPaymentMethodView"]
 - !private ["s23CustomStringConvertibleP", "delegate"]
 - !private ["s23CustomStringConvertibleP", "emptyCart"]
@@ -496,7 +484,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "image"]
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isHidden"]
-- !private ["s23CustomStringConvertibleP", "jsonObject"]
 - !private ["s23CustomStringConvertibleP", "leadingAnchor"]
 - !private ["s23CustomStringConvertibleP", "navigationController"]
 - !private ["s23CustomStringConvertibleP", "orderSubtotalLabel"]
@@ -514,8 +501,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "refreshColor"]
 - !private ["s23CustomStringConvertibleP", "refreshTitle"]
 - !private ["s23CustomStringConvertibleP", "requestPayment"]
-- !private ["s23CustomStringConvertibleP", "responseJSON"]
-- !private ["s23CustomStringConvertibleP", "result"]
 - !private ["s23CustomStringConvertibleP", "rounded"]
 - !private ["s23CustomStringConvertibleP", "safeAreaLayoutGuide"]
 - !private ["s23CustomStringConvertibleP", "salesTax"]
@@ -546,14 +531,10 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "totalHeaderLabel"]
 - !private ["s23CustomStringConvertibleP", "totalStackView"]
 - !private ["s23CustomStringConvertibleP", "trailingAnchor"]
-- !private ["s23CustomStringConvertibleP", "validate"]
 - !private ["s23CustomStringConvertibleP", "view"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
 - !private ["s23CustomStringConvertibleP", "white"]
 - !private ["s23CustomStringConvertibleP", "widthAnchor"]
-- !private ["9Alamofire11DataRequestC", "responseJSON"]
-- !private ["9Alamofire11DataRequestC", "validate"]
-- !private ["9Alamofire12DataResponseV", "result"]
 - !private ["Se", "addSubview"]
 - !private ["Se", "backgroundColor"]
 - !private ["Se", "bounds"]
@@ -569,13 +550,11 @@ depends-member:
 - !private ["SE", "rounded"]
 - !private ["SE", "safeAreaLayoutGuide"]
 - !private ["SE", "white"]
-- !private ["SQ", "AF"]
+- !private ["SQ", "APIClient"]
+- !private ["SQ", "APIRequest"]
 - !private ["SQ", "CheckoutCart"]
 - !private ["SQ", "CoreDataManager"]
 - !private ["SQ", "Int"]
-- !private ["SQ", "JSONEncoder"]
-- !private ["SQ", "JSONEncoding"]
-- !private ["SQ", "JSONSerialization"]
 - !private ["SQ", "NSLayoutConstraint"]
 - !private ["SQ", "Order"]
 - !private ["SQ", "OrderConfirmationViewController"]
@@ -626,7 +605,6 @@ depends-member:
 - !private ["SQ", "cost"]
 - !private ["SQ", "createPaymentIntent"]
 - !private ["SQ", "customerContext"]
-- !private ["SQ", "debugPrint"]
 - !private ["SQ", "defaultPaymentMethodView"]
 - !private ["SQ", "delegate"]
 - !private ["SQ", "emptyCart"]
@@ -642,7 +620,6 @@ depends-member:
 - !private ["SQ", "image"]
 - ["SQ", "init"]
 - !private ["SQ", "isHidden"]
-- !private ["SQ", "jsonObject"]
 - ["SQ", "large"]
 - !private ["SQ", "leadingAnchor"]
 - !private ["SQ", "navigationController"]
@@ -662,7 +639,6 @@ depends-member:
 - !private ["SQ", "refreshColor"]
 - !private ["SQ", "refreshTitle"]
 - !private ["SQ", "requestPayment"]
-- !private ["SQ", "responseJSON"]
 - !private ["SQ", "rounded"]
 - !private ["SQ", "safeAreaLayoutGuide"]
 - !private ["SQ", "salesTax"]
@@ -697,7 +673,6 @@ depends-member:
 - !private ["SQ", "touchUpInside"]
 - !private ["SQ", "trailingAnchor"]
 - ["SQ", "userCancellation"]
-- !private ["SQ", "validate"]
 - !private ["SQ", "vertical"]
 - !private ["SQ", "view"]
 - !private ["SQ", "viewDidLoad"]
@@ -734,14 +709,17 @@ depends-member:
 - !private ["s17FixedWidthIntegerP", "rounded"]
 - !private ["SF", ""]
 - !private ["SF", "rounded"]
-- !private ["9Alamofire10HTTPMethodV", "post"]
-- !private ["SH", "AF"]
+- !private ["7SwiftUI7GestureP", "addSubview"]
+- !private ["7SwiftUI7GestureP", "backgroundColor"]
+- !private ["7SwiftUI7GestureP", "bounds"]
+- !private ["7SwiftUI7GestureP", "safeAreaLayoutGuide"]
+- !private ["7SwiftUI7GestureP", "white"]
+- !private ["8QuickBev10HTTPMethodO", "post"]
+- !private ["SH", "APIClient"]
+- !private ["SH", "APIRequest"]
 - !private ["SH", "CheckoutCart"]
 - !private ["SH", "CoreDataManager"]
 - !private ["SH", "Int"]
-- !private ["SH", "JSONEncoder"]
-- !private ["SH", "JSONEncoding"]
-- !private ["SH", "JSONSerialization"]
 - !private ["SH", "NSLayoutConstraint"]
 - !private ["SH", "Order"]
 - !private ["SH", "OrderConfirmationViewController"]
@@ -792,7 +770,6 @@ depends-member:
 - !private ["SH", "cost"]
 - !private ["SH", "createPaymentIntent"]
 - !private ["SH", "customerContext"]
-- !private ["SH", "debugPrint"]
 - !private ["SH", "defaultPaymentMethodView"]
 - !private ["SH", "delegate"]
 - !private ["SH", "emptyCart"]
@@ -808,7 +785,6 @@ depends-member:
 - !private ["SH", "image"]
 - ["SH", "init"]
 - !private ["SH", "isHidden"]
-- !private ["SH", "jsonObject"]
 - ["SH", "large"]
 - !private ["SH", "leadingAnchor"]
 - !private ["SH", "navigationController"]
@@ -828,7 +804,6 @@ depends-member:
 - !private ["SH", "refreshColor"]
 - !private ["SH", "refreshTitle"]
 - !private ["SH", "requestPayment"]
-- !private ["SH", "responseJSON"]
 - !private ["SH", "rounded"]
 - !private ["SH", "safeAreaLayoutGuide"]
 - !private ["SH", "salesTax"]
@@ -862,7 +837,6 @@ depends-member:
 - !private ["SH", "totalStackView"]
 - !private ["SH", "trailingAnchor"]
 - ["SH", "userCancellation"]
-- !private ["SH", "validate"]
 - !private ["SH", "vertical"]
 - !private ["SH", "view"]
 - !private ["SH", "viewDidLoad"]
@@ -879,28 +853,21 @@ depends-member:
 - !private ["s12IdentifiableP", "tipAmount"]
 - !private ["Si", "init"]
 - !private ["Si", "rounded"]
-- !private ["10Foundation11JSONEncoderC", "encode"]
-- !private ["10Foundation11JSONEncoderC", "init"]
-- !private ["9Alamofire12JSONEncodingV", "default"]
-- !private ["So19NSJSONSerializationC", "jsonObject"]
 - !private ["s25LosslessStringConvertibleP", ""]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s25LosslessStringConvertibleP", "rounded"]
 - !private ["10Foundation11MeasurementV", "rounded"]
 - !private ["s10MirrorPathP", "init"]
 - !private ["s10MirrorPathP", "rounded"]
-- !private ["So8NSCodingP", "AF"]
+- !private ["So8NSCodingP", "APIClient"]
+- !private ["So8NSCodingP", "APIRequest"]
 - !private ["So8NSCodingP", "CheckoutCart"]
 - !private ["So8NSCodingP", "CoreDataManager"]
 - ["So8NSCodingP", "Error"]
 - !private ["So8NSCodingP", "Int"]
-- !private ["So8NSCodingP", "JSONEncoder"]
-- !private ["So8NSCodingP", "JSONEncoding"]
-- !private ["So8NSCodingP", "JSONSerialization"]
 - !private ["So8NSCodingP", "NSLayoutConstraint"]
 - !private ["So8NSCodingP", "Order"]
 - !private ["So8NSCodingP", "OrderConfirmationViewController"]
-- !private ["So8NSCodingP", "Parameters"]
 - ["So8NSCodingP", "RoundButton"]
 - ["So8NSCodingP", "STPPaymentContext"]
 - !private ["So8NSCodingP", "STPPaymentHandler"]
@@ -962,7 +929,6 @@ depends-member:
 - ["So8NSCodingP", "changePaymentMethodButton"]
 - ["So8NSCodingP", "choosePaymentButtonTapped"]
 - !private ["So8NSCodingP", "constraint"]
-- !private ["So8NSCodingP", "debugPrint"]
 - ["So8NSCodingP", "defaultPaymentMethodView"]
 - !private ["So8NSCodingP", "fatalError"]
 - !private ["So8NSCodingP", "font"]
@@ -981,8 +947,8 @@ depends-member:
 - ["So8NSCodingP", "paymentContextDidChange"]
 - !private ["So8NSCodingP", "present"]
 - !private ["So8NSCodingP", "print"]
-- !private ["So8NSCodingP", "refreshColor"]
-- !private ["So8NSCodingP", "refreshTitle"]
+- ["So8NSCodingP", "refreshColor"]
+- ["So8NSCodingP", "refreshTitle"]
 - !private ["So8NSCodingP", "safeAreaLayoutGuide"]
 - ["So8NSCodingP", "salesTaxHeaderLabel"]
 - ["So8NSCodingP", "salesTaxLabel"]
@@ -1014,18 +980,15 @@ depends-member:
 - !private ["So9NSCopyingP", "paymentMethodId"]
 - !private ["So9NSCopyingP", "themeColor"]
 - !private ["So9NSCopyingP", "white"]
-- !private ["So26NSExtensionRequestHandlingP", "AF"]
+- !private ["So26NSExtensionRequestHandlingP", "APIClient"]
+- !private ["So26NSExtensionRequestHandlingP", "APIRequest"]
 - !private ["So26NSExtensionRequestHandlingP", "CheckoutCart"]
 - !private ["So26NSExtensionRequestHandlingP", "CoreDataManager"]
 - ["So26NSExtensionRequestHandlingP", "Error"]
 - !private ["So26NSExtensionRequestHandlingP", "Int"]
-- !private ["So26NSExtensionRequestHandlingP", "JSONEncoder"]
-- !private ["So26NSExtensionRequestHandlingP", "JSONEncoding"]
-- !private ["So26NSExtensionRequestHandlingP", "JSONSerialization"]
 - !private ["So26NSExtensionRequestHandlingP", "NSLayoutConstraint"]
 - !private ["So26NSExtensionRequestHandlingP", "Order"]
 - !private ["So26NSExtensionRequestHandlingP", "OrderConfirmationViewController"]
-- !private ["So26NSExtensionRequestHandlingP", "Parameters"]
 - ["So26NSExtensionRequestHandlingP", "RoundButton"]
 - ["So26NSExtensionRequestHandlingP", "STPPaymentContext"]
 - !private ["So26NSExtensionRequestHandlingP", "STPPaymentHandler"]
@@ -1077,7 +1040,6 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "changeDefaultPaymentMethodButtonClicked"]
 - ["So26NSExtensionRequestHandlingP", "changePaymentMethodButton"]
 - ["So26NSExtensionRequestHandlingP", "choosePaymentButtonTapped"]
-- !private ["So26NSExtensionRequestHandlingP", "debugPrint"]
 - ["So26NSExtensionRequestHandlingP", "defaultPaymentMethodView"]
 - !private ["So26NSExtensionRequestHandlingP", "fatalError"]
 - ["So26NSExtensionRequestHandlingP", "init"]
@@ -1107,7 +1069,7 @@ depends-member:
 - !private ["So20NSFetchRequestResultP", "cost"]
 - !private ["So20NSFetchRequestResultP", "customerContext"]
 - ["So20NSFetchRequestResultP", "emptyCart"]
-- !private ["So20NSFetchRequestResultP", "init"]
+- ["So20NSFetchRequestResultP", "init"]
 - !private ["So20NSFetchRequestResultP", "salesTax"]
 - !private ["So20NSFetchRequestResultP", "shared"]
 - !private ["So20NSFetchRequestResultP", "subtotal"]
@@ -1134,19 +1096,16 @@ depends-member:
 - !private ["So15NSManagedObjectC", "shared"]
 - !private ["So15NSManagedObjectC", "subtotal"]
 - !private ["So15NSManagedObjectC", "tipAmount"]
-- !private ["So8NSObjectC", "AF"]
+- !private ["So8NSObjectC", "APIClient"]
+- !private ["So8NSObjectC", "APIRequest"]
 - !private ["So8NSObjectC", "CheckoutCart"]
 - !private ["So8NSObjectC", "CoreDataManager"]
 - ["So8NSObjectC", "Error"]
 - !private ["So8NSObjectC", "Int"]
-- !private ["So8NSObjectC", "JSONEncoder"]
-- !private ["So8NSObjectC", "JSONEncoding"]
-- !private ["So8NSObjectC", "JSONSerialization"]
 - ["So8NSObjectC", "NSCoder"]
 - !private ["So8NSObjectC", "NSLayoutConstraint"]
 - !private ["So8NSObjectC", "Order"]
 - !private ["So8NSObjectC", "OrderConfirmationViewController"]
-- !private ["So8NSObjectC", "Parameters"]
 - ["So8NSObjectC", "RoundButton"]
 - ["So8NSObjectC", "STPPaymentContext"]
 - !private ["So8NSObjectC", "STPPaymentHandler"]
@@ -1224,7 +1183,6 @@ depends-member:
 - !private ["So8NSObjectC", "cost"]
 - !private ["So8NSObjectC", "createPaymentIntent"]
 - !private ["So8NSObjectC", "customerContext"]
-- !private ["So8NSObjectC", "debugPrint"]
 - ["So8NSObjectC", "defaultPaymentMethodView"]
 - !private ["So8NSObjectC", "delegate"]
 - !private ["So8NSObjectC", "emptyCart"]
@@ -1236,7 +1194,6 @@ depends-member:
 - !private ["So8NSObjectC", "image"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "isHidden"]
-- !private ["So8NSObjectC", "jsonObject"]
 - !private ["So8NSObjectC", "leadingAnchor"]
 - !private ["So8NSObjectC", "navigationController"]
 - ["So8NSObjectC", "orderSubtotalLabel"]
@@ -1288,17 +1245,15 @@ depends-member:
 - ["So8NSObjectC", "viewDidLoad"]
 - !private ["So8NSObjectC", "white"]
 - !private ["So8NSObjectC", "widthAnchor"]
-- !private ["So8NSObjectP", "AF"]
+- !private ["So8NSObjectP", "APIClient"]
+- !private ["So8NSObjectP", "APIRequest"]
 - !private ["So8NSObjectP", "CheckoutCart"]
 - !private ["So8NSObjectP", "CoreDataManager"]
+- ["So8NSObjectP", "Error"]
 - !private ["So8NSObjectP", "Int"]
-- !private ["So8NSObjectP", "JSONEncoder"]
-- !private ["So8NSObjectP", "JSONEncoding"]
-- !private ["So8NSObjectP", "JSONSerialization"]
 - !private ["So8NSObjectP", "NSLayoutConstraint"]
 - !private ["So8NSObjectP", "Order"]
 - !private ["So8NSObjectP", "OrderConfirmationViewController"]
-- !private ["So8NSObjectP", "Parameters"]
 - ["So8NSObjectP", "RoundButton"]
 - ["So8NSObjectP", "STPPaymentContext"]
 - !private ["So8NSObjectP", "STPPaymentHandler"]
@@ -1374,9 +1329,8 @@ depends-member:
 - !private ["So8NSObjectP", "confirmPayment"]
 - !private ["So8NSObjectP", "constraint"]
 - !private ["So8NSObjectP", "cost"]
-- !private ["So8NSObjectP", "createPaymentIntent"]
+- ["So8NSObjectP", "createPaymentIntent"]
 - !private ["So8NSObjectP", "customerContext"]
-- !private ["So8NSObjectP", "debugPrint"]
 - ["So8NSObjectP", "defaultPaymentMethodView"]
 - !private ["So8NSObjectP", "delegate"]
 - ["So8NSObjectP", "emptyCart"]
@@ -1388,7 +1342,6 @@ depends-member:
 - !private ["So8NSObjectP", "image"]
 - ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "isHidden"]
-- !private ["So8NSObjectP", "jsonObject"]
 - !private ["So8NSObjectP", "label"]
 - !private ["So8NSObjectP", "leadingAnchor"]
 - !private ["So8NSObjectP", "navigationController"]
@@ -1405,8 +1358,8 @@ depends-member:
 - !private ["So8NSObjectP", "presentPaymentOptionsViewController"]
 - !private ["So8NSObjectP", "presentViewController"]
 - !private ["So8NSObjectP", "print"]
-- !private ["So8NSObjectP", "refreshColor"]
-- !private ["So8NSObjectP", "refreshTitle"]
+- ["So8NSObjectP", "refreshColor"]
+- ["So8NSObjectP", "refreshTitle"]
 - !private ["So8NSObjectP", "requestPayment"]
 - !private ["So8NSObjectP", "safeAreaLayoutGuide"]
 - !private ["So8NSObjectP", "salesTax"]
@@ -1467,7 +1420,6 @@ depends-member:
 - !private ["8QuickBev5OrderC", "init"]
 - !private ["8QuickBev31OrderConfirmationViewControllerC", ""]
 - !private ["8QuickBev31OrderConfirmationViewControllerC", "init"]
-- !private ["9Alamofire17ParameterEncodingP", "default"]
 - !private ["Sm", "init"]
 - !private ["SY", "RawValue"]
 - !private ["SY", ""]
@@ -1486,25 +1438,18 @@ depends-member:
 - ["SY", "userCancellation"]
 - !private ["SY", "vertical"]
 - !private ["10Foundation20ReferenceConvertibleP", "rounded"]
-- ["9Alamofire7RequestC", ""]
-- !private ["9Alamofire7RequestC", "responseJSON"]
-- !private ["9Alamofire7RequestC", "validate"]
-- !private ["9Alamofire15RequestDelegateP", "request"]
 - !private ["s6ResultO", "failure"]
 - !private ["s6ResultO", "success"]
-- !private ["8QuickBev25ReviewOrderViewControllerC", "AF"]
+- !private ["8QuickBev25ReviewOrderViewControllerC", "APIClient"]
+- !private ["8QuickBev25ReviewOrderViewControllerC", "APIRequest"]
 - !private ["8QuickBev25ReviewOrderViewControllerC", "CheckoutCart"]
 - !private ["8QuickBev25ReviewOrderViewControllerC", "CoreDataManager"]
 - ["8QuickBev25ReviewOrderViewControllerC", "Error"]
 - !private ["8QuickBev25ReviewOrderViewControllerC", "Int"]
-- !private ["8QuickBev25ReviewOrderViewControllerC", "JSONEncoder"]
-- !private ["8QuickBev25ReviewOrderViewControllerC", "JSONEncoding"]
-- !private ["8QuickBev25ReviewOrderViewControllerC", "JSONSerialization"]
 - ["8QuickBev25ReviewOrderViewControllerC", "NSCoder"]
 - !private ["8QuickBev25ReviewOrderViewControllerC", "NSLayoutConstraint"]
 - !private ["8QuickBev25ReviewOrderViewControllerC", "Order"]
 - !private ["8QuickBev25ReviewOrderViewControllerC", "OrderConfirmationViewController"]
-- !private ["8QuickBev25ReviewOrderViewControllerC", "Parameters"]
 - ["8QuickBev25ReviewOrderViewControllerC", "RoundButton"]
 - ["8QuickBev25ReviewOrderViewControllerC", "STPPaymentContext"]
 - !private ["8QuickBev25ReviewOrderViewControllerC", "STPPaymentHandler"]
@@ -1554,7 +1499,6 @@ depends-member:
 - ["8QuickBev25ReviewOrderViewControllerC", "changeDefaultPaymentMethodButtonClicked"]
 - ["8QuickBev25ReviewOrderViewControllerC", "changePaymentMethodButton"]
 - ["8QuickBev25ReviewOrderViewControllerC", "choosePaymentButtonTapped"]
-- !private ["8QuickBev25ReviewOrderViewControllerC", "debugPrint"]
 - ["8QuickBev25ReviewOrderViewControllerC", "defaultPaymentMethodView"]
 - ["8QuickBev25ReviewOrderViewControllerC", "deinit"]
 - !private ["8QuickBev25ReviewOrderViewControllerC", "fatalError"]
@@ -1605,7 +1549,7 @@ depends-member:
 - !private ["6Stripe24STPAuthenticationContextP", "presentPaymentOptionsViewController"]
 - !private ["6Stripe24STPAuthenticationContextP", "requestPayment"]
 - !private ["6Stripe24STPAuthenticationContextP", "selectedPaymentOption"]
-- !private ["6Stripe31STPCustomerEphemeralKeyProviderP", "createPaymentIntent"]
+- ["6Stripe31STPCustomerEphemeralKeyProviderP", "createPaymentIntent"]
 - !private ["6Stripe31STPCustomerEphemeralKeyProviderP", "sharedAPIClient"]
 - !private ["6Stripe16STPFormEncodableP", "init"]
 - !private ["6Stripe16STPFormEncodableP", "paymentMethodId"]
@@ -1616,13 +1560,11 @@ depends-member:
 - !private ["6Stripe17STPPaymentContextC", "presentPaymentOptionsViewController"]
 - !private ["6Stripe17STPPaymentContextC", "requestPayment"]
 - !private ["6Stripe17STPPaymentContextC", "selectedPaymentOption"]
-- !private ["6Stripe25STPPaymentContextDelegateP", "AF"]
+- !private ["6Stripe25STPPaymentContextDelegateP", "APIClient"]
+- !private ["6Stripe25STPPaymentContextDelegateP", "APIRequest"]
 - !private ["6Stripe25STPPaymentContextDelegateP", "CheckoutCart"]
 - !private ["6Stripe25STPPaymentContextDelegateP", "CoreDataManager"]
 - !private ["6Stripe25STPPaymentContextDelegateP", "Int"]
-- !private ["6Stripe25STPPaymentContextDelegateP", "JSONEncoder"]
-- !private ["6Stripe25STPPaymentContextDelegateP", "JSONEncoding"]
-- !private ["6Stripe25STPPaymentContextDelegateP", "JSONSerialization"]
 - !private ["6Stripe25STPPaymentContextDelegateP", "NSLayoutConstraint"]
 - !private ["6Stripe25STPPaymentContextDelegateP", "Order"]
 - !private ["6Stripe25STPPaymentContextDelegateP", "OrderConfirmationViewController"]
@@ -1672,7 +1614,6 @@ depends-member:
 - ["6Stripe25STPPaymentContextDelegateP", "changeDefaultPaymentMethodButtonClicked"]
 - ["6Stripe25STPPaymentContextDelegateP", "changePaymentMethodButton"]
 - ["6Stripe25STPPaymentContextDelegateP", "choosePaymentButtonTapped"]
-- !private ["6Stripe25STPPaymentContextDelegateP", "debugPrint"]
 - ["6Stripe25STPPaymentContextDelegateP", "defaultPaymentMethodView"]
 - !private ["6Stripe25STPPaymentContextDelegateP", "fatalError"]
 - ["6Stripe25STPPaymentContextDelegateP", "init"]
@@ -1730,8 +1671,6 @@ depends-member:
 - !private ["6Stripe22STPURLCallbackListenerP", "shared"]
 - !private ["ST", ""]
 - !private ["ST", "init"]
-- !private ["9Alamofire7SessionC", "request"]
-- !private ["9Alamofire20SessionStateProviderP", "request"]
 - !private ["s10SetAlgebraP", ""]
 - !private ["s10SetAlgebraP", "touchUpInside"]
 - !private ["SZ", "init"]
@@ -1755,8 +1694,6 @@ depends-member:
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "rounded"]
 - ["8QuickBev5ThemeO", "UILabel"]
-- !private ["7Combine15TopLevelEncoderP", "encode"]
-- !private ["7Combine15TopLevelEncoderP", "init"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "addTarget"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "bottomAnchor"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "centerYAnchor"]
@@ -1764,8 +1701,8 @@ depends-member:
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "image"]
 - ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "init"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "leadingAnchor"]
-- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "refreshColor"]
-- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "refreshTitle"]
+- ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "refreshColor"]
+- ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "refreshTitle"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "superview"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "titleLabel"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "trailingAnchor"]
@@ -1786,8 +1723,8 @@ depends-member:
 - ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "isHidden"]
 - !private ["So29UIAccessibilityIdentificationP", "leadingAnchor"]
-- !private ["So29UIAccessibilityIdentificationP", "refreshColor"]
-- !private ["So29UIAccessibilityIdentificationP", "refreshTitle"]
+- ["So29UIAccessibilityIdentificationP", "refreshColor"]
+- ["So29UIAccessibilityIdentificationP", "refreshTitle"]
 - !private ["So29UIAccessibilityIdentificationP", "safeAreaLayoutGuide"]
 - !private ["So29UIAccessibilityIdentificationP", "setContentHuggingPriority"]
 - !private ["So29UIAccessibilityIdentificationP", "spacing"]
@@ -1828,8 +1765,8 @@ depends-member:
 - ["So12UIAppearanceP", "init"]
 - !private ["So12UIAppearanceP", "isHidden"]
 - !private ["So12UIAppearanceP", "leadingAnchor"]
-- !private ["So12UIAppearanceP", "refreshColor"]
-- !private ["So12UIAppearanceP", "refreshTitle"]
+- ["So12UIAppearanceP", "refreshColor"]
+- ["So12UIAppearanceP", "refreshTitle"]
 - !private ["So12UIAppearanceP", "safeAreaLayoutGuide"]
 - !private ["So12UIAppearanceP", "setContentHuggingPriority"]
 - !private ["So12UIAppearanceP", "spacing"]
@@ -1841,18 +1778,15 @@ depends-member:
 - !private ["So12UIAppearanceP", "topAnchor"]
 - !private ["So12UIAppearanceP", "trailingAnchor"]
 - !private ["So12UIAppearanceP", "widthAnchor"]
-- !private ["So21UIAppearanceContainerP", "AF"]
+- !private ["So21UIAppearanceContainerP", "APIClient"]
+- !private ["So21UIAppearanceContainerP", "APIRequest"]
 - !private ["So21UIAppearanceContainerP", "CheckoutCart"]
 - !private ["So21UIAppearanceContainerP", "CoreDataManager"]
 - ["So21UIAppearanceContainerP", "Error"]
 - !private ["So21UIAppearanceContainerP", "Int"]
-- !private ["So21UIAppearanceContainerP", "JSONEncoder"]
-- !private ["So21UIAppearanceContainerP", "JSONEncoding"]
-- !private ["So21UIAppearanceContainerP", "JSONSerialization"]
 - !private ["So21UIAppearanceContainerP", "NSLayoutConstraint"]
 - !private ["So21UIAppearanceContainerP", "Order"]
 - !private ["So21UIAppearanceContainerP", "OrderConfirmationViewController"]
-- !private ["So21UIAppearanceContainerP", "Parameters"]
 - ["So21UIAppearanceContainerP", "RoundButton"]
 - ["So21UIAppearanceContainerP", "STPPaymentContext"]
 - !private ["So21UIAppearanceContainerP", "STPPaymentHandler"]
@@ -1913,7 +1847,6 @@ depends-member:
 - ["So21UIAppearanceContainerP", "changeDefaultPaymentMethodButtonClicked"]
 - ["So21UIAppearanceContainerP", "changePaymentMethodButton"]
 - ["So21UIAppearanceContainerP", "choosePaymentButtonTapped"]
-- !private ["So21UIAppearanceContainerP", "debugPrint"]
 - ["So21UIAppearanceContainerP", "defaultPaymentMethodView"]
 - !private ["So21UIAppearanceContainerP", "fatalError"]
 - !private ["So21UIAppearanceContainerP", "font"]
@@ -1932,8 +1865,8 @@ depends-member:
 - ["So21UIAppearanceContainerP", "paymentContextDidChange"]
 - !private ["So21UIAppearanceContainerP", "present"]
 - !private ["So21UIAppearanceContainerP", "print"]
-- !private ["So21UIAppearanceContainerP", "refreshColor"]
-- !private ["So21UIAppearanceContainerP", "refreshTitle"]
+- ["So21UIAppearanceContainerP", "refreshColor"]
+- ["So21UIAppearanceContainerP", "refreshTitle"]
 - !private ["So21UIAppearanceContainerP", "safeAreaLayoutGuide"]
 - ["So21UIAppearanceContainerP", "salesTaxHeaderLabel"]
 - ["So21UIAppearanceContainerP", "salesTaxLabel"]
@@ -1974,18 +1907,15 @@ depends-member:
 - !private ["So7UIColorC", "init"]
 - !private ["So7UIColorC", "themeColor"]
 - !private ["So7UIColorC", "white"]
-- !private ["So18UIContentContainerP", "AF"]
+- !private ["So18UIContentContainerP", "APIClient"]
+- !private ["So18UIContentContainerP", "APIRequest"]
 - !private ["So18UIContentContainerP", "CheckoutCart"]
 - !private ["So18UIContentContainerP", "CoreDataManager"]
 - ["So18UIContentContainerP", "Error"]
 - !private ["So18UIContentContainerP", "Int"]
-- !private ["So18UIContentContainerP", "JSONEncoder"]
-- !private ["So18UIContentContainerP", "JSONEncoding"]
-- !private ["So18UIContentContainerP", "JSONSerialization"]
 - !private ["So18UIContentContainerP", "NSLayoutConstraint"]
 - !private ["So18UIContentContainerP", "Order"]
 - !private ["So18UIContentContainerP", "OrderConfirmationViewController"]
-- !private ["So18UIContentContainerP", "Parameters"]
 - ["So18UIContentContainerP", "RoundButton"]
 - ["So18UIContentContainerP", "STPPaymentContext"]
 - !private ["So18UIContentContainerP", "STPPaymentHandler"]
@@ -2037,7 +1967,6 @@ depends-member:
 - ["So18UIContentContainerP", "changeDefaultPaymentMethodButtonClicked"]
 - ["So18UIContentContainerP", "changePaymentMethodButton"]
 - ["So18UIContentContainerP", "choosePaymentButtonTapped"]
-- !private ["So18UIContentContainerP", "debugPrint"]
 - ["So18UIContentContainerP", "defaultPaymentMethodView"]
 - !private ["So18UIContentContainerP", "fatalError"]
 - ["So18UIContentContainerP", "init"]
@@ -2071,14 +2000,15 @@ depends-member:
 - !private ["So30UIContentSizeCategoryAdjustingP", "superview"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "text"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "widthAnchor"]
+- !private ["So32UIContextMenuInteractionDelegateP", ""]
 - !private ["So32UIContextMenuInteractionDelegateP", "addTarget"]
 - !private ["So32UIContextMenuInteractionDelegateP", "bottomAnchor"]
 - !private ["So32UIContextMenuInteractionDelegateP", "centerYAnchor"]
 - !private ["So32UIContextMenuInteractionDelegateP", "heightAnchor"]
 - ["So32UIContextMenuInteractionDelegateP", "init"]
 - !private ["So32UIContextMenuInteractionDelegateP", "leadingAnchor"]
-- !private ["So32UIContextMenuInteractionDelegateP", "refreshColor"]
-- !private ["So32UIContextMenuInteractionDelegateP", "refreshTitle"]
+- ["So32UIContextMenuInteractionDelegateP", "refreshColor"]
+- ["So32UIContextMenuInteractionDelegateP", "refreshTitle"]
 - !private ["So32UIContextMenuInteractionDelegateP", "superview"]
 - !private ["So32UIContextMenuInteractionDelegateP", "titleLabel"]
 - !private ["So32UIContextMenuInteractionDelegateP", "trailingAnchor"]
@@ -2112,8 +2042,8 @@ depends-member:
 - ["So17UICoordinateSpaceP", "init"]
 - !private ["So17UICoordinateSpaceP", "isHidden"]
 - !private ["So17UICoordinateSpaceP", "leadingAnchor"]
-- !private ["So17UICoordinateSpaceP", "refreshColor"]
-- !private ["So17UICoordinateSpaceP", "refreshTitle"]
+- ["So17UICoordinateSpaceP", "refreshColor"]
+- ["So17UICoordinateSpaceP", "refreshTitle"]
 - !private ["So17UICoordinateSpaceP", "safeAreaLayoutGuide"]
 - !private ["So17UICoordinateSpaceP", "setContentHuggingPriority"]
 - !private ["So17UICoordinateSpaceP", "spacing"]
@@ -2141,8 +2071,8 @@ depends-member:
 - ["So13UIDynamicItemP", "init"]
 - !private ["So13UIDynamicItemP", "isHidden"]
 - !private ["So13UIDynamicItemP", "leadingAnchor"]
-- !private ["So13UIDynamicItemP", "refreshColor"]
-- !private ["So13UIDynamicItemP", "refreshTitle"]
+- ["So13UIDynamicItemP", "refreshColor"]
+- ["So13UIDynamicItemP", "refreshTitle"]
 - !private ["So13UIDynamicItemP", "safeAreaLayoutGuide"]
 - !private ["So13UIDynamicItemP", "setContentHuggingPriority"]
 - !private ["So13UIDynamicItemP", "spacing"]
@@ -2154,18 +2084,15 @@ depends-member:
 - !private ["So13UIDynamicItemP", "topAnchor"]
 - !private ["So13UIDynamicItemP", "trailingAnchor"]
 - !private ["So13UIDynamicItemP", "widthAnchor"]
-- !private ["So18UIFocusEnvironmentP", "AF"]
+- !private ["So18UIFocusEnvironmentP", "APIClient"]
+- !private ["So18UIFocusEnvironmentP", "APIRequest"]
 - !private ["So18UIFocusEnvironmentP", "CheckoutCart"]
 - !private ["So18UIFocusEnvironmentP", "CoreDataManager"]
 - ["So18UIFocusEnvironmentP", "Error"]
 - !private ["So18UIFocusEnvironmentP", "Int"]
-- !private ["So18UIFocusEnvironmentP", "JSONEncoder"]
-- !private ["So18UIFocusEnvironmentP", "JSONEncoding"]
-- !private ["So18UIFocusEnvironmentP", "JSONSerialization"]
 - !private ["So18UIFocusEnvironmentP", "NSLayoutConstraint"]
 - !private ["So18UIFocusEnvironmentP", "Order"]
 - !private ["So18UIFocusEnvironmentP", "OrderConfirmationViewController"]
-- !private ["So18UIFocusEnvironmentP", "Parameters"]
 - ["So18UIFocusEnvironmentP", "RoundButton"]
 - ["So18UIFocusEnvironmentP", "STPPaymentContext"]
 - !private ["So18UIFocusEnvironmentP", "STPPaymentHandler"]
@@ -2226,7 +2153,6 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "changeDefaultPaymentMethodButtonClicked"]
 - ["So18UIFocusEnvironmentP", "changePaymentMethodButton"]
 - ["So18UIFocusEnvironmentP", "choosePaymentButtonTapped"]
-- !private ["So18UIFocusEnvironmentP", "debugPrint"]
 - ["So18UIFocusEnvironmentP", "defaultPaymentMethodView"]
 - !private ["So18UIFocusEnvironmentP", "fatalError"]
 - !private ["So18UIFocusEnvironmentP", "font"]
@@ -2245,8 +2171,8 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "paymentContextDidChange"]
 - !private ["So18UIFocusEnvironmentP", "present"]
 - !private ["So18UIFocusEnvironmentP", "print"]
-- !private ["So18UIFocusEnvironmentP", "refreshColor"]
-- !private ["So18UIFocusEnvironmentP", "refreshTitle"]
+- ["So18UIFocusEnvironmentP", "refreshColor"]
+- ["So18UIFocusEnvironmentP", "refreshTitle"]
 - !private ["So18UIFocusEnvironmentP", "safeAreaLayoutGuide"]
 - ["So18UIFocusEnvironmentP", "salesTaxHeaderLabel"]
 - ["So18UIFocusEnvironmentP", "salesTaxLabel"]
@@ -2287,8 +2213,8 @@ depends-member:
 - ["So11UIFocusItemP", "init"]
 - !private ["So11UIFocusItemP", "isHidden"]
 - !private ["So11UIFocusItemP", "leadingAnchor"]
-- !private ["So11UIFocusItemP", "refreshColor"]
-- !private ["So11UIFocusItemP", "refreshTitle"]
+- ["So11UIFocusItemP", "refreshColor"]
+- ["So11UIFocusItemP", "refreshTitle"]
 - !private ["So11UIFocusItemP", "safeAreaLayoutGuide"]
 - !private ["So11UIFocusItemP", "setContentHuggingPriority"]
 - !private ["So11UIFocusItemP", "spacing"]
@@ -2316,8 +2242,8 @@ depends-member:
 - ["So20UIFocusItemContainerP", "init"]
 - !private ["So20UIFocusItemContainerP", "isHidden"]
 - !private ["So20UIFocusItemContainerP", "leadingAnchor"]
-- !private ["So20UIFocusItemContainerP", "refreshColor"]
-- !private ["So20UIFocusItemContainerP", "refreshTitle"]
+- ["So20UIFocusItemContainerP", "refreshColor"]
+- ["So20UIFocusItemContainerP", "refreshTitle"]
 - !private ["So20UIFocusItemContainerP", "safeAreaLayoutGuide"]
 - !private ["So20UIFocusItemContainerP", "setContentHuggingPriority"]
 - !private ["So20UIFocusItemContainerP", "spacing"]
@@ -2363,8 +2289,8 @@ depends-member:
 - ["So24UILargeContentViewerItemP", "init"]
 - !private ["So24UILargeContentViewerItemP", "isHidden"]
 - !private ["So24UILargeContentViewerItemP", "leadingAnchor"]
-- !private ["So24UILargeContentViewerItemP", "refreshColor"]
-- !private ["So24UILargeContentViewerItemP", "refreshTitle"]
+- ["So24UILargeContentViewerItemP", "refreshColor"]
+- ["So24UILargeContentViewerItemP", "refreshTitle"]
 - !private ["So24UILargeContentViewerItemP", "safeAreaLayoutGuide"]
 - !private ["So24UILargeContentViewerItemP", "setContentHuggingPriority"]
 - !private ["So24UILargeContentViewerItemP", "spacing"]
@@ -2387,18 +2313,15 @@ depends-member:
 - !private ["So16UILayoutPrioritya", "RawValue"]
 - !private ["So16UILayoutPrioritya", "init"]
 - !private ["So22UINavigationControllerC", "setViewControllers"]
-- !private ["So30UIPasteConfigurationSupportingP", "AF"]
+- !private ["So30UIPasteConfigurationSupportingP", "APIClient"]
+- !private ["So30UIPasteConfigurationSupportingP", "APIRequest"]
 - !private ["So30UIPasteConfigurationSupportingP", "CheckoutCart"]
 - !private ["So30UIPasteConfigurationSupportingP", "CoreDataManager"]
 - ["So30UIPasteConfigurationSupportingP", "Error"]
 - !private ["So30UIPasteConfigurationSupportingP", "Int"]
-- !private ["So30UIPasteConfigurationSupportingP", "JSONEncoder"]
-- !private ["So30UIPasteConfigurationSupportingP", "JSONEncoding"]
-- !private ["So30UIPasteConfigurationSupportingP", "JSONSerialization"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSLayoutConstraint"]
 - !private ["So30UIPasteConfigurationSupportingP", "Order"]
 - !private ["So30UIPasteConfigurationSupportingP", "OrderConfirmationViewController"]
-- !private ["So30UIPasteConfigurationSupportingP", "Parameters"]
 - ["So30UIPasteConfigurationSupportingP", "RoundButton"]
 - ["So30UIPasteConfigurationSupportingP", "STPPaymentContext"]
 - !private ["So30UIPasteConfigurationSupportingP", "STPPaymentHandler"]
@@ -2459,7 +2382,6 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "changeDefaultPaymentMethodButtonClicked"]
 - ["So30UIPasteConfigurationSupportingP", "changePaymentMethodButton"]
 - ["So30UIPasteConfigurationSupportingP", "choosePaymentButtonTapped"]
-- !private ["So30UIPasteConfigurationSupportingP", "debugPrint"]
 - ["So30UIPasteConfigurationSupportingP", "defaultPaymentMethodView"]
 - !private ["So30UIPasteConfigurationSupportingP", "fatalError"]
 - !private ["So30UIPasteConfigurationSupportingP", "font"]
@@ -2479,8 +2401,8 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "present"]
 - !private ["So30UIPasteConfigurationSupportingP", "presentViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "print"]
-- !private ["So30UIPasteConfigurationSupportingP", "refreshColor"]
-- !private ["So30UIPasteConfigurationSupportingP", "refreshTitle"]
+- ["So30UIPasteConfigurationSupportingP", "refreshColor"]
+- ["So30UIPasteConfigurationSupportingP", "refreshTitle"]
 - !private ["So30UIPasteConfigurationSupportingP", "safeAreaLayoutGuide"]
 - ["So30UIPasteConfigurationSupportingP", "salesTaxHeaderLabel"]
 - ["So30UIPasteConfigurationSupportingP", "salesTaxLabel"]
@@ -2505,19 +2427,16 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "view"]
 - ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - !private ["So30UIPasteConfigurationSupportingP", "widthAnchor"]
-- !private ["So11UIResponderC", "AF"]
+- !private ["So11UIResponderC", "APIClient"]
+- !private ["So11UIResponderC", "APIRequest"]
 - !private ["So11UIResponderC", "CheckoutCart"]
 - !private ["So11UIResponderC", "CoreDataManager"]
 - ["So11UIResponderC", "Error"]
 - !private ["So11UIResponderC", "Int"]
-- !private ["So11UIResponderC", "JSONEncoder"]
-- !private ["So11UIResponderC", "JSONEncoding"]
-- !private ["So11UIResponderC", "JSONSerialization"]
 - ["So11UIResponderC", "NSCoder"]
 - !private ["So11UIResponderC", "NSLayoutConstraint"]
 - !private ["So11UIResponderC", "Order"]
 - !private ["So11UIResponderC", "OrderConfirmationViewController"]
-- !private ["So11UIResponderC", "Parameters"]
 - ["So11UIResponderC", "RoundButton"]
 - ["So11UIResponderC", "STPPaymentContext"]
 - !private ["So11UIResponderC", "STPPaymentHandler"]
@@ -2578,7 +2497,6 @@ depends-member:
 - ["So11UIResponderC", "changeDefaultPaymentMethodButtonClicked"]
 - ["So11UIResponderC", "changePaymentMethodButton"]
 - ["So11UIResponderC", "choosePaymentButtonTapped"]
-- !private ["So11UIResponderC", "debugPrint"]
 - ["So11UIResponderC", "defaultPaymentMethodView"]
 - !private ["So11UIResponderC", "fatalError"]
 - !private ["So11UIResponderC", "font"]
@@ -2624,18 +2542,15 @@ depends-member:
 - !private ["So11UIResponderC", "view"]
 - ["So11UIResponderC", "viewDidLoad"]
 - !private ["So11UIResponderC", "widthAnchor"]
-- !private ["So30UIResponderStandardEditActionsP", "AF"]
+- !private ["So30UIResponderStandardEditActionsP", "APIClient"]
+- !private ["So30UIResponderStandardEditActionsP", "APIRequest"]
 - !private ["So30UIResponderStandardEditActionsP", "CheckoutCart"]
 - !private ["So30UIResponderStandardEditActionsP", "CoreDataManager"]
 - ["So30UIResponderStandardEditActionsP", "Error"]
 - !private ["So30UIResponderStandardEditActionsP", "Int"]
-- !private ["So30UIResponderStandardEditActionsP", "JSONEncoder"]
-- !private ["So30UIResponderStandardEditActionsP", "JSONEncoding"]
-- !private ["So30UIResponderStandardEditActionsP", "JSONSerialization"]
 - !private ["So30UIResponderStandardEditActionsP", "NSLayoutConstraint"]
 - !private ["So30UIResponderStandardEditActionsP", "Order"]
 - !private ["So30UIResponderStandardEditActionsP", "OrderConfirmationViewController"]
-- !private ["So30UIResponderStandardEditActionsP", "Parameters"]
 - ["So30UIResponderStandardEditActionsP", "RoundButton"]
 - ["So30UIResponderStandardEditActionsP", "STPPaymentContext"]
 - !private ["So30UIResponderStandardEditActionsP", "STPPaymentHandler"]
@@ -2696,7 +2611,6 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "changeDefaultPaymentMethodButtonClicked"]
 - ["So30UIResponderStandardEditActionsP", "changePaymentMethodButton"]
 - ["So30UIResponderStandardEditActionsP", "choosePaymentButtonTapped"]
-- !private ["So30UIResponderStandardEditActionsP", "debugPrint"]
 - ["So30UIResponderStandardEditActionsP", "defaultPaymentMethodView"]
 - !private ["So30UIResponderStandardEditActionsP", "fatalError"]
 - !private ["So30UIResponderStandardEditActionsP", "font"]
@@ -2716,8 +2630,8 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "present"]
 - !private ["So30UIResponderStandardEditActionsP", "presentViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "print"]
-- !private ["So30UIResponderStandardEditActionsP", "refreshColor"]
-- !private ["So30UIResponderStandardEditActionsP", "refreshTitle"]
+- ["So30UIResponderStandardEditActionsP", "refreshColor"]
+- ["So30UIResponderStandardEditActionsP", "refreshTitle"]
 - !private ["So30UIResponderStandardEditActionsP", "safeAreaLayoutGuide"]
 - ["So30UIResponderStandardEditActionsP", "salesTaxHeaderLabel"]
 - ["So30UIResponderStandardEditActionsP", "salesTaxLabel"]
@@ -2749,8 +2663,8 @@ depends-member:
 - !private ["So35UISpringLoadedInteractionSupportingP", "heightAnchor"]
 - ["So35UISpringLoadedInteractionSupportingP", "init"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "leadingAnchor"]
-- !private ["So35UISpringLoadedInteractionSupportingP", "refreshColor"]
-- !private ["So35UISpringLoadedInteractionSupportingP", "refreshTitle"]
+- ["So35UISpringLoadedInteractionSupportingP", "refreshColor"]
+- ["So35UISpringLoadedInteractionSupportingP", "refreshTitle"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "superview"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "titleLabel"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "trailingAnchor"]
@@ -2764,18 +2678,15 @@ depends-member:
 - !private ["So11UIStackViewC", "spacing"]
 - !private ["So11UIStackViewC", "topAnchor"]
 - !private ["So11UIStackViewC", "widthAnchor"]
-- !private ["So16UIStateRestoringP", "AF"]
+- !private ["So16UIStateRestoringP", "APIClient"]
+- !private ["So16UIStateRestoringP", "APIRequest"]
 - !private ["So16UIStateRestoringP", "CheckoutCart"]
 - !private ["So16UIStateRestoringP", "CoreDataManager"]
 - ["So16UIStateRestoringP", "Error"]
 - !private ["So16UIStateRestoringP", "Int"]
-- !private ["So16UIStateRestoringP", "JSONEncoder"]
-- !private ["So16UIStateRestoringP", "JSONEncoding"]
-- !private ["So16UIStateRestoringP", "JSONSerialization"]
 - !private ["So16UIStateRestoringP", "NSLayoutConstraint"]
 - !private ["So16UIStateRestoringP", "Order"]
 - !private ["So16UIStateRestoringP", "OrderConfirmationViewController"]
-- !private ["So16UIStateRestoringP", "Parameters"]
 - ["So16UIStateRestoringP", "RoundButton"]
 - ["So16UIStateRestoringP", "STPPaymentContext"]
 - !private ["So16UIStateRestoringP", "STPPaymentHandler"]
@@ -2827,7 +2738,6 @@ depends-member:
 - ["So16UIStateRestoringP", "changeDefaultPaymentMethodButtonClicked"]
 - ["So16UIStateRestoringP", "changePaymentMethodButton"]
 - ["So16UIStateRestoringP", "choosePaymentButtonTapped"]
-- !private ["So16UIStateRestoringP", "debugPrint"]
 - ["So16UIStateRestoringP", "defaultPaymentMethodView"]
 - !private ["So16UIStateRestoringP", "fatalError"]
 - ["So16UIStateRestoringP", "init"]
@@ -2853,18 +2763,15 @@ depends-member:
 - ["So16UIStateRestoringP", "totalStackView"]
 - !private ["So16UIStateRestoringP", "view"]
 - ["So16UIStateRestoringP", "viewDidLoad"]
-- !private ["So18UITraitEnvironmentP", "AF"]
+- !private ["So18UITraitEnvironmentP", "APIClient"]
+- !private ["So18UITraitEnvironmentP", "APIRequest"]
 - !private ["So18UITraitEnvironmentP", "CheckoutCart"]
 - !private ["So18UITraitEnvironmentP", "CoreDataManager"]
 - ["So18UITraitEnvironmentP", "Error"]
 - !private ["So18UITraitEnvironmentP", "Int"]
-- !private ["So18UITraitEnvironmentP", "JSONEncoder"]
-- !private ["So18UITraitEnvironmentP", "JSONEncoding"]
-- !private ["So18UITraitEnvironmentP", "JSONSerialization"]
 - !private ["So18UITraitEnvironmentP", "NSLayoutConstraint"]
 - !private ["So18UITraitEnvironmentP", "Order"]
 - !private ["So18UITraitEnvironmentP", "OrderConfirmationViewController"]
-- !private ["So18UITraitEnvironmentP", "Parameters"]
 - ["So18UITraitEnvironmentP", "RoundButton"]
 - ["So18UITraitEnvironmentP", "STPPaymentContext"]
 - !private ["So18UITraitEnvironmentP", "STPPaymentHandler"]
@@ -2925,7 +2832,6 @@ depends-member:
 - ["So18UITraitEnvironmentP", "changeDefaultPaymentMethodButtonClicked"]
 - ["So18UITraitEnvironmentP", "changePaymentMethodButton"]
 - ["So18UITraitEnvironmentP", "choosePaymentButtonTapped"]
-- !private ["So18UITraitEnvironmentP", "debugPrint"]
 - ["So18UITraitEnvironmentP", "defaultPaymentMethodView"]
 - !private ["So18UITraitEnvironmentP", "fatalError"]
 - !private ["So18UITraitEnvironmentP", "font"]
@@ -2944,8 +2850,8 @@ depends-member:
 - ["So18UITraitEnvironmentP", "paymentContextDidChange"]
 - !private ["So18UITraitEnvironmentP", "present"]
 - !private ["So18UITraitEnvironmentP", "print"]
-- !private ["So18UITraitEnvironmentP", "refreshColor"]
-- !private ["So18UITraitEnvironmentP", "refreshTitle"]
+- ["So18UITraitEnvironmentP", "refreshColor"]
+- ["So18UITraitEnvironmentP", "refreshTitle"]
 - !private ["So18UITraitEnvironmentP", "safeAreaLayoutGuide"]
 - ["So18UITraitEnvironmentP", "salesTaxHeaderLabel"]
 - ["So18UITraitEnvironmentP", "salesTaxLabel"]
@@ -2970,18 +2876,15 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "view"]
 - ["So18UITraitEnvironmentP", "viewDidLoad"]
 - !private ["So18UITraitEnvironmentP", "widthAnchor"]
-- !private ["So23UIUserActivityRestoringP", "AF"]
+- !private ["So23UIUserActivityRestoringP", "APIClient"]
+- !private ["So23UIUserActivityRestoringP", "APIRequest"]
 - !private ["So23UIUserActivityRestoringP", "CheckoutCart"]
 - !private ["So23UIUserActivityRestoringP", "CoreDataManager"]
 - ["So23UIUserActivityRestoringP", "Error"]
 - !private ["So23UIUserActivityRestoringP", "Int"]
-- !private ["So23UIUserActivityRestoringP", "JSONEncoder"]
-- !private ["So23UIUserActivityRestoringP", "JSONEncoding"]
-- !private ["So23UIUserActivityRestoringP", "JSONSerialization"]
 - !private ["So23UIUserActivityRestoringP", "NSLayoutConstraint"]
 - !private ["So23UIUserActivityRestoringP", "Order"]
 - !private ["So23UIUserActivityRestoringP", "OrderConfirmationViewController"]
-- !private ["So23UIUserActivityRestoringP", "Parameters"]
 - ["So23UIUserActivityRestoringP", "RoundButton"]
 - ["So23UIUserActivityRestoringP", "STPPaymentContext"]
 - !private ["So23UIUserActivityRestoringP", "STPPaymentHandler"]
@@ -3042,7 +2945,6 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "changeDefaultPaymentMethodButtonClicked"]
 - ["So23UIUserActivityRestoringP", "changePaymentMethodButton"]
 - ["So23UIUserActivityRestoringP", "choosePaymentButtonTapped"]
-- !private ["So23UIUserActivityRestoringP", "debugPrint"]
 - ["So23UIUserActivityRestoringP", "defaultPaymentMethodView"]
 - !private ["So23UIUserActivityRestoringP", "fatalError"]
 - !private ["So23UIUserActivityRestoringP", "font"]
@@ -3062,8 +2964,8 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "present"]
 - !private ["So23UIUserActivityRestoringP", "presentViewController"]
 - !private ["So23UIUserActivityRestoringP", "print"]
-- !private ["So23UIUserActivityRestoringP", "refreshColor"]
-- !private ["So23UIUserActivityRestoringP", "refreshTitle"]
+- ["So23UIUserActivityRestoringP", "refreshColor"]
+- ["So23UIUserActivityRestoringP", "refreshTitle"]
 - !private ["So23UIUserActivityRestoringP", "safeAreaLayoutGuide"]
 - ["So23UIUserActivityRestoringP", "salesTaxHeaderLabel"]
 - ["So23UIUserActivityRestoringP", "salesTaxLabel"]
@@ -3118,19 +3020,16 @@ depends-member:
 - !private ["So6UIViewC", "topAnchor"]
 - !private ["So6UIViewC", "trailingAnchor"]
 - !private ["So6UIViewC", "widthAnchor"]
-- !private ["So16UIViewControllerC", "AF"]
+- !private ["So16UIViewControllerC", "APIClient"]
+- !private ["So16UIViewControllerC", "APIRequest"]
 - !private ["So16UIViewControllerC", "CheckoutCart"]
 - !private ["So16UIViewControllerC", "CoreDataManager"]
 - ["So16UIViewControllerC", "Error"]
 - !private ["So16UIViewControllerC", "Int"]
-- !private ["So16UIViewControllerC", "JSONEncoder"]
-- !private ["So16UIViewControllerC", "JSONEncoding"]
-- !private ["So16UIViewControllerC", "JSONSerialization"]
 - ["So16UIViewControllerC", "NSCoder"]
 - !private ["So16UIViewControllerC", "NSLayoutConstraint"]
 - !private ["So16UIViewControllerC", "Order"]
 - !private ["So16UIViewControllerC", "OrderConfirmationViewController"]
-- !private ["So16UIViewControllerC", "Parameters"]
 - ["So16UIViewControllerC", "RoundButton"]
 - ["So16UIViewControllerC", "STPPaymentContext"]
 - !private ["So16UIViewControllerC", "STPPaymentHandler"]
@@ -3182,7 +3081,6 @@ depends-member:
 - ["So16UIViewControllerC", "changeDefaultPaymentMethodButtonClicked"]
 - ["So16UIViewControllerC", "changePaymentMethodButton"]
 - ["So16UIViewControllerC", "choosePaymentButtonTapped"]
-- !private ["So16UIViewControllerC", "debugPrint"]
 - ["So16UIViewControllerC", "defaultPaymentMethodView"]
 - !private ["So16UIViewControllerC", "fatalError"]
 - ["So16UIViewControllerC", "init"]
@@ -3208,9 +3106,14 @@ depends-member:
 - ["So16UIViewControllerC", "totalStackView"]
 - !private ["So16UIViewControllerC", "view"]
 - ["So16UIViewControllerC", "viewDidLoad"]
-- !private ["9Alamofire14URLConvertibleP", "init"]
 - ["8QuickBev14UsesAutoLayoutV", "init"]
 - ["8QuickBev14UsesAutoLayoutV", "wrappedValue"]
+- !private ["7SwiftUI16VectorArithmeticP", "rounded"]
+- !private ["7SwiftUI4ViewP", "addSubview"]
+- !private ["7SwiftUI4ViewP", "backgroundColor"]
+- !private ["7SwiftUI4ViewP", "bounds"]
+- !private ["7SwiftUI4ViewP", "safeAreaLayoutGuide"]
+- !private ["7SwiftUI4ViewP", "white"]
 - !private ["s15_CVarArgAlignedP", "rounded"]
 - !private ["s22_CVarArgPassedAsDoubleP", "rounded"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "init"]
@@ -3228,18 +3131,18 @@ depends-member:
 - !private ["s26_ExpressibleByColorLiteralP", "init"]
 - !private ["s26_ExpressibleByColorLiteralP", "themeColor"]
 - !private ["s26_ExpressibleByColorLiteralP", "white"]
+- !private ["7SwiftUI18_FormatSpecifiableP", "init"]
+- !private ["7SwiftUI18_FormatSpecifiableP", "rounded"]
 - !private ["s19_HasContiguousBytesP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "RawValue"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", ""]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "rounded"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "AF"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "APIClient"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "APIRequest"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CheckoutCart"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CoreDataManager"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Int"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "JSONEncoder"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "JSONEncoding"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "JSONSerialization"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSLayoutConstraint"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Order"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "OrderConfirmationViewController"]
@@ -3286,7 +3189,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cost"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "createPaymentIntent"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "customerContext"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "debugPrint"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "defaultPaymentMethodView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "emptyCart"]
@@ -3298,7 +3200,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "image"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isHidden"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "jsonObject"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "leadingAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "orderSubtotalLabel"]
@@ -3349,13 +3250,11 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "white"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "widthAnchor"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "AF"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "APIClient"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "APIRequest"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CheckoutCart"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CoreDataManager"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Int"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "JSONEncoder"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "JSONEncoding"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "JSONSerialization"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSLayoutConstraint"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Order"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "OrderConfirmationViewController"]
@@ -3402,7 +3301,6 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cost"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "createPaymentIntent"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "customerContext"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "debugPrint"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "defaultPaymentMethodView"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "delegate"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "emptyCart"]
@@ -3414,7 +3312,6 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "image"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isHidden"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "jsonObject"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "leadingAnchor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "navigationController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "orderSubtotalLabel"]
@@ -3508,6 +3405,9 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "trailingAnchor"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "widthAnchor"]
 depends-nominal:
+- !private "8QuickBev9APIClientV"
+- !private "8QuickBev10APIRequestC"
+- !private "8QuickBev9APIResultO"
 - !private "s18AdditiveArithmeticP"
 - !private "So22UILayoutConstraintAxisV"
 - !private "SK"
@@ -3523,8 +3423,6 @@ depends-nominal:
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
-- !private "9Alamofire11DataRequestC"
-- !private "9Alamofire12DataResponseV"
 - !private "Se"
 - !private "Sd"
 - !private "SE"
@@ -3541,13 +3439,11 @@ depends-nominal:
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "s17FixedWidthIntegerP"
 - !private "SF"
-- !private "9Alamofire10HTTPMethodV"
+- !private "7SwiftUI7GestureP"
+- !private "8QuickBev10HTTPMethodO"
 - "SH"
 - !private "s12IdentifiableP"
 - !private "Si"
-- !private "10Foundation11JSONEncoderC"
-- !private "9Alamofire12JSONEncodingV"
-- !private "So19NSJSONSerializationC"
 - !private "s25LosslessStringConvertibleP"
 - !private "10Foundation11MeasurementV"
 - !private "s10MirrorPathP"
@@ -3572,12 +3468,9 @@ depends-nominal:
 - !private "Sq"
 - !private "8QuickBev5OrderC"
 - !private "8QuickBev31OrderConfirmationViewControllerC"
-- !private "9Alamofire17ParameterEncodingP"
 - !private "Sm"
 - "SY"
 - !private "10Foundation20ReferenceConvertibleP"
-- "9Alamofire7RequestC"
-- !private "9Alamofire15RequestDelegateP"
 - !private "s6ResultO"
 - "8QuickBev25ReviewOrderViewControllerC"
 - "8QuickBev11RoundButtonC"
@@ -3585,7 +3478,7 @@ depends-nominal:
 - !private "s10SIMDScalarP"
 - !private "6Stripe23STPAPIResponseDecodableP"
 - !private "6Stripe24STPAuthenticationContextP"
-- !private "6Stripe31STPCustomerEphemeralKeyProviderP"
+- "6Stripe31STPCustomerEphemeralKeyProviderP"
 - !private "6Stripe16STPFormEncodableP"
 - !private "6Stripe17STPPaymentContextC"
 - "6Stripe25STPPaymentContextDelegateP"
@@ -3600,8 +3493,6 @@ depends-nominal:
 - !private "6Stripe40STPShippingAddressViewControllerDelegateP"
 - !private "6Stripe22STPURLCallbackListenerP"
 - !private "ST"
-- !private "9Alamofire7SessionC"
-- !private "9Alamofire20SessionStateProviderP"
 - !private "s10SetAlgebraP"
 - !private "SZ"
 - !private "s13SignedNumericP"
@@ -3615,7 +3506,6 @@ depends-nominal:
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - "8QuickBev5ThemeO"
-- !private "7Combine15TopLevelEncoderP"
 - "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - "So29UIAccessibilityIdentificationP"
 - "So23UIActivityIndicatorViewC"
@@ -3652,8 +3542,9 @@ depends-nominal:
 - "So23UIUserActivityRestoringP"
 - "So6UIViewC"
 - "So16UIViewControllerC"
-- !private "9Alamofire14URLConvertibleP"
 - "8QuickBev14UsesAutoLayoutV"
+- !private "7SwiftUI16VectorArithmeticP"
+- !private "7SwiftUI4ViewP"
 - !private "s15_CVarArgAlignedP"
 - !private "s22_CVarArgPassedAsDoubleP"
 - !private "s30_CustomPlaygroundQuickLookableP"
@@ -3664,6 +3555,7 @@ depends-nominal:
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
+- !private "7SwiftUI18_FormatSpecifiableP"
 - !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
@@ -3676,6 +3568,7 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -3684,7 +3577,6 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -3711,12 +3603,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/MapKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/DeveloperToolsSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIViewController+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSError+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-umbrella.h"
@@ -3802,7 +3694,6 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfoObject.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-Swift.h"
@@ -3826,45 +3717,44 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSpacerView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWhitelistView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/module.map"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Modules/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "335b61fc84be01f2c7fca56981f8e455"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "4e2bc4332e2afbe146a312d40365d90b"

@@ -93,6 +93,7 @@ depends-top-level:
 - !private "apiAdapter"
 - !private "commonInit"
 - !private "delegate"
+- !private "fatalError"
 - !private "finish"
 - !private "internalViewController"
 - !private "internalViewControllerDidCreatePaymentOption"
@@ -106,6 +107,10 @@ depends-top-level:
 - !private "theme"
 - !private "view"
 depends-member:
+- !private ["7SwiftUI10AnimatableP", "height"]
+- !private ["7SwiftUI10AnimatableP", "init"]
+- !private ["7SwiftUI10AnimatableP", "size"]
+- !private ["7SwiftUI10AnimatableP", "width"]
 - !private ["Sa", "count"]
 - !private ["Sa", "first"]
 - !private ["SK", ""]
@@ -124,6 +129,8 @@ depends-member:
 - !private ["So6CGRectV", "size"]
 - !private ["So6CGSizeV", "height"]
 - !private ["So6CGSizeV", "width"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "count"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "first"]
 - !private ["s7CVarArgP", "CGRect"]
 - !private ["s7CVarArgP", "DispatchQueue"]
 - !private ["s7CVarArgP", "STPAPIClient"]
@@ -165,6 +172,7 @@ depends-member:
 - !private ["s7CVarArgP", "didMove"]
 - !private ["s7CVarArgP", "dismiss"]
 - !private ["s7CVarArgP", "fail"]
+- !private ["s7CVarArgP", "fatalError"]
 - !private ["s7CVarArgP", "finish"]
 - !private ["s7CVarArgP", "first"]
 - !private ["s7CVarArgP", "frame"]
@@ -258,6 +266,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "didMove"]
 - !private ["s28CustomDebugStringConvertibleP", "dismiss"]
 - !private ["s28CustomDebugStringConvertibleP", "fail"]
+- !private ["s28CustomDebugStringConvertibleP", "fatalError"]
 - !private ["s28CustomDebugStringConvertibleP", "finish"]
 - !private ["s28CustomDebugStringConvertibleP", "first"]
 - !private ["s28CustomDebugStringConvertibleP", "frame"]
@@ -360,6 +369,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "didMove"]
 - !private ["s23CustomStringConvertibleP", "dismiss"]
 - !private ["s23CustomStringConvertibleP", "fail"]
+- !private ["s23CustomStringConvertibleP", "fatalError"]
 - !private ["s23CustomStringConvertibleP", "finish"]
 - !private ["s23CustomStringConvertibleP", "first"]
 - !private ["s23CustomStringConvertibleP", "frame"]
@@ -477,6 +487,7 @@ depends-member:
 - !private ["SQ", "didMove"]
 - !private ["SQ", "dismiss"]
 - !private ["SQ", "fail"]
+- !private ["SQ", "fatalError"]
 - !private ["SQ", "finish"]
 - !private ["SQ", "first"]
 - !private ["SQ", "frame"]
@@ -541,6 +552,11 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "frame"]
 - !private ["s23ExpressibleByNilLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "insertSubview"]
+- !private ["7SwiftUI7GestureP", "addSubview"]
+- !private ["7SwiftUI7GestureP", "alpha"]
+- !private ["7SwiftUI7GestureP", "bounds"]
+- !private ["7SwiftUI7GestureP", "frame"]
+- !private ["7SwiftUI7GestureP", "insertSubview"]
 - !private ["SH", "CGRect"]
 - !private ["SH", "DispatchQueue"]
 - !private ["SH", "STPAPIClient"]
@@ -582,6 +598,7 @@ depends-member:
 - !private ["SH", "didMove"]
 - !private ["SH", "dismiss"]
 - !private ["SH", "fail"]
+- !private ["SH", "fatalError"]
 - !private ["SH", "finish"]
 - !private ["SH", "first"]
 - !private ["SH", "frame"]
@@ -673,6 +690,7 @@ depends-member:
 - ["So8NSCodingP", "delegate"]
 - !private ["So8NSCodingP", "didMove"]
 - ["So8NSCodingP", "dismiss"]
+- !private ["So8NSCodingP", "fatalError"]
 - ["So8NSCodingP", "finish"]
 - !private ["So8NSCodingP", "frame"]
 - ["So8NSCodingP", "handleCancelTapped"]
@@ -741,6 +759,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "delegate"]
 - !private ["So26NSExtensionRequestHandlingP", "didMove"]
 - ["So26NSExtensionRequestHandlingP", "dismiss"]
+- !private ["So26NSExtensionRequestHandlingP", "fatalError"]
 - ["So26NSExtensionRequestHandlingP", "finish"]
 - ["So26NSExtensionRequestHandlingP", "handleCancelTapped"]
 - ["So26NSExtensionRequestHandlingP", "init"]
@@ -828,6 +847,7 @@ depends-member:
 - ["So8NSObjectC", "dismiss"]
 - ["So8NSObjectC", "dismissViewControllerAnimated"]
 - !private ["So8NSObjectC", "fail"]
+- !private ["So8NSObjectC", "fatalError"]
 - ["So8NSObjectC", "finish"]
 - !private ["So8NSObjectC", "frame"]
 - ["So8NSObjectC", "handleCancelTapped"]
@@ -925,6 +945,7 @@ depends-member:
 - ["So8NSObjectP", "dismiss"]
 - ["So8NSObjectP", "dismissViewControllerAnimated"]
 - !private ["So8NSObjectP", "fail"]
+- !private ["So8NSObjectP", "fatalError"]
 - ["So8NSObjectP", "finish"]
 - !private ["So8NSObjectP", "frame"]
 - ["So8NSObjectP", "handleCancelTapped"]
@@ -1029,6 +1050,7 @@ depends-member:
 - ["6Stripe32STPAddCardViewControllerDelegateP", "deinit"]
 - ["6Stripe32STPAddCardViewControllerDelegateP", "delegate"]
 - ["6Stripe32STPAddCardViewControllerDelegateP", "dismiss"]
+- !private ["6Stripe32STPAddCardViewControllerDelegateP", "fatalError"]
 - ["6Stripe32STPAddCardViewControllerDelegateP", "finish"]
 - ["6Stripe32STPAddCardViewControllerDelegateP", "handleCancelTapped"]
 - ["6Stripe32STPAddCardViewControllerDelegateP", "init"]
@@ -1145,6 +1167,7 @@ depends-member:
 - ["6Stripe21STPCoreViewControllerC", "defaultPaymentMethod"]
 - ["6Stripe21STPCoreViewControllerC", "delegate"]
 - ["6Stripe21STPCoreViewControllerC", "dismiss"]
+- !private ["6Stripe21STPCoreViewControllerC", "fatalError"]
 - ["6Stripe21STPCoreViewControllerC", "finish"]
 - ["6Stripe21STPCoreViewControllerC", "handleCancelTapped"]
 - ["6Stripe21STPCoreViewControllerC", "init"]
@@ -1233,6 +1256,7 @@ depends-member:
 - ["6Stripe47STPPaymentOptionsInternalViewControllerDelegateP", "deinit"]
 - ["6Stripe47STPPaymentOptionsInternalViewControllerDelegateP", "delegate"]
 - ["6Stripe47STPPaymentOptionsInternalViewControllerDelegateP", "dismiss"]
+- !private ["6Stripe47STPPaymentOptionsInternalViewControllerDelegateP", "fatalError"]
 - ["6Stripe47STPPaymentOptionsInternalViewControllerDelegateP", "finish"]
 - ["6Stripe47STPPaymentOptionsInternalViewControllerDelegateP", "handleCancelTapped"]
 - ["6Stripe47STPPaymentOptionsInternalViewControllerDelegateP", "init"]
@@ -1300,6 +1324,7 @@ depends-member:
 - ["6Stripe31STPPaymentOptionsViewControllerC", "deinit"]
 - ["6Stripe31STPPaymentOptionsViewControllerC", "delegate"]
 - ["6Stripe31STPPaymentOptionsViewControllerC", "dismiss"]
+- !private ["6Stripe31STPPaymentOptionsViewControllerC", "fatalError"]
 - ["6Stripe31STPPaymentOptionsViewControllerC", "finish"]
 - ["6Stripe31STPPaymentOptionsViewControllerC", "handleCancelTapped"]
 - ["6Stripe31STPPaymentOptionsViewControllerC", "init"]
@@ -1414,6 +1439,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "delegate"]
 - !private ["So21UIAppearanceContainerP", "didMove"]
 - ["So21UIAppearanceContainerP", "dismiss"]
+- !private ["So21UIAppearanceContainerP", "fatalError"]
 - ["So21UIAppearanceContainerP", "finish"]
 - !private ["So21UIAppearanceContainerP", "frame"]
 - ["So21UIAppearanceContainerP", "handleCancelTapped"]
@@ -1478,6 +1504,7 @@ depends-member:
 - ["So18UIContentContainerP", "delegate"]
 - !private ["So18UIContentContainerP", "didMove"]
 - ["So18UIContentContainerP", "dismiss"]
+- !private ["So18UIContentContainerP", "fatalError"]
 - ["So18UIContentContainerP", "finish"]
 - ["So18UIContentContainerP", "handleCancelTapped"]
 - ["So18UIContentContainerP", "init"]
@@ -1562,6 +1589,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "delegate"]
 - !private ["So18UIFocusEnvironmentP", "didMove"]
 - ["So18UIFocusEnvironmentP", "dismiss"]
+- !private ["So18UIFocusEnvironmentP", "fatalError"]
 - ["So18UIFocusEnvironmentP", "finish"]
 - !private ["So18UIFocusEnvironmentP", "frame"]
 - ["So18UIFocusEnvironmentP", "handleCancelTapped"]
@@ -1667,6 +1695,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "didMoveToParentViewController"]
 - ["So30UIPasteConfigurationSupportingP", "dismiss"]
 - ["So30UIPasteConfigurationSupportingP", "dismissViewControllerAnimated"]
+- !private ["So30UIPasteConfigurationSupportingP", "fatalError"]
 - ["So30UIPasteConfigurationSupportingP", "finish"]
 - !private ["So30UIPasteConfigurationSupportingP", "frame"]
 - ["So30UIPasteConfigurationSupportingP", "handleCancelTapped"]
@@ -1752,6 +1781,7 @@ depends-member:
 - !private ["So11UIResponderC", "didMoveToParentViewController"]
 - ["So11UIResponderC", "dismiss"]
 - ["So11UIResponderC", "dismissViewControllerAnimated"]
+- !private ["So11UIResponderC", "fatalError"]
 - ["So11UIResponderC", "finish"]
 - !private ["So11UIResponderC", "frame"]
 - ["So11UIResponderC", "handleCancelTapped"]
@@ -1825,6 +1855,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "didMoveToParentViewController"]
 - ["So30UIResponderStandardEditActionsP", "dismiss"]
 - ["So30UIResponderStandardEditActionsP", "dismissViewControllerAnimated"]
+- !private ["So30UIResponderStandardEditActionsP", "fatalError"]
 - ["So30UIResponderStandardEditActionsP", "finish"]
 - !private ["So30UIResponderStandardEditActionsP", "frame"]
 - ["So30UIResponderStandardEditActionsP", "handleCancelTapped"]
@@ -1898,6 +1929,7 @@ depends-member:
 - ["So16UIStateRestoringP", "delegate"]
 - !private ["So16UIStateRestoringP", "didMove"]
 - ["So16UIStateRestoringP", "dismiss"]
+- !private ["So16UIStateRestoringP", "fatalError"]
 - ["So16UIStateRestoringP", "finish"]
 - ["So16UIStateRestoringP", "handleCancelTapped"]
 - ["So16UIStateRestoringP", "init"]
@@ -1980,6 +2012,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "delegate"]
 - !private ["So18UITraitEnvironmentP", "didMove"]
 - ["So18UITraitEnvironmentP", "dismiss"]
+- !private ["So18UITraitEnvironmentP", "fatalError"]
 - ["So18UITraitEnvironmentP", "finish"]
 - !private ["So18UITraitEnvironmentP", "frame"]
 - ["So18UITraitEnvironmentP", "handleCancelTapped"]
@@ -2053,6 +2086,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "didMoveToParentViewController"]
 - ["So23UIUserActivityRestoringP", "dismiss"]
 - ["So23UIUserActivityRestoringP", "dismissViewControllerAnimated"]
+- !private ["So23UIUserActivityRestoringP", "fatalError"]
 - ["So23UIUserActivityRestoringP", "finish"]
 - !private ["So23UIUserActivityRestoringP", "frame"]
 - ["So23UIUserActivityRestoringP", "handleCancelTapped"]
@@ -2139,6 +2173,7 @@ depends-member:
 - ["So16UIViewControllerC", "delegate"]
 - !private ["So16UIViewControllerC", "didMove"]
 - ["So16UIViewControllerC", "dismiss"]
+- !private ["So16UIViewControllerC", "fatalError"]
 - ["So16UIViewControllerC", "finish"]
 - ["So16UIViewControllerC", "handleCancelTapped"]
 - ["So16UIViewControllerC", "init"]
@@ -2166,6 +2201,11 @@ depends-member:
 - !private ["So16UIViewControllerC", "viewControllers"]
 - ["So16UIViewControllerC", "viewDidAppear"]
 - ["So16UIViewControllerC", "viewDidLayoutSubviews"]
+- !private ["7SwiftUI4ViewP", "addSubview"]
+- !private ["7SwiftUI4ViewP", "alpha"]
+- !private ["7SwiftUI4ViewP", "bounds"]
+- !private ["7SwiftUI4ViewP", "frame"]
+- !private ["7SwiftUI4ViewP", "insertSubview"]
 - !private ["s14_ArrayProtocolP", "count"]
 - !private ["s14_ArrayProtocolP", "first"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "height"]
@@ -2222,6 +2262,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "didMove"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dismiss"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "fail"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "finish"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "frame"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "handleCancelTapped"]
@@ -2308,6 +2349,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "didMove"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dismiss"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "fail"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "fatalError"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "finish"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "frame"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "handleCancelTapped"]
@@ -2375,11 +2417,13 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "insertSubview"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "tintColor"]
 depends-nominal:
+- !private "7SwiftUI10AnimatableP"
 - !private "Sa"
 - !private "SK"
 - !private "So15CALayerDelegateP"
 - !private "So6CGRectV"
 - !private "So6CGSizeV"
+- !private "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
 - !private "Sl"
 - !private "10Foundation15ContiguousBytesP"
@@ -2396,6 +2440,7 @@ depends-nominal:
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
+- !private "7SwiftUI7GestureP"
 - "SH"
 - !private "SM"
 - !private "10Foundation19MutableDataProtocolP"
@@ -2460,6 +2505,7 @@ depends-nominal:
 - "So23UIUserActivityRestoringP"
 - "So6UIViewC"
 - "So16UIViewControllerC"
+- !private "7SwiftUI4ViewP"
 - !private "s14_ArrayProtocolP"
 - !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
@@ -2477,8 +2523,10 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -2493,12 +2541,15 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/os.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/DeveloperToolsSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIViewController+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSError+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/Stripe3DS2.h"
@@ -2605,6 +2656,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
@@ -2618,13 +2670,15 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "84be4fa9d8f6633366847fd8bcf69d24"
+interface-hash: "7ad228724f60d3a5d6aa7e6e7621c551"

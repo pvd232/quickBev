@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 import Stripe
 import CoreData
 
@@ -174,7 +173,6 @@ class LoginViewController: UIViewController,  UITextFieldDelegate {
             formValue["password"] = textField.text!
         }
             return true
-
     }
     func textFieldDidEndEditing(_ textField: UITextField){
         print("did end")
@@ -190,22 +188,18 @@ class LoginViewController: UIViewController,  UITextFieldDelegate {
         activityIndicator.startAnimating()
         
         let userCredentials: [HTTPHeader] = [HTTPHeader(field: "email", value:emailTextField.text! ), HTTPHeader(field:"password", value:passwordTextField.text! )]
-        let request = APIRequest(method: .get, path:"/login")
-        request.headers = userCredentials
-        print("email", formValue["email"])
-        print("password", formValue["password"])
+        let request = try! APIRequest(method: .get, path:"/login", headers: userCredentials)
+//        request.headers = userCredentials
 
         APIClient().perform(request) { result in // this bracket is the trailing closure that is being passed into the APIClient perform function as an argument for the completion parameter. the data is the parameter that was passed into the completion by the APIClient perform function, which was in turn returned the data by the URL session task
             switch result {
             case .success (let response): // the response is the APIResponse struct parameter that was passed into the APIResult instance for the .success case
                 if response.statusCode == 200, let response = try? response.decode(to: User.self)  {
                     var user = response.body
-                    print("self.formValue[email]", self.formValue["email"])
-                    print("self.formValue[password]", self.formValue["password"])
-
-                    user.email = self.formValue["email"]
-                    user.password = self.formValue["password"]
-//                    user.email = emailTextField.text
+                    // the backend does not include email and password in the attributes it sends back for security so we have to grab them from the login fields manually if this is the first time the user is logging in on the device
+                    
+                    user.email = self.formValue["email"]!
+                    user.password = self.formValue["password"]!
                     if let fetchedUsers = CoreDataManager.sharedManager.fetchEntities(entityName: "User") as? [User] {
                         for fetchedUser in fetchedUsers{
                             if fetchedUser.id == user.id{
@@ -225,14 +219,12 @@ class LoginViewController: UIViewController,  UITextFieldDelegate {
                 else {
                     DispatchQueue.main.async {
                         self.activityIndicator.stopAnimating()
-                        
                         let alertController = UIAlertController(title: "Incorrect Username", message: "Your username or password was incorrect. Please try again.", preferredStyle: .alert)
                         alertController.addAction(UIAlertAction(title: "Try again", style: .cancel) { action in
                             self.dismiss( animated: true)
                         })
                         self.present(alertController, animated: true, completion: nil)
                     }
-                    
                 }
             case .failure(let error):                    // if the API fails the enum API result will be of the type failure
                 DispatchQueue.main.async {

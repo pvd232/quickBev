@@ -46,6 +46,7 @@ depends-top-level:
 - !private "/"
 - "=="
 - !private ">"
+- !private "APIClient"
 - "Array"
 - "AssignmentPrecedence"
 - "Bool"
@@ -60,6 +61,7 @@ depends-top-level:
 - !private "DispatchGroup"
 - "Drink"
 - !private "DrinkListTableViewController"
+- "ETag"
 - !private "FloatLiteralType"
 - "HomePageViewController"
 - !private "IntegerLiteralType"
@@ -83,13 +85,12 @@ depends-top-level:
 - "UIStackView"
 - !private "UITapGestureRecognizer"
 - "UIViewController"
+- !private "UnicodeScalarType"
 - "UsesAutoLayout"
 - !private "bottomButtonsViewContainer"
-- !private "businesses"
 - !private "centerButton"
 - !private "centerButtonTouchup"
 - !private "didLayoutBadgeNotification"
-- !private "drinks"
 - !private "ellipsisLabel"
 - !private "fatalError"
 - !private "goodEveningLabel"
@@ -104,11 +105,11 @@ depends-top-level:
 - !private "theNightIsYoungStackView"
 - !private "theNightisYoungLabel"
 depends-member:
-- !private ["s18AdditiveArithmeticP", ""]
-- !private ["9Alamofire0A8ExtendedP", "append"]
-- !private ["9Alamofire0A8ExtendedP", "count"]
-- ["9Alamofire0A8ExtendedP", "init"]
+- !private ["8QuickBev9APIClientV", "init"]
 - !private ["So20UIStackViewAlignmentV", "center"]
+- !private ["7SwiftUI10AnimatableP", "height"]
+- !private ["7SwiftUI10AnimatableP", "init"]
+- !private ["7SwiftUI10AnimatableP", "width"]
 - !private ["Sa", "append"]
 - !private ["Sa", "count"]
 - ["Sa", "init"]
@@ -132,7 +133,6 @@ depends-member:
 - !private ["8QuickBev25BusinessMapViewControllerC", "popoverPresentationController"]
 - !private ["8QuickBev25BusinessMapViewControllerC", "preferredContentSize"]
 - ["So15CALayerDelegateP", "LogoImageView"]
-- !private ["So15CALayerDelegateP", ""]
 - !private ["So15CALayerDelegateP", "addArrangedSubview"]
 - !private ["So15CALayerDelegateP", "addGestureRecognizer"]
 - !private ["So15CALayerDelegateP", "addSubview"]
@@ -154,8 +154,8 @@ depends-member:
 - !private ["So15CALayerDelegateP", "isUserInteractionEnabled"]
 - !private ["So15CALayerDelegateP", "leadingAnchor"]
 - !private ["So15CALayerDelegateP", "orderButton"]
-- ["So15CALayerDelegateP", "refreshColor"]
-- ["So15CALayerDelegateP", "refreshTitle"]
+- !private ["So15CALayerDelegateP", "refreshColor"]
+- !private ["So15CALayerDelegateP", "refreshTitle"]
 - !private ["So15CALayerDelegateP", "safeAreaLayoutGuide"]
 - !private ["So15CALayerDelegateP", "spacing"]
 - !private ["So15CALayerDelegateP", "text"]
@@ -177,6 +177,7 @@ depends-member:
 - !private ["So25CLLocationManagerDelegateP", "popoverPresentationController"]
 - !private ["So25CLLocationManagerDelegateP", "preferredContentSize"]
 - !private ["So15CNKeyDescriptorP", "capitalizingFirstLetter"]
+- !private ["s7CVarArgP", "APIClient"]
 - ["s7CVarArgP", "Business"]
 - !private ["s7CVarArgP", "BusinessMapViewController"]
 - !private ["s7CVarArgP", "CGFloat"]
@@ -226,6 +227,7 @@ depends-member:
 - !private ["s7CVarArgP", "businesses"]
 - !private ["s7CVarArgP", "capitalizingFirstLetter"]
 - !private ["s7CVarArgP", "cart"]
+- !private ["s7CVarArgP", "category"]
 - !private ["s7CVarArgP", "centerButton"]
 - !private ["s7CVarArgP", "centerButtonTouchup"]
 - !private ["s7CVarArgP", "centerXAnchor"]
@@ -323,14 +325,16 @@ depends-member:
 - !private ["Sl", "capitalizingFirstLetter"]
 - !private ["Sl", "count"]
 - ["Sl", "init"]
-- ["SL", ""]
+- !private ["SL", ""]
 - !private ["SL", "capitalizingFirstLetter"]
 - !private ["10Foundation15ContiguousBytesP", "append"]
 - !private ["10Foundation15ContiguousBytesP", "count"]
 - ["10Foundation15ContiguousBytesP", "init"]
+- !private ["8QuickBev15CoreDataManagerC", "deleteEntities"]
 - !private ["8QuickBev15CoreDataManagerC", "fetchEntities"]
 - !private ["8QuickBev15CoreDataManagerC", "saveContext"]
 - !private ["8QuickBev15CoreDataManagerC", "sharedManager"]
+- !private ["s28CustomDebugStringConvertibleP", "APIClient"]
 - ["s28CustomDebugStringConvertibleP", "Business"]
 - !private ["s28CustomDebugStringConvertibleP", "BusinessMapViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "CGFloat"]
@@ -380,6 +384,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "businesses"]
 - !private ["s28CustomDebugStringConvertibleP", "capitalizingFirstLetter"]
 - !private ["s28CustomDebugStringConvertibleP", "cart"]
+- !private ["s28CustomDebugStringConvertibleP", "category"]
 - !private ["s28CustomDebugStringConvertibleP", "centerButton"]
 - !private ["s28CustomDebugStringConvertibleP", "centerButtonTouchup"]
 - !private ["s28CustomDebugStringConvertibleP", "centerXAnchor"]
@@ -479,6 +484,7 @@ depends-member:
 - !private ["s17CustomReflectableP", "safeAreaLayoutGuide"]
 - !private ["s17CustomReflectableP", "white"]
 - !private ["s17CustomReflectableP", "width"]
+- !private ["s23CustomStringConvertibleP", "APIClient"]
 - ["s23CustomStringConvertibleP", "Business"]
 - !private ["s23CustomStringConvertibleP", "BusinessMapViewController"]
 - !private ["s23CustomStringConvertibleP", "CGFloat"]
@@ -530,6 +536,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "businesses"]
 - !private ["s23CustomStringConvertibleP", "capitalizingFirstLetter"]
 - !private ["s23CustomStringConvertibleP", "cart"]
+- !private ["s23CustomStringConvertibleP", "category"]
 - !private ["s23CustomStringConvertibleP", "centerButton"]
 - !private ["s23CustomStringConvertibleP", "centerButtonTouchup"]
 - !private ["s23CustomStringConvertibleP", "centerXAnchor"]
@@ -625,6 +632,7 @@ depends-member:
 - !private ["Se", "bottomAnchor"]
 - !private ["Se", "businessId"]
 - !private ["Se", "capitalizingFirstLetter"]
+- !private ["Se", "category"]
 - !private ["Se", "count"]
 - !private ["Se", "drinkToBusiness"]
 - !private ["Se", "drinks"]
@@ -659,12 +667,16 @@ depends-member:
 - !private ["8QuickBev5DrinkC", "getDrinks"]
 - !private ["8QuickBev28DrinkListTableViewControllerC", ""]
 - !private ["8QuickBev28DrinkListTableViewControllerC", "init"]
+- !private ["8QuickBev4ETagC", ""]
+- !private ["8QuickBev4ETagC", "category"]
+- !private ["8QuickBev4ETagC", "id"]
 - !private ["SE", "addSubview"]
 - !private ["SE", "append"]
 - !private ["SE", "backgroundColor"]
 - !private ["SE", "bottomAnchor"]
 - !private ["SE", "businessId"]
 - !private ["SE", "capitalizingFirstLetter"]
+- !private ["SE", "category"]
 - !private ["SE", "count"]
 - !private ["SE", "drinkToBusiness"]
 - !private ["SE", "drinks"]
@@ -679,6 +691,7 @@ depends-member:
 - !private ["SE", "safeAreaLayoutGuide"]
 - !private ["SE", "white"]
 - !private ["SE", "width"]
+- !private ["SQ", "APIClient"]
 - ["SQ", "Business"]
 - !private ["SQ", "BusinessMapViewController"]
 - !private ["SQ", "CGFloat"]
@@ -728,6 +741,7 @@ depends-member:
 - !private ["SQ", "businesses"]
 - !private ["SQ", "capitalizingFirstLetter"]
 - !private ["SQ", "cart"]
+- !private ["SQ", "category"]
 - !private ["SQ", "center"]
 - !private ["SQ", "centerButton"]
 - !private ["SQ", "centerButtonTouchup"]
@@ -826,13 +840,11 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
 - ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "touchUpInside"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "capitalizingFirstLetter"]
 - !private ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
-- !private ["s25ExpressibleByFloatLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
-- !private ["s27ExpressibleByIntegerLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "addSubview"]
 - !private ["s23ExpressibleByNilLiteralP", "backgroundColor"]
@@ -842,14 +854,20 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "safeAreaLayoutGuide"]
 - !private ["s23ExpressibleByNilLiteralP", "white"]
 - !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
-- ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
 - !private ["s32ExpressibleByStringInterpolationP", "capitalizingFirstLetter"]
 - !private ["s32ExpressibleByStringInterpolationP", "init"]
-- ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s26ExpressibleByStringLiteralP", ""]
 - !private ["s26ExpressibleByStringLiteralP", "capitalizingFirstLetter"]
-- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "capitalizingFirstLetter"]
-- !private ["SF", ""]
+- !private ["7SwiftUI7GestureP", "addSubview"]
+- !private ["7SwiftUI7GestureP", "backgroundColor"]
+- !private ["7SwiftUI7GestureP", "bottomAnchor"]
+- !private ["7SwiftUI7GestureP", "frame"]
+- !private ["7SwiftUI7GestureP", "safeAreaLayoutGuide"]
+- !private ["7SwiftUI7GestureP", "white"]
+- !private ["SH", "APIClient"]
 - ["SH", "Business"]
 - !private ["SH", "BusinessMapViewController"]
 - !private ["SH", "CGFloat"]
@@ -899,6 +917,7 @@ depends-member:
 - !private ["SH", "businesses"]
 - !private ["SH", "capitalizingFirstLetter"]
 - !private ["SH", "cart"]
+- !private ["SH", "category"]
 - !private ["SH", "center"]
 - !private ["SH", "centerButton"]
 - !private ["SH", "centerButtonTouchup"]
@@ -988,6 +1007,7 @@ depends-member:
 - !private ["SH", "viewWillAppear"]
 - !private ["SH", "white"]
 - !private ["SH", "widthAnchor"]
+- !private ["8QuickBev22HomePageViewControllerC", "APIClient"]
 - ["8QuickBev22HomePageViewControllerC", "Bool"]
 - ["8QuickBev22HomePageViewControllerC", "Business"]
 - !private ["8QuickBev22HomePageViewControllerC", "BusinessMapViewController"]
@@ -998,6 +1018,7 @@ depends-member:
 - !private ["8QuickBev22HomePageViewControllerC", "DispatchGroup"]
 - ["8QuickBev22HomePageViewControllerC", "Drink"]
 - !private ["8QuickBev22HomePageViewControllerC", "DrinkListTableViewController"]
+- !private ["8QuickBev22HomePageViewControllerC", "ETag"]
 - ["8QuickBev22HomePageViewControllerC", "NSCoder"]
 - !private ["8QuickBev22HomePageViewControllerC", "NSLayoutConstraint"]
 - !private ["8QuickBev22HomePageViewControllerC", "NSSet"]
@@ -1072,6 +1093,7 @@ depends-member:
 - !private ["s12IdentifiableP", "businessArray"]
 - !private ["s12IdentifiableP", "businessId"]
 - !private ["s12IdentifiableP", "cart"]
+- !private ["s12IdentifiableP", "category"]
 - !private ["s12IdentifiableP", "customerContext"]
 - !private ["s12IdentifiableP", "drinkToBusiness"]
 - !private ["s12IdentifiableP", "drinks"]
@@ -1083,7 +1105,7 @@ depends-member:
 - !private ["s12IdentifiableP", "shared"]
 - !private ["s12IdentifiableP", "user"]
 - !private ["s12IdentifiableP", "userBusiness"]
-- ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", ""]
 - !private ["s25LosslessStringConvertibleP", "capitalizingFirstLetter"]
 - !private ["So17MKMapViewDelegateP", "businessPickerDelegate"]
 - ["So17MKMapViewDelegateP", "init"]
@@ -1098,7 +1120,7 @@ depends-member:
 - !private ["10Foundation19MutableDataProtocolP", "append"]
 - !private ["10Foundation19MutableDataProtocolP", "count"]
 - ["10Foundation19MutableDataProtocolP", "init"]
-- ["So8NSCodingP", "Bool"]
+- !private ["So8NSCodingP", "APIClient"]
 - ["So8NSCodingP", "Business"]
 - !private ["So8NSCodingP", "BusinessMapViewController"]
 - !private ["So8NSCodingP", "CGFloat"]
@@ -1108,8 +1130,8 @@ depends-member:
 - !private ["So8NSCodingP", "DispatchGroup"]
 - ["So8NSCodingP", "Drink"]
 - !private ["So8NSCodingP", "DrinkListTableViewController"]
+- !private ["So8NSCodingP", "ETag"]
 - ["So8NSCodingP", "LogoImageView"]
-- ["So8NSCodingP", "NSCoder"]
 - !private ["So8NSCodingP", "NSLayoutConstraint"]
 - !private ["So8NSCodingP", "NSSet"]
 - ["So8NSCodingP", "RoundButton"]
@@ -1160,24 +1182,6 @@ depends-member:
 - !private ["So8NSCodingP", "centerXAnchor"]
 - !private ["So8NSCodingP", "centerYAnchor"]
 - !private ["So8NSCodingP", "constraint"]
-- !private ["So8NSCodingP", "constraintEqualToAnchor"]
-- !private ["So8NSCodingP", "constraintEqualToConstant"]
-- !private ["So8NSCodingP", "constraintEqualToSystemSpacingAfter"]
-- !private ["So8NSCodingP", "constraintEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSCodingP", "constraintEqualToSystemSpacingBelow"]
-- !private ["So8NSCodingP", "constraintEqualToSystemSpacingBelowAnchor"]
-- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToAnchor"]
-- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToConstant"]
-- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
-- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
-- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
-- !private ["So8NSCodingP", "constraintLessThanOrEqualToAnchor"]
-- !private ["So8NSCodingP", "constraintLessThanOrEqualToConstant"]
-- !private ["So8NSCodingP", "constraintLessThanOrEqualToSystemSpacingAfter"]
-- !private ["So8NSCodingP", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSCodingP", "constraintLessThanOrEqualToSystemSpacingBelow"]
-- !private ["So8NSCodingP", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - ["So8NSCodingP", "didLayoutBadgeNotification"]
 - ["So8NSCodingP", "drinks"]
 - ["So8NSCodingP", "ellipsisLabel"]
@@ -1215,8 +1219,8 @@ depends-member:
 - ["So8NSCodingP", "presentationControllerWillDismiss"]
 - !private ["So8NSCodingP", "print"]
 - !private ["So8NSCodingP", "pushViewController"]
-- ["So8NSCodingP", "refreshColor"]
-- ["So8NSCodingP", "refreshTitle"]
+- !private ["So8NSCodingP", "refreshColor"]
+- !private ["So8NSCodingP", "refreshTitle"]
 - !private ["So8NSCodingP", "safeAreaLayoutGuide"]
 - !private ["So8NSCodingP", "screenSize"]
 - !private ["So8NSCodingP", "spacing"]
@@ -1240,31 +1244,13 @@ depends-member:
 - !private ["So9NSCopyingP", "businessId"]
 - !private ["So9NSCopyingP", "capitalizingFirstLetter"]
 - !private ["So9NSCopyingP", "constraint"]
-- !private ["So9NSCopyingP", "constraintEqualToAnchor"]
-- !private ["So9NSCopyingP", "constraintEqualToConstant"]
-- !private ["So9NSCopyingP", "constraintEqualToSystemSpacingAfter"]
-- !private ["So9NSCopyingP", "constraintEqualToSystemSpacingAfterAnchor"]
-- !private ["So9NSCopyingP", "constraintEqualToSystemSpacingBelow"]
-- !private ["So9NSCopyingP", "constraintEqualToSystemSpacingBelowAnchor"]
-- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToAnchor"]
-- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToConstant"]
-- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
-- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
-- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
-- !private ["So9NSCopyingP", "constraintLessThanOrEqualToAnchor"]
-- !private ["So9NSCopyingP", "constraintLessThanOrEqualToConstant"]
-- !private ["So9NSCopyingP", "constraintLessThanOrEqualToSystemSpacingAfter"]
-- !private ["So9NSCopyingP", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So9NSCopyingP", "constraintLessThanOrEqualToSystemSpacingBelow"]
-- !private ["So9NSCopyingP", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - !private ["So9NSCopyingP", "drinkToBusiness"]
 - ["So9NSCopyingP", "getDrinks"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "themeButtonFont"]
 - !private ["So9NSCopyingP", "themeColor"]
 - !private ["So9NSCopyingP", "white"]
-- ["So26NSExtensionRequestHandlingP", "Bool"]
+- !private ["So26NSExtensionRequestHandlingP", "APIClient"]
 - ["So26NSExtensionRequestHandlingP", "Business"]
 - !private ["So26NSExtensionRequestHandlingP", "BusinessMapViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "CGFloat"]
@@ -1274,7 +1260,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "DispatchGroup"]
 - ["So26NSExtensionRequestHandlingP", "Drink"]
 - !private ["So26NSExtensionRequestHandlingP", "DrinkListTableViewController"]
-- ["So26NSExtensionRequestHandlingP", "NSCoder"]
+- !private ["So26NSExtensionRequestHandlingP", "ETag"]
 - !private ["So26NSExtensionRequestHandlingP", "NSLayoutConstraint"]
 - !private ["So26NSExtensionRequestHandlingP", "NSSet"]
 - ["So26NSExtensionRequestHandlingP", "RoundButton"]
@@ -1353,6 +1339,7 @@ depends-member:
 - !private ["So20NSFetchRequestResultP", "businessArray"]
 - !private ["So20NSFetchRequestResultP", "businessId"]
 - !private ["So20NSFetchRequestResultP", "cart"]
+- !private ["So20NSFetchRequestResultP", "category"]
 - !private ["So20NSFetchRequestResultP", "customerContext"]
 - !private ["So20NSFetchRequestResultP", "drinkToBusiness"]
 - !private ["So20NSFetchRequestResultP", "drinks"]
@@ -1374,24 +1361,6 @@ depends-member:
 - !private ["So21NSItemProviderWritingP", "white"]
 - ["So14NSLayoutAnchorC", ""]
 - !private ["So14NSLayoutAnchorC", "constraint"]
-- !private ["So14NSLayoutAnchorC", "constraintEqualToAnchor"]
-- !private ["So14NSLayoutAnchorC", "constraintEqualToConstant"]
-- !private ["So14NSLayoutAnchorC", "constraintEqualToSystemSpacingAfter"]
-- !private ["So14NSLayoutAnchorC", "constraintEqualToSystemSpacingAfterAnchor"]
-- !private ["So14NSLayoutAnchorC", "constraintEqualToSystemSpacingBelow"]
-- !private ["So14NSLayoutAnchorC", "constraintEqualToSystemSpacingBelowAnchor"]
-- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToAnchor"]
-- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToConstant"]
-- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
-- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
-- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
-- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToAnchor"]
-- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToConstant"]
-- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToSystemSpacingAfter"]
-- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToSystemSpacingBelow"]
-- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - !private ["So18NSLayoutConstraintC", "activate"]
 - !private ["So17NSLayoutDimensionC", "constraint"]
 - !private ["So19NSLayoutXAxisAnchorC", "constraint"]
@@ -1401,6 +1370,7 @@ depends-member:
 - !private ["So15NSManagedObjectC", "businessArray"]
 - !private ["So15NSManagedObjectC", "businessId"]
 - !private ["So15NSManagedObjectC", "cart"]
+- !private ["So15NSManagedObjectC", "category"]
 - !private ["So15NSManagedObjectC", "customerContext"]
 - !private ["So15NSManagedObjectC", "drinkToBusiness"]
 - !private ["So15NSManagedObjectC", "drinks"]
@@ -1414,6 +1384,7 @@ depends-member:
 - !private ["So15NSManagedObjectC", "userBusiness"]
 - !private ["So16NSMutableCopyingP", "capitalizingFirstLetter"]
 - !private ["So16NSMutableCopyingP", "init"]
+- !private ["So8NSObjectC", "APIClient"]
 - ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "Business"]
 - !private ["So8NSObjectC", "BusinessMapViewController"]
@@ -1424,6 +1395,7 @@ depends-member:
 - !private ["So8NSObjectC", "DispatchGroup"]
 - ["So8NSObjectC", "Drink"]
 - !private ["So8NSObjectC", "DrinkListTableViewController"]
+- !private ["So8NSObjectC", "ETag"]
 - ["So8NSObjectC", "LogoImageView"]
 - ["So8NSObjectC", "NSCoder"]
 - !private ["So8NSObjectC", "NSLayoutConstraint"]
@@ -1456,7 +1428,6 @@ depends-member:
 - ["So8NSObjectC", "_theNightIsYoungStackView"]
 - ["So8NSObjectC", "_theNightisYoungLabel"]
 - !private ["So8NSObjectC", "activate"]
-- !private ["So8NSObjectC", "activateConstraints"]
 - ["So8NSObjectC", "adaptivePresentationStyle"]
 - ["So8NSObjectC", "adaptivePresentationStyleForPresentationController"]
 - !private ["So8NSObjectC", "addArrangedSubview"]
@@ -1477,29 +1448,12 @@ depends-member:
 - ["So8NSObjectC", "businesses"]
 - !private ["So8NSObjectC", "capitalizingFirstLetter"]
 - !private ["So8NSObjectC", "cart"]
+- !private ["So8NSObjectC", "category"]
 - ["So8NSObjectC", "centerButton"]
 - ["So8NSObjectC", "centerButtonTouchup"]
 - !private ["So8NSObjectC", "centerXAnchor"]
 - !private ["So8NSObjectC", "centerYAnchor"]
 - !private ["So8NSObjectC", "constraint"]
-- !private ["So8NSObjectC", "constraintEqualToAnchor"]
-- !private ["So8NSObjectC", "constraintEqualToConstant"]
-- !private ["So8NSObjectC", "constraintEqualToSystemSpacingAfter"]
-- !private ["So8NSObjectC", "constraintEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSObjectC", "constraintEqualToSystemSpacingBelow"]
-- !private ["So8NSObjectC", "constraintEqualToSystemSpacingBelowAnchor"]
-- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToAnchor"]
-- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToConstant"]
-- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
-- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
-- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
-- !private ["So8NSObjectC", "constraintLessThanOrEqualToAnchor"]
-- !private ["So8NSObjectC", "constraintLessThanOrEqualToConstant"]
-- !private ["So8NSObjectC", "constraintLessThanOrEqualToSystemSpacingAfter"]
-- !private ["So8NSObjectC", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSObjectC", "constraintLessThanOrEqualToSystemSpacingBelow"]
-- !private ["So8NSObjectC", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - !private ["So8NSObjectC", "customerContext"]
 - !private ["So8NSObjectC", "delegate"]
 - ["So8NSObjectC", "didLayoutBadgeNotification"]
@@ -1510,10 +1464,7 @@ depends-member:
 - !private ["So8NSObjectC", "fatalError"]
 - !private ["So8NSObjectC", "firstName"]
 - !private ["So8NSObjectC", "font"]
-- !private ["So8NSObjectC", "fontWithDescriptor"]
-- !private ["So8NSObjectC", "fontWithName"]
 - !private ["So8NSObjectC", "frame"]
-- !private ["So8NSObjectC", "frameForAlignmentRect"]
 - !private ["So8NSObjectC", "getBusinesses"]
 - !private ["So8NSObjectC", "getDrinks"]
 - ["So8NSObjectC", "goodEveningLabel"]
@@ -1553,7 +1504,6 @@ depends-member:
 - !private ["So8NSObjectC", "preferredContentSize"]
 - ["So8NSObjectC", "prepareForPopoverPresentation"]
 - !private ["So8NSObjectC", "present"]
-- !private ["So8NSObjectC", "presentViewController"]
 - ["So8NSObjectC", "presentationController"]
 - ["So8NSObjectC", "presentationControllerDidAttemptToDismiss"]
 - ["So8NSObjectC", "presentationControllerDidDismiss"]
@@ -1600,7 +1550,7 @@ depends-member:
 - ["So8NSObjectC", "viewWillAppear"]
 - !private ["So8NSObjectC", "white"]
 - !private ["So8NSObjectC", "widthAnchor"]
-- ["So8NSObjectP", "Bool"]
+- !private ["So8NSObjectP", "APIClient"]
 - ["So8NSObjectP", "Business"]
 - !private ["So8NSObjectP", "BusinessMapViewController"]
 - !private ["So8NSObjectP", "CGFloat"]
@@ -1610,6 +1560,7 @@ depends-member:
 - !private ["So8NSObjectP", "DispatchGroup"]
 - ["So8NSObjectP", "Drink"]
 - !private ["So8NSObjectP", "DrinkListTableViewController"]
+- !private ["So8NSObjectP", "ETag"]
 - ["So8NSObjectP", "LogoImageView"]
 - !private ["So8NSObjectP", "NSLayoutConstraint"]
 - !private ["So8NSObjectP", "NSSet"]
@@ -1641,7 +1592,6 @@ depends-member:
 - ["So8NSObjectP", "_theNightIsYoungStackView"]
 - ["So8NSObjectP", "_theNightisYoungLabel"]
 - !private ["So8NSObjectP", "activate"]
-- !private ["So8NSObjectP", "activateConstraints"]
 - ["So8NSObjectP", "adaptivePresentationStyle"]
 - ["So8NSObjectP", "adaptivePresentationStyleForPresentationController"]
 - !private ["So8NSObjectP", "addArrangedSubview"]
@@ -1662,29 +1612,12 @@ depends-member:
 - ["So8NSObjectP", "businesses"]
 - !private ["So8NSObjectP", "capitalizingFirstLetter"]
 - !private ["So8NSObjectP", "cart"]
+- !private ["So8NSObjectP", "category"]
 - ["So8NSObjectP", "centerButton"]
 - ["So8NSObjectP", "centerButtonTouchup"]
 - !private ["So8NSObjectP", "centerXAnchor"]
 - !private ["So8NSObjectP", "centerYAnchor"]
 - !private ["So8NSObjectP", "constraint"]
-- !private ["So8NSObjectP", "constraintEqualToAnchor"]
-- !private ["So8NSObjectP", "constraintEqualToConstant"]
-- !private ["So8NSObjectP", "constraintEqualToSystemSpacingAfter"]
-- !private ["So8NSObjectP", "constraintEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSObjectP", "constraintEqualToSystemSpacingBelow"]
-- !private ["So8NSObjectP", "constraintEqualToSystemSpacingBelowAnchor"]
-- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToAnchor"]
-- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToConstant"]
-- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
-- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
-- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
-- !private ["So8NSObjectP", "constraintLessThanOrEqualToAnchor"]
-- !private ["So8NSObjectP", "constraintLessThanOrEqualToConstant"]
-- !private ["So8NSObjectP", "constraintLessThanOrEqualToSystemSpacingAfter"]
-- !private ["So8NSObjectP", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
-- !private ["So8NSObjectP", "constraintLessThanOrEqualToSystemSpacingBelow"]
-- !private ["So8NSObjectP", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - !private ["So8NSObjectP", "customerContext"]
 - !private ["So8NSObjectP", "delegate"]
 - ["So8NSObjectP", "didLayoutBadgeNotification"]
@@ -1695,10 +1628,7 @@ depends-member:
 - !private ["So8NSObjectP", "fatalError"]
 - !private ["So8NSObjectP", "firstName"]
 - !private ["So8NSObjectP", "font"]
-- !private ["So8NSObjectP", "fontWithDescriptor"]
-- !private ["So8NSObjectP", "fontWithName"]
 - !private ["So8NSObjectP", "frame"]
-- !private ["So8NSObjectP", "frameForAlignmentRect"]
 - ["So8NSObjectP", "getBusinesses"]
 - ["So8NSObjectP", "getDrinks"]
 - ["So8NSObjectP", "goodEveningLabel"]
@@ -1738,7 +1668,6 @@ depends-member:
 - !private ["So8NSObjectP", "preferredContentSize"]
 - ["So8NSObjectP", "prepareForPopoverPresentation"]
 - !private ["So8NSObjectP", "present"]
-- !private ["So8NSObjectP", "presentViewController"]
 - ["So8NSObjectP", "presentationController"]
 - ["So8NSObjectP", "presentationControllerDidAttemptToDismiss"]
 - ["So8NSObjectP", "presentationControllerDidDismiss"]
@@ -1747,8 +1676,8 @@ depends-member:
 - !private ["So8NSObjectP", "presentedViewController"]
 - !private ["So8NSObjectP", "print"]
 - !private ["So8NSObjectP", "pushViewController"]
-- ["So8NSObjectP", "refreshColor"]
-- ["So8NSObjectP", "refreshTitle"]
+- !private ["So8NSObjectP", "refreshColor"]
+- !private ["So8NSObjectP", "refreshTitle"]
 - !private ["So8NSObjectP", "resume"]
 - !private ["So8NSObjectP", "safeAreaLayoutGuide"]
 - !private ["So8NSObjectP", "screenSize"]
@@ -1793,6 +1722,7 @@ depends-member:
 - !private ["So5NSSetC", "init"]
 - !private ["So8NSStringC", "capitalizingFirstLetter"]
 - !private ["So15NSTextAlignmentV", "center"]
+- !private ["8QuickBev25NewBusinessPickedProtocolP", "APIClient"]
 - ["8QuickBev25NewBusinessPickedProtocolP", "Business"]
 - !private ["8QuickBev25NewBusinessPickedProtocolP", "BusinessMapViewController"]
 - !private ["8QuickBev25NewBusinessPickedProtocolP", "CGFloat"]
@@ -1857,7 +1787,6 @@ depends-member:
 - !private ["8QuickBev25NewBusinessPickedProtocolP", "viewDidLayoutSubviews"]
 - !private ["8QuickBev25NewBusinessPickedProtocolP", "viewDidLoad"]
 - !private ["8QuickBev25NewBusinessPickedProtocolP", "viewWillAppear"]
-- !private ["Sj", ""]
 - ["So9OS_objectC", ""]
 - !private ["So9OS_objectC", "activate"]
 - !private ["So9OS_objectC", "enter"]
@@ -1873,6 +1802,7 @@ depends-member:
 - !private ["7Combine16ObservableObjectP", "businessArray"]
 - !private ["7Combine16ObservableObjectP", "businessId"]
 - !private ["7Combine16ObservableObjectP", "cart"]
+- !private ["7Combine16ObservableObjectP", "category"]
 - !private ["7Combine16ObservableObjectP", "customerContext"]
 - !private ["7Combine16ObservableObjectP", "drinkToBusiness"]
 - !private ["7Combine16ObservableObjectP", "drinks"]
@@ -1927,18 +1857,16 @@ depends-member:
 - !private ["ST", "makeIterator"]
 - !private ["s10SetAlgebraP", ""]
 - !private ["s10SetAlgebraP", "touchUpInside"]
-- !private ["s13SignedNumericP", ""]
-- !private ["Sx", ""]
 - !private ["SS", "capitalizingFirstLetter"]
 - !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
 - !private ["s27StringInterpolationProtocolP", "appendLiteral"]
 - !private ["s27StringInterpolationProtocolP", "init"]
 - !private ["Sy", "capitalizingFirstLetter"]
-- ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", ""]
 - !private ["s16TextOutputStreamP", "appendInterpolation"]
 - !private ["s16TextOutputStreamP", "appendLiteral"]
 - !private ["s16TextOutputStreamP", "capitalizingFirstLetter"]
-- ["s20TextOutputStreamableP", ""]
+- !private ["s20TextOutputStreamableP", ""]
 - !private ["s20TextOutputStreamableP", "capitalizingFirstLetter"]
 - ["8QuickBev5ThemeO", "UILabel"]
 - ["8QuickBev11ToolbarViewC", ""]
@@ -1958,13 +1886,12 @@ depends-member:
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "heightAnchor"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "image"]
 - ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "init"]
-- ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "refreshColor"]
-- ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "refreshTitle"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "refreshColor"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "refreshTitle"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "titleLabel"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "topAnchor"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "widthAnchor"]
 - ["So29UIAccessibilityIdentificationP", "LogoImageView"]
-- !private ["So29UIAccessibilityIdentificationP", ""]
 - !private ["So29UIAccessibilityIdentificationP", "addArrangedSubview"]
 - !private ["So29UIAccessibilityIdentificationP", "addGestureRecognizer"]
 - !private ["So29UIAccessibilityIdentificationP", "addSubview"]
@@ -1986,8 +1913,8 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "isUserInteractionEnabled"]
 - !private ["So29UIAccessibilityIdentificationP", "leadingAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "orderButton"]
-- ["So29UIAccessibilityIdentificationP", "refreshColor"]
-- ["So29UIAccessibilityIdentificationP", "refreshTitle"]
+- !private ["So29UIAccessibilityIdentificationP", "refreshColor"]
+- !private ["So29UIAccessibilityIdentificationP", "refreshTitle"]
 - !private ["So29UIAccessibilityIdentificationP", "safeAreaLayoutGuide"]
 - !private ["So29UIAccessibilityIdentificationP", "spacing"]
 - !private ["So29UIAccessibilityIdentificationP", "text"]
@@ -1996,6 +1923,7 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "topAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "trailingAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "widthAnchor"]
+- !private ["So40UIAdaptivePresentationControllerDelegateP", "APIClient"]
 - ["So40UIAdaptivePresentationControllerDelegateP", "Business"]
 - !private ["So40UIAdaptivePresentationControllerDelegateP", "BusinessMapViewController"]
 - !private ["So40UIAdaptivePresentationControllerDelegateP", "CGFloat"]
@@ -2073,7 +2001,6 @@ depends-member:
 - ["So40UIAdaptivePresentationControllerDelegateP", "viewDidLoad"]
 - ["So40UIAdaptivePresentationControllerDelegateP", "viewWillAppear"]
 - ["So12UIAppearanceP", "LogoImageView"]
-- !private ["So12UIAppearanceP", ""]
 - !private ["So12UIAppearanceP", "addArrangedSubview"]
 - !private ["So12UIAppearanceP", "addGestureRecognizer"]
 - !private ["So12UIAppearanceP", "addSubview"]
@@ -2095,8 +2022,8 @@ depends-member:
 - !private ["So12UIAppearanceP", "isUserInteractionEnabled"]
 - !private ["So12UIAppearanceP", "leadingAnchor"]
 - !private ["So12UIAppearanceP", "orderButton"]
-- ["So12UIAppearanceP", "refreshColor"]
-- ["So12UIAppearanceP", "refreshTitle"]
+- !private ["So12UIAppearanceP", "refreshColor"]
+- !private ["So12UIAppearanceP", "refreshTitle"]
 - !private ["So12UIAppearanceP", "safeAreaLayoutGuide"]
 - !private ["So12UIAppearanceP", "spacing"]
 - !private ["So12UIAppearanceP", "text"]
@@ -2105,7 +2032,7 @@ depends-member:
 - !private ["So12UIAppearanceP", "topAnchor"]
 - !private ["So12UIAppearanceP", "trailingAnchor"]
 - !private ["So12UIAppearanceP", "widthAnchor"]
-- ["So21UIAppearanceContainerP", "Bool"]
+- !private ["So21UIAppearanceContainerP", "APIClient"]
 - ["So21UIAppearanceContainerP", "Business"]
 - !private ["So21UIAppearanceContainerP", "BusinessMapViewController"]
 - !private ["So21UIAppearanceContainerP", "CGFloat"]
@@ -2115,8 +2042,8 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "DispatchGroup"]
 - ["So21UIAppearanceContainerP", "Drink"]
 - !private ["So21UIAppearanceContainerP", "DrinkListTableViewController"]
+- !private ["So21UIAppearanceContainerP", "ETag"]
 - ["So21UIAppearanceContainerP", "LogoImageView"]
-- ["So21UIAppearanceContainerP", "NSCoder"]
 - !private ["So21UIAppearanceContainerP", "NSLayoutConstraint"]
 - !private ["So21UIAppearanceContainerP", "NSSet"]
 - ["So21UIAppearanceContainerP", "RoundButton"]
@@ -2204,8 +2131,8 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "presentedViewController"]
 - !private ["So21UIAppearanceContainerP", "print"]
 - !private ["So21UIAppearanceContainerP", "pushViewController"]
-- ["So21UIAppearanceContainerP", "refreshColor"]
-- ["So21UIAppearanceContainerP", "refreshTitle"]
+- !private ["So21UIAppearanceContainerP", "refreshColor"]
+- !private ["So21UIAppearanceContainerP", "refreshTitle"]
 - !private ["So21UIAppearanceContainerP", "safeAreaLayoutGuide"]
 - !private ["So21UIAppearanceContainerP", "screenSize"]
 - !private ["So21UIAppearanceContainerP", "sourceRect"]
@@ -2237,7 +2164,7 @@ depends-member:
 - !private ["So8UIButtonC", "widthAnchor"]
 - !private ["So7UIColorC", "themeColor"]
 - !private ["So7UIColorC", "white"]
-- ["So18UIContentContainerP", "Bool"]
+- !private ["So18UIContentContainerP", "APIClient"]
 - ["So18UIContentContainerP", "Business"]
 - !private ["So18UIContentContainerP", "BusinessMapViewController"]
 - !private ["So18UIContentContainerP", "CGFloat"]
@@ -2247,7 +2174,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "DispatchGroup"]
 - ["So18UIContentContainerP", "Drink"]
 - !private ["So18UIContentContainerP", "DrinkListTableViewController"]
-- ["So18UIContentContainerP", "NSCoder"]
+- !private ["So18UIContentContainerP", "ETag"]
 - !private ["So18UIContentContainerP", "NSLayoutConstraint"]
 - !private ["So18UIContentContainerP", "NSSet"]
 - ["So18UIContentContainerP", "RoundButton"]
@@ -2329,15 +2256,14 @@ depends-member:
 - ["So30UIContentSizeCategoryAdjustingP", "init"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "text"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "textAlignment"]
-- !private ["So32UIContextMenuInteractionDelegateP", ""]
 - !private ["So32UIContextMenuInteractionDelegateP", "addTarget"]
 - !private ["So32UIContextMenuInteractionDelegateP", "bottomAnchor"]
 - !private ["So32UIContextMenuInteractionDelegateP", "centerXAnchor"]
 - !private ["So32UIContextMenuInteractionDelegateP", "frame"]
 - !private ["So32UIContextMenuInteractionDelegateP", "heightAnchor"]
 - ["So32UIContextMenuInteractionDelegateP", "init"]
-- ["So32UIContextMenuInteractionDelegateP", "refreshColor"]
-- ["So32UIContextMenuInteractionDelegateP", "refreshTitle"]
+- !private ["So32UIContextMenuInteractionDelegateP", "refreshColor"]
+- !private ["So32UIContextMenuInteractionDelegateP", "refreshTitle"]
 - !private ["So32UIContextMenuInteractionDelegateP", "titleLabel"]
 - !private ["So32UIContextMenuInteractionDelegateP", "widthAnchor"]
 - ["So9UIControlC", ""]
@@ -2352,7 +2278,6 @@ depends-member:
 - !private ["So9UIControlC", "titleLabel"]
 - !private ["So9UIControlC", "widthAnchor"]
 - ["So17UICoordinateSpaceP", "LogoImageView"]
-- !private ["So17UICoordinateSpaceP", ""]
 - !private ["So17UICoordinateSpaceP", "addArrangedSubview"]
 - !private ["So17UICoordinateSpaceP", "addGestureRecognizer"]
 - !private ["So17UICoordinateSpaceP", "addSubview"]
@@ -2374,8 +2299,8 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "isUserInteractionEnabled"]
 - !private ["So17UICoordinateSpaceP", "leadingAnchor"]
 - !private ["So17UICoordinateSpaceP", "orderButton"]
-- ["So17UICoordinateSpaceP", "refreshColor"]
-- ["So17UICoordinateSpaceP", "refreshTitle"]
+- !private ["So17UICoordinateSpaceP", "refreshColor"]
+- !private ["So17UICoordinateSpaceP", "refreshTitle"]
 - !private ["So17UICoordinateSpaceP", "safeAreaLayoutGuide"]
 - !private ["So17UICoordinateSpaceP", "spacing"]
 - !private ["So17UICoordinateSpaceP", "text"]
@@ -2385,7 +2310,6 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "trailingAnchor"]
 - !private ["So17UICoordinateSpaceP", "widthAnchor"]
 - ["So13UIDynamicItemP", "LogoImageView"]
-- !private ["So13UIDynamicItemP", ""]
 - !private ["So13UIDynamicItemP", "addArrangedSubview"]
 - !private ["So13UIDynamicItemP", "addGestureRecognizer"]
 - !private ["So13UIDynamicItemP", "addSubview"]
@@ -2407,8 +2331,8 @@ depends-member:
 - !private ["So13UIDynamicItemP", "isUserInteractionEnabled"]
 - !private ["So13UIDynamicItemP", "leadingAnchor"]
 - !private ["So13UIDynamicItemP", "orderButton"]
-- ["So13UIDynamicItemP", "refreshColor"]
-- ["So13UIDynamicItemP", "refreshTitle"]
+- !private ["So13UIDynamicItemP", "refreshColor"]
+- !private ["So13UIDynamicItemP", "refreshTitle"]
 - !private ["So13UIDynamicItemP", "safeAreaLayoutGuide"]
 - !private ["So13UIDynamicItemP", "spacing"]
 - !private ["So13UIDynamicItemP", "text"]
@@ -2417,7 +2341,7 @@ depends-member:
 - !private ["So13UIDynamicItemP", "topAnchor"]
 - !private ["So13UIDynamicItemP", "trailingAnchor"]
 - !private ["So13UIDynamicItemP", "widthAnchor"]
-- ["So18UIFocusEnvironmentP", "Bool"]
+- !private ["So18UIFocusEnvironmentP", "APIClient"]
 - ["So18UIFocusEnvironmentP", "Business"]
 - !private ["So18UIFocusEnvironmentP", "BusinessMapViewController"]
 - !private ["So18UIFocusEnvironmentP", "CGFloat"]
@@ -2427,8 +2351,8 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "DispatchGroup"]
 - ["So18UIFocusEnvironmentP", "Drink"]
 - !private ["So18UIFocusEnvironmentP", "DrinkListTableViewController"]
+- !private ["So18UIFocusEnvironmentP", "ETag"]
 - ["So18UIFocusEnvironmentP", "LogoImageView"]
-- ["So18UIFocusEnvironmentP", "NSCoder"]
 - !private ["So18UIFocusEnvironmentP", "NSLayoutConstraint"]
 - !private ["So18UIFocusEnvironmentP", "NSSet"]
 - ["So18UIFocusEnvironmentP", "RoundButton"]
@@ -2516,8 +2440,8 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "presentedViewController"]
 - !private ["So18UIFocusEnvironmentP", "print"]
 - !private ["So18UIFocusEnvironmentP", "pushViewController"]
-- ["So18UIFocusEnvironmentP", "refreshColor"]
-- ["So18UIFocusEnvironmentP", "refreshTitle"]
+- !private ["So18UIFocusEnvironmentP", "refreshColor"]
+- !private ["So18UIFocusEnvironmentP", "refreshTitle"]
 - !private ["So18UIFocusEnvironmentP", "safeAreaLayoutGuide"]
 - !private ["So18UIFocusEnvironmentP", "screenSize"]
 - !private ["So18UIFocusEnvironmentP", "sourceRect"]
@@ -2537,7 +2461,6 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "viewWillAppear"]
 - !private ["So18UIFocusEnvironmentP", "widthAnchor"]
 - ["So11UIFocusItemP", "LogoImageView"]
-- !private ["So11UIFocusItemP", ""]
 - !private ["So11UIFocusItemP", "addArrangedSubview"]
 - !private ["So11UIFocusItemP", "addGestureRecognizer"]
 - !private ["So11UIFocusItemP", "addSubview"]
@@ -2559,8 +2482,8 @@ depends-member:
 - !private ["So11UIFocusItemP", "isUserInteractionEnabled"]
 - !private ["So11UIFocusItemP", "leadingAnchor"]
 - !private ["So11UIFocusItemP", "orderButton"]
-- ["So11UIFocusItemP", "refreshColor"]
-- ["So11UIFocusItemP", "refreshTitle"]
+- !private ["So11UIFocusItemP", "refreshColor"]
+- !private ["So11UIFocusItemP", "refreshTitle"]
 - !private ["So11UIFocusItemP", "safeAreaLayoutGuide"]
 - !private ["So11UIFocusItemP", "spacing"]
 - !private ["So11UIFocusItemP", "text"]
@@ -2570,7 +2493,6 @@ depends-member:
 - !private ["So11UIFocusItemP", "trailingAnchor"]
 - !private ["So11UIFocusItemP", "widthAnchor"]
 - ["So20UIFocusItemContainerP", "LogoImageView"]
-- !private ["So20UIFocusItemContainerP", ""]
 - !private ["So20UIFocusItemContainerP", "addArrangedSubview"]
 - !private ["So20UIFocusItemContainerP", "addGestureRecognizer"]
 - !private ["So20UIFocusItemContainerP", "addSubview"]
@@ -2592,8 +2514,8 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "isUserInteractionEnabled"]
 - !private ["So20UIFocusItemContainerP", "leadingAnchor"]
 - !private ["So20UIFocusItemContainerP", "orderButton"]
-- ["So20UIFocusItemContainerP", "refreshColor"]
-- ["So20UIFocusItemContainerP", "refreshTitle"]
+- !private ["So20UIFocusItemContainerP", "refreshColor"]
+- !private ["So20UIFocusItemContainerP", "refreshTitle"]
 - !private ["So20UIFocusItemContainerP", "safeAreaLayoutGuide"]
 - !private ["So20UIFocusItemContainerP", "spacing"]
 - !private ["So20UIFocusItemContainerP", "text"]
@@ -2627,7 +2549,6 @@ depends-member:
 - !private ["So7UILabelC", "textAlignment"]
 - ["8QuickBev5ThemeO12UILabelPropsO", "textColor"]
 - ["So24UILargeContentViewerItemP", "LogoImageView"]
-- !private ["So24UILargeContentViewerItemP", ""]
 - !private ["So24UILargeContentViewerItemP", "addArrangedSubview"]
 - !private ["So24UILargeContentViewerItemP", "addGestureRecognizer"]
 - !private ["So24UILargeContentViewerItemP", "addSubview"]
@@ -2649,8 +2570,8 @@ depends-member:
 - !private ["So24UILargeContentViewerItemP", "isUserInteractionEnabled"]
 - !private ["So24UILargeContentViewerItemP", "leadingAnchor"]
 - !private ["So24UILargeContentViewerItemP", "orderButton"]
-- ["So24UILargeContentViewerItemP", "refreshColor"]
-- ["So24UILargeContentViewerItemP", "refreshTitle"]
+- !private ["So24UILargeContentViewerItemP", "refreshColor"]
+- !private ["So24UILargeContentViewerItemP", "refreshTitle"]
 - !private ["So24UILargeContentViewerItemP", "safeAreaLayoutGuide"]
 - !private ["So24UILargeContentViewerItemP", "spacing"]
 - !private ["So24UILargeContentViewerItemP", "text"]
@@ -2671,7 +2592,7 @@ depends-member:
 - !private ["So22UINavigationControllerC", "init"]
 - !private ["So22UINavigationControllerC", "pushViewController"]
 - !private ["So16UINavigationItemC", "titleView"]
-- ["So30UIPasteConfigurationSupportingP", "Bool"]
+- !private ["So30UIPasteConfigurationSupportingP", "APIClient"]
 - ["So30UIPasteConfigurationSupportingP", "Business"]
 - !private ["So30UIPasteConfigurationSupportingP", "BusinessMapViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "CGFloat"]
@@ -2681,6 +2602,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "DispatchGroup"]
 - ["So30UIPasteConfigurationSupportingP", "Drink"]
 - !private ["So30UIPasteConfigurationSupportingP", "DrinkListTableViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "ETag"]
 - ["So30UIPasteConfigurationSupportingP", "LogoImageView"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSLayoutConstraint"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSSet"]
@@ -2736,7 +2658,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "fatalError"]
 - !private ["So30UIPasteConfigurationSupportingP", "font"]
 - !private ["So30UIPasteConfigurationSupportingP", "frame"]
-- !private ["So30UIPasteConfigurationSupportingP", "frameForAlignmentRect"]
 - ["So30UIPasteConfigurationSupportingP", "goodEveningLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "heightAnchor"]
 - !private ["So30UIPasteConfigurationSupportingP", "hub"]
@@ -2761,7 +2682,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "preferredContentSize"]
 - ["So30UIPasteConfigurationSupportingP", "prepareForPopoverPresentation"]
 - !private ["So30UIPasteConfigurationSupportingP", "present"]
-- !private ["So30UIPasteConfigurationSupportingP", "presentViewController"]
 - ["So30UIPasteConfigurationSupportingP", "presentationController"]
 - ["So30UIPasteConfigurationSupportingP", "presentationControllerDidAttemptToDismiss"]
 - ["So30UIPasteConfigurationSupportingP", "presentationControllerDidDismiss"]
@@ -2769,8 +2689,8 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "presentationControllerWillDismiss"]
 - !private ["So30UIPasteConfigurationSupportingP", "print"]
 - !private ["So30UIPasteConfigurationSupportingP", "pushViewController"]
-- ["So30UIPasteConfigurationSupportingP", "refreshColor"]
-- ["So30UIPasteConfigurationSupportingP", "refreshTitle"]
+- !private ["So30UIPasteConfigurationSupportingP", "refreshColor"]
+- !private ["So30UIPasteConfigurationSupportingP", "refreshTitle"]
 - !private ["So30UIPasteConfigurationSupportingP", "safeAreaLayoutGuide"]
 - !private ["So30UIPasteConfigurationSupportingP", "screenSize"]
 - !private ["So30UIPasteConfigurationSupportingP", "spacing"]
@@ -2790,6 +2710,7 @@ depends-member:
 - !private ["So31UIPopoverPresentationControllerC", "delegate"]
 - !private ["So31UIPopoverPresentationControllerC", "sourceRect"]
 - !private ["So31UIPopoverPresentationControllerC", "sourceView"]
+- !private ["So39UIPopoverPresentationControllerDelegateP", "APIClient"]
 - ["So39UIPopoverPresentationControllerDelegateP", "Business"]
 - !private ["So39UIPopoverPresentationControllerDelegateP", "BusinessMapViewController"]
 - !private ["So39UIPopoverPresentationControllerDelegateP", "CGFloat"]
@@ -2871,6 +2792,7 @@ depends-member:
 - !private ["So24UIPresentationControllerC", "presentedViewController"]
 - !private ["So24UIPresentationControllerC", "sourceRect"]
 - !private ["So24UIPresentationControllerC", "sourceView"]
+- !private ["So11UIResponderC", "APIClient"]
 - ["So11UIResponderC", "Bool"]
 - ["So11UIResponderC", "Business"]
 - !private ["So11UIResponderC", "BusinessMapViewController"]
@@ -2881,6 +2803,7 @@ depends-member:
 - !private ["So11UIResponderC", "DispatchGroup"]
 - ["So11UIResponderC", "Drink"]
 - !private ["So11UIResponderC", "DrinkListTableViewController"]
+- !private ["So11UIResponderC", "ETag"]
 - ["So11UIResponderC", "LogoImageView"]
 - ["So11UIResponderC", "NSCoder"]
 - !private ["So11UIResponderC", "NSLayoutConstraint"]
@@ -2937,7 +2860,6 @@ depends-member:
 - !private ["So11UIResponderC", "fatalError"]
 - !private ["So11UIResponderC", "font"]
 - !private ["So11UIResponderC", "frame"]
-- !private ["So11UIResponderC", "frameForAlignmentRect"]
 - ["So11UIResponderC", "goodEveningLabel"]
 - !private ["So11UIResponderC", "heightAnchor"]
 - !private ["So11UIResponderC", "hub"]
@@ -2962,7 +2884,6 @@ depends-member:
 - !private ["So11UIResponderC", "preferredContentSize"]
 - ["So11UIResponderC", "prepareForPopoverPresentation"]
 - !private ["So11UIResponderC", "present"]
-- !private ["So11UIResponderC", "presentViewController"]
 - ["So11UIResponderC", "presentationController"]
 - ["So11UIResponderC", "presentationControllerDidAttemptToDismiss"]
 - ["So11UIResponderC", "presentationControllerDidDismiss"]
@@ -2988,7 +2909,7 @@ depends-member:
 - ["So11UIResponderC", "viewDidLoad"]
 - ["So11UIResponderC", "viewWillAppear"]
 - !private ["So11UIResponderC", "widthAnchor"]
-- ["So30UIResponderStandardEditActionsP", "Bool"]
+- !private ["So30UIResponderStandardEditActionsP", "APIClient"]
 - ["So30UIResponderStandardEditActionsP", "Business"]
 - !private ["So30UIResponderStandardEditActionsP", "BusinessMapViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "CGFloat"]
@@ -2998,6 +2919,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "DispatchGroup"]
 - ["So30UIResponderStandardEditActionsP", "Drink"]
 - !private ["So30UIResponderStandardEditActionsP", "DrinkListTableViewController"]
+- !private ["So30UIResponderStandardEditActionsP", "ETag"]
 - ["So30UIResponderStandardEditActionsP", "LogoImageView"]
 - !private ["So30UIResponderStandardEditActionsP", "NSLayoutConstraint"]
 - !private ["So30UIResponderStandardEditActionsP", "NSSet"]
@@ -3053,7 +2975,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "fatalError"]
 - !private ["So30UIResponderStandardEditActionsP", "font"]
 - !private ["So30UIResponderStandardEditActionsP", "frame"]
-- !private ["So30UIResponderStandardEditActionsP", "frameForAlignmentRect"]
 - ["So30UIResponderStandardEditActionsP", "goodEveningLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "heightAnchor"]
 - !private ["So30UIResponderStandardEditActionsP", "hub"]
@@ -3078,7 +2999,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "preferredContentSize"]
 - ["So30UIResponderStandardEditActionsP", "prepareForPopoverPresentation"]
 - !private ["So30UIResponderStandardEditActionsP", "present"]
-- !private ["So30UIResponderStandardEditActionsP", "presentViewController"]
 - ["So30UIResponderStandardEditActionsP", "presentationController"]
 - ["So30UIResponderStandardEditActionsP", "presentationControllerDidAttemptToDismiss"]
 - ["So30UIResponderStandardEditActionsP", "presentationControllerDidDismiss"]
@@ -3086,8 +3006,8 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "presentationControllerWillDismiss"]
 - !private ["So30UIResponderStandardEditActionsP", "print"]
 - !private ["So30UIResponderStandardEditActionsP", "pushViewController"]
-- ["So30UIResponderStandardEditActionsP", "refreshColor"]
-- ["So30UIResponderStandardEditActionsP", "refreshTitle"]
+- !private ["So30UIResponderStandardEditActionsP", "refreshColor"]
+- !private ["So30UIResponderStandardEditActionsP", "refreshTitle"]
 - !private ["So30UIResponderStandardEditActionsP", "safeAreaLayoutGuide"]
 - !private ["So30UIResponderStandardEditActionsP", "screenSize"]
 - !private ["So30UIResponderStandardEditActionsP", "spacing"]
@@ -3112,8 +3032,8 @@ depends-member:
 - !private ["So35UISpringLoadedInteractionSupportingP", "frame"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "heightAnchor"]
 - ["So35UISpringLoadedInteractionSupportingP", "init"]
-- ["So35UISpringLoadedInteractionSupportingP", "refreshColor"]
-- ["So35UISpringLoadedInteractionSupportingP", "refreshTitle"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "refreshColor"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "refreshTitle"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "titleLabel"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "widthAnchor"]
 - !private ["So11UIStackViewC", "addArrangedSubview"]
@@ -3129,7 +3049,7 @@ depends-member:
 - !private ["So11UIStackViewC", "spacing"]
 - !private ["So11UIStackViewC", "topAnchor"]
 - !private ["So11UIStackViewC", "trailingAnchor"]
-- ["So16UIStateRestoringP", "Bool"]
+- !private ["So16UIStateRestoringP", "APIClient"]
 - ["So16UIStateRestoringP", "Business"]
 - !private ["So16UIStateRestoringP", "BusinessMapViewController"]
 - !private ["So16UIStateRestoringP", "CGFloat"]
@@ -3139,7 +3059,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "DispatchGroup"]
 - ["So16UIStateRestoringP", "Drink"]
 - !private ["So16UIStateRestoringP", "DrinkListTableViewController"]
-- ["So16UIStateRestoringP", "NSCoder"]
+- !private ["So16UIStateRestoringP", "ETag"]
 - !private ["So16UIStateRestoringP", "NSLayoutConstraint"]
 - !private ["So16UIStateRestoringP", "NSSet"]
 - ["So16UIStateRestoringP", "RoundButton"]
@@ -3218,7 +3138,7 @@ depends-member:
 - ["So21UITableViewDataSourceP", "init"]
 - ["So19UITableViewDelegateP", "init"]
 - !private ["So22UITapGestureRecognizerC", "init"]
-- ["So18UITraitEnvironmentP", "Bool"]
+- !private ["So18UITraitEnvironmentP", "APIClient"]
 - ["So18UITraitEnvironmentP", "Business"]
 - !private ["So18UITraitEnvironmentP", "BusinessMapViewController"]
 - !private ["So18UITraitEnvironmentP", "CGFloat"]
@@ -3228,8 +3148,8 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "DispatchGroup"]
 - ["So18UITraitEnvironmentP", "Drink"]
 - !private ["So18UITraitEnvironmentP", "DrinkListTableViewController"]
+- !private ["So18UITraitEnvironmentP", "ETag"]
 - ["So18UITraitEnvironmentP", "LogoImageView"]
-- ["So18UITraitEnvironmentP", "NSCoder"]
 - !private ["So18UITraitEnvironmentP", "NSLayoutConstraint"]
 - !private ["So18UITraitEnvironmentP", "NSSet"]
 - ["So18UITraitEnvironmentP", "RoundButton"]
@@ -3317,8 +3237,8 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "presentedViewController"]
 - !private ["So18UITraitEnvironmentP", "print"]
 - !private ["So18UITraitEnvironmentP", "pushViewController"]
-- ["So18UITraitEnvironmentP", "refreshColor"]
-- ["So18UITraitEnvironmentP", "refreshTitle"]
+- !private ["So18UITraitEnvironmentP", "refreshColor"]
+- !private ["So18UITraitEnvironmentP", "refreshTitle"]
 - !private ["So18UITraitEnvironmentP", "safeAreaLayoutGuide"]
 - !private ["So18UITraitEnvironmentP", "screenSize"]
 - !private ["So18UITraitEnvironmentP", "sourceRect"]
@@ -3337,7 +3257,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "viewDidLoad"]
 - ["So18UITraitEnvironmentP", "viewWillAppear"]
 - !private ["So18UITraitEnvironmentP", "widthAnchor"]
-- ["So23UIUserActivityRestoringP", "Bool"]
+- !private ["So23UIUserActivityRestoringP", "APIClient"]
 - ["So23UIUserActivityRestoringP", "Business"]
 - !private ["So23UIUserActivityRestoringP", "BusinessMapViewController"]
 - !private ["So23UIUserActivityRestoringP", "CGFloat"]
@@ -3347,6 +3267,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "DispatchGroup"]
 - ["So23UIUserActivityRestoringP", "Drink"]
 - !private ["So23UIUserActivityRestoringP", "DrinkListTableViewController"]
+- !private ["So23UIUserActivityRestoringP", "ETag"]
 - ["So23UIUserActivityRestoringP", "LogoImageView"]
 - !private ["So23UIUserActivityRestoringP", "NSLayoutConstraint"]
 - !private ["So23UIUserActivityRestoringP", "NSSet"]
@@ -3402,7 +3323,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "fatalError"]
 - !private ["So23UIUserActivityRestoringP", "font"]
 - !private ["So23UIUserActivityRestoringP", "frame"]
-- !private ["So23UIUserActivityRestoringP", "frameForAlignmentRect"]
 - ["So23UIUserActivityRestoringP", "goodEveningLabel"]
 - !private ["So23UIUserActivityRestoringP", "heightAnchor"]
 - !private ["So23UIUserActivityRestoringP", "hub"]
@@ -3427,7 +3347,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "preferredContentSize"]
 - ["So23UIUserActivityRestoringP", "prepareForPopoverPresentation"]
 - !private ["So23UIUserActivityRestoringP", "present"]
-- !private ["So23UIUserActivityRestoringP", "presentViewController"]
 - ["So23UIUserActivityRestoringP", "presentationController"]
 - ["So23UIUserActivityRestoringP", "presentationControllerDidAttemptToDismiss"]
 - ["So23UIUserActivityRestoringP", "presentationControllerDidDismiss"]
@@ -3435,8 +3354,8 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "presentationControllerWillDismiss"]
 - !private ["So23UIUserActivityRestoringP", "print"]
 - !private ["So23UIUserActivityRestoringP", "pushViewController"]
-- ["So23UIUserActivityRestoringP", "refreshColor"]
-- ["So23UIUserActivityRestoringP", "refreshTitle"]
+- !private ["So23UIUserActivityRestoringP", "refreshColor"]
+- !private ["So23UIUserActivityRestoringP", "refreshTitle"]
 - !private ["So23UIUserActivityRestoringP", "safeAreaLayoutGuide"]
 - !private ["So23UIUserActivityRestoringP", "screenSize"]
 - !private ["So23UIUserActivityRestoringP", "spacing"]
@@ -3486,6 +3405,7 @@ depends-member:
 - !private ["So6UIViewC", "topAnchor"]
 - !private ["So6UIViewC", "trailingAnchor"]
 - !private ["So6UIViewC", "widthAnchor"]
+- !private ["So16UIViewControllerC", "APIClient"]
 - ["So16UIViewControllerC", "Bool"]
 - ["So16UIViewControllerC", "Business"]
 - !private ["So16UIViewControllerC", "BusinessMapViewController"]
@@ -3496,6 +3416,7 @@ depends-member:
 - !private ["So16UIViewControllerC", "DispatchGroup"]
 - ["So16UIViewControllerC", "Drink"]
 - !private ["So16UIViewControllerC", "DrinkListTableViewController"]
+- !private ["So16UIViewControllerC", "ETag"]
 - ["So16UIViewControllerC", "NSCoder"]
 - !private ["So16UIViewControllerC", "NSLayoutConstraint"]
 - !private ["So16UIViewControllerC", "NSSet"]
@@ -3571,12 +3492,16 @@ depends-member:
 - ["So16UIViewControllerC", "viewDidLoad"]
 - ["So16UIViewControllerC", "viewWillAppear"]
 - ["So44UIViewControllerTransitionCoordinatorContextP", ""]
-- !private ["9Alamofire14URLConvertibleP", "capitalizingFirstLetter"]
 - !private ["8QuickBev4UserC", ""]
 - !private ["8QuickBev4UserC", "firstName"]
 - ["8QuickBev14UsesAutoLayoutV", "init"]
-- ["8QuickBev14UsesAutoLayoutV", "subscript"]
 - ["8QuickBev14UsesAutoLayoutV", "wrappedValue"]
+- !private ["7SwiftUI4ViewP", "addSubview"]
+- !private ["7SwiftUI4ViewP", "backgroundColor"]
+- !private ["7SwiftUI4ViewP", "bottomAnchor"]
+- !private ["7SwiftUI4ViewP", "frame"]
+- !private ["7SwiftUI4ViewP", "safeAreaLayoutGuide"]
+- !private ["7SwiftUI4ViewP", "white"]
 - !private ["s14_ArrayProtocolP", "append"]
 - !private ["s14_ArrayProtocolP", "count"]
 - ["s14_ArrayProtocolP", "init"]
@@ -3588,13 +3513,13 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "count"]
 - ["s24_DestructorSafeContainerP", "init"]
 - ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "capitalizingFirstLetter"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
-- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "capitalizingFirstLetter"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "capitalizingFirstLetter"]
 - !private ["s26_ExpressibleByColorLiteralP", "themeColor"]
 - !private ["s26_ExpressibleByColorLiteralP", "white"]
@@ -3607,6 +3532,7 @@ depends-member:
 - !private ["s35_HasCustomAnyHashableRepresentationP", "capitalizingFirstLetter"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
 - ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "APIClient"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "Business"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "BusinessMapViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
@@ -3655,6 +3581,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "businesses"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "capitalizingFirstLetter"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cart"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "category"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "centerButton"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "centerButtonTouchup"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "centerXAnchor"]
@@ -3739,6 +3666,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewWillAppear"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "white"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "widthAnchor"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "APIClient"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Business"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "BusinessMapViewController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CGFloat"]
@@ -3787,6 +3715,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "businesses"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "capitalizingFirstLetter"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cart"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "category"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "centerButton"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "centerButtonTouchup"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "centerXAnchor"]
@@ -3922,9 +3851,9 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "trailingAnchor"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "widthAnchor"]
 depends-nominal:
-- !private "s18AdditiveArithmeticP"
-- "9Alamofire0A8ExtendedP"
+- !private "8QuickBev9APIClientV"
 - !private "So20UIStackViewAlignmentV"
+- !private "7SwiftUI10AnimatableP"
 - "Sa"
 - !private "So22UILayoutConstraintAxisV"
 - !private "8BadgeHubAAC"
@@ -3940,7 +3869,7 @@ depends-nominal:
 - "s7CVarArgP"
 - !private "8QuickBev12CheckoutCartC"
 - "Sl"
-- "SL"
+- !private "SL"
 - "10Foundation15ContiguousBytesP"
 - !private "8QuickBev15CoreDataManagerC"
 - "s28CustomDebugStringConvertibleP"
@@ -3954,22 +3883,23 @@ depends-nominal:
 - !private "So17OS_dispatch_queueC"
 - "8QuickBev5DrinkC"
 - !private "8QuickBev28DrinkListTableViewControllerC"
+- !private "8QuickBev4ETagC"
 - "SE"
 - "SQ"
 - !private "So15UIControlEventsV"
 - "s25ExpressibleByArrayLiteralP"
-- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- "s32ExpressibleByStringInterpolationP"
-- "s26ExpressibleByStringLiteralP"
-- "s33ExpressibleByUnicodeScalarLiteralP"
-- !private "SF"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "7SwiftUI7GestureP"
 - "SH"
 - "8QuickBev22HomePageViewControllerC"
 - !private "s12IdentifiableP"
-- "s25LosslessStringConvertibleP"
+- !private "s25LosslessStringConvertibleP"
 - "So17MKMapViewDelegateP"
 - !private "s10MirrorPathP"
 - "SM"
@@ -3995,7 +3925,6 @@ depends-nominal:
 - !private "So8NSStringC"
 - !private "So15NSTextAlignmentV"
 - "8QuickBev25NewBusinessPickedProtocolP"
-- !private "Sj"
 - "So9OS_objectC"
 - !private "7Combine16ObservableObjectP"
 - !private "s9OptionSetP"
@@ -4007,13 +3936,11 @@ depends-nominal:
 - !private "7Combine9SchedulerP"
 - "ST"
 - !private "s10SetAlgebraP"
-- !private "s13SignedNumericP"
-- !private "Sx"
 - !private "SS"
 - !private "s27StringInterpolationProtocolP"
 - !private "Sy"
-- "s16TextOutputStreamP"
-- "s20TextOutputStreamableP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
 - "8QuickBev5ThemeO"
 - "8QuickBev11ToolbarViewC"
 - "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
@@ -4064,18 +3991,18 @@ depends-nominal:
 - "So6UIViewC"
 - "So16UIViewControllerC"
 - "So44UIViewControllerTransitionCoordinatorContextP"
-- !private "9Alamofire14URLConvertibleP"
 - !private "8QuickBev4UserC"
 - "8QuickBev14UsesAutoLayoutV"
+- !private "7SwiftUI4ViewP"
 - "s14_ArrayProtocolP"
 - !private "s30_CustomPlaygroundQuickLookableP"
 - "s24_DestructorSafeContainerP"
 - "s35_ExpressibleByBuiltinBooleanLiteralP"
-- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
-- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
-- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - !private "s26_ExpressibleByImageLiteralP"
 - "s19_HasContiguousBytesP"
@@ -4089,6 +4016,7 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -4097,7 +4025,6 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -4124,12 +4051,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/MapKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/DeveloperToolsSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIViewController+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSError+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-umbrella.h"
@@ -4215,7 +4142,6 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfoObject.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-Swift.h"
@@ -4239,45 +4165,44 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSSpacerView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSWhitelistView.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/module.map"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PusherSwift/PusherSwift.framework/Modules/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.3.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "83f49f85a58863099b17ffd4475730a1"

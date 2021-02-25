@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 
 class TabCreationViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate{
     
@@ -56,24 +55,18 @@ class TabCreationViewController: UIViewController, UITextFieldDelegate, UITextVi
             tab!.minimumContribution = Int64(minimumContributionTextField.text!)!
             tab!.detail = descriptionTextField.text!
             
-            let encoder = JSONEncoder()
-            let encodedTab = try! encoder.encode(tab)
-            let tabJSON = try! JSONSerialization.jsonObject(with:encodedTab, options: []) as! Parameters
-            
-            AF.request("http://127.0.0.1:5000/tabs", method: .post, parameters: tabJSON, encoding: JSONEncoding.default)
-                .validate()
-                .responseJSON { response in
-                    debugPrint("response", response)
-                    switch response.result {
-                    case .success (let value):
-                        print("value", value)
-                        self.navigationController!.popViewController(animated: true)
-                    case .failure (let error):
-                        print("error", error)
-                        return
-                        
-                    }
+            APIClient().perform(try! APIRequest(method: .post, path: "tabs", body: tab)) {
+                result in
+                switch result {
+                case .success (let value):
+                    print("value", value)
+                    self.navigationController!.popViewController(animated: true)
+                case .failure (let error):
+                    print("error", error)
+                    return
+                    
                 }
+            }
         }
     }
     

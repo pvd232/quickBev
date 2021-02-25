@@ -206,6 +206,14 @@ depends-member:
 - !private ["So15CALayerDelegateP", "prefersLargeTitles"]
 - !private ["So15CALayerDelegateP", "stp_theme"]
 - !private ["So15CALayerDelegateP", "window"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "compare"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "contains"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "count"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "first"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "insert"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "removeAll"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "sorted"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "uppercased"]
 - !private ["So15CNKeyDescriptorP", "compare"]
 - !private ["So15CNKeyDescriptorP", "uppercased"]
 - !private ["s7CVarArgP", "DispatchQueue"]
@@ -1215,7 +1223,6 @@ depends-member:
 - ["So8NSObjectC", "delegate"]
 - ["So8NSObjectC", "didFinish"]
 - !private ["So8NSObjectC", "dismiss"]
-- !private ["So8NSObjectC", "dismissViewControllerAnimated"]
 - !private ["So8NSObjectC", "fail"]
 - ["So8NSObjectC", "hostViewController"]
 - ["So8NSObjectC", "init"]
@@ -1299,7 +1306,6 @@ depends-member:
 - ["So8NSObjectP", "Error"]
 - ["So8NSObjectP", "LargeTitleDisplayMode"]
 - !private ["So8NSObjectP", "NSClassFromString"]
-- ["So8NSObjectP", "NSObject"]
 - ["So8NSObjectP", "PKPaymentAuthorizationViewController"]
 - ["So8NSObjectP", "PKPaymentRequest"]
 - ["So8NSObjectP", "PKPaymentSummaryItem"]
@@ -1320,7 +1326,6 @@ depends-member:
 - ["So8NSObjectP", "STPPaymentContextDelegate"]
 - ["So8NSObjectP", "STPPaymentContextState"]
 - !private ["So8NSObjectP", "STPPaymentMethod"]
-- !private ["So8NSObjectP", "STPPaymentMethodParams"]
 - ["So8NSObjectP", "STPPaymentOption"]
 - ["So8NSObjectP", "STPPaymentOptionTuple"]
 - ["So8NSObjectP", "STPPaymentOptionsViewController"]
@@ -1339,7 +1344,6 @@ depends-member:
 - ["So8NSObjectP", "UIModalPresentationStyle"]
 - !private ["So8NSObjectP", "UINavigationController"]
 - ["So8NSObjectP", "UINavigationItem"]
-- ["So8NSObjectP", "UIViewController"]
 - !private ["So8NSObjectP", "UnsafeRawPointer"]
 - ["So8NSObjectP", ""]
 - ["So8NSObjectP", "_delegate"]
@@ -1378,7 +1382,6 @@ depends-member:
 - ["So8NSObjectP", "delegate"]
 - ["So8NSObjectP", "didFinish"]
 - !private ["So8NSObjectP", "dismiss"]
-- !private ["So8NSObjectP", "dismissViewControllerAnimated"]
 - !private ["So8NSObjectP", "fail"]
 - ["So8NSObjectP", "hostViewController"]
 - ["So8NSObjectP", "init"]
@@ -2186,7 +2189,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "addCardViewControllerFooterView"]
 - !private ["So30UIPasteConfigurationSupportingP", "defaultPaymentMethod"]
 - !private ["So30UIPasteConfigurationSupportingP", "dismiss"]
-- !private ["So30UIPasteConfigurationSupportingP", "dismissViewControllerAnimated"]
 - ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "modalPresentationStyle"]
 - !private ["So30UIPasteConfigurationSupportingP", "navigationBar"]
@@ -2210,7 +2212,6 @@ depends-member:
 - !private ["So11UIResponderC", "addCardViewControllerFooterView"]
 - !private ["So11UIResponderC", "defaultPaymentMethod"]
 - !private ["So11UIResponderC", "dismiss"]
-- !private ["So11UIResponderC", "dismissViewControllerAnimated"]
 - !private ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "modalPresentationStyle"]
 - !private ["So11UIResponderC", "navigationBar"]
@@ -2233,7 +2234,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "addCardViewControllerFooterView"]
 - !private ["So30UIResponderStandardEditActionsP", "defaultPaymentMethod"]
 - !private ["So30UIResponderStandardEditActionsP", "dismiss"]
-- !private ["So30UIResponderStandardEditActionsP", "dismissViewControllerAnimated"]
 - ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "modalPresentationStyle"]
 - !private ["So30UIResponderStandardEditActionsP", "navigationBar"]
@@ -2304,7 +2304,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "addCardViewControllerFooterView"]
 - !private ["So23UIUserActivityRestoringP", "defaultPaymentMethod"]
 - !private ["So23UIUserActivityRestoringP", "dismiss"]
-- !private ["So23UIUserActivityRestoringP", "dismissViewControllerAnimated"]
 - ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "modalPresentationStyle"]
 - !private ["So23UIUserActivityRestoringP", "navigationBar"]
@@ -2672,6 +2671,8 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "sorted"]
 - !private ["s21_ObjectiveCBridgeableP", "uppercased"]
 - !private ["s8_PointerP", "init"]
+- !private ["So13CKRecordValueP", "compare"]
+- !private ["So13CKRecordValueP", "uppercased"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "prefersLargeTitles"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "stp_theme"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "window"]
@@ -2680,6 +2681,7 @@ depends-nominal:
 - !private "Sa"
 - !private "SK"
 - !private "So15CALayerDelegateP"
+- !private "8CloudKit21CKRecordValueProtocolP"
 - !private "So15CNKeyDescriptorP"
 - "s7CVarArgP"
 - !private "Sl"
@@ -2814,14 +2816,17 @@ depends-nominal:
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"
 - !private "s21_ObjectiveCBridgeableP"
 - !private "s8_PointerP"
+- !private "So13CKRecordValueP"
 - !private "s38__DefaultCustomPlaygroundQuickLookableP"
 - !private "So22objc_AssociationPolicyV"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -2836,12 +2841,15 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/os.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/DeveloperToolsSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIViewController+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSError+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/Stripe3DS2.h"
@@ -2948,6 +2956,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
@@ -2961,10 +2970,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"

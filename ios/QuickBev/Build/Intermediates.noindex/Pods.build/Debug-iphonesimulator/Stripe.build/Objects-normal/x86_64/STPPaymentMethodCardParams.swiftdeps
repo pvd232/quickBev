@@ -12,23 +12,30 @@ provides-dynamic-lookup:
 - "description"
 - "expMonth"
 - "expYear"
+- "isEqual"
 - "last4"
 - "number"
 - "propertyNamesToFormFieldNamesMapping"
 - "rootObjectName"
 - "token"
 depends-top-level:
+- !private "!"
 - !private "!="
 - !private "&&"
 - !private "-"
+- !private "=="
+- !private "==="
 - !private ">="
 - !private "??"
 - "AnyHashable"
 - !private "Array"
 - "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
 - "CastingPrecedence"
 - !private "FloatLiteralType"
 - !private "IntegerLiteralType"
+- "NSDictionary"
 - "NSNumber"
 - "NSObject"
 - "NSString"
@@ -42,19 +49,26 @@ depends-top-level:
 - !private "StringLiteralType"
 - "TernaryPrecedence"
 - !private "UnicodeScalarType"
+- !private "additionalAPIParameters"
 - !private "cvc"
 - !private "expMonth"
 - !private "expYear"
+- !private "isEqual"
 - !private "last4"
 - !private "number"
 - !private "token"
 - !private "type"
+- !private "||"
 depends-member:
 - !private ["Sa", "joined"]
 - !private ["SK", ""]
 - !private ["SK", "count"]
 - !private ["SK", "init"]
 - !private ["SK", "joined"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "count"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "joined"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "substring"]
 - !private ["So15CNKeyDescriptorP", "count"]
 - !private ["So15CNKeyDescriptorP", "substring"]
 - !private ["s7CVarArgP", "NSNumber"]
@@ -69,6 +83,7 @@ depends-member:
 - !private ["s7CVarArgP", "expMonth"]
 - !private ["s7CVarArgP", "expYear"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isEqual"]
 - !private ["s7CVarArgP", "joined"]
 - !private ["s7CVarArgP", "last4"]
 - !private ["s7CVarArgP", "number"]
@@ -97,6 +112,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "expMonth"]
 - !private ["s28CustomDebugStringConvertibleP", "expYear"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isEqual"]
 - !private ["s28CustomDebugStringConvertibleP", "joined"]
 - !private ["s28CustomDebugStringConvertibleP", "last4"]
 - !private ["s28CustomDebugStringConvertibleP", "number"]
@@ -107,6 +123,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "type"]
 - !private ["s17CustomReflectableP", "count"]
 - !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "isEqual"]
 - !private ["s17CustomReflectableP", "joined"]
 - !private ["s23CustomStringConvertibleP", "NSNumber"]
 - !private ["s23CustomStringConvertibleP", "NSStringFromClass"]
@@ -122,6 +139,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "expMonth"]
 - !private ["s23CustomStringConvertibleP", "expYear"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isEqual"]
 - !private ["s23CustomStringConvertibleP", "joined"]
 - !private ["s23CustomStringConvertibleP", "last4"]
 - !private ["s23CustomStringConvertibleP", "number"]
@@ -152,6 +170,7 @@ depends-member:
 - !private ["SQ", "expMonth"]
 - !private ["SQ", "expYear"]
 - !private ["SQ", "init"]
+- !private ["SQ", "isEqual"]
 - !private ["SQ", "joined"]
 - !private ["SQ", "last4"]
 - !private ["SQ", "number"]
@@ -167,6 +186,7 @@ depends-member:
 - ["s30ExpressibleByDictionaryLiteralP", "Key"]
 - ["s30ExpressibleByDictionaryLiteralP", "Value"]
 - ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "isEqual"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "count"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
@@ -199,6 +219,7 @@ depends-member:
 - !private ["SH", "expMonth"]
 - !private ["SH", "expYear"]
 - !private ["SH", "init"]
+- !private ["SH", "isEqual"]
 - !private ["SH", "joined"]
 - !private ["SH", "last4"]
 - !private ["SH", "number"]
@@ -218,6 +239,7 @@ depends-member:
 - !private ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "count"]
 - !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "isEqual"]
 - !private ["So8NSCodingP", "substring"]
 - !private ["So9NSCopyingP", ""]
 - !private ["So9NSCopyingP", "count"]
@@ -225,23 +247,31 @@ depends-member:
 - !private ["So9NSCopyingP", "expMonth"]
 - !private ["So9NSCopyingP", "expYear"]
 - !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "isEqual"]
 - !private ["So9NSCopyingP", "number"]
 - !private ["So9NSCopyingP", "substring"]
+- !private ["So12NSDictionaryC", "isEqual"]
+- !private ["So17NSFastEnumerationP", "isEqual"]
+- !private ["So20NSFetchRequestResultP", "init"]
+- !private ["So20NSFetchRequestResultP", "isEqual"]
 - !private ["So21NSItemProviderReadingP", "count"]
 - !private ["So21NSItemProviderReadingP", "substring"]
 - !private ["So21NSItemProviderWritingP", "count"]
 - !private ["So21NSItemProviderWritingP", "substring"]
 - !private ["So16NSMutableCopyingP", "count"]
+- !private ["So16NSMutableCopyingP", "isEqual"]
 - !private ["So16NSMutableCopyingP", "substring"]
 - !private ["So8NSNumberC", "init"]
 - ["So8NSObjectC", "AnyHashable"]
+- ["So8NSObjectC", "Bool"]
+- !private ["So8NSObjectC", "NSDictionary"]
 - ["So8NSObjectC", "NSNumber"]
 - !private ["So8NSObjectC", "NSString"]
 - !private ["So8NSObjectC", "NSStringFromClass"]
 - !private ["So8NSObjectC", "NSStringFromSelector"]
 - ["So8NSObjectC", "NSZone"]
 - ["So8NSObjectC", "STPCardParams"]
-- !private ["So8NSObjectC", "STPPaymentMethodCardParams"]
+- ["So8NSObjectC", "STPPaymentMethodCardParams"]
 - ["So8NSObjectC", "String"]
 - ["So8NSObjectC", ""]
 - ["So8NSObjectC", "additionalAPIParameters"]
@@ -252,6 +282,8 @@ depends-member:
 - ["So8NSObjectC", "expMonth"]
 - ["So8NSObjectC", "expYear"]
 - ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "isEqual"]
+- !private ["So8NSObjectC", "isEqualToDictionary"]
 - ["So8NSObjectC", "last4"]
 - ["So8NSObjectC", "number"]
 - ["So8NSObjectC", "propertyNamesToFormFieldNamesMapping"]
@@ -267,7 +299,7 @@ depends-member:
 - !private ["So8NSObjectP", "NSStringFromClass"]
 - !private ["So8NSObjectP", "NSStringFromSelector"]
 - ["So8NSObjectP", "STPCardParams"]
-- !private ["So8NSObjectP", "STPPaymentMethodCardParams"]
+- ["So8NSObjectP", "STPPaymentMethodCardParams"]
 - !private ["So8NSObjectP", "String"]
 - ["So8NSObjectP", ""]
 - ["So8NSObjectP", "additionalAPIParameters"]
@@ -278,6 +310,8 @@ depends-member:
 - ["So8NSObjectP", "expMonth"]
 - ["So8NSObjectP", "expYear"]
 - ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "isEqual"]
+- !private ["So8NSObjectP", "isEqualToDictionary"]
 - ["So8NSObjectP", "last4"]
 - ["So8NSObjectP", "number"]
 - ["So8NSObjectP", "propertyNamesToFormFieldNamesMapping"]
@@ -291,6 +325,7 @@ depends-member:
 - !private ["So14NSSecureCodingP", ""]
 - !private ["So14NSSecureCodingP", "count"]
 - !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "isEqual"]
 - !private ["So14NSSecureCodingP", "substring"]
 - !private ["So8NSStringC", "count"]
 - !private ["So8NSStringC", "substring"]
@@ -319,6 +354,7 @@ depends-member:
 - ["6Stripe16STPFormEncodableP", "expMonth"]
 - ["6Stripe16STPFormEncodableP", "expYear"]
 - ["6Stripe16STPFormEncodableP", "init"]
+- ["6Stripe16STPFormEncodableP", "isEqual"]
 - ["6Stripe16STPFormEncodableP", "last4"]
 - ["6Stripe16STPFormEncodableP", "number"]
 - ["6Stripe16STPFormEncodableP", "propertyNamesToFormFieldNamesMapping"]
@@ -326,13 +362,15 @@ depends-member:
 - ["6Stripe16STPFormEncodableP", "token"]
 - !private ["6Stripe16STPFormEncodableP", "type"]
 - ["6Stripe26STPPaymentMethodCardParamsC", "AnyHashable"]
+- ["6Stripe26STPPaymentMethodCardParamsC", "Bool"]
+- !private ["6Stripe26STPPaymentMethodCardParamsC", "NSDictionary"]
 - ["6Stripe26STPPaymentMethodCardParamsC", "NSNumber"]
 - !private ["6Stripe26STPPaymentMethodCardParamsC", "NSString"]
 - !private ["6Stripe26STPPaymentMethodCardParamsC", "NSStringFromClass"]
 - !private ["6Stripe26STPPaymentMethodCardParamsC", "NSStringFromSelector"]
 - ["6Stripe26STPPaymentMethodCardParamsC", "NSZone"]
 - ["6Stripe26STPPaymentMethodCardParamsC", "STPCardParams"]
-- !private ["6Stripe26STPPaymentMethodCardParamsC", "STPPaymentMethodCardParams"]
+- ["6Stripe26STPPaymentMethodCardParamsC", "STPPaymentMethodCardParams"]
 - ["6Stripe26STPPaymentMethodCardParamsC", "String"]
 - ["6Stripe26STPPaymentMethodCardParamsC", ""]
 - ["6Stripe26STPPaymentMethodCardParamsC", "additionalAPIParameters"]
@@ -343,6 +381,7 @@ depends-member:
 - ["6Stripe26STPPaymentMethodCardParamsC", "expMonth"]
 - ["6Stripe26STPPaymentMethodCardParamsC", "expYear"]
 - ["6Stripe26STPPaymentMethodCardParamsC", "init"]
+- ["6Stripe26STPPaymentMethodCardParamsC", "isEqual"]
 - ["6Stripe26STPPaymentMethodCardParamsC", "last4"]
 - ["6Stripe26STPPaymentMethodCardParamsC", "number"]
 - ["6Stripe26STPPaymentMethodCardParamsC", "propertyNamesToFormFieldNamesMapping"]
@@ -352,6 +391,7 @@ depends-member:
 - !private ["ST", ""]
 - !private ["ST", "count"]
 - !private ["ST", "init"]
+- !private ["ST", "isEqual"]
 - !private ["ST", "joined"]
 - !private ["SS", "count"]
 - !private ["SS", "init"]
@@ -373,6 +413,7 @@ depends-member:
 - !private ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "substring"]
 - !private ["s24_DestructorSafeContainerP", "joined"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "count"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
@@ -387,6 +428,7 @@ depends-member:
 - !private ["s19_HasContiguousBytesP", "joined"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "isEqual"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "joined"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "substring"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSNumber"]
@@ -401,6 +443,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "expMonth"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "expYear"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isEqual"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "last4"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "number"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "propertyNamesToFormFieldNamesMapping"]
@@ -420,6 +463,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "expMonth"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "expYear"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isEqual"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "last4"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "number"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "propertyNamesToFormFieldNamesMapping"]
@@ -431,9 +475,13 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "count"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "joined"]
+- !private ["So13CKRecordValueP", "count"]
+- !private ["So13CKRecordValueP", "init"]
+- !private ["So13CKRecordValueP", "substring"]
 depends-nominal:
 - !private "Sa"
 - !private "SK"
+- !private "8CloudKit21CKRecordValueProtocolP"
 - !private "So15CNKeyDescriptorP"
 - "s7CVarArgP"
 - !private "Sl"
@@ -464,6 +512,9 @@ depends-nominal:
 - !private "10Foundation19MutableDataProtocolP"
 - !private "So8NSCodingP"
 - !private "So9NSCopyingP"
+- !private "So12NSDictionaryC"
+- !private "So17NSFastEnumerationP"
+- !private "So20NSFetchRequestResultP"
 - !private "So21NSItemProviderReadingP"
 - !private "So21NSItemProviderWritingP"
 - !private "So16NSMutableCopyingP"
@@ -487,6 +538,7 @@ depends-nominal:
 - !private "s14_ArrayProtocolP"
 - !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
@@ -496,12 +548,15 @@ depends-nominal:
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"
 - !private "s21_ObjectiveCBridgeableP"
+- !private "So13CKRecordValueP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -516,12 +571,15 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/os.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/DeveloperToolsSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIViewController+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSError+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/Stripe3DS2.h"
@@ -628,6 +686,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
@@ -641,13 +700,15 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "31c7d7f726c29c3ebdc9521d30d52dda"
+interface-hash: "93c78d5653d366c4ef3dd0c4fd705d57"

@@ -9,18 +9,18 @@
 import UIKit
 
 class RegistrationWithEmailViewController: UIViewController, UITextFieldDelegate {
-    @UsesAutoLayout var firstNameTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Your first name"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
-    @UsesAutoLayout var lastNameTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Your last name"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
-    @UsesAutoLayout var emailTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Your email address"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
-    @UsesAutoLayout var confirmEmailTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Confirm your email address"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
-    @UsesAutoLayout var passwordTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Your password"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
-    @UsesAutoLayout var confirmPasswordTextField = UITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Confirm your password"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
+    @UsesAutoLayout var firstNameTextField = RoundedUITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Your first name"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.white)]))
+    @UsesAutoLayout var lastNameTextField = RoundedUITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Your last name"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.white)]))
+    @UsesAutoLayout var emailTextField = RoundedUITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Your email address"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.white)]))
+    @UsesAutoLayout var confirmEmailTextField = RoundedUITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Confirm your email address"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.white)]))
+    @UsesAutoLayout var passwordTextField = RoundedUITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Your password"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.white)]))
+    @UsesAutoLayout var confirmPasswordTextField = RoundedUITextField(theme: Theme.UITextField(props: [ .font(nil), .placeHolderText("Confirm your password"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
     @UsesAutoLayout var firstNameLabel = UILabel(theme: Theme.UILabel(props: [.text("First Name"), .font(nil), .textColor ]))
     @UsesAutoLayout var lastNameLabel =  UILabel(theme: Theme.UILabel(props: [.text("Last Name"), .font(nil), .textColor]))
     @UsesAutoLayout var emailLabel =  UILabel(theme: Theme.UILabel(props: [.text("Email"), .font(nil), .textColor ]))
     @UsesAutoLayout var passwordLabel =  UILabel(theme: Theme.UILabel(props: [.text("Password"), .font(nil), .textColor ]))
-    @UsesAutoLayout var confirmEmailLabel =  UILabel(theme: Theme.UILabel(props: [.text("Confirm Email"), .font(nil)]))
-    @UsesAutoLayout var confirmPasswordLabel =  UILabel(theme: Theme.UILabel(props: [.text("Confirm Password"), .font(nil)]))
+    @UsesAutoLayout var confirmEmailLabel =  UILabel(theme: Theme.UILabel(props: [.text("Confirm Email"), .font(nil), .textColor]))
+    @UsesAutoLayout var confirmPasswordLabel =  UILabel(theme: Theme.UILabel(props: [.text("Confirm Password"), .font(nil), .textColor]))
     @UsesAutoLayout var registrationStackView = UIStackView(theme: Theme.UIStackView(props: [.vertical, .spacing(10)]))
     @UsesAutoLayout var submitButton = RoundButton(theme: Theme.RoundButton(props: [ .color, .text("Submit"), .titleLabelFont(nil)]))
     @UsesAutoLayout private var activityIndicator = UIActivityIndicatorView(style: .large)
@@ -93,7 +93,7 @@ class RegistrationWithEmailViewController: UIViewController, UITextFieldDelegate
         submitButton.addTarget(self, action: #selector(submitRegistration), for: .touchUpInside)
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField){
+    private func textFieldDidEndEditing(_ textField: RoundedUITextField){
         print("did end")
         if textField.placeholder == "Your first name" {
             formValues["firstName"] = textField.text
@@ -114,7 +114,7 @@ class RegistrationWithEmailViewController: UIViewController, UITextFieldDelegate
             formValues["confirmPassword"] = textField.text
         }
     }
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    private func textFieldShouldReturn(_ textField: RoundedUITextField) -> Bool {
         if textField.placeholder == "Your first name" {
             formValues["firstName"] = textField.text
         }
@@ -143,11 +143,11 @@ class RegistrationWithEmailViewController: UIViewController, UITextFieldDelegate
             // regular registration process
             if CheckoutCart.shared.isGuest == false {
                 print("checkout card stripeId is nil")
-                return  User(Email : emailTextField.text!, FirstName: firstNameTextField.text!,LastName: lastNameTextField.text!,Password: passwordTextField.text!, EmailVerified: false)
+                return  User(FirstName: firstNameTextField.text!, LastName: lastNameTextField.text!, Email : emailTextField.text!,Password: passwordTextField.text!, EmailVerified: false)
             }
             // guest registration process because the stripe id was acquired at home page when a user did not yet exist
             else {
-                return User(Email : emailTextField.text!, FirstName: firstNameTextField.text!,LastName: lastNameTextField.text!,Password: passwordTextField.text!, StripeId: CheckoutCart.shared.stripeId!, EmailVerified: false)
+                return User(FirstName: firstNameTextField.text!, LastName: lastNameTextField.text!, Email : emailTextField.text!,Password: passwordTextField.text!, StripeId: CheckoutCart.shared.stripeId!, EmailVerified: false)
             }
         }()
         if formValues["email"] != formValues["confirmEmail"] || formValues["password"] != formValues["confirmPassword"] {
@@ -176,9 +176,8 @@ class RegistrationWithEmailViewController: UIViewController, UITextFieldDelegate
                 self.present(alertController, animated: true, completion: nil)
             }
         }
-        //        TODO: Do email confirmation web socket stuff on a new page, reset database in backend to include isVerified property and then set up timeout in websocket function that will test every 2 seconds if the users email has been verified. when the user verifies their email it will post a true value along with the associated email to the database. if the email is not verified before the timeout occurs, the user will be notified and given the option to send another email or register with a new email
+        // TODO: Do email confirmation web socket stuff on a new page, reset database in backend to include isVerified property and then set up timeout in websocket function that will test every 2 seconds if the users email has been verified. when the user verifies their email it will post a true value along with the associated email to the database. if the email is not verified before the timeout occurs, the user will be notified and given the option to send another email or register with a new email
         // can also create another websocket function that registers to another socket in backend for front end to call when email is verified maybe
-        //        WebSocketTaskConnection.shared.send(data: requestedNewUser)
         else {
             let request = try! APIRequest(method: .post, path:"/customer", body: requestedNewUser)
             APIClient().perform(request) {result in

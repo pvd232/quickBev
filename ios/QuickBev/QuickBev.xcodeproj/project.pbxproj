@@ -17,6 +17,8 @@
 		1D236D0E2430204B00BF3412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D236D0D2430204B00BF3412 /* Assets.xcassets */; };
 		1D236D112430204B00BF3412 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D236D0F2430204B00BF3412 /* LaunchScreen.storyboard */; };
 		1D236D192430346300BF3412 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1D236D182430346300BF3412 /* Podfile */; };
+		1D28B18125E4742D002D8577 /* ETag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D28B17F25E4742D002D8577 /* ETag+CoreDataProperties.swift */; };
+		1D28B18425E47445002D8577 /* ETag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D28B18325E47445002D8577 /* ETag.swift */; };
 		1D2A321F25D877390083E585 /* SecureStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2A321E25D877390083E585 /* SecureStore.swift */; };
 		1D2A322225D877560083E585 /* SecureStoreQueryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2A322125D877560083E585 /* SecureStoreQueryable.swift */; };
 		1D2A322525D8778B0083E585 /* SecureStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2A322425D8778B0083E585 /* SecureStoreError.swift */; };
@@ -26,6 +28,8 @@
 		1D3BF3A6258D011A007CB39B /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3BF3A5258D011A007CB39B /* Tab.swift */; };
 		1D40374725AC076300F1E61F /* TemplateNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D40374625AC076300F1E61F /* TemplateNavigationController.swift */; };
 		1D446A6325C9A01D005B8202 /* CheckoutCart+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D446A6125C9A01D005B8202 /* CheckoutCart+CoreDataProperties.swift */; };
+		1D4DF44B25E70EAB009E4A12 /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DF44A25E70EAB009E4A12 /* PasswordResetViewController.swift */; };
+		1D4DF44E25E71001009E4A12 /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4DF44D25E71001009E4A12 /* PasswordResetViewController.swift */; };
 		1D52A37225C3C27D00BA5A43 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D52A37125C3C27D00BA5A43 /* Business.swift */; };
 		1D52A37A25C3FA0000BA5A43 /* BusinessMapViewCotroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D52A37925C3FA0000BA5A43 /* BusinessMapViewCotroller.swift */; };
 		1D52A39625C40B4200BA5A43 /* Drink+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D52A38C25C40B4200BA5A43 /* Drink+CoreDataProperties.swift */; };
@@ -84,6 +88,8 @@
 		1D236D102430204B00BF3412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D236D122430204B00BF3412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D236D182430346300BF3412 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1D28B17F25E4742D002D8577 /* ETag+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ETag+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		1D28B18325E47445002D8577 /* ETag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETag.swift; sourceTree = "<group>"; };
 		1D2A321E25D877390083E585 /* SecureStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStore.swift; sourceTree = "<group>"; };
 		1D2A322125D877560083E585 /* SecureStoreQueryable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStoreQueryable.swift; sourceTree = "<group>"; };
 		1D2A322425D8778B0083E585 /* SecureStoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStoreError.swift; sourceTree = "<group>"; };
@@ -94,6 +100,8 @@
 		1D3BF3A5258D011A007CB39B /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		1D40374625AC076300F1E61F /* TemplateNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateNavigationController.swift; sourceTree = "<group>"; };
 		1D446A6125C9A01D005B8202 /* CheckoutCart+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CheckoutCart+CoreDataProperties.swift"; path = "QuickBev/Singletons/CheckoutCart+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		1D4DF44A25E70EAB009E4A12 /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PasswordResetViewController.swift; path = QuickBev/ViewControllers/PasswordResetViewController.swift; sourceTree = SOURCE_ROOT; };
+		1D4DF44D25E71001009E4A12 /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
 		1D52A37125C3C27D00BA5A43 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		1D52A37925C3FA0000BA5A43 /* BusinessMapViewCotroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessMapViewCotroller.swift; sourceTree = "<group>"; };
 		1D52A38C25C40B4200BA5A43 /* Drink+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Drink+CoreDataProperties.swift"; path = "QuickBev/Models/Drink+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
@@ -260,10 +268,12 @@
 		1DE4E51525CA14FB00F53D6A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1D28B18325E47445002D8577 /* ETag.swift */,
+				1D28B17F25E4742D002D8577 /* ETag+CoreDataProperties.swift */,
 				1D7AD1F225D76FAC00F22D83 /* User+CoreDataProperties.swift */,
-				1DE290B025CCAF4100F4235B /* APIClient.swift */,
 				1D52A38C25C40B4200BA5A43 /* Drink+CoreDataProperties.swift */,
 				1DEF0F092596DF9800DA5BEB /* Drink.swift */,
+				1D4DF44A25E70EAB009E4A12 /* PasswordResetViewController.swift */,
 				1D52A39025C40B4200BA5A43 /* Business+CoreDataProperties.swift */,
 				1D52A37125C3C27D00BA5A43 /* Business.swift */,
 				1D52A39225C40B4200BA5A43 /* Order+CoreDataProperties.swift */,
@@ -278,6 +288,7 @@
 		1DE4E51625CA153B00F53D6A /* Singletons */ = {
 			isa = PBXGroup;
 			children = (
+				1DE290B025CCAF4100F4235B /* APIClient.swift */,
 				1D236D032430204800BF3412 /* SceneDelegate.swift */,
 				1DBC17ED25D61A6400CE594E /* WebSocket.swift */,
 				1D236D012430204800BF3412 /* AppDelegate.swift */,
@@ -292,6 +303,7 @@
 		1DE4E51725CA157D00F53D6A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1D4DF44D25E71001009E4A12 /* PasswordResetViewController.swift */,
 				1D40374625AC076300F1E61F /* TemplateNavigationController.swift */,
 				1D1290B625AA962900A843C4 /* RootViewController.swift */,
 				1D7865D82487A03200389C54 /* SplashPageViewController.swift */,
@@ -482,6 +494,9 @@
 				1D2A322225D877560083E585 /* SecureStoreQueryable.swift in Sources */,
 				1DB8C2A5259FD22D0092FE49 /* ReviewOrderViewController.swift in Sources */,
 				1D6A7A6E2487978E00517300 /* HomePageViewController.swift in Sources */,
+				1D28B18425E47445002D8577 /* ETag.swift in Sources */,
+				1D4DF44E25E71001009E4A12 /* PasswordResetViewController.swift in Sources */,
+				1D4DF44B25E70EAB009E4A12 /* PasswordResetViewController.swift in Sources */,
 				1D2A323125D87A240083E585 /* VerifyEmailViewController.swift in Sources */,
 				1D2A322825D877A80083E585 /* InternetProtocol.swift in Sources */,
 				1D7865DF2489CDC800389C54 /* CustomAnnotation.swift in Sources */,
@@ -507,6 +522,7 @@
 				1D56E7822592FFB300BE9F13 /* CheckoutViewController.swift in Sources */,
 				1DE2909825CCA51800F4235B /* Extensions.swift in Sources */,
 				1DE2909025CB64BC00F4235B /* SignInViewProperties.swift in Sources */,
+				1D28B18125E4742D002D8577 /* ETag+CoreDataProperties.swift in Sources */,
 				1DEF0F0A2596DF9800DA5BEB /* Drink.swift in Sources */,
 				1D236D042430204800BF3412 /* SceneDelegate.swift in Sources */,
 			);

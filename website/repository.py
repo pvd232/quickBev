@@ -52,9 +52,6 @@ class Order_Repository(object):
         session.add(new_order)
 
         for each_order_drink in order.order_drink.order_drink:
-            print()
-            print('each_order_drink', each_order_drink.serialize())
-            print()
             # create a unique instance of Order_Drink for the number of each type of drink that were ordered. the UUID for the Order_Drink is generated in the database
             for i in range(each_order_drink.quantity):
                 new_order_drink = Order_Drink(
@@ -71,7 +68,6 @@ class Order_Repository(object):
     def get_stripe_ephemeral_key(self, session, request):
         customer = request['stripe_id']
         customer_bool = False
-        print('request', request)
         if customer:
             confirm_customer_existence = session.query(Stripe_Customer).filter(
                 Stripe_Customer.id == customer).first()
@@ -81,13 +77,9 @@ class Order_Repository(object):
                 key = stripe.EphemeralKey.create(
                     customer=customer, stripe_version=request['api_version'])
                 header = None
-                print('header', header)
-                print('key', key)
-
                 return key, header
 
         if not customer_bool:
-            print("no stripe id")
             new_customer = stripe.Customer.create()
             new_stripe = Stripe_Customer(id=new_customer.id)
             session.add(new_stripe)
@@ -110,10 +102,8 @@ class Order_Repository(object):
         tip_amount = round(order.tip_percentage * subtotal, 2)
         sales_tax = round(subtotal * order.sales_tax_percentage, 2)
         amount = int(round(subtotal+tip_amount+sales_tax, 2) * 100)
-        print('amount', amount)
         merchant_stripe_id = order.merchant_stripe_id
         service_fee = int(round(.1 * amount, 2))
-        print('service_fee', service_fee)
 
         payment_intent = stripe.PaymentIntent.create(
             amount=amount,
@@ -132,8 +122,6 @@ class Order_Repository(object):
 
 class Customer_Repository(object):
     def authenticate_customer(self, session, email, password):
-        print('password', password)
-        print('email', email)
       # check to see if the customer exists in the database by querying the Customer_Info table for the giver username and password
       # if they don't exist this will return a null value for customer which i check for in line 80
 
@@ -144,7 +132,6 @@ class Customer_Repository(object):
             return False
 
     def authenticate_username(self, session, username, hashed_username):
-        print('username', username)
         # if a username is passed then we query the db to verify it, if the hashed version is passed then we use the check_password_hash to verify it
         if username and not hashed_username:
             customer = session.query(Customer).filter(
@@ -155,9 +142,6 @@ class Customer_Repository(object):
                 return False
         elif not username and hashed_username:
             for customer in session.query(Customer):
-                print('check_password_hash(customer.id, username)',
-                      check_password_hash(hashed_username, customer.id))
-                print('customer.id', customer.id)
                 if check_password_hash(hashed_username, customer.id):
                     return True
             return False
@@ -167,8 +151,6 @@ class Customer_Repository(object):
             Customer.id == customer.id).first()
         test_stripe_id = session.query(Stripe_Customer).filter(
             Stripe_Customer.id == customer.stripe_id).first()
-        print('test_stripe_id', test_stripe_id)
-        print('test_customer', test_customer)
 
         if not test_customer and test_stripe_id:
             new_customer = Customer(id=customer.id, password=customer.password,
@@ -195,27 +177,21 @@ class Customer_Repository(object):
 class Business_Repository(object):
     def get_businesss(self, session):
         businesses = session.query(Business).all()
-        print('businesses', businesses)
         return businesses
 
     def add_business(self, session, business):
         # will have to plug in an API here to dynamically pull information (avalara probs if i can get the freaking credentials to work)
-        new_business = Business(id = business.id, name=business.name, classification=business.classification, date_joined=date.today(
+        new_business = Business(id=business.id, name=business.name, classification=business.classification, date_joined=date.today(
         ), sales_tax_rate=business.sales_tax_rate, merchant_id=business.merchant_id, street=business.street, city=business.city,
             state=business.state, zipcode=business.zipcode, address=business.address, tablet=business.tablet, phone_number=business.phone_number, merchant_stripe_id=business.merchant_stripe_id)
         session.add(new_business)
         return new_business
 
     def update_business(self, session, business):
-        print('requested business to update', business.serialize())
         business_database_object_to_update = session.query(
             Business).filter(Business.id == business.id).first()
         if business_database_object_to_update:
-            print('business_database_object_to_update.stripe_id',
-                  business_database_object_to_update.stripe_id)
             business_database_object_to_update.stripe_id = business.stripe_id
-            print('business_database_object_to_update.stripe_id',
-                  business_database_object_to_update.stripe_id)
             return True
         else:
             return False
@@ -256,3 +232,28 @@ class Merchant_Repository(object):
         session.add(new_merchant)
         session.add(new_merchant_stripe)
         return True
+
+
+class ETag_Repository():
+    def get_etag(self, session, category):
+        etag = session.query(ETag).filter(ETag.category == category).first()
+        return etag
+
+    def update_etag(self, session, category):
+        etag = session.query(ETag).filter(ETag.category == category).first()
+        print('etag.id', etag.id)
+        etag.id += 1
+        print('etag.id', etag.id)
+        return etag.id
+
+    def validate_etag(self, session, etag):
+        print('etag', etag)
+        print('etag["category"]', etag["category"])
+        print('etag["id"]', etag["id"])
+        validation = session.query(ETag).filter(
+            ETag.category == etag["category"], ETag.id == etag["id"]).first()
+        print('validation', validation)
+        if validation:
+            return True
+        else:
+            return False

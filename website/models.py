@@ -266,6 +266,21 @@ class Stripe_Account(db.Model):
         return serialized_attributes
 
 
+class ETag (db.Model):
+    __tablename__ = 'etag'
+    id = db.Column(db.Integer(), primary_key=True, nullable=False)
+    category = db.Column(db.String(80),  primary_key=True, nullable=False)
+
+    @property
+    def serialize(self):
+        attribute_names = list(self.__dict__.keys())
+        attributes = list(self.__dict__.values())
+        serialized_attributes = {}
+        for i in range(len(attributes)):
+            serialized_attributes[attribute_names[i]] = attributes[i]
+        return serialized_attributes
+
+
 def load_json(filename):
 
     with open(filename) as file:
@@ -304,7 +319,7 @@ def create_business():
         state = business['state']
         zipcode = business['zipcode']
         address = f"{street}, {city}, {state} {zipcode}"
-        new_business = Business(id = uuid.uuid4(), merchant_id=merchant_id, merchant_stripe_id=new_account.id,
+        new_business = Business(id=uuid.uuid4(), merchant_id=merchant_id, merchant_stripe_id=new_account.id,
                                 name=name, date_joined=date_joined, sales_tax_rate=sales_tax_rate, classification=classification, street=street, city=city,
                                 state=state, zipcode=zipcode, address=address, tablet=tablet, phone_number=phone_number)
         # After I create the drink, I can then add it to my session.
@@ -348,6 +363,16 @@ def create_drink():
     db.session.commit()
 
 
+def create_etag():
+    db.create_all()
+    new_etag = ETag(id=0, category="business")
+    new_etag2 = ETag(id=0, category="drink")
+
+    db.session.add(new_etag)
+    db.session.add(new_etag2)
+    db.session.commit()
+
+
 def create_everything():
     db.drop_all()
     db.create_all()
@@ -356,3 +381,4 @@ def create_everything():
 
 
 # create_everything()
+# create_etag()

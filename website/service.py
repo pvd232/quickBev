@@ -62,6 +62,13 @@ class Drink_Service(object):
                 drink.business_id = business_id
             return self.drink_repository.add_drinks(session, new_drink_list)
 
+    def get_drinks_etag(self):
+        with session_scope() as session:
+            return ETag_Domain(etag_object=ETag_Repository().get_etag(session, "drink"))
+
+    def validate_etag(self, etag):
+        return ETag_Repository().validate_etag(etag)
+
 
 class Order_Service(object):
     def __init__(self):
@@ -175,7 +182,7 @@ class Business_Service(object):
                 session, business_domain)
             if business_database_object:
                 # the new business domain has a UUID that was created during initialization
-                return business_domain 
+                return business_domain
             else:
                 return False
 
@@ -193,3 +200,17 @@ class Tab_Service(object):
         with session_scope() as session:
             new_tab_domain = Tab_Domain(tab_json=tab)
             return self.tab_repository.post_tab(session, new_tab_domain)
+
+
+class ETag_Service(object):
+    def get_etag(self, category):
+        with session_scope() as session:
+            return ETag_Domain(etag_object=ETag_Repository().get_etag(session, category))
+
+    def validate_etag(self, etag):
+        with session_scope() as session:
+            return ETag_Repository().validate_etag(session, etag)
+
+    def update_etag(self, category):
+        with session_scope() as session:
+            ETag_Repository().update_etag(session, category)

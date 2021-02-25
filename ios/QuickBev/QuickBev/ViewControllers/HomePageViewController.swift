@@ -47,7 +47,7 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
         self.view.addSubview(theNightIsYoungStackView)
         self.view.addSubview(centerButton)
         self.view.addSubview(bottomButtonsViewContainer)
-
+        print("hey")
         centerButton.refreshColor(color: UIColor.themeColor)
         centerButton.titleLabel?.font = UIFont.themeButtonFont
         
@@ -111,6 +111,15 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
         
         // initialize checkout cart
         // this triggers the StripeAPI to call the create customer key function, sending the existing stripe id of the user returned from logging in as a parameter
+        if let u = CoreDataManager.sharedManager.fetchEntities(entityName: "ETag") as? [ETag]{
+            for e in u {
+                print("etag.id", e.id)
+                print("etag.category", e.category)
+
+            }
+
+        }
+        
         let _ = CheckoutCart.customerContext
         if CheckoutCart.shared.user == nil {
             centerButton.refreshTitle(newTitle: "Choose a venue")
@@ -133,10 +142,23 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
         let group = DispatchGroup()
         group.enter()
         if let fetchedBusinesses = CoreDataManager.sharedManager.fetchEntities(entityName: "Business") as? [Business], fetchedBusinesses.count > 0 {
-            businesses = fetchedBusinesses
-            group.leave()
+            print("1")
+            Business.getBusinesses(APIClient: APIClient()) {
+                businessesFromAPICall in
+                guard businessesFromAPICall != nil else {
+                    print("2")
+
+                    self.businesses = fetchedBusinesses
+                    return
+                }
+                CoreDataManager.sharedManager.deleteEntities(entityName: "Business")
+                self.businesses = businessesFromAPICall!
+                fetchedDrinksOrBusinessesBool = true
+                group.leave()
+            }
         } else {
-            Business.getBusinesses() {
+            print("b")
+            Business.getBusinesses(APIClient: APIClient()) {
                 businessesFromAPICall in
                 guard businessesFromAPICall != nil else {
                     return
@@ -148,10 +170,23 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
         }
         group.enter()
         if let fetchedDrinks = CoreDataManager.sharedManager.fetchEntities(entityName: "Drink") as? [Drink], fetchedDrinks.count > 0 {
-            drinks = fetchedDrinks
-            group.leave()
+            print("3")
+            Drink.getDrinks(APIClient: APIClient()) { drinksFromAPICall in
+                guard drinksFromAPICall != nil else {
+                    print("4")
+                    self.drinks = fetchedDrinks
+                    return
+                }
+                CoreDataManager.sharedManager.deleteEntities(entityName: "Drink")
+                print("5")
+                self.drinks = drinksFromAPICall!
+                fetchedDrinksOrBusinessesBool = true
+                group.leave()
+
+            }
         } else {
-            Drink.getDrinks() { drinksFromAPICall in
+            print("d")
+            Drink.getDrinks(APIClient: APIClient()) { drinksFromAPICall in
                 guard drinksFromAPICall != nil else {
                     return
                 }
@@ -165,7 +200,6 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol{
             print("fetchedDrinksOrBusinessesBool", fetchedDrinksOrBusinessesBool)
             if fetchedDrinksOrBusinessesBool == true {
                 for business in self.businesses{
-//                    print("business", business)
                     var businessDrinks = [Drink]()
                     for drink in self.drinks {
                         if drink.businessId == business.id {

@@ -17,11 +17,11 @@ extension User {
         return NSFetchRequest<User>(entityName: "User")
     }
 
-    @NSManaged public var email: String?
+//    @NSManaged public var email: String?
     @NSManaged public var firstName: String?
     @NSManaged public var lastName: String?
-    @NSManaged public var password: String?
-    @NSManaged public var stripeId: String?
+//    @NSManaged public var password: String?
+//    @NSManaged public var stripeId: String?
     @NSManaged public var emailVerified: Bool
     @NSManaged public var relationship: CheckoutCart?
     @NSManaged public var userToOrder: NSSet?

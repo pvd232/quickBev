@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 
 protocol BusinessPickerProtocol {
     func selectedBusinessHandler (_ selectedBusiness: Business)
@@ -18,7 +17,7 @@ class BusinessArrayViewController: UIViewController, UIGestureRecognizerDelegate
     var filteredBusinesses = [Business]()
     let searchController = UISearchController(searchResultsController: nil)
     
-    var businessPickerDelegate: BusinessPickerProtocol? = nil
+    var businessPickerDelegate: BusinessPickerProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -124,7 +123,7 @@ extension BusinessArrayViewController: UITableViewDataSource, UITableViewDelegat
         } else {
             selectedBusiness = CheckoutCart.shared.businessArray[indexPath.row]
         }
-        businessPickerDelegate?.selectedBusinessHandler(selectedBusiness)
+        businessPickerDelegate.selectedBusinessHandler(selectedBusiness)
         let transition:CATransition = CATransition()
         transition.duration = 0.65
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.default)

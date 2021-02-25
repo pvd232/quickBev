@@ -89,13 +89,14 @@ depends-member:
 - !private ["s18AdditiveArithmeticP", ""]
 - !private ["s18AdditiveArithmeticP", "init"]
 - !private ["So20UIStackViewAlignmentV", "fill"]
+- !private ["7SwiftUI10AnimatableP", "zero"]
 - !private ["Sa", "append"]
 - !private ["Sa", "compactMap"]
 - !private ["Sa", "count"]
 - !private ["Sa", "subscript"]
 - !private ["So22UILayoutConstraintAxisV", "horizontal"]
 - !private ["So22UILayoutConstraintAxisV", "vertical"]
-- ["SK", ""]
+- !private ["SK", ""]
 - !private ["SK", "append"]
 - !private ["SK", "compactMap"]
 - !private ["SK", "count"]
@@ -114,7 +115,6 @@ depends-member:
 - !private ["Sz", ""]
 - !private ["Sz", "init"]
 - !private ["So12UIButtonTypeV", "system"]
-- !private ["So15CALayerDelegateP", ""]
 - !private ["So15CALayerDelegateP", "__buttonWithType"]
 - !private ["So15CALayerDelegateP", "addSubview"]
 - !private ["So15CALayerDelegateP", "addTarget"]
@@ -144,6 +144,12 @@ depends-member:
 - !private ["So15CALayerDelegateP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["12CoreGraphics7CGFloatV", "init"]
 - !private ["So6CGRectV", "zero"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "append"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "compactMap"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "count"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "data"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "subscript"]
 - !private ["So15CNKeyDescriptorP", "data"]
 - !private ["s7CVarArgP", "CGFloat"]
 - !private ["s7CVarArgP", "CGRect"]
@@ -234,14 +240,14 @@ depends-member:
 - !private ["s7CVarArgP", "view"]
 - !private ["s7CVarArgP", "viewDidLoad"]
 - !private ["s7CVarArgP", "white"]
-- ["Sl", ""]
+- !private ["Sl", ""]
 - !private ["Sl", "append"]
 - !private ["Sl", "compactMap"]
 - !private ["Sl", "count"]
 - !private ["Sl", "data"]
 - !private ["Sl", "init"]
 - !private ["Sl", "subscript"]
-- ["SL", ""]
+- !private ["SL", ""]
 - !private ["SL", "data"]
 - !private ["SL", "init"]
 - !private ["SL", "now"]
@@ -463,11 +469,8 @@ depends-member:
 - !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
 - !private ["s26DefaultStringInterpolationV", "appendLiteral"]
 - !private ["SD", "subscript"]
-- ["So18OS_dispatch_objectC", ""]
 - !private ["So18OS_dispatch_objectC", "asyncAfter"]
-- !private ["So18OS_dispatch_objectC", "init"]
 - !private ["So18OS_dispatch_objectC", "main"]
-- !private ["So18OS_dispatch_objectC", "sync"]
 - !private ["So17OS_dispatch_queueC", "asyncAfter"]
 - !private ["So17OS_dispatch_queueC", "main"]
 - !private ["8Dispatch0A4TimeV", "now"]
@@ -614,7 +617,7 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
 - !private ["s25ExpressibleByArrayLiteralP", "touchUpInside"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "data"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
@@ -630,13 +633,13 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "rightAnchor"]
 - !private ["s23ExpressibleByNilLiteralP", "safeAreaLayoutGuide"]
 - !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
-- ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
 - !private ["s32ExpressibleByStringInterpolationP", "data"]
 - !private ["s32ExpressibleByStringInterpolationP", "init"]
-- ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s26ExpressibleByStringLiteralP", ""]
 - !private ["s26ExpressibleByStringLiteralP", "data"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
-- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "data"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s17FixedWidthIntegerP", "init"]
@@ -693,6 +696,11 @@ depends-member:
 - !private ["SF", "truncatingRemainder"]
 - !private ["SF", "ulp"]
 - !private ["SF", "ulpOfOne"]
+- !private ["7SwiftUI7GestureP", "addSubview"]
+- !private ["7SwiftUI7GestureP", "backgroundColor"]
+- !private ["7SwiftUI7GestureP", "leftAnchor"]
+- !private ["7SwiftUI7GestureP", "rightAnchor"]
+- !private ["7SwiftUI7GestureP", "safeAreaLayoutGuide"]
 - ["SH", "=="]
 - !private ["SH", "CGFloat"]
 - !private ["SH", "CGRect"]
@@ -806,7 +814,7 @@ depends-member:
 - !private ["SH", "viewDidLoad"]
 - !private ["SH", "white"]
 - !private ["s5Int64V", "init"]
-- ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", ""]
 - !private ["s25LosslessStringConvertibleP", "data"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "data"]
@@ -821,15 +829,12 @@ depends-member:
 - !private ["10Foundation19MutableDataProtocolP", "count"]
 - !private ["10Foundation19MutableDataProtocolP", "subscript"]
 - !private ["So8NSCodingP", "AnyHashable"]
-- ["So8NSCodingP", "Bool"]
-- ["So8NSCodingP", "Bundle"]
 - !private ["So8NSCodingP", "CGFloat"]
 - !private ["So8NSCodingP", "CGRect"]
 - !private ["So8NSCodingP", "DispatchQueue"]
 - !private ["So8NSCodingP", "DispatchTime"]
 - !private ["So8NSCodingP", "Double"]
 - !private ["So8NSCodingP", "Int64"]
-- ["So8NSCodingP", "NSCoder"]
 - !private ["So8NSCodingP", "NSEC_PER_SEC"]
 - !private ["So8NSCodingP", "NSError"]
 - !private ["So8NSCodingP", "NSLocalizedDescriptionKey"]
@@ -842,7 +847,7 @@ depends-member:
 - !private ["So8NSCodingP", "STPError"]
 - ["So8NSCodingP", "STPFakeAddPaymentPassViewControllerState"]
 - !private ["So8NSCodingP", "STPNonLocalizedString"]
-- ["So8NSCodingP", "String"]
+- !private ["So8NSCodingP", "String"]
 - !private ["So8NSCodingP", "UIActivityIndicatorView"]
 - !private ["So8NSCodingP", "UIBarButtonItem"]
 - !private ["So8NSCodingP", "UIButton"]
@@ -954,15 +959,12 @@ depends-member:
 - !private ["So7NSErrorC", "init"]
 - !private ["So7NSErrorC", "userInfo"]
 - !private ["So26NSExtensionRequestHandlingP", "AnyHashable"]
-- ["So26NSExtensionRequestHandlingP", "Bool"]
-- ["So26NSExtensionRequestHandlingP", "Bundle"]
 - !private ["So26NSExtensionRequestHandlingP", "CGFloat"]
 - !private ["So26NSExtensionRequestHandlingP", "CGRect"]
 - !private ["So26NSExtensionRequestHandlingP", "DispatchQueue"]
 - !private ["So26NSExtensionRequestHandlingP", "DispatchTime"]
 - !private ["So26NSExtensionRequestHandlingP", "Double"]
 - !private ["So26NSExtensionRequestHandlingP", "Int64"]
-- ["So26NSExtensionRequestHandlingP", "NSCoder"]
 - !private ["So26NSExtensionRequestHandlingP", "NSEC_PER_SEC"]
 - !private ["So26NSExtensionRequestHandlingP", "NSError"]
 - !private ["So26NSExtensionRequestHandlingP", "NSLocalizedDescriptionKey"]
@@ -975,7 +977,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "STPError"]
 - ["So26NSExtensionRequestHandlingP", "STPFakeAddPaymentPassViewControllerState"]
 - !private ["So26NSExtensionRequestHandlingP", "STPNonLocalizedString"]
-- ["So26NSExtensionRequestHandlingP", "String"]
+- !private ["So26NSExtensionRequestHandlingP", "String"]
 - !private ["So26NSExtensionRequestHandlingP", "UIActivityIndicatorView"]
 - !private ["So26NSExtensionRequestHandlingP", "UIBarButtonItem"]
 - !private ["So26NSExtensionRequestHandlingP", "UIButton"]
@@ -1072,7 +1074,6 @@ depends-member:
 - ["So8NSObjectC", ""]
 - !private ["So8NSObjectC", "__buttonWithType"]
 - ["So8NSObjectC", "_state"]
-- !private ["So8NSObjectC", "activate"]
 - !private ["So8NSObjectC", "addSubview"]
 - !private ["So8NSObjectC", "addTarget"]
 - !private ["So8NSObjectC", "alignment"]
@@ -1117,7 +1118,6 @@ depends-member:
 - !private ["So8NSObjectC", "encryptedPassData"]
 - !private ["So8NSObjectC", "errorMessageKey"]
 - ["So8NSObjectC", "errorText"]
-- !private ["So8NSObjectC", "errorWithDomain"]
 - !private ["So8NSObjectC", "font"]
 - !private ["So8NSObjectC", "heightAnchor"]
 - ["So8NSObjectC", "init"]
@@ -1135,17 +1135,13 @@ depends-member:
 - ["So8NSObjectC", "next"]
 - !private ["So8NSObjectC", "numberOfLines"]
 - !private ["So8NSObjectC", "primaryAccountSuffix"]
-- !private ["So8NSObjectC", "resume"]
 - !private ["So8NSObjectC", "rightAnchor"]
 - !private ["So8NSObjectC", "rightBarButtonItem"]
 - !private ["So8NSObjectC", "safeAreaLayoutGuide"]
-- !private ["So8NSObjectC", "setTarget"]
 - !private ["So8NSObjectC", "setTitle"]
 - !private ["So8NSObjectC", "startAnimating"]
 - ["So8NSObjectC", "state"]
 - !private ["So8NSObjectC", "stp_error"]
-- !private ["So8NSObjectC", "suspend"]
-- !private ["So8NSObjectC", "sync"]
 - !private ["So8NSObjectC", "systemFont"]
 - !private ["So8NSObjectC", "systemFontOfSize"]
 - !private ["So8NSObjectC", "text"]
@@ -1158,16 +1154,12 @@ depends-member:
 - !private ["So8NSObjectC", "view"]
 - ["So8NSObjectC", "viewDidLoad"]
 - !private ["So8NSObjectC", "white"]
-- !private ["So8NSObjectP", "AnyHashable"]
-- ["So8NSObjectP", "Bool"]
-- ["So8NSObjectP", "Bundle"]
 - !private ["So8NSObjectP", "CGFloat"]
 - !private ["So8NSObjectP", "CGRect"]
 - !private ["So8NSObjectP", "DispatchQueue"]
 - !private ["So8NSObjectP", "DispatchTime"]
 - !private ["So8NSObjectP", "Double"]
 - !private ["So8NSObjectP", "Int64"]
-- ["So8NSObjectP", "NSCoder"]
 - !private ["So8NSObjectP", "NSEC_PER_SEC"]
 - !private ["So8NSObjectP", "NSError"]
 - !private ["So8NSObjectP", "NSLocalizedDescriptionKey"]
@@ -1180,7 +1172,7 @@ depends-member:
 - !private ["So8NSObjectP", "STPError"]
 - ["So8NSObjectP", "STPFakeAddPaymentPassViewControllerState"]
 - !private ["So8NSObjectP", "STPNonLocalizedString"]
-- ["So8NSObjectP", "String"]
+- !private ["So8NSObjectP", "String"]
 - !private ["So8NSObjectP", "UIActivityIndicatorView"]
 - !private ["So8NSObjectP", "UIBarButtonItem"]
 - !private ["So8NSObjectP", "UIButton"]
@@ -1194,7 +1186,6 @@ depends-member:
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "__buttonWithType"]
 - ["So8NSObjectP", "_state"]
-- !private ["So8NSObjectP", "activate"]
 - !private ["So8NSObjectP", "addPaymentPassViewController"]
 - !private ["So8NSObjectP", "addSubview"]
 - !private ["So8NSObjectP", "addTarget"]
@@ -1240,7 +1231,6 @@ depends-member:
 - !private ["So8NSObjectP", "encryptedPassData"]
 - !private ["So8NSObjectP", "errorMessageKey"]
 - ["So8NSObjectP", "errorText"]
-- !private ["So8NSObjectP", "errorWithDomain"]
 - !private ["So8NSObjectP", "font"]
 - !private ["So8NSObjectP", "heightAnchor"]
 - ["So8NSObjectP", "init"]
@@ -1258,17 +1248,13 @@ depends-member:
 - ["So8NSObjectP", "next"]
 - !private ["So8NSObjectP", "numberOfLines"]
 - !private ["So8NSObjectP", "primaryAccountSuffix"]
-- !private ["So8NSObjectP", "resume"]
 - !private ["So8NSObjectP", "rightAnchor"]
 - !private ["So8NSObjectP", "rightBarButtonItem"]
 - !private ["So8NSObjectP", "safeAreaLayoutGuide"]
-- !private ["So8NSObjectP", "setTarget"]
 - !private ["So8NSObjectP", "setTitle"]
 - !private ["So8NSObjectP", "startAnimating"]
 - ["So8NSObjectP", "state"]
 - !private ["So8NSObjectP", "stp_error"]
-- !private ["So8NSObjectP", "suspend"]
-- !private ["So8NSObjectP", "sync"]
 - !private ["So8NSObjectP", "systemFont"]
 - !private ["So8NSObjectP", "systemFontOfSize"]
 - !private ["So8NSObjectP", "text"]
@@ -1296,15 +1282,8 @@ depends-member:
 - !private ["Sj", ""]
 - !private ["Sj", "init"]
 - !private ["Sj", "magnitude"]
-- ["So9OS_objectC", ""]
-- !private ["So9OS_objectC", "activate"]
 - !private ["So9OS_objectC", "asyncAfter"]
-- !private ["So9OS_objectC", "init"]
 - !private ["So9OS_objectC", "main"]
-- !private ["So9OS_objectC", "resume"]
-- !private ["So9OS_objectC", "setTarget"]
-- !private ["So9OS_objectC", "suspend"]
-- !private ["So9OS_objectC", "sync"]
 - !private ["s9OptionSetP", "normal"]
 - !private ["s9OptionSetP", "touchUpInside"]
 - !private ["Sq", "addSubview"]
@@ -1440,13 +1419,12 @@ depends-member:
 - !private ["7Combine9SchedulerP", "main"]
 - !private ["ST", "Element"]
 - !private ["ST", "Iterator"]
-- ["ST", ""]
+- !private ["ST", ""]
 - !private ["ST", "append"]
 - !private ["ST", "compactMap"]
 - !private ["ST", "count"]
 - !private ["ST", "data"]
 - !private ["ST", "init"]
-- !private ["ST", "makeIterator"]
 - !private ["ST", "subscript"]
 - !private ["s10SetAlgebraP", ""]
 - !private ["s10SetAlgebraP", "normal"]
@@ -1469,18 +1447,17 @@ depends-member:
 - !private ["So28UIActivityIndicatorViewStyleV", "medium"]
 - !private ["So21UIBarButtonSystemItemV", "cancel"]
 - !private ["So21UIBarButtonSystemItemV", "done"]
-- ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", ""]
 - !private ["s16TextOutputStreamP", "appendInterpolation"]
 - !private ["s16TextOutputStreamP", "appendLiteral"]
 - !private ["s16TextOutputStreamP", "data"]
 - !private ["s16TextOutputStreamP", "init"]
-- ["s20TextOutputStreamableP", ""]
+- !private ["s20TextOutputStreamableP", ""]
 - !private ["s20TextOutputStreamableP", "data"]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "addTarget"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "init"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "setTitle"]
-- !private ["So29UIAccessibilityIdentificationP", ""]
 - !private ["So29UIAccessibilityIdentificationP", "__buttonWithType"]
 - !private ["So29UIAccessibilityIdentificationP", "addSubview"]
 - !private ["So29UIAccessibilityIdentificationP", "addTarget"]
@@ -1511,7 +1488,6 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So23UIActivityIndicatorViewC", "init"]
 - !private ["So23UIActivityIndicatorViewC", "startAnimating"]
-- !private ["So12UIAppearanceP", ""]
 - !private ["So12UIAppearanceP", "__buttonWithType"]
 - !private ["So12UIAppearanceP", "addSubview"]
 - !private ["So12UIAppearanceP", "addTarget"]
@@ -1541,15 +1517,12 @@ depends-member:
 - !private ["So12UIAppearanceP", "topAnchor"]
 - !private ["So12UIAppearanceP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So21UIAppearanceContainerP", "AnyHashable"]
-- ["So21UIAppearanceContainerP", "Bool"]
-- ["So21UIAppearanceContainerP", "Bundle"]
 - !private ["So21UIAppearanceContainerP", "CGFloat"]
 - !private ["So21UIAppearanceContainerP", "CGRect"]
 - !private ["So21UIAppearanceContainerP", "DispatchQueue"]
 - !private ["So21UIAppearanceContainerP", "DispatchTime"]
 - !private ["So21UIAppearanceContainerP", "Double"]
 - !private ["So21UIAppearanceContainerP", "Int64"]
-- ["So21UIAppearanceContainerP", "NSCoder"]
 - !private ["So21UIAppearanceContainerP", "NSEC_PER_SEC"]
 - !private ["So21UIAppearanceContainerP", "NSError"]
 - !private ["So21UIAppearanceContainerP", "NSLocalizedDescriptionKey"]
@@ -1562,7 +1535,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "STPError"]
 - ["So21UIAppearanceContainerP", "STPFakeAddPaymentPassViewControllerState"]
 - !private ["So21UIAppearanceContainerP", "STPNonLocalizedString"]
-- ["So21UIAppearanceContainerP", "String"]
+- !private ["So21UIAppearanceContainerP", "String"]
 - !private ["So21UIAppearanceContainerP", "UIActivityIndicatorView"]
 - !private ["So21UIAppearanceContainerP", "UIBarButtonItem"]
 - !private ["So21UIAppearanceContainerP", "UIButton"]
@@ -1637,15 +1610,12 @@ depends-member:
 - !private ["So7UIColorC", "lightGray"]
 - !private ["So7UIColorC", "white"]
 - !private ["So18UIContentContainerP", "AnyHashable"]
-- ["So18UIContentContainerP", "Bool"]
-- ["So18UIContentContainerP", "Bundle"]
 - !private ["So18UIContentContainerP", "CGFloat"]
 - !private ["So18UIContentContainerP", "CGRect"]
 - !private ["So18UIContentContainerP", "DispatchQueue"]
 - !private ["So18UIContentContainerP", "DispatchTime"]
 - !private ["So18UIContentContainerP", "Double"]
 - !private ["So18UIContentContainerP", "Int64"]
-- ["So18UIContentContainerP", "NSCoder"]
 - !private ["So18UIContentContainerP", "NSEC_PER_SEC"]
 - !private ["So18UIContentContainerP", "NSError"]
 - !private ["So18UIContentContainerP", "NSLocalizedDescriptionKey"]
@@ -1658,7 +1628,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "STPError"]
 - ["So18UIContentContainerP", "STPFakeAddPaymentPassViewControllerState"]
 - !private ["So18UIContentContainerP", "STPNonLocalizedString"]
-- ["So18UIContentContainerP", "String"]
+- !private ["So18UIContentContainerP", "String"]
 - !private ["So18UIContentContainerP", "UIActivityIndicatorView"]
 - !private ["So18UIContentContainerP", "UIBarButtonItem"]
 - !private ["So18UIContentContainerP", "UIButton"]
@@ -1709,7 +1679,6 @@ depends-member:
 - !private ["So9UIControlC", "buttonWithType"]
 - !private ["So9UIControlC", "init"]
 - !private ["So9UIControlC", "setTitle"]
-- !private ["So17UICoordinateSpaceP", ""]
 - !private ["So17UICoordinateSpaceP", "__buttonWithType"]
 - !private ["So17UICoordinateSpaceP", "addSubview"]
 - !private ["So17UICoordinateSpaceP", "addTarget"]
@@ -1737,7 +1706,6 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "textColor"]
 - !private ["So17UICoordinateSpaceP", "topAnchor"]
 - !private ["So17UICoordinateSpaceP", "translatesAutoresizingMaskIntoConstraints"]
-- !private ["So13UIDynamicItemP", ""]
 - !private ["So13UIDynamicItemP", "__buttonWithType"]
 - !private ["So13UIDynamicItemP", "addSubview"]
 - !private ["So13UIDynamicItemP", "addTarget"]
@@ -1767,15 +1735,12 @@ depends-member:
 - !private ["So13UIDynamicItemP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So12UIEdgeInsetsV", "init"]
 - !private ["So18UIFocusEnvironmentP", "AnyHashable"]
-- ["So18UIFocusEnvironmentP", "Bool"]
-- ["So18UIFocusEnvironmentP", "Bundle"]
 - !private ["So18UIFocusEnvironmentP", "CGFloat"]
 - !private ["So18UIFocusEnvironmentP", "CGRect"]
 - !private ["So18UIFocusEnvironmentP", "DispatchQueue"]
 - !private ["So18UIFocusEnvironmentP", "DispatchTime"]
 - !private ["So18UIFocusEnvironmentP", "Double"]
 - !private ["So18UIFocusEnvironmentP", "Int64"]
-- ["So18UIFocusEnvironmentP", "NSCoder"]
 - !private ["So18UIFocusEnvironmentP", "NSEC_PER_SEC"]
 - !private ["So18UIFocusEnvironmentP", "NSError"]
 - !private ["So18UIFocusEnvironmentP", "NSLocalizedDescriptionKey"]
@@ -1788,7 +1753,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "STPError"]
 - ["So18UIFocusEnvironmentP", "STPFakeAddPaymentPassViewControllerState"]
 - !private ["So18UIFocusEnvironmentP", "STPNonLocalizedString"]
-- ["So18UIFocusEnvironmentP", "String"]
+- !private ["So18UIFocusEnvironmentP", "String"]
 - !private ["So18UIFocusEnvironmentP", "UIActivityIndicatorView"]
 - !private ["So18UIFocusEnvironmentP", "UIBarButtonItem"]
 - !private ["So18UIFocusEnvironmentP", "UIButton"]
@@ -1842,7 +1807,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "unsafeBitCast"]
 - !private ["So18UIFocusEnvironmentP", "view"]
 - ["So18UIFocusEnvironmentP", "viewDidLoad"]
-- !private ["So11UIFocusItemP", ""]
 - !private ["So11UIFocusItemP", "__buttonWithType"]
 - !private ["So11UIFocusItemP", "addSubview"]
 - !private ["So11UIFocusItemP", "addTarget"]
@@ -1870,7 +1834,6 @@ depends-member:
 - !private ["So11UIFocusItemP", "textColor"]
 - !private ["So11UIFocusItemP", "topAnchor"]
 - !private ["So11UIFocusItemP", "translatesAutoresizingMaskIntoConstraints"]
-- !private ["So20UIFocusItemContainerP", ""]
 - !private ["So20UIFocusItemContainerP", "__buttonWithType"]
 - !private ["So20UIFocusItemContainerP", "addSubview"]
 - !private ["So20UIFocusItemContainerP", "addTarget"]
@@ -1912,7 +1875,6 @@ depends-member:
 - !private ["So7UILabelC", "textColor"]
 - !private ["So7UILabelC", "topAnchor"]
 - !private ["So7UILabelC", "translatesAutoresizingMaskIntoConstraints"]
-- !private ["So24UILargeContentViewerItemP", ""]
 - !private ["So24UILargeContentViewerItemP", "__buttonWithType"]
 - !private ["So24UILargeContentViewerItemP", "addSubview"]
 - !private ["So24UILargeContentViewerItemP", "addTarget"]
@@ -1953,15 +1915,12 @@ depends-member:
 - !private ["So16UINavigationItemC", "leftBarButtonItem"]
 - !private ["So16UINavigationItemC", "rightBarButtonItem"]
 - !private ["So30UIPasteConfigurationSupportingP", "AnyHashable"]
-- ["So30UIPasteConfigurationSupportingP", "Bool"]
-- ["So30UIPasteConfigurationSupportingP", "Bundle"]
 - !private ["So30UIPasteConfigurationSupportingP", "CGFloat"]
 - !private ["So30UIPasteConfigurationSupportingP", "CGRect"]
 - !private ["So30UIPasteConfigurationSupportingP", "DispatchQueue"]
 - !private ["So30UIPasteConfigurationSupportingP", "DispatchTime"]
 - !private ["So30UIPasteConfigurationSupportingP", "Double"]
 - !private ["So30UIPasteConfigurationSupportingP", "Int64"]
-- ["So30UIPasteConfigurationSupportingP", "NSCoder"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSEC_PER_SEC"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSError"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSLocalizedDescriptionKey"]
@@ -1974,7 +1933,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "STPError"]
 - ["So30UIPasteConfigurationSupportingP", "STPFakeAddPaymentPassViewControllerState"]
 - !private ["So30UIPasteConfigurationSupportingP", "STPNonLocalizedString"]
-- ["So30UIPasteConfigurationSupportingP", "String"]
+- !private ["So30UIPasteConfigurationSupportingP", "String"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIActivityIndicatorView"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIBarButtonItem"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIButton"]
@@ -2105,15 +2064,12 @@ depends-member:
 - !private ["So11UIResponderC", "view"]
 - ["So11UIResponderC", "viewDidLoad"]
 - !private ["So30UIResponderStandardEditActionsP", "AnyHashable"]
-- ["So30UIResponderStandardEditActionsP", "Bool"]
-- ["So30UIResponderStandardEditActionsP", "Bundle"]
 - !private ["So30UIResponderStandardEditActionsP", "CGFloat"]
 - !private ["So30UIResponderStandardEditActionsP", "CGRect"]
 - !private ["So30UIResponderStandardEditActionsP", "DispatchQueue"]
 - !private ["So30UIResponderStandardEditActionsP", "DispatchTime"]
 - !private ["So30UIResponderStandardEditActionsP", "Double"]
 - !private ["So30UIResponderStandardEditActionsP", "Int64"]
-- ["So30UIResponderStandardEditActionsP", "NSCoder"]
 - !private ["So30UIResponderStandardEditActionsP", "NSEC_PER_SEC"]
 - !private ["So30UIResponderStandardEditActionsP", "NSError"]
 - !private ["So30UIResponderStandardEditActionsP", "NSLocalizedDescriptionKey"]
@@ -2126,7 +2082,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "STPError"]
 - ["So30UIResponderStandardEditActionsP", "STPFakeAddPaymentPassViewControllerState"]
 - !private ["So30UIResponderStandardEditActionsP", "STPNonLocalizedString"]
-- ["So30UIResponderStandardEditActionsP", "String"]
+- !private ["So30UIResponderStandardEditActionsP", "String"]
 - !private ["So30UIResponderStandardEditActionsP", "UIActivityIndicatorView"]
 - !private ["So30UIResponderStandardEditActionsP", "UIBarButtonItem"]
 - !private ["So30UIResponderStandardEditActionsP", "UIButton"]
@@ -2196,15 +2152,12 @@ depends-member:
 - !private ["So11UIStackViewC", "topAnchor"]
 - !private ["So11UIStackViewC", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So16UIStateRestoringP", "AnyHashable"]
-- ["So16UIStateRestoringP", "Bool"]
-- ["So16UIStateRestoringP", "Bundle"]
 - !private ["So16UIStateRestoringP", "CGFloat"]
 - !private ["So16UIStateRestoringP", "CGRect"]
 - !private ["So16UIStateRestoringP", "DispatchQueue"]
 - !private ["So16UIStateRestoringP", "DispatchTime"]
 - !private ["So16UIStateRestoringP", "Double"]
 - !private ["So16UIStateRestoringP", "Int64"]
-- ["So16UIStateRestoringP", "NSCoder"]
 - !private ["So16UIStateRestoringP", "NSEC_PER_SEC"]
 - !private ["So16UIStateRestoringP", "NSError"]
 - !private ["So16UIStateRestoringP", "NSLocalizedDescriptionKey"]
@@ -2217,7 +2170,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "STPError"]
 - ["So16UIStateRestoringP", "STPFakeAddPaymentPassViewControllerState"]
 - !private ["So16UIStateRestoringP", "STPNonLocalizedString"]
-- ["So16UIStateRestoringP", "String"]
+- !private ["So16UIStateRestoringP", "String"]
 - !private ["So16UIStateRestoringP", "UIActivityIndicatorView"]
 - !private ["So16UIStateRestoringP", "UIBarButtonItem"]
 - !private ["So16UIStateRestoringP", "UIButton"]
@@ -2246,15 +2199,12 @@ depends-member:
 - !private ["So16UIStateRestoringP", "view"]
 - ["So16UIStateRestoringP", "viewDidLoad"]
 - !private ["So18UITraitEnvironmentP", "AnyHashable"]
-- ["So18UITraitEnvironmentP", "Bool"]
-- ["So18UITraitEnvironmentP", "Bundle"]
 - !private ["So18UITraitEnvironmentP", "CGFloat"]
 - !private ["So18UITraitEnvironmentP", "CGRect"]
 - !private ["So18UITraitEnvironmentP", "DispatchQueue"]
 - !private ["So18UITraitEnvironmentP", "DispatchTime"]
 - !private ["So18UITraitEnvironmentP", "Double"]
 - !private ["So18UITraitEnvironmentP", "Int64"]
-- ["So18UITraitEnvironmentP", "NSCoder"]
 - !private ["So18UITraitEnvironmentP", "NSEC_PER_SEC"]
 - !private ["So18UITraitEnvironmentP", "NSError"]
 - !private ["So18UITraitEnvironmentP", "NSLocalizedDescriptionKey"]
@@ -2267,7 +2217,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "STPError"]
 - ["So18UITraitEnvironmentP", "STPFakeAddPaymentPassViewControllerState"]
 - !private ["So18UITraitEnvironmentP", "STPNonLocalizedString"]
-- ["So18UITraitEnvironmentP", "String"]
+- !private ["So18UITraitEnvironmentP", "String"]
 - !private ["So18UITraitEnvironmentP", "UIActivityIndicatorView"]
 - !private ["So18UITraitEnvironmentP", "UIBarButtonItem"]
 - !private ["So18UITraitEnvironmentP", "UIButton"]
@@ -2322,15 +2272,12 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "view"]
 - ["So18UITraitEnvironmentP", "viewDidLoad"]
 - !private ["So23UIUserActivityRestoringP", "AnyHashable"]
-- ["So23UIUserActivityRestoringP", "Bool"]
-- ["So23UIUserActivityRestoringP", "Bundle"]
 - !private ["So23UIUserActivityRestoringP", "CGFloat"]
 - !private ["So23UIUserActivityRestoringP", "CGRect"]
 - !private ["So23UIUserActivityRestoringP", "DispatchQueue"]
 - !private ["So23UIUserActivityRestoringP", "DispatchTime"]
 - !private ["So23UIUserActivityRestoringP", "Double"]
 - !private ["So23UIUserActivityRestoringP", "Int64"]
-- ["So23UIUserActivityRestoringP", "NSCoder"]
 - !private ["So23UIUserActivityRestoringP", "NSEC_PER_SEC"]
 - !private ["So23UIUserActivityRestoringP", "NSError"]
 - !private ["So23UIUserActivityRestoringP", "NSLocalizedDescriptionKey"]
@@ -2343,7 +2290,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "STPError"]
 - ["So23UIUserActivityRestoringP", "STPFakeAddPaymentPassViewControllerState"]
 - !private ["So23UIUserActivityRestoringP", "STPNonLocalizedString"]
-- ["So23UIUserActivityRestoringP", "String"]
+- !private ["So23UIUserActivityRestoringP", "String"]
 - !private ["So23UIUserActivityRestoringP", "UIActivityIndicatorView"]
 - !private ["So23UIUserActivityRestoringP", "UIBarButtonItem"]
 - !private ["So23UIUserActivityRestoringP", "UIButton"]
@@ -2475,6 +2422,12 @@ depends-member:
 - !private ["So16UIViewControllerC", "unsafeBitCast"]
 - !private ["So16UIViewControllerC", "view"]
 - ["So16UIViewControllerC", "viewDidLoad"]
+- !private ["7SwiftUI16VectorArithmeticP", "init"]
+- !private ["7SwiftUI4ViewP", "addSubview"]
+- !private ["7SwiftUI4ViewP", "backgroundColor"]
+- !private ["7SwiftUI4ViewP", "leftAnchor"]
+- !private ["7SwiftUI4ViewP", "rightAnchor"]
+- !private ["7SwiftUI4ViewP", "safeAreaLayoutGuide"]
 - !private ["s14_ArrayProtocolP", "append"]
 - !private ["s14_ArrayProtocolP", "compactMap"]
 - !private ["s14_ArrayProtocolP", "count"]
@@ -2489,19 +2442,20 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "count"]
 - !private ["s24_DestructorSafeContainerP", "subscript"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "data"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "data"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "data"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s26_ExpressibleByColorLiteralP", "black"]
 - !private ["s26_ExpressibleByColorLiteralP", "lightGray"]
 - !private ["s26_ExpressibleByColorLiteralP", "white"]
+- !private ["7SwiftUI18_FormatSpecifiableP", "init"]
 - !private ["s19_HasContiguousBytesP", "append"]
 - !private ["s19_HasContiguousBytesP", "compactMap"]
 - !private ["s19_HasContiguousBytesP", "count"]
@@ -2685,10 +2639,6 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewDidLoad"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "white"]
 - !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
-- !private ["s21_ObjectiveCBridgeableP", "_bridgeToObjectiveC"]
-- !private ["s21_ObjectiveCBridgeableP", "_conditionallyBridgeFromObjectiveC"]
-- !private ["s21_ObjectiveCBridgeableP", "_forceBridgeFromObjectiveC"]
-- !private ["s21_ObjectiveCBridgeableP", "_unconditionallyBridgeFromObjectiveC"]
 - !private ["s21_ObjectiveCBridgeableP", "addSubview"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
 - !private ["s21_ObjectiveCBridgeableP", "backgroundColor"]
@@ -2701,6 +2651,7 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "safeAreaLayoutGuide"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s21_ObjectiveCBridgeableP", "zero"]
+- !private ["So13CKRecordValueP", "data"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "addSubview"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "addTarget"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "alignment"]
@@ -2729,19 +2680,21 @@ depends-member:
 depends-nominal:
 - !private "s18AdditiveArithmeticP"
 - !private "So20UIStackViewAlignmentV"
+- !private "7SwiftUI10AnimatableP"
 - !private "Sa"
 - !private "So22UILayoutConstraintAxisV"
-- "SK"
+- !private "SK"
 - !private "SB"
 - !private "Sz"
 - !private "So12UIButtonTypeV"
 - !private "So15CALayerDelegateP"
 - !private "12CoreGraphics7CGFloatV"
 - !private "So6CGRectV"
+- !private "8CloudKit21CKRecordValueProtocolP"
 - !private "So15CNKeyDescriptorP"
 - "s7CVarArgP"
-- "Sl"
-- "SL"
+- !private "Sl"
+- !private "SL"
 - !private "10Foundation15ContiguousBytesP"
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
@@ -2750,7 +2703,7 @@ depends-nominal:
 - !private "Se"
 - !private "s26DefaultStringInterpolationV"
 - !private "SD"
-- "So18OS_dispatch_objectC"
+- !private "So18OS_dispatch_objectC"
 - !private "So17OS_dispatch_queueC"
 - !private "8Dispatch0A4TimeV"
 - !private "So23UIStackViewDistributionV"
@@ -2762,18 +2715,19 @@ depends-nominal:
 - !private "So15UIControlEventsV"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s30ExpressibleByDictionaryLiteralP"
-- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- "s32ExpressibleByStringInterpolationP"
-- "s26ExpressibleByStringLiteralP"
-- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "s17FixedWidthIntegerP"
 - !private "SF"
+- !private "7SwiftUI7GestureP"
 - "SH"
 - !private "s5Int64V"
-- "s25LosslessStringConvertibleP"
+- !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
 - !private "SM"
 - !private "10Foundation19MutableDataProtocolP"
@@ -2795,7 +2749,7 @@ depends-nominal:
 - !private "So8NSStringC"
 - !private "So15NSTextAlignmentV"
 - !private "Sj"
-- "So9OS_objectC"
+- !private "So9OS_objectC"
 - !private "s9OptionSetP"
 - !private "Sq"
 - !private "So21PKAddPaymentPassErrorV"
@@ -2814,7 +2768,7 @@ depends-nominal:
 - "6Stripe35STPFakeAddPaymentPassViewControllerC"
 - "6Stripe40STPFakeAddPaymentPassViewControllerStateO"
 - !private "7Combine9SchedulerP"
-- "ST"
+- !private "ST"
 - !private "s10SetAlgebraP"
 - !private "SZ"
 - !private "s13SignedNumericP"
@@ -2825,8 +2779,8 @@ depends-nominal:
 - !private "Sy"
 - !private "So28UIActivityIndicatorViewStyleV"
 - !private "So21UIBarButtonSystemItemV"
-- "s16TextOutputStreamP"
-- "s20TextOutputStreamableP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
 - !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So23UIActivityIndicatorViewC"
@@ -2863,28 +2817,36 @@ depends-nominal:
 - "So23UIUserActivityRestoringP"
 - "So6UIViewC"
 - "So16UIViewControllerC"
+- !private "7SwiftUI16VectorArithmeticP"
+- !private "7SwiftUI4ViewP"
 - !private "s14_ArrayProtocolP"
 - !private "s15_CVarArgAlignedP"
 - !private "s22_CVarArgPassedAsDoubleP"
 - !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
-- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
-- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
+- !private "7SwiftUI18_FormatSpecifiableP"
 - !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"
 - !private "s21_ObjectiveCBridgeableP"
+- !private "So13CKRecordValueP"
 - !private "s38__DefaultCustomPlaygroundQuickLookableP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -2895,14 +2857,19 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Vision.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/AVFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/os.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/DeveloperToolsSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIViewController+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSError+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/Stripe3DS2.h"
@@ -3009,6 +2976,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
@@ -3022,10 +2990,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"

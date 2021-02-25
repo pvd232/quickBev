@@ -13,11 +13,11 @@ public protocol SecureStoreQueryable {
 }
 
 public struct GenericPasswordQueryable {
-  let service: String
+  let service: String = "com.theQuickCompany.QuickBev"
   let accessGroup: String?
   
-  init(service: String, accessGroup: String? = nil) {
-    self.service = service
+  init( accessGroup: String? = nil) {
+//    self.service = service
     self.accessGroup = accessGroup
   }
 }

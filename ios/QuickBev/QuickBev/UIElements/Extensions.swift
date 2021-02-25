@@ -228,7 +228,8 @@ extension UIView {
                     }
                     
                 case .placeHolderText(let value):
-                    self.placeholder = value
+                    let text = NSAttributedString(string: value, attributes: [NSAttributedString.Key.foregroundColor: UIColor.clear])
+                    self.attributedPlaceholder = text
                 case .autocapitalizationType(let value):
                     switch value {
                     case .none:

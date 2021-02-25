@@ -13,10 +13,12 @@ provides-member:
 - ["8QuickBev12CheckoutCartC", "emptyCart"]
 provides-dynamic-lookup:
 - "businessArray"
+- "businessETag"
 - "calculateCost"
 - "canPay"
 - "cart"
 - "customerContext"
+- "drinkETag"
 - "emptyCart"
 - "guestDrink"
 - "pusher"
@@ -27,6 +29,7 @@ depends-top-level:
 - !private "*"
 - "+"
 - "<"
+- !private "=="
 - !private ">"
 - !private "??"
 - !private "Array"
@@ -38,6 +41,7 @@ depends-top-level:
 - !private "CoreDataManager"
 - "Double"
 - "Drink"
+- "ETag"
 - !private "FloatLiteralType"
 - !private "IntegerLiteralType"
 - "NSManagedObject"
@@ -49,17 +53,13 @@ depends-top-level:
 - !private "StringLiteralType"
 - "StripeAPIClient"
 - !private "business"
+- !private "canPay"
 - !private "cart"
 - !private "drinks"
 - !private "userBusiness"
 depends-member:
 - !private ["s18AdditiveArithmeticP", ""]
 - !private ["s18AdditiveArithmeticP", "rounded"]
-- !private ["9Alamofire0A8ExtendedP", "count"]
-- !private ["9Alamofire0A8ExtendedP", "init"]
-- !private ["9Alamofire0A8ExtendedP", "isEmpty"]
-- !private ["9Alamofire0A8ExtendedP", "reduce"]
-- !private ["9Alamofire0A8ExtendedP", "subscript"]
 - !private ["Sa", "count"]
 - !private ["Sa", "init"]
 - !private ["Sa", "isEmpty"]
@@ -92,7 +92,9 @@ depends-member:
 - ["s7CVarArgP", "StripeAPIClient"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "business"]
+- !private ["s7CVarArgP", "canPay"]
 - !private ["s7CVarArgP", "cart"]
+- !private ["s7CVarArgP", "category"]
 - !private ["s7CVarArgP", "cost"]
 - !private ["s7CVarArgP", "count"]
 - !private ["s7CVarArgP", "drinks"]
@@ -116,6 +118,7 @@ depends-member:
 - !private ["8QuickBev12CheckoutCartC", "CoreDataManager"]
 - !private ["8QuickBev12CheckoutCartC", "Double"]
 - ["8QuickBev12CheckoutCartC", "Drink"]
+- ["8QuickBev12CheckoutCartC", "ETag"]
 - !private ["8QuickBev12CheckoutCartC", "NSSet"]
 - ["8QuickBev12CheckoutCartC", "Pusher"]
 - !private ["8QuickBev12CheckoutCartC", "PusherClientOptions"]
@@ -125,12 +128,14 @@ depends-member:
 - ["8QuickBev12CheckoutCartC", ""]
 - !private ["8QuickBev12CheckoutCartC", "business"]
 - ["8QuickBev12CheckoutCartC", "businessArray"]
+- ["8QuickBev12CheckoutCartC", "businessETag"]
 - ["8QuickBev12CheckoutCartC", "calculateCost"]
 - ["8QuickBev12CheckoutCartC", "canPay"]
 - ["8QuickBev12CheckoutCartC", "cart"]
 - !private ["8QuickBev12CheckoutCartC", "cost"]
 - ["8QuickBev12CheckoutCartC", "customerContext"]
 - ["8QuickBev12CheckoutCartC", "deinit"]
+- ["8QuickBev12CheckoutCartC", "drinkETag"]
 - !private ["8QuickBev12CheckoutCartC", "drinks"]
 - ["8QuickBev12CheckoutCartC", "emptyCart"]
 - ["8QuickBev12CheckoutCartC", "guestDrink"]
@@ -170,7 +175,9 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "StripeAPIClient"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "business"]
+- !private ["s28CustomDebugStringConvertibleP", "canPay"]
 - !private ["s28CustomDebugStringConvertibleP", "cart"]
+- !private ["s28CustomDebugStringConvertibleP", "category"]
 - !private ["s28CustomDebugStringConvertibleP", "cost"]
 - !private ["s28CustomDebugStringConvertibleP", "count"]
 - !private ["s28CustomDebugStringConvertibleP", "drinks"]
@@ -205,7 +212,9 @@ depends-member:
 - ["s23CustomStringConvertibleP", "StripeAPIClient"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "business"]
+- !private ["s23CustomStringConvertibleP", "canPay"]
 - !private ["s23CustomStringConvertibleP", "cart"]
+- !private ["s23CustomStringConvertibleP", "category"]
 - !private ["s23CustomStringConvertibleP", "cost"]
 - !private ["s23CustomStringConvertibleP", "count"]
 - !private ["s23CustomStringConvertibleP", "drinks"]
@@ -229,6 +238,7 @@ depends-member:
 - !private ["10Foundation12DataProtocolP", "isEmpty"]
 - !private ["10Foundation12DataProtocolP", "reduce"]
 - !private ["10Foundation12DataProtocolP", "subscript"]
+- !private ["Se", "category"]
 - !private ["Se", "cost"]
 - !private ["Se", "count"]
 - !private ["Se", "drinks"]
@@ -244,6 +254,8 @@ depends-member:
 - !private ["8QuickBev5DrinkC", ""]
 - !private ["8QuickBev5DrinkC", "cost"]
 - !private ["8QuickBev5DrinkC", "name"]
+- !private ["8QuickBev4ETagC", "category"]
+- !private ["SE", "category"]
 - !private ["SE", "cost"]
 - !private ["SE", "count"]
 - !private ["SE", "drinks"]
@@ -265,7 +277,9 @@ depends-member:
 - ["SQ", "StripeAPIClient"]
 - ["SQ", ""]
 - !private ["SQ", "business"]
+- !private ["SQ", "canPay"]
 - !private ["SQ", "cart"]
+- !private ["SQ", "category"]
 - !private ["SQ", "cost"]
 - !private ["SQ", "count"]
 - !private ["SQ", "drinks"]
@@ -310,7 +324,9 @@ depends-member:
 - ["SH", "StripeAPIClient"]
 - ["SH", ""]
 - !private ["SH", "business"]
+- !private ["SH", "canPay"]
 - !private ["SH", "cart"]
+- !private ["SH", "category"]
 - !private ["SH", "cost"]
 - !private ["SH", "count"]
 - !private ["SH", "drinks"]
@@ -337,7 +353,9 @@ depends-member:
 - ["s12IdentifiableP", "STPCustomerContext"]
 - ["s12IdentifiableP", "StripeAPIClient"]
 - !private ["s12IdentifiableP", "business"]
+- !private ["s12IdentifiableP", "canPay"]
 - !private ["s12IdentifiableP", "cart"]
+- !private ["s12IdentifiableP", "category"]
 - !private ["s12IdentifiableP", "cost"]
 - !private ["s12IdentifiableP", "drinks"]
 - !private ["s12IdentifiableP", "init"]
@@ -371,6 +389,7 @@ depends-member:
 - ["So20NSFetchRequestResultP", "CheckoutCart"]
 - !private ["So20NSFetchRequestResultP", "CoreDataManager"]
 - !private ["So20NSFetchRequestResultP", "Drink"]
+- ["So20NSFetchRequestResultP", "ETag"]
 - !private ["So20NSFetchRequestResultP", "NSSet"]
 - ["So20NSFetchRequestResultP", "Pusher"]
 - !private ["So20NSFetchRequestResultP", "PusherClientOptions"]
@@ -380,11 +399,14 @@ depends-member:
 - ["So20NSFetchRequestResultP", ""]
 - !private ["So20NSFetchRequestResultP", "business"]
 - ["So20NSFetchRequestResultP", "businessArray"]
+- ["So20NSFetchRequestResultP", "businessETag"]
 - ["So20NSFetchRequestResultP", "calculateCost"]
 - ["So20NSFetchRequestResultP", "canPay"]
 - ["So20NSFetchRequestResultP", "cart"]
+- !private ["So20NSFetchRequestResultP", "category"]
 - !private ["So20NSFetchRequestResultP", "cost"]
 - ["So20NSFetchRequestResultP", "customerContext"]
+- ["So20NSFetchRequestResultP", "drinkETag"]
 - !private ["So20NSFetchRequestResultP", "drinks"]
 - ["So20NSFetchRequestResultP", "emptyCart"]
 - ["So20NSFetchRequestResultP", "guestDrink"]
@@ -405,6 +427,7 @@ depends-member:
 - !private ["So15NSManagedObjectC", "CoreDataManager"]
 - !private ["So15NSManagedObjectC", "Double"]
 - ["So15NSManagedObjectC", "Drink"]
+- ["So15NSManagedObjectC", "ETag"]
 - !private ["So15NSManagedObjectC", "NSSet"]
 - ["So15NSManagedObjectC", "Pusher"]
 - !private ["So15NSManagedObjectC", "PusherClientOptions"]
@@ -414,11 +437,14 @@ depends-member:
 - ["So15NSManagedObjectC", ""]
 - !private ["So15NSManagedObjectC", "business"]
 - ["So15NSManagedObjectC", "businessArray"]
+- ["So15NSManagedObjectC", "businessETag"]
 - ["So15NSManagedObjectC", "calculateCost"]
 - ["So15NSManagedObjectC", "canPay"]
 - ["So15NSManagedObjectC", "cart"]
+- !private ["So15NSManagedObjectC", "category"]
 - !private ["So15NSManagedObjectC", "cost"]
 - ["So15NSManagedObjectC", "customerContext"]
+- ["So15NSManagedObjectC", "drinkETag"]
 - !private ["So15NSManagedObjectC", "drinks"]
 - ["So15NSManagedObjectC", "emptyCart"]
 - ["So15NSManagedObjectC", "guestDrink"]
@@ -440,6 +466,7 @@ depends-member:
 - !private ["So8NSObjectC", "CoreDataManager"]
 - !private ["So8NSObjectC", "Double"]
 - ["So8NSObjectC", "Drink"]
+- ["So8NSObjectC", "ETag"]
 - !private ["So8NSObjectC", "NSSet"]
 - ["So8NSObjectC", "Pusher"]
 - !private ["So8NSObjectC", "PusherClientOptions"]
@@ -449,11 +476,14 @@ depends-member:
 - ["So8NSObjectC", ""]
 - !private ["So8NSObjectC", "business"]
 - ["So8NSObjectC", "businessArray"]
+- ["So8NSObjectC", "businessETag"]
 - ["So8NSObjectC", "calculateCost"]
 - ["So8NSObjectC", "canPay"]
 - ["So8NSObjectC", "cart"]
+- !private ["So8NSObjectC", "category"]
 - !private ["So8NSObjectC", "cost"]
 - ["So8NSObjectC", "customerContext"]
+- ["So8NSObjectC", "drinkETag"]
 - !private ["So8NSObjectC", "drinks"]
 - ["So8NSObjectC", "emptyCart"]
 - ["So8NSObjectC", "guestDrink"]
@@ -477,6 +507,7 @@ depends-member:
 - !private ["So8NSObjectP", "CheckoutCart"]
 - !private ["So8NSObjectP", "CoreDataManager"]
 - !private ["So8NSObjectP", "Drink"]
+- ["So8NSObjectP", "ETag"]
 - !private ["So8NSObjectP", "NSSet"]
 - ["So8NSObjectP", "Pusher"]
 - !private ["So8NSObjectP", "PusherClientOptions"]
@@ -486,11 +517,14 @@ depends-member:
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "business"]
 - ["So8NSObjectP", "businessArray"]
+- ["So8NSObjectP", "businessETag"]
 - ["So8NSObjectP", "calculateCost"]
 - ["So8NSObjectP", "canPay"]
 - ["So8NSObjectP", "cart"]
+- !private ["So8NSObjectP", "category"]
 - !private ["So8NSObjectP", "cost"]
 - ["So8NSObjectP", "customerContext"]
+- ["So8NSObjectP", "drinkETag"]
 - !private ["So8NSObjectP", "drinks"]
 - ["So8NSObjectP", "emptyCart"]
 - ["So8NSObjectP", "guestDrink"]
@@ -525,7 +559,9 @@ depends-member:
 - ["7Combine16ObservableObjectP", "StripeAPIClient"]
 - ["7Combine16ObservableObjectP", ""]
 - !private ["7Combine16ObservableObjectP", "business"]
+- !private ["7Combine16ObservableObjectP", "canPay"]
 - !private ["7Combine16ObservableObjectP", "cart"]
+- !private ["7Combine16ObservableObjectP", "category"]
 - !private ["7Combine16ObservableObjectP", "cost"]
 - !private ["7Combine16ObservableObjectP", "drinks"]
 - !private ["7Combine16ObservableObjectP", "init"]
@@ -555,6 +591,8 @@ depends-member:
 - ["6Stripe20STPBackendAPIAdapterP", "init"]
 - ["6Stripe18STPCustomerContextC", "init"]
 - ["6Stripe31STPCustomerEphemeralKeyProviderP", "sharedAPIClient"]
+- !private ["ST", "Element"]
+- !private ["ST", "Iterator"]
 - !private ["ST", ""]
 - !private ["ST", "count"]
 - !private ["ST", "init"]
@@ -573,6 +611,7 @@ depends-member:
 - !private ["s16TextOutputStreamP", ""]
 - !private ["s20TextOutputStreamableP", ""]
 - !private ["s20TextOutputStreamableP", "rounded"]
+- !private ["7SwiftUI16VectorArithmeticP", "rounded"]
 - !private ["s14_ArrayProtocolP", "count"]
 - !private ["s14_ArrayProtocolP", "init"]
 - !private ["s14_ArrayProtocolP", "isEmpty"]
@@ -593,6 +632,7 @@ depends-member:
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "rounded"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["7SwiftUI18_FormatSpecifiableP", "rounded"]
 - !private ["s19_HasContiguousBytesP", "count"]
 - !private ["s19_HasContiguousBytesP", "init"]
 - !private ["s19_HasContiguousBytesP", "isEmpty"]
@@ -615,7 +655,9 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "StripeAPIClient"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "business"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "canPay"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cart"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "category"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cost"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "drinks"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
@@ -637,7 +679,9 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "StripeAPIClient"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "business"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "canPay"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cart"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "category"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cost"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "drinks"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
@@ -659,7 +703,6 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 depends-nominal:
 - !private "s18AdditiveArithmeticP"
-- !private "9Alamofire0A8ExtendedP"
 - !private "Sa"
 - !private "SK"
 - !private "SB"
@@ -678,6 +721,7 @@ depends-nominal:
 - !private "Se"
 - !private "Sd"
 - !private "8QuickBev5DrinkC"
+- !private "8QuickBev4ETagC"
 - !private "SE"
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
@@ -722,6 +766,7 @@ depends-nominal:
 - "8QuickBev15StripeAPIClientC"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
+- !private "7SwiftUI16VectorArithmeticP"
 - !private "s14_ArrayProtocolP"
 - !private "s15_CVarArgAlignedP"
 - !private "s22_CVarArgPassedAsDoubleP"
@@ -732,6 +777,7 @@ depends-nominal:
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "7SwiftUI18_FormatSpecifiableP"
 - !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
@@ -741,6 +787,7 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -749,7 +796,6 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -764,6 +810,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Modules/PushNotifications.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/os.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Modules/NWWebSocket.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -775,12 +822,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/MapKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/DeveloperToolsSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIViewController+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSError+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-umbrella.h"
@@ -866,7 +913,6 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfoObject.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-Swift.h"
@@ -893,7 +939,6 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Modules/module.modulemap"
@@ -931,4 +976,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "7513e31f56fa0f321cc534e2f92e27ba"
+interface-hash: "b51dee149a859d2d1ac6d4b7f55ba109"

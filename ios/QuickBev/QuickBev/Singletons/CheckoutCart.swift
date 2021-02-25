@@ -1,6 +1,7 @@
 import CoreData
 import Stripe
 import PusherSwift
+import Foundation
 public class CheckoutCart: NSManagedObject {
     private convenience init() {
         self.init(context: CoreDataManager.sharedManager.managedContext)
@@ -23,6 +24,34 @@ public class CheckoutCart: NSManagedObject {
         let options = PusherClientOptions(
             host: .cluster("us2"))
         return Pusher(key: "7b5e34392e1404447668", options: options)
+    }
+    static var businessETag: ETag? {
+        get {
+            if let fetchedResults = CoreDataManager.sharedManager.fetchEntities(entityName: "ETag") as? [ETag], fetchedResults.count > 0 {
+                for fetchedResult in fetchedResults {
+                    if fetchedResult.category == "business"{
+                        return fetchedResult
+                    }
+                }
+            }
+            return nil
+        }
+        set {
+            
+        }
+    }
+    static var drinkETag: ETag? {
+        get{
+            if let fetchedResults = CoreDataManager.sharedManager.fetchEntities(entityName: "ETag") as? [ETag], fetchedResults.count > 0 {
+                for fetchedResult in fetchedResults {
+                    if fetchedResult.category == "drink"{
+                        return fetchedResult
+                    }
+                }
+            }
+            return nil
+        }
+        set {}
     }
 }
 extension CheckoutCart {
@@ -52,9 +81,11 @@ extension CheckoutCart {
         self.subtotal = (cart.reduce(0) { (currentCheckoutCartTotal, drink) -> Double in
             return currentCheckoutCartTotal + drink.cost
         }).rounded(digits:2)
-        self.salesTax = (self.cost * userBusiness!.salesTaxRate).rounded(digits:2)
-        self.tipAmount = (self.tipPercentage * self.subtotal).rounded(digits: 2)
-        self.cost = (self.subtotal + self.salesTax + self.tipAmount).rounded(digits: 2)
+        if canPay{
+            self.salesTax = (self.cost * userBusiness!.salesTaxRate).rounded(digits:2)
+            self.tipAmount = (self.tipPercentage * self.subtotal).rounded(digits: 2)
+            self.cost = (self.subtotal + self.salesTax + self.tipAmount).rounded(digits: 2)
+        }
     }
     public func emptyCart () {
         self.cost = 0.0

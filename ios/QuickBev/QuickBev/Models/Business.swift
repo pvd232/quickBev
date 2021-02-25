@@ -8,7 +8,7 @@
 
 import CoreLocation
 import CoreData
-
+import Foundation
 public class Business: NSManagedObject, Codable {
     var coordinate: CLLocationCoordinate2D?
     enum CodingKeys: String, CodingKey {
@@ -48,15 +48,34 @@ public class Business: NSManagedObject, Codable {
             completion(location)
         }
     }
-    static func getBusinesses(completion: @escaping ([Business]?) -> Void) {
-        let request = APIRequest( method: .get, path:"/business")
-        APIClient().perform(request)
+    static func getBusinesses(APIClient: APIClient, completion: @escaping ([Business]?) -> Void) {
+        let jsonData = try! JSONEncoder().encode(CheckoutCart.businessETag)
+        let headerString = String(data: jsonData, encoding: .utf8)!
+        let ifNoneMatchHeader: [HTTPHeader] = [HTTPHeader(field: "If-None-Match", value: headerString)]
+        let request = try! APIRequest( method: .get, path:"/business", headers: ifNoneMatchHeader)
+        APIClient.perform(request)
            { result in
                 switch result {
                 case .success(let response):
-                    if response.statusCode == 200, let response = try? response.decode(to: [String: [Business]].self)  {
+                    if response.statusCode == 200, let response = try? response.decode(to: [String: [Business]].self) {
+                        if CheckoutCart.businessETag != nil {
+                            CoreDataManager.sharedManager.deleteEntity(entity: CheckoutCart.businessETag!)
+                            CoreDataManager.sharedManager.saveContext()
+
+                        }
+                        if let etagId = response.headers["E-tag-id"] as? String, let etagCategory = response.headers["E-tag-category"] as? String {
+                            let intEtagID = Int(etagId)!
+                            if let etagId = intEtagID as? Int, let etagCategory = etagCategory as? String {
+                                CheckoutCart.businessETag = ETag(Id:Int64(etagId) , Category: etagCategory)
+                            }
+                        }
+                        
+                            CoreDataManager.sharedManager.saveContext()
                         let businesses =  response.body["businesses"]
                         completion(businesses)
+                    }
+                    else {
+                        print("na")
                     }
                 case .failure(let error):
                     completion(nil)
@@ -64,27 +83,5 @@ public class Business: NSManagedObject, Codable {
                 }
             }
     }
-//    static func getBusinesses(completion: @escaping ([Business]?) -> Void) {
-//        AF.request("http://127.0.0.1:5000/business", method: .get)
-//            .validate()
-//            .response { response in
-//                switch response.result {
-//                case .success:
-//                    guard let rawData = response.data
-//                    else {
-//                        return completion(nil)
-//                    }
-//                    let json = try! JSONSerialization.jsonObject(with: rawData, options: []) as! NSDictionary
-//                    let unpackedBusinesses = json.value(forKey: "businesses")
-//                    let rawBusinesses = try! JSONSerialization.data(withJSONObject: unpackedBusinesses!, options: [])
-//                    let jsonDecoder = JSONDecoder()
-//                    let businesses = try! jsonDecoder.decode([Business].self, from: rawBusinesses)
-//                    completion(businesses)
-//                case .failure(let error):
-//                    completion(nil)
-//                    print(error)
-//                }
-//            }
-//    }
 }
 

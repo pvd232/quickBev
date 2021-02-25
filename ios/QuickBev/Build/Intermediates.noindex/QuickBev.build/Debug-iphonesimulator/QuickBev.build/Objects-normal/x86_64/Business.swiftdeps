@@ -13,23 +13,31 @@ provides-dynamic-lookup:
 - "getBusinesses"
 - "getLocation"
 depends-top-level:
+- "!="
 - "=="
-- !private "APIClient"
+- "APIClient"
 - !private "APIRequest"
 - !private "Array"
 - "AssignmentPrecedence"
 - "Business"
 - !private "CLGeocoder"
 - "CLLocationCoordinate2D"
+- !private "CastingPrecedence"
+- "CheckoutCart"
 - "Codable"
 - "CodingKey"
 - !private "CodingKeys"
-- !private "CoreDataManager"
+- "CoreDataManager"
 - "Decoder"
 - !private "Double"
+- "ETag"
 - "Encoder"
 - "FloatLiteralType"
+- "HTTPHeader"
+- "Int"
+- "Int64"
 - "IntegerLiteralType"
+- !private "JSONEncoder"
 - "NSManagedObject"
 - "String"
 - "StringLiteralType"
@@ -39,29 +47,39 @@ depends-top-level:
 - "print"
 - !private "~="
 depends-member:
-- !private ["8QuickBev9APIClientV", "init"]
 - !private ["8QuickBev9APIClientV", "perform"]
 - !private ["8QuickBev10APIRequestC", "init"]
 - !private ["8QuickBev11APIResponseV", "body"]
 - !private ["8QuickBev11APIResponseV", "decode"]
+- !private ["8QuickBev11APIResponseV", "headers"]
 - !private ["8QuickBev11APIResponseV", "statusCode"]
 - !private ["8QuickBev9APIResultO", "failure"]
 - !private ["8QuickBev9APIResultO", "success"]
-- !private ["9Alamofire0A8ExtendedP", "first"]
+- !private ["s18AdditiveArithmeticP", ""]
+- !private ["s18AdditiveArithmeticP", "init"]
 - !private ["Sa", "first"]
 - !private ["SK", ""]
 - !private ["SK", "first"]
-- !private ["8QuickBev8BusinessC", "APIClient"]
+- !private ["SK", "init"]
+- !private ["Sz", ""]
+- !private ["Sz", "init"]
+- ["8QuickBev8BusinessC", "APIClient"]
 - !private ["8QuickBev8BusinessC", "APIRequest"]
 - ["8QuickBev8BusinessC", "Business"]
 - !private ["8QuickBev8BusinessC", "CLGeocoder"]
 - ["8QuickBev8BusinessC", "CLLocationCoordinate2D"]
+- !private ["8QuickBev8BusinessC", "CheckoutCart"]
 - ["8QuickBev8BusinessC", "CodingKey"]
 - ["8QuickBev8BusinessC", "CodingKeys"]
 - !private ["8QuickBev8BusinessC", "CoreDataManager"]
 - ["8QuickBev8BusinessC", "Decoder"]
 - !private ["8QuickBev8BusinessC", "Double"]
+- !private ["8QuickBev8BusinessC", "ETag"]
 - ["8QuickBev8BusinessC", "Encoder"]
+- !private ["8QuickBev8BusinessC", "HTTPHeader"]
+- !private ["8QuickBev8BusinessC", "Int"]
+- !private ["8QuickBev8BusinessC", "Int64"]
+- !private ["8QuickBev8BusinessC", "JSONEncoder"]
 - ["8QuickBev8BusinessC", "String"]
 - !private ["8QuickBev8BusinessC", "UUID"]
 - ["8QuickBev8BusinessC", "Void"]
@@ -82,22 +100,29 @@ depends-member:
 - !private ["8QuickBev8BusinessC", "salesTaxRate"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "coordinate"]
 - !private ["8CloudKit21CKRecordValueProtocolP", "first"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
 - !private ["So10CLGeocoderC", "geocodeAddressString"]
 - !private ["So10CLGeocoderC", "init"]
 - !private ["So10CLLocationC", "coordinate"]
 - !private ["So11CLPlacemarkC", "location"]
-- !private ["s7CVarArgP", "APIClient"]
 - !private ["s7CVarArgP", "APIRequest"]
 - !private ["s7CVarArgP", "Business"]
 - !private ["s7CVarArgP", "CLGeocoder"]
+- !private ["s7CVarArgP", "CheckoutCart"]
 - !private ["s7CVarArgP", "CodingKeys"]
 - !private ["s7CVarArgP", "CoreDataManager"]
 - !private ["s7CVarArgP", "Double"]
+- !private ["s7CVarArgP", "ETag"]
+- !private ["s7CVarArgP", "HTTPHeader"]
+- !private ["s7CVarArgP", "Int"]
+- !private ["s7CVarArgP", "Int64"]
+- !private ["s7CVarArgP", "JSONEncoder"]
 - !private ["s7CVarArgP", "String"]
 - !private ["s7CVarArgP", "UUID"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "_findStringSwitchCase"]
 - !private ["s7CVarArgP", "address"]
+- !private ["s7CVarArgP", "businessETag"]
 - !private ["s7CVarArgP", "coordinate"]
 - ["s7CVarArgP", "encode"]
 - !private ["s7CVarArgP", "findStringSwitchCase"]
@@ -113,6 +138,7 @@ depends-member:
 - !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "salesTaxRate"]
 - !private ["s7CVarArgP", "subscript"]
+- !private ["8QuickBev12CheckoutCartC", "businessETag"]
 - ["s9CodingKeyP", "=="]
 - ["s9CodingKeyP", "Default_RawValue"]
 - ["s9CodingKeyP", "RawValue"]
@@ -159,19 +185,29 @@ depends-member:
 - ["8QuickBev8BusinessC10CodingKeysO", "stringValue"]
 - !private ["Sl", ""]
 - !private ["Sl", "first"]
+- !private ["Sl", "init"]
 - !private ["Sl", "subscript"]
+- !private ["SL", ""]
+- !private ["SL", "init"]
 - !private ["10Foundation15ContiguousBytesP", "first"]
+- !private ["8QuickBev15CoreDataManagerC", "deleteEntity"]
 - !private ["8QuickBev15CoreDataManagerC", "managedContext"]
+- !private ["8QuickBev15CoreDataManagerC", "saveContext"]
 - !private ["8QuickBev15CoreDataManagerC", "sharedManager"]
 - ["s28CustomDebugStringConvertibleP", "=="]
-- !private ["s28CustomDebugStringConvertibleP", "APIClient"]
 - !private ["s28CustomDebugStringConvertibleP", "APIRequest"]
 - !private ["s28CustomDebugStringConvertibleP", "Business"]
 - !private ["s28CustomDebugStringConvertibleP", "CLGeocoder"]
+- !private ["s28CustomDebugStringConvertibleP", "CheckoutCart"]
 - !private ["s28CustomDebugStringConvertibleP", "CodingKeys"]
 - !private ["s28CustomDebugStringConvertibleP", "CoreDataManager"]
 - ["s28CustomDebugStringConvertibleP", "Default_RawValue"]
 - !private ["s28CustomDebugStringConvertibleP", "Double"]
+- !private ["s28CustomDebugStringConvertibleP", "ETag"]
+- !private ["s28CustomDebugStringConvertibleP", "HTTPHeader"]
+- !private ["s28CustomDebugStringConvertibleP", "Int"]
+- !private ["s28CustomDebugStringConvertibleP", "Int64"]
+- !private ["s28CustomDebugStringConvertibleP", "JSONEncoder"]
 - ["s28CustomDebugStringConvertibleP", "RawValue"]
 - !private ["s28CustomDebugStringConvertibleP", "String"]
 - !private ["s28CustomDebugStringConvertibleP", "UUID"]
@@ -180,6 +216,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "_findStringSwitchCase"]
 - ["s28CustomDebugStringConvertibleP", "_rawHashValue"]
 - !private ["s28CustomDebugStringConvertibleP", "address"]
+- !private ["s28CustomDebugStringConvertibleP", "businessETag"]
 - !private ["s28CustomDebugStringConvertibleP", "businessResponse"]
 - !private ["s28CustomDebugStringConvertibleP", "coordinate"]
 - ["s28CustomDebugStringConvertibleP", "debugDescription"]
@@ -204,16 +241,22 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "stringValue"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
 - !private ["s17CustomReflectableP", "first"]
+- !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "subscript"]
 - ["s23CustomStringConvertibleP", "=="]
-- !private ["s23CustomStringConvertibleP", "APIClient"]
 - !private ["s23CustomStringConvertibleP", "APIRequest"]
 - !private ["s23CustomStringConvertibleP", "Business"]
 - !private ["s23CustomStringConvertibleP", "CLGeocoder"]
+- !private ["s23CustomStringConvertibleP", "CheckoutCart"]
 - !private ["s23CustomStringConvertibleP", "CodingKeys"]
 - !private ["s23CustomStringConvertibleP", "CoreDataManager"]
 - ["s23CustomStringConvertibleP", "Default_RawValue"]
 - !private ["s23CustomStringConvertibleP", "Double"]
+- !private ["s23CustomStringConvertibleP", "ETag"]
+- !private ["s23CustomStringConvertibleP", "HTTPHeader"]
+- !private ["s23CustomStringConvertibleP", "Int"]
+- !private ["s23CustomStringConvertibleP", "Int64"]
+- !private ["s23CustomStringConvertibleP", "JSONEncoder"]
 - ["s23CustomStringConvertibleP", "RawValue"]
 - !private ["s23CustomStringConvertibleP", "String"]
 - !private ["s23CustomStringConvertibleP", "UUID"]
@@ -222,6 +265,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "_findStringSwitchCase"]
 - ["s23CustomStringConvertibleP", "_rawHashValue"]
 - !private ["s23CustomStringConvertibleP", "address"]
+- !private ["s23CustomStringConvertibleP", "businessETag"]
 - !private ["s23CustomStringConvertibleP", "businessResponse"]
 - !private ["s23CustomStringConvertibleP", "coordinate"]
 - ["s23CustomStringConvertibleP", "debugDescription"]
@@ -245,15 +289,21 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "salesTaxRate"]
 - ["s23CustomStringConvertibleP", "stringValue"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "utf8"]
 - !private ["10Foundation12DataProtocolP", ""]
 - !private ["10Foundation12DataProtocolP", "first"]
-- !private ["Se", "APIClient"]
 - !private ["Se", "APIRequest"]
 - !private ["Se", "Business"]
 - !private ["Se", "CLGeocoder"]
+- !private ["Se", "CheckoutCart"]
 - !private ["Se", "CodingKeys"]
 - !private ["Se", "CoreDataManager"]
 - !private ["Se", "Double"]
+- !private ["Se", "ETag"]
+- !private ["Se", "HTTPHeader"]
+- !private ["Se", "Int"]
+- !private ["Se", "Int64"]
+- !private ["Se", "JSONEncoder"]
 - !private ["Se", "String"]
 - !private ["Se", "UUID"]
 - ["Se", ""]
@@ -273,13 +323,20 @@ depends-member:
 - !private ["Se", "subscript"]
 - !private ["s7DecoderP", "container"]
 - !private ["SD", "subscript"]
-- !private ["SE", "APIClient"]
+- !private ["8QuickBev4ETagC", ""]
+- !private ["8QuickBev4ETagC", "init"]
 - !private ["SE", "APIRequest"]
 - !private ["SE", "Business"]
 - !private ["SE", "CLGeocoder"]
+- !private ["SE", "CheckoutCart"]
 - !private ["SE", "CodingKeys"]
 - !private ["SE", "CoreDataManager"]
 - !private ["SE", "Double"]
+- !private ["SE", "ETag"]
+- !private ["SE", "HTTPHeader"]
+- !private ["SE", "Int"]
+- !private ["SE", "Int64"]
+- !private ["SE", "JSONEncoder"]
 - !private ["SE", "String"]
 - !private ["SE", "UUID"]
 - ["SE", ""]
@@ -298,15 +355,21 @@ depends-member:
 - !private ["SE", "salesTaxRate"]
 - !private ["SE", "subscript"]
 - !private ["s7EncoderP", "container"]
+- !private ["SS10FoundationE8EncodingV", "utf8"]
 - ["SQ", "=="]
-- !private ["SQ", "APIClient"]
 - !private ["SQ", "APIRequest"]
 - !private ["SQ", "Business"]
 - !private ["SQ", "CLGeocoder"]
+- !private ["SQ", "CheckoutCart"]
 - !private ["SQ", "CodingKeys"]
 - !private ["SQ", "CoreDataManager"]
 - ["SQ", "Default_RawValue"]
 - !private ["SQ", "Double"]
+- !private ["SQ", "ETag"]
+- !private ["SQ", "HTTPHeader"]
+- !private ["SQ", "Int"]
+- !private ["SQ", "Int64"]
+- !private ["SQ", "JSONEncoder"]
 - ["SQ", "RawValue"]
 - !private ["SQ", "String"]
 - !private ["SQ", "UUID"]
@@ -315,6 +378,7 @@ depends-member:
 - !private ["SQ", "_findStringSwitchCase"]
 - ["SQ", "_rawHashValue"]
 - !private ["SQ", "address"]
+- !private ["SQ", "businessETag"]
 - !private ["SQ", "businessResponse"]
 - !private ["SQ", "coordinate"]
 - ["SQ", "debugDescription"]
@@ -339,20 +403,39 @@ depends-member:
 - !private ["SQ", "salesTaxRate"]
 - ["SQ", "stringValue"]
 - !private ["SQ", "subscript"]
+- !private ["SQ", "utf8"]
 - !private ["s25ExpressibleByArrayLiteralP", ""]
 - !private ["s25ExpressibleByArrayLiteralP", "first"]
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", ""]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["8QuickBev10HTTPHeaderV", "init"]
 - !private ["8QuickBev10HTTPMethodO", "get"]
 - ["SH", "=="]
-- !private ["SH", "APIClient"]
 - !private ["SH", "APIRequest"]
 - !private ["SH", "Business"]
 - !private ["SH", "CLGeocoder"]
+- !private ["SH", "CheckoutCart"]
 - !private ["SH", "CodingKeys"]
 - !private ["SH", "CoreDataManager"]
 - ["SH", "Default_RawValue"]
 - !private ["SH", "Double"]
+- !private ["SH", "ETag"]
+- !private ["SH", "HTTPHeader"]
+- !private ["SH", "Int"]
+- !private ["SH", "Int64"]
+- !private ["SH", "JSONEncoder"]
 - ["SH", "RawValue"]
 - !private ["SH", "String"]
 - !private ["SH", "UUID"]
@@ -361,6 +444,7 @@ depends-member:
 - !private ["SH", "_findStringSwitchCase"]
 - ["SH", "_rawHashValue"]
 - !private ["SH", "address"]
+- !private ["SH", "businessETag"]
 - !private ["SH", "businessResponse"]
 - !private ["SH", "coordinate"]
 - ["SH", "debugDescription"]
@@ -385,17 +469,24 @@ depends-member:
 - !private ["SH", "salesTaxRate"]
 - ["SH", "stringValue"]
 - !private ["SH", "subscript"]
-- !private ["s12IdentifiableP", "APIClient"]
+- !private ["SH", "utf8"]
 - !private ["s12IdentifiableP", "APIRequest"]
 - !private ["s12IdentifiableP", "Business"]
 - !private ["s12IdentifiableP", "CLGeocoder"]
+- !private ["s12IdentifiableP", "CheckoutCart"]
 - !private ["s12IdentifiableP", "CodingKeys"]
 - !private ["s12IdentifiableP", "CoreDataManager"]
 - !private ["s12IdentifiableP", "Double"]
+- !private ["s12IdentifiableP", "ETag"]
+- !private ["s12IdentifiableP", "HTTPHeader"]
+- !private ["s12IdentifiableP", "Int"]
+- !private ["s12IdentifiableP", "Int64"]
+- !private ["s12IdentifiableP", "JSONEncoder"]
 - !private ["s12IdentifiableP", "String"]
 - !private ["s12IdentifiableP", "UUID"]
 - !private ["s12IdentifiableP", "_findStringSwitchCase"]
 - !private ["s12IdentifiableP", "address"]
+- !private ["s12IdentifiableP", "businessETag"]
 - ["s12IdentifiableP", "encode"]
 - !private ["s12IdentifiableP", "findStringSwitchCase"]
 - !private ["s12IdentifiableP", "id"]
@@ -404,6 +495,10 @@ depends-member:
 - !private ["s12IdentifiableP", "name"]
 - !private ["s12IdentifiableP", "print"]
 - !private ["s12IdentifiableP", "salesTaxRate"]
+- !private ["Si", "init"]
+- !private ["s5Int64V", "init"]
+- !private ["10Foundation11JSONEncoderC", "encode"]
+- !private ["10Foundation11JSONEncoderC", "init"]
 - !private ["s22KeyedDecodingContainerV", "decode"]
 - !private ["s22KeyedDecodingContainerV", "nestedContainer"]
 - !private ["s30KeyedDecodingContainerProtocolP", "decode"]
@@ -412,6 +507,9 @@ depends-member:
 - !private ["s22KeyedEncodingContainerV", "nestedContainer"]
 - !private ["s30KeyedEncodingContainerProtocolP", "encode"]
 - !private ["s30KeyedEncodingContainerProtocolP", "nestedContainer"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
 - !private ["SM", ""]
 - !private ["SM", "first"]
 - !private ["10Foundation19MutableDataProtocolP", "first"]
@@ -420,23 +518,29 @@ depends-member:
 - !private ["So8NSCodingP", "location"]
 - !private ["So9NSCopyingP", "coordinate"]
 - !private ["So9NSCopyingP", "location"]
-- !private ["So20NSFetchRequestResultP", "APIClient"]
+- ["So20NSFetchRequestResultP", "APIClient"]
 - !private ["So20NSFetchRequestResultP", "APIRequest"]
 - !private ["So20NSFetchRequestResultP", "Business"]
 - !private ["So20NSFetchRequestResultP", "CLGeocoder"]
 - ["So20NSFetchRequestResultP", "CLLocationCoordinate2D"]
+- !private ["So20NSFetchRequestResultP", "CheckoutCart"]
 - ["So20NSFetchRequestResultP", "CodingKey"]
 - !private ["So20NSFetchRequestResultP", "CodingKeys"]
 - !private ["So20NSFetchRequestResultP", "CoreDataManager"]
-- ["So20NSFetchRequestResultP", "Decoder"]
 - !private ["So20NSFetchRequestResultP", "Double"]
+- !private ["So20NSFetchRequestResultP", "ETag"]
 - ["So20NSFetchRequestResultP", "Encoder"]
+- !private ["So20NSFetchRequestResultP", "HTTPHeader"]
+- !private ["So20NSFetchRequestResultP", "Int"]
+- !private ["So20NSFetchRequestResultP", "Int64"]
+- !private ["So20NSFetchRequestResultP", "JSONEncoder"]
 - !private ["So20NSFetchRequestResultP", "String"]
 - !private ["So20NSFetchRequestResultP", "UUID"]
 - ["So20NSFetchRequestResultP", "Void"]
 - ["So20NSFetchRequestResultP", ""]
 - !private ["So20NSFetchRequestResultP", "_findStringSwitchCase"]
 - !private ["So20NSFetchRequestResultP", "address"]
+- !private ["So20NSFetchRequestResultP", "businessETag"]
 - ["So20NSFetchRequestResultP", "coordinate"]
 - ["So20NSFetchRequestResultP", "encode"]
 - !private ["So20NSFetchRequestResultP", "findStringSwitchCase"]
@@ -448,23 +552,30 @@ depends-member:
 - !private ["So20NSFetchRequestResultP", "name"]
 - !private ["So20NSFetchRequestResultP", "print"]
 - !private ["So20NSFetchRequestResultP", "salesTaxRate"]
-- !private ["So15NSManagedObjectC", "APIClient"]
+- ["So15NSManagedObjectC", "APIClient"]
 - !private ["So15NSManagedObjectC", "APIRequest"]
 - ["So15NSManagedObjectC", "Business"]
 - !private ["So15NSManagedObjectC", "CLGeocoder"]
 - ["So15NSManagedObjectC", "CLLocationCoordinate2D"]
+- !private ["So15NSManagedObjectC", "CheckoutCart"]
 - ["So15NSManagedObjectC", "CodingKey"]
 - !private ["So15NSManagedObjectC", "CodingKeys"]
 - !private ["So15NSManagedObjectC", "CoreDataManager"]
 - ["So15NSManagedObjectC", "Decoder"]
 - !private ["So15NSManagedObjectC", "Double"]
+- !private ["So15NSManagedObjectC", "ETag"]
 - ["So15NSManagedObjectC", "Encoder"]
+- !private ["So15NSManagedObjectC", "HTTPHeader"]
+- !private ["So15NSManagedObjectC", "Int"]
+- !private ["So15NSManagedObjectC", "Int64"]
+- !private ["So15NSManagedObjectC", "JSONEncoder"]
 - ["So15NSManagedObjectC", "String"]
 - !private ["So15NSManagedObjectC", "UUID"]
 - ["So15NSManagedObjectC", "Void"]
 - ["So15NSManagedObjectC", ""]
 - !private ["So15NSManagedObjectC", "_findStringSwitchCase"]
 - !private ["So15NSManagedObjectC", "address"]
+- !private ["So15NSManagedObjectC", "businessETag"]
 - ["So15NSManagedObjectC", "coordinate"]
 - ["So15NSManagedObjectC", "encode"]
 - !private ["So15NSManagedObjectC", "findStringSwitchCase"]
@@ -476,23 +587,30 @@ depends-member:
 - !private ["So15NSManagedObjectC", "name"]
 - !private ["So15NSManagedObjectC", "print"]
 - !private ["So15NSManagedObjectC", "salesTaxRate"]
-- !private ["So8NSObjectC", "APIClient"]
+- ["So8NSObjectC", "APIClient"]
 - !private ["So8NSObjectC", "APIRequest"]
 - ["So8NSObjectC", "Business"]
 - !private ["So8NSObjectC", "CLGeocoder"]
 - ["So8NSObjectC", "CLLocationCoordinate2D"]
+- !private ["So8NSObjectC", "CheckoutCart"]
 - ["So8NSObjectC", "CodingKey"]
 - !private ["So8NSObjectC", "CodingKeys"]
 - !private ["So8NSObjectC", "CoreDataManager"]
 - ["So8NSObjectC", "Decoder"]
 - !private ["So8NSObjectC", "Double"]
+- !private ["So8NSObjectC", "ETag"]
 - ["So8NSObjectC", "Encoder"]
+- !private ["So8NSObjectC", "HTTPHeader"]
+- !private ["So8NSObjectC", "Int"]
+- !private ["So8NSObjectC", "Int64"]
+- !private ["So8NSObjectC", "JSONEncoder"]
 - ["So8NSObjectC", "String"]
 - !private ["So8NSObjectC", "UUID"]
 - ["So8NSObjectC", "Void"]
 - ["So8NSObjectC", ""]
 - !private ["So8NSObjectC", "_findStringSwitchCase"]
 - !private ["So8NSObjectC", "address"]
+- !private ["So8NSObjectC", "businessETag"]
 - ["So8NSObjectC", "coordinate"]
 - ["So8NSObjectC", "encode"]
 - !private ["So8NSObjectC", "findStringSwitchCase"]
@@ -506,22 +624,27 @@ depends-member:
 - !private ["So8NSObjectC", "name"]
 - !private ["So8NSObjectC", "print"]
 - !private ["So8NSObjectC", "salesTaxRate"]
-- !private ["So8NSObjectP", "APIClient"]
 - !private ["So8NSObjectP", "APIRequest"]
 - !private ["So8NSObjectP", "Business"]
 - !private ["So8NSObjectP", "CLGeocoder"]
+- ["So8NSObjectP", "CLLocationCoordinate2D"]
+- !private ["So8NSObjectP", "CheckoutCart"]
 - ["So8NSObjectP", "CodingKey"]
 - !private ["So8NSObjectP", "CodingKeys"]
 - !private ["So8NSObjectP", "CoreDataManager"]
-- ["So8NSObjectP", "Decoder"]
 - !private ["So8NSObjectP", "Double"]
+- !private ["So8NSObjectP", "ETag"]
 - ["So8NSObjectP", "Encoder"]
+- !private ["So8NSObjectP", "HTTPHeader"]
+- !private ["So8NSObjectP", "Int"]
+- !private ["So8NSObjectP", "Int64"]
+- !private ["So8NSObjectP", "JSONEncoder"]
 - !private ["So8NSObjectP", "String"]
 - !private ["So8NSObjectP", "UUID"]
-- ["So8NSObjectP", "Void"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "_findStringSwitchCase"]
 - !private ["So8NSObjectP", "address"]
+- !private ["So8NSObjectP", "businessETag"]
 - ["So8NSObjectP", "coordinate"]
 - ["So8NSObjectP", "encode"]
 - !private ["So8NSObjectP", "findStringSwitchCase"]
@@ -537,18 +660,26 @@ depends-member:
 - !private ["So8NSObjectP", "salesTaxRate"]
 - !private ["So14NSSecureCodingP", "coordinate"]
 - !private ["So14NSSecureCodingP", "location"]
-- !private ["7Combine16ObservableObjectP", "APIClient"]
+- !private ["Sj", ""]
+- !private ["Sj", "init"]
 - !private ["7Combine16ObservableObjectP", "APIRequest"]
 - !private ["7Combine16ObservableObjectP", "Business"]
 - !private ["7Combine16ObservableObjectP", "CLGeocoder"]
+- !private ["7Combine16ObservableObjectP", "CheckoutCart"]
 - !private ["7Combine16ObservableObjectP", "CodingKeys"]
 - !private ["7Combine16ObservableObjectP", "CoreDataManager"]
 - !private ["7Combine16ObservableObjectP", "Double"]
+- !private ["7Combine16ObservableObjectP", "ETag"]
+- !private ["7Combine16ObservableObjectP", "HTTPHeader"]
+- !private ["7Combine16ObservableObjectP", "Int"]
+- !private ["7Combine16ObservableObjectP", "Int64"]
+- !private ["7Combine16ObservableObjectP", "JSONEncoder"]
 - !private ["7Combine16ObservableObjectP", "String"]
 - !private ["7Combine16ObservableObjectP", "UUID"]
 - ["7Combine16ObservableObjectP", ""]
 - !private ["7Combine16ObservableObjectP", "_findStringSwitchCase"]
 - !private ["7Combine16ObservableObjectP", "address"]
+- !private ["7Combine16ObservableObjectP", "businessETag"]
 - ["7Combine16ObservableObjectP", "encode"]
 - !private ["7Combine16ObservableObjectP", "findStringSwitchCase"]
 - !private ["7Combine16ObservableObjectP", "getBusinesses"]
@@ -563,6 +694,7 @@ depends-member:
 - !private ["Sk", "first"]
 - !private ["Sm", ""]
 - !private ["Sm", "first"]
+- !private ["Sm", "init"]
 - ["SY", "=="]
 - ["SY", "Default_RawValue"]
 - ["SY", "RawValue"]
@@ -586,28 +718,59 @@ depends-member:
 - ["SY", "rawValue"]
 - !private ["SY", "salesTaxRate"]
 - ["SY", "stringValue"]
+- !private ["SY", "utf8"]
+- !private ["s10SIMDScalarP", "init"]
 - !private ["ST", ""]
 - !private ["ST", "first"]
+- !private ["ST", "init"]
 - !private ["ST", "subscript"]
+- !private ["SZ", "init"]
+- !private ["s13SignedNumericP", ""]
+- !private ["s13SignedNumericP", "init"]
+- !private ["Sx", ""]
+- !private ["Sx", "init"]
+- !private ["SS", "init"]
+- !private ["Sy", "init"]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", ""]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["7Combine15TopLevelEncoderP", "encode"]
+- !private ["7Combine15TopLevelEncoderP", "init"]
 - !private ["s14_ArrayProtocolP", "first"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s24_DestructorSafeContainerP", "first"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["7SwiftUI18_FormatSpecifiableP", "init"]
 - !private ["s19_HasContiguousBytesP", "first"]
+- !private ["s19_HasContiguousBytesP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "first"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "APIClient"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "APIRequest"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Business"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CLGeocoder"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CheckoutCart"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CodingKeys"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CoreDataManager"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Double"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ETag"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "HTTPHeader"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Int"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Int64"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "JSONEncoder"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "String"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UUID"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "_findStringSwitchCase"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "address"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "businessETag"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "coordinate"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "encode"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "findStringSwitchCase"]
@@ -621,18 +784,24 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "salesTaxRate"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "APIClient"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "APIRequest"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Business"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CLGeocoder"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CheckoutCart"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CodingKeys"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CoreDataManager"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Double"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ETag"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "HTTPHeader"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Int"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Int64"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "JSONEncoder"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "String"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UUID"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_findStringSwitchCase"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "address"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "businessETag"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "coordinate"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "encode"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "findStringSwitchCase"]
@@ -647,6 +816,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "print"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "salesTaxRate"]
 - !private ["s21_ObjectiveCBridgeableP", "first"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["So13CKRecordValueP", "coordinate"]
 depends-nominal:
@@ -654,18 +824,21 @@ depends-nominal:
 - !private "8QuickBev10APIRequestC"
 - !private "8QuickBev11APIResponseV"
 - !private "8QuickBev9APIResultO"
-- !private "9Alamofire0A8ExtendedP"
+- !private "s18AdditiveArithmeticP"
 - !private "Sa"
 - !private "SK"
+- !private "Sz"
 - "8QuickBev8BusinessC"
 - !private "8CloudKit21CKRecordValueProtocolP"
 - !private "So10CLGeocoderC"
 - !private "So10CLLocationC"
 - !private "So11CLPlacemarkC"
 - "s7CVarArgP"
+- !private "8QuickBev12CheckoutCartC"
 - "s9CodingKeyP"
 - "8QuickBev8BusinessC10CodingKeysO"
 - !private "Sl"
+- !private "SL"
 - !private "10Foundation15ContiguousBytesP"
 - !private "8QuickBev15CoreDataManagerC"
 - "s28CustomDebugStringConvertibleP"
@@ -675,18 +848,33 @@ depends-nominal:
 - "Se"
 - !private "s7DecoderP"
 - !private "SD"
+- !private "8QuickBev4ETagC"
 - "SE"
 - !private "s7EncoderP"
+- !private "SS10FoundationE8EncodingV"
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- !private "8QuickBev10HTTPHeaderV"
 - !private "8QuickBev10HTTPMethodO"
 - "SH"
 - "s12IdentifiableP"
+- !private "Si"
+- !private "s5Int64V"
+- !private "10Foundation11JSONEncoderC"
 - !private "s22KeyedDecodingContainerV"
 - !private "s30KeyedDecodingContainerProtocolP"
 - !private "s22KeyedEncodingContainerV"
 - !private "s30KeyedEncodingContainerProtocolP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
 - !private "SM"
 - !private "10Foundation19MutableDataProtocolP"
 - !private "So8NSCodingP"
@@ -696,15 +884,30 @@ depends-nominal:
 - "So8NSObjectC"
 - "So8NSObjectP"
 - !private "So14NSSecureCodingP"
+- !private "Sj"
 - "7Combine16ObservableObjectP"
 - !private "Sk"
 - !private "Sm"
 - "SY"
+- !private "s10SIMDScalarP"
 - !private "ST"
+- !private "SZ"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "SS"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "7Combine15TopLevelEncoderP"
 - !private "s14_ArrayProtocolP"
+- !private "s15_CVarArgAlignedP"
+- !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "7SwiftUI18_FormatSpecifiableP"
 - !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
@@ -715,6 +918,7 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -723,7 +927,6 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -750,12 +953,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/MapKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/DeveloperToolsSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/UIViewController+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/NSError+Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe3DS2.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-umbrella.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-umbrella.h"
@@ -841,7 +1044,6 @@ depends-external:
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfoObject.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Headers/BadgeHub-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Headers/TweetNacl-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Headers/PushNotifications-Swift.h"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Headers/NWWebSocket-Swift.h"
@@ -868,7 +1070,6 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/mach-o/dyld.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/BadgeHub/BadgeHub.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Stripe/Stripe.framework/Modules/module.modulemap"
-- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/TweetNacl/TweetNacl.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/PushNotifications/PushNotifications.framework/Modules/module.modulemap"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphonesimulator/NWWebSocket/NWWebSocket.framework/Modules/module.modulemap"
@@ -906,4 +1107,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "996810e6801743f90b4171d1395e4f49"
+interface-hash: "42b235dda6eb989028128339ff22c7cd"

@@ -1,15 +1,15 @@
 import { Merchant } from "../Models.js";
 
 class Client {
-  constructor(){
-    this.baseUrl = "http://192.168.0.58:5000"
-    this.url = ""
+  constructor() {
+    this.baseUrl = "http://0.0.0.0:5000";
+    this.url = "";
   }
   async makeRequest(method, path, data, isForm = false) {
     let requestData = data || {};
     try {
-      this.url = this.baseUrl + path
-      console.log("baseUrl",this.url)
+      this.url = this.baseUrl + path;
+      console.log("baseUrl", this.url);
       const response = await fetch(this.url, {
         method: method,
         body:
@@ -38,7 +38,7 @@ class Client {
     }
   }
   getOrders = async () => {
-    this.url = this.baseUrl + "/order"
+    this.url = this.baseUrl + "/order";
     var headers = new Headers();
     const currentMerchant = new Merchant(
       "localStorage",
@@ -59,7 +59,7 @@ class Client {
     }).then((data) => data.json());
   };
   getCustomers = async () => {
-    this.url = this.baseUrl + "customer"
+    this.url = this.baseUrl + "customer";
     var headers = new Headers();
     const currentMerchant = new Merchant(
       "localStorage",
