@@ -6,39 +6,37 @@
 //  Copyright © 2020 Peter Vail Driscoll II. All rights reserved.
 //
 
-import UIKit
 import Stripe
-
+import UIKit
 
 class SplashPageViewController: UIViewController {
     @UsesAutoLayout var splashView = UIView()
 
     init() {
         super.init(nibName: nil, bundle: nil)
-        self.view.backgroundColor = .white
-        
+        view.backgroundColor = .white
     }
-    
-    required init?(coder: NSCoder) {
+
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
         fatalError("coder not set up")
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        splashView = SignInOrSignUpView(frame: self.view.frame)
-        self.view.addSubview(splashView)
+        splashView = SignInOrSignUpView(frame: view.frame)
+        view.addSubview(splashView)
         print("screenSize.height", UIViewController.screenSize.height)
 
         if let fetchedBusinesses = CoreDataManager.sharedManager.fetchEntities(entityName: "Business") as? [Business] {
-            for fetchedBusiness in fetchedBusinesses{
+            for fetchedBusiness in fetchedBusinesses {
                 print("fetchedBusiness in splash", fetchedBusiness)
             }
         }
-        let safeArea = self.view.safeAreaLayoutGuide
+        let safeArea = view.safeAreaLayoutGuide
         NSLayoutConstraint.activate([splashView.topAnchor.constraint(equalTo: safeArea.topAnchor),
                                      splashView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
                                      splashView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
-                                     splashView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor)
-        ])
-        
+                                     splashView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor)])
     }
 }

@@ -7,62 +7,55 @@
 //
 //
 
-import Foundation
 import CoreData
+import Foundation
 
-
-extension User {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<User> {
+public extension User {
+    @nonobjc class func fetchRequest() -> NSFetchRequest<User> {
         return NSFetchRequest<User>(entityName: "User")
     }
 
 //    @NSManaged public var email: String?
-    @NSManaged public var firstName: String?
-    @NSManaged public var lastName: String?
+    @NSManaged var firstName: String?
+    @NSManaged var lastName: String?
 //    @NSManaged public var password: String?
 //    @NSManaged public var stripeId: String?
-    @NSManaged public var emailVerified: Bool
-    @NSManaged public var relationship: CheckoutCart?
-    @NSManaged public var userToOrder: NSSet?
-    @NSManaged public var userToTab: NSSet?
-
+    @NSManaged var emailVerified: Bool
+    @NSManaged var relationship: CheckoutCart?
+    @NSManaged var userToOrder: NSSet?
+    @NSManaged var userToTab: NSSet?
 }
 
 // MARK: Generated accessors for userToOrder
-extension User {
 
+public extension User {
     @objc(addUserToOrderObject:)
-    @NSManaged public func addToUserToOrder(_ value: Order)
+    @NSManaged func addToUserToOrder(_ value: Order)
 
     @objc(removeUserToOrderObject:)
-    @NSManaged public func removeFromUserToOrder(_ value: Order)
+    @NSManaged func removeFromUserToOrder(_ value: Order)
 
     @objc(addUserToOrder:)
-    @NSManaged public func addToUserToOrder(_ values: NSSet)
+    @NSManaged func addToUserToOrder(_ values: NSSet)
 
     @objc(removeUserToOrder:)
-    @NSManaged public func removeFromUserToOrder(_ values: NSSet)
-
+    @NSManaged func removeFromUserToOrder(_ values: NSSet)
 }
 
 // MARK: Generated accessors for userToTab
-extension User {
 
+public extension User {
     @objc(addUserToTabObject:)
-    @NSManaged public func addToUserToTab(_ value: Tab)
+    @NSManaged func addToUserToTab(_ value: Tab)
 
     @objc(removeUserToTabObject:)
-    @NSManaged public func removeFromUserToTab(_ value: Tab)
+    @NSManaged func removeFromUserToTab(_ value: Tab)
 
     @objc(addUserToTab:)
-    @NSManaged public func addToUserToTab(_ values: NSSet)
+    @NSManaged func addToUserToTab(_ values: NSSet)
 
     @objc(removeUserToTab:)
-    @NSManaged public func removeFromUserToTab(_ values: NSSet)
-
+    @NSManaged func removeFromUserToTab(_ values: NSSet)
 }
 
-extension User : Identifiable {
-
-}
+extension User: Identifiable {}

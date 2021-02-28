@@ -1,0 +1,1379 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "VerifyEmailViewController"
+provides-nominal:
+- "8QuickBev25VerifyEmailViewControllerC"
+provides-member:
+- ["8QuickBev25VerifyEmailViewControllerC", ""]
+provides-dynamic-lookup:
+- "_verificationStackView"
+- "_verifyEmailLabel"
+- "_verifyEmailTextView"
+- "listenForEmailVerificationStatus"
+- "verificationStackView"
+- "verifyEmailLabel"
+- "verifyEmailTextView"
+- "viewDidLoad"
+depends-top-level:
+- "Array"
+- "AssignmentPrecedence"
+- !private "DispatchQueue"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- "NSCoder"
+- !private "NSLayoutConstraint"
+- "SceneDelegate"
+- "StringLiteralType"
+- "Theme"
+- !private "UIFont"
+- "UILabel"
+- "UIStackView"
+- "UITextView"
+- "UIViewController"
+- "UsesAutoLayout"
+- "VerifyEmailViewController"
+- !private "fatalError"
+- !private "verificationStackView"
+- !private "verifyEmailLabel"
+- !private "verifyEmailTextView"
+- !private "view"
+depends-member:
+- ["s18AdditiveArithmeticP", ""]
+- !private ["SK", ""]
+- !private ["So15CALayerDelegateP", ""]
+- !private ["So15CALayerDelegateP", "addSubview"]
+- !private ["So15CALayerDelegateP", "backgroundColor"]
+- !private ["So15CALayerDelegateP", "font"]
+- ["So15CALayerDelegateP", "init"]
+- !private ["So15CALayerDelegateP", "leadingAnchor"]
+- !private ["So15CALayerDelegateP", "safeAreaLayoutGuide"]
+- !private ["So15CALayerDelegateP", "text"]
+- !private ["So15CALayerDelegateP", "textColor"]
+- !private ["So15CALayerDelegateP", "topAnchor"]
+- !private ["So15CALayerDelegateP", "trailingAnchor"]
+- !private ["s7CVarArgP", "DispatchQueue"]
+- !private ["s7CVarArgP", "NSLayoutConstraint"]
+- !private ["s7CVarArgP", "SceneDelegate"]
+- ["s7CVarArgP", "Theme"]
+- !private ["s7CVarArgP", "UIFont"]
+- ["s7CVarArgP", "UILabel"]
+- ["s7CVarArgP", "UIStackView"]
+- ["s7CVarArgP", "UITextView"]
+- ["s7CVarArgP", "UsesAutoLayout"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "activate"]
+- !private ["s7CVarArgP", "addSubview"]
+- !private ["s7CVarArgP", "async"]
+- !private ["s7CVarArgP", "backgroundColor"]
+- !private ["s7CVarArgP", "black"]
+- !private ["s7CVarArgP", "constraint"]
+- !private ["s7CVarArgP", "fatalError"]
+- !private ["s7CVarArgP", "font"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "leadingAnchor"]
+- !private ["s7CVarArgP", "listenForEmailVerificationStatus"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "rootViewController"]
+- !private ["s7CVarArgP", "safeAreaLayoutGuide"]
+- !private ["s7CVarArgP", "shared"]
+- !private ["s7CVarArgP", "switchToHomePageViewController"]
+- !private ["s7CVarArgP", "text"]
+- !private ["s7CVarArgP", "textColor"]
+- !private ["s7CVarArgP", "topAnchor"]
+- !private ["s7CVarArgP", "trailingAnchor"]
+- !private ["s7CVarArgP", "verificationStackView"]
+- !private ["s7CVarArgP", "verifyEmailLabel"]
+- !private ["s7CVarArgP", "verifyEmailTextView"]
+- !private ["s7CVarArgP", "view"]
+- !private ["s7CVarArgP", "viewDidLoad"]
+- !private ["s7CVarArgP", "white"]
+- !private ["Sl", ""]
+- ["SL", ""]
+- !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
+- !private ["s28CustomDebugStringConvertibleP", "NSLayoutConstraint"]
+- !private ["s28CustomDebugStringConvertibleP", "SceneDelegate"]
+- ["s28CustomDebugStringConvertibleP", "Theme"]
+- !private ["s28CustomDebugStringConvertibleP", "UIFont"]
+- ["s28CustomDebugStringConvertibleP", "UILabel"]
+- ["s28CustomDebugStringConvertibleP", "UIStackView"]
+- ["s28CustomDebugStringConvertibleP", "UITextView"]
+- ["s28CustomDebugStringConvertibleP", "UsesAutoLayout"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "activate"]
+- !private ["s28CustomDebugStringConvertibleP", "addSubview"]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
+- !private ["s28CustomDebugStringConvertibleP", "backgroundColor"]
+- !private ["s28CustomDebugStringConvertibleP", "black"]
+- !private ["s28CustomDebugStringConvertibleP", "constraint"]
+- !private ["s28CustomDebugStringConvertibleP", "fatalError"]
+- !private ["s28CustomDebugStringConvertibleP", "font"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "leadingAnchor"]
+- !private ["s28CustomDebugStringConvertibleP", "listenForEmailVerificationStatus"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "rootViewController"]
+- !private ["s28CustomDebugStringConvertibleP", "safeAreaLayoutGuide"]
+- !private ["s28CustomDebugStringConvertibleP", "shared"]
+- !private ["s28CustomDebugStringConvertibleP", "switchToHomePageViewController"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
+- !private ["s28CustomDebugStringConvertibleP", "textColor"]
+- !private ["s28CustomDebugStringConvertibleP", "topAnchor"]
+- !private ["s28CustomDebugStringConvertibleP", "trailingAnchor"]
+- !private ["s28CustomDebugStringConvertibleP", "verificationStackView"]
+- !private ["s28CustomDebugStringConvertibleP", "verifyEmailLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "verifyEmailTextView"]
+- !private ["s28CustomDebugStringConvertibleP", "view"]
+- !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- !private ["s28CustomDebugStringConvertibleP", "white"]
+- !private ["s17CustomReflectableP", "addSubview"]
+- !private ["s17CustomReflectableP", "backgroundColor"]
+- !private ["s17CustomReflectableP", "black"]
+- !private ["s17CustomReflectableP", "safeAreaLayoutGuide"]
+- !private ["s17CustomReflectableP", "white"]
+- !private ["s23CustomStringConvertibleP", "DispatchQueue"]
+- !private ["s23CustomStringConvertibleP", "NSLayoutConstraint"]
+- !private ["s23CustomStringConvertibleP", "SceneDelegate"]
+- ["s23CustomStringConvertibleP", "Theme"]
+- !private ["s23CustomStringConvertibleP", "UIFont"]
+- ["s23CustomStringConvertibleP", "UILabel"]
+- ["s23CustomStringConvertibleP", "UIStackView"]
+- ["s23CustomStringConvertibleP", "UITextView"]
+- ["s23CustomStringConvertibleP", "UsesAutoLayout"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "activate"]
+- !private ["s23CustomStringConvertibleP", "addSubview"]
+- !private ["s23CustomStringConvertibleP", "async"]
+- !private ["s23CustomStringConvertibleP", "backgroundColor"]
+- !private ["s23CustomStringConvertibleP", "black"]
+- !private ["s23CustomStringConvertibleP", "constraint"]
+- !private ["s23CustomStringConvertibleP", "fatalError"]
+- !private ["s23CustomStringConvertibleP", "font"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "leadingAnchor"]
+- !private ["s23CustomStringConvertibleP", "listenForEmailVerificationStatus"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "rootViewController"]
+- !private ["s23CustomStringConvertibleP", "safeAreaLayoutGuide"]
+- !private ["s23CustomStringConvertibleP", "shared"]
+- !private ["s23CustomStringConvertibleP", "switchToHomePageViewController"]
+- !private ["s23CustomStringConvertibleP", "text"]
+- !private ["s23CustomStringConvertibleP", "textColor"]
+- !private ["s23CustomStringConvertibleP", "topAnchor"]
+- !private ["s23CustomStringConvertibleP", "trailingAnchor"]
+- !private ["s23CustomStringConvertibleP", "verificationStackView"]
+- !private ["s23CustomStringConvertibleP", "verifyEmailLabel"]
+- !private ["s23CustomStringConvertibleP", "verifyEmailTextView"]
+- !private ["s23CustomStringConvertibleP", "view"]
+- !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- !private ["s23CustomStringConvertibleP", "white"]
+- !private ["Se", "addSubview"]
+- !private ["Se", "backgroundColor"]
+- !private ["Se", "black"]
+- !private ["Se", "safeAreaLayoutGuide"]
+- !private ["Se", "white"]
+- ["So18OS_dispatch_objectC", ""]
+- !private ["So18OS_dispatch_objectC", "async"]
+- !private ["So18OS_dispatch_objectC", "init"]
+- !private ["So18OS_dispatch_objectC", "main"]
+- !private ["So18OS_dispatch_objectC", "sync"]
+- !private ["So17OS_dispatch_queueC", "async"]
+- !private ["So17OS_dispatch_queueC", "main"]
+- !private ["SE", "addSubview"]
+- !private ["SE", "backgroundColor"]
+- !private ["SE", "black"]
+- !private ["SE", "safeAreaLayoutGuide"]
+- !private ["SE", "white"]
+- !private ["SQ", "DispatchQueue"]
+- !private ["SQ", "NSLayoutConstraint"]
+- !private ["SQ", "SceneDelegate"]
+- ["SQ", "Theme"]
+- !private ["SQ", "UIFont"]
+- ["SQ", "UILabel"]
+- ["SQ", "UIStackView"]
+- ["SQ", "UITextView"]
+- ["SQ", "UsesAutoLayout"]
+- ["SQ", ""]
+- !private ["SQ", "activate"]
+- !private ["SQ", "addSubview"]
+- !private ["SQ", "async"]
+- !private ["SQ", "backgroundColor"]
+- !private ["SQ", "black"]
+- !private ["SQ", "constraint"]
+- !private ["SQ", "fatalError"]
+- !private ["SQ", "font"]
+- ["SQ", "init"]
+- !private ["SQ", "leadingAnchor"]
+- !private ["SQ", "listenForEmailVerificationStatus"]
+- !private ["SQ", "main"]
+- !private ["SQ", "rootViewController"]
+- !private ["SQ", "safeAreaLayoutGuide"]
+- !private ["SQ", "shared"]
+- !private ["SQ", "switchToHomePageViewController"]
+- !private ["SQ", "text"]
+- !private ["SQ", "textColor"]
+- !private ["SQ", "topAnchor"]
+- !private ["SQ", "trailingAnchor"]
+- !private ["SQ", "verificationStackView"]
+- !private ["SQ", "verifyEmailLabel"]
+- !private ["SQ", "verifyEmailTextView"]
+- !private ["SQ", "view"]
+- !private ["SQ", "viewDidLoad"]
+- !private ["SQ", "white"]
+- ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
+- ["s25ExpressibleByFloatLiteralP", ""]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
+- ["s27ExpressibleByIntegerLiteralP", ""]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "addSubview"]
+- !private ["s23ExpressibleByNilLiteralP", "backgroundColor"]
+- !private ["s23ExpressibleByNilLiteralP", "black"]
+- !private ["s23ExpressibleByNilLiteralP", "safeAreaLayoutGuide"]
+- !private ["s23ExpressibleByNilLiteralP", "white"]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- ["SF", ""]
+- !private ["7SwiftUI7GestureP", "addSubview"]
+- !private ["7SwiftUI7GestureP", "backgroundColor"]
+- !private ["7SwiftUI7GestureP", "black"]
+- !private ["7SwiftUI7GestureP", "safeAreaLayoutGuide"]
+- !private ["7SwiftUI7GestureP", "white"]
+- !private ["SH", "DispatchQueue"]
+- !private ["SH", "NSLayoutConstraint"]
+- !private ["SH", "SceneDelegate"]
+- ["SH", "Theme"]
+- !private ["SH", "UIFont"]
+- ["SH", "UILabel"]
+- ["SH", "UIStackView"]
+- ["SH", "UITextView"]
+- ["SH", "UsesAutoLayout"]
+- ["SH", ""]
+- !private ["SH", "activate"]
+- !private ["SH", "addSubview"]
+- !private ["SH", "async"]
+- !private ["SH", "backgroundColor"]
+- !private ["SH", "black"]
+- !private ["SH", "constraint"]
+- !private ["SH", "fatalError"]
+- !private ["SH", "font"]
+- ["SH", "init"]
+- !private ["SH", "leadingAnchor"]
+- !private ["SH", "listenForEmailVerificationStatus"]
+- !private ["SH", "main"]
+- !private ["SH", "rootViewController"]
+- !private ["SH", "safeAreaLayoutGuide"]
+- !private ["SH", "shared"]
+- !private ["SH", "switchToHomePageViewController"]
+- !private ["SH", "text"]
+- !private ["SH", "textColor"]
+- !private ["SH", "topAnchor"]
+- !private ["SH", "trailingAnchor"]
+- !private ["SH", "verificationStackView"]
+- !private ["SH", "verifyEmailLabel"]
+- !private ["SH", "verifyEmailTextView"]
+- !private ["SH", "view"]
+- !private ["SH", "viewDidLoad"]
+- !private ["SH", "white"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- !private ["So8NSCodingP", "DispatchQueue"]
+- !private ["So8NSCodingP", "NSLayoutConstraint"]
+- !private ["So8NSCodingP", "SceneDelegate"]
+- ["So8NSCodingP", "Theme"]
+- !private ["So8NSCodingP", "UIFont"]
+- ["So8NSCodingP", "UILabel"]
+- ["So8NSCodingP", "UIStackView"]
+- ["So8NSCodingP", "UITextView"]
+- ["So8NSCodingP", "UsesAutoLayout"]
+- ["So8NSCodingP", ""]
+- ["So8NSCodingP", "_verificationStackView"]
+- ["So8NSCodingP", "_verifyEmailLabel"]
+- ["So8NSCodingP", "_verifyEmailTextView"]
+- !private ["So8NSCodingP", "addSubview"]
+- !private ["So8NSCodingP", "backgroundColor"]
+- !private ["So8NSCodingP", "black"]
+- !private ["So8NSCodingP", "constraint"]
+- !private ["So8NSCodingP", "constraintEqualToSystemSpacingAfter"]
+- !private ["So8NSCodingP", "constraintEqualToSystemSpacingAfterAnchor"]
+- !private ["So8NSCodingP", "constraintEqualToSystemSpacingBelow"]
+- !private ["So8NSCodingP", "constraintEqualToSystemSpacingBelowAnchor"]
+- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
+- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
+- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
+- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
+- !private ["So8NSCodingP", "constraintLessThanOrEqualToSystemSpacingAfter"]
+- !private ["So8NSCodingP", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
+- !private ["So8NSCodingP", "constraintLessThanOrEqualToSystemSpacingBelow"]
+- !private ["So8NSCodingP", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
+- !private ["So8NSCodingP", "fatalError"]
+- !private ["So8NSCodingP", "font"]
+- ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "leadingAnchor"]
+- ["So8NSCodingP", "listenForEmailVerificationStatus"]
+- !private ["So8NSCodingP", "safeAreaLayoutGuide"]
+- !private ["So8NSCodingP", "switchToHomePageViewController"]
+- !private ["So8NSCodingP", "text"]
+- !private ["So8NSCodingP", "textColor"]
+- !private ["So8NSCodingP", "topAnchor"]
+- !private ["So8NSCodingP", "trailingAnchor"]
+- ["So8NSCodingP", "verificationStackView"]
+- ["So8NSCodingP", "verifyEmailLabel"]
+- ["So8NSCodingP", "verifyEmailTextView"]
+- !private ["So8NSCodingP", "view"]
+- ["So8NSCodingP", "viewDidLoad"]
+- !private ["So8NSCodingP", "white"]
+- !private ["So9NSCopyingP", "black"]
+- !private ["So9NSCopyingP", "constraint"]
+- !private ["So9NSCopyingP", "constraintEqualToSystemSpacingAfter"]
+- !private ["So9NSCopyingP", "constraintEqualToSystemSpacingAfterAnchor"]
+- !private ["So9NSCopyingP", "constraintEqualToSystemSpacingBelow"]
+- !private ["So9NSCopyingP", "constraintEqualToSystemSpacingBelowAnchor"]
+- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
+- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
+- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
+- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
+- !private ["So9NSCopyingP", "constraintLessThanOrEqualToSystemSpacingAfter"]
+- !private ["So9NSCopyingP", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
+- !private ["So9NSCopyingP", "constraintLessThanOrEqualToSystemSpacingBelow"]
+- !private ["So9NSCopyingP", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "white"]
+- !private ["So26NSExtensionRequestHandlingP", "DispatchQueue"]
+- !private ["So26NSExtensionRequestHandlingP", "NSLayoutConstraint"]
+- !private ["So26NSExtensionRequestHandlingP", "SceneDelegate"]
+- ["So26NSExtensionRequestHandlingP", "Theme"]
+- !private ["So26NSExtensionRequestHandlingP", "UIFont"]
+- ["So26NSExtensionRequestHandlingP", "UILabel"]
+- ["So26NSExtensionRequestHandlingP", "UIStackView"]
+- ["So26NSExtensionRequestHandlingP", "UITextView"]
+- ["So26NSExtensionRequestHandlingP", "UsesAutoLayout"]
+- ["So26NSExtensionRequestHandlingP", ""]
+- ["So26NSExtensionRequestHandlingP", "_verificationStackView"]
+- ["So26NSExtensionRequestHandlingP", "_verifyEmailLabel"]
+- ["So26NSExtensionRequestHandlingP", "_verifyEmailTextView"]
+- !private ["So26NSExtensionRequestHandlingP", "fatalError"]
+- ["So26NSExtensionRequestHandlingP", "init"]
+- ["So26NSExtensionRequestHandlingP", "listenForEmailVerificationStatus"]
+- !private ["So26NSExtensionRequestHandlingP", "switchToHomePageViewController"]
+- ["So26NSExtensionRequestHandlingP", "verificationStackView"]
+- ["So26NSExtensionRequestHandlingP", "verifyEmailLabel"]
+- ["So26NSExtensionRequestHandlingP", "verifyEmailTextView"]
+- !private ["So26NSExtensionRequestHandlingP", "view"]
+- ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- !private ["So21NSItemProviderReadingP", "black"]
+- !private ["So21NSItemProviderReadingP", "white"]
+- !private ["So21NSItemProviderWritingP", "black"]
+- !private ["So21NSItemProviderWritingP", "white"]
+- ["So14NSLayoutAnchorC", ""]
+- !private ["So14NSLayoutAnchorC", "constraint"]
+- !private ["So14NSLayoutAnchorC", "constraintEqualToSystemSpacingAfter"]
+- !private ["So14NSLayoutAnchorC", "constraintEqualToSystemSpacingAfterAnchor"]
+- !private ["So14NSLayoutAnchorC", "constraintEqualToSystemSpacingBelow"]
+- !private ["So14NSLayoutAnchorC", "constraintEqualToSystemSpacingBelowAnchor"]
+- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
+- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
+- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
+- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
+- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToSystemSpacingAfter"]
+- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
+- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToSystemSpacingBelow"]
+- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
+- !private ["So18NSLayoutConstraintC", "activate"]
+- !private ["So19NSLayoutXAxisAnchorC", "constraint"]
+- !private ["So19NSLayoutYAxisAnchorC", "constraint"]
+- !private ["So8NSObjectC", "DispatchQueue"]
+- ["So8NSObjectC", "NSCoder"]
+- !private ["So8NSObjectC", "NSLayoutConstraint"]
+- !private ["So8NSObjectC", "SceneDelegate"]
+- ["So8NSObjectC", "Theme"]
+- !private ["So8NSObjectC", "UIFont"]
+- ["So8NSObjectC", "UILabel"]
+- ["So8NSObjectC", "UIStackView"]
+- ["So8NSObjectC", "UITextView"]
+- ["So8NSObjectC", "UsesAutoLayout"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "_verificationStackView"]
+- ["So8NSObjectC", "_verifyEmailLabel"]
+- ["So8NSObjectC", "_verifyEmailTextView"]
+- !private ["So8NSObjectC", "activate"]
+- !private ["So8NSObjectC", "addSubview"]
+- !private ["So8NSObjectC", "async"]
+- !private ["So8NSObjectC", "backgroundColor"]
+- !private ["So8NSObjectC", "black"]
+- !private ["So8NSObjectC", "constraint"]
+- !private ["So8NSObjectC", "constraintEqualToAnchor"]
+- !private ["So8NSObjectC", "constraintEqualToSystemSpacingAfter"]
+- !private ["So8NSObjectC", "constraintEqualToSystemSpacingAfterAnchor"]
+- !private ["So8NSObjectC", "constraintEqualToSystemSpacingBelow"]
+- !private ["So8NSObjectC", "constraintEqualToSystemSpacingBelowAnchor"]
+- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToAnchor"]
+- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
+- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
+- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
+- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
+- !private ["So8NSObjectC", "constraintLessThanOrEqualToAnchor"]
+- !private ["So8NSObjectC", "constraintLessThanOrEqualToSystemSpacingAfter"]
+- !private ["So8NSObjectC", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
+- !private ["So8NSObjectC", "constraintLessThanOrEqualToSystemSpacingBelow"]
+- !private ["So8NSObjectC", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
+- !private ["So8NSObjectC", "fatalError"]
+- !private ["So8NSObjectC", "font"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "leadingAnchor"]
+- ["So8NSObjectC", "listenForEmailVerificationStatus"]
+- !private ["So8NSObjectC", "main"]
+- !private ["So8NSObjectC", "resume"]
+- !private ["So8NSObjectC", "rootViewController"]
+- !private ["So8NSObjectC", "safeAreaLayoutGuide"]
+- !private ["So8NSObjectC", "setTarget"]
+- !private ["So8NSObjectC", "shared"]
+- !private ["So8NSObjectC", "suspend"]
+- !private ["So8NSObjectC", "switchToHomePageViewController"]
+- !private ["So8NSObjectC", "sync"]
+- !private ["So8NSObjectC", "text"]
+- !private ["So8NSObjectC", "textColor"]
+- !private ["So8NSObjectC", "topAnchor"]
+- !private ["So8NSObjectC", "trailingAnchor"]
+- ["So8NSObjectC", "verificationStackView"]
+- ["So8NSObjectC", "verifyEmailLabel"]
+- ["So8NSObjectC", "verifyEmailTextView"]
+- !private ["So8NSObjectC", "view"]
+- ["So8NSObjectC", "viewDidLoad"]
+- !private ["So8NSObjectC", "white"]
+- !private ["So8NSObjectP", "DispatchQueue"]
+- !private ["So8NSObjectP", "NSLayoutConstraint"]
+- !private ["So8NSObjectP", "SceneDelegate"]
+- ["So8NSObjectP", "Theme"]
+- !private ["So8NSObjectP", "UIFont"]
+- ["So8NSObjectP", "UILabel"]
+- ["So8NSObjectP", "UIStackView"]
+- ["So8NSObjectP", "UITextView"]
+- ["So8NSObjectP", "UsesAutoLayout"]
+- ["So8NSObjectP", ""]
+- ["So8NSObjectP", "_verificationStackView"]
+- ["So8NSObjectP", "_verifyEmailLabel"]
+- ["So8NSObjectP", "_verifyEmailTextView"]
+- !private ["So8NSObjectP", "activate"]
+- !private ["So8NSObjectP", "addSubview"]
+- !private ["So8NSObjectP", "async"]
+- !private ["So8NSObjectP", "backgroundColor"]
+- !private ["So8NSObjectP", "black"]
+- !private ["So8NSObjectP", "constraint"]
+- !private ["So8NSObjectP", "constraintEqualToAnchor"]
+- !private ["So8NSObjectP", "constraintEqualToSystemSpacingAfter"]
+- !private ["So8NSObjectP", "constraintEqualToSystemSpacingAfterAnchor"]
+- !private ["So8NSObjectP", "constraintEqualToSystemSpacingBelow"]
+- !private ["So8NSObjectP", "constraintEqualToSystemSpacingBelowAnchor"]
+- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToAnchor"]
+- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
+- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
+- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
+- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
+- !private ["So8NSObjectP", "constraintLessThanOrEqualToAnchor"]
+- !private ["So8NSObjectP", "constraintLessThanOrEqualToSystemSpacingAfter"]
+- !private ["So8NSObjectP", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
+- !private ["So8NSObjectP", "constraintLessThanOrEqualToSystemSpacingBelow"]
+- !private ["So8NSObjectP", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
+- !private ["So8NSObjectP", "fatalError"]
+- !private ["So8NSObjectP", "font"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "leadingAnchor"]
+- ["So8NSObjectP", "listenForEmailVerificationStatus"]
+- !private ["So8NSObjectP", "main"]
+- !private ["So8NSObjectP", "resume"]
+- !private ["So8NSObjectP", "rootViewController"]
+- !private ["So8NSObjectP", "safeAreaLayoutGuide"]
+- !private ["So8NSObjectP", "setTarget"]
+- !private ["So8NSObjectP", "shared"]
+- !private ["So8NSObjectP", "suspend"]
+- !private ["So8NSObjectP", "switchToHomePageViewController"]
+- !private ["So8NSObjectP", "sync"]
+- !private ["So8NSObjectP", "text"]
+- !private ["So8NSObjectP", "textColor"]
+- !private ["So8NSObjectP", "topAnchor"]
+- !private ["So8NSObjectP", "trailingAnchor"]
+- ["So8NSObjectP", "verificationStackView"]
+- ["So8NSObjectP", "verifyEmailLabel"]
+- ["So8NSObjectP", "verifyEmailTextView"]
+- !private ["So8NSObjectP", "view"]
+- ["So8NSObjectP", "viewDidLoad"]
+- !private ["So8NSObjectP", "white"]
+- !private ["So14NSSecureCodingP", "black"]
+- !private ["So14NSSecureCodingP", "white"]
+- ["Sj", ""]
+- ["So9OS_objectC", ""]
+- !private ["So9OS_objectC", "activate"]
+- !private ["So9OS_objectC", "async"]
+- !private ["So9OS_objectC", "init"]
+- !private ["So9OS_objectC", "main"]
+- !private ["So9OS_objectC", "resume"]
+- !private ["So9OS_objectC", "setTarget"]
+- !private ["So9OS_objectC", "suspend"]
+- !private ["So9OS_objectC", "sync"]
+- !private ["Sq", "addSubview"]
+- !private ["Sq", "backgroundColor"]
+- !private ["Sq", "black"]
+- !private ["Sq", "safeAreaLayoutGuide"]
+- !private ["Sq", "white"]
+- !private ["8QuickBev18RootViewControllerC", "switchToHomePageViewController"]
+- !private ["8QuickBev13SceneDelegateC", "rootViewController"]
+- !private ["8QuickBev13SceneDelegateC", "shared"]
+- !private ["7Combine9SchedulerP", "async"]
+- !private ["7Combine9SchedulerP", "main"]
+- !private ["ST", ""]
+- ["s13SignedNumericP", ""]
+- ["Sx", ""]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s20TextOutputStreamableP", ""]
+- ["8QuickBev5ThemeO", "UILabel"]
+- ["8QuickBev5ThemeO", "UIStackView"]
+- !private ["So29UIAccessibilityIdentificationP", ""]
+- !private ["So29UIAccessibilityIdentificationP", "addSubview"]
+- !private ["So29UIAccessibilityIdentificationP", "backgroundColor"]
+- !private ["So29UIAccessibilityIdentificationP", "font"]
+- ["So29UIAccessibilityIdentificationP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "leadingAnchor"]
+- !private ["So29UIAccessibilityIdentificationP", "safeAreaLayoutGuide"]
+- !private ["So29UIAccessibilityIdentificationP", "text"]
+- !private ["So29UIAccessibilityIdentificationP", "textColor"]
+- !private ["So29UIAccessibilityIdentificationP", "topAnchor"]
+- !private ["So29UIAccessibilityIdentificationP", "trailingAnchor"]
+- !private ["So12UIAppearanceP", ""]
+- !private ["So12UIAppearanceP", "addSubview"]
+- !private ["So12UIAppearanceP", "backgroundColor"]
+- !private ["So12UIAppearanceP", "font"]
+- ["So12UIAppearanceP", "init"]
+- !private ["So12UIAppearanceP", "leadingAnchor"]
+- !private ["So12UIAppearanceP", "safeAreaLayoutGuide"]
+- !private ["So12UIAppearanceP", "text"]
+- !private ["So12UIAppearanceP", "textColor"]
+- !private ["So12UIAppearanceP", "topAnchor"]
+- !private ["So12UIAppearanceP", "trailingAnchor"]
+- !private ["So21UIAppearanceContainerP", "DispatchQueue"]
+- !private ["So21UIAppearanceContainerP", "NSLayoutConstraint"]
+- !private ["So21UIAppearanceContainerP", "SceneDelegate"]
+- ["So21UIAppearanceContainerP", "Theme"]
+- !private ["So21UIAppearanceContainerP", "UIFont"]
+- ["So21UIAppearanceContainerP", "UILabel"]
+- ["So21UIAppearanceContainerP", "UIStackView"]
+- ["So21UIAppearanceContainerP", "UITextView"]
+- ["So21UIAppearanceContainerP", "UsesAutoLayout"]
+- ["So21UIAppearanceContainerP", ""]
+- ["So21UIAppearanceContainerP", "_verificationStackView"]
+- ["So21UIAppearanceContainerP", "_verifyEmailLabel"]
+- ["So21UIAppearanceContainerP", "_verifyEmailTextView"]
+- !private ["So21UIAppearanceContainerP", "addSubview"]
+- !private ["So21UIAppearanceContainerP", "backgroundColor"]
+- !private ["So21UIAppearanceContainerP", "fatalError"]
+- !private ["So21UIAppearanceContainerP", "font"]
+- ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "leadingAnchor"]
+- ["So21UIAppearanceContainerP", "listenForEmailVerificationStatus"]
+- !private ["So21UIAppearanceContainerP", "safeAreaLayoutGuide"]
+- !private ["So21UIAppearanceContainerP", "switchToHomePageViewController"]
+- !private ["So21UIAppearanceContainerP", "text"]
+- !private ["So21UIAppearanceContainerP", "textColor"]
+- !private ["So21UIAppearanceContainerP", "topAnchor"]
+- !private ["So21UIAppearanceContainerP", "trailingAnchor"]
+- ["So21UIAppearanceContainerP", "verificationStackView"]
+- ["So21UIAppearanceContainerP", "verifyEmailLabel"]
+- ["So21UIAppearanceContainerP", "verifyEmailTextView"]
+- !private ["So21UIAppearanceContainerP", "view"]
+- ["So21UIAppearanceContainerP", "viewDidLoad"]
+- !private ["So7UIColorC", "black"]
+- !private ["So7UIColorC", "white"]
+- !private ["So18UIContentContainerP", "DispatchQueue"]
+- !private ["So18UIContentContainerP", "NSLayoutConstraint"]
+- !private ["So18UIContentContainerP", "SceneDelegate"]
+- ["So18UIContentContainerP", "Theme"]
+- !private ["So18UIContentContainerP", "UIFont"]
+- ["So18UIContentContainerP", "UILabel"]
+- ["So18UIContentContainerP", "UIStackView"]
+- ["So18UIContentContainerP", "UITextView"]
+- ["So18UIContentContainerP", "UsesAutoLayout"]
+- ["So18UIContentContainerP", ""]
+- ["So18UIContentContainerP", "_verificationStackView"]
+- ["So18UIContentContainerP", "_verifyEmailLabel"]
+- ["So18UIContentContainerP", "_verifyEmailTextView"]
+- !private ["So18UIContentContainerP", "fatalError"]
+- ["So18UIContentContainerP", "init"]
+- ["So18UIContentContainerP", "listenForEmailVerificationStatus"]
+- !private ["So18UIContentContainerP", "switchToHomePageViewController"]
+- ["So18UIContentContainerP", "verificationStackView"]
+- ["So18UIContentContainerP", "verifyEmailLabel"]
+- ["So18UIContentContainerP", "verifyEmailTextView"]
+- !private ["So18UIContentContainerP", "view"]
+- ["So18UIContentContainerP", "viewDidLoad"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "font"]
+- ["So30UIContentSizeCategoryAdjustingP", "init"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "textColor"]
+- !private ["So17UICoordinateSpaceP", ""]
+- !private ["So17UICoordinateSpaceP", "addSubview"]
+- !private ["So17UICoordinateSpaceP", "backgroundColor"]
+- !private ["So17UICoordinateSpaceP", "font"]
+- ["So17UICoordinateSpaceP", "init"]
+- !private ["So17UICoordinateSpaceP", "leadingAnchor"]
+- !private ["So17UICoordinateSpaceP", "safeAreaLayoutGuide"]
+- !private ["So17UICoordinateSpaceP", "text"]
+- !private ["So17UICoordinateSpaceP", "textColor"]
+- !private ["So17UICoordinateSpaceP", "topAnchor"]
+- !private ["So17UICoordinateSpaceP", "trailingAnchor"]
+- !private ["So13UIDynamicItemP", ""]
+- !private ["So13UIDynamicItemP", "addSubview"]
+- !private ["So13UIDynamicItemP", "backgroundColor"]
+- !private ["So13UIDynamicItemP", "font"]
+- ["So13UIDynamicItemP", "init"]
+- !private ["So13UIDynamicItemP", "leadingAnchor"]
+- !private ["So13UIDynamicItemP", "safeAreaLayoutGuide"]
+- !private ["So13UIDynamicItemP", "text"]
+- !private ["So13UIDynamicItemP", "textColor"]
+- !private ["So13UIDynamicItemP", "topAnchor"]
+- !private ["So13UIDynamicItemP", "trailingAnchor"]
+- !private ["So18UIFocusEnvironmentP", "DispatchQueue"]
+- !private ["So18UIFocusEnvironmentP", "NSLayoutConstraint"]
+- !private ["So18UIFocusEnvironmentP", "SceneDelegate"]
+- ["So18UIFocusEnvironmentP", "Theme"]
+- !private ["So18UIFocusEnvironmentP", "UIFont"]
+- ["So18UIFocusEnvironmentP", "UILabel"]
+- ["So18UIFocusEnvironmentP", "UIStackView"]
+- ["So18UIFocusEnvironmentP", "UITextView"]
+- ["So18UIFocusEnvironmentP", "UsesAutoLayout"]
+- ["So18UIFocusEnvironmentP", ""]
+- ["So18UIFocusEnvironmentP", "_verificationStackView"]
+- ["So18UIFocusEnvironmentP", "_verifyEmailLabel"]
+- ["So18UIFocusEnvironmentP", "_verifyEmailTextView"]
+- !private ["So18UIFocusEnvironmentP", "addSubview"]
+- !private ["So18UIFocusEnvironmentP", "backgroundColor"]
+- !private ["So18UIFocusEnvironmentP", "fatalError"]
+- !private ["So18UIFocusEnvironmentP", "font"]
+- ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "leadingAnchor"]
+- ["So18UIFocusEnvironmentP", "listenForEmailVerificationStatus"]
+- !private ["So18UIFocusEnvironmentP", "safeAreaLayoutGuide"]
+- !private ["So18UIFocusEnvironmentP", "switchToHomePageViewController"]
+- !private ["So18UIFocusEnvironmentP", "text"]
+- !private ["So18UIFocusEnvironmentP", "textColor"]
+- !private ["So18UIFocusEnvironmentP", "topAnchor"]
+- !private ["So18UIFocusEnvironmentP", "trailingAnchor"]
+- ["So18UIFocusEnvironmentP", "verificationStackView"]
+- ["So18UIFocusEnvironmentP", "verifyEmailLabel"]
+- ["So18UIFocusEnvironmentP", "verifyEmailTextView"]
+- !private ["So18UIFocusEnvironmentP", "view"]
+- ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- !private ["So11UIFocusItemP", ""]
+- !private ["So11UIFocusItemP", "addSubview"]
+- !private ["So11UIFocusItemP", "backgroundColor"]
+- !private ["So11UIFocusItemP", "font"]
+- ["So11UIFocusItemP", "init"]
+- !private ["So11UIFocusItemP", "leadingAnchor"]
+- !private ["So11UIFocusItemP", "safeAreaLayoutGuide"]
+- !private ["So11UIFocusItemP", "text"]
+- !private ["So11UIFocusItemP", "textColor"]
+- !private ["So11UIFocusItemP", "topAnchor"]
+- !private ["So11UIFocusItemP", "trailingAnchor"]
+- ["So20UIFocusItemContainerP", ""]
+- !private ["So20UIFocusItemContainerP", "addSubview"]
+- !private ["So20UIFocusItemContainerP", "backgroundColor"]
+- !private ["So20UIFocusItemContainerP", "font"]
+- ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "leadingAnchor"]
+- !private ["So20UIFocusItemContainerP", "safeAreaLayoutGuide"]
+- !private ["So20UIFocusItemContainerP", "text"]
+- !private ["So20UIFocusItemContainerP", "textColor"]
+- !private ["So20UIFocusItemContainerP", "topAnchor"]
+- !private ["So20UIFocusItemContainerP", "trailingAnchor"]
+- !private ["So30UIFocusItemScrollableContainerP", ""]
+- !private ["So30UIFocusItemScrollableContainerP", "font"]
+- ["So30UIFocusItemScrollableContainerP", "init"]
+- !private ["So30UIFocusItemScrollableContainerP", "text"]
+- !private ["So30UIFocusItemScrollableContainerP", "textColor"]
+- !private ["So6UIFontC", "init"]
+- ["So10UIKeyInputP", ""]
+- !private ["So10UIKeyInputP", "font"]
+- ["So10UIKeyInputP", "init"]
+- !private ["So10UIKeyInputP", "text"]
+- !private ["So10UIKeyInputP", "textColor"]
+- ["So7UILabelC", "init"]
+- ["8QuickBev5ThemeO12UILabelPropsO", "font"]
+- ["8QuickBev5ThemeO12UILabelPropsO", "text"]
+- ["8QuickBev5ThemeO12UILabelPropsO", "textColor"]
+- !private ["So24UILargeContentViewerItemP", ""]
+- !private ["So24UILargeContentViewerItemP", "addSubview"]
+- !private ["So24UILargeContentViewerItemP", "backgroundColor"]
+- !private ["So24UILargeContentViewerItemP", "font"]
+- ["So24UILargeContentViewerItemP", "init"]
+- !private ["So24UILargeContentViewerItemP", "leadingAnchor"]
+- !private ["So24UILargeContentViewerItemP", "safeAreaLayoutGuide"]
+- !private ["So24UILargeContentViewerItemP", "text"]
+- !private ["So24UILargeContentViewerItemP", "textColor"]
+- !private ["So24UILargeContentViewerItemP", "topAnchor"]
+- !private ["So24UILargeContentViewerItemP", "trailingAnchor"]
+- !private ["So13UILayoutGuideC", "leadingAnchor"]
+- !private ["So13UILayoutGuideC", "topAnchor"]
+- !private ["So13UILayoutGuideC", "trailingAnchor"]
+- !private ["So30UIPasteConfigurationSupportingP", "DispatchQueue"]
+- !private ["So30UIPasteConfigurationSupportingP", "NSLayoutConstraint"]
+- !private ["So30UIPasteConfigurationSupportingP", "SceneDelegate"]
+- ["So30UIPasteConfigurationSupportingP", "Theme"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIFont"]
+- ["So30UIPasteConfigurationSupportingP", "UILabel"]
+- ["So30UIPasteConfigurationSupportingP", "UIStackView"]
+- ["So30UIPasteConfigurationSupportingP", "UITextView"]
+- ["So30UIPasteConfigurationSupportingP", "UsesAutoLayout"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- ["So30UIPasteConfigurationSupportingP", "_verificationStackView"]
+- ["So30UIPasteConfigurationSupportingP", "_verifyEmailLabel"]
+- ["So30UIPasteConfigurationSupportingP", "_verifyEmailTextView"]
+- !private ["So30UIPasteConfigurationSupportingP", "addSubview"]
+- !private ["So30UIPasteConfigurationSupportingP", "backgroundColor"]
+- !private ["So30UIPasteConfigurationSupportingP", "fatalError"]
+- !private ["So30UIPasteConfigurationSupportingP", "font"]
+- ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "leadingAnchor"]
+- ["So30UIPasteConfigurationSupportingP", "listenForEmailVerificationStatus"]
+- !private ["So30UIPasteConfigurationSupportingP", "rootViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "safeAreaLayoutGuide"]
+- !private ["So30UIPasteConfigurationSupportingP", "shared"]
+- !private ["So30UIPasteConfigurationSupportingP", "switchToHomePageViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "textColor"]
+- !private ["So30UIPasteConfigurationSupportingP", "topAnchor"]
+- !private ["So30UIPasteConfigurationSupportingP", "trailingAnchor"]
+- ["So30UIPasteConfigurationSupportingP", "verificationStackView"]
+- ["So30UIPasteConfigurationSupportingP", "verifyEmailLabel"]
+- ["So30UIPasteConfigurationSupportingP", "verifyEmailTextView"]
+- !private ["So30UIPasteConfigurationSupportingP", "view"]
+- ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- !private ["So11UIResponderC", "DispatchQueue"]
+- ["So11UIResponderC", "NSCoder"]
+- !private ["So11UIResponderC", "NSLayoutConstraint"]
+- !private ["So11UIResponderC", "SceneDelegate"]
+- ["So11UIResponderC", "Theme"]
+- !private ["So11UIResponderC", "UIFont"]
+- ["So11UIResponderC", "UILabel"]
+- ["So11UIResponderC", "UIStackView"]
+- ["So11UIResponderC", "UITextView"]
+- ["So11UIResponderC", "UsesAutoLayout"]
+- ["So11UIResponderC", ""]
+- ["So11UIResponderC", "_verificationStackView"]
+- ["So11UIResponderC", "_verifyEmailLabel"]
+- ["So11UIResponderC", "_verifyEmailTextView"]
+- !private ["So11UIResponderC", "addSubview"]
+- !private ["So11UIResponderC", "backgroundColor"]
+- !private ["So11UIResponderC", "fatalError"]
+- !private ["So11UIResponderC", "font"]
+- ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "leadingAnchor"]
+- ["So11UIResponderC", "listenForEmailVerificationStatus"]
+- !private ["So11UIResponderC", "rootViewController"]
+- !private ["So11UIResponderC", "safeAreaLayoutGuide"]
+- !private ["So11UIResponderC", "shared"]
+- !private ["So11UIResponderC", "switchToHomePageViewController"]
+- !private ["So11UIResponderC", "text"]
+- !private ["So11UIResponderC", "textColor"]
+- !private ["So11UIResponderC", "topAnchor"]
+- !private ["So11UIResponderC", "trailingAnchor"]
+- ["So11UIResponderC", "verificationStackView"]
+- ["So11UIResponderC", "verifyEmailLabel"]
+- ["So11UIResponderC", "verifyEmailTextView"]
+- !private ["So11UIResponderC", "view"]
+- ["So11UIResponderC", "viewDidLoad"]
+- !private ["So30UIResponderStandardEditActionsP", "DispatchQueue"]
+- !private ["So30UIResponderStandardEditActionsP", "NSLayoutConstraint"]
+- !private ["So30UIResponderStandardEditActionsP", "SceneDelegate"]
+- ["So30UIResponderStandardEditActionsP", "Theme"]
+- !private ["So30UIResponderStandardEditActionsP", "UIFont"]
+- ["So30UIResponderStandardEditActionsP", "UILabel"]
+- ["So30UIResponderStandardEditActionsP", "UIStackView"]
+- ["So30UIResponderStandardEditActionsP", "UITextView"]
+- ["So30UIResponderStandardEditActionsP", "UsesAutoLayout"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- ["So30UIResponderStandardEditActionsP", "_verificationStackView"]
+- ["So30UIResponderStandardEditActionsP", "_verifyEmailLabel"]
+- ["So30UIResponderStandardEditActionsP", "_verifyEmailTextView"]
+- !private ["So30UIResponderStandardEditActionsP", "addSubview"]
+- !private ["So30UIResponderStandardEditActionsP", "backgroundColor"]
+- !private ["So30UIResponderStandardEditActionsP", "fatalError"]
+- !private ["So30UIResponderStandardEditActionsP", "font"]
+- ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "leadingAnchor"]
+- ["So30UIResponderStandardEditActionsP", "listenForEmailVerificationStatus"]
+- !private ["So30UIResponderStandardEditActionsP", "rootViewController"]
+- !private ["So30UIResponderStandardEditActionsP", "safeAreaLayoutGuide"]
+- !private ["So30UIResponderStandardEditActionsP", "shared"]
+- !private ["So30UIResponderStandardEditActionsP", "switchToHomePageViewController"]
+- !private ["So30UIResponderStandardEditActionsP", "text"]
+- !private ["So30UIResponderStandardEditActionsP", "textColor"]
+- !private ["So30UIResponderStandardEditActionsP", "topAnchor"]
+- !private ["So30UIResponderStandardEditActionsP", "trailingAnchor"]
+- ["So30UIResponderStandardEditActionsP", "verificationStackView"]
+- ["So30UIResponderStandardEditActionsP", "verifyEmailLabel"]
+- ["So30UIResponderStandardEditActionsP", "verifyEmailTextView"]
+- !private ["So30UIResponderStandardEditActionsP", "view"]
+- ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- !private ["So15UISceneDelegateP", ""]
+- !private ["So15UISceneDelegateP", "rootViewController"]
+- !private ["So15UISceneDelegateP", "shared"]
+- ["So12UIScrollViewC", ""]
+- !private ["So12UIScrollViewC", "font"]
+- ["So12UIScrollViewC", "init"]
+- !private ["So12UIScrollViewC", "text"]
+- !private ["So12UIScrollViewC", "textColor"]
+- !private ["So11UIStackViewC", "addSubview"]
+- ["So11UIStackViewC", "init"]
+- !private ["So11UIStackViewC", "leadingAnchor"]
+- !private ["So11UIStackViewC", "topAnchor"]
+- !private ["So11UIStackViewC", "trailingAnchor"]
+- ["8QuickBev5ThemeO16UIStackViewPropsO", "spacing"]
+- ["8QuickBev5ThemeO16UIStackViewPropsO", "vertical"]
+- !private ["So16UIStateRestoringP", "DispatchQueue"]
+- !private ["So16UIStateRestoringP", "NSLayoutConstraint"]
+- !private ["So16UIStateRestoringP", "SceneDelegate"]
+- ["So16UIStateRestoringP", "Theme"]
+- !private ["So16UIStateRestoringP", "UIFont"]
+- ["So16UIStateRestoringP", "UILabel"]
+- ["So16UIStateRestoringP", "UIStackView"]
+- ["So16UIStateRestoringP", "UITextView"]
+- ["So16UIStateRestoringP", "UsesAutoLayout"]
+- ["So16UIStateRestoringP", ""]
+- ["So16UIStateRestoringP", "_verificationStackView"]
+- ["So16UIStateRestoringP", "_verifyEmailLabel"]
+- ["So16UIStateRestoringP", "_verifyEmailTextView"]
+- !private ["So16UIStateRestoringP", "fatalError"]
+- ["So16UIStateRestoringP", "init"]
+- ["So16UIStateRestoringP", "listenForEmailVerificationStatus"]
+- !private ["So16UIStateRestoringP", "switchToHomePageViewController"]
+- ["So16UIStateRestoringP", "verificationStackView"]
+- ["So16UIStateRestoringP", "verifyEmailLabel"]
+- ["So16UIStateRestoringP", "verifyEmailTextView"]
+- !private ["So16UIStateRestoringP", "view"]
+- ["So16UIStateRestoringP", "viewDidLoad"]
+- !private ["So15UITextDraggableP", "font"]
+- ["So15UITextDraggableP", "init"]
+- !private ["So15UITextDraggableP", "text"]
+- !private ["So15UITextDraggableP", "textColor"]
+- !private ["So15UITextDroppableP", "font"]
+- ["So15UITextDroppableP", "init"]
+- !private ["So15UITextDroppableP", "text"]
+- !private ["So15UITextDroppableP", "textColor"]
+- ["So11UITextInputP", ""]
+- !private ["So11UITextInputP", "font"]
+- ["So11UITextInputP", "init"]
+- !private ["So11UITextInputP", "text"]
+- !private ["So11UITextInputP", "textColor"]
+- ["So17UITextInputTraitsP", ""]
+- !private ["So17UITextInputTraitsP", "font"]
+- ["So17UITextInputTraitsP", "init"]
+- !private ["So17UITextInputTraitsP", "text"]
+- !private ["So17UITextInputTraitsP", "textColor"]
+- ["So34UITextPasteConfigurationSupportingP", ""]
+- !private ["So34UITextPasteConfigurationSupportingP", "font"]
+- ["So34UITextPasteConfigurationSupportingP", "init"]
+- !private ["So34UITextPasteConfigurationSupportingP", "text"]
+- !private ["So34UITextPasteConfigurationSupportingP", "textColor"]
+- !private ["So10UITextViewC", "font"]
+- ["So10UITextViewC", "init"]
+- !private ["So10UITextViewC", "text"]
+- !private ["So10UITextViewC", "textColor"]
+- !private ["So18UITraitEnvironmentP", "DispatchQueue"]
+- !private ["So18UITraitEnvironmentP", "NSLayoutConstraint"]
+- !private ["So18UITraitEnvironmentP", "SceneDelegate"]
+- ["So18UITraitEnvironmentP", "Theme"]
+- !private ["So18UITraitEnvironmentP", "UIFont"]
+- ["So18UITraitEnvironmentP", "UILabel"]
+- ["So18UITraitEnvironmentP", "UIStackView"]
+- ["So18UITraitEnvironmentP", "UITextView"]
+- ["So18UITraitEnvironmentP", "UsesAutoLayout"]
+- ["So18UITraitEnvironmentP", ""]
+- ["So18UITraitEnvironmentP", "_verificationStackView"]
+- ["So18UITraitEnvironmentP", "_verifyEmailLabel"]
+- ["So18UITraitEnvironmentP", "_verifyEmailTextView"]
+- !private ["So18UITraitEnvironmentP", "addSubview"]
+- !private ["So18UITraitEnvironmentP", "backgroundColor"]
+- !private ["So18UITraitEnvironmentP", "fatalError"]
+- !private ["So18UITraitEnvironmentP", "font"]
+- ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "leadingAnchor"]
+- ["So18UITraitEnvironmentP", "listenForEmailVerificationStatus"]
+- !private ["So18UITraitEnvironmentP", "safeAreaLayoutGuide"]
+- !private ["So18UITraitEnvironmentP", "switchToHomePageViewController"]
+- !private ["So18UITraitEnvironmentP", "text"]
+- !private ["So18UITraitEnvironmentP", "textColor"]
+- !private ["So18UITraitEnvironmentP", "topAnchor"]
+- !private ["So18UITraitEnvironmentP", "trailingAnchor"]
+- ["So18UITraitEnvironmentP", "verificationStackView"]
+- ["So18UITraitEnvironmentP", "verifyEmailLabel"]
+- ["So18UITraitEnvironmentP", "verifyEmailTextView"]
+- !private ["So18UITraitEnvironmentP", "view"]
+- ["So18UITraitEnvironmentP", "viewDidLoad"]
+- !private ["So23UIUserActivityRestoringP", "DispatchQueue"]
+- !private ["So23UIUserActivityRestoringP", "NSLayoutConstraint"]
+- !private ["So23UIUserActivityRestoringP", "SceneDelegate"]
+- ["So23UIUserActivityRestoringP", "Theme"]
+- !private ["So23UIUserActivityRestoringP", "UIFont"]
+- ["So23UIUserActivityRestoringP", "UILabel"]
+- ["So23UIUserActivityRestoringP", "UIStackView"]
+- ["So23UIUserActivityRestoringP", "UITextView"]
+- ["So23UIUserActivityRestoringP", "UsesAutoLayout"]
+- ["So23UIUserActivityRestoringP", ""]
+- ["So23UIUserActivityRestoringP", "_verificationStackView"]
+- ["So23UIUserActivityRestoringP", "_verifyEmailLabel"]
+- ["So23UIUserActivityRestoringP", "_verifyEmailTextView"]
+- !private ["So23UIUserActivityRestoringP", "addSubview"]
+- !private ["So23UIUserActivityRestoringP", "backgroundColor"]
+- !private ["So23UIUserActivityRestoringP", "fatalError"]
+- !private ["So23UIUserActivityRestoringP", "font"]
+- ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "leadingAnchor"]
+- ["So23UIUserActivityRestoringP", "listenForEmailVerificationStatus"]
+- !private ["So23UIUserActivityRestoringP", "rootViewController"]
+- !private ["So23UIUserActivityRestoringP", "safeAreaLayoutGuide"]
+- !private ["So23UIUserActivityRestoringP", "shared"]
+- !private ["So23UIUserActivityRestoringP", "switchToHomePageViewController"]
+- !private ["So23UIUserActivityRestoringP", "text"]
+- !private ["So23UIUserActivityRestoringP", "textColor"]
+- !private ["So23UIUserActivityRestoringP", "topAnchor"]
+- !private ["So23UIUserActivityRestoringP", "trailingAnchor"]
+- ["So23UIUserActivityRestoringP", "verificationStackView"]
+- ["So23UIUserActivityRestoringP", "verifyEmailLabel"]
+- ["So23UIUserActivityRestoringP", "verifyEmailTextView"]
+- !private ["So23UIUserActivityRestoringP", "view"]
+- ["So23UIUserActivityRestoringP", "viewDidLoad"]
+- ["So6UIViewC", ""]
+- !private ["So6UIViewC", "addSubview"]
+- !private ["So6UIViewC", "backgroundColor"]
+- !private ["So6UIViewC", "font"]
+- ["So6UIViewC", "init"]
+- !private ["So6UIViewC", "leadingAnchor"]
+- !private ["So6UIViewC", "safeAreaLayoutGuide"]
+- !private ["So6UIViewC", "text"]
+- !private ["So6UIViewC", "textColor"]
+- !private ["So6UIViewC", "topAnchor"]
+- !private ["So6UIViewC", "trailingAnchor"]
+- !private ["So16UIViewControllerC", "DispatchQueue"]
+- ["So16UIViewControllerC", "NSCoder"]
+- !private ["So16UIViewControllerC", "NSLayoutConstraint"]
+- !private ["So16UIViewControllerC", "SceneDelegate"]
+- ["So16UIViewControllerC", "Theme"]
+- !private ["So16UIViewControllerC", "UIFont"]
+- ["So16UIViewControllerC", "UILabel"]
+- ["So16UIViewControllerC", "UIStackView"]
+- ["So16UIViewControllerC", "UITextView"]
+- ["So16UIViewControllerC", "UsesAutoLayout"]
+- ["So16UIViewControllerC", ""]
+- ["So16UIViewControllerC", "_verificationStackView"]
+- ["So16UIViewControllerC", "_verifyEmailLabel"]
+- ["So16UIViewControllerC", "_verifyEmailTextView"]
+- !private ["So16UIViewControllerC", "fatalError"]
+- ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "listenForEmailVerificationStatus"]
+- !private ["So16UIViewControllerC", "switchToHomePageViewController"]
+- ["So16UIViewControllerC", "verificationStackView"]
+- ["So16UIViewControllerC", "verifyEmailLabel"]
+- ["So16UIViewControllerC", "verifyEmailTextView"]
+- !private ["So16UIViewControllerC", "view"]
+- ["So16UIViewControllerC", "viewDidLoad"]
+- !private ["So21UIWindowSceneDelegateP", "rootViewController"]
+- !private ["So21UIWindowSceneDelegateP", "shared"]
+- ["8QuickBev14UsesAutoLayoutV", "init"]
+- ["8QuickBev14UsesAutoLayoutV", "wrappedValue"]
+- !private ["8QuickBev25VerifyEmailViewControllerC", "DispatchQueue"]
+- ["8QuickBev25VerifyEmailViewControllerC", "NSCoder"]
+- !private ["8QuickBev25VerifyEmailViewControllerC", "NSLayoutConstraint"]
+- !private ["8QuickBev25VerifyEmailViewControllerC", "SceneDelegate"]
+- ["8QuickBev25VerifyEmailViewControllerC", "Theme"]
+- !private ["8QuickBev25VerifyEmailViewControllerC", "UIFont"]
+- ["8QuickBev25VerifyEmailViewControllerC", "UILabel"]
+- ["8QuickBev25VerifyEmailViewControllerC", "UIStackView"]
+- ["8QuickBev25VerifyEmailViewControllerC", "UITextView"]
+- ["8QuickBev25VerifyEmailViewControllerC", "UsesAutoLayout"]
+- ["8QuickBev25VerifyEmailViewControllerC", ""]
+- !private ["8QuickBev25VerifyEmailViewControllerC", "_verificationStackView"]
+- !private ["8QuickBev25VerifyEmailViewControllerC", "_verifyEmailLabel"]
+- !private ["8QuickBev25VerifyEmailViewControllerC", "_verifyEmailTextView"]
+- ["8QuickBev25VerifyEmailViewControllerC", "deinit"]
+- !private ["8QuickBev25VerifyEmailViewControllerC", "fatalError"]
+- ["8QuickBev25VerifyEmailViewControllerC", "init"]
+- ["8QuickBev25VerifyEmailViewControllerC", "listenForEmailVerificationStatus"]
+- ["8QuickBev25VerifyEmailViewControllerC", "verificationStackView"]
+- ["8QuickBev25VerifyEmailViewControllerC", "verifyEmailLabel"]
+- ["8QuickBev25VerifyEmailViewControllerC", "verifyEmailTextView"]
+- !private ["8QuickBev25VerifyEmailViewControllerC", "view"]
+- ["8QuickBev25VerifyEmailViewControllerC", "viewDidLoad"]
+- !private ["7SwiftUI4ViewP", "addSubview"]
+- !private ["7SwiftUI4ViewP", "backgroundColor"]
+- !private ["7SwiftUI4ViewP", "black"]
+- !private ["7SwiftUI4ViewP", "safeAreaLayoutGuide"]
+- !private ["7SwiftUI4ViewP", "white"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s26_ExpressibleByColorLiteralP", "black"]
+- !private ["s26_ExpressibleByColorLiteralP", "white"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSLayoutConstraint"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "SceneDelegate"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Theme"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIFont"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "UILabel"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "UIStackView"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "UITextView"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "UsesAutoLayout"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "activate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addSubview"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "backgroundColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "black"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "constraint"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "font"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "leadingAnchor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "listenForEmailVerificationStatus"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "rootViewController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "safeAreaLayoutGuide"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "switchToHomePageViewController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "textColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "topAnchor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "trailingAnchor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "verificationStackView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "verifyEmailLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "verifyEmailTextView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "view"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "white"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "DispatchQueue"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSLayoutConstraint"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "SceneDelegate"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Theme"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIFont"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UILabel"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIStackView"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UITextView"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UsesAutoLayout"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "activate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addSubview"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "async"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "backgroundColor"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "black"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "constraint"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "fatalError"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "font"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "leadingAnchor"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "listenForEmailVerificationStatus"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "main"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "rootViewController"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "safeAreaLayoutGuide"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "switchToHomePageViewController"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "text"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "textColor"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "topAnchor"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "trailingAnchor"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "verificationStackView"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "verifyEmailLabel"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "verifyEmailTextView"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "view"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewDidLoad"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "white"]
+- !private ["s21_ObjectiveCBridgeableP", "addSubview"]
+- !private ["s21_ObjectiveCBridgeableP", "backgroundColor"]
+- !private ["s21_ObjectiveCBridgeableP", "black"]
+- !private ["s21_ObjectiveCBridgeableP", "safeAreaLayoutGuide"]
+- !private ["s21_ObjectiveCBridgeableP", "white"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "addSubview"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "backgroundColor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "font"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "init"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "leadingAnchor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "safeAreaLayoutGuide"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "text"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "textColor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "topAnchor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "trailingAnchor"]
+depends-nominal:
+- "s18AdditiveArithmeticP"
+- !private "SK"
+- "So15CALayerDelegateP"
+- "s7CVarArgP"
+- !private "Sl"
+- "SL"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "Se"
+- "So18OS_dispatch_objectC"
+- !private "So17OS_dispatch_queueC"
+- !private "SE"
+- "SQ"
+- "s25ExpressibleByArrayLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s25ExpressibleByFloatLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "SF"
+- !private "7SwiftUI7GestureP"
+- "SH"
+- !private "s25LosslessStringConvertibleP"
+- "So8NSCodingP"
+- !private "So9NSCopyingP"
+- "So26NSExtensionRequestHandlingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- "So14NSLayoutAnchorC"
+- !private "So18NSLayoutConstraintC"
+- !private "So19NSLayoutXAxisAnchorC"
+- !private "So19NSLayoutYAxisAnchorC"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- "Sj"
+- "So9OS_objectC"
+- !private "Sq"
+- !private "8QuickBev18RootViewControllerC"
+- !private "8QuickBev13SceneDelegateC"
+- !private "7Combine9SchedulerP"
+- !private "ST"
+- "s13SignedNumericP"
+- "Sx"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- "8QuickBev5ThemeO"
+- "So29UIAccessibilityIdentificationP"
+- "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- !private "So7UIColorC"
+- "So18UIContentContainerP"
+- "So30UIContentSizeCategoryAdjustingP"
+- "So17UICoordinateSpaceP"
+- "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- "So11UIFocusItemP"
+- "So20UIFocusItemContainerP"
+- "So30UIFocusItemScrollableContainerP"
+- !private "So6UIFontC"
+- "So10UIKeyInputP"
+- "So7UILabelC"
+- "8QuickBev5ThemeO12UILabelPropsO"
+- "So24UILargeContentViewerItemP"
+- !private "So13UILayoutGuideC"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- !private "So15UISceneDelegateP"
+- "So12UIScrollViewC"
+- "So11UIStackViewC"
+- "8QuickBev5ThemeO16UIStackViewPropsO"
+- "So16UIStateRestoringP"
+- "So15UITextDraggableP"
+- "So15UITextDroppableP"
+- "So11UITextInputP"
+- "So17UITextInputTraitsP"
+- "So34UITextPasteConfigurationSupportingP"
+- "So10UITextViewC"
+- "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
+- "So6UIViewC"
+- "So16UIViewControllerC"
+- !private "So21UIWindowSceneDelegateP"
+- "8QuickBev14UsesAutoLayoutV"
+- "8QuickBev25VerifyEmailViewControllerC"
+- !private "7SwiftUI4ViewP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s26_ExpressibleByColorLiteralP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+- "s38__DefaultCustomPlaygroundQuickLookableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreMIDI.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftUI.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreML.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreMedia.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreData.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/BadgeHub/BadgeHub.framework/Modules/BadgeHub.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/simd.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Modules/Stripe.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Vision.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreLocation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/AVFoundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreAudio.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/os.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Contacts.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/IQKeyboardManagerSwift.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/WebKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CloudKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/MapKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/DeveloperToolsSupport.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/UIViewController+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/NSError+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/BadgeHub/BadgeHub.framework/Headers/BadgeHub-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/Stripe-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSThreeDS2Service.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeResponseImage.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSErrorMessage.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSJSONDecodable.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSJSONEncodable.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSJSONWebSignature.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeResponse.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSAuthenticationResponse.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSDirectoryServerCertificate.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSThreeDSProtocolVersion+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSTransaction+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSDeviceInformationParameter+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/NSString+EmptyChecking.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSWarning.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSLocalizedString.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSEphemeralKeyPair+Testing.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSSwiftTryCatch.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSErrorMessage+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSDirectoryServerCertificate+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSException+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeResponseMessageExtension.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSDeviceInformation.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/UIButton+CustomInitialization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSUICustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSTextFieldCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSLabelCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSSelectionCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSButtonCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSNavigationBarCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSFooterCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSTransaction.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSNotInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSAlreadyInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSRuntimeException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSInvalidInputException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSJSONWebEncryption.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSSelectionButton.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfo.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/Stripe3DS2-Bridging-Header.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSImageLoader.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSJSONEncoder.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSACSNetworkingManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSSynchronousLocationManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSDeviceInformationManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSJailbreakChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSOSVersionChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSDebuggerChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSSimulatorChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSIntegrityChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSCategoryLinker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeResponseViewController.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSProgressViewController.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSDeviceInformationParameter.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSDirectoryServer.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSEphemeralKeyPair.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSStripe3DS2Error.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSBundleLocator.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSSecTypeUtilities.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/NSData+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/NSString+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/NSDictionary+DecodingHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSConfigParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/UIColor+DefaultColors.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSIPAddress.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/UIFont+DefaultFonts.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeResponseImageObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSAuthenticationResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeResponseMessageExtensionObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeResponseSelectionInfoObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/BadgeHub/BadgeHub.framework/Headers/BadgeHub-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/Stripe-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers/IQKeyboardManagerSwift-Swift.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSCompletionEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSEllipticCurvePoint.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/UIColor+ThirteenSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/NSLayoutConstraint+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/UIView+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSWebView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSTextChallengeView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSBrandingView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSProcessingView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSStackView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSExpandableInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSChallengeSelectionView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSSpacerView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/STDSWhitelistView.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/BadgeHub/BadgeHub.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Modules/module.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "e70b4d97b84af3a1a3a3e2cb151d0e7e"

@@ -9,15 +9,16 @@
 import UIKit
 
 class BusinessArrayTableViewCell: UITableViewCell {
-    let name = UILabel(theme:Theme.UILabel(props: [.textColor]))
-    let address = UILabel(theme:Theme.UILabel(props: [.textColor]))
+    let name = UILabel(theme: Theme.UILabel(props: [.textColor]))
+    let address = UILabel(theme: Theme.UILabel(props: [.textColor]))
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+
         name.translatesAutoresizingMaskIntoConstraints = false
         name.font = UIFont(name: "Charter-Roman",
                            size: 20.0)
@@ -25,8 +26,8 @@ class BusinessArrayTableViewCell: UITableViewCell {
         address.font = UIFont(name: "Charter-Roman",
                               size: 14.0)
         address.textColor = UIColor.lightGray
-        
-        let margins = self.contentView.safeAreaLayoutGuide
+
+        let margins = contentView.safeAreaLayoutGuide
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.alignment = .fill
@@ -35,9 +36,9 @@ class BusinessArrayTableViewCell: UITableViewCell {
         stackView.addArrangedSubview(name)
         stackView.addArrangedSubview(address)
         stackView.spacing = 3
-        
-        self.contentView.addSubview(stackView)
-        
+
+        contentView.addSubview(stackView)
+
         NSLayoutConstraint.activate([
             // name.centerXAnchor.constraint(equalTo: centerXAnchor),
             // name.centerYAnchor.constraint(equalTo: centerYAnchor),
@@ -52,14 +53,15 @@ class BusinessArrayTableViewCell: UITableViewCell {
             //                    stackView.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -10)
         ])
     }
-    required init?(coder aDecoder: NSCoder) {
+
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
+
         // Configure the view for the selected state
     }
-    
 }

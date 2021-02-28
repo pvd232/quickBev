@@ -12,6 +12,7 @@ provides-member:
 - ["8QuickBev12CheckoutCartC", "calculateCost"]
 - ["8QuickBev12CheckoutCartC", "emptyCart"]
 provides-dynamic-lookup:
+- "beamsClient"
 - "businessArray"
 - "businessETag"
 - "calculateCost"
@@ -35,6 +36,7 @@ depends-top-level:
 - !private "Array"
 - "AssignmentPrecedence"
 - "Bool"
+- !private "BooleanLiteralType"
 - "Business"
 - "CastingPrecedence"
 - "CheckoutCart"
@@ -46,6 +48,7 @@ depends-top-level:
 - !private "IntegerLiteralType"
 - "NSManagedObject"
 - !private "NSSet"
+- "PushNotifications"
 - "Pusher"
 - !private "PusherClientOptions"
 - "STPCustomerContext"
@@ -85,7 +88,9 @@ depends-member:
 - !private ["s7CVarArgP", "CheckoutCart"]
 - !private ["s7CVarArgP", "CoreDataManager"]
 - !private ["s7CVarArgP", "Drink"]
+- !private ["s7CVarArgP", "ETag"]
 - !private ["s7CVarArgP", "NSSet"]
+- ["s7CVarArgP", "PushNotifications"]
 - !private ["s7CVarArgP", "Pusher"]
 - !private ["s7CVarArgP", "PusherClientOptions"]
 - ["s7CVarArgP", "STPCustomerContext"]
@@ -105,6 +110,7 @@ depends-member:
 - !private ["s7CVarArgP", "rounded"]
 - !private ["s7CVarArgP", "salesTax"]
 - !private ["s7CVarArgP", "salesTaxRate"]
+- ["s7CVarArgP", "shared"]
 - ["s7CVarArgP", "sharedAPIClient"]
 - !private ["s7CVarArgP", "sorted"]
 - !private ["s7CVarArgP", "subscript"]
@@ -120,12 +126,14 @@ depends-member:
 - ["8QuickBev12CheckoutCartC", "Drink"]
 - ["8QuickBev12CheckoutCartC", "ETag"]
 - !private ["8QuickBev12CheckoutCartC", "NSSet"]
+- ["8QuickBev12CheckoutCartC", "PushNotifications"]
 - ["8QuickBev12CheckoutCartC", "Pusher"]
 - !private ["8QuickBev12CheckoutCartC", "PusherClientOptions"]
 - ["8QuickBev12CheckoutCartC", "STPCustomerContext"]
 - !private ["8QuickBev12CheckoutCartC", "Set"]
 - ["8QuickBev12CheckoutCartC", "StripeAPIClient"]
 - ["8QuickBev12CheckoutCartC", ""]
+- ["8QuickBev12CheckoutCartC", "beamsClient"]
 - !private ["8QuickBev12CheckoutCartC", "business"]
 - ["8QuickBev12CheckoutCartC", "businessArray"]
 - ["8QuickBev12CheckoutCartC", "businessETag"]
@@ -164,11 +172,14 @@ depends-member:
 - !private ["10Foundation15ContiguousBytesP", "subscript"]
 - !private ["8QuickBev15CoreDataManagerC", "fetchEntities"]
 - !private ["8QuickBev15CoreDataManagerC", "managedContext"]
+- !private ["8QuickBev15CoreDataManagerC", "saveContext"]
 - !private ["8QuickBev15CoreDataManagerC", "sharedManager"]
 - !private ["s28CustomDebugStringConvertibleP", "CheckoutCart"]
 - !private ["s28CustomDebugStringConvertibleP", "CoreDataManager"]
 - !private ["s28CustomDebugStringConvertibleP", "Drink"]
+- !private ["s28CustomDebugStringConvertibleP", "ETag"]
 - !private ["s28CustomDebugStringConvertibleP", "NSSet"]
+- ["s28CustomDebugStringConvertibleP", "PushNotifications"]
 - !private ["s28CustomDebugStringConvertibleP", "Pusher"]
 - !private ["s28CustomDebugStringConvertibleP", "PusherClientOptions"]
 - ["s28CustomDebugStringConvertibleP", "STPCustomerContext"]
@@ -188,6 +199,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "rounded"]
 - !private ["s28CustomDebugStringConvertibleP", "salesTax"]
 - !private ["s28CustomDebugStringConvertibleP", "salesTaxRate"]
+- ["s28CustomDebugStringConvertibleP", "shared"]
 - ["s28CustomDebugStringConvertibleP", "sharedAPIClient"]
 - !private ["s28CustomDebugStringConvertibleP", "sorted"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
@@ -205,7 +217,9 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "CheckoutCart"]
 - !private ["s23CustomStringConvertibleP", "CoreDataManager"]
 - !private ["s23CustomStringConvertibleP", "Drink"]
+- !private ["s23CustomStringConvertibleP", "ETag"]
 - !private ["s23CustomStringConvertibleP", "NSSet"]
+- ["s23CustomStringConvertibleP", "PushNotifications"]
 - !private ["s23CustomStringConvertibleP", "Pusher"]
 - !private ["s23CustomStringConvertibleP", "PusherClientOptions"]
 - ["s23CustomStringConvertibleP", "STPCustomerContext"]
@@ -225,6 +239,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "rounded"]
 - !private ["s23CustomStringConvertibleP", "salesTax"]
 - !private ["s23CustomStringConvertibleP", "salesTaxRate"]
+- ["s23CustomStringConvertibleP", "shared"]
 - ["s23CustomStringConvertibleP", "sharedAPIClient"]
 - !private ["s23CustomStringConvertibleP", "sorted"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
@@ -254,7 +269,9 @@ depends-member:
 - !private ["8QuickBev5DrinkC", ""]
 - !private ["8QuickBev5DrinkC", "cost"]
 - !private ["8QuickBev5DrinkC", "name"]
+- !private ["8QuickBev4ETagC", ""]
 - !private ["8QuickBev4ETagC", "category"]
+- !private ["8QuickBev4ETagC", "init"]
 - !private ["SE", "category"]
 - !private ["SE", "cost"]
 - !private ["SE", "count"]
@@ -270,7 +287,9 @@ depends-member:
 - !private ["SQ", "CheckoutCart"]
 - !private ["SQ", "CoreDataManager"]
 - !private ["SQ", "Drink"]
+- !private ["SQ", "ETag"]
 - !private ["SQ", "NSSet"]
+- ["SQ", "PushNotifications"]
 - !private ["SQ", "Pusher"]
 - !private ["SQ", "PusherClientOptions"]
 - ["SQ", "STPCustomerContext"]
@@ -290,6 +309,7 @@ depends-member:
 - !private ["SQ", "rounded"]
 - !private ["SQ", "salesTax"]
 - !private ["SQ", "salesTaxRate"]
+- ["SQ", "shared"]
 - ["SQ", "sharedAPIClient"]
 - !private ["SQ", "sorted"]
 - !private ["SQ", "subscript"]
@@ -317,7 +337,9 @@ depends-member:
 - !private ["SH", "CheckoutCart"]
 - !private ["SH", "CoreDataManager"]
 - !private ["SH", "Drink"]
+- !private ["SH", "ETag"]
 - !private ["SH", "NSSet"]
+- ["SH", "PushNotifications"]
 - !private ["SH", "Pusher"]
 - !private ["SH", "PusherClientOptions"]
 - ["SH", "STPCustomerContext"]
@@ -337,6 +359,7 @@ depends-member:
 - !private ["SH", "rounded"]
 - !private ["SH", "salesTax"]
 - !private ["SH", "salesTaxRate"]
+- ["SH", "shared"]
 - ["SH", "sharedAPIClient"]
 - !private ["SH", "sorted"]
 - !private ["SH", "subscript"]
@@ -347,7 +370,9 @@ depends-member:
 - !private ["s12IdentifiableP", "CheckoutCart"]
 - !private ["s12IdentifiableP", "CoreDataManager"]
 - !private ["s12IdentifiableP", "Drink"]
+- !private ["s12IdentifiableP", "ETag"]
 - !private ["s12IdentifiableP", "NSSet"]
+- ["s12IdentifiableP", "PushNotifications"]
 - !private ["s12IdentifiableP", "Pusher"]
 - !private ["s12IdentifiableP", "PusherClientOptions"]
 - ["s12IdentifiableP", "STPCustomerContext"]
@@ -379,24 +404,28 @@ depends-member:
 - !private ["10Foundation19MutableDataProtocolP", "isEmpty"]
 - !private ["10Foundation19MutableDataProtocolP", "reduce"]
 - !private ["10Foundation19MutableDataProtocolP", "subscript"]
-- !private ["So8NSCodingP", ""]
+- ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "init"]
 - !private ["So9NSCopyingP", "cost"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "name"]
 - !private ["So17NSFastEnumerationP", "init"]
+- ["So20NSFetchRequestResultP", "Bool"]
 - ["So20NSFetchRequestResultP", "Business"]
 - ["So20NSFetchRequestResultP", "CheckoutCart"]
 - !private ["So20NSFetchRequestResultP", "CoreDataManager"]
-- !private ["So20NSFetchRequestResultP", "Drink"]
+- !private ["So20NSFetchRequestResultP", "Double"]
+- ["So20NSFetchRequestResultP", "Drink"]
 - ["So20NSFetchRequestResultP", "ETag"]
 - !private ["So20NSFetchRequestResultP", "NSSet"]
+- ["So20NSFetchRequestResultP", "PushNotifications"]
 - ["So20NSFetchRequestResultP", "Pusher"]
 - !private ["So20NSFetchRequestResultP", "PusherClientOptions"]
 - ["So20NSFetchRequestResultP", "STPCustomerContext"]
 - !private ["So20NSFetchRequestResultP", "Set"]
 - ["So20NSFetchRequestResultP", "StripeAPIClient"]
 - ["So20NSFetchRequestResultP", ""]
+- ["So20NSFetchRequestResultP", "beamsClient"]
 - !private ["So20NSFetchRequestResultP", "business"]
 - ["So20NSFetchRequestResultP", "businessArray"]
 - ["So20NSFetchRequestResultP", "businessETag"]
@@ -429,12 +458,14 @@ depends-member:
 - ["So15NSManagedObjectC", "Drink"]
 - ["So15NSManagedObjectC", "ETag"]
 - !private ["So15NSManagedObjectC", "NSSet"]
+- ["So15NSManagedObjectC", "PushNotifications"]
 - ["So15NSManagedObjectC", "Pusher"]
 - !private ["So15NSManagedObjectC", "PusherClientOptions"]
 - ["So15NSManagedObjectC", "STPCustomerContext"]
 - !private ["So15NSManagedObjectC", "Set"]
 - ["So15NSManagedObjectC", "StripeAPIClient"]
 - ["So15NSManagedObjectC", ""]
+- ["So15NSManagedObjectC", "beamsClient"]
 - !private ["So15NSManagedObjectC", "business"]
 - ["So15NSManagedObjectC", "businessArray"]
 - ["So15NSManagedObjectC", "businessETag"]
@@ -468,12 +499,14 @@ depends-member:
 - ["So8NSObjectC", "Drink"]
 - ["So8NSObjectC", "ETag"]
 - !private ["So8NSObjectC", "NSSet"]
+- ["So8NSObjectC", "PushNotifications"]
 - ["So8NSObjectC", "Pusher"]
 - !private ["So8NSObjectC", "PusherClientOptions"]
 - ["So8NSObjectC", "STPCustomerContext"]
 - !private ["So8NSObjectC", "Set"]
 - ["So8NSObjectC", "StripeAPIClient"]
 - ["So8NSObjectC", ""]
+- ["So8NSObjectC", "beamsClient"]
 - !private ["So8NSObjectC", "business"]
 - ["So8NSObjectC", "businessArray"]
 - ["So8NSObjectC", "businessETag"]
@@ -504,17 +537,22 @@ depends-member:
 - !private ["So8NSObjectC", "tipPercentage"]
 - !private ["So8NSObjectC", "userBusiness"]
 - ["So8NSObjectC", "userBusinessDrinks"]
-- !private ["So8NSObjectP", "CheckoutCart"]
+- ["So8NSObjectP", "Bool"]
+- ["So8NSObjectP", "Business"]
+- ["So8NSObjectP", "CheckoutCart"]
 - !private ["So8NSObjectP", "CoreDataManager"]
-- !private ["So8NSObjectP", "Drink"]
+- !private ["So8NSObjectP", "Double"]
+- ["So8NSObjectP", "Drink"]
 - ["So8NSObjectP", "ETag"]
 - !private ["So8NSObjectP", "NSSet"]
+- ["So8NSObjectP", "PushNotifications"]
 - ["So8NSObjectP", "Pusher"]
 - !private ["So8NSObjectP", "PusherClientOptions"]
 - ["So8NSObjectP", "STPCustomerContext"]
 - !private ["So8NSObjectP", "Set"]
 - ["So8NSObjectP", "StripeAPIClient"]
 - ["So8NSObjectP", ""]
+- ["So8NSObjectP", "beamsClient"]
 - !private ["So8NSObjectP", "business"]
 - ["So8NSObjectP", "businessArray"]
 - ["So8NSObjectP", "businessETag"]
@@ -552,7 +590,9 @@ depends-member:
 - !private ["7Combine16ObservableObjectP", "CheckoutCart"]
 - !private ["7Combine16ObservableObjectP", "CoreDataManager"]
 - !private ["7Combine16ObservableObjectP", "Drink"]
+- !private ["7Combine16ObservableObjectP", "ETag"]
 - !private ["7Combine16ObservableObjectP", "NSSet"]
+- ["7Combine16ObservableObjectP", "PushNotifications"]
 - !private ["7Combine16ObservableObjectP", "Pusher"]
 - !private ["7Combine16ObservableObjectP", "PusherClientOptions"]
 - ["7Combine16ObservableObjectP", "STPCustomerContext"]
@@ -572,6 +612,7 @@ depends-member:
 - !private ["7Combine16ObservableObjectP", "tipAmount"]
 - !private ["7Combine16ObservableObjectP", "tipPercentage"]
 - !private ["7Combine16ObservableObjectP", "userBusiness"]
+- ["17PushNotificationsAAC", "shared"]
 - !private ["11PusherSwift0A0C", "init"]
 - !private ["11PusherSwift0A13ClientOptionsC", "init"]
 - !private ["11PusherSwift0A4HostO", "cluster"]
@@ -597,6 +638,7 @@ depends-member:
 - !private ["ST", "count"]
 - !private ["ST", "init"]
 - !private ["ST", "isEmpty"]
+- !private ["ST", "makeIterator"]
 - !private ["ST", "reduce"]
 - !private ["ST", "sorted"]
 - !private ["ST", "subscript"]
@@ -625,6 +667,7 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "isEmpty"]
 - !private ["s24_DestructorSafeContainerP", "reduce"]
 - !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "rounded"]
@@ -648,7 +691,9 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CheckoutCart"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CoreDataManager"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Drink"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ETag"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSSet"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "PushNotifications"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Pusher"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "PusherClientOptions"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "STPCustomerContext"]
@@ -664,6 +709,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "salesTax"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "salesTaxRate"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "sharedAPIClient"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "subtotal"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tipAmount"]
@@ -672,7 +718,9 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CheckoutCart"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CoreDataManager"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Drink"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ETag"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSSet"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PushNotifications"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Pusher"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PusherClientOptions"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPCustomerContext"]
@@ -688,12 +736,17 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "name"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "salesTax"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "salesTaxRate"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sharedAPIClient"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "subtotal"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "tipAmount"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "tipPercentage"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "userBusiness"]
 - !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
+- !private ["s21_ObjectiveCBridgeableP", "_bridgeToObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_conditionallyBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_forceBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_unconditionallyBridgeFromObjectiveC"]
 - !private ["s21_ObjectiveCBridgeableP", "count"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
@@ -737,7 +790,7 @@ depends-nominal:
 - !private "s25LosslessStringConvertibleP"
 - !private "SM"
 - !private "10Foundation19MutableDataProtocolP"
-- !private "So8NSCodingP"
+- "So8NSCodingP"
 - !private "So9NSCopyingP"
 - !private "So17NSFastEnumerationP"
 - "So20NSFetchRequestResultP"
@@ -749,6 +802,7 @@ depends-nominal:
 - !private "So5NSSetC"
 - !private "Sj"
 - "7Combine16ObservableObjectP"
+- "17PushNotificationsAAC"
 - !private "11PusherSwift0A0C"
 - !private "11PusherSwift0A13ClientOptionsC"
 - !private "11PusherSwift0A4HostO"
@@ -772,6 +826,7 @@ depends-nominal:
 - !private "s22_CVarArgPassedAsDoubleP"
 - !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
@@ -976,4 +1031,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "b51dee149a859d2d1ac6d4b7f55ba109"
+interface-hash: "f1f889716c9771d0065975b15336a066"

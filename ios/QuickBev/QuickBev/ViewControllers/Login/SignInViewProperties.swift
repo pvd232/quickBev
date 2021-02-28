@@ -13,11 +13,12 @@ enum SignInAndSignUpProps {
 //        case signUp = "Sign up with QuickBev"
 //        case splash
 //    }
-    enum ButtonIndex:String{
+    enum ButtonIndex: String {
         case first = "Sign in"
         case second = "Sign up"
         case third = "Continue as guest"
     }
+
     case Userbutton(buttonIndex: ButtonIndex)
 //    case UserAction(action: Action)
 //    func getButtonText(buttonIndex: ButtonIndex) -> String {
@@ -78,8 +79,8 @@ enum SignInAndSignUpProps {
 //            return action.rawValue
 //        }
 //    }
-    func launchNewViewController (buttonIndex: ButtonIndex) {
-        let navController =  SceneDelegate.shared.rootViewController.current as! UINavigationController
+    func launchNewViewController(buttonIndex: ButtonIndex) {
+        let navController = SceneDelegate.shared.rootViewController.current as! UINavigationController
         switch self {
         case let .Userbutton(buttonIndex):
             switch buttonIndex {
@@ -108,18 +109,18 @@ enum SignInAndSignUpProps {
 //                }
 //            case Action.splash:
 //                switch buttonIndex {
-                case .first:
-                    navController.pushViewController(LoginViewController(), animated: true)
-                    
-                case .second:
-                    navController.pushViewController(RegistrationWithEmailViewController(), animated: true)
+            case .first:
+                navController.pushViewController(LoginViewController(), animated: true)
+
+            case .second:
+                navController.pushViewController(RegistrationWithEmailViewController(), animated: true)
 
 //                    navController.pushViewController(RegistrationSplashPageViewController(), animated: true)
-                    
-                case .third:
-                    CheckoutCart.shared.isGuest = true
-                    CoreDataManager.sharedManager.saveContext()
-                    navController.pushViewController(HomePageViewController(), animated: true)
+
+            case .third:
+                CheckoutCart.shared.isGuest = true
+                CoreDataManager.sharedManager.saveContext()
+                navController.pushViewController(HomePageViewController(), animated: true)
 //                }
             }
         }

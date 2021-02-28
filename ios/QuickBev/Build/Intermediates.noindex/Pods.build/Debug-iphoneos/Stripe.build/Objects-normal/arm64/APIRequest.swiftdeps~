@@ -1,0 +1,605 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "HTTPMethodPOST"
+- "HTTPMethodGET"
+- "HTTPMethodDELETE"
+- "JSONKeyObject"
+- "APIRequest"
+provides-nominal:
+- "6Stripe10APIRequestC"
+provides-member:
+- ["6Stripe10APIRequestC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!="
+- !private "??"
+- "APIRequest"
+- "AnyHashable"
+- !private "Array"
+- "AssignmentPrecedence"
+- "CastingPrecedence"
+- "Data"
+- !private "Dictionary"
+- "Error"
+- "HTTPMethodDELETE"
+- "HTTPMethodGET"
+- "HTTPMethodPOST"
+- "HTTPURLResponse"
+- "JSONKeyObject"
+- !private "JSONSerialization"
+- !private "NSError"
+- "NSObject"
+- "ResponseType"
+- "STPAPIClient"
+- "STPAPIResponseBlock"
+- "STPAPIResponseDecodable"
+- "String"
+- "StringLiteralType"
+- "URLRequest"
+- "URLResponse"
+- "URLSessionDataTask"
+- "Void"
+- !private "delete"
+- !private "getWith"
+- "stpDispatchToMainThreadIfNecessary"
+depends-member:
+- !private ["6Stripe10APIRequestC", "AnyHashable"]
+- ["6Stripe10APIRequestC", "Data"]
+- ["6Stripe10APIRequestC", "Error"]
+- !private ["6Stripe10APIRequestC", "HTTPMethodDELETE"]
+- !private ["6Stripe10APIRequestC", "HTTPMethodGET"]
+- !private ["6Stripe10APIRequestC", "HTTPMethodPOST"]
+- ["6Stripe10APIRequestC", "HTTPURLResponse"]
+- !private ["6Stripe10APIRequestC", "JSONSerialization"]
+- !private ["6Stripe10APIRequestC", "NSError"]
+- ["6Stripe10APIRequestC", "STPAPIClient"]
+- ["6Stripe10APIRequestC", "STPAPIResponseBlock"]
+- ["6Stripe10APIRequestC", "STPAPIResponseDecodable"]
+- ["6Stripe10APIRequestC", "String"]
+- !private ["6Stripe10APIRequestC", "URLRequest"]
+- ["6Stripe10APIRequestC", "URLResponse"]
+- ["6Stripe10APIRequestC", "URLSessionDataTask"]
+- ["6Stripe10APIRequestC", "Void"]
+- ["6Stripe10APIRequestC", ""]
+- ["6Stripe10APIRequestC", "deinit"]
+- ["6Stripe10APIRequestC", "delete"]
+- ["6Stripe10APIRequestC", "getWith"]
+- ["6Stripe10APIRequestC", "init"]
+- ["6Stripe10APIRequestC", "parseResponse"]
+- ["6Stripe10APIRequestC", "post"]
+- !private ["6Stripe10APIRequestC", "stpDispatchToMainThreadIfNecessary"]
+- !private ["s7CVarArgP", "HTTPMethodDELETE"]
+- !private ["s7CVarArgP", "HTTPMethodGET"]
+- !private ["s7CVarArgP", "HTTPMethodPOST"]
+- !private ["s7CVarArgP", "JSONSerialization"]
+- !private ["s7CVarArgP", "NSError"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "apiURL"]
+- !private ["s7CVarArgP", "configuredRequest"]
+- !private ["s7CVarArgP", "dataTask"]
+- !private ["s7CVarArgP", "delete"]
+- !private ["s7CVarArgP", "getWith"]
+- !private ["s7CVarArgP", "httpMethod"]
+- !private ["s7CVarArgP", "jsonObject"]
+- !private ["s7CVarArgP", "parseResponse"]
+- !private ["s7CVarArgP", "resume"]
+- !private ["s7CVarArgP", "stpDispatchToMainThreadIfNecessary"]
+- !private ["s7CVarArgP", "stp_addParameters"]
+- !private ["s7CVarArgP", "stp_error"]
+- !private ["s7CVarArgP", "stp_genericFailedToParseResponseError"]
+- !private ["s7CVarArgP", "stp_setFormPayload"]
+- !private ["s7CVarArgP", "urlSession"]
+- !private ["s28CustomDebugStringConvertibleP", "HTTPMethodDELETE"]
+- !private ["s28CustomDebugStringConvertibleP", "HTTPMethodGET"]
+- !private ["s28CustomDebugStringConvertibleP", "HTTPMethodPOST"]
+- !private ["s28CustomDebugStringConvertibleP", "JSONSerialization"]
+- !private ["s28CustomDebugStringConvertibleP", "NSError"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "apiURL"]
+- !private ["s28CustomDebugStringConvertibleP", "appendingPathComponent"]
+- !private ["s28CustomDebugStringConvertibleP", "configuredRequest"]
+- !private ["s28CustomDebugStringConvertibleP", "dataTask"]
+- !private ["s28CustomDebugStringConvertibleP", "delete"]
+- !private ["s28CustomDebugStringConvertibleP", "getWith"]
+- !private ["s28CustomDebugStringConvertibleP", "httpMethod"]
+- !private ["s28CustomDebugStringConvertibleP", "jsonObject"]
+- !private ["s28CustomDebugStringConvertibleP", "parseResponse"]
+- !private ["s28CustomDebugStringConvertibleP", "resume"]
+- !private ["s28CustomDebugStringConvertibleP", "stpDispatchToMainThreadIfNecessary"]
+- !private ["s28CustomDebugStringConvertibleP", "stp_addParameters"]
+- !private ["s28CustomDebugStringConvertibleP", "stp_error"]
+- !private ["s28CustomDebugStringConvertibleP", "stp_genericFailedToParseResponseError"]
+- !private ["s28CustomDebugStringConvertibleP", "stp_setFormPayload"]
+- !private ["s28CustomDebugStringConvertibleP", "urlSession"]
+- !private ["s17CustomReflectableP", "appendingPathComponent"]
+- !private ["s23CustomStringConvertibleP", "HTTPMethodDELETE"]
+- !private ["s23CustomStringConvertibleP", "HTTPMethodGET"]
+- !private ["s23CustomStringConvertibleP", "HTTPMethodPOST"]
+- !private ["s23CustomStringConvertibleP", "JSONSerialization"]
+- !private ["s23CustomStringConvertibleP", "NSError"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "apiURL"]
+- !private ["s23CustomStringConvertibleP", "appendingPathComponent"]
+- !private ["s23CustomStringConvertibleP", "configuredRequest"]
+- !private ["s23CustomStringConvertibleP", "dataTask"]
+- !private ["s23CustomStringConvertibleP", "delete"]
+- !private ["s23CustomStringConvertibleP", "getWith"]
+- !private ["s23CustomStringConvertibleP", "httpMethod"]
+- !private ["s23CustomStringConvertibleP", "jsonObject"]
+- !private ["s23CustomStringConvertibleP", "parseResponse"]
+- !private ["s23CustomStringConvertibleP", "resume"]
+- !private ["s23CustomStringConvertibleP", "stpDispatchToMainThreadIfNecessary"]
+- !private ["s23CustomStringConvertibleP", "stp_addParameters"]
+- !private ["s23CustomStringConvertibleP", "stp_error"]
+- !private ["s23CustomStringConvertibleP", "stp_genericFailedToParseResponseError"]
+- !private ["s23CustomStringConvertibleP", "stp_setFormPayload"]
+- !private ["s23CustomStringConvertibleP", "urlSession"]
+- !private ["Se", "appendingPathComponent"]
+- !private ["SE", "appendingPathComponent"]
+- !private ["SQ", "ArrayLiteralElement"]
+- !private ["SQ", "Element"]
+- !private ["SQ", "HTTPMethodDELETE"]
+- !private ["SQ", "HTTPMethodGET"]
+- !private ["SQ", "HTTPMethodPOST"]
+- !private ["SQ", "JSONSerialization"]
+- !private ["SQ", "NSError"]
+- ["SQ", ""]
+- !private ["SQ", "apiURL"]
+- !private ["SQ", "appendingPathComponent"]
+- !private ["SQ", "configuredRequest"]
+- !private ["SQ", "dataTask"]
+- !private ["SQ", "delete"]
+- !private ["SQ", "getWith"]
+- !private ["SQ", "httpMethod"]
+- !private ["SQ", "init"]
+- !private ["SQ", "jsonObject"]
+- !private ["SQ", "parseResponse"]
+- !private ["SQ", "resume"]
+- !private ["SQ", "stpDispatchToMainThreadIfNecessary"]
+- !private ["SQ", "stp_addParameters"]
+- !private ["SQ", "stp_error"]
+- !private ["SQ", "stp_genericFailedToParseResponseError"]
+- !private ["SQ", "stp_setFormPayload"]
+- !private ["SQ", "urlSession"]
+- !private ["s5ErrorP", "stp_error"]
+- !private ["s5ErrorP", "stp_genericFailedToParseResponseError"]
+- !private ["s25ExpressibleByArrayLiteralP", "ArrayLiteralElement"]
+- !private ["s25ExpressibleByArrayLiteralP", "Element"]
+- !private ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- ["s30ExpressibleByDictionaryLiteralP", "Key"]
+- ["s30ExpressibleByDictionaryLiteralP", "Value"]
+- ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "appendingPathComponent"]
+- !private ["s23ExpressibleByNilLiteralP", "init"]
+- !private ["7SwiftUI7GestureP", "appendingPathComponent"]
+- !private ["SH", "HTTPMethodDELETE"]
+- !private ["SH", "HTTPMethodGET"]
+- !private ["SH", "HTTPMethodPOST"]
+- !private ["SH", "JSONSerialization"]
+- !private ["SH", "NSError"]
+- ["SH", ""]
+- !private ["SH", "apiURL"]
+- !private ["SH", "appendingPathComponent"]
+- !private ["SH", "configuredRequest"]
+- !private ["SH", "dataTask"]
+- !private ["SH", "delete"]
+- !private ["SH", "getWith"]
+- !private ["SH", "httpMethod"]
+- !private ["SH", "jsonObject"]
+- !private ["SH", "parseResponse"]
+- !private ["SH", "resume"]
+- !private ["SH", "stpDispatchToMainThreadIfNecessary"]
+- !private ["SH", "stp_addParameters"]
+- !private ["SH", "stp_error"]
+- !private ["SH", "stp_genericFailedToParseResponseError"]
+- !private ["SH", "stp_setFormPayload"]
+- !private ["SH", "urlSession"]
+- !private ["So19NSJSONSerializationC", "jsonObject"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "httpMethod"]
+- !private ["So8NSCodingP", "stp_addParameters"]
+- !private ["So8NSCodingP", "stp_error"]
+- !private ["So8NSCodingP", "stp_genericFailedToParseResponseError"]
+- !private ["So8NSCodingP", "stp_setFormPayload"]
+- !private ["So9NSCopyingP", ""]
+- !private ["So9NSCopyingP", "httpMethod"]
+- !private ["So9NSCopyingP", "resume"]
+- !private ["So9NSCopyingP", "stp_addParameters"]
+- !private ["So9NSCopyingP", "stp_error"]
+- !private ["So9NSCopyingP", "stp_genericFailedToParseResponseError"]
+- !private ["So9NSCopyingP", "stp_setFormPayload"]
+- !private ["So7NSErrorC", "stp_error"]
+- !private ["So7NSErrorC", "stp_genericFailedToParseResponseError"]
+- !private ["So16NSMutableCopyingP", ""]
+- !private ["So16NSMutableCopyingP", "httpMethod"]
+- !private ["So16NSMutableCopyingP", "stp_addParameters"]
+- !private ["So16NSMutableCopyingP", "stp_setFormPayload"]
+- !private ["So19NSMutableURLRequestC", "httpMethod"]
+- !private ["So19NSMutableURLRequestC", "stp_addParameters"]
+- !private ["So19NSMutableURLRequestC", "stp_setFormPayload"]
+- !private ["So8NSObjectC", "AnyHashable"]
+- ["So8NSObjectC", "Data"]
+- ["So8NSObjectC", "Error"]
+- !private ["So8NSObjectC", "HTTPMethodDELETE"]
+- !private ["So8NSObjectC", "HTTPMethodGET"]
+- !private ["So8NSObjectC", "HTTPMethodPOST"]
+- ["So8NSObjectC", "HTTPURLResponse"]
+- !private ["So8NSObjectC", "JSONObjectWithData"]
+- !private ["So8NSObjectC", "JSONObjectWithStream"]
+- !private ["So8NSObjectC", "JSONSerialization"]
+- !private ["So8NSObjectC", "NSError"]
+- ["So8NSObjectC", "STPAPIClient"]
+- ["So8NSObjectC", "STPAPIResponseBlock"]
+- ["So8NSObjectC", "STPAPIResponseDecodable"]
+- ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "URLRequest"]
+- ["So8NSObjectC", "URLResponse"]
+- ["So8NSObjectC", "URLSessionDataTask"]
+- ["So8NSObjectC", "Void"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "apiURL"]
+- !private ["So8NSObjectC", "configuredRequest"]
+- !private ["So8NSObjectC", "dataTask"]
+- !private ["So8NSObjectC", "dataTaskWithRequest"]
+- !private ["So8NSObjectC", "dataTaskWithURL"]
+- ["So8NSObjectC", "delete"]
+- ["So8NSObjectC", "getWith"]
+- !private ["So8NSObjectC", "httpMethod"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "jsonObject"]
+- ["So8NSObjectC", "parseResponse"]
+- ["So8NSObjectC", "post"]
+- !private ["So8NSObjectC", "resume"]
+- !private ["So8NSObjectC", "stpDispatchToMainThreadIfNecessary"]
+- !private ["So8NSObjectC", "stp_addParameters"]
+- !private ["So8NSObjectC", "stp_error"]
+- !private ["So8NSObjectC", "stp_genericFailedToParseResponseError"]
+- !private ["So8NSObjectC", "stp_setFormPayload"]
+- !private ["So8NSObjectC", "urlSession"]
+- !private ["So8NSObjectP", "AnyHashable"]
+- ["So8NSObjectP", "Data"]
+- ["So8NSObjectP", "Error"]
+- !private ["So8NSObjectP", "HTTPMethodDELETE"]
+- !private ["So8NSObjectP", "HTTPMethodGET"]
+- !private ["So8NSObjectP", "HTTPMethodPOST"]
+- ["So8NSObjectP", "HTTPURLResponse"]
+- !private ["So8NSObjectP", "JSONObjectWithData"]
+- !private ["So8NSObjectP", "JSONObjectWithStream"]
+- !private ["So8NSObjectP", "JSONSerialization"]
+- !private ["So8NSObjectP", "NSError"]
+- ["So8NSObjectP", "STPAPIClient"]
+- ["So8NSObjectP", "STPAPIResponseBlock"]
+- ["So8NSObjectP", "STPAPIResponseDecodable"]
+- ["So8NSObjectP", "String"]
+- !private ["So8NSObjectP", "URLRequest"]
+- ["So8NSObjectP", "URLResponse"]
+- ["So8NSObjectP", "URLSessionDataTask"]
+- ["So8NSObjectP", "Void"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "apiURL"]
+- !private ["So8NSObjectP", "configuredRequest"]
+- !private ["So8NSObjectP", "dataTask"]
+- !private ["So8NSObjectP", "dataTaskWithRequest"]
+- !private ["So8NSObjectP", "dataTaskWithURL"]
+- !private ["So8NSObjectP", "decodedObject"]
+- ["So8NSObjectP", "delete"]
+- ["So8NSObjectP", "getWith"]
+- !private ["So8NSObjectP", "httpMethod"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "jsonObject"]
+- ["So8NSObjectP", "parseResponse"]
+- ["So8NSObjectP", "post"]
+- !private ["So8NSObjectP", "resume"]
+- !private ["So8NSObjectP", "stpDispatchToMainThreadIfNecessary"]
+- !private ["So8NSObjectP", "stp_addParameters"]
+- !private ["So8NSObjectP", "stp_error"]
+- !private ["So8NSObjectP", "stp_genericFailedToParseResponseError"]
+- !private ["So8NSObjectP", "stp_setFormPayload"]
+- !private ["So8NSObjectP", "urlSession"]
+- !private ["So14NSSecureCodingP", ""]
+- !private ["So14NSSecureCodingP", "httpMethod"]
+- !private ["So14NSSecureCodingP", "stp_addParameters"]
+- !private ["So14NSSecureCodingP", "stp_error"]
+- !private ["So14NSSecureCodingP", "stp_genericFailedToParseResponseError"]
+- !private ["So14NSSecureCodingP", "stp_setFormPayload"]
+- ["So12NSURLRequestC", ""]
+- !private ["So12NSURLRequestC", "httpMethod"]
+- !private ["So12NSURLRequestC", "stp_addParameters"]
+- !private ["So12NSURLRequestC", "stp_setFormPayload"]
+- !private ["s9OptionSetP", "ArrayLiteralElement"]
+- !private ["s9OptionSetP", "Element"]
+- !private ["s9OptionSetP", "init"]
+- !private ["Sq", "appendingPathComponent"]
+- !private ["So19NSProgressReportingP", "resume"]
+- !private ["SY", "ArrayLiteralElement"]
+- !private ["SY", "Element"]
+- !private ["SY", ""]
+- !private ["SY", "init"]
+- !private ["So20NSJSONReadingOptionsV", "ArrayLiteralElement"]
+- !private ["So20NSJSONReadingOptionsV", "Element"]
+- !private ["So20NSJSONReadingOptionsV", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "appendingPathComponent"]
+- !private ["6Stripe12STPAPIClientC", "apiURL"]
+- !private ["6Stripe12STPAPIClientC", "configuredRequest"]
+- !private ["6Stripe12STPAPIClientC", "urlSession"]
+- !private ["6Stripe23STPAPIResponseDecodableP", "decodedObject"]
+- !private ["s10SetAlgebraP", "ArrayLiteralElement"]
+- !private ["s10SetAlgebraP", "Element"]
+- !private ["s10SetAlgebraP", ""]
+- !private ["s10SetAlgebraP", "init"]
+- !private ["10Foundation3URLV", "appendingPathComponent"]
+- ["So13NSURLResponseC", ""]
+- !private ["So12NSURLSessionC", "dataTask"]
+- !private ["So20NSURLSessionDataTaskC", "resume"]
+- ["So16NSURLSessionTaskC", ""]
+- !private ["So16NSURLSessionTaskC", "resume"]
+- !private ["7SwiftUI4ViewP", "appendingPathComponent"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "appendingPathComponent"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "appendingPathComponent"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "httpMethod"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "stp_addParameters"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "stp_setFormPayload"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "HTTPMethodDELETE"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "HTTPMethodGET"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "HTTPMethodPOST"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "JSONSerialization"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSError"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "apiURL"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "configuredRequest"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dataTask"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delete"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getWith"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "httpMethod"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "jsonObject"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "parseResponse"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "resume"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stpDispatchToMainThreadIfNecessary"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stp_addParameters"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stp_error"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stp_genericFailedToParseResponseError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stp_setFormPayload"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "urlSession"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "HTTPMethodDELETE"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "HTTPMethodGET"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "HTTPMethodPOST"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "JSONSerialization"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSError"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "apiURL"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "configuredRequest"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dataTask"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "delete"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getWith"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "httpMethod"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "jsonObject"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "parseResponse"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "resume"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stpDispatchToMainThreadIfNecessary"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stp_addParameters"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stp_error"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stp_genericFailedToParseResponseError"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stp_setFormPayload"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "urlSession"]
+- !private ["s21_ObjectiveCBridgeableP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
+- !private ["s21_ObjectiveCBridgeableP", "_bridgeToObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_conditionallyBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_forceBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_unconditionallyBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "appendingPathComponent"]
+depends-nominal:
+- "6Stripe10APIRequestC"
+- "s7CVarArgP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- !private "s5ErrorP"
+- !private "s25ExpressibleByArrayLiteralP"
+- "s30ExpressibleByDictionaryLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "7SwiftUI7GestureP"
+- "SH"
+- !private "So19NSJSONSerializationC"
+- "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So7NSErrorC"
+- !private "So16NSMutableCopyingP"
+- !private "So19NSMutableURLRequestC"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- "So12NSURLRequestC"
+- !private "s9OptionSetP"
+- !private "Sq"
+- !private "So19NSProgressReportingP"
+- !private "SY"
+- !private "So20NSJSONReadingOptionsV"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "6Stripe12STPAPIClientC"
+- !private "6Stripe23STPAPIResponseDecodableP"
+- !private "s10SetAlgebraP"
+- !private "10Foundation3URLV"
+- "So13NSURLResponseC"
+- !private "So12NSURLSessionC"
+- !private "So20NSURLSessionDataTaskC"
+- "So16NSURLSessionTaskC"
+- !private "7SwiftUI4ViewP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s34_ExpressibleByFileReferenceLiteralP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreMIDI.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftUI.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreML.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreMedia.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreData.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/simd.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Vision.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreLocation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/AVFoundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreAudio.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/os.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Contacts.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/WebKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CloudKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/DeveloperToolsSupport.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIViewController+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSError+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Target Support Files/Stripe/Stripe-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDS2Service.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseImage.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSErrorMessage.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONDecodable.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONEncodable.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONWebSignature.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponse.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationResponse.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDirectoryServerCertificate.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDSProtocolVersion+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTransaction+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformationParameter+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSString+EmptyChecking.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSWarning.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSLocalizedString.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSEphemeralKeyPair+Testing.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSwiftTryCatch.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSErrorMessage+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDirectoryServerCertificate+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSException+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseMessageExtension.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformation.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIButton+CustomInitialization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSUICustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTextFieldCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSLabelCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSelectionCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSButtonCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSNavigationBarCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSFooterCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTransaction.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSNotInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAlreadyInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSRuntimeException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSInvalidInputException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONWebEncryption.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSelectionButton.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseSelectionInfo.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/Stripe3DS2-Bridging-Header.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSImageLoader.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONEncoder.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSACSNetworkingManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSynchronousLocationManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformationManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJailbreakChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSOSVersionChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDebuggerChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSimulatorChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSIntegrityChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCategoryLinker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseViewController.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSProgressViewController.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformationParameter.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDirectoryServer.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSEphemeralKeyPair.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSStripe3DS2Error.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSBundleLocator.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSecTypeUtilities.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSData+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSString+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSDictionary+DecodingHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSConfigParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIColor+DefaultColors.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSIPAddress.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIFont+DefaultFonts.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseImageObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseMessageExtensionObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseSelectionInfoObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCompletionEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSEllipticCurvePoint.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIColor+ThirteenSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSLayoutConstraint+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIView+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSWebView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTextChallengeView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSBrandingView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSProcessingView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSStackView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSExpandableInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeSelectionView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSpacerView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSWhitelistView.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/Stripe.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "8ca747a1b4d0c40a106a99a208ffa977"

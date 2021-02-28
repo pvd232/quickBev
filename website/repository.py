@@ -147,10 +147,13 @@ class Customer_Repository(object):
             return False
 
     def register_new_customer(self, session, customer):
+        print('customer.id', customer.id)
         test_customer = session.query(Customer).filter(
             Customer.id == customer.id).first()
         test_stripe_id = session.query(Stripe_Customer).filter(
             Stripe_Customer.id == customer.stripe_id).first()
+        print('test_customer', test_customer)
+        print('test_stripe_id', test_stripe_id)
 
         if not test_customer and test_stripe_id:
             new_customer = Customer(id=customer.id, password=customer.password,
@@ -172,6 +175,19 @@ class Customer_Repository(object):
         customers = session.query(Customer.id, Customer.first_name, Customer.last_name).join(Order, Order.customer_id == Customer.id).join(Business, Business.id == Order.business_id).join(
             Merchant, Merchant.id == Business.merchant_id).filter(Business.merchant_id == merchant_id).distinct()
         return customers
+
+    def update_device_token(self, session, device_token, customer_id):
+        customer_to_update = session.query(Customer).filter(
+            Customer.id == customer_id).first()
+        print('customer_to_update', customer_to_update.serialize)
+        customer_to_update.device_token = device_token
+        return
+
+    def get_device_token(self, session, customer_id):
+        requested_customer = session.query(Customer).filter(
+            Customer.id == customer_id).first()
+        device_token = requested_customer.device_token
+        return device_token
 
 
 class Business_Repository(object):

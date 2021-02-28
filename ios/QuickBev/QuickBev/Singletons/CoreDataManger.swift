@@ -10,27 +10,26 @@ import CoreData
 import UIKit
 
 class CoreDataManager {
-    
-    
     static let sharedManager = CoreDataManager()
-    
-    private init() {} // Prevent clients from creating another instance.
-    
-    private lazy var storeContainer: NSPersistentContainer = {
 
-      let container = NSPersistentContainer(name: "QuickBev")
-      container.loadPersistentStores { _, error in
-        if let error = error as NSError? {
-          print("Unresolved error \(error), \(error.userInfo)")
+    private init() {} // Prevent clients from creating another instance.
+
+    private lazy var storeContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "QuickBev")
+        container.loadPersistentStores { _, error in
+            if let error = error as NSError? {
+                print("Unresolved error \(error), \(error.userInfo)")
+            }
         }
-      }
-      return container
+        return container
     }()
+
     lazy var managedContext: NSManagedObjectContext = {
         self.storeContainer.viewContext.mergePolicy = NSMergePolicy(merge: NSMergePolicyType.mergeByPropertyObjectTrumpMergePolicyType)
-      return self.storeContainer.viewContext
+        return self.storeContainer.viewContext
     }()
-    func saveContext () {
+
+    func saveContext() {
         if managedContext.hasChanges {
             do {
                 try managedContext.save()
@@ -38,30 +37,32 @@ class CoreDataManager {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nserror = error as NSError
-                Thread.callStackSymbols.forEach{print($0)}
-                  fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                Thread.callStackSymbols.forEach { print($0) }
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
-        }
-        else {
+        } else {
             print("no changes to context")
         }
     }
-    func deleteEntity (entity: NSManagedObject) {
+
+    func deleteEntity(entity: NSManagedObject) {
         managedContext.delete(entity)
     }
-    func deleteEntities (entityName:String) {
+
+    func deleteEntities(entityName: String) {
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: entityName)
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-        
+
         do {
             try managedContext.execute(deleteRequest)
         } catch let error as NSError {
             NSLog("Unable to fetch \(error), \(error.userInfo)")
         }
     }
-    func fetchEntities (entityName:String) -> [Any]? {
+
+    func fetchEntities(entityName: String) -> [Any]? {
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: entityName)
-        var fetchedResults: [Any]? = nil
+        var fetchedResults: [Any]?
         do {
             fetchedResults = try managedContext.fetch(fetchRequest)
         } catch let error as NSError {

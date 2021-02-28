@@ -7,13 +7,15 @@
 //
 
 import UIKit
-class TemplateNavigationController: UINavigationController  {
-    required init?(coder: NSCoder) {
+class TemplateNavigationController: UINavigationController {
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
     override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
-        self.navigationBar.standardAppearance.backgroundColor = UIColor.themeColor
-        self.navigationBar.standardAppearance.titleTextAttributes  = [NSAttributedString.Key.font: UIFont(name: "Charter-Roman", size: 25)!]
+        navigationBar.standardAppearance.backgroundColor = UIColor.themeColor
+        navigationBar.standardAppearance.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Charter-Roman", size: 25)!]
     }
 }

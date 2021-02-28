@@ -13,86 +13,89 @@ import UIKit
 /// This does *not* (currently?) have any logic or hooks for determining whether
 /// the contents are valid, that must be done by something else.
 class STPValidatedTextField: UITextField {
+    // MARK: - Property Overrides
 
-  // MARK: - Property Overrides  
-  private var _defaultColor: UIColor?
-  /// color to use for `text` when `validText` is YES
-  var defaultColor: UIColor? {
-    get {
-      _defaultColor
+    private var _defaultColor: UIColor?
+    /// color to use for `text` when `validText` is YES
+    var defaultColor: UIColor? {
+        get {
+            _defaultColor
+        }
+        set(defaultColor) {
+            _defaultColor = defaultColor
+            updateColor()
+        }
     }
-    set(defaultColor) {
-      _defaultColor = defaultColor
-      updateColor()
-    }
-  }
 
-  private var _errorColor: UIColor?
-  /// color to use for `text` when `validText` is NO
-  var errorColor: UIColor? {
-    get {
-      _errorColor
+    private var _errorColor: UIColor?
+    /// color to use for `text` when `validText` is NO
+    var errorColor: UIColor? {
+        get {
+            _errorColor
+        }
+        set(errorColor) {
+            _errorColor = errorColor
+            updateColor()
+        }
     }
-    set(errorColor) {
-      _errorColor = errorColor
-      updateColor()
-    }
-  }
 
-  private var _placeholderColor: UIColor?
-  /// color to use for `placeholderText`, displayed when `text` is empty
-  @objc var placeholderColor: UIColor? {
-    get {
-      _placeholderColor
+    private var _placeholderColor: UIColor?
+    /// color to use for `placeholderText`, displayed when `text` is empty
+    @objc var placeholderColor: UIColor? {
+        get {
+            _placeholderColor
+        }
+        set(placeholderColor) {
+            _placeholderColor = placeholderColor
+            _updateAttributedPlaceholder()
+        }
     }
-    set(placeholderColor) {
-      _placeholderColor = placeholderColor
-      self._updateAttributedPlaceholder()
-    }
-  }
 
-  private var _validText = false
-  /// flag to indicate whether the contents are valid or not.
-  @objc var validText: Bool {
-    get {
-      _validText
+    private var _validText = false
+    /// flag to indicate whether the contents are valid or not.
+    @objc var validText: Bool {
+        get {
+            _validText
+        }
+        set(validText) {
+            _validText = validText
+            updateColor()
+        }
     }
-    set(validText) {
-      _validText = validText
-      updateColor()
-    }
-  }
 
-  func _updateAttributedPlaceholder() {
-    let nonNilPlaceholder = placeholder ?? ""
-    let attributedPlaceholder = NSAttributedString(
-      string: nonNilPlaceholder,
-      attributes: placeholderTextAttributes() as? [NSAttributedString.Key: Any])
-    self.attributedPlaceholder = attributedPlaceholder
-  }
-  
-  // MARK: - UITextField overrides
-  /// :nodoc:
-  @objc public override var placeholder: String? {
-    get {
-      return super.placeholder
+    func _updateAttributedPlaceholder() {
+        let nonNilPlaceholder = placeholder ?? ""
+        let attributedPlaceholder = NSAttributedString(
+            string: nonNilPlaceholder,
+            attributes: placeholderTextAttributes() as? [NSAttributedString.Key: Any]
+        )
+        self.attributedPlaceholder = attributedPlaceholder
     }
-    set(placeholder) {
-      super.placeholder = placeholder
-      self._updateAttributedPlaceholder()
-    }
-  }
 
-  // MARK: - Private Methods
-  func updateColor() {
-    textColor = validText ? defaultColor : errorColor
-  }
+    // MARK: - UITextField overrides
 
-  func placeholderTextAttributes() -> [AnyHashable: Any]? {
-    var defaultAttributes = defaultTextAttributes
-    if let placeholderColor = placeholderColor {
-      defaultAttributes[NSAttributedString.Key.foregroundColor] = placeholderColor
+    /// :nodoc:
+    @objc override public var placeholder: String? {
+        get {
+            return super.placeholder
+        }
+        set(placeholder) {
+            super.placeholder = placeholder
+            _updateAttributedPlaceholder()
+        }
     }
-    return defaultAttributes
-  }
+
+    // MARK: - Private Methods
+
+    func updateColor() {
+        textColor = validText ? defaultColor : errorColor
+    }
+
+    func placeholderTextAttributes() -> [AnyHashable: Any]? {
+        var defaultAttributes = defaultTextAttributes
+        if let placeholderColor = placeholderColor {
+            defaultAttributes[NSAttributedString.Key.foregroundColor] = placeholderColor
+        }
+        return defaultAttributes
+    }
 }

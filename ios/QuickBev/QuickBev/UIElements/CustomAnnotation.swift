@@ -6,16 +6,15 @@
 //  Copyright © 2020 Peter Vail Driscoll II. All rights reserved.
 //
 
-import UIKit
 import MapKit
+import UIKit
 
 class CustomAnnotation: NSObject, MKAnnotation {
-    
     let coordinate: CLLocationCoordinate2D
     let title: String?
     let image: UIImage?
     let businessId: UUID?
-    
+
     init(coordinate: CLLocationCoordinate2D, title: String, image: UIImage, businessId: UUID) {
         self.coordinate = coordinate
         self.title = title
@@ -23,7 +22,6 @@ class CustomAnnotation: NSObject, MKAnnotation {
         self.businessId = businessId
         super.init()
     }
-    deinit {
-    }
-    
+
+    deinit {}
 }

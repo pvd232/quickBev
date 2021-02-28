@@ -6,77 +6,80 @@
 //  Copyright © 2020 Peter Vail Driscoll II. All rights reserved.
 //
 
-import UIKit
 import CoreData
+import UIKit
 
-public class Tab: NSManagedObject,Codable {
-    
+public class Tab: NSManagedObject, Codable {
     enum CodingKeys: String, CodingKey {
         case tabResponse = "tab"
-        case id = "id"
-        case name = "name"
+        case id
+        case name
         case businessId = "business_id"
         case userId = "user_id"
-        case address = "address"
+        case address
         case dateTime = "date_time"
-        case detail = "detail"
+        case detail
         case minimumContribution = "minimum_contribution"
         case fundraisingGoal = "fundraising_goal"
     }
-    required convenience public init(from decoder: Decoder) throws {
+
+    public required convenience init(from decoder: Decoder) throws {
 //        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
-        
+
         self.init(context: CoreDataManager.sharedManager.managedContext)
-        
+
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let nestedContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .tabResponse)
-        self.id = try nestedContainer.decode(UUID.self, forKey: .id)
-        self.name = try nestedContainer.decode(String.self, forKey: .name)
-        self.businessId = try nestedContainer.decode(UUID.self, forKey: .businessId)
-        self.userId = try nestedContainer.decode(String.self, forKey: .userId)
-        self.address = try nestedContainer.decode(String.self, forKey: .address)
-        self.dateTime = try nestedContainer.decode(Date.self, forKey: .dateTime)
-        self.detail = try nestedContainer.decode(String.self, forKey: .detail)
-        self.minimumContribution = try nestedContainer.decode(Int64.self, forKey: .minimumContribution)
-        self.fundraisingGoal = try nestedContainer.decode(Int64.self, forKey: .fundraisingGoal)
+        id = try nestedContainer.decode(UUID.self, forKey: .id)
+        name = try nestedContainer.decode(String.self, forKey: .name)
+        businessId = try nestedContainer.decode(UUID.self, forKey: .businessId)
+        userId = try nestedContainer.decode(String.self, forKey: .userId)
+        address = try nestedContainer.decode(String.self, forKey: .address)
+        dateTime = try nestedContainer.decode(Date.self, forKey: .dateTime)
+        detail = try nestedContainer.decode(String.self, forKey: .detail)
+        minimumContribution = try nestedContainer.decode(Int64.self, forKey: .minimumContribution)
+        fundraisingGoal = try nestedContainer.decode(Int64.self, forKey: .fundraisingGoal)
     }
+
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         var nestedContainer = container.nestedContainer(keyedBy: CodingKeys.self, forKey: .tabResponse)
-        try nestedContainer.encode(self.id, forKey: .id)
-        try nestedContainer.encode(self.name!, forKey: .name)
-        try nestedContainer.encode(self.businessId!, forKey: .businessId)
-        try nestedContainer.encode(self.userId!, forKey: .userId)
-        try nestedContainer.encode(self.address!, forKey: .address)
-        try nestedContainer.encode(self.detail!, forKey: .detail)
-        try nestedContainer.encode(self.dateTime!.timeIntervalSince1970, forKey: .dateTime)
-        try nestedContainer.encode(self.minimumContribution, forKey: .minimumContribution)
-        try nestedContainer.encode(self.fundraisingGoal, forKey: .fundraisingGoal)
+        try nestedContainer.encode(id, forKey: .id)
+        try nestedContainer.encode(name!, forKey: .name)
+        try nestedContainer.encode(businessId!, forKey: .businessId)
+        try nestedContainer.encode(userId!, forKey: .userId)
+        try nestedContainer.encode(address!, forKey: .address)
+        try nestedContainer.encode(detail!, forKey: .detail)
+        try nestedContainer.encode(dateTime!.timeIntervalSince1970, forKey: .dateTime)
+        try nestedContainer.encode(minimumContribution, forKey: .minimumContribution)
+        try nestedContainer.encode(fundraisingGoal, forKey: .fundraisingGoal)
     }
 }
+
 extension Tab {
-    convenience init () {
+    convenience init() {
         self.init(context: CoreDataManager.sharedManager.managedContext)
-        self.id = UUID()
-        self.name = nil
-        self.businessId = nil
-        self.userId = nil
-        self.address = nil
-        self.dateTime = Date.init()
-        self.detail = nil
-        self.minimumContribution = 0
-        self.fundraisingGoal = 0
+        id = UUID()
+        name = nil
+        businessId = nil
+        userId = nil
+        address = nil
+        dateTime = Date()
+        detail = nil
+        minimumContribution = 0
+        fundraisingGoal = 0
     }
-    convenience init (Name: String?, BusinessId: UUID?, UserId: String?, Address:String?, DateTime: Date, Detail: String?, MinimumContribution: Int64?, FundraisingGoal: Int64?) {
+
+    convenience init(Name: String?, BusinessId: UUID?, UserId: String?, Address: String?, DateTime: Date, Detail: String?, MinimumContribution: Int64?, FundraisingGoal: Int64?) {
         self.init(context: CoreDataManager.sharedManager.managedContext)
-        self.id = UUID()
-        self.name = Name
-        self.businessId = BusinessId
-        self.userId = UserId
-        self.address = Address
-        self.dateTime = DateTime
-        self.detail = Detail
-        self.minimumContribution = MinimumContribution!
-        self.fundraisingGoal = FundraisingGoal!
+        id = UUID()
+        name = Name
+        businessId = BusinessId
+        userId = UserId
+        address = Address
+        dateTime = DateTime
+        detail = Detail
+        minimumContribution = MinimumContribution!
+        fundraisingGoal = FundraisingGoal!
     }
 }

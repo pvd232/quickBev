@@ -9,24 +9,28 @@ from sqlalchemy import create_engine
 from contextlib import contextmanager
 
 
+username = os.environ.get("USER", "")
+password = os.environ.get("PASSWORD", "")
+connection_string_beginning = "postgres://"
+connection_string_end = "@localhost:5432/quickbevdb"
+connection_string = connection_string_beginning + \
+    username + ":" + password + connection_string_end
+
+# an Engine, which the Session will use for connection
+# resources
+drink_engine = create_engine(
+    os.environ.get("DB_STRING", connection_string), pool_size=100, max_overflow=10)
+
+# create a configured "Session" class
+session_factory = sessionmaker(bind=drink_engine)
+
+# create a Session
+Session = scoped_session(session_factory)
+
+
 @contextmanager
 def session_scope():
-    username = os.environ.get("USER", "")
-    password = os.environ.get("PASSWORD", "")
-    connection_string_beginning = "postgres://"
-    connection_string_end = "@localhost:5432/quickbevdb"
-    connection_string = connection_string_beginning + \
-        username + ":" + password + connection_string_end
-    # an Engine, which the Session will use for connection
-    # resources
-    drink_engine = create_engine(
-        os.environ.get("DB_STRING", connection_string))
-
-    # create a configured "Session" class
-    session_factory = sessionmaker(bind=drink_engine)
-
-    # create a Session
-    session = scoped_session(session_factory)
+    session = Session()
     try:
         yield session
         session.commit()
@@ -49,7 +53,6 @@ class Drink_Service(object):
         response = []
         with session_scope() as session:
             for drink in self.drink_repository.get_drinks(session):
-                # drink_Props = drink.serialize
                 drink_domain = Drink_Domain(drink_object=drink)
                 response.append(drink_domain)
             return response
@@ -139,6 +142,14 @@ class Customer_Service(object):
             customers = [Customer_Domain(customer_object=x).dto_serialize() for x in self.customer_repository.get_customers(
                 session, merchant_id)]
             return customers
+
+    def update_device_token(self, device_token, customer_id):
+        with session_scope() as session:
+            return Customer_Repository().update_device_token(session, device_token, customer_id)
+
+    def get_device_token(self, customer_id):
+        with session_scope() as session:
+            return Customer_Repository().get_device_token(session, customer_id)
 
 
 class Merchant_Service(object):

@@ -139,6 +139,7 @@ class Customer(db.Model):
     first_name = db.Column(db.String(80), nullable=False)
     last_name = db.Column(db.String(80), nullable=False)
     email_verified = db.Column(db.Boolean(), nullable=False)
+    device_token = db.Column(db.String(80), nullable=True)
     order = relationship('Order', lazy=True, backref="order")
     tab = relationship('Tab', lazy=True, backref="tab")
 

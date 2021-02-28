@@ -7,21 +7,16 @@
 //
 //
 
-import Foundation
 import CoreData
+import Foundation
 
-extension ETag {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<ETag> {
+public extension ETag {
+    @nonobjc class func fetchRequest() -> NSFetchRequest<ETag> {
         return NSFetchRequest<ETag>(entityName: "ETag")
     }
 
-    @NSManaged public var id: Int64
-    @NSManaged public var category: String?
-
-
+    @NSManaged var id: Int64
+    @NSManaged var category: String?
 }
 
-extension ETag : Identifiable {
-
-}
+extension ETag: Identifiable {}

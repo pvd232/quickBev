@@ -9,34 +9,33 @@
 import UIKit
 
 class CheckoutCartTableViewCell: UITableViewCell {
-    
     @UsesAutoLayout var drinkImageView = UIImageView()
-    @UsesAutoLayout var name = UILabel(theme:Theme.UILabel(props: [.textColor]))
-    @UsesAutoLayout var cost = UILabel(theme:Theme.UILabel(props: [.textColor]))
+    @UsesAutoLayout var name = UILabel(theme: Theme.UILabel(props: [.textColor]))
+    @UsesAutoLayout var cost = UILabel(theme: Theme.UILabel(props: [.textColor]))
     @UsesAutoLayout var stackView = UIStackView()
 
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.contentView.addSubview(drinkImageView)
-        self.backgroundColor = .clear
-        name.font =  UIFont(name: "Charter-Roman", size: 22)
+        contentView.addSubview(drinkImageView)
+        backgroundColor = .clear
+        name.font = UIFont(name: "Charter-Roman", size: 22)
         drinkImageView.contentMode = .scaleToFill
         drinkImageView.clipsToBounds = true
         cost.font = UIFont(name: "Charter-Roman", size: 22)
-        
-        let safeArea = self.contentView.safeAreaLayoutGuide
+
+        let safeArea = contentView.safeAreaLayoutGuide
         stackView.axis = .horizontal
         stackView.alignment = .fill
         stackView.distribution = .fill
         stackView.addArrangedSubview(name)
         stackView.addArrangedSubview(cost)
         stackView.spacing = 0
-        
-        self.contentView.addSubview(stackView)
+
+        contentView.addSubview(stackView)
         NSLayoutConstraint.activate([
             drinkImageView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 10),
             drinkImageView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 10),
@@ -47,13 +46,15 @@ class CheckoutCartTableViewCell: UITableViewCell {
             stackView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -10),
             stackView.widthAnchor.constraint(equalTo: stackView.superview!.widthAnchor, multiplier: 0.6),
             name.centerYAnchor.constraint(equalTo: name.superview!.centerYAnchor),
-            cost.centerYAnchor.constraint(equalTo: cost.superview!.centerYAnchor)
+            cost.centerYAnchor.constraint(equalTo: cost.superview!.centerYAnchor),
         ])
     }
-    required init?(coder aDecoder: NSCoder) {
+
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }

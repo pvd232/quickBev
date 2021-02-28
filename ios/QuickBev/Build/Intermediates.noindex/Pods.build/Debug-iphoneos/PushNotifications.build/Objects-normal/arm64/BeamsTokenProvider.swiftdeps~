@@ -1,0 +1,505 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "BeamsTokenProvider"
+provides-nominal:
+- "17PushNotifications18BeamsTokenProviderC"
+provides-member:
+- ["17PushNotifications18BeamsTokenProviderC", ""]
+provides-dynamic-lookup:
+- "authURL"
+- "fetchToken"
+- "getAuthData"
+depends-top-level:
+- "<"
+- "=="
+- ">="
+- "AssignmentPrecedence"
+- "AuthData"
+- "BeamsTokenProvider"
+- !private "CastingPrecedence"
+- "Error"
+- "FloatLiteralType"
+- "HTTPURLResponse"
+- "IntegerLiteralType"
+- "JSONDecoder"
+- "NSObject"
+- "String"
+- "StringLiteralType"
+- "Token"
+- "TokenProvider"
+- "TokenProviderError"
+- !private "URLComponents"
+- "URLQueryItem"
+- !private "URLRequest"
+- !private "URLSession"
+- "Void"
+- !private "authURL"
+- !private "getAuthData"
+depends-member:
+- !private ["Sa", "append"]
+- !private ["17PushNotifications8AuthDataC", "headers"]
+- !private ["17PushNotifications8AuthDataC", "queryParams"]
+- ["17PushNotifications18BeamsTokenProviderC", "AuthData"]
+- ["17PushNotifications18BeamsTokenProviderC", "Error"]
+- !private ["17PushNotifications18BeamsTokenProviderC", "HTTPURLResponse"]
+- !private ["17PushNotifications18BeamsTokenProviderC", "JSONDecoder"]
+- ["17PushNotifications18BeamsTokenProviderC", "String"]
+- !private ["17PushNotifications18BeamsTokenProviderC", "Token"]
+- !private ["17PushNotifications18BeamsTokenProviderC", "TokenProviderError"]
+- !private ["17PushNotifications18BeamsTokenProviderC", "URLComponents"]
+- !private ["17PushNotifications18BeamsTokenProviderC", "URLQueryItem"]
+- !private ["17PushNotifications18BeamsTokenProviderC", "URLRequest"]
+- !private ["17PushNotifications18BeamsTokenProviderC", "URLSession"]
+- ["17PushNotifications18BeamsTokenProviderC", "Void"]
+- ["17PushNotifications18BeamsTokenProviderC", ""]
+- ["17PushNotifications18BeamsTokenProviderC", "authURL"]
+- ["17PushNotifications18BeamsTokenProviderC", "deinit"]
+- ["17PushNotifications18BeamsTokenProviderC", "fetchToken"]
+- ["17PushNotifications18BeamsTokenProviderC", "getAuthData"]
+- ["17PushNotifications18BeamsTokenProviderC", "init"]
+- ["SK", ""]
+- !private ["SK", "append"]
+- !private ["s7CVarArgP", "JSONDecoder"]
+- !private ["s7CVarArgP", "Token"]
+- !private ["s7CVarArgP", "TokenProviderError"]
+- !private ["s7CVarArgP", "URLComponents"]
+- !private ["s7CVarArgP", "URLQueryItem"]
+- !private ["s7CVarArgP", "URLRequest"]
+- !private ["s7CVarArgP", "URLSession"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "authURL"]
+- !private ["s7CVarArgP", "dataTask"]
+- !private ["s7CVarArgP", "ephemeral"]
+- ["s7CVarArgP", "fetchToken"]
+- !private ["s7CVarArgP", "getAuthData"]
+- !private ["s7CVarArgP", "headers"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "map"]
+- !private ["s7CVarArgP", "queryParams"]
+- !private ["s7CVarArgP", "resume"]
+- !private ["s7CVarArgP", "statusCode"]
+- ["Sl", ""]
+- !private ["Sl", "append"]
+- !private ["Sl", "map"]
+- ["SL", ""]
+- !private ["10Foundation15ContiguousBytesP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "JSONDecoder"]
+- !private ["s28CustomDebugStringConvertibleP", "Token"]
+- !private ["s28CustomDebugStringConvertibleP", "TokenProviderError"]
+- !private ["s28CustomDebugStringConvertibleP", "URLComponents"]
+- !private ["s28CustomDebugStringConvertibleP", "URLQueryItem"]
+- !private ["s28CustomDebugStringConvertibleP", "URLRequest"]
+- !private ["s28CustomDebugStringConvertibleP", "URLSession"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "addValue"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "authURL"]
+- !private ["s28CustomDebugStringConvertibleP", "dataTask"]
+- !private ["s28CustomDebugStringConvertibleP", "debugDescription"]
+- !private ["s28CustomDebugStringConvertibleP", "ephemeral"]
+- ["s28CustomDebugStringConvertibleP", "fetchToken"]
+- !private ["s28CustomDebugStringConvertibleP", "getAuthData"]
+- !private ["s28CustomDebugStringConvertibleP", "headers"]
+- !private ["s28CustomDebugStringConvertibleP", "httpMethod"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "map"]
+- !private ["s28CustomDebugStringConvertibleP", "queryItems"]
+- !private ["s28CustomDebugStringConvertibleP", "queryParams"]
+- !private ["s28CustomDebugStringConvertibleP", "resume"]
+- !private ["s28CustomDebugStringConvertibleP", "statusCode"]
+- !private ["s28CustomDebugStringConvertibleP", "url"]
+- !private ["s17CustomReflectableP", "addValue"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "debugDescription"]
+- !private ["s17CustomReflectableP", "httpMethod"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "map"]
+- !private ["s17CustomReflectableP", "queryItems"]
+- !private ["s17CustomReflectableP", "url"]
+- !private ["s23CustomStringConvertibleP", "JSONDecoder"]
+- !private ["s23CustomStringConvertibleP", "Token"]
+- !private ["s23CustomStringConvertibleP", "TokenProviderError"]
+- !private ["s23CustomStringConvertibleP", "URLComponents"]
+- !private ["s23CustomStringConvertibleP", "URLQueryItem"]
+- !private ["s23CustomStringConvertibleP", "URLRequest"]
+- !private ["s23CustomStringConvertibleP", "URLSession"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "addValue"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["s23CustomStringConvertibleP", "authURL"]
+- !private ["s23CustomStringConvertibleP", "dataTask"]
+- !private ["s23CustomStringConvertibleP", "ephemeral"]
+- ["s23CustomStringConvertibleP", "fetchToken"]
+- !private ["s23CustomStringConvertibleP", "getAuthData"]
+- !private ["s23CustomStringConvertibleP", "headers"]
+- !private ["s23CustomStringConvertibleP", "httpMethod"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "map"]
+- !private ["s23CustomStringConvertibleP", "queryItems"]
+- !private ["s23CustomStringConvertibleP", "queryParams"]
+- !private ["s23CustomStringConvertibleP", "resume"]
+- !private ["s23CustomStringConvertibleP", "statusCode"]
+- !private ["s23CustomStringConvertibleP", "url"]
+- !private ["10Foundation12DataProtocolP", ""]
+- !private ["10Foundation12DataProtocolP", "append"]
+- !private ["Se", "append"]
+- !private ["Se", "debugDescription"]
+- !private ["Se", "init"]
+- !private ["Se", "map"]
+- !private ["Se", "queryItems"]
+- !private ["Se", "token"]
+- !private ["Se", "url"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- !private ["SD", "map"]
+- !private ["SE", "append"]
+- !private ["SE", "debugDescription"]
+- !private ["SE", "init"]
+- !private ["SE", "map"]
+- !private ["SE", "queryItems"]
+- !private ["SE", "url"]
+- !private ["SQ", "JSONDecoder"]
+- !private ["SQ", "Token"]
+- !private ["SQ", "TokenProviderError"]
+- !private ["SQ", "URLComponents"]
+- !private ["SQ", "URLQueryItem"]
+- !private ["SQ", "URLRequest"]
+- !private ["SQ", "URLSession"]
+- ["SQ", ""]
+- !private ["SQ", "addValue"]
+- !private ["SQ", "append"]
+- !private ["SQ", "authURL"]
+- !private ["SQ", "dataTask"]
+- !private ["SQ", "debugDescription"]
+- !private ["SQ", "ephemeral"]
+- ["SQ", "fetchToken"]
+- !private ["SQ", "getAuthData"]
+- !private ["SQ", "headers"]
+- !private ["SQ", "httpMethod"]
+- !private ["SQ", "init"]
+- !private ["SQ", "map"]
+- !private ["SQ", "queryItems"]
+- !private ["SQ", "queryParams"]
+- !private ["SQ", "resume"]
+- !private ["SQ", "statusCode"]
+- !private ["SQ", "url"]
+- !private ["s5ErrorP", "error"]
+- !private ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "map"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s23ExpressibleByNilLiteralP", "debugDescription"]
+- !private ["s23ExpressibleByNilLiteralP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
+- ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
+- ["s26ExpressibleByStringLiteralP", ""]
+- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["So17NSHTTPURLResponseC", "statusCode"]
+- !private ["SH", "JSONDecoder"]
+- !private ["SH", "Token"]
+- !private ["SH", "TokenProviderError"]
+- !private ["SH", "URLComponents"]
+- !private ["SH", "URLQueryItem"]
+- !private ["SH", "URLRequest"]
+- !private ["SH", "URLSession"]
+- ["SH", ""]
+- !private ["SH", "addValue"]
+- !private ["SH", "append"]
+- !private ["SH", "authURL"]
+- !private ["SH", "dataTask"]
+- !private ["SH", "debugDescription"]
+- !private ["SH", "ephemeral"]
+- ["SH", "fetchToken"]
+- !private ["SH", "getAuthData"]
+- !private ["SH", "headers"]
+- !private ["SH", "httpMethod"]
+- !private ["SH", "init"]
+- !private ["SH", "map"]
+- !private ["SH", "queryItems"]
+- !private ["SH", "queryParams"]
+- !private ["SH", "resume"]
+- !private ["SH", "statusCode"]
+- !private ["SH", "url"]
+- !private ["10Foundation11JSONDecoderC", "decode"]
+- !private ["10Foundation11JSONDecoderC", "init"]
+- ["s25LosslessStringConvertibleP", ""]
+- !private ["SM", ""]
+- !private ["SM", "append"]
+- !private ["10Foundation19MutableDataProtocolP", "append"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "statusCode"]
+- !private ["So9NSCopyingP", ""]
+- !private ["So9NSCopyingP", "ephemeral"]
+- !private ["So9NSCopyingP", "resume"]
+- !private ["So9NSCopyingP", "statusCode"]
+- ["So8NSObjectC", "AuthData"]
+- ["So8NSObjectC", "Error"]
+- !private ["So8NSObjectC", "HTTPURLResponse"]
+- !private ["So8NSObjectC", "JSONDecoder"]
+- ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "Token"]
+- !private ["So8NSObjectC", "TokenProviderError"]
+- !private ["So8NSObjectC", "URLComponents"]
+- !private ["So8NSObjectC", "URLQueryItem"]
+- !private ["So8NSObjectC", "URLRequest"]
+- !private ["So8NSObjectC", "URLSession"]
+- ["So8NSObjectC", "Void"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "authURL"]
+- !private ["So8NSObjectC", "dataTask"]
+- !private ["So8NSObjectC", "dataTaskWithRequest"]
+- !private ["So8NSObjectC", "dataTaskWithURL"]
+- !private ["So8NSObjectC", "ephemeral"]
+- ["So8NSObjectC", "fetchToken"]
+- ["So8NSObjectC", "getAuthData"]
+- !private ["So8NSObjectC", "headers"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "queryParams"]
+- !private ["So8NSObjectC", "resume"]
+- !private ["So8NSObjectC", "sessionWithConfiguration"]
+- !private ["So8NSObjectC", "statusCode"]
+- ["So8NSObjectP", "AuthData"]
+- ["So8NSObjectP", "Error"]
+- !private ["So8NSObjectP", "HTTPURLResponse"]
+- !private ["So8NSObjectP", "JSONDecoder"]
+- ["So8NSObjectP", "String"]
+- !private ["So8NSObjectP", "Token"]
+- !private ["So8NSObjectP", "TokenProviderError"]
+- !private ["So8NSObjectP", "URLComponents"]
+- !private ["So8NSObjectP", "URLQueryItem"]
+- !private ["So8NSObjectP", "URLRequest"]
+- !private ["So8NSObjectP", "URLSession"]
+- ["So8NSObjectP", "Void"]
+- ["So8NSObjectP", ""]
+- ["So8NSObjectP", "authURL"]
+- !private ["So8NSObjectP", "dataTask"]
+- !private ["So8NSObjectP", "dataTaskWithRequest"]
+- !private ["So8NSObjectP", "dataTaskWithURL"]
+- !private ["So8NSObjectP", "ephemeral"]
+- ["So8NSObjectP", "fetchToken"]
+- ["So8NSObjectP", "getAuthData"]
+- !private ["So8NSObjectP", "headers"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "queryParams"]
+- !private ["So8NSObjectP", "resume"]
+- !private ["So8NSObjectP", "sessionWithConfiguration"]
+- !private ["So8NSObjectP", "statusCode"]
+- !private ["So14NSSecureCodingP", ""]
+- !private ["So14NSSecureCodingP", "statusCode"]
+- !private ["Sq", "debugDescription"]
+- !private ["So19NSProgressReportingP", "resume"]
+- !private ["Sk", ""]
+- !private ["Sk", "append"]
+- !private ["Sm", ""]
+- !private ["Sm", "append"]
+- !private ["10Foundation20ReferenceConvertibleP", "addValue"]
+- !private ["10Foundation20ReferenceConvertibleP", "httpMethod"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "queryItems"]
+- !private ["10Foundation20ReferenceConvertibleP", "url"]
+- !private ["ST", "Element"]
+- !private ["ST", "Iterator"]
+- ["ST", ""]
+- !private ["ST", "append"]
+- !private ["ST", "makeIterator"]
+- !private ["ST", "map"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s27StringInterpolationProtocolP", "init"]
+- ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- ["s20TextOutputStreamableP", ""]
+- !private ["17PushNotifications5TokenV", ""]
+- !private ["17PushNotifications5TokenV", "token"]
+- !private ["17PushNotifications13TokenProviderP", "JSONDecoder"]
+- !private ["17PushNotifications13TokenProviderP", "Token"]
+- !private ["17PushNotifications13TokenProviderP", "TokenProviderError"]
+- !private ["17PushNotifications13TokenProviderP", "URLComponents"]
+- !private ["17PushNotifications13TokenProviderP", "URLQueryItem"]
+- !private ["17PushNotifications13TokenProviderP", "URLRequest"]
+- !private ["17PushNotifications13TokenProviderP", "URLSession"]
+- ["17PushNotifications13TokenProviderP", ""]
+- ["17PushNotifications13TokenProviderP", "authURL"]
+- ["17PushNotifications13TokenProviderP", "fetchToken"]
+- ["17PushNotifications13TokenProviderP", "getAuthData"]
+- ["17PushNotifications13TokenProviderP", "init"]
+- !private ["17PushNotifications18TokenProviderErrorO", ""]
+- !private ["17PushNotifications18TokenProviderErrorO", "error"]
+- !private ["7Combine15TopLevelDecoderP", "decode"]
+- !private ["7Combine15TopLevelDecoderP", "init"]
+- !private ["10Foundation13URLComponentsV", "init"]
+- !private ["10Foundation13URLComponentsV", "queryItems"]
+- !private ["10Foundation13URLComponentsV", "url"]
+- !private ["10Foundation12URLQueryItemV", "init"]
+- !private ["10Foundation10URLRequestV", "addValue"]
+- !private ["10Foundation10URLRequestV", "httpMethod"]
+- !private ["10Foundation10URLRequestV", "init"]
+- ["So13NSURLResponseC", ""]
+- !private ["So13NSURLResponseC", "statusCode"]
+- !private ["So12NSURLSessionC", "dataTask"]
+- !private ["So12NSURLSessionC", "init"]
+- !private ["So25NSURLSessionConfigurationC", "ephemeral"]
+- !private ["So20NSURLSessionDataTaskC", "resume"]
+- ["So16NSURLSessionTaskC", ""]
+- !private ["So16NSURLSessionTaskC", "resume"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s19_HasContiguousBytesP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "map"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "JSONDecoder"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Token"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "TokenProviderError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "URLComponents"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "URLQueryItem"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "URLRequest"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "URLSession"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "authURL"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dataTask"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ephemeral"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "fetchToken"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getAuthData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "headers"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "queryParams"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "resume"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "statusCode"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "JSONDecoder"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Token"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "TokenProviderError"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "URLComponents"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "URLQueryItem"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "URLRequest"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "URLSession"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "authURL"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dataTask"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ephemeral"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "fetchToken"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getAuthData"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "headers"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "queryParams"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "resume"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "statusCode"]
+- !private ["s21_ObjectiveCBridgeableP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "addValue"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "debugDescription"]
+- !private ["s21_ObjectiveCBridgeableP", "httpMethod"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "map"]
+- !private ["s21_ObjectiveCBridgeableP", "queryItems"]
+- !private ["s21_ObjectiveCBridgeableP", "url"]
+depends-nominal:
+- !private "Sa"
+- !private "17PushNotifications8AuthDataC"
+- "17PushNotifications18BeamsTokenProviderC"
+- "SK"
+- "s7CVarArgP"
+- "Sl"
+- "SL"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "s26DefaultStringInterpolationV"
+- !private "SD"
+- !private "SE"
+- "SQ"
+- !private "s5ErrorP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- "s32ExpressibleByStringInterpolationP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "So17NSHTTPURLResponseC"
+- "SH"
+- !private "10Foundation11JSONDecoderC"
+- "s25LosslessStringConvertibleP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- "So8NSCodingP"
+- !private "So9NSCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "Sq"
+- !private "So19NSProgressReportingP"
+- !private "Sk"
+- !private "Sm"
+- !private "10Foundation20ReferenceConvertibleP"
+- "ST"
+- !private "s27StringInterpolationProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "17PushNotifications5TokenV"
+- "17PushNotifications13TokenProviderP"
+- !private "17PushNotifications18TokenProviderErrorO"
+- !private "7Combine15TopLevelDecoderP"
+- !private "10Foundation13URLComponentsV"
+- !private "10Foundation12URLQueryItemV"
+- !private "10Foundation10URLRequestV"
+- "So13NSURLResponseC"
+- !private "So12NSURLSessionC"
+- !private "So25NSURLSessionConfigurationC"
+- !private "So20NSURLSessionDataTaskC"
+- "So16NSURLSessionTaskC"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Target Support Files/PushNotifications/PushNotifications-umbrella.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/PushNotifications.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "0287c0550670d21e4dff65b4a81900b5"

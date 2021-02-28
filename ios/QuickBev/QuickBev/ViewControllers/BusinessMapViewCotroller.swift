@@ -6,44 +6,45 @@
 //  Copyright © 2021 Peter Vail Driscoll II. All rights reserved.
 //
 
-import UIKit
 import CoreLocation
 import MapKit
+import UIKit
 
 protocol NewBusinessPickedProtocol {
-    func businessPicked ()
+    func businessPicked()
 }
-class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UIGestureRecognizerDelegate{
-    
+
+class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UIGestureRecognizerDelegate {
     @UsesAutoLayout var mapView = MKMapView()
     @UsesAutoLayout private var activityIndicator = UIActivityIndicatorView(style: .large)
-    
+
     let locationManager = CLLocationManager()
     var customAnnotations = [CustomAnnotation]()
-    var businessPickerDelegate: NewBusinessPickedProtocol? = nil
-    
+    var businessPickerDelegate: NewBusinessPickedProtocol?
+
     init() {
         super.init(nibName: nil, bundle: nil)
-        self.view.backgroundColor = .white
+        view.backgroundColor = .white
         makeBusinessServiceCall()
     }
-    
-    required init?(coder: NSCoder) {
+
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
         fatalError("coder not set up")
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubview(mapView)
-        self.view.addSubview(activityIndicator)
+        view.addSubview(mapView)
+        view.addSubview(activityIndicator)
         activityIndicator.frame = view.bounds
         activityIndicator.backgroundColor = UIColor(white: 0, alpha: 0.4)
         mapView.delegate = self
         mapView.showsUserLocation = true
-        
+
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
-        let margins = self.view.safeAreaLayoutGuide
+        let margins = view.safeAreaLayoutGuide
         NSLayoutConstraint.activate([
             mapView.bottomAnchor.constraint(equalTo: margins.bottomAnchor),
             mapView.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
@@ -52,7 +53,7 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
             activityIndicator.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
             activityIndicator.centerYAnchor.constraint(equalTo: margins.centerYAnchor),
             activityIndicator.widthAnchor.constraint(equalTo: activityIndicator.superview!.widthAnchor),
-            activityIndicator.heightAnchor.constraint(equalTo: activityIndicator.superview!.heightAnchor)
+            activityIndicator.heightAnchor.constraint(equalTo: activityIndicator.superview!.heightAnchor),
         ])
         let backBtnImage = UIImage(systemName: "xmark")?.withTintColor(UIColor.black, renderingMode: .alwaysOriginal)
         let backBtn = UIBarButtonItem(image: backBtnImage,
@@ -69,13 +70,15 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
             makeBusinessServiceCall()
         }
     }
-    @objc func back () {
+
+    @objc func back() {
         dismiss(animated: true, completion: nil)
     }
-    func makeBusinessServiceCall () {
+
+    func makeBusinessServiceCall() {
         activityIndicator.startAnimating()
         let group = DispatchGroup()
-        //https://stackoverflow.com/questions/58319322/using-dispatch-group-in-multi-for-loop-with-urlsession-tasks
+        // https://stackoverflow.com/questions/58319322/using-dispatch-group-in-multi-for-loop-with-urlsession-tasks
         for business in CheckoutCart.shared.businessArray {
             if business.coordinateString != "" {
                 let latandLonArray = business.coordinateString?.split(separator: ",")
@@ -83,21 +86,19 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
                 let longitude = latandLonArray![1].split(separator: ":")[1].trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: ")", with: "")
                 let locationCoordinate = CLLocationCoordinate2D(latitude: Double(lattitude)!, longitude: Double(longitude)!)
                 business.coordinate = locationCoordinate
-            }
-            else {
+            } else {
                 group.enter()
                 print("business.address!", business.address!)
                 business.getLocation(from: business.address!) { location in
                     if location != nil {
                         business.coordinate = location!
-                        business.coordinateString = String(describing:location!)
+                        business.coordinateString = String(describing: location!)
                     }
                     CoreDataManager.sharedManager.saveContext()
                     group.leave()
-                    
                 }
             }
-            //Add a custom pin to the map
+            // Add a custom pin to the map
         }
         group.notify(queue: .main, execute: {
             for business in CheckoutCart.shared.businessArray {
@@ -106,62 +107,60 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
                 self.mapView.addAnnotation(customAnnotation)
             }
             self.activityIndicator.stopAnimating()
-            
+
             // executed after all async calls in for loop finish
             print("done with all async calls weeee")
         })
     }
-    
+
     override func didReceiveMemoryWarning() {
         // Dispose of any resources that can be recreated.
         super.didReceiveMemoryWarning()
-        self.mapView.removeAnnotations(mapView.annotations)
-        self.mapView.delegate = nil
-        self.mapView.removeFromSuperview()
+        mapView.removeAnnotations(mapView.annotations)
+        mapView.delegate = nil
+        mapView.removeFromSuperview()
     }
-    
-    //MARK: CLLocationManagerDelegate
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-    }
-    
-    private func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus)
-    {
-        
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+
+    // MARK: CLLocationManagerDelegate
+
+    func locationManager(_: CLLocationManager, didUpdateLocations _: [CLLocation]) {}
+
+    private func locationManager(manager _: CLLocationManager, didChangeAuthorizationStatus _: CLAuthorizationStatus)
+    {}
+
+    func locationManager(_: CLLocationManager, didFailWithError error: Error) {
         print("location manager error", error)
     }
-    
-    //MARK: MKMapViewDelegate
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+
+    // MARK: MKMapViewDelegate
+
+    func mapView(_: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if !(annotation is CustomAnnotation) {
             return nil
         }
-        
-        var annotationView = self.mapView.dequeueReusableAnnotationView(withIdentifier: "Pin")
-        
+
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "Pin")
+
         if annotationView == nil {
             annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "Pin")
             annotationView?.canShowCallout = true
         } else {
             annotationView!.annotation = annotation
         }
-        
+
         let customAnnotation = annotation as! CustomAnnotation
-        
+
         // programatically creating an image view to hold the picture of the 360 bridge for the custom annotation
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         imageView.image = customAnnotation.image
-        
+
         let detailView = UIView()
         detailView.addSubview(imageView)
         let widthConstraint = NSLayoutConstraint(item: detailView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 200)
         detailView.addConstraint(widthConstraint)
         let heightConstraint = NSLayoutConstraint(item: detailView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 250)
         detailView.addConstraint(heightConstraint)
-        
+
         // add button
         let button = RoundButton(frame: CGRect(x: 50, y: 200, width: 100, height: 40))
         button.backgroundImageColor = .blue
@@ -172,17 +171,15 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
         annotationView?.detailCalloutAccessoryView = detailView
         return annotationView
     }
+
     @objc func buttonAction(sender: RoundButton!) {
-        //https://stackoverflow.com/questions/24814646/attach-parameter-to-button-addtarget-action-in-swift
+        // https://stackoverflow.com/questions/24814646/attach-parameter-to-button-addtarget-action-in-swift
         if let clickedBusiness = CheckoutCart.shared.business!.first(where: { ($0 as! Business).id?.uuidString == sender.params["businessId"] }) as? Business {
             CheckoutCart.shared.userBusiness = clickedBusiness
-            CheckoutCart.shared.userBusiness!.drinks =  clickedBusiness.drinks!
+            CheckoutCart.shared.userBusiness!.drinks = clickedBusiness.drinks!
             CoreDataManager.sharedManager.saveContext()
             businessPickerDelegate?.businessPicked()
         }
-        dismiss(animated: true) {
-            
-        }
+        dismiss(animated: true) {}
     }
 }
-

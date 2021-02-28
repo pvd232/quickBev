@@ -9,21 +9,21 @@
 import UIKit
 
 protocol TabCreationSecondPagePickerProtocol {
-    func selectedValues (_ selectedValues:String)
+    func selectedValues(_ selectedValues: String)
 }
+
 class TabCreationViewController2: UIViewController {
-    
-    @IBOutlet weak var submitButton: RoundButton!
-    @IBOutlet weak var eventPrivacySegmentedControl: UISegmentedControl!
+    @IBOutlet var submitButton: RoundButton!
+    @IBOutlet var eventPrivacySegmentedControl: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
         eventPrivacySegmentedControl.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(eventPrivacyEventHandler)))
-        
+
         let attributes = [NSAttributedString.Key.font: UIFont(name: "Charter-Roman", size: 20)!]
-        self.navigationController!.navigationBar.standardAppearance.titleTextAttributes  = attributes
+        navigationController!.navigationBar.standardAppearance.titleTextAttributes = attributes
     }
-    
-    @objc func eventPrivacyEventHandler () {
-        print("eventPrivacySegmentedControl.selectedSegmentIndex",eventPrivacySegmentedControl.selectedSegmentIndex)
+
+    @objc func eventPrivacyEventHandler() {
+        print("eventPrivacySegmentedControl.selectedSegmentIndex", eventPrivacySegmentedControl.selectedSegmentIndex)
     }
 }

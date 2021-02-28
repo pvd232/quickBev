@@ -7,9 +7,9 @@
 //
 //
 //
-//import Foundation
+// import Foundation
 //
-//protocol WebSocketConnection {
+// protocol WebSocketConnection {
 //    func send(text: String)
 //    func send <Body:Encodable>(data: Body)
 //    func connect()
@@ -18,17 +18,17 @@
 //        get
 //        set
 //    }
-//}
+// }
 //
-//protocol WebSocketConnectionDelegate {
+// protocol WebSocketConnectionDelegate {
 //    func onConnected(connection: WebSocketConnection)
 //    func onDisconnected(connection: WebSocketConnection, error: Error?)
 //    func onError(connection: WebSocketConnection, error: Error)
 //    func onMessage(connection: WebSocketConnection, text: String)
 //    func onMessage(connection: WebSocketConnection, data: Data)
-//}
+// }
 //
-//class WebSocketTaskConnection: NSObject, WebSocketConnection, URLSessionWebSocketDelegate {
+// class WebSocketTaskConnection: NSObject, WebSocketConnection, URLSessionWebSocketDelegate {
 //    var delegate: WebSocketConnectionDelegate?
 //    private var webSocketTask: URLSessionWebSocketTask!
 //    private var urlSession: URLSession!
@@ -40,17 +40,17 @@
 //        print("URL ws://localhost:8765", URL(string: "ws://localhost:8765")! as URL)
 //        webSocketTask = urlSession.webSocketTask(with: URL(string: "ws://localhost:5000")!)
 //    }
-//    
+//
 //    static let shared = WebSocketTaskConnection()
-//    
+//
 //    func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didOpenWithProtocol protocol: String?) {
 //        self.delegate?.onConnected(connection: self)
 //    }
-//    
+//
 //    func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didCloseWith closeCode: URLSessionWebSocketTask.CloseCode, reason: Data?) {
 //        self.delegate?.onDisconnected(connection: self, error: nil)
 //    }
-//    
+//
 //    func connect() {
 //        if isConnected{
 //            self.disconnect()
@@ -62,11 +62,11 @@
 //        listen()
 //        isConnected = true
 //    }
-//    
+//
 //    func disconnect() {
 //        webSocketTask.cancel(with: .goingAway, reason: nil)
 //    }
-//    
+//
 //    func listen()  {
 //        webSocketTask.receive { result in
 //            print("result", result)
@@ -111,7 +111,7 @@
 //                    }
 //                }
 //            case false:
-//                
+//
 //                self.connect()
 //                self.webSocketTask.send(URLSessionWebSocketTask.Message.string(text)) { error in
 //                    if let error = error {
@@ -121,7 +121,7 @@
 //            }
 //        }
 //    }
-//    
+//
 //    func send <Body: Encodable>(data: Body) {
 //        print("data", data)
 //        let encodedData = try! JSONEncoder().encode(data)
@@ -144,7 +144,7 @@
 //                    }
 //                }
 //            }
-//            
+//
 //        }
 //    }
-//}
+// }

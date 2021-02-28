@@ -8,6 +8,6 @@
 
 import Foundation
 
-@inline(__always) func STPLocalizedString(_ key: String, _ comment: String?) -> String {
-  return STPLocalizationUtils.localizedStripeString(forKey: key)
+@inline(__always) func STPLocalizedString(_ key: String, _: String?) -> String {
+    return STPLocalizationUtils.localizedStripeString(forKey: key)
 }

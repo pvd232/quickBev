@@ -9,11 +9,12 @@
 import Foundation
 import UIKit
 enum Theme {
-    enum UIStackViewProps{
+    enum UIStackViewProps {
         case horizontal
         case vertical
         case spacing(Float)
     }
+
     enum RoundButtonProps {
         case color
         case titleLabelFont(UIFont?)
@@ -25,12 +26,12 @@ enum Theme {
             // allows me to override the parameter with the default value because usuallly the font will be default
             case .titleLabelFont(nil):
                 return UIFont.themeButtonFont
-            default:return ""
+            default: return ""
             }
         }
-        
     }
-    enum UILabelProps{
+
+    enum UILabelProps {
         case font(UIFont?)
         case center
         case text(String)
@@ -43,30 +44,33 @@ enum Theme {
             }
         }
     }
-    enum UITextFieldProps{
+
+    enum UITextFieldProps {
         case font(UIFont?)
         case placeHolderText(String)
         enum Borderstyle {
             case roundedRect
         }
+
         case borderStyle(borderStyle: Borderstyle)
 
-        enum AutocapitalizationType{
+        enum AutocapitalizationType {
             case none
         }
-        
+
         case autocapitalizationType(autocapitalizationType: AutocapitalizationType)
-        
+
         case backgroundColor(UIColor)
-        
+
         var rawValue: Any {
             switch self {
             case .font(nil):
                 return UIFont.themeLabelFont
-            default:return 0.0
+            default: return 0.0
             }
         }
     }
+
     case RoundButton(props: [RoundButtonProps])
     case UIStackView(props: [UIStackViewProps])
     case UILabel(props: [UILabelProps])

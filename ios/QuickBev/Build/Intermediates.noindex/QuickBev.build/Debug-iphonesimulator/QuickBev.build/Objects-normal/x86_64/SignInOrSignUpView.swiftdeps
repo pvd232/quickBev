@@ -31,6 +31,7 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "*"
 - !private "/"
+- "<="
 - "Array"
 - "AssignmentPrecedence"
 - "BooleanLiteralType"
@@ -77,16 +78,19 @@ depends-top-level:
 - !private "thirdButton"
 - !private "thirdButtonTouchUp"
 depends-member:
-- !private ["s18AdditiveArithmeticP", ""]
+- ["s18AdditiveArithmeticP", ""]
 - !private ["s18AdditiveArithmeticP", "init"]
 - !private ["s18AdditiveArithmeticP", "logoSizeMultiplier"]
 - !private ["7SwiftUI10AnimatableP", "height"]
 - !private ["So22UILayoutConstraintAxisV", "vertical"]
+- ["SK", ""]
 - !private ["SB", "binade"]
 - !private ["SB", "exponentBitCount"]
 - !private ["SB", "exponentBitPattern"]
 - !private ["SB", "init"]
+- !private ["SB", "isTotallyOrdered"]
 - !private ["SB", "logoSizeMultiplier"]
+- !private ["SB", "radix"]
 - !private ["SB", "significandBitCount"]
 - !private ["SB", "significandBitPattern"]
 - !private ["SB", "significandWidth"]
@@ -227,7 +231,12 @@ depends-member:
 - !private ["s7CVarArgP", "widthAnchor"]
 - !private ["8QuickBev12CheckoutCartC", "isGuest"]
 - !private ["8QuickBev12CheckoutCartC", "shared"]
-- !private ["SL", ""]
+- ["Sl", ""]
+- !private ["SL", "<"]
+- !private ["SL", "<="]
+- !private ["SL", ">"]
+- !private ["SL", ">="]
+- ["SL", ""]
 - !private ["SL", "init"]
 - !private ["SL", "logoSizeMultiplier"]
 - !private ["8QuickBev15CoreDataManagerC", "saveContext"]
@@ -452,17 +461,76 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", ""]
 - ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "touchUpInside"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
-- !private ["s25ExpressibleByFloatLiteralP", ""]
+- ["s25ExpressibleByFloatLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
 - !private ["s25ExpressibleByFloatLiteralP", "logoSizeMultiplier"]
 - !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
-- !private ["s27ExpressibleByIntegerLiteralP", ""]
+- ["s27ExpressibleByIntegerLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "logoSizeMultiplier"]
-- !private ["SF", ""]
+- ["s32ExpressibleByStringInterpolationP", ""]
+- ["s26ExpressibleByStringLiteralP", ""]
+- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["SF", "*"]
+- !private ["SF", "*="]
+- !private ["SF", "+"]
+- !private ["SF", "+="]
+- !private ["SF", "-"]
+- !private ["SF", "-="]
+- !private ["SF", "/"]
+- !private ["SF", "/="]
+- !private ["SF", "<"]
+- !private ["SF", "<="]
+- !private ["SF", ">"]
+- !private ["SF", ">="]
+- ["SF", ""]
+- !private ["SF", "addProduct"]
+- !private ["SF", "addingProduct"]
+- !private ["SF", "exponent"]
+- !private ["SF", "floatingPointClass"]
+- !private ["SF", "formRemainder"]
+- !private ["SF", "formSquareRoot"]
+- !private ["SF", "formTruncatingRemainder"]
+- !private ["SF", "greatestFiniteMagnitude"]
+- !private ["SF", "infinity"]
 - !private ["SF", "init"]
+- !private ["SF", "isCanonical"]
+- !private ["SF", "isEqual"]
+- !private ["SF", "isFinite"]
+- !private ["SF", "isInfinite"]
+- !private ["SF", "isLess"]
+- !private ["SF", "isLessThanOrEqualTo"]
+- !private ["SF", "isNaN"]
+- !private ["SF", "isNormal"]
+- !private ["SF", "isSignalingNaN"]
+- !private ["SF", "isSubnormal"]
+- !private ["SF", "isTotallyOrdered"]
+- !private ["SF", "isZero"]
+- !private ["SF", "leastNonzeroMagnitude"]
+- !private ["SF", "leastNormalMagnitude"]
 - !private ["SF", "logoSizeMultiplier"]
+- !private ["SF", "maximum"]
+- !private ["SF", "maximumMagnitude"]
+- !private ["SF", "minimum"]
+- !private ["SF", "minimumMagnitude"]
+- !private ["SF", "nan"]
+- !private ["SF", "negate"]
+- !private ["SF", "nextDown"]
+- !private ["SF", "nextUp"]
+- !private ["SF", "pi"]
+- !private ["SF", "radix"]
+- !private ["SF", "remainder"]
+- !private ["SF", "round"]
+- !private ["SF", "rounded"]
+- !private ["SF", "sign"]
+- !private ["SF", "signalingNaN"]
+- !private ["SF", "significand"]
+- !private ["SF", "squareRoot"]
+- !private ["SF", "truncatingRemainder"]
+- !private ["SF", "ulp"]
+- !private ["SF", "ulpOfOne"]
 - !private ["SH", "CGFloat"]
 - !private ["SH", "CheckoutCart"]
 - !private ["SH", "CoreDataManager"]
@@ -538,6 +606,7 @@ depends-member:
 - !private ["s12IdentifiableP", "shared"]
 - !private ["8QuickBev19LoginViewControllerC", ""]
 - !private ["8QuickBev19LoginViewControllerC", "init"]
+- ["s25LosslessStringConvertibleP", ""]
 - !private ["s25LosslessStringConvertibleP", "logoSizeMultiplier"]
 - ["So8NSCodingP", "$__lazy_storage_$_navController"]
 - !private ["So8NSCodingP", "CGFloat"]
@@ -579,6 +648,24 @@ depends-member:
 - !private ["So8NSCodingP", "centerXAnchor"]
 - !private ["So8NSCodingP", "centerYAnchor"]
 - !private ["So8NSCodingP", "constraint"]
+- !private ["So8NSCodingP", "constraintEqualToAnchor"]
+- !private ["So8NSCodingP", "constraintEqualToConstant"]
+- !private ["So8NSCodingP", "constraintEqualToSystemSpacingAfter"]
+- !private ["So8NSCodingP", "constraintEqualToSystemSpacingAfterAnchor"]
+- !private ["So8NSCodingP", "constraintEqualToSystemSpacingBelow"]
+- !private ["So8NSCodingP", "constraintEqualToSystemSpacingBelowAnchor"]
+- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToAnchor"]
+- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToConstant"]
+- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
+- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
+- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
+- !private ["So8NSCodingP", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
+- !private ["So8NSCodingP", "constraintLessThanOrEqualToAnchor"]
+- !private ["So8NSCodingP", "constraintLessThanOrEqualToConstant"]
+- !private ["So8NSCodingP", "constraintLessThanOrEqualToSystemSpacingAfter"]
+- !private ["So8NSCodingP", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
+- !private ["So8NSCodingP", "constraintLessThanOrEqualToSystemSpacingBelow"]
+- !private ["So8NSCodingP", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - ["So8NSCodingP", "current"]
 - !private ["So8NSCodingP", "fatalError"]
 - ["So8NSCodingP", "firstButton"]
@@ -611,6 +698,24 @@ depends-member:
 - !private ["So8NSCodingP", "widthAnchor"]
 - !private ["So9NSCopyingP", "black"]
 - !private ["So9NSCopyingP", "constraint"]
+- !private ["So9NSCopyingP", "constraintEqualToAnchor"]
+- !private ["So9NSCopyingP", "constraintEqualToConstant"]
+- !private ["So9NSCopyingP", "constraintEqualToSystemSpacingAfter"]
+- !private ["So9NSCopyingP", "constraintEqualToSystemSpacingAfterAnchor"]
+- !private ["So9NSCopyingP", "constraintEqualToSystemSpacingBelow"]
+- !private ["So9NSCopyingP", "constraintEqualToSystemSpacingBelowAnchor"]
+- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToAnchor"]
+- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToConstant"]
+- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
+- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
+- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
+- !private ["So9NSCopyingP", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
+- !private ["So9NSCopyingP", "constraintLessThanOrEqualToAnchor"]
+- !private ["So9NSCopyingP", "constraintLessThanOrEqualToConstant"]
+- !private ["So9NSCopyingP", "constraintLessThanOrEqualToSystemSpacingAfter"]
+- !private ["So9NSCopyingP", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
+- !private ["So9NSCopyingP", "constraintLessThanOrEqualToSystemSpacingBelow"]
+- !private ["So9NSCopyingP", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - !private ["So9NSCopyingP", "init"]
 - ["So9NSCopyingP", "largeThemeLabelFont"]
 - ["So9NSCopyingP", "themeButtonFont"]
@@ -626,6 +731,24 @@ depends-member:
 - ["So21NSItemProviderWritingP", "init"]
 - ["So14NSLayoutAnchorC", ""]
 - !private ["So14NSLayoutAnchorC", "constraint"]
+- !private ["So14NSLayoutAnchorC", "constraintEqualToAnchor"]
+- !private ["So14NSLayoutAnchorC", "constraintEqualToConstant"]
+- !private ["So14NSLayoutAnchorC", "constraintEqualToSystemSpacingAfter"]
+- !private ["So14NSLayoutAnchorC", "constraintEqualToSystemSpacingAfterAnchor"]
+- !private ["So14NSLayoutAnchorC", "constraintEqualToSystemSpacingBelow"]
+- !private ["So14NSLayoutAnchorC", "constraintEqualToSystemSpacingBelowAnchor"]
+- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToAnchor"]
+- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToConstant"]
+- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
+- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
+- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
+- !private ["So14NSLayoutAnchorC", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
+- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToAnchor"]
+- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToConstant"]
+- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToSystemSpacingAfter"]
+- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
+- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToSystemSpacingBelow"]
+- !private ["So14NSLayoutAnchorC", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - !private ["So18NSLayoutConstraintC", "activate"]
 - !private ["So17NSLayoutDimensionC", "constraint"]
 - !private ["So19NSLayoutXAxisAnchorC", "constraint"]
@@ -665,6 +788,7 @@ depends-member:
 - ["So8NSObjectC", "_secondButton"]
 - ["So8NSObjectC", "_thirdButton"]
 - !private ["So8NSObjectC", "activate"]
+- !private ["So8NSObjectC", "activateConstraints"]
 - !private ["So8NSObjectC", "addArrangedSubview"]
 - !private ["So8NSObjectC", "addSubview"]
 - !private ["So8NSObjectC", "addTarget"]
@@ -675,15 +799,41 @@ depends-member:
 - !private ["So8NSObjectC", "centerXAnchor"]
 - !private ["So8NSObjectC", "centerYAnchor"]
 - !private ["So8NSObjectC", "constraint"]
+- !private ["So8NSObjectC", "constraintEqualToAnchor"]
+- !private ["So8NSObjectC", "constraintEqualToConstant"]
+- !private ["So8NSObjectC", "constraintEqualToSystemSpacingAfter"]
+- !private ["So8NSObjectC", "constraintEqualToSystemSpacingAfterAnchor"]
+- !private ["So8NSObjectC", "constraintEqualToSystemSpacingBelow"]
+- !private ["So8NSObjectC", "constraintEqualToSystemSpacingBelowAnchor"]
+- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToAnchor"]
+- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToConstant"]
+- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
+- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
+- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
+- !private ["So8NSObjectC", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
+- !private ["So8NSObjectC", "constraintLessThanOrEqualToAnchor"]
+- !private ["So8NSObjectC", "constraintLessThanOrEqualToConstant"]
+- !private ["So8NSObjectC", "constraintLessThanOrEqualToSystemSpacingAfter"]
+- !private ["So8NSObjectC", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
+- !private ["So8NSObjectC", "constraintLessThanOrEqualToSystemSpacingBelow"]
+- !private ["So8NSObjectC", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - ["So8NSObjectC", "current"]
 - !private ["So8NSObjectC", "fatalError"]
 - ["So8NSObjectC", "firstButton"]
 - ["So8NSObjectC", "firstButtonTouchUp"]
 - !private ["So8NSObjectC", "font"]
+- !private ["So8NSObjectC", "fontWithDescriptor"]
+- !private ["So8NSObjectC", "fontWithName"]
 - !private ["So8NSObjectC", "heightAnchor"]
 - !private ["So8NSObjectC", "image"]
+- ["So8NSObjectC", "imageNamed"]
+- ["So8NSObjectC", "imageWithCGImage"]
+- ["So8NSObjectC", "imageWithCIImage"]
+- ["So8NSObjectC", "imageWithContentsOfFile"]
+- ["So8NSObjectC", "imageWithData"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "isGuest"]
+- ["So8NSObjectC", "jpegData"]
 - ["So8NSObjectC", "largeThemeLabelFont"]
 - !private ["So8NSObjectC", "leadingAnchor"]
 - ["So8NSObjectC", "logoImage"]
@@ -691,6 +841,7 @@ depends-member:
 - ["So8NSObjectC", "navController"]
 - ["So8NSObjectC", "optionsStackView"]
 - ["So8NSObjectC", "orLabel"]
+- ["So8NSObjectC", "pngData"]
 - !private ["So8NSObjectC", "pushViewController"]
 - ["So8NSObjectC", "rootViewController"]
 - !private ["So8NSObjectC", "safeAreaLayoutGuide"]
@@ -700,6 +851,7 @@ depends-member:
 - ["So8NSObjectC", "shared"]
 - ["So8NSObjectC", "shouldSetupConstraints"]
 - !private ["So8NSObjectC", "spacing"]
+- ["So8NSObjectC", "systemImageNamed"]
 - !private ["So8NSObjectC", "text"]
 - !private ["So8NSObjectC", "textAlignment"]
 - !private ["So8NSObjectC", "textColor"]
@@ -741,6 +893,7 @@ depends-member:
 - ["So8NSObjectP", "_secondButton"]
 - ["So8NSObjectP", "_thirdButton"]
 - !private ["So8NSObjectP", "activate"]
+- !private ["So8NSObjectP", "activateConstraints"]
 - !private ["So8NSObjectP", "addArrangedSubview"]
 - !private ["So8NSObjectP", "addSubview"]
 - !private ["So8NSObjectP", "addTarget"]
@@ -751,15 +904,41 @@ depends-member:
 - !private ["So8NSObjectP", "centerXAnchor"]
 - !private ["So8NSObjectP", "centerYAnchor"]
 - !private ["So8NSObjectP", "constraint"]
+- !private ["So8NSObjectP", "constraintEqualToAnchor"]
+- !private ["So8NSObjectP", "constraintEqualToConstant"]
+- !private ["So8NSObjectP", "constraintEqualToSystemSpacingAfter"]
+- !private ["So8NSObjectP", "constraintEqualToSystemSpacingAfterAnchor"]
+- !private ["So8NSObjectP", "constraintEqualToSystemSpacingBelow"]
+- !private ["So8NSObjectP", "constraintEqualToSystemSpacingBelowAnchor"]
+- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToAnchor"]
+- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToConstant"]
+- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToSystemSpacingAfter"]
+- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToSystemSpacingAfterAnchor"]
+- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToSystemSpacingBelow"]
+- !private ["So8NSObjectP", "constraintGreaterThanOrEqualToSystemSpacingBelowAnchor"]
+- !private ["So8NSObjectP", "constraintLessThanOrEqualToAnchor"]
+- !private ["So8NSObjectP", "constraintLessThanOrEqualToConstant"]
+- !private ["So8NSObjectP", "constraintLessThanOrEqualToSystemSpacingAfter"]
+- !private ["So8NSObjectP", "constraintLessThanOrEqualToSystemSpacingAfterAnchor"]
+- !private ["So8NSObjectP", "constraintLessThanOrEqualToSystemSpacingBelow"]
+- !private ["So8NSObjectP", "constraintLessThanOrEqualToSystemSpacingBelowAnchor"]
 - ["So8NSObjectP", "current"]
 - !private ["So8NSObjectP", "fatalError"]
 - ["So8NSObjectP", "firstButton"]
 - ["So8NSObjectP", "firstButtonTouchUp"]
 - !private ["So8NSObjectP", "font"]
+- !private ["So8NSObjectP", "fontWithDescriptor"]
+- !private ["So8NSObjectP", "fontWithName"]
 - !private ["So8NSObjectP", "heightAnchor"]
 - !private ["So8NSObjectP", "image"]
+- ["So8NSObjectP", "imageNamed"]
+- ["So8NSObjectP", "imageWithCGImage"]
+- ["So8NSObjectP", "imageWithCIImage"]
+- ["So8NSObjectP", "imageWithContentsOfFile"]
+- ["So8NSObjectP", "imageWithData"]
 - ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "isGuest"]
+- ["So8NSObjectP", "jpegData"]
 - ["So8NSObjectP", "largeThemeLabelFont"]
 - !private ["So8NSObjectP", "leadingAnchor"]
 - ["So8NSObjectP", "logoImage"]
@@ -767,6 +946,7 @@ depends-member:
 - ["So8NSObjectP", "navController"]
 - ["So8NSObjectP", "optionsStackView"]
 - ["So8NSObjectP", "orLabel"]
+- ["So8NSObjectP", "pngData"]
 - !private ["So8NSObjectP", "pushViewController"]
 - ["So8NSObjectP", "rootViewController"]
 - !private ["So8NSObjectP", "safeAreaLayoutGuide"]
@@ -776,6 +956,7 @@ depends-member:
 - ["So8NSObjectP", "shared"]
 - ["So8NSObjectP", "shouldSetupConstraints"]
 - !private ["So8NSObjectP", "spacing"]
+- ["So8NSObjectP", "systemImageNamed"]
 - !private ["So8NSObjectP", "text"]
 - !private ["So8NSObjectP", "textAlignment"]
 - !private ["So8NSObjectP", "textColor"]
@@ -792,7 +973,7 @@ depends-member:
 - !private ["8QuickBev25NewBusinessPickedProtocolP", "init"]
 - !private ["Sj", "*"]
 - !private ["Sj", "*="]
-- !private ["Sj", ""]
+- ["Sj", ""]
 - !private ["Sj", "init"]
 - !private ["Sj", "logoSizeMultiplier"]
 - !private ["Sj", "magnitude"]
@@ -818,6 +999,7 @@ depends-member:
 - !private ["s10SIMDScalarP", "logoSizeMultiplier"]
 - ["8QuickBev13SceneDelegateC", "rootViewController"]
 - ["8QuickBev13SceneDelegateC", "shared"]
+- ["ST", ""]
 - !private ["s10SetAlgebraP", ""]
 - !private ["s10SetAlgebraP", "touchUpInside"]
 - !private ["8QuickBev08SignInOrC6UpViewC", "$__lazy_storage_$_navController"]
@@ -870,12 +1052,15 @@ depends-member:
 - ["8QuickBev08SignInOrC6UpViewC", "thirdButton"]
 - ["8QuickBev08SignInOrC6UpViewC", "thirdButtonTouchUp"]
 - ["8QuickBev08SignInOrC6UpViewC", "updateConstraints"]
-- !private ["s13SignedNumericP", ""]
+- !private ["s13SignedNumericP", "-"]
+- ["s13SignedNumericP", ""]
 - !private ["s13SignedNumericP", "init"]
 - !private ["s13SignedNumericP", "logoSizeMultiplier"]
-- !private ["Sx", ""]
+- ["Sx", ""]
 - !private ["Sx", "init"]
 - !private ["Sx", "logoSizeMultiplier"]
+- ["s16TextOutputStreamP", ""]
+- ["s20TextOutputStreamableP", ""]
 - !private ["s20TextOutputStreamableP", "logoSizeMultiplier"]
 - ["8QuickBev5ThemeO", "RoundButton"]
 - ["8QuickBev5ThemeO", "UILabel"]
@@ -1978,11 +2163,13 @@ depends-member:
 - !private ["So6UIViewC", "widthAnchor"]
 - ["So16UIViewControllerC", ""]
 - ["So16UIViewControllerC", "current"]
+- !private ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "pushViewController"]
 - !private ["So16UIViewControllerC", "screenSize"]
 - ["So21UIWindowSceneDelegateP", "rootViewController"]
 - ["So21UIWindowSceneDelegateP", "shared"]
 - ["8QuickBev14UsesAutoLayoutV", "init"]
+- ["8QuickBev14UsesAutoLayoutV", "subscript"]
 - ["8QuickBev14UsesAutoLayoutV", "wrappedValue"]
 - !private ["7SwiftUI16VectorArithmeticP", "init"]
 - !private ["7SwiftUI16VectorArithmeticP", "logoSizeMultiplier"]
@@ -1993,11 +2180,13 @@ depends-member:
 - !private ["s30_CustomPlaygroundQuickLookableP", "height"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "logoSizeMultiplier"]
 - ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "logoSizeMultiplier"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "logoSizeMultiplier"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s26_ExpressibleByColorLiteralP", "black"]
 - ["s26_ExpressibleByImageLiteralP", "init"]
 - !private ["7SwiftUI18_FormatSpecifiableP", "init"]
@@ -2194,9 +2383,10 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "updateConstraints"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "widthAnchor"]
 depends-nominal:
-- !private "s18AdditiveArithmeticP"
+- "s18AdditiveArithmeticP"
 - !private "7SwiftUI10AnimatableP"
 - !private "So22UILayoutConstraintAxisV"
+- "SK"
 - !private "SB"
 - "So15CALayerDelegateP"
 - !private "12CoreGraphics7CGFloatV"
@@ -2204,7 +2394,8 @@ depends-nominal:
 - !private "8CloudKit21CKRecordValueProtocolP"
 - "s7CVarArgP"
 - !private "8QuickBev12CheckoutCartC"
-- !private "SL"
+- "Sl"
+- "SL"
 - !private "8QuickBev15CoreDataManagerC"
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
@@ -2215,14 +2406,18 @@ depends-nominal:
 - "SQ"
 - !private "So15UIControlEventsV"
 - "s25ExpressibleByArrayLiteralP"
-- !private "s25ExpressibleByFloatLiteralP"
-- !private "s27ExpressibleByIntegerLiteralP"
-- !private "SF"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s25ExpressibleByFloatLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- "s32ExpressibleByStringInterpolationP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "SF"
 - "SH"
 - !private "8QuickBev22HomePageViewControllerC"
 - !private "s12IdentifiableP"
 - !private "8QuickBev19LoginViewControllerC"
-- !private "s25LosslessStringConvertibleP"
+- "s25LosslessStringConvertibleP"
 - "So8NSCodingP"
 - "So9NSCopyingP"
 - "So26NSExtensionRequestHandlingP"
@@ -2240,7 +2435,7 @@ depends-nominal:
 - "So14NSSecureCodingP"
 - !private "So15NSTextAlignmentV"
 - !private "8QuickBev25NewBusinessPickedProtocolP"
-- !private "Sj"
+- "Sj"
 - !private "7Combine16ObservableObjectP"
 - !private "s9OptionSetP"
 - !private "SY"
@@ -2251,11 +2446,13 @@ depends-nominal:
 - !private "8QuickBev18RoundedUITextFieldC"
 - !private "s10SIMDScalarP"
 - "8QuickBev13SceneDelegateC"
+- "ST"
 - !private "s10SetAlgebraP"
 - "8QuickBev08SignInOrC6UpViewC"
-- !private "s13SignedNumericP"
-- !private "Sx"
-- !private "s20TextOutputStreamableP"
+- "s13SignedNumericP"
+- "Sx"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
 - "8QuickBev5ThemeO"
 - !private "8QuickBev11ToolbarViewC"
 - "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
@@ -2304,9 +2501,11 @@ depends-nominal:
 - !private "s22_CVarArgPassedAsDoubleP"
 - !private "s30_CustomPlaygroundQuickLookableP"
 - "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - "s34_ExpressibleByBuiltinStringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - "s26_ExpressibleByImageLiteralP"
 - !private "7SwiftUI18_FormatSpecifiableP"

@@ -7,46 +7,40 @@
 //
 //
 
-import Foundation
 import CoreData
+import Foundation
 
-
-extension Business {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Business> {
+public extension Business {
+    @nonobjc class func fetchRequest() -> NSFetchRequest<Business> {
         return NSFetchRequest<Business>(entityName: "Business")
     }
 
-    @NSManaged public var address: String?
-    @NSManaged public var coordinateString: String?
-    @NSManaged public var id: UUID?
-    @NSManaged public var name: String?
-    @NSManaged public var salesTaxRate: Double
-    @NSManaged public var merchantStripeId: String?
-    @NSManaged public var businessToCheckoutCart: CheckoutCart?
-    @NSManaged public var businessId: UUID?
-    @NSManaged public var drinks: NSSet?
-    @NSManaged public var userBusinessToCheckoutCart: CheckoutCart?
-
+    @NSManaged var address: String?
+    @NSManaged var coordinateString: String?
+    @NSManaged var id: UUID?
+    @NSManaged var name: String?
+    @NSManaged var salesTaxRate: Double
+    @NSManaged var merchantStripeId: String?
+    @NSManaged var businessToCheckoutCart: CheckoutCart?
+    @NSManaged var businessId: UUID?
+    @NSManaged var drinks: NSSet?
+    @NSManaged var userBusinessToCheckoutCart: CheckoutCart?
 }
 
 // MARK: Generated accessors for drinks
-extension Business {
 
+public extension Business {
     @objc(addDrinksObject:)
-    @NSManaged public func addToDrinks(_ value: Drink)
+    @NSManaged func addToDrinks(_ value: Drink)
 
     @objc(removeDrinksObject:)
-    @NSManaged public func removeFromDrinks(_ value: Drink)
+    @NSManaged func removeFromDrinks(_ value: Drink)
 
     @objc(addDrinks:)
-    @NSManaged public func addToDrinks(_ values: NSSet)
+    @NSManaged func addToDrinks(_ values: NSSet)
 
     @objc(removeDrinks:)
-    @NSManaged public func removeFromDrinks(_ values: NSSet)
-
+    @NSManaged func removeFromDrinks(_ values: NSSet)
 }
 
-extension Business : Identifiable {
-
-}
+extension Business: Identifiable {}

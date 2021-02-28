@@ -1,0 +1,493 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ServerSyncJob"
+provides-nominal:
+- "17PushNotifications13ServerSyncJobO"
+- "17PushNotifications13ServerSyncJobO13DiscriminatorO"
+- "17PushNotifications13ServerSyncJobO10CodingKeysO"
+provides-member:
+- ["17PushNotifications13ServerSyncJobO", ""]
+- ["17PushNotifications13ServerSyncJobO13DiscriminatorO", ""]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "=="
+- !private "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- "CastingPrecedence"
+- "Codable"
+- "CodingKey"
+- "CodingKeys"
+- "Decoder"
+- "DeliveryEventType"
+- "Discriminator"
+- "Encoder"
+- "FloatLiteralType"
+- "Int"
+- "IntegerLiteralType"
+- "LocalizedError"
+- "Metadata"
+- !private "NSLocalizedString"
+- "OpenEventType"
+- "ReportEventType"
+- "ServerSyncJob"
+- !private "ServerSyncJobError"
+- "String"
+- "StringLiteralType"
+- !private "_findStringSwitchCase"
+- !private "~="
+depends-member:
+- ["s9CodingKeyP", "=="]
+- ["s9CodingKeyP", "Default_RawValue"]
+- ["s9CodingKeyP", "RawValue"]
+- ["s9CodingKeyP", ""]
+- ["s9CodingKeyP", "_Default_RawValue"]
+- !private ["s9CodingKeyP", "_findStringSwitchCase"]
+- ["s9CodingKeyP", "_rawHashValue"]
+- ["s9CodingKeyP", "debugDescription"]
+- !private ["s9CodingKeyP", "deliveryEventTypeKey"]
+- ["s9CodingKeyP", "description"]
+- !private ["s9CodingKeyP", "discriminator"]
+- !private ["s9CodingKeyP", "findStringSwitchCase"]
+- ["s9CodingKeyP", "hash"]
+- ["s9CodingKeyP", "hashValue"]
+- ["s9CodingKeyP", "init"]
+- ["s9CodingKeyP", "intValue"]
+- !private ["s9CodingKeyP", "interestKey"]
+- !private ["s9CodingKeyP", "interestsKey"]
+- !private ["s9CodingKeyP", "localInterestsChangedKey"]
+- !private ["s9CodingKeyP", "metadataKey"]
+- !private ["s9CodingKeyP", "newTokenKey"]
+- !private ["s9CodingKeyP", "openEventTypeKey"]
+- ["s9CodingKeyP", "rawValue"]
+- !private ["s9CodingKeyP", "startJobInstanceIdKey"]
+- !private ["s9CodingKeyP", "startJobTokenKey"]
+- ["s9CodingKeyP", "stringValue"]
+- !private ["s9CodingKeyP", "userIdKey"]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "=="]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "Default_RawValue"]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "RawValue"]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", ""]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "_Default_RawValue"]
+- !private ["17PushNotifications13ServerSyncJobO10CodingKeysO", "_findStringSwitchCase"]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "_rawHashValue"]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "debugDescription"]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "deliveryEventTypeKey"]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "description"]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "discriminator"]
+- !private ["17PushNotifications13ServerSyncJobO10CodingKeysO", "findStringSwitchCase"]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "hash"]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "hashValue"]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "init"]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "intValue"]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "interestKey"]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "interestsKey"]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "localInterestsChangedKey"]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "metadataKey"]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "newTokenKey"]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "openEventTypeKey"]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "rawValue"]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "startJobInstanceIdKey"]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "startJobTokenKey"]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "stringValue"]
+- ["17PushNotifications13ServerSyncJobO10CodingKeysO", "userIdKey"]
+- ["s28CustomDebugStringConvertibleP", "=="]
+- ["s28CustomDebugStringConvertibleP", "Default_RawValue"]
+- ["s28CustomDebugStringConvertibleP", "RawValue"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- ["s28CustomDebugStringConvertibleP", "_Default_RawValue"]
+- !private ["s28CustomDebugStringConvertibleP", "_findStringSwitchCase"]
+- ["s28CustomDebugStringConvertibleP", "_rawHashValue"]
+- ["s28CustomDebugStringConvertibleP", "debugDescription"]
+- !private ["s28CustomDebugStringConvertibleP", "deliveryEventTypeKey"]
+- ["s28CustomDebugStringConvertibleP", "description"]
+- !private ["s28CustomDebugStringConvertibleP", "discriminator"]
+- !private ["s28CustomDebugStringConvertibleP", "findStringSwitchCase"]
+- ["s28CustomDebugStringConvertibleP", "hash"]
+- ["s28CustomDebugStringConvertibleP", "hashValue"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "intValue"]
+- !private ["s28CustomDebugStringConvertibleP", "interestKey"]
+- !private ["s28CustomDebugStringConvertibleP", "interestsKey"]
+- !private ["s28CustomDebugStringConvertibleP", "localInterestsChangedKey"]
+- !private ["s28CustomDebugStringConvertibleP", "metadataKey"]
+- !private ["s28CustomDebugStringConvertibleP", "newTokenKey"]
+- !private ["s28CustomDebugStringConvertibleP", "openEventTypeKey"]
+- ["s28CustomDebugStringConvertibleP", "rawValue"]
+- !private ["s28CustomDebugStringConvertibleP", "startJobInstanceIdKey"]
+- !private ["s28CustomDebugStringConvertibleP", "startJobTokenKey"]
+- ["s28CustomDebugStringConvertibleP", "stringValue"]
+- !private ["s28CustomDebugStringConvertibleP", "userIdKey"]
+- ["s23CustomStringConvertibleP", "=="]
+- ["s23CustomStringConvertibleP", "Default_RawValue"]
+- ["s23CustomStringConvertibleP", "RawValue"]
+- ["s23CustomStringConvertibleP", ""]
+- ["s23CustomStringConvertibleP", "_Default_RawValue"]
+- !private ["s23CustomStringConvertibleP", "_findStringSwitchCase"]
+- ["s23CustomStringConvertibleP", "_rawHashValue"]
+- ["s23CustomStringConvertibleP", "debugDescription"]
+- !private ["s23CustomStringConvertibleP", "deliveryEventTypeKey"]
+- ["s23CustomStringConvertibleP", "description"]
+- !private ["s23CustomStringConvertibleP", "discriminator"]
+- !private ["s23CustomStringConvertibleP", "findStringSwitchCase"]
+- ["s23CustomStringConvertibleP", "hash"]
+- ["s23CustomStringConvertibleP", "hashValue"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "intValue"]
+- !private ["s23CustomStringConvertibleP", "interestKey"]
+- !private ["s23CustomStringConvertibleP", "interestsKey"]
+- !private ["s23CustomStringConvertibleP", "localInterestsChangedKey"]
+- !private ["s23CustomStringConvertibleP", "metadataKey"]
+- !private ["s23CustomStringConvertibleP", "newTokenKey"]
+- !private ["s23CustomStringConvertibleP", "openEventTypeKey"]
+- ["s23CustomStringConvertibleP", "rawValue"]
+- !private ["s23CustomStringConvertibleP", "startJobInstanceIdKey"]
+- !private ["s23CustomStringConvertibleP", "startJobTokenKey"]
+- ["s23CustomStringConvertibleP", "stringValue"]
+- !private ["s23CustomStringConvertibleP", "userIdKey"]
+- ["Se", "=="]
+- ["Se", "ApplicationStartJob"]
+- ["Se", "ApplicationStartJobKey"]
+- !private ["Se", "Bool"]
+- !private ["Se", "CodingKeys"]
+- ["Se", "Default_RawValue"]
+- !private ["Se", "DeliveryEventType"]
+- !private ["Se", "Discriminator"]
+- !private ["Se", "Metadata"]
+- !private ["Se", "NSLocalizedString"]
+- !private ["Se", "OpenEventType"]
+- ["Se", "RawValue"]
+- ["Se", "RefreshTokenJob"]
+- ["Se", "RefreshTokenJobKey"]
+- ["Se", "ReportEventJob"]
+- ["Se", "ReportEventJobKey"]
+- !private ["Se", "ServerSyncJobError"]
+- ["Se", "SetSubscriptions"]
+- ["Se", "SetSubscriptionsKey"]
+- ["Se", "SetUserIdJob"]
+- ["Se", "SetUserIdJobKey"]
+- ["Se", "StartJob"]
+- ["Se", "StartJobKey"]
+- ["Se", "StopJob"]
+- ["Se", "StopJobKey"]
+- !private ["Se", "String"]
+- ["Se", "SubscribeJob"]
+- ["Se", "SubscribeJobKey"]
+- ["Se", "UnsubscribeJob"]
+- ["Se", "UnsubscribeJobKey"]
+- ["Se", ""]
+- ["Se", "_Default_RawValue"]
+- !private ["Se", "_findStringSwitchCase"]
+- ["Se", "_rawHashValue"]
+- ["Se", "encode"]
+- !private ["Se", "findStringSwitchCase"]
+- ["Se", "hash"]
+- ["Se", "hashValue"]
+- ["Se", "init"]
+- ["Se", "rawValue"]
+- !private ["s7DecoderP", "container"]
+- !private ["17PushNotifications17DeliveryEventTypeV", ""]
+- ["17PushNotifications13ServerSyncJobO13DiscriminatorO", "=="]
+- ["17PushNotifications13ServerSyncJobO13DiscriminatorO", "ApplicationStartJobKey"]
+- ["17PushNotifications13ServerSyncJobO13DiscriminatorO", "Default_RawValue"]
+- ["17PushNotifications13ServerSyncJobO13DiscriminatorO", "RawValue"]
+- ["17PushNotifications13ServerSyncJobO13DiscriminatorO", "RefreshTokenJobKey"]
+- ["17PushNotifications13ServerSyncJobO13DiscriminatorO", "ReportEventJobKey"]
+- ["17PushNotifications13ServerSyncJobO13DiscriminatorO", "SetSubscriptionsKey"]
+- ["17PushNotifications13ServerSyncJobO13DiscriminatorO", "SetUserIdJobKey"]
+- ["17PushNotifications13ServerSyncJobO13DiscriminatorO", "StartJobKey"]
+- ["17PushNotifications13ServerSyncJobO13DiscriminatorO", "StopJobKey"]
+- ["17PushNotifications13ServerSyncJobO13DiscriminatorO", "SubscribeJobKey"]
+- ["17PushNotifications13ServerSyncJobO13DiscriminatorO", "UnsubscribeJobKey"]
+- ["17PushNotifications13ServerSyncJobO13DiscriminatorO", ""]
+- ["17PushNotifications13ServerSyncJobO13DiscriminatorO", "_Default_RawValue"]
+- ["17PushNotifications13ServerSyncJobO13DiscriminatorO", "_rawHashValue"]
+- ["17PushNotifications13ServerSyncJobO13DiscriminatorO", "encode"]
+- ["17PushNotifications13ServerSyncJobO13DiscriminatorO", "hash"]
+- ["17PushNotifications13ServerSyncJobO13DiscriminatorO", "hashValue"]
+- ["17PushNotifications13ServerSyncJobO13DiscriminatorO", "init"]
+- ["17PushNotifications13ServerSyncJobO13DiscriminatorO", "rawValue"]
+- ["SE", "=="]
+- ["SE", "ApplicationStartJob"]
+- ["SE", "ApplicationStartJobKey"]
+- !private ["SE", "Bool"]
+- !private ["SE", "CodingKeys"]
+- ["SE", "Default_RawValue"]
+- !private ["SE", "DeliveryEventType"]
+- !private ["SE", "Discriminator"]
+- !private ["SE", "Metadata"]
+- !private ["SE", "NSLocalizedString"]
+- !private ["SE", "OpenEventType"]
+- ["SE", "RawValue"]
+- ["SE", "RefreshTokenJob"]
+- ["SE", "RefreshTokenJobKey"]
+- ["SE", "ReportEventJob"]
+- ["SE", "ReportEventJobKey"]
+- !private ["SE", "ServerSyncJobError"]
+- ["SE", "SetSubscriptions"]
+- ["SE", "SetSubscriptionsKey"]
+- ["SE", "SetUserIdJob"]
+- ["SE", "SetUserIdJobKey"]
+- ["SE", "StartJob"]
+- ["SE", "StartJobKey"]
+- ["SE", "StopJob"]
+- ["SE", "StopJobKey"]
+- !private ["SE", "String"]
+- ["SE", "SubscribeJob"]
+- ["SE", "SubscribeJobKey"]
+- ["SE", "UnsubscribeJob"]
+- ["SE", "UnsubscribeJobKey"]
+- ["SE", ""]
+- ["SE", "_Default_RawValue"]
+- !private ["SE", "_findStringSwitchCase"]
+- ["SE", "_rawHashValue"]
+- ["SE", "encode"]
+- !private ["SE", "findStringSwitchCase"]
+- ["SE", "hash"]
+- ["SE", "hashValue"]
+- ["SE", "init"]
+- ["SE", "rawValue"]
+- !private ["s7EncoderP", "container"]
+- ["SQ", "=="]
+- ["SQ", "ApplicationStartJobKey"]
+- ["SQ", "Default_RawValue"]
+- ["SQ", "RawValue"]
+- ["SQ", "RefreshTokenJobKey"]
+- ["SQ", "ReportEventJobKey"]
+- ["SQ", "SetSubscriptionsKey"]
+- ["SQ", "SetUserIdJobKey"]
+- ["SQ", "StartJobKey"]
+- ["SQ", "StopJobKey"]
+- ["SQ", "SubscribeJobKey"]
+- ["SQ", "UnsubscribeJobKey"]
+- ["SQ", ""]
+- ["SQ", "_Default_RawValue"]
+- !private ["SQ", "_findStringSwitchCase"]
+- ["SQ", "_rawHashValue"]
+- ["SQ", "debugDescription"]
+- !private ["SQ", "deliveryEventTypeKey"]
+- ["SQ", "description"]
+- !private ["SQ", "discriminator"]
+- ["SQ", "encode"]
+- !private ["SQ", "findStringSwitchCase"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- ["SQ", "init"]
+- ["SQ", "intValue"]
+- !private ["SQ", "interestKey"]
+- !private ["SQ", "interestsKey"]
+- !private ["SQ", "localInterestsChangedKey"]
+- !private ["SQ", "metadataKey"]
+- !private ["SQ", "newTokenKey"]
+- !private ["SQ", "openEventTypeKey"]
+- ["SQ", "rawValue"]
+- !private ["SQ", "startJobInstanceIdKey"]
+- !private ["SQ", "startJobTokenKey"]
+- ["SQ", "stringValue"]
+- !private ["SQ", "userIdKey"]
+- !private ["s5ErrorP", "NSLocalizedString"]
+- ["s5ErrorP", "ParseError"]
+- ["s5ErrorP", ""]
+- ["s5ErrorP", "_code"]
+- ["s5ErrorP", "_domain"]
+- ["s5ErrorP", "_getEmbeddedNSError"]
+- ["s5ErrorP", "_userInfo"]
+- ["s5ErrorP", "code"]
+- ["s5ErrorP", "domain"]
+- ["s5ErrorP", "errorDescription"]
+- ["s5ErrorP", "failureReason"]
+- ["s5ErrorP", "helpAnchor"]
+- ["s5ErrorP", "recoverySuggestion"]
+- ["s5ErrorP", "userInfo"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- ["SH", "=="]
+- ["SH", "ApplicationStartJobKey"]
+- ["SH", "Default_RawValue"]
+- ["SH", "RawValue"]
+- ["SH", "RefreshTokenJobKey"]
+- ["SH", "ReportEventJobKey"]
+- ["SH", "SetSubscriptionsKey"]
+- ["SH", "SetUserIdJobKey"]
+- ["SH", "StartJobKey"]
+- ["SH", "StopJobKey"]
+- ["SH", "SubscribeJobKey"]
+- ["SH", "UnsubscribeJobKey"]
+- ["SH", ""]
+- ["SH", "_Default_RawValue"]
+- !private ["SH", "_findStringSwitchCase"]
+- ["SH", "_rawHashValue"]
+- ["SH", "debugDescription"]
+- !private ["SH", "deliveryEventTypeKey"]
+- ["SH", "description"]
+- !private ["SH", "discriminator"]
+- ["SH", "encode"]
+- !private ["SH", "findStringSwitchCase"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- ["SH", "init"]
+- ["SH", "intValue"]
+- !private ["SH", "interestKey"]
+- !private ["SH", "interestsKey"]
+- !private ["SH", "localInterestsChangedKey"]
+- !private ["SH", "metadataKey"]
+- !private ["SH", "newTokenKey"]
+- !private ["SH", "openEventTypeKey"]
+- ["SH", "rawValue"]
+- !private ["SH", "startJobInstanceIdKey"]
+- !private ["SH", "startJobTokenKey"]
+- ["SH", "stringValue"]
+- !private ["SH", "userIdKey"]
+- !private ["s22KeyedDecodingContainerV", "decode"]
+- !private ["s30KeyedDecodingContainerProtocolP", "decode"]
+- !private ["s22KeyedEncodingContainerV", "encode"]
+- !private ["s30KeyedEncodingContainerProtocolP", "encode"]
+- !private ["10Foundation14LocalizedErrorP", "NSLocalizedString"]
+- ["10Foundation14LocalizedErrorP", "ParseError"]
+- !private ["10Foundation14LocalizedErrorP", ""]
+- ["10Foundation14LocalizedErrorP", "_code"]
+- ["10Foundation14LocalizedErrorP", "_domain"]
+- ["10Foundation14LocalizedErrorP", "_getEmbeddedNSError"]
+- ["10Foundation14LocalizedErrorP", "_userInfo"]
+- ["10Foundation14LocalizedErrorP", "code"]
+- ["10Foundation14LocalizedErrorP", "domain"]
+- ["10Foundation14LocalizedErrorP", "errorDescription"]
+- ["10Foundation14LocalizedErrorP", "failureReason"]
+- ["10Foundation14LocalizedErrorP", "helpAnchor"]
+- ["10Foundation14LocalizedErrorP", "recoverySuggestion"]
+- ["10Foundation14LocalizedErrorP", "userInfo"]
+- !private ["17PushNotifications8MetadataV", ""]
+- ["So8NSObjectP", ""]
+- !private ["17PushNotifications13OpenEventTypeV", ""]
+- ["SY", "=="]
+- ["SY", "ApplicationStartJobKey"]
+- ["SY", "Default_RawValue"]
+- ["SY", "RawValue"]
+- ["SY", "RefreshTokenJobKey"]
+- ["SY", "ReportEventJobKey"]
+- ["SY", "SetSubscriptionsKey"]
+- ["SY", "SetUserIdJobKey"]
+- ["SY", "StartJobKey"]
+- ["SY", "StopJobKey"]
+- ["SY", "SubscribeJobKey"]
+- ["SY", "UnsubscribeJobKey"]
+- ["SY", ""]
+- ["SY", "_Default_RawValue"]
+- !private ["SY", "_findStringSwitchCase"]
+- ["SY", "_rawHashValue"]
+- ["SY", "debugDescription"]
+- !private ["SY", "deliveryEventTypeKey"]
+- ["SY", "description"]
+- !private ["SY", "discriminator"]
+- ["SY", "encode"]
+- !private ["SY", "findStringSwitchCase"]
+- ["SY", "hash"]
+- ["SY", "hashValue"]
+- ["SY", "init"]
+- ["SY", "intValue"]
+- !private ["SY", "interestKey"]
+- !private ["SY", "interestsKey"]
+- !private ["SY", "localInterestsChangedKey"]
+- !private ["SY", "metadataKey"]
+- !private ["SY", "newTokenKey"]
+- !private ["SY", "openEventTypeKey"]
+- ["SY", "rawValue"]
+- !private ["SY", "startJobInstanceIdKey"]
+- !private ["SY", "startJobTokenKey"]
+- ["SY", "stringValue"]
+- !private ["SY", "userIdKey"]
+- ["17PushNotifications13ServerSyncJobO", "ApplicationStartJob"]
+- ["17PushNotifications13ServerSyncJobO", "Bool"]
+- ["17PushNotifications13ServerSyncJobO", "Codable"]
+- ["17PushNotifications13ServerSyncJobO", "CodingKey"]
+- ["17PushNotifications13ServerSyncJobO", "CodingKeys"]
+- ["17PushNotifications13ServerSyncJobO", "Decoder"]
+- !private ["17PushNotifications13ServerSyncJobO", "DeliveryEventType"]
+- ["17PushNotifications13ServerSyncJobO", "Discriminator"]
+- ["17PushNotifications13ServerSyncJobO", "Encoder"]
+- ["17PushNotifications13ServerSyncJobO", "Int"]
+- ["17PushNotifications13ServerSyncJobO", "LocalizedError"]
+- ["17PushNotifications13ServerSyncJobO", "Metadata"]
+- !private ["17PushNotifications13ServerSyncJobO", "NSLocalizedString"]
+- !private ["17PushNotifications13ServerSyncJobO", "OpenEventType"]
+- ["17PushNotifications13ServerSyncJobO", "RefreshTokenJob"]
+- ["17PushNotifications13ServerSyncJobO", "ReportEventJob"]
+- ["17PushNotifications13ServerSyncJobO", "ReportEventType"]
+- !private ["17PushNotifications13ServerSyncJobO", "ServerSyncJobError"]
+- ["17PushNotifications13ServerSyncJobO", "SetSubscriptions"]
+- ["17PushNotifications13ServerSyncJobO", "SetUserIdJob"]
+- ["17PushNotifications13ServerSyncJobO", "StartJob"]
+- ["17PushNotifications13ServerSyncJobO", "StopJob"]
+- ["17PushNotifications13ServerSyncJobO", "String"]
+- ["17PushNotifications13ServerSyncJobO", "SubscribeJob"]
+- ["17PushNotifications13ServerSyncJobO", "UnsubscribeJob"]
+- ["17PushNotifications13ServerSyncJobO", ""]
+- !private ["17PushNotifications13ServerSyncJobO", "_findStringSwitchCase"]
+- ["17PushNotifications13ServerSyncJobO", "encode"]
+- !private ["17PushNotifications13ServerSyncJobO", "findStringSwitchCase"]
+- ["17PushNotifications13ServerSyncJobO", "init"]
+- ["So18UIFocusEnvironmentP", ""]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+depends-nominal:
+- "s9CodingKeyP"
+- "17PushNotifications13ServerSyncJobO10CodingKeysO"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- !private "s7DecoderP"
+- !private "17PushNotifications17DeliveryEventTypeV"
+- "17PushNotifications13ServerSyncJobO13DiscriminatorO"
+- "SE"
+- !private "s7EncoderP"
+- "SQ"
+- "s5ErrorP"
+- !private "s25ExpressibleByArrayLiteralP"
+- "SH"
+- !private "s22KeyedDecodingContainerV"
+- !private "s30KeyedDecodingContainerProtocolP"
+- !private "s22KeyedEncodingContainerV"
+- !private "s30KeyedEncodingContainerProtocolP"
+- "10Foundation14LocalizedErrorP"
+- !private "17PushNotifications8MetadataV"
+- "So8NSObjectP"
+- !private "17PushNotifications13OpenEventTypeV"
+- "SY"
+- "17PushNotifications13ServerSyncJobO"
+- "So18UIFocusEnvironmentP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Target Support Files/PushNotifications/PushNotifications-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/TweetNacl/Sources/module.map"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/PushNotifications.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "70a035aee5fc45e36f3fca8d596f4ce7"

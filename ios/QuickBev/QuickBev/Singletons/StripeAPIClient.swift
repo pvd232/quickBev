@@ -6,9 +6,9 @@
 //  Copyright © 2020 Peter Vail Driscoll II. All rights reserved.
 //
 
-import Stripe
-import PassKit
 import Foundation
+import PassKit
+import Stripe
 
 final class StripeAPIClient: NSObject, STPCustomerEphemeralKeyProvider {
     enum APIError: Error {
@@ -20,15 +20,15 @@ final class StripeAPIClient: NSObject, STPCustomerEphemeralKeyProvider {
             }
         }
     }
-    
+
     static let sharedAPIClient = StripeAPIClient()
-    
-    private override init() {
+
+    override private init() {
         // private
     }
-    
+
 //    var baseURLString = "http://192.168.86.42:5000"
-    var baseURLString = "http://0.0.0.0:5000"
+    var baseURLString = "http://192.168.0.58:5000"
 
     private lazy var baseURL: URL = {
         guard let url = URL(string: baseURLString) else {
@@ -36,24 +36,26 @@ final class StripeAPIClient: NSObject, STPCustomerEphemeralKeyProvider {
         }
         return url
     }()
+
     func createPaymentIntent(order: Order, completion: @escaping ((Result<String, Error>) -> Void)) {
-        let url = self.baseURL.appendingPathComponent("create-payment-intent")
+        let url = baseURL.appendingPathComponent("create-payment-intent")
         var params: [String: Order] = [:]
         let encoder = JSONEncoder()
-        
+
         params["order"] = order
         let encodedParams = try! encoder.encode(params)
-    
+
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = encodedParams
-        let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: request, completionHandler: { data, response, error in
             guard let response = response as? HTTPURLResponse,
                   response.statusCode == 200,
                   let data = data,
                   let json = ((try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]) as [String: Any]??),
-                  let secret = json?["secret"] as? String else {
+                  let secret = json?["secret"] as? String
+            else {
                 completion(.failure(error ?? APIError.unknown))
                 return
             }
@@ -61,15 +63,16 @@ final class StripeAPIClient: NSObject, STPCustomerEphemeralKeyProvider {
         })
         task.resume()
     }
+
     func createCustomerKey(withAPIVersion apiVersion: String, completion: @escaping STPJSONResponseCompletionBlock) {
-        let url = self.baseURL.appendingPathComponent("create-ephemeral-keys")
+        let url = baseURL.appendingPathComponent("create-ephemeral-keys")
         var customerStripeId: String? = ""
-        if CheckoutCart.shared.stripeId != nil  {
+        if CheckoutCart.shared.stripeId != nil {
             customerStripeId = CheckoutCart.shared.stripeId!
         }
         let params: [String: Any] = [
             "api_version": apiVersion,
-            "stripe_id": (String(describing: customerStripeId!))
+            "stripe_id": String(describing: customerStripeId!),
         ]
         let jsonData = try? JSONSerialization.data(withJSONObject: params)
 
@@ -77,11 +80,12 @@ final class StripeAPIClient: NSObject, STPCustomerEphemeralKeyProvider {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = jsonData
         request.httpMethod = "POST"
-        let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: request, completionHandler: { data, response, error in
             guard let response = response as? HTTPURLResponse,
                   response.statusCode == 200,
                   let data = data,
-                  let json = ((try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]) as [String : Any]??) else {
+                  let json = ((try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]) as [String: Any]??)
+            else {
                 completion(nil, error)
                 return
             }

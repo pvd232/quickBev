@@ -1,0 +1,1891 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "STPApplePayContextDelegate"
+- "STPApplePayContext"
+- "STPPaymentState"
+provides-nominal:
+- "6Stripe26STPApplePayContextDelegateP"
+- "6Stripe18STPApplePayContextC"
+- "6Stripe15STPPaymentStateO"
+provides-member:
+- ["6Stripe26STPApplePayContextDelegateP", ""]
+- ["6Stripe18STPApplePayContextC", ""]
+- ["6Stripe15STPPaymentStateO", ""]
+provides-dynamic-lookup:
+- "_completePayment"
+- "_delegateToAppleDelegateMapping"
+- "_end"
+- "_shippingDetails"
+- "apiClient"
+- "applePayContext"
+- "authorizationController"
+- "delegate"
+- "didCancelOrTimeoutWhilePending"
+- "didPresentApplePay"
+- "error"
+- "paymentAuthorizationController"
+- "paymentAuthorizationControllerDidFinish"
+- "paymentState"
+- "presentApplePay"
+- "presentationWindow"
+- "responds"
+depends-top-level:
+- !private "!"
+- "!="
+- "&&"
+- "=="
+- "??"
+- !private "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- "CastingPrecedence"
+- !private "Dictionary"
+- "Error"
+- "FloatLiteralType"
+- "Int"
+- "IntegerLiteralType"
+- "NSError"
+- "NSLocalizedDescriptionKey"
+- "NSNumber"
+- "NSObject"
+- "NSObjectProtocol"
+- "PKContact"
+- "PKPayment"
+- "PKPaymentAuthorizationController"
+- "PKPaymentAuthorizationControllerDelegate"
+- "PKPaymentAuthorizationResult"
+- "PKPaymentAuthorizationStatus"
+- "PKPaymentRequest"
+- "PKPaymentRequestShippingContactUpdate"
+- "PKPaymentRequestShippingMethodUpdate"
+- "PKShippingMethod"
+- !private "PersonNameComponentsFormatter"
+- "STPAPIClient"
+- !private "STPAnalyticsClient"
+- "STPApplePayContext"
+- "STPApplePayContextDelegate"
+- "STPError"
+- "STPIntentClientSecretCompletionBlock"
+- "STPPaymentHandler"
+- "STPPaymentHandlerErrorCode"
+- "STPPaymentIntentParams"
+- !private "STPPaymentIntentShippingDetailsAddressParams"
+- "STPPaymentIntentShippingDetailsParams"
+- "STPPaymentMethod"
+- "STPPaymentState"
+- "STPPaymentStatus"
+- "STPVoidBlock"
+- "Selector"
+- !private "StringLiteralType"
+- !private "StripeAPI"
+- !private "UIApplication"
+- "UIViewController"
+- "UIWindow"
+- !private "UnsafeRawPointer"
+- "Void"
+- !private "_completePayment"
+- !private "_delegateToAppleDelegateMapping"
+- !private "apiClient"
+- "assert"
+- !private "authorizationController"
+- !private "delegate"
+- !private "didCancelOrTimeoutWhilePending"
+- !private "didPresentApplePay"
+- !private "kSTPApplePayContextAssociatedObjectKey"
+- !private "objc_setAssociatedObject"
+- !private "paymentState"
+- !private "presentApplePay"
+- !private "presentationWindow"
+- "stpDispatchToMainThreadIfNecessary"
+- "||"
+- !private "~="
+depends-member:
+- !private ["s18AdditiveArithmeticP", ""]
+- !private ["Sa", "compactMap"]
+- !private ["Sa", "first"]
+- !private ["SK", ""]
+- !private ["SK", "compactMap"]
+- !private ["SK", "first"]
+- !private ["So15CALayerDelegateP", ""]
+- !private ["So15CALayerDelegateP", "isKeyWindow"]
+- !private ["So15CALayerDelegateP", "window"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "compactMap"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "first"]
+- !private ["8CloudKit21CKRecordValueProtocolP", "init"]
+- !private ["So13CNPhoneNumberC", "stringValue"]
+- !private ["So15CNPostalAddressC", "city"]
+- !private ["So15CNPostalAddressC", "isoCountryCode"]
+- !private ["So15CNPostalAddressC", "postalCode"]
+- !private ["So15CNPostalAddressC", "state"]
+- !private ["So15CNPostalAddressC", "street"]
+- !private ["s7CVarArgP", "NSError"]
+- !private ["s7CVarArgP", "NSLocalizedDescriptionKey"]
+- !private ["s7CVarArgP", "NSNumber"]
+- !private ["s7CVarArgP", "PKPaymentAuthorizationController"]
+- !private ["s7CVarArgP", "PKPaymentAuthorizationControllerDelegate"]
+- !private ["s7CVarArgP", "PKPaymentAuthorizationResult"]
+- !private ["s7CVarArgP", "PKPaymentAuthorizationStatus"]
+- !private ["s7CVarArgP", "PersonNameComponentsFormatter"]
+- !private ["s7CVarArgP", "STPAPIClient"]
+- !private ["s7CVarArgP", "STPAnalyticsClient"]
+- !private ["s7CVarArgP", "STPApplePayContext"]
+- !private ["s7CVarArgP", "STPApplePayContextDelegate"]
+- !private ["s7CVarArgP", "STPError"]
+- !private ["s7CVarArgP", "STPPaymentHandler"]
+- !private ["s7CVarArgP", "STPPaymentHandlerErrorCode"]
+- !private ["s7CVarArgP", "STPPaymentIntentParams"]
+- !private ["s7CVarArgP", "STPPaymentIntentShippingDetailsAddressParams"]
+- !private ["s7CVarArgP", "STPPaymentIntentShippingDetailsParams"]
+- !private ["s7CVarArgP", "StripeAPI"]
+- !private ["s7CVarArgP", "UIApplication"]
+- !private ["s7CVarArgP", "UnsafeRawPointer"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_completePayment"]
+- !private ["s7CVarArgP", "_delegateToAppleDelegateMapping"]
+- !private ["s7CVarArgP", "_end"]
+- !private ["s7CVarArgP", "_shippingDetails"]
+- !private ["s7CVarArgP", "addClass"]
+- !private ["s7CVarArgP", "apiClient"]
+- !private ["s7CVarArgP", "assert"]
+- !private ["s7CVarArgP", "authorizationController"]
+- !private ["s7CVarArgP", "canSubmitPaymentRequest"]
+- !private ["s7CVarArgP", "city"]
+- !private ["s7CVarArgP", "compactMap"]
+- !private ["s7CVarArgP", "completePayment"]
+- !private ["s7CVarArgP", "confirmPaymentIntent"]
+- !private ["s7CVarArgP", "confirmationMethod"]
+- !private ["s7CVarArgP", "country"]
+- !private ["s7CVarArgP", "createPaymentMethod"]
+- !private ["s7CVarArgP", "delegate"]
+- !private ["s7CVarArgP", "delegateToAppleDelegateMapping"]
+- !private ["s7CVarArgP", "didCancelOrTimeoutWhilePending"]
+- !private ["s7CVarArgP", "didPresentApplePay"]
+- !private ["s7CVarArgP", "dismiss"]
+- !private ["s7CVarArgP", "end"]
+- !private ["s7CVarArgP", "error"]
+- !private ["s7CVarArgP", "errorDomain"]
+- !private ["s7CVarArgP", "errorMessageKey"]
+- !private ["s7CVarArgP", "first"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isKeyWindow"]
+- !private ["s7CVarArgP", "isoCountryCode"]
+- !private ["s7CVarArgP", "kSTPApplePayContextAssociatedObjectKey"]
+- !private ["s7CVarArgP", "name"]
+- !private ["s7CVarArgP", "objc_setAssociatedObject"]
+- ["s7CVarArgP", "paymentAuthorizationController"]
+- ["s7CVarArgP", "paymentAuthorizationControllerDidFinish"]
+- ["s7CVarArgP", "paymentAuthorizationControllerWillAuthorizePayment"]
+- !private ["s7CVarArgP", "paymentMethodId"]
+- !private ["s7CVarArgP", "paymentState"]
+- !private ["s7CVarArgP", "phone"]
+- !private ["s7CVarArgP", "phoneNumber"]
+- !private ["s7CVarArgP", "pkPaymentError"]
+- !private ["s7CVarArgP", "postalAddress"]
+- !private ["s7CVarArgP", "postalCode"]
+- !private ["s7CVarArgP", "present"]
+- !private ["s7CVarArgP", "presentApplePay"]
+- ["s7CVarArgP", "presentationWindow"]
+- ["s7CVarArgP", "presentationWindowForPaymentAuthorizationController"]
+- !private ["s7CVarArgP", "responds"]
+- !private ["s7CVarArgP", "retrievePaymentIntent"]
+- ["s7CVarArgP", "shared"]
+- !private ["s7CVarArgP", "sharedClient"]
+- !private ["s7CVarArgP", "shipping"]
+- !private ["s7CVarArgP", "shippingContact"]
+- !private ["s7CVarArgP", "shippingDetails"]
+- !private ["s7CVarArgP", "state"]
+- !private ["s7CVarArgP", "status"]
+- !private ["s7CVarArgP", "stpDispatchToMainThreadIfNecessary"]
+- !private ["s7CVarArgP", "stp_unexpectedErrorMessage"]
+- !private ["s7CVarArgP", "street"]
+- !private ["s7CVarArgP", "string"]
+- !private ["s7CVarArgP", "stringValue"]
+- !private ["s7CVarArgP", "stripeId"]
+- !private ["s7CVarArgP", "style"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "useStripeSDK"]
+- !private ["s7CVarArgP", "viewIfLoaded"]
+- !private ["s7CVarArgP", "window"]
+- !private ["s7CVarArgP", "windows"]
+- !private ["Sl", ""]
+- !private ["Sl", "compactMap"]
+- !private ["Sl", "first"]
+- !private ["Sl", "subscript"]
+- !private ["SL", ""]
+- !private ["SL", "init"]
+- !private ["10Foundation15ContiguousBytesP", "compactMap"]
+- !private ["10Foundation15ContiguousBytesP", "first"]
+- !private ["s28CustomDebugStringConvertibleP", "NSError"]
+- !private ["s28CustomDebugStringConvertibleP", "NSLocalizedDescriptionKey"]
+- !private ["s28CustomDebugStringConvertibleP", "NSNumber"]
+- !private ["s28CustomDebugStringConvertibleP", "PKPaymentAuthorizationController"]
+- !private ["s28CustomDebugStringConvertibleP", "PKPaymentAuthorizationControllerDelegate"]
+- !private ["s28CustomDebugStringConvertibleP", "PKPaymentAuthorizationResult"]
+- !private ["s28CustomDebugStringConvertibleP", "PKPaymentAuthorizationStatus"]
+- !private ["s28CustomDebugStringConvertibleP", "PersonNameComponentsFormatter"]
+- !private ["s28CustomDebugStringConvertibleP", "STPAPIClient"]
+- !private ["s28CustomDebugStringConvertibleP", "STPAnalyticsClient"]
+- !private ["s28CustomDebugStringConvertibleP", "STPApplePayContext"]
+- !private ["s28CustomDebugStringConvertibleP", "STPApplePayContextDelegate"]
+- !private ["s28CustomDebugStringConvertibleP", "STPError"]
+- !private ["s28CustomDebugStringConvertibleP", "STPPaymentHandler"]
+- !private ["s28CustomDebugStringConvertibleP", "STPPaymentHandlerErrorCode"]
+- !private ["s28CustomDebugStringConvertibleP", "STPPaymentIntentParams"]
+- !private ["s28CustomDebugStringConvertibleP", "STPPaymentIntentShippingDetailsAddressParams"]
+- !private ["s28CustomDebugStringConvertibleP", "STPPaymentIntentShippingDetailsParams"]
+- !private ["s28CustomDebugStringConvertibleP", "StripeAPI"]
+- !private ["s28CustomDebugStringConvertibleP", "UIApplication"]
+- !private ["s28CustomDebugStringConvertibleP", "UnsafeRawPointer"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "_completePayment"]
+- !private ["s28CustomDebugStringConvertibleP", "_delegateToAppleDelegateMapping"]
+- !private ["s28CustomDebugStringConvertibleP", "_end"]
+- !private ["s28CustomDebugStringConvertibleP", "_shippingDetails"]
+- !private ["s28CustomDebugStringConvertibleP", "addClass"]
+- !private ["s28CustomDebugStringConvertibleP", "apiClient"]
+- !private ["s28CustomDebugStringConvertibleP", "assert"]
+- !private ["s28CustomDebugStringConvertibleP", "authorizationController"]
+- !private ["s28CustomDebugStringConvertibleP", "callAsFunction"]
+- !private ["s28CustomDebugStringConvertibleP", "canSubmitPaymentRequest"]
+- !private ["s28CustomDebugStringConvertibleP", "city"]
+- !private ["s28CustomDebugStringConvertibleP", "compactMap"]
+- !private ["s28CustomDebugStringConvertibleP", "completePayment"]
+- !private ["s28CustomDebugStringConvertibleP", "confirmPaymentIntent"]
+- !private ["s28CustomDebugStringConvertibleP", "confirmationMethod"]
+- !private ["s28CustomDebugStringConvertibleP", "country"]
+- !private ["s28CustomDebugStringConvertibleP", "createPaymentMethod"]
+- !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "delegateToAppleDelegateMapping"]
+- !private ["s28CustomDebugStringConvertibleP", "didCancelOrTimeoutWhilePending"]
+- !private ["s28CustomDebugStringConvertibleP", "didPresentApplePay"]
+- !private ["s28CustomDebugStringConvertibleP", "dismiss"]
+- !private ["s28CustomDebugStringConvertibleP", "end"]
+- !private ["s28CustomDebugStringConvertibleP", "error"]
+- !private ["s28CustomDebugStringConvertibleP", "errorDomain"]
+- !private ["s28CustomDebugStringConvertibleP", "errorMessageKey"]
+- !private ["s28CustomDebugStringConvertibleP", "first"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isKeyWindow"]
+- !private ["s28CustomDebugStringConvertibleP", "isoCountryCode"]
+- !private ["s28CustomDebugStringConvertibleP", "kSTPApplePayContextAssociatedObjectKey"]
+- !private ["s28CustomDebugStringConvertibleP", "name"]
+- !private ["s28CustomDebugStringConvertibleP", "objc_setAssociatedObject"]
+- ["s28CustomDebugStringConvertibleP", "paymentAuthorizationController"]
+- ["s28CustomDebugStringConvertibleP", "paymentAuthorizationControllerDidFinish"]
+- ["s28CustomDebugStringConvertibleP", "paymentAuthorizationControllerWillAuthorizePayment"]
+- !private ["s28CustomDebugStringConvertibleP", "paymentMethodId"]
+- !private ["s28CustomDebugStringConvertibleP", "paymentState"]
+- !private ["s28CustomDebugStringConvertibleP", "phone"]
+- !private ["s28CustomDebugStringConvertibleP", "phoneNumber"]
+- !private ["s28CustomDebugStringConvertibleP", "pkPaymentError"]
+- !private ["s28CustomDebugStringConvertibleP", "postalAddress"]
+- !private ["s28CustomDebugStringConvertibleP", "postalCode"]
+- !private ["s28CustomDebugStringConvertibleP", "present"]
+- !private ["s28CustomDebugStringConvertibleP", "presentApplePay"]
+- ["s28CustomDebugStringConvertibleP", "presentationWindow"]
+- ["s28CustomDebugStringConvertibleP", "presentationWindowForPaymentAuthorizationController"]
+- !private ["s28CustomDebugStringConvertibleP", "requiresCapture"]
+- !private ["s28CustomDebugStringConvertibleP", "responds"]
+- !private ["s28CustomDebugStringConvertibleP", "retrievePaymentIntent"]
+- ["s28CustomDebugStringConvertibleP", "shared"]
+- !private ["s28CustomDebugStringConvertibleP", "sharedClient"]
+- !private ["s28CustomDebugStringConvertibleP", "shipping"]
+- !private ["s28CustomDebugStringConvertibleP", "shippingContact"]
+- !private ["s28CustomDebugStringConvertibleP", "shippingDetails"]
+- !private ["s28CustomDebugStringConvertibleP", "state"]
+- !private ["s28CustomDebugStringConvertibleP", "status"]
+- !private ["s28CustomDebugStringConvertibleP", "stpDispatchToMainThreadIfNecessary"]
+- !private ["s28CustomDebugStringConvertibleP", "stp_unexpectedErrorMessage"]
+- !private ["s28CustomDebugStringConvertibleP", "street"]
+- !private ["s28CustomDebugStringConvertibleP", "string"]
+- !private ["s28CustomDebugStringConvertibleP", "stringValue"]
+- !private ["s28CustomDebugStringConvertibleP", "stripeId"]
+- !private ["s28CustomDebugStringConvertibleP", "style"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "succeeded"]
+- !private ["s28CustomDebugStringConvertibleP", "useStripeSDK"]
+- !private ["s28CustomDebugStringConvertibleP", "viewIfLoaded"]
+- !private ["s28CustomDebugStringConvertibleP", "window"]
+- !private ["s28CustomDebugStringConvertibleP", "windows"]
+- !private ["s17CustomReflectableP", ""]
+- !private ["s17CustomReflectableP", "callAsFunction"]
+- !private ["s17CustomReflectableP", "compactMap"]
+- !private ["s17CustomReflectableP", "first"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "requiresCapture"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "succeeded"]
+- !private ["s23CustomStringConvertibleP", "NSError"]
+- !private ["s23CustomStringConvertibleP", "NSLocalizedDescriptionKey"]
+- !private ["s23CustomStringConvertibleP", "NSNumber"]
+- !private ["s23CustomStringConvertibleP", "PKPaymentAuthorizationController"]
+- !private ["s23CustomStringConvertibleP", "PKPaymentAuthorizationControllerDelegate"]
+- !private ["s23CustomStringConvertibleP", "PKPaymentAuthorizationResult"]
+- !private ["s23CustomStringConvertibleP", "PKPaymentAuthorizationStatus"]
+- !private ["s23CustomStringConvertibleP", "PersonNameComponentsFormatter"]
+- !private ["s23CustomStringConvertibleP", "STPAPIClient"]
+- !private ["s23CustomStringConvertibleP", "STPAnalyticsClient"]
+- !private ["s23CustomStringConvertibleP", "STPApplePayContext"]
+- !private ["s23CustomStringConvertibleP", "STPApplePayContextDelegate"]
+- !private ["s23CustomStringConvertibleP", "STPError"]
+- !private ["s23CustomStringConvertibleP", "STPPaymentHandler"]
+- !private ["s23CustomStringConvertibleP", "STPPaymentHandlerErrorCode"]
+- !private ["s23CustomStringConvertibleP", "STPPaymentIntentParams"]
+- !private ["s23CustomStringConvertibleP", "STPPaymentIntentShippingDetailsAddressParams"]
+- !private ["s23CustomStringConvertibleP", "STPPaymentIntentShippingDetailsParams"]
+- !private ["s23CustomStringConvertibleP", "StripeAPI"]
+- !private ["s23CustomStringConvertibleP", "UIApplication"]
+- !private ["s23CustomStringConvertibleP", "UnsafeRawPointer"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_completePayment"]
+- !private ["s23CustomStringConvertibleP", "_delegateToAppleDelegateMapping"]
+- !private ["s23CustomStringConvertibleP", "_end"]
+- !private ["s23CustomStringConvertibleP", "_shippingDetails"]
+- !private ["s23CustomStringConvertibleP", "addClass"]
+- !private ["s23CustomStringConvertibleP", "apiClient"]
+- !private ["s23CustomStringConvertibleP", "assert"]
+- !private ["s23CustomStringConvertibleP", "authorizationController"]
+- !private ["s23CustomStringConvertibleP", "canSubmitPaymentRequest"]
+- !private ["s23CustomStringConvertibleP", "city"]
+- !private ["s23CustomStringConvertibleP", "compactMap"]
+- !private ["s23CustomStringConvertibleP", "completePayment"]
+- !private ["s23CustomStringConvertibleP", "confirmPaymentIntent"]
+- !private ["s23CustomStringConvertibleP", "confirmationMethod"]
+- !private ["s23CustomStringConvertibleP", "country"]
+- !private ["s23CustomStringConvertibleP", "createPaymentMethod"]
+- !private ["s23CustomStringConvertibleP", "delegate"]
+- !private ["s23CustomStringConvertibleP", "delegateToAppleDelegateMapping"]
+- !private ["s23CustomStringConvertibleP", "didCancelOrTimeoutWhilePending"]
+- !private ["s23CustomStringConvertibleP", "didPresentApplePay"]
+- !private ["s23CustomStringConvertibleP", "dismiss"]
+- !private ["s23CustomStringConvertibleP", "end"]
+- !private ["s23CustomStringConvertibleP", "error"]
+- !private ["s23CustomStringConvertibleP", "errorDomain"]
+- !private ["s23CustomStringConvertibleP", "errorMessageKey"]
+- !private ["s23CustomStringConvertibleP", "first"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isKeyWindow"]
+- !private ["s23CustomStringConvertibleP", "isoCountryCode"]
+- !private ["s23CustomStringConvertibleP", "kSTPApplePayContextAssociatedObjectKey"]
+- !private ["s23CustomStringConvertibleP", "name"]
+- !private ["s23CustomStringConvertibleP", "objc_setAssociatedObject"]
+- ["s23CustomStringConvertibleP", "paymentAuthorizationController"]
+- ["s23CustomStringConvertibleP", "paymentAuthorizationControllerDidFinish"]
+- ["s23CustomStringConvertibleP", "paymentAuthorizationControllerWillAuthorizePayment"]
+- !private ["s23CustomStringConvertibleP", "paymentMethodId"]
+- !private ["s23CustomStringConvertibleP", "paymentState"]
+- !private ["s23CustomStringConvertibleP", "phone"]
+- !private ["s23CustomStringConvertibleP", "phoneNumber"]
+- !private ["s23CustomStringConvertibleP", "pkPaymentError"]
+- !private ["s23CustomStringConvertibleP", "postalAddress"]
+- !private ["s23CustomStringConvertibleP", "postalCode"]
+- !private ["s23CustomStringConvertibleP", "present"]
+- !private ["s23CustomStringConvertibleP", "presentApplePay"]
+- ["s23CustomStringConvertibleP", "presentationWindow"]
+- ["s23CustomStringConvertibleP", "presentationWindowForPaymentAuthorizationController"]
+- !private ["s23CustomStringConvertibleP", "responds"]
+- !private ["s23CustomStringConvertibleP", "retrievePaymentIntent"]
+- ["s23CustomStringConvertibleP", "shared"]
+- !private ["s23CustomStringConvertibleP", "sharedClient"]
+- !private ["s23CustomStringConvertibleP", "shipping"]
+- !private ["s23CustomStringConvertibleP", "shippingContact"]
+- !private ["s23CustomStringConvertibleP", "shippingDetails"]
+- !private ["s23CustomStringConvertibleP", "state"]
+- !private ["s23CustomStringConvertibleP", "status"]
+- !private ["s23CustomStringConvertibleP", "stpDispatchToMainThreadIfNecessary"]
+- !private ["s23CustomStringConvertibleP", "stp_unexpectedErrorMessage"]
+- !private ["s23CustomStringConvertibleP", "street"]
+- !private ["s23CustomStringConvertibleP", "string"]
+- !private ["s23CustomStringConvertibleP", "stringValue"]
+- !private ["s23CustomStringConvertibleP", "stripeId"]
+- !private ["s23CustomStringConvertibleP", "style"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "useStripeSDK"]
+- !private ["s23CustomStringConvertibleP", "viewIfLoaded"]
+- !private ["s23CustomStringConvertibleP", "window"]
+- !private ["s23CustomStringConvertibleP", "windows"]
+- !private ["10Foundation12DataProtocolP", ""]
+- !private ["10Foundation12DataProtocolP", "compactMap"]
+- !private ["10Foundation12DataProtocolP", "first"]
+- !private ["Se", "callAsFunction"]
+- !private ["Se", "compactMap"]
+- !private ["Se", "first"]
+- !private ["Se", "requiresCapture"]
+- !private ["Se", "subscript"]
+- !private ["Se", "succeeded"]
+- !private ["SD", "subscript"]
+- !private ["SE", "callAsFunction"]
+- !private ["SE", "compactMap"]
+- !private ["SE", "first"]
+- !private ["SE", "requiresCapture"]
+- !private ["SE", "subscript"]
+- !private ["SE", "succeeded"]
+- ["SQ", "=="]
+- ["SQ", "Default_RawValue"]
+- !private ["SQ", "NSError"]
+- !private ["SQ", "NSLocalizedDescriptionKey"]
+- !private ["SQ", "NSNumber"]
+- !private ["SQ", "OBJC_ASSOCIATION_RETAIN_NONATOMIC"]
+- !private ["SQ", "PKPaymentAuthorizationController"]
+- !private ["SQ", "PKPaymentAuthorizationControllerDelegate"]
+- !private ["SQ", "PKPaymentAuthorizationResult"]
+- !private ["SQ", "PKPaymentAuthorizationStatus"]
+- !private ["SQ", "PersonNameComponentsFormatter"]
+- ["SQ", "RawValue"]
+- !private ["SQ", "STPAPIClient"]
+- !private ["SQ", "STPAnalyticsClient"]
+- !private ["SQ", "STPApplePayContext"]
+- !private ["SQ", "STPApplePayContextDelegate"]
+- !private ["SQ", "STPError"]
+- !private ["SQ", "STPPaymentHandler"]
+- !private ["SQ", "STPPaymentHandlerErrorCode"]
+- !private ["SQ", "STPPaymentIntentParams"]
+- !private ["SQ", "STPPaymentIntentShippingDetailsAddressParams"]
+- !private ["SQ", "STPPaymentIntentShippingDetailsParams"]
+- !private ["SQ", "StripeAPI"]
+- !private ["SQ", "UIApplication"]
+- !private ["SQ", "UnsafeRawPointer"]
+- ["SQ", ""]
+- ["SQ", "_Default_RawValue"]
+- !private ["SQ", "_completePayment"]
+- !private ["SQ", "_delegateToAppleDelegateMapping"]
+- !private ["SQ", "_end"]
+- ["SQ", "_rawHashValue"]
+- !private ["SQ", "_shippingDetails"]
+- !private ["SQ", "addClass"]
+- !private ["SQ", "apiClient"]
+- !private ["SQ", "assert"]
+- !private ["SQ", "authorizationController"]
+- !private ["SQ", "automatic"]
+- !private ["SQ", "callAsFunction"]
+- !private ["SQ", "canSubmitPaymentRequest"]
+- !private ["SQ", "city"]
+- !private ["SQ", "compactMap"]
+- !private ["SQ", "completePayment"]
+- !private ["SQ", "confirmPaymentIntent"]
+- !private ["SQ", "confirmationMethod"]
+- !private ["SQ", "country"]
+- !private ["SQ", "createPaymentMethod"]
+- !private ["SQ", "delegate"]
+- !private ["SQ", "delegateToAppleDelegateMapping"]
+- !private ["SQ", "didCancelOrTimeoutWhilePending"]
+- !private ["SQ", "didPresentApplePay"]
+- !private ["SQ", "dismiss"]
+- !private ["SQ", "end"]
+- ["SQ", "error"]
+- !private ["SQ", "errorDomain"]
+- !private ["SQ", "errorMessageKey"]
+- !private ["SQ", "failure"]
+- !private ["SQ", "first"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- ["SQ", "init"]
+- !private ["SQ", "intentStatusErrorCode"]
+- !private ["SQ", "isKeyWindow"]
+- !private ["SQ", "isoCountryCode"]
+- !private ["SQ", "kSTPApplePayContextAssociatedObjectKey"]
+- !private ["SQ", "long"]
+- !private ["SQ", "name"]
+- ["SQ", "notStarted"]
+- !private ["SQ", "objc_setAssociatedObject"]
+- ["SQ", "paymentAuthorizationController"]
+- ["SQ", "paymentAuthorizationControllerDidFinish"]
+- ["SQ", "paymentAuthorizationControllerWillAuthorizePayment"]
+- !private ["SQ", "paymentMethodId"]
+- !private ["SQ", "paymentState"]
+- ["SQ", "pending"]
+- !private ["SQ", "phone"]
+- !private ["SQ", "phoneNumber"]
+- !private ["SQ", "pkPaymentError"]
+- !private ["SQ", "postalAddress"]
+- !private ["SQ", "postalCode"]
+- !private ["SQ", "present"]
+- !private ["SQ", "presentApplePay"]
+- ["SQ", "presentationWindow"]
+- ["SQ", "presentationWindowForPaymentAuthorizationController"]
+- ["SQ", "rawValue"]
+- !private ["SQ", "requiresCapture"]
+- !private ["SQ", "requiresConfirmation"]
+- !private ["SQ", "requiresPaymentMethod"]
+- !private ["SQ", "responds"]
+- !private ["SQ", "retrievePaymentIntent"]
+- ["SQ", "shared"]
+- !private ["SQ", "sharedClient"]
+- !private ["SQ", "shipping"]
+- !private ["SQ", "shippingContact"]
+- !private ["SQ", "shippingDetails"]
+- !private ["SQ", "state"]
+- !private ["SQ", "status"]
+- !private ["SQ", "stpDispatchToMainThreadIfNecessary"]
+- !private ["SQ", "stp_unexpectedErrorMessage"]
+- !private ["SQ", "street"]
+- !private ["SQ", "string"]
+- !private ["SQ", "stringValue"]
+- !private ["SQ", "stripeId"]
+- !private ["SQ", "style"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "succeeded"]
+- ["SQ", "success"]
+- !private ["SQ", "useStripeSDK"]
+- !private ["SQ", "userCancellation"]
+- !private ["SQ", "viewIfLoaded"]
+- !private ["SQ", "window"]
+- !private ["SQ", "windows"]
+- !private ["s5ErrorP", "init"]
+- !private ["s5ErrorP", "stp_unexpectedErrorMessage"]
+- !private ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "compactMap"]
+- !private ["s25ExpressibleByArrayLiteralP", "first"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s27ExpressibleByBooleanLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Key"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Value"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s25ExpressibleByFloatLiteralP", ""]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", ""]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "callAsFunction"]
+- !private ["s23ExpressibleByNilLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "requiresCapture"]
+- !private ["s23ExpressibleByNilLiteralP", "succeeded"]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["SF", ""]
+- ["So11NSFormatterC", ""]
+- !private ["So11NSFormatterC", "init"]
+- !private ["So11NSFormatterC", "string"]
+- !private ["So11NSFormatterC", "stringFromPersonNameComponents"]
+- !private ["So11NSFormatterC", "style"]
+- !private ["7SwiftUI7GestureP", "callAsFunction"]
+- !private ["7SwiftUI7GestureP", "requiresCapture"]
+- !private ["7SwiftUI7GestureP", "succeeded"]
+- ["SH", "=="]
+- ["SH", "Default_RawValue"]
+- !private ["SH", "NSError"]
+- !private ["SH", "NSLocalizedDescriptionKey"]
+- !private ["SH", "NSNumber"]
+- !private ["SH", "OBJC_ASSOCIATION_RETAIN_NONATOMIC"]
+- !private ["SH", "PKPaymentAuthorizationController"]
+- !private ["SH", "PKPaymentAuthorizationControllerDelegate"]
+- !private ["SH", "PKPaymentAuthorizationResult"]
+- !private ["SH", "PKPaymentAuthorizationStatus"]
+- !private ["SH", "PersonNameComponentsFormatter"]
+- ["SH", "RawValue"]
+- !private ["SH", "STPAPIClient"]
+- !private ["SH", "STPAnalyticsClient"]
+- !private ["SH", "STPApplePayContext"]
+- !private ["SH", "STPApplePayContextDelegate"]
+- !private ["SH", "STPError"]
+- !private ["SH", "STPPaymentHandler"]
+- !private ["SH", "STPPaymentHandlerErrorCode"]
+- !private ["SH", "STPPaymentIntentParams"]
+- !private ["SH", "STPPaymentIntentShippingDetailsAddressParams"]
+- !private ["SH", "STPPaymentIntentShippingDetailsParams"]
+- !private ["SH", "StripeAPI"]
+- !private ["SH", "UIApplication"]
+- !private ["SH", "UnsafeRawPointer"]
+- ["SH", ""]
+- ["SH", "_Default_RawValue"]
+- !private ["SH", "_completePayment"]
+- !private ["SH", "_delegateToAppleDelegateMapping"]
+- !private ["SH", "_end"]
+- ["SH", "_rawHashValue"]
+- !private ["SH", "_shippingDetails"]
+- !private ["SH", "addClass"]
+- !private ["SH", "apiClient"]
+- !private ["SH", "assert"]
+- !private ["SH", "authorizationController"]
+- !private ["SH", "automatic"]
+- !private ["SH", "callAsFunction"]
+- !private ["SH", "canSubmitPaymentRequest"]
+- !private ["SH", "city"]
+- !private ["SH", "compactMap"]
+- !private ["SH", "completePayment"]
+- !private ["SH", "confirmPaymentIntent"]
+- !private ["SH", "confirmationMethod"]
+- !private ["SH", "country"]
+- !private ["SH", "createPaymentMethod"]
+- !private ["SH", "delegate"]
+- !private ["SH", "delegateToAppleDelegateMapping"]
+- !private ["SH", "didCancelOrTimeoutWhilePending"]
+- !private ["SH", "didPresentApplePay"]
+- !private ["SH", "dismiss"]
+- !private ["SH", "end"]
+- ["SH", "error"]
+- !private ["SH", "errorDomain"]
+- !private ["SH", "errorMessageKey"]
+- !private ["SH", "failure"]
+- !private ["SH", "first"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- ["SH", "init"]
+- !private ["SH", "intentStatusErrorCode"]
+- !private ["SH", "isKeyWindow"]
+- !private ["SH", "isoCountryCode"]
+- !private ["SH", "kSTPApplePayContextAssociatedObjectKey"]
+- !private ["SH", "long"]
+- !private ["SH", "name"]
+- ["SH", "notStarted"]
+- !private ["SH", "objc_setAssociatedObject"]
+- ["SH", "paymentAuthorizationController"]
+- ["SH", "paymentAuthorizationControllerDidFinish"]
+- ["SH", "paymentAuthorizationControllerWillAuthorizePayment"]
+- !private ["SH", "paymentMethodId"]
+- !private ["SH", "paymentState"]
+- ["SH", "pending"]
+- !private ["SH", "phone"]
+- !private ["SH", "phoneNumber"]
+- !private ["SH", "pkPaymentError"]
+- !private ["SH", "postalAddress"]
+- !private ["SH", "postalCode"]
+- !private ["SH", "present"]
+- !private ["SH", "presentApplePay"]
+- ["SH", "presentationWindow"]
+- ["SH", "presentationWindowForPaymentAuthorizationController"]
+- ["SH", "rawValue"]
+- !private ["SH", "requiresCapture"]
+- !private ["SH", "requiresConfirmation"]
+- !private ["SH", "requiresPaymentMethod"]
+- !private ["SH", "responds"]
+- !private ["SH", "retrievePaymentIntent"]
+- ["SH", "shared"]
+- !private ["SH", "sharedClient"]
+- !private ["SH", "shipping"]
+- !private ["SH", "shippingContact"]
+- !private ["SH", "shippingDetails"]
+- !private ["SH", "state"]
+- !private ["SH", "status"]
+- !private ["SH", "stpDispatchToMainThreadIfNecessary"]
+- !private ["SH", "stp_unexpectedErrorMessage"]
+- !private ["SH", "street"]
+- !private ["SH", "string"]
+- !private ["SH", "stringValue"]
+- !private ["SH", "stripeId"]
+- !private ["SH", "style"]
+- !private ["SH", "subscript"]
+- !private ["SH", "succeeded"]
+- ["SH", "success"]
+- !private ["SH", "useStripeSDK"]
+- !private ["SH", "userCancellation"]
+- !private ["SH", "viewIfLoaded"]
+- !private ["SH", "window"]
+- !private ["SH", "windows"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- !private ["SM", ""]
+- !private ["SM", "compactMap"]
+- !private ["SM", "first"]
+- !private ["10Foundation19MutableDataProtocolP", "compactMap"]
+- !private ["10Foundation19MutableDataProtocolP", "first"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "city"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "isKeyWindow"]
+- !private ["So8NSCodingP", "isoCountryCode"]
+- !private ["So8NSCodingP", "numberWithBool"]
+- !private ["So8NSCodingP", "numberWithChar"]
+- !private ["So8NSCodingP", "numberWithDouble"]
+- !private ["So8NSCodingP", "numberWithFloat"]
+- !private ["So8NSCodingP", "numberWithInt"]
+- !private ["So8NSCodingP", "numberWithInteger"]
+- !private ["So8NSCodingP", "numberWithLong"]
+- !private ["So8NSCodingP", "numberWithLongLong"]
+- !private ["So8NSCodingP", "numberWithShort"]
+- !private ["So8NSCodingP", "numberWithUnsignedChar"]
+- !private ["So8NSCodingP", "numberWithUnsignedInt"]
+- !private ["So8NSCodingP", "numberWithUnsignedInteger"]
+- !private ["So8NSCodingP", "numberWithUnsignedLong"]
+- !private ["So8NSCodingP", "numberWithUnsignedLongLong"]
+- !private ["So8NSCodingP", "numberWithUnsignedShort"]
+- !private ["So8NSCodingP", "postalCode"]
+- !private ["So8NSCodingP", "state"]
+- !private ["So8NSCodingP", "stp_unexpectedErrorMessage"]
+- !private ["So8NSCodingP", "street"]
+- !private ["So8NSCodingP", "string"]
+- !private ["So8NSCodingP", "stringFromPersonNameComponents"]
+- !private ["So8NSCodingP", "stringValue"]
+- !private ["So8NSCodingP", "style"]
+- !private ["So8NSCodingP", "viewIfLoaded"]
+- !private ["So8NSCodingP", "window"]
+- !private ["So9NSCopyingP", ""]
+- !private ["So9NSCopyingP", "city"]
+- !private ["So9NSCopyingP", "country"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "isoCountryCode"]
+- !private ["So9NSCopyingP", "numberWithBool"]
+- !private ["So9NSCopyingP", "numberWithChar"]
+- !private ["So9NSCopyingP", "numberWithDouble"]
+- !private ["So9NSCopyingP", "numberWithFloat"]
+- !private ["So9NSCopyingP", "numberWithInt"]
+- !private ["So9NSCopyingP", "numberWithInteger"]
+- !private ["So9NSCopyingP", "numberWithLong"]
+- !private ["So9NSCopyingP", "numberWithLongLong"]
+- !private ["So9NSCopyingP", "numberWithShort"]
+- !private ["So9NSCopyingP", "numberWithUnsignedChar"]
+- !private ["So9NSCopyingP", "numberWithUnsignedInt"]
+- !private ["So9NSCopyingP", "numberWithUnsignedInteger"]
+- !private ["So9NSCopyingP", "numberWithUnsignedLong"]
+- !private ["So9NSCopyingP", "numberWithUnsignedLongLong"]
+- !private ["So9NSCopyingP", "numberWithUnsignedShort"]
+- !private ["So9NSCopyingP", "paymentMethodId"]
+- !private ["So9NSCopyingP", "phone"]
+- !private ["So9NSCopyingP", "postalCode"]
+- !private ["So9NSCopyingP", "shipping"]
+- !private ["So9NSCopyingP", "state"]
+- !private ["So9NSCopyingP", "stp_unexpectedErrorMessage"]
+- !private ["So9NSCopyingP", "street"]
+- !private ["So9NSCopyingP", "string"]
+- !private ["So9NSCopyingP", "stringFromPersonNameComponents"]
+- !private ["So9NSCopyingP", "stringValue"]
+- !private ["So9NSCopyingP", "style"]
+- !private ["So9NSCopyingP", "useStripeSDK"]
+- !private ["So7NSErrorC", "init"]
+- !private ["So7NSErrorC", "stp_unexpectedErrorMessage"]
+- !private ["So26NSExtensionRequestHandlingP", "viewIfLoaded"]
+- !private ["So20NSFetchRequestResultP", "init"]
+- !private ["So16NSMutableCopyingP", "city"]
+- !private ["So16NSMutableCopyingP", "isoCountryCode"]
+- !private ["So16NSMutableCopyingP", "postalCode"]
+- !private ["So16NSMutableCopyingP", "state"]
+- !private ["So16NSMutableCopyingP", "street"]
+- !private ["So8NSNumberC", "init"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "Error"]
+- !private ["So8NSObjectC", "NSError"]
+- !private ["So8NSObjectC", "NSLocalizedDescriptionKey"]
+- !private ["So8NSObjectC", "NSNumber"]
+- ["So8NSObjectC", "PKContact"]
+- ["So8NSObjectC", "PKPayment"]
+- ["So8NSObjectC", "PKPaymentAuthorizationController"]
+- !private ["So8NSObjectC", "PKPaymentAuthorizationControllerDelegate"]
+- ["So8NSObjectC", "PKPaymentAuthorizationResult"]
+- ["So8NSObjectC", "PKPaymentAuthorizationStatus"]
+- ["So8NSObjectC", "PKPaymentRequest"]
+- ["So8NSObjectC", "PKPaymentRequestShippingContactUpdate"]
+- ["So8NSObjectC", "PKPaymentRequestShippingMethodUpdate"]
+- ["So8NSObjectC", "PKShippingMethod"]
+- !private ["So8NSObjectC", "PersonNameComponentsFormatter"]
+- ["So8NSObjectC", "STPAPIClient"]
+- !private ["So8NSObjectC", "STPAnalyticsClient"]
+- !private ["So8NSObjectC", "STPApplePayContext"]
+- ["So8NSObjectC", "STPApplePayContextDelegate"]
+- !private ["So8NSObjectC", "STPError"]
+- !private ["So8NSObjectC", "STPPaymentHandler"]
+- !private ["So8NSObjectC", "STPPaymentHandlerErrorCode"]
+- !private ["So8NSObjectC", "STPPaymentIntentParams"]
+- !private ["So8NSObjectC", "STPPaymentIntentShippingDetailsAddressParams"]
+- ["So8NSObjectC", "STPPaymentIntentShippingDetailsParams"]
+- ["So8NSObjectC", "STPPaymentState"]
+- ["So8NSObjectC", "STPVoidBlock"]
+- ["So8NSObjectC", "Selector"]
+- !private ["So8NSObjectC", "StripeAPI"]
+- !private ["So8NSObjectC", "UIApplication"]
+- ["So8NSObjectC", "UIViewController"]
+- ["So8NSObjectC", "UIWindow"]
+- !private ["So8NSObjectC", "UnsafeRawPointer"]
+- ["So8NSObjectC", "Void"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "_completePayment"]
+- ["So8NSObjectC", "_delegateToAppleDelegateMapping"]
+- ["So8NSObjectC", "_end"]
+- ["So8NSObjectC", "_shippingDetails"]
+- !private ["So8NSObjectC", "addClass"]
+- ["So8NSObjectC", "apiClient"]
+- !private ["So8NSObjectC", "assert"]
+- ["So8NSObjectC", "authorizationController"]
+- !private ["So8NSObjectC", "canSubmitPaymentRequest"]
+- !private ["So8NSObjectC", "city"]
+- !private ["So8NSObjectC", "completePayment"]
+- !private ["So8NSObjectC", "confirmPaymentIntent"]
+- !private ["So8NSObjectC", "confirmationMethod"]
+- !private ["So8NSObjectC", "country"]
+- !private ["So8NSObjectC", "createPaymentMethod"]
+- ["So8NSObjectC", "delegate"]
+- !private ["So8NSObjectC", "delegateToAppleDelegateMapping"]
+- ["So8NSObjectC", "didCancelOrTimeoutWhilePending"]
+- ["So8NSObjectC", "didPresentApplePay"]
+- !private ["So8NSObjectC", "dismiss"]
+- !private ["So8NSObjectC", "dismissWithCompletion"]
+- !private ["So8NSObjectC", "end"]
+- ["So8NSObjectC", "error"]
+- !private ["So8NSObjectC", "errorDomain"]
+- !private ["So8NSObjectC", "errorMessageKey"]
+- !private ["So8NSObjectC", "errorWithDomain"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "isKeyWindow"]
+- !private ["So8NSObjectC", "isoCountryCode"]
+- !private ["So8NSObjectC", "kSTPApplePayContextAssociatedObjectKey"]
+- !private ["So8NSObjectC", "name"]
+- !private ["So8NSObjectC", "numberWithBool"]
+- !private ["So8NSObjectC", "numberWithChar"]
+- !private ["So8NSObjectC", "numberWithDouble"]
+- !private ["So8NSObjectC", "numberWithFloat"]
+- !private ["So8NSObjectC", "numberWithInt"]
+- !private ["So8NSObjectC", "numberWithInteger"]
+- !private ["So8NSObjectC", "numberWithLong"]
+- !private ["So8NSObjectC", "numberWithLongLong"]
+- !private ["So8NSObjectC", "numberWithShort"]
+- !private ["So8NSObjectC", "numberWithUnsignedChar"]
+- !private ["So8NSObjectC", "numberWithUnsignedInt"]
+- !private ["So8NSObjectC", "numberWithUnsignedInteger"]
+- !private ["So8NSObjectC", "numberWithUnsignedLong"]
+- !private ["So8NSObjectC", "numberWithUnsignedLongLong"]
+- !private ["So8NSObjectC", "numberWithUnsignedShort"]
+- !private ["So8NSObjectC", "objc_setAssociatedObject"]
+- ["So8NSObjectC", "paymentAuthorizationController"]
+- ["So8NSObjectC", "paymentAuthorizationControllerDidFinish"]
+- ["So8NSObjectC", "paymentAuthorizationControllerWillAuthorizePayment"]
+- !private ["So8NSObjectC", "paymentMethodId"]
+- ["So8NSObjectC", "paymentState"]
+- !private ["So8NSObjectC", "phone"]
+- !private ["So8NSObjectC", "phoneNumber"]
+- !private ["So8NSObjectC", "pkPaymentError"]
+- !private ["So8NSObjectC", "postalAddress"]
+- !private ["So8NSObjectC", "postalCode"]
+- !private ["So8NSObjectC", "present"]
+- ["So8NSObjectC", "presentApplePay"]
+- !private ["So8NSObjectC", "presentWithCompletion"]
+- ["So8NSObjectC", "presentationWindow"]
+- ["So8NSObjectC", "presentationWindowForPaymentAuthorizationController"]
+- ["So8NSObjectC", "responds"]
+- !private ["So8NSObjectC", "retrievePaymentIntent"]
+- ["So8NSObjectC", "shared"]
+- !private ["So8NSObjectC", "sharedClient"]
+- !private ["So8NSObjectC", "shipping"]
+- !private ["So8NSObjectC", "shippingContact"]
+- !private ["So8NSObjectC", "shippingDetails"]
+- !private ["So8NSObjectC", "state"]
+- !private ["So8NSObjectC", "status"]
+- !private ["So8NSObjectC", "stpDispatchToMainThreadIfNecessary"]
+- !private ["So8NSObjectC", "stp_unexpectedErrorMessage"]
+- !private ["So8NSObjectC", "street"]
+- !private ["So8NSObjectC", "string"]
+- !private ["So8NSObjectC", "stringForObjectValue"]
+- !private ["So8NSObjectC", "stringFromPersonNameComponents"]
+- !private ["So8NSObjectC", "stringValue"]
+- !private ["So8NSObjectC", "stripeId"]
+- !private ["So8NSObjectC", "style"]
+- !private ["So8NSObjectC", "useStripeSDK"]
+- !private ["So8NSObjectC", "value"]
+- !private ["So8NSObjectC", "valueWithBytes"]
+- !private ["So8NSObjectC", "valueWithCATransform3D"]
+- !private ["So8NSObjectC", "valueWithCGAffineTransform"]
+- !private ["So8NSObjectC", "valueWithCGPoint"]
+- !private ["So8NSObjectC", "valueWithCGRect"]
+- !private ["So8NSObjectC", "valueWithCGSize"]
+- !private ["So8NSObjectC", "valueWithCGVector"]
+- !private ["So8NSObjectC", "valueWithCMTime"]
+- !private ["So8NSObjectC", "valueWithCMTimeMapping"]
+- !private ["So8NSObjectC", "valueWithCMTimeRange"]
+- !private ["So8NSObjectC", "valueWithDirectionalEdgeInsets"]
+- !private ["So8NSObjectC", "valueWithNonretainedObject"]
+- !private ["So8NSObjectC", "valueWithPointer"]
+- !private ["So8NSObjectC", "valueWithRange"]
+- !private ["So8NSObjectC", "valueWithUIEdgeInsets"]
+- !private ["So8NSObjectC", "valueWithUIOffset"]
+- !private ["So8NSObjectC", "viewIfLoaded"]
+- !private ["So8NSObjectC", "window"]
+- !private ["So8NSObjectC", "windows"]
+- ["So8NSObjectP", "Bool"]
+- ["So8NSObjectP", "Error"]
+- !private ["So8NSObjectP", "NSError"]
+- !private ["So8NSObjectP", "NSLocalizedDescriptionKey"]
+- !private ["So8NSObjectP", "NSNumber"]
+- ["So8NSObjectP", "PKContact"]
+- ["So8NSObjectP", "PKPayment"]
+- ["So8NSObjectP", "PKPaymentAuthorizationController"]
+- !private ["So8NSObjectP", "PKPaymentAuthorizationControllerDelegate"]
+- ["So8NSObjectP", "PKPaymentAuthorizationResult"]
+- ["So8NSObjectP", "PKPaymentAuthorizationStatus"]
+- ["So8NSObjectP", "PKPaymentRequest"]
+- ["So8NSObjectP", "PKPaymentRequestShippingContactUpdate"]
+- ["So8NSObjectP", "PKPaymentRequestShippingMethodUpdate"]
+- ["So8NSObjectP", "PKShippingMethod"]
+- !private ["So8NSObjectP", "PersonNameComponentsFormatter"]
+- ["So8NSObjectP", "STPAPIClient"]
+- !private ["So8NSObjectP", "STPAnalyticsClient"]
+- ["So8NSObjectP", "STPApplePayContext"]
+- ["So8NSObjectP", "STPApplePayContextDelegate"]
+- !private ["So8NSObjectP", "STPError"]
+- ["So8NSObjectP", "STPIntentClientSecretCompletionBlock"]
+- !private ["So8NSObjectP", "STPPaymentHandler"]
+- !private ["So8NSObjectP", "STPPaymentHandlerErrorCode"]
+- !private ["So8NSObjectP", "STPPaymentIntentParams"]
+- !private ["So8NSObjectP", "STPPaymentIntentShippingDetailsAddressParams"]
+- ["So8NSObjectP", "STPPaymentIntentShippingDetailsParams"]
+- ["So8NSObjectP", "STPPaymentMethod"]
+- ["So8NSObjectP", "STPPaymentState"]
+- ["So8NSObjectP", "STPPaymentStatus"]
+- ["So8NSObjectP", "STPVoidBlock"]
+- ["So8NSObjectP", "Selector"]
+- !private ["So8NSObjectP", "StripeAPI"]
+- !private ["So8NSObjectP", "UIApplication"]
+- ["So8NSObjectP", "UIViewController"]
+- ["So8NSObjectP", "UIWindow"]
+- !private ["So8NSObjectP", "UnsafeRawPointer"]
+- ["So8NSObjectP", "Void"]
+- ["So8NSObjectP", ""]
+- ["So8NSObjectP", "_completePayment"]
+- ["So8NSObjectP", "_delegateToAppleDelegateMapping"]
+- ["So8NSObjectP", "_end"]
+- ["So8NSObjectP", "_shippingDetails"]
+- ["So8NSObjectP", "addClass"]
+- ["So8NSObjectP", "apiClient"]
+- ["So8NSObjectP", "applePayContext"]
+- !private ["So8NSObjectP", "assert"]
+- ["So8NSObjectP", "authorizationController"]
+- ["So8NSObjectP", "canSubmitPaymentRequest"]
+- !private ["So8NSObjectP", "city"]
+- !private ["So8NSObjectP", "completePayment"]
+- !private ["So8NSObjectP", "confirmPaymentIntent"]
+- !private ["So8NSObjectP", "confirmationMethod"]
+- !private ["So8NSObjectP", "country"]
+- !private ["So8NSObjectP", "createPaymentMethod"]
+- ["So8NSObjectP", "deinit"]
+- ["So8NSObjectP", "delegate"]
+- !private ["So8NSObjectP", "delegateToAppleDelegateMapping"]
+- ["So8NSObjectP", "didCancelOrTimeoutWhilePending"]
+- ["So8NSObjectP", "didPresentApplePay"]
+- !private ["So8NSObjectP", "dismiss"]
+- !private ["So8NSObjectP", "dismissWithCompletion"]
+- !private ["So8NSObjectP", "end"]
+- ["So8NSObjectP", "error"]
+- !private ["So8NSObjectP", "errorDomain"]
+- !private ["So8NSObjectP", "errorMessageKey"]
+- !private ["So8NSObjectP", "errorWithDomain"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "isKeyWindow"]
+- !private ["So8NSObjectP", "isoCountryCode"]
+- !private ["So8NSObjectP", "kSTPApplePayContextAssociatedObjectKey"]
+- !private ["So8NSObjectP", "name"]
+- !private ["So8NSObjectP", "numberWithBool"]
+- !private ["So8NSObjectP", "numberWithChar"]
+- !private ["So8NSObjectP", "numberWithDouble"]
+- !private ["So8NSObjectP", "numberWithFloat"]
+- !private ["So8NSObjectP", "numberWithInt"]
+- !private ["So8NSObjectP", "numberWithInteger"]
+- !private ["So8NSObjectP", "numberWithLong"]
+- !private ["So8NSObjectP", "numberWithLongLong"]
+- !private ["So8NSObjectP", "numberWithShort"]
+- !private ["So8NSObjectP", "numberWithUnsignedChar"]
+- !private ["So8NSObjectP", "numberWithUnsignedInt"]
+- !private ["So8NSObjectP", "numberWithUnsignedInteger"]
+- !private ["So8NSObjectP", "numberWithUnsignedLong"]
+- !private ["So8NSObjectP", "numberWithUnsignedLongLong"]
+- !private ["So8NSObjectP", "numberWithUnsignedShort"]
+- !private ["So8NSObjectP", "objc_setAssociatedObject"]
+- ["So8NSObjectP", "paymentAuthorizationController"]
+- ["So8NSObjectP", "paymentAuthorizationControllerDidFinish"]
+- ["So8NSObjectP", "paymentAuthorizationControllerWillAuthorizePayment"]
+- !private ["So8NSObjectP", "paymentMethodId"]
+- ["So8NSObjectP", "paymentState"]
+- !private ["So8NSObjectP", "phone"]
+- !private ["So8NSObjectP", "phoneNumber"]
+- !private ["So8NSObjectP", "pkPaymentError"]
+- !private ["So8NSObjectP", "postalAddress"]
+- !private ["So8NSObjectP", "postalCode"]
+- !private ["So8NSObjectP", "present"]
+- ["So8NSObjectP", "presentApplePay"]
+- !private ["So8NSObjectP", "presentWithCompletion"]
+- ["So8NSObjectP", "presentationWindow"]
+- ["So8NSObjectP", "presentationWindowForPaymentAuthorizationController"]
+- ["So8NSObjectP", "responds"]
+- !private ["So8NSObjectP", "retrievePaymentIntent"]
+- ["So8NSObjectP", "shared"]
+- !private ["So8NSObjectP", "sharedClient"]
+- !private ["So8NSObjectP", "shipping"]
+- !private ["So8NSObjectP", "shippingContact"]
+- !private ["So8NSObjectP", "shippingDetails"]
+- !private ["So8NSObjectP", "state"]
+- !private ["So8NSObjectP", "status"]
+- !private ["So8NSObjectP", "stpDispatchToMainThreadIfNecessary"]
+- !private ["So8NSObjectP", "stp_unexpectedErrorMessage"]
+- !private ["So8NSObjectP", "street"]
+- !private ["So8NSObjectP", "string"]
+- !private ["So8NSObjectP", "stringForObjectValue"]
+- !private ["So8NSObjectP", "stringFromPersonNameComponents"]
+- !private ["So8NSObjectP", "stringValue"]
+- !private ["So8NSObjectP", "stripeId"]
+- !private ["So8NSObjectP", "style"]
+- !private ["So8NSObjectP", "useStripeSDK"]
+- !private ["So8NSObjectP", "value"]
+- !private ["So8NSObjectP", "valueWithBytes"]
+- !private ["So8NSObjectP", "valueWithCATransform3D"]
+- !private ["So8NSObjectP", "valueWithCGAffineTransform"]
+- !private ["So8NSObjectP", "valueWithCGPoint"]
+- !private ["So8NSObjectP", "valueWithCGRect"]
+- !private ["So8NSObjectP", "valueWithCGSize"]
+- !private ["So8NSObjectP", "valueWithCGVector"]
+- !private ["So8NSObjectP", "valueWithCMTime"]
+- !private ["So8NSObjectP", "valueWithCMTimeMapping"]
+- !private ["So8NSObjectP", "valueWithCMTimeRange"]
+- !private ["So8NSObjectP", "valueWithDirectionalEdgeInsets"]
+- !private ["So8NSObjectP", "valueWithNonretainedObject"]
+- !private ["So8NSObjectP", "valueWithPointer"]
+- !private ["So8NSObjectP", "valueWithRange"]
+- !private ["So8NSObjectP", "valueWithUIEdgeInsets"]
+- !private ["So8NSObjectP", "valueWithUIOffset"]
+- !private ["So8NSObjectP", "viewIfLoaded"]
+- !private ["So8NSObjectP", "window"]
+- !private ["So8NSObjectP", "windows"]
+- !private ["So14NSSecureCodingP", "city"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "isoCountryCode"]
+- !private ["So14NSSecureCodingP", "numberWithBool"]
+- !private ["So14NSSecureCodingP", "numberWithChar"]
+- !private ["So14NSSecureCodingP", "numberWithDouble"]
+- !private ["So14NSSecureCodingP", "numberWithFloat"]
+- !private ["So14NSSecureCodingP", "numberWithInt"]
+- !private ["So14NSSecureCodingP", "numberWithInteger"]
+- !private ["So14NSSecureCodingP", "numberWithLong"]
+- !private ["So14NSSecureCodingP", "numberWithLongLong"]
+- !private ["So14NSSecureCodingP", "numberWithShort"]
+- !private ["So14NSSecureCodingP", "numberWithUnsignedChar"]
+- !private ["So14NSSecureCodingP", "numberWithUnsignedInt"]
+- !private ["So14NSSecureCodingP", "numberWithUnsignedInteger"]
+- !private ["So14NSSecureCodingP", "numberWithUnsignedLong"]
+- !private ["So14NSSecureCodingP", "numberWithUnsignedLongLong"]
+- !private ["So14NSSecureCodingP", "numberWithUnsignedShort"]
+- !private ["So14NSSecureCodingP", "postalCode"]
+- !private ["So14NSSecureCodingP", "state"]
+- !private ["So14NSSecureCodingP", "stp_unexpectedErrorMessage"]
+- !private ["So14NSSecureCodingP", "street"]
+- !private ["So14NSSecureCodingP", "stringValue"]
+- ["So7NSValueC", ""]
+- !private ["So7NSValueC", "init"]
+- !private ["So7NSValueC", "numberWithBool"]
+- !private ["So7NSValueC", "numberWithChar"]
+- !private ["So7NSValueC", "numberWithDouble"]
+- !private ["So7NSValueC", "numberWithFloat"]
+- !private ["So7NSValueC", "numberWithInt"]
+- !private ["So7NSValueC", "numberWithInteger"]
+- !private ["So7NSValueC", "numberWithLong"]
+- !private ["So7NSValueC", "numberWithLongLong"]
+- !private ["So7NSValueC", "numberWithShort"]
+- !private ["So7NSValueC", "numberWithUnsignedChar"]
+- !private ["So7NSValueC", "numberWithUnsignedInt"]
+- !private ["So7NSValueC", "numberWithUnsignedInteger"]
+- !private ["So7NSValueC", "numberWithUnsignedLong"]
+- !private ["So7NSValueC", "numberWithUnsignedLongLong"]
+- !private ["So7NSValueC", "numberWithUnsignedShort"]
+- !private ["Sj", ""]
+- !private ["Sq", "callAsFunction"]
+- !private ["Sq", "requiresCapture"]
+- !private ["Sq", "succeeded"]
+- !private ["So9PKContactC", "name"]
+- !private ["So9PKContactC", "phoneNumber"]
+- !private ["So9PKContactC", "postalAddress"]
+- !private ["So9PKPaymentC", "shippingContact"]
+- !private ["So32PKPaymentAuthorizationControllerC", "delegate"]
+- !private ["So32PKPaymentAuthorizationControllerC", "dismiss"]
+- !private ["So32PKPaymentAuthorizationControllerC", "init"]
+- !private ["So32PKPaymentAuthorizationControllerC", "present"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "NSError"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "NSLocalizedDescriptionKey"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "NSNumber"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "PKPaymentAuthorizationController"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "PKPaymentAuthorizationControllerDelegate"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "PKPaymentAuthorizationResult"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "PKPaymentAuthorizationStatus"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "PersonNameComponentsFormatter"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "STPAPIClient"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "STPAnalyticsClient"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "STPApplePayContext"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "STPApplePayContextDelegate"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "STPError"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "STPPaymentHandler"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "STPPaymentHandlerErrorCode"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "STPPaymentIntentParams"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "STPPaymentIntentShippingDetailsAddressParams"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "STPPaymentIntentShippingDetailsParams"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "StripeAPI"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "UIApplication"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "UnsafeRawPointer"]
+- ["So40PKPaymentAuthorizationControllerDelegateP", ""]
+- ["So40PKPaymentAuthorizationControllerDelegateP", "_completePayment"]
+- ["So40PKPaymentAuthorizationControllerDelegateP", "_delegateToAppleDelegateMapping"]
+- ["So40PKPaymentAuthorizationControllerDelegateP", "_end"]
+- ["So40PKPaymentAuthorizationControllerDelegateP", "_shippingDetails"]
+- ["So40PKPaymentAuthorizationControllerDelegateP", "apiClient"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "assert"]
+- ["So40PKPaymentAuthorizationControllerDelegateP", "authorizationController"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "completePayment"]
+- ["So40PKPaymentAuthorizationControllerDelegateP", "deinit"]
+- ["So40PKPaymentAuthorizationControllerDelegateP", "delegate"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "delegateToAppleDelegateMapping"]
+- ["So40PKPaymentAuthorizationControllerDelegateP", "didCancelOrTimeoutWhilePending"]
+- ["So40PKPaymentAuthorizationControllerDelegateP", "didPresentApplePay"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "end"]
+- ["So40PKPaymentAuthorizationControllerDelegateP", "error"]
+- ["So40PKPaymentAuthorizationControllerDelegateP", "init"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "kSTPApplePayContextAssociatedObjectKey"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "objc_setAssociatedObject"]
+- ["So40PKPaymentAuthorizationControllerDelegateP", "paymentAuthorizationController"]
+- ["So40PKPaymentAuthorizationControllerDelegateP", "paymentAuthorizationControllerDidFinish"]
+- ["So40PKPaymentAuthorizationControllerDelegateP", "paymentAuthorizationControllerWillAuthorizePayment"]
+- ["So40PKPaymentAuthorizationControllerDelegateP", "paymentState"]
+- ["So40PKPaymentAuthorizationControllerDelegateP", "presentApplePay"]
+- ["So40PKPaymentAuthorizationControllerDelegateP", "presentationWindow"]
+- ["So40PKPaymentAuthorizationControllerDelegateP", "presentationWindowForPaymentAuthorizationController"]
+- ["So40PKPaymentAuthorizationControllerDelegateP", "responds"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "shippingDetails"]
+- !private ["So40PKPaymentAuthorizationControllerDelegateP", "stpDispatchToMainThreadIfNecessary"]
+- !private ["So28PKPaymentAuthorizationResultC", "init"]
+- !private ["So28PKPaymentAuthorizationStatusV", "failure"]
+- !private ["So28PKPaymentAuthorizationStatusV", "success"]
+- !private ["So31NSPersonNameComponentsFormatterC", "init"]
+- !private ["So31NSPersonNameComponentsFormatterC", "string"]
+- !private ["So31NSPersonNameComponentsFormatterC", "style"]
+- !private ["Sk", ""]
+- !private ["Sk", "compactMap"]
+- !private ["Sk", "first"]
+- !private ["Sm", ""]
+- !private ["Sm", "compactMap"]
+- !private ["Sm", "first"]
+- ["SY", "=="]
+- ["SY", "Default_RawValue"]
+- !private ["SY", "OBJC_ASSOCIATION_RETAIN_NONATOMIC"]
+- ["SY", "RawValue"]
+- ["SY", ""]
+- ["SY", "_Default_RawValue"]
+- ["SY", "_rawHashValue"]
+- !private ["SY", "automatic"]
+- ["SY", "error"]
+- !private ["SY", "failure"]
+- ["SY", "hash"]
+- ["SY", "hashValue"]
+- ["SY", "init"]
+- !private ["SY", "intentStatusErrorCode"]
+- !private ["SY", "long"]
+- ["SY", "notStarted"]
+- ["SY", "pending"]
+- ["SY", "rawValue"]
+- !private ["SY", "requiresCapture"]
+- !private ["SY", "requiresConfirmation"]
+- !private ["SY", "requiresPaymentMethod"]
+- !private ["SY", "succeeded"]
+- ["SY", "success"]
+- !private ["SY", "userCancellation"]
+- !private ["So30SFSafariViewControllerDelegateP", "errorDomain"]
+- !private ["6Stripe12STPAPIClientC", "confirmPaymentIntent"]
+- !private ["6Stripe12STPAPIClientC", "createPaymentMethod"]
+- !private ["6Stripe12STPAPIClientC", "pkPaymentError"]
+- !private ["6Stripe12STPAPIClientC", "retrievePaymentIntent"]
+- ["6Stripe12STPAPIClientC", "shared"]
+- !private ["6Stripe23STPAPIResponseDecodableP", "confirmationMethod"]
+- !private ["6Stripe23STPAPIResponseDecodableP", "status"]
+- !private ["6Stripe23STPAPIResponseDecodableP", "stripeId"]
+- !private ["6Stripe18STPAnalyticsClientC", "addClass"]
+- !private ["6Stripe18STPAnalyticsClientC", "sharedClient"]
+- ["6Stripe18STPApplePayContextC", "Bool"]
+- ["6Stripe18STPApplePayContextC", "Error"]
+- !private ["6Stripe18STPApplePayContextC", "NSError"]
+- !private ["6Stripe18STPApplePayContextC", "NSLocalizedDescriptionKey"]
+- !private ["6Stripe18STPApplePayContextC", "NSNumber"]
+- ["6Stripe18STPApplePayContextC", "PKContact"]
+- ["6Stripe18STPApplePayContextC", "PKPayment"]
+- ["6Stripe18STPApplePayContextC", "PKPaymentAuthorizationController"]
+- !private ["6Stripe18STPApplePayContextC", "PKPaymentAuthorizationControllerDelegate"]
+- ["6Stripe18STPApplePayContextC", "PKPaymentAuthorizationResult"]
+- ["6Stripe18STPApplePayContextC", "PKPaymentAuthorizationStatus"]
+- ["6Stripe18STPApplePayContextC", "PKPaymentRequest"]
+- ["6Stripe18STPApplePayContextC", "PKPaymentRequestShippingContactUpdate"]
+- ["6Stripe18STPApplePayContextC", "PKPaymentRequestShippingMethodUpdate"]
+- ["6Stripe18STPApplePayContextC", "PKShippingMethod"]
+- !private ["6Stripe18STPApplePayContextC", "PersonNameComponentsFormatter"]
+- ["6Stripe18STPApplePayContextC", "STPAPIClient"]
+- !private ["6Stripe18STPApplePayContextC", "STPAnalyticsClient"]
+- !private ["6Stripe18STPApplePayContextC", "STPApplePayContext"]
+- ["6Stripe18STPApplePayContextC", "STPApplePayContextDelegate"]
+- !private ["6Stripe18STPApplePayContextC", "STPError"]
+- !private ["6Stripe18STPApplePayContextC", "STPPaymentHandler"]
+- !private ["6Stripe18STPApplePayContextC", "STPPaymentHandlerErrorCode"]
+- !private ["6Stripe18STPApplePayContextC", "STPPaymentIntentParams"]
+- !private ["6Stripe18STPApplePayContextC", "STPPaymentIntentShippingDetailsAddressParams"]
+- ["6Stripe18STPApplePayContextC", "STPPaymentIntentShippingDetailsParams"]
+- ["6Stripe18STPApplePayContextC", "STPPaymentState"]
+- ["6Stripe18STPApplePayContextC", "STPVoidBlock"]
+- ["6Stripe18STPApplePayContextC", "Selector"]
+- !private ["6Stripe18STPApplePayContextC", "StripeAPI"]
+- !private ["6Stripe18STPApplePayContextC", "UIApplication"]
+- ["6Stripe18STPApplePayContextC", "UIViewController"]
+- ["6Stripe18STPApplePayContextC", "UIWindow"]
+- !private ["6Stripe18STPApplePayContextC", "UnsafeRawPointer"]
+- ["6Stripe18STPApplePayContextC", "Void"]
+- ["6Stripe18STPApplePayContextC", ""]
+- ["6Stripe18STPApplePayContextC", "_completePayment"]
+- ["6Stripe18STPApplePayContextC", "_delegateToAppleDelegateMapping"]
+- ["6Stripe18STPApplePayContextC", "_end"]
+- ["6Stripe18STPApplePayContextC", "_shippingDetails"]
+- ["6Stripe18STPApplePayContextC", "apiClient"]
+- !private ["6Stripe18STPApplePayContextC", "assert"]
+- ["6Stripe18STPApplePayContextC", "authorizationController"]
+- !private ["6Stripe18STPApplePayContextC", "completePayment"]
+- ["6Stripe18STPApplePayContextC", "deinit"]
+- !private ["6Stripe18STPApplePayContextC", "delegate"]
+- !private ["6Stripe18STPApplePayContextC", "delegateToAppleDelegateMapping"]
+- !private ["6Stripe18STPApplePayContextC", "didCancelOrTimeoutWhilePending"]
+- !private ["6Stripe18STPApplePayContextC", "didPresentApplePay"]
+- !private ["6Stripe18STPApplePayContextC", "end"]
+- !private ["6Stripe18STPApplePayContextC", "error"]
+- ["6Stripe18STPApplePayContextC", "init"]
+- !private ["6Stripe18STPApplePayContextC", "kSTPApplePayContextAssociatedObjectKey"]
+- !private ["6Stripe18STPApplePayContextC", "objc_setAssociatedObject"]
+- ["6Stripe18STPApplePayContextC", "paymentAuthorizationController"]
+- ["6Stripe18STPApplePayContextC", "paymentAuthorizationControllerDidFinish"]
+- ["6Stripe18STPApplePayContextC", "paymentAuthorizationControllerWillAuthorizePayment"]
+- !private ["6Stripe18STPApplePayContextC", "paymentState"]
+- ["6Stripe18STPApplePayContextC", "presentApplePay"]
+- ["6Stripe18STPApplePayContextC", "presentationWindow"]
+- ["6Stripe18STPApplePayContextC", "presentationWindowForPaymentAuthorizationController"]
+- ["6Stripe18STPApplePayContextC", "responds"]
+- !private ["6Stripe18STPApplePayContextC", "shippingDetails"]
+- !private ["6Stripe18STPApplePayContextC", "stpDispatchToMainThreadIfNecessary"]
+- ["6Stripe26STPApplePayContextDelegateP", "Error"]
+- ["6Stripe26STPApplePayContextDelegateP", "PKContact"]
+- ["6Stripe26STPApplePayContextDelegateP", "PKPayment"]
+- ["6Stripe26STPApplePayContextDelegateP", "PKPaymentRequestShippingContactUpdate"]
+- ["6Stripe26STPApplePayContextDelegateP", "PKPaymentRequestShippingMethodUpdate"]
+- ["6Stripe26STPApplePayContextDelegateP", "PKShippingMethod"]
+- ["6Stripe26STPApplePayContextDelegateP", "STPApplePayContext"]
+- ["6Stripe26STPApplePayContextDelegateP", "STPIntentClientSecretCompletionBlock"]
+- ["6Stripe26STPApplePayContextDelegateP", "STPPaymentMethod"]
+- ["6Stripe26STPApplePayContextDelegateP", "STPPaymentStatus"]
+- ["6Stripe26STPApplePayContextDelegateP", "Void"]
+- ["6Stripe26STPApplePayContextDelegateP", "applePayContext"]
+- !private ["6Stripe26STPApplePayContextDelegateP", "responds"]
+- !private ["6Stripe8STPErrorC", "errorMessageKey"]
+- !private ["6Stripe16STPFormEncodableP", "city"]
+- !private ["6Stripe16STPFormEncodableP", "country"]
+- !private ["6Stripe16STPFormEncodableP", "init"]
+- !private ["6Stripe16STPFormEncodableP", "paymentMethodId"]
+- !private ["6Stripe16STPFormEncodableP", "phone"]
+- !private ["6Stripe16STPFormEncodableP", "postalCode"]
+- !private ["6Stripe16STPFormEncodableP", "shipping"]
+- !private ["6Stripe16STPFormEncodableP", "state"]
+- !private ["6Stripe16STPFormEncodableP", "useStripeSDK"]
+- !private ["6Stripe17STPPaymentHandlerC", "errorDomain"]
+- !private ["6Stripe26STPPaymentHandlerErrorCodeO", "RawValue"]
+- !private ["6Stripe26STPPaymentHandlerErrorCodeO", ""]
+- !private ["6Stripe26STPPaymentHandlerErrorCodeO", "intentStatusErrorCode"]
+- !private ["6Stripe26STPPaymentHandlerErrorCodeO", "rawValue"]
+- !private ["6Stripe16STPPaymentIntentC", ""]
+- !private ["6Stripe16STPPaymentIntentC", "confirmationMethod"]
+- !private ["6Stripe16STPPaymentIntentC", "status"]
+- !private ["6Stripe34STPPaymentIntentConfirmationMethodO", "RawValue"]
+- !private ["6Stripe34STPPaymentIntentConfirmationMethodO", ""]
+- !private ["6Stripe34STPPaymentIntentConfirmationMethodO", "automatic"]
+- !private ["6Stripe22STPPaymentIntentParamsC", "init"]
+- !private ["6Stripe22STPPaymentIntentParamsC", "paymentMethodId"]
+- !private ["6Stripe22STPPaymentIntentParamsC", "shipping"]
+- !private ["6Stripe22STPPaymentIntentParamsC", "useStripeSDK"]
+- !private ["6Stripe44STPPaymentIntentShippingDetailsAddressParamsC", "city"]
+- !private ["6Stripe44STPPaymentIntentShippingDetailsAddressParamsC", "country"]
+- !private ["6Stripe44STPPaymentIntentShippingDetailsAddressParamsC", "init"]
+- !private ["6Stripe44STPPaymentIntentShippingDetailsAddressParamsC", "postalCode"]
+- !private ["6Stripe44STPPaymentIntentShippingDetailsAddressParamsC", "state"]
+- !private ["6Stripe37STPPaymentIntentShippingDetailsParamsC", "init"]
+- !private ["6Stripe37STPPaymentIntentShippingDetailsParamsC", "phone"]
+- !private ["6Stripe22STPPaymentIntentStatusO", "RawValue"]
+- !private ["6Stripe22STPPaymentIntentStatusO", ""]
+- !private ["6Stripe22STPPaymentIntentStatusO", "requiresCapture"]
+- !private ["6Stripe22STPPaymentIntentStatusO", "requiresConfirmation"]
+- !private ["6Stripe22STPPaymentIntentStatusO", "requiresPaymentMethod"]
+- !private ["6Stripe22STPPaymentIntentStatusO", "succeeded"]
+- !private ["6Stripe16STPPaymentMethodC", "stripeId"]
+- !private ["6Stripe16STPPaymentOptionP", "stripeId"]
+- ["6Stripe15STPPaymentStateO", "=="]
+- ["6Stripe15STPPaymentStateO", "Default_RawValue"]
+- ["6Stripe15STPPaymentStateO", "RawValue"]
+- ["6Stripe15STPPaymentStateO", ""]
+- ["6Stripe15STPPaymentStateO", "_Default_RawValue"]
+- ["6Stripe15STPPaymentStateO", "_rawHashValue"]
+- ["6Stripe15STPPaymentStateO", "error"]
+- ["6Stripe15STPPaymentStateO", "hash"]
+- ["6Stripe15STPPaymentStateO", "hashValue"]
+- ["6Stripe15STPPaymentStateO", "init"]
+- ["6Stripe15STPPaymentStateO", "notStarted"]
+- ["6Stripe15STPPaymentStateO", "pending"]
+- ["6Stripe15STPPaymentStateO", "rawValue"]
+- ["6Stripe15STPPaymentStateO", "success"]
+- !private ["6Stripe16STPPaymentStatusO", "error"]
+- !private ["6Stripe16STPPaymentStatusO", "success"]
+- !private ["6Stripe16STPPaymentStatusO", "userCancellation"]
+- !private ["6Stripe22STPURLCallbackListenerP", "errorDomain"]
+- !private ["ST", ""]
+- !private ["ST", "compactMap"]
+- !private ["ST", "first"]
+- !private ["ST", "subscript"]
+- !private ["s13SignedNumericP", ""]
+- !private ["Sx", ""]
+- !private ["Sx", "init"]
+- !private ["6Stripe0A3APIC", "canSubmitPaymentRequest"]
+- !private ["So36NSPersonNameComponentsFormatterStyleV", "long"]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s20TextOutputStreamableP", ""]
+- !private ["So29UIAccessibilityIdentificationP", ""]
+- !private ["So29UIAccessibilityIdentificationP", "isKeyWindow"]
+- !private ["So29UIAccessibilityIdentificationP", "window"]
+- !private ["So12UIAppearanceP", ""]
+- !private ["So12UIAppearanceP", "isKeyWindow"]
+- !private ["So12UIAppearanceP", "window"]
+- !private ["So21UIAppearanceContainerP", ""]
+- !private ["So21UIAppearanceContainerP", "isKeyWindow"]
+- !private ["So21UIAppearanceContainerP", "viewIfLoaded"]
+- !private ["So21UIAppearanceContainerP", "window"]
+- !private ["So13UIApplicationC", "shared"]
+- !private ["So13UIApplicationC", "windows"]
+- !private ["So18UIContentContainerP", "viewIfLoaded"]
+- !private ["So17UICoordinateSpaceP", ""]
+- !private ["So17UICoordinateSpaceP", "isKeyWindow"]
+- !private ["So17UICoordinateSpaceP", "window"]
+- !private ["So13UIDynamicItemP", ""]
+- !private ["So13UIDynamicItemP", "isKeyWindow"]
+- !private ["So13UIDynamicItemP", "window"]
+- !private ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "isKeyWindow"]
+- !private ["So18UIFocusEnvironmentP", "viewIfLoaded"]
+- !private ["So18UIFocusEnvironmentP", "window"]
+- !private ["So11UIFocusItemP", ""]
+- !private ["So11UIFocusItemP", "isKeyWindow"]
+- !private ["So11UIFocusItemP", "window"]
+- !private ["So20UIFocusItemContainerP", ""]
+- !private ["So20UIFocusItemContainerP", "isKeyWindow"]
+- !private ["So20UIFocusItemContainerP", "window"]
+- !private ["So24UILargeContentViewerItemP", ""]
+- !private ["So24UILargeContentViewerItemP", "isKeyWindow"]
+- !private ["So24UILargeContentViewerItemP", "window"]
+- !private ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "isKeyWindow"]
+- !private ["So30UIPasteConfigurationSupportingP", "shared"]
+- !private ["So30UIPasteConfigurationSupportingP", "viewIfLoaded"]
+- !private ["So30UIPasteConfigurationSupportingP", "window"]
+- !private ["So30UIPasteConfigurationSupportingP", "windows"]
+- ["So11UIResponderC", ""]
+- !private ["So11UIResponderC", "isKeyWindow"]
+- !private ["So11UIResponderC", "shared"]
+- !private ["So11UIResponderC", "viewIfLoaded"]
+- !private ["So11UIResponderC", "window"]
+- !private ["So11UIResponderC", "windows"]
+- !private ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "isKeyWindow"]
+- !private ["So30UIResponderStandardEditActionsP", "shared"]
+- !private ["So30UIResponderStandardEditActionsP", "viewIfLoaded"]
+- !private ["So30UIResponderStandardEditActionsP", "window"]
+- !private ["So30UIResponderStandardEditActionsP", "windows"]
+- !private ["So16UIStateRestoringP", "viewIfLoaded"]
+- !private ["So18UITraitEnvironmentP", ""]
+- !private ["So18UITraitEnvironmentP", "isKeyWindow"]
+- !private ["So18UITraitEnvironmentP", "viewIfLoaded"]
+- !private ["So18UITraitEnvironmentP", "window"]
+- !private ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "isKeyWindow"]
+- !private ["So23UIUserActivityRestoringP", "shared"]
+- !private ["So23UIUserActivityRestoringP", "viewIfLoaded"]
+- !private ["So23UIUserActivityRestoringP", "window"]
+- !private ["So23UIUserActivityRestoringP", "windows"]
+- ["So6UIViewC", ""]
+- !private ["So6UIViewC", "isKeyWindow"]
+- !private ["So6UIViewC", "window"]
+- !private ["So16UIViewControllerC", "viewIfLoaded"]
+- !private ["So8UIWindowC", "isKeyWindow"]
+- !private ["SV", "init"]
+- !private ["7SwiftUI4ViewP", "callAsFunction"]
+- !private ["7SwiftUI4ViewP", "requiresCapture"]
+- !private ["7SwiftUI4ViewP", "succeeded"]
+- !private ["s14_ArrayProtocolP", "compactMap"]
+- !private ["s14_ArrayProtocolP", "first"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s24_DestructorSafeContainerP", "compactMap"]
+- !private ["s24_DestructorSafeContainerP", "first"]
+- ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s19_HasContiguousBytesP", "compactMap"]
+- !private ["s19_HasContiguousBytesP", "first"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "compactMap"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "first"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSLocalizedDescriptionKey"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSNumber"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "PKPaymentAuthorizationController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "PKPaymentAuthorizationControllerDelegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "PKPaymentAuthorizationResult"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "PKPaymentAuthorizationStatus"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "PersonNameComponentsFormatter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPAPIClient"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPAnalyticsClient"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPApplePayContext"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPApplePayContextDelegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPPaymentHandler"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPPaymentHandlerErrorCode"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPPaymentIntentParams"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPPaymentIntentShippingDetailsAddressParams"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPPaymentIntentShippingDetailsParams"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "StripeAPI"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIApplication"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UnsafeRawPointer"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_completePayment"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_delegateToAppleDelegateMapping"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_end"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_shippingDetails"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addClass"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "apiClient"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "assert"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "authorizationController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "canSubmitPaymentRequest"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "city"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "completePayment"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "confirmPaymentIntent"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "confirmationMethod"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "country"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "createPaymentMethod"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delegateToAppleDelegateMapping"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "didCancelOrTimeoutWhilePending"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "didPresentApplePay"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dismiss"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "end"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "error"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "errorDomain"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "errorMessageKey"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isKeyWindow"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isoCountryCode"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "kSTPApplePayContextAssociatedObjectKey"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "objc_setAssociatedObject"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "paymentAuthorizationController"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "paymentAuthorizationControllerDidFinish"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "paymentAuthorizationControllerWillAuthorizePayment"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "paymentMethodId"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "paymentState"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "phone"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "phoneNumber"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "pkPaymentError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "postalAddress"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "postalCode"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "present"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "presentApplePay"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "presentationWindow"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "presentationWindowForPaymentAuthorizationController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "responds"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "retrievePaymentIntent"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sharedClient"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shipping"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shippingContact"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shippingDetails"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "state"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "status"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stpDispatchToMainThreadIfNecessary"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stp_unexpectedErrorMessage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "street"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "string"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stringValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stripeId"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "style"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "useStripeSDK"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewIfLoaded"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "window"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "windows"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSError"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSLocalizedDescriptionKey"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSNumber"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PKPaymentAuthorizationController"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PKPaymentAuthorizationControllerDelegate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PKPaymentAuthorizationResult"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PKPaymentAuthorizationStatus"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PersonNameComponentsFormatter"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPAPIClient"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPAnalyticsClient"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPApplePayContext"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPApplePayContextDelegate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPError"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPPaymentHandler"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPPaymentHandlerErrorCode"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPPaymentIntentParams"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPPaymentIntentShippingDetailsAddressParams"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPPaymentIntentShippingDetailsParams"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "StripeAPI"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIApplication"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UnsafeRawPointer"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_completePayment"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_delegateToAppleDelegateMapping"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_end"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_shippingDetails"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addClass"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "apiClient"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "assert"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "authorizationController"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "canSubmitPaymentRequest"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "city"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "completePayment"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "confirmPaymentIntent"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "confirmationMethod"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "country"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "createPaymentMethod"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "delegate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "delegateToAppleDelegateMapping"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "didCancelOrTimeoutWhilePending"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "didPresentApplePay"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dismiss"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "end"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "error"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "errorDomain"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "errorMessageKey"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isKeyWindow"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isoCountryCode"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "kSTPApplePayContextAssociatedObjectKey"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "name"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "objc_setAssociatedObject"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "paymentAuthorizationController"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "paymentAuthorizationControllerDidFinish"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "paymentAuthorizationControllerWillAuthorizePayment"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "paymentMethodId"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "paymentState"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "phone"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "phoneNumber"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "pkPaymentError"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "postalAddress"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "postalCode"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "present"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "presentApplePay"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "presentationWindow"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "presentationWindowForPaymentAuthorizationController"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "responds"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "retrievePaymentIntent"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sharedClient"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shipping"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shippingContact"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shippingDetails"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "state"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "status"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stpDispatchToMainThreadIfNecessary"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stp_unexpectedErrorMessage"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "street"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "string"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stringValue"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stripeId"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "style"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "useStripeSDK"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewIfLoaded"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "window"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "windows"]
+- !private ["s21_ObjectiveCBridgeableP", "callAsFunction"]
+- !private ["s21_ObjectiveCBridgeableP", "compactMap"]
+- !private ["s21_ObjectiveCBridgeableP", "first"]
+- !private ["s21_ObjectiveCBridgeableP", "requiresCapture"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "succeeded"]
+- !private ["s26_OptionalNilComparisonTypeV", "requiresCapture"]
+- !private ["s26_OptionalNilComparisonTypeV", "succeeded"]
+- !private ["s8_PointerP", "init"]
+- !private ["So13CKRecordValueP", "init"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "isKeyWindow"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "window"]
+- !private ["So22objc_AssociationPolicyV", "OBJC_ASSOCIATION_RETAIN_NONATOMIC"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- !private "Sa"
+- !private "SK"
+- !private "So15CALayerDelegateP"
+- !private "8CloudKit21CKRecordValueProtocolP"
+- !private "So13CNPhoneNumberC"
+- !private "So15CNPostalAddressC"
+- "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "SD"
+- !private "SE"
+- "SQ"
+- !private "s5ErrorP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "SF"
+- "So11NSFormatterC"
+- !private "7SwiftUI7GestureP"
+- "SH"
+- !private "s25LosslessStringConvertibleP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So7NSErrorC"
+- !private "So26NSExtensionRequestHandlingP"
+- !private "So20NSFetchRequestResultP"
+- !private "So16NSMutableCopyingP"
+- !private "So8NSNumberC"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- "So7NSValueC"
+- !private "Sj"
+- !private "Sq"
+- !private "So9PKContactC"
+- !private "So9PKPaymentC"
+- !private "So32PKPaymentAuthorizationControllerC"
+- "So40PKPaymentAuthorizationControllerDelegateP"
+- !private "So28PKPaymentAuthorizationResultC"
+- !private "So28PKPaymentAuthorizationStatusV"
+- !private "So31NSPersonNameComponentsFormatterC"
+- !private "Sk"
+- !private "Sm"
+- "SY"
+- !private "So30SFSafariViewControllerDelegateP"
+- "6Stripe12STPAPIClientC"
+- !private "6Stripe23STPAPIResponseDecodableP"
+- !private "6Stripe18STPAnalyticsClientC"
+- "6Stripe18STPApplePayContextC"
+- "6Stripe26STPApplePayContextDelegateP"
+- !private "6Stripe8STPErrorC"
+- !private "6Stripe16STPFormEncodableP"
+- !private "6Stripe17STPPaymentHandlerC"
+- !private "6Stripe26STPPaymentHandlerErrorCodeO"
+- !private "6Stripe16STPPaymentIntentC"
+- !private "6Stripe34STPPaymentIntentConfirmationMethodO"
+- !private "6Stripe22STPPaymentIntentParamsC"
+- !private "6Stripe44STPPaymentIntentShippingDetailsAddressParamsC"
+- !private "6Stripe37STPPaymentIntentShippingDetailsParamsC"
+- !private "6Stripe22STPPaymentIntentStatusO"
+- !private "6Stripe16STPPaymentMethodC"
+- !private "6Stripe16STPPaymentOptionP"
+- "6Stripe15STPPaymentStateO"
+- !private "6Stripe16STPPaymentStatusO"
+- !private "6Stripe22STPURLCallbackListenerP"
+- !private "ST"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "6Stripe0A3APIC"
+- !private "So36NSPersonNameComponentsFormatterStyleV"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- !private "So21UIAppearanceContainerP"
+- !private "So13UIApplicationC"
+- !private "So18UIContentContainerP"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So24UILargeContentViewerItemP"
+- !private "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So16UIStateRestoringP"
+- !private "So18UITraitEnvironmentP"
+- !private "So23UIUserActivityRestoringP"
+- "So6UIViewC"
+- !private "So16UIViewControllerC"
+- !private "So8UIWindowC"
+- !private "SV"
+- !private "7SwiftUI4ViewP"
+- !private "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s26_OptionalNilComparisonTypeV"
+- !private "s8_PointerP"
+- !private "So13CKRecordValueP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
+- !private "So22objc_AssociationPolicyV"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreMIDI.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftUI.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreML.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreMedia.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreData.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/simd.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Vision.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreLocation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/AVFoundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreAudio.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/os.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Contacts.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/WebKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CloudKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/DeveloperToolsSupport.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIViewController+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSError+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Target Support Files/Stripe/Stripe-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDS2Service.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseImage.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSErrorMessage.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONDecodable.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONEncodable.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONWebSignature.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponse.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationResponse.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDirectoryServerCertificate.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDSProtocolVersion+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTransaction+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformationParameter+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSString+EmptyChecking.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSWarning.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSLocalizedString.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSEphemeralKeyPair+Testing.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSwiftTryCatch.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSErrorMessage+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDirectoryServerCertificate+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSException+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseMessageExtension.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformation.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIButton+CustomInitialization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSUICustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTextFieldCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSLabelCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSelectionCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSButtonCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSNavigationBarCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSFooterCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTransaction.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSNotInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAlreadyInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSRuntimeException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSInvalidInputException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONWebEncryption.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSelectionButton.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseSelectionInfo.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/Stripe3DS2-Bridging-Header.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSImageLoader.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONEncoder.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSACSNetworkingManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSynchronousLocationManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformationManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJailbreakChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSOSVersionChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDebuggerChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSimulatorChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSIntegrityChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCategoryLinker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseViewController.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSProgressViewController.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformationParameter.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDirectoryServer.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSEphemeralKeyPair.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSStripe3DS2Error.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSBundleLocator.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSecTypeUtilities.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSData+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSString+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSDictionary+DecodingHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSConfigParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIColor+DefaultColors.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSIPAddress.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIFont+DefaultFonts.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseImageObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseMessageExtensionObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseSelectionInfoObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCompletionEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSEllipticCurvePoint.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIColor+ThirteenSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSLayoutConstraint+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIView+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSWebView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTextChallengeView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSBrandingView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSProcessingView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSStackView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSExpandableInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeSelectionView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSpacerView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSWhitelistView.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/Stripe.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "5a4cec4f932fbe20d081ed1701a09ed9"

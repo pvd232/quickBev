@@ -7,48 +7,42 @@
 //
 //
 
-import Foundation
 import CoreData
+import Foundation
 
-
-extension Order {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Order> {
+public extension Order {
+    @nonobjc class func fetchRequest() -> NSFetchRequest<Order> {
         return NSFetchRequest<Order>(entityName: "Order")
     }
 
-    @NSManaged public var businessId: UUID?
-    @NSManaged public var merchantStripeId: String?
-    @NSManaged public var cost: Double
-    @NSManaged public var dateTime: Date?
-    @NSManaged public var id: UUID?
-    @NSManaged public var salesTax: Double
-    @NSManaged public var salesTaxRate: Double
-    @NSManaged public var subtotal: Double
-    @NSManaged public var tipAmount: Double
-    @NSManaged public var tipPercentage: Double
-    @NSManaged public var orderDrink: NSSet?
-    @NSManaged public var user: User?
-
+    @NSManaged var businessId: UUID?
+    @NSManaged var merchantStripeId: String?
+    @NSManaged var cost: Double
+    @NSManaged var dateTime: Date?
+    @NSManaged var id: UUID?
+    @NSManaged var salesTax: Double
+    @NSManaged var salesTaxRate: Double
+    @NSManaged var subtotal: Double
+    @NSManaged var tipAmount: Double
+    @NSManaged var tipPercentage: Double
+    @NSManaged var orderDrink: NSSet?
+    @NSManaged var user: User?
 }
 
 // MARK: Generated accessors for orderDrink
-extension Order {
 
+public extension Order {
     @objc(addOrderDrinkObject:)
-    @NSManaged public func addToOrderDrink(_ value: Drink)
+    @NSManaged func addToOrderDrink(_ value: Drink)
 
     @objc(removeOrderDrinkObject:)
-    @NSManaged public func removeFromOrderDrink(_ value: Drink)
+    @NSManaged func removeFromOrderDrink(_ value: Drink)
 
     @objc(addOrderDrink:)
-    @NSManaged public func addToOrderDrink(_ values: NSSet)
+    @NSManaged func addToOrderDrink(_ values: NSSet)
 
     @objc(removeOrderDrink:)
-    @NSManaged public func removeFromOrderDrink(_ values: NSSet)
-
+    @NSManaged func removeFromOrderDrink(_ values: NSSet)
 }
 
-extension Order : Identifiable {
-
-}
+extension Order: Identifiable {}

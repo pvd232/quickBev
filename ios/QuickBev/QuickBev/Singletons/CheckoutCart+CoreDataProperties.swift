@@ -7,68 +7,61 @@
 //
 //
 
-import Foundation
 import CoreData
+import Foundation
 
-
-extension CheckoutCart {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<CheckoutCart> {
+public extension CheckoutCart {
+    @nonobjc class func fetchRequest() -> NSFetchRequest<CheckoutCart> {
         return NSFetchRequest<CheckoutCart>(entityName: "CheckoutCart")
     }
 
-    @NSManaged public var businessId: UUID?
-    @NSManaged public var cost: Double
-    @NSManaged public var currentOrderId: UUID?
-    @NSManaged public var orderingProcessViewControllerIndex: Int16
-    @NSManaged public var salesTax: Double
-    @NSManaged public var stripeId: String?
-    @NSManaged public var subtotal: Double
-    @NSManaged public var tipAmount: Double
-    @NSManaged public var tipPercentage: Double
-    @NSManaged public var userId: String?
-    @NSManaged public var business: NSSet?
-    @NSManaged public var drinks: NSSet?
-    @NSManaged public var user: User?
-    @NSManaged public var userBusiness: Business?
-    @NSManaged public var isGuest: Bool
-
+    @NSManaged var businessId: UUID?
+    @NSManaged var cost: Double
+    @NSManaged var currentOrderId: UUID?
+    @NSManaged var orderingProcessViewControllerIndex: Int16
+    @NSManaged var salesTax: Double
+    @NSManaged var stripeId: String?
+    @NSManaged var subtotal: Double
+    @NSManaged var tipAmount: Double
+    @NSManaged var tipPercentage: Double
+    @NSManaged var userId: String?
+    @NSManaged var business: NSSet?
+    @NSManaged var drinks: NSSet?
+    @NSManaged var user: User?
+    @NSManaged var userBusiness: Business?
+    @NSManaged var isGuest: Bool
 }
 
 // MARK: Generated accessors for business
-extension CheckoutCart {
 
+public extension CheckoutCart {
     @objc(addBusinessObject:)
-    @NSManaged public func addToBusiness(_ value: Business)
+    @NSManaged func addToBusiness(_ value: Business)
 
     @objc(removeBusinessObject:)
-    @NSManaged public func removeFromBusiness(_ value: Business)
+    @NSManaged func removeFromBusiness(_ value: Business)
 
     @objc(addBusiness:)
-    @NSManaged public func addToBusiness(_ values: NSSet)
+    @NSManaged func addToBusiness(_ values: NSSet)
 
     @objc(removeBusiness:)
-    @NSManaged public func removeFromBusiness(_ values: NSSet)
-
+    @NSManaged func removeFromBusiness(_ values: NSSet)
 }
 
 // MARK: Generated accessors for drinks
-extension CheckoutCart {
 
+public extension CheckoutCart {
     @objc(addDrinksObject:)
-    @NSManaged public func addToDrinks(_ value: Drink)
+    @NSManaged func addToDrinks(_ value: Drink)
 
     @objc(removeDrinksObject:)
-    @NSManaged public func removeFromDrinks(_ value: Drink)
+    @NSManaged func removeFromDrinks(_ value: Drink)
 
     @objc(addDrinks:)
-    @NSManaged public func addToDrinks(_ values: NSSet)
+    @NSManaged func addToDrinks(_ values: NSSet)
 
     @objc(removeDrinks:)
-    @NSManaged public func removeFromDrinks(_ values: NSSet)
-
+    @NSManaged func removeFromDrinks(_ values: NSSet)
 }
 
-extension CheckoutCart : Identifiable {
-
-}
+extension CheckoutCart: Identifiable {}

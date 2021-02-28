@@ -9,11 +9,11 @@
 import Foundation
 
 extension Bundle {
-  class func stp_applicationName() -> String? {
-    return self.main.infoDictionary?[kCFBundleNameKey as String] as? String
-  }
+    class func stp_applicationName() -> String? {
+        return main.infoDictionary?[kCFBundleNameKey as String] as? String
+    }
 
-  class func stp_applicationVersion() -> String? {
-    return self.main.infoDictionary?["CFBundleShortVersionString"] as? String
-  }
+    class func stp_applicationVersion() -> String? {
+        return main.infoDictionary?["CFBundleShortVersionString"] as? String
+    }
 }

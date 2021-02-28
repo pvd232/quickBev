@@ -11,30 +11,32 @@ import Foundation
 /// A PayPal Payment Method. :nodoc:
 /// - seealso: https://stripe.com/docs/payments/paypal
 public class STPPaymentMethodPayPal: NSObject, STPAPIResponseDecodable {
-  @objc private(set) public var allResponseFields: [AnyHashable: Any] = [:]
+    @objc public private(set) var allResponseFields: [AnyHashable: Any] = [:]
 
-  // MARK: - Description
-  /// :nodoc:
-  @objc public override var description: String {
-    let props = [
-      // Object
-      String(format: "%@: %p", NSStringFromClass(STPPaymentMethodPayPal.self), self)
-    ]
+    // MARK: - Description
 
-    return "<\(props.joined(separator: "; "))>"
-  }
+    /// :nodoc:
+    @objc override public var description: String {
+        let props = [
+            // Object
+            String(format: "%@: %p", NSStringFromClass(STPPaymentMethodPayPal.self), self),
+        ]
 
-  // MARK: - STPAPIResponseDecodable
-  @objc
-  public class func decodedObject(fromAPIResponse response: [AnyHashable: Any]?) -> Self? {
-    guard let response = response else {
-      return nil
+        return "<\(props.joined(separator: "; "))>"
     }
-    return self.init(dictionary: response)
-  }
 
-  required init(dictionary dict: [AnyHashable: Any]) {
-    super.init()
-    allResponseFields = dict
-  }
+    // MARK: - STPAPIResponseDecodable
+
+    @objc
+    public class func decodedObject(fromAPIResponse response: [AnyHashable: Any]?) -> Self? {
+        guard let response = response else {
+            return nil
+        }
+        return self.init(dictionary: response)
+    }
+
+    required init(dictionary dict: [AnyHashable: Any]) {
+        super.init()
+        allResponseFields = dict
+    }
 }

@@ -7,28 +7,23 @@
 //
 //
 
-import Foundation
 import CoreData
+import Foundation
 
-
-extension Drink {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Drink> {
+public extension Drink {
+    @nonobjc class func fetchRequest() -> NSFetchRequest<Drink> {
         return NSFetchRequest<Drink>(entityName: "Drink")
     }
 
-    @NSManaged public var businessId: UUID?
-    @NSManaged public var detail: String?
-    @NSManaged public var id: UUID?
-    @NSManaged public var name: String?
-    @NSManaged public var price: Double
-    @NSManaged public var quantity: Int16
-    @NSManaged public var drinkToBusiness: Business?
-    @NSManaged public var drinkToOrder: Order?
-    @NSManaged public var drinkToCheckoutCart: CheckoutCart?
-
+    @NSManaged var businessId: UUID?
+    @NSManaged var detail: String?
+    @NSManaged var id: UUID?
+    @NSManaged var name: String?
+    @NSManaged var price: Double
+    @NSManaged var quantity: Int16
+    @NSManaged var drinkToBusiness: Business?
+    @NSManaged var drinkToOrder: Order?
+    @NSManaged var drinkToCheckoutCart: CheckoutCart?
 }
 
-extension Drink : Identifiable {
-
-}
+extension Drink: Identifiable {}

@@ -6,35 +6,35 @@
 //  Copyright © 2020 Peter Vail Driscoll II. All rights reserved.
 //
 
-import UIKit
 import os
+import UIKit
 
 class DrinkListTableViewController: UITableViewController {
-    
     init() {
         super.init(nibName: nil, bundle: nil)
-        self.view.backgroundColor = .white
+        view.backgroundColor = .white
     }
-    
-    required init?(coder: NSCoder) {
+
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
         fatalError("coder not set up")
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.translatesAutoresizingMaskIntoConstraints = false
-        self.navigationItem.setHidesBackButton(false, animated: true)
-        self.tableView.register(DrinkTableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        navigationItem.setHidesBackButton(false, animated: true)
+        tableView.register(DrinkTableViewCell.self, forCellReuseIdentifier: "Cell")
     }
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
+
+    override func numberOfSections(in _: UITableView) -> Int {
         return 1
     }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+    override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
         return CheckoutCart.shared.userBusinessDrinks.count
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! DrinkTableViewCell
         cell.name.text = CheckoutCart.shared.userBusinessDrinks[indexPath.row].name
@@ -42,14 +42,14 @@ class DrinkListTableViewController: UITableViewController {
         cell.miscellaneousText.text = CheckoutCart.shared.userBusinessDrinks[indexPath.row].detail
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return (tableView.frame.height/8)
+
+    override func tableView(_ tableView: UITableView, heightForRowAt _: IndexPath) -> CGFloat {
+        return (tableView.frame.height / 8)
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+    override func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedDrink = CheckoutCart.shared.userBusinessDrinks[indexPath.row].copy() as! Drink
         CheckoutCart.guestDrink = selectedDrink
-            navigationController!.pushViewController(DrinkViewController(drink:selectedDrink), animated: true)
+        navigationController!.pushViewController(DrinkViewController(drink: selectedDrink), animated: true)
     }
 }

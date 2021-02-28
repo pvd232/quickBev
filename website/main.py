@@ -15,37 +15,73 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from flask import Flask
-import pusher
-from pusher_push_notifications import PushNotifications
+import jwt
+import calendar
+from pushjack_http2 import APNSHTTP2SandboxClient, APNSAuthToken
 
 
 app = Flask(__name__)
-# app.config['SECRET_KEY'] = 'secret!'
-# socketio = SocketIO(app)
 
 merchant_menu_upload_folder = os.getcwd() + "/files"
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 app.config['UPLOAD_FOLDER'] = merchant_menu_upload_folder
 
 stripe.api_key = "sk_test_51I0xFxFseFjpsgWvh9b1munh6nIea6f5Z8bYlIDfmKyNq6zzrgg8iqeKEHwmRi5PqIelVkx4XWcYHAYc1omtD7wz00JiwbEKzj"
-
-beams_client = PushNotifications(
-    instance_id='YOUR_INSTANCE_ID_HERE',
-    secret_key='4f53e118637f02042caa',
-)
-
-pusher_client = pusher.Pusher(
-    app_id='1155759',
-    key='7b5e34392e1404447668',
-    secret='4f53e118637f02042caa',
-    cluster='us2',
-    ssl=True
-)
-# publicly accessible local host URL!!! - http://machina-8c11dd2e.localhost.run/
+secret = '3327aa0ee1f61998369e815c17b1dc5eaf7e728bca14f6fe557af366ee6e20f9'
 # theme color RGB = rgb(134,130,230), hex = #8682E6
 # TODO: need to finish the add_business function by adding the new business address and returning the unique identifier to main.py so i can dynamically set the files path of the new image using the UUID of the business address
-# TODO: finish full integration of live stripe business id with a charge created in the front end, while subtracting quick bev fee, calculate order total on the server
-# TODO: allow merchant to switch between their stripe accounts/different businesses in the home page dashboard
+
+
+def send_apn(device_token):
+    apn_key = ''
+    team_id = '6YGH9XK378'
+    # converted authkey to private key that can be properly encoded as RSA key by jwt.encode method using advice here https://github.com/lcobucci/jwt/issues/244
+    with open(os.getcwd()+"/private_key.pem") as f:
+        apn_token = f.read()
+        f.close()
+    token = APNSAuthToken(
+        token=apn_token,
+        team_id=team_id,
+        key_id="9KCZ66FCHF")
+
+    client = APNSHTTP2SandboxClient(
+        token=token,
+        bundle_id='com.theQuickCompany.QuickBev')
+
+    response = client.send(
+        ids=[device_token],
+        message="message",
+    )
+    # response = client.send(
+    #     ids=[device_token],
+    #     message="Your order is ready for pickup. Head to the pickup area.",
+    #     content_available=False,
+    #     title="Order Ready",
+    #     category="order"
+    # )
+
+
+@app.route('/update/<string:customer_id>')
+def update(customer_id):
+    device_token = Customer_Service().get_device_token(customer_id)
+    send_apn(device_token)
+    return Response(status=200)
+
+
+@app.route('/apn-token/<string:customer_id>', methods=["POST"])
+def apn_token(customer_id):
+    print('customer_id', customer_id)
+    device_token = request.headers.get("DeviceToken")
+    print('device_token', device_token)
+    authorization_token = request.headers.get(
+        "Authorization").split(" ")[1]
+    print('authorization_token', authorization_token)
+
+    if not jwt.decode(authorization_token, secret, algorithms=["HS256"]):
+        return 'Inconsistent request', 401
+    else:
+        Customer_Service().update_device_token(device_token, customer_id)
+        return Response(status=200)
 
 
 @app.route('/login', methods=['GET'])
@@ -54,14 +90,18 @@ def login():
     email = request.headers.get('email')
     password = request.headers.get('password')
     response = {"msg": "customer not found"}
+    headers = {}
     customer_service = Customer_Service()
     customer = customer_service.authenticate_customer(email, password)
 
     if customer:
-        # serialize the python object into a python dictionary
-        customer = customer.serialize()
-        print('customer', customer)
-        return Response(status=200, response=json.dumps(customer))
+        serialized_customer = customer.serialize()
+        jwt_token = jwt.encode(
+            {"sub": f'{serialized_customer["id"]}'}, key=secret, algorithm="HS256")
+        headers["authorization-token"] = jwt_token
+        print('thing', jwt_token)
+        print('headers["authorization-token"]', headers["authorization-token"])
+        return Response(status=200, response=json.dumps(serialized_customer), headers=headers)
     else:
         return Response(status=404, response=json.dumps(response))
 
@@ -73,6 +113,8 @@ def inventory():
     headers = {}
     drinks = Drink_Service().get_drinks()
     client_etag = json.loads(request.headers.get("If-None-Match"))
+    print('ETag_Service().validate_etag(client_etag) for drinks',
+          ETag_Service().validate_etag(client_etag))
     if client_etag:
         if not ETag_Service().validate_etag(client_etag):
             for drink in drinks:
@@ -163,29 +205,23 @@ def send_confirmation_email(customer, url):
 @app.route('/customer', methods=['POST', 'GET', 'OPTIONS'])
 def customer():
     response = {}
-    customer_service = Customer_Service()
-    print("request", request)
-    print("request.method", request.method)
-    print('request.data', request.data)
-    print("request.headers", request.headers)
     print(json.loads(request.data))
     if request.method == 'POST':
         requested_new_customer = json.loads(
             request.data)  # load JSON data from request
-        generated_new_customer = customer_service.register_new_customer(
+        generated_new_customer = Customer_Service().register_new_customer(
             requested_new_customer)
-        # generate a secure JSON token using the user's unverified email address. then i embed this token in the url for the verify account link sent in the email. i then parse this string when the user navigates to the page, securely verifying their email by using the
-        generated_new_customer.id = generate_password_hash(
-            generated_new_customer.id, "sha256")
-        print('response', response.serialize())
-        if response:
-            # send the hashed user ID as a crypted key embedded in the activation link for security
-            print('request.url', request.url)
+        print('generated_new_customer', generated_new_customer)
 
-            send_confirmation_email(requested_new_customer, request.url)
-            return jsonify(response.requested_new_customer()), 200
+        # generate a secure JSON token using the user's unverified email address. then i embed this token in the url for the verify account link sent in the email. i then parse this string when the user navigates to the page, securely verifying their email by using the
+        generated_new_customer.jwt_token = jwt.encode(
+            {"sub": f'{generated_new_customer.id}'}, key=secret, algorithm="HS256")
+        if generated_new_customer["jwt_token"]:
+            # send the hashed user ID as a crypted key embedded in the activation link for security
+            send_confirmation_email(generated_new_customer, request.url)
+            return jsonify(generated_new_customer), 200
         else:
-            return jsonify(response), 400
+            return Response(status=400)
     if request.method == 'OPTIONS':
         header = {}
         header["Access-Control-Allow-Credentials"] = 'true'
@@ -198,37 +234,19 @@ def customer():
         merchant_id = base64.b64decode(
             request.headers.get(
                 "Authorization").split(" ")[1]).decode("utf-8")
-        customers = customer_service.get_customers(merchant_id=merchant_id)
-        print('customer', customers)
+        customers = Customer_Service().get_customers(merchant_id=merchant_id)
         response = {"customers": customers}
         return Response(status=200, response=json.dumps(response), headers=header)
 
 
 # strongly typed url argument ;)
-@app.route("/verify-email/<string:username>")
-def verify_email(username):
-    print('username', username)
+@app.route("/verify-email/<string:jwt_token>")
+def verify_email(jwt_token):
     # verify the hashed username that was embedded in the verification link
-    status = Customer_Service().authenticate_username(
-        username=None, hashed_username=username)
-    print('status', status)
-    response = {"status": status}
-    pusher_client.trigger(
-        'email-verification-channel', 'account-status', json.dumps(response)
-    )  # trigger a `account-status` event on `email-verification-channel` channel
+    status = jwt.decode(jwt_token, secret, algorithms=["HS256"])
+    user_id = status["sub"]
+    response = {"msg": "successfully registered"}
     return Response(response=json.dumps(response), status=200)
-
-
-@app.route('/pusher/beams-auth', methods=['GET'])
-def beams_auth():
-    # Do your normal auth checks here 🔒
-    user_id = ''  # get it from your auth system
-    user_id_in_query_param = request.args.get('user_id')
-    if user_id != user_id_in_query_param:
-        return 'Inconsistent request', 401
-
-    beams_token = beams_client.generate_token(user_id)
-    return jsonify(beams_token)
 
 
 @app.route('/business', methods=['GET'])
@@ -256,8 +274,6 @@ def get_businesss():
             etag = ETag_Service().get_etag("business")
             headers["E-tag-category"] = etag.category
             headers["E-tag-id"] = str(etag.id)
-
-            # headers["E-tag"] = json.dumps(headers["E-tag"])
     else:
         etag = ETag_Service().get_etag("business")
         headers["E-tag-category"] = etag.category

@@ -7,9 +7,9 @@
         <attribute name="merchantStripeId" attributeType="String" defaultValueString=""/>
         <attribute name="name" attributeType="String"/>
         <attribute name="salesTaxRate" attributeType="Double" defaultValueString="0.0"/>
-        <relationship name="businessToCheckoutCart" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CheckoutCart" inverseName="business" inverseEntity="CheckoutCart"/>
-        <relationship name="drinks" toMany="YES" deletionRule="Cascade" destinationEntity="Drink" inverseName="drinkToBusiness" inverseEntity="Drink"/>
-        <relationship name="userBusinessToCheckoutCart" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CheckoutCart" inverseName="userBusiness" inverseEntity="CheckoutCart"/>
+        <relationship name="businessToCheckoutCart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CheckoutCart" inverseName="business" inverseEntity="CheckoutCart"/>
+        <relationship name="drinks" toMany="YES" deletionRule="Nullify" destinationEntity="Drink" inverseName="drinkToBusiness" inverseEntity="Drink"/>
+        <relationship name="userBusinessToCheckoutCart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CheckoutCart" inverseName="userBusiness" inverseEntity="CheckoutCart"/>
     </entity>
     <entity name="CheckoutCart" representedClassName=".CheckoutCart" syncable="YES">
         <attribute name="businessId" optional="YES" attributeType="UUID" defaultValueString="" usesScalarValueType="NO"/>
@@ -41,7 +41,7 @@
     </entity>
     <entity name="ETag" representedClassName="ETag" syncable="YES">
         <attribute name="category" attributeType="String"/>
-        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES"/>
     </entity>
     <entity name="Order" representedClassName=".Order" syncable="YES">
         <attribute name="businessId" attributeType="UUID" usesScalarValueType="NO"/>

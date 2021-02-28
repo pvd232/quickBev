@@ -7,29 +7,24 @@
 //
 //
 
-import Foundation
 import CoreData
+import Foundation
 
-
-extension Tab {
-    
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Tab> {
+public extension Tab {
+    @nonobjc class func fetchRequest() -> NSFetchRequest<Tab> {
         return NSFetchRequest<Tab>(entityName: "Tab")
     }
-    
-    @NSManaged public var id: UUID?
-    @NSManaged public var name: String?
-    @NSManaged public var businessId: UUID?
-    @NSManaged public var userId: String?
-    @NSManaged public var address: String?
-    @NSManaged public var dateTime: Date?
-    @NSManaged public var detail: String?
-    @NSManaged public var minimumContribution: Int64
-    @NSManaged public var fundraisingGoal: Int64
-    @NSManaged public var tabToUser: User?
-    
+
+    @NSManaged var id: UUID?
+    @NSManaged var name: String?
+    @NSManaged var businessId: UUID?
+    @NSManaged var userId: String?
+    @NSManaged var address: String?
+    @NSManaged var dateTime: Date?
+    @NSManaged var detail: String?
+    @NSManaged var minimumContribution: Int64
+    @NSManaged var fundraisingGoal: Int64
+    @NSManaged var tabToUser: User?
 }
 
-extension Tab : Identifiable {
-    
-}
+extension Tab: Identifiable {}
