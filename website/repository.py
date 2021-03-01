@@ -179,15 +179,34 @@ class Customer_Repository(object):
     def update_device_token(self, session, device_token, customer_id):
         customer_to_update = session.query(Customer).filter(
             Customer.id == customer_id).first()
-        print('customer_to_update', customer_to_update.serialize)
-        customer_to_update.device_token = device_token
-        return
+        if customer_to_update:
+            print('customer_to_update', customer_to_update.serialize)
+            customer_to_update.device_token = device_token
+            return True
+        else:
+            return False
 
     def get_device_token(self, session, customer_id):
+        print('customer_id', customer_id)
         requested_customer = session.query(Customer).filter(
             Customer.id == customer_id).first()
-        device_token = requested_customer.device_token
-        return device_token
+        print('requested_customer', requested_customer)
+        print('requested_customer.serialize', requested_customer.serialize)
+
+        if requested_customer:
+            device_token = requested_customer.device_token
+            return device_token
+        else:
+            return False
+
+    def update_email_verification(self, session, customer_id):
+        requested_customer = session.query(Customer).filter(
+            Customer.id == customer_id).first()
+        if requested_customer:
+            requested_customer.email_verified = True
+            return True
+        else:
+            return False
 
 
 class Business_Repository(object):

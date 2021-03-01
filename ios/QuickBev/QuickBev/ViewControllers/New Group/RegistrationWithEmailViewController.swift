@@ -182,7 +182,10 @@ class RegistrationWithEmailViewController: UIViewController, UITextFieldDelegate
         // can also create another websocket function that registers to another socket in backend for front end to call when email is verified maybe
         else {
             print("req customer", requestedNewUser)
-            let request = try! APIRequest(method: .post, path: "/customer", body: requestedNewUser)
+            print("req cust email", requestedNewUser.email)
+
+            let userCredentials: [HTTPHeader] = [HTTPHeader(field: "DeviceToken", value: "\(try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).getValue(for: "deviceToken") ?? "")")]
+            let request = try! APIRequest(method: .post, path: "/customer", body: requestedNewUser, headers: userCredentials)
             APIClient().perform(request) { result in
                 switch result {
                 case let .success(response):
@@ -201,10 +204,11 @@ class RegistrationWithEmailViewController: UIViewController, UITextFieldDelegate
 
                             print("response", response)
                             let sessionToken = response.headers["authorization-token"] as! String
+                            try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).setValue(sessionToken, for: "sessionToken")
                             print("sessionToken", sessionToken)
-                            let headers = ["Authorization": "Bearer \(sessionToken)"] // Headers your auth endpoint needs
                             // set the token in the shopping cart and use it whenever calling the backend
                             DispatchQueue.main.async {
+                                self.activityIndicator.stopAnimating()
                                 self.alertAccountCreation()
                             }
                         }
@@ -243,8 +247,8 @@ class RegistrationWithEmailViewController: UIViewController, UITextFieldDelegate
 
     private func alertAccountCreation() {
         return alert(
-            title: "",
-            message: "Welcome to QuickBev!",
+            title: "Welcome to QuickBev!",
+            message: "",
             alertType: "accountCreation"
         )
     }

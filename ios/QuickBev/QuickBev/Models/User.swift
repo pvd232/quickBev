@@ -42,7 +42,7 @@ public class User: NSManagedObject, Codable {
 
     var email: String {
         get {
-            if let email = try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).getValue(for: firstName!)
+            if let email = try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).getValue(for: "email")
             {
                 return email
             } else {
@@ -50,13 +50,14 @@ public class User: NSManagedObject, Codable {
             }
         }
         set(newEmail) {
-            try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).setValue(newEmail, for: firstName!)
+            print("new email", newEmail)
+            try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).setValue(newEmail, for: "email")
         }
     }
 
     var password: String {
         get {
-            if let password = try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).getValue(for: lastName!)
+            if let password = try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).getValue(for: "password")
             {
                 print("made password", password)
                 return password
@@ -66,13 +67,14 @@ public class User: NSManagedObject, Codable {
             }
         }
         set(newPassword) {
-            try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).setValue(newPassword, for: lastName!)
+            print("new password", newPassword)
+            try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).setValue(newPassword, for: "password")
         }
     }
 
     var stripeId: String {
         get {
-            if let stripeId = try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).getValue(for: firstName! + lastName!)
+            if let stripeId = try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).getValue(for: "stripeId")
             {
                 return stripeId
             } else {
@@ -80,7 +82,7 @@ public class User: NSManagedObject, Codable {
             }
         }
         set(newStripeId) {
-            try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).setValue(newStripeId, for: firstName! + lastName!)
+            try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).setValue(newStripeId, for: "stripeId")
         }
     }
 }

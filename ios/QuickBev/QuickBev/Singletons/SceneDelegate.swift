@@ -20,10 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         return window!.rootViewController as! RootViewController
     }
 
-    func scene(_ scene: UIScene, willConnectTo _: UISceneSession, options _: UIScene.ConnectionOptions) {
+    func scene(_ scene: UIScene, willConnectTo _: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        // look for remote notification response
         // need to initialize checkout cart or shit gets fucked up
         _ = CheckoutCart.shared
 
@@ -32,6 +33,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.rootViewController = RootViewController()
         self.window = window
         window.makeKeyAndVisible()
+        if let response = connectionOptions.notificationResponse {
+            for (key, value) in response.notification.request.content.userInfo {
+                NSLog("noodles \(key) : noodles \(value)")
+            }
+            let navController: UINavigationController = rootViewController.current as! UINavigationController
+
+            navController.pushViewController(RegistrationWithEmailViewController(), animated: true)
+            // handle the notification
+        }
     }
 
     func sceneDidDisconnect(_: UIScene) {

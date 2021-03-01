@@ -18,6 +18,7 @@ from flask import Flask
 import jwt
 import calendar
 from pushjack_http2 import APNSHTTP2SandboxClient, APNSAuthToken
+from werkzeug.security import generate_password_hash, check_password_hash
 
 
 app = Flask(__name__)
@@ -32,7 +33,7 @@ secret = '3327aa0ee1f61998369e815c17b1dc5eaf7e728bca14f6fe557af366ee6e20f9'
 # TODO: need to finish the add_business function by adding the new business address and returning the unique identifier to main.py so i can dynamically set the files path of the new image using the UUID of the business address
 
 
-def send_apn(device_token):
+def send_apn(device_token, action):
     apn_key = ''
     team_id = '6YGH9XK378'
     # converted authkey to private key that can be properly encoded as RSA key by jwt.encode method using advice here https://github.com/lcobucci/jwt/issues/244
@@ -47,11 +48,13 @@ def send_apn(device_token):
     client = APNSHTTP2SandboxClient(
         token=token,
         bundle_id='com.theQuickCompany.QuickBev')
-
-    response = client.send(
-        ids=[device_token],
-        message="message",
-    )
+    if action == "email":
+        client.send(
+            ids=[device_token],
+            title="Email verified",
+            message="Email verification complete. Lets get the party started",
+            category="email"
+        )
     # response = client.send(
     #     ids=[device_token],
     #     message="Your order is ready for pickup. Head to the pickup area.",
@@ -82,6 +85,11 @@ def apn_token(customer_id):
     else:
         Customer_Service().update_device_token(device_token, customer_id)
         return Response(status=200)
+
+
+@app.route("/test")
+def test():
+    return Response(status=200)
 
 
 @app.route('/login', methods=['GET'])
@@ -162,10 +170,10 @@ def orders():
         return Response(status=200, response=json.dumps(response), headers=header)
 
 
-def send_confirmation_email(customer, url):
-    # gmail left pad = 20px, right pad = 16px
+def send_confirmation_email(jwt_token, customer, url):
+    print('jwt_token', jwt_token)
     host = request.headers.get('Host')
-    button_url = f"http://{host}/verify-email/{customer.id}"
+    button_url = f"http://{host}/verify-email/{jwt_token}"
 
     logo = os.path.join(os.path.dirname(os.path.abspath(
         __file__)), "./src/static/landscape-logo-purple.png")
@@ -174,7 +182,7 @@ def send_confirmation_email(customer, url):
         encoded_string = base64.b64encode(image_file.read())
 
     mail_body_text = f'<p style="margin-top: 15px;margin-bottom: 15px;">Hey {customer.first_name},</p><p style="margin-top: 15px;margin-bottom: 15px;">Welcome to QuickBev!</p><p style="margin-top: 15px;margin-bottom: 15px;">Please click the link below to verify your account</p><br /><p style="margin-top: 15px;margin-bottom: 15px;">Let the good times begin,</p><p style="margin-top: 15px;margin-bottom: 15px;">—The QuickBev Team</p></div><div style="display:flex; justify-content: center;"><a style="background-color:white; border-color:#8682E6; font-weight:bold; align-self:center;" href="{button_url}"><button type="button" class="btn btn-outline-*" style="background-color:white; border-color:#8682E6; font-weight:bold; align-self:center;">VERIFY EMAIL</button></a>'
-    mail_body = f'<div style="height: 100%;"><div style="width: 100%;height: 100%;display: flex;justify-content: center;background-color: #e8e8e8;"><div style="width: 100%;max-width: 500px;margin-top: 3%;margin-bottom: 10%; margin-right:auto; margin-left:auto; background-color: white;"><div  style="width: 100%; padding:30px 30px 30px 30px"><div  style="display: flex; width:100%; justify-content: center; text-align:center;"><img src="data:image/png;base64,f{encoded_string} style="width:50%; height:12%" alt="img" /></div><div  style="margin-top: 30px;">{mail_body_text}</div></div></div></div>'
+    mail_body = f'<div style="height: 100%;"><div style="width: 100%;height: 100%;display: flex;justify-content: center;background-color: #e8e8e8;"><div style="width: 100%;max-width: 500px;margin-top: 3%;margin-bottom: 10%; margin-right:auto; margin-left:auto; background-color: white;"><div  style="width: 100%; padding:30px 30px 30px 30px"><div  style="display: flex; width:100%; justify-content: center; text-align:center;"><img src="data:image/png;base64,{encoded_string} style="width:50%; height:12%" alt="img" /></div><div  style="margin-top: 30px;">{mail_body_text}</div></div></div></div>'
 
     sender_address = 'patardriscoll@gmail.com'
     email = 'patardriscoll@gmail.com'
@@ -205,21 +213,28 @@ def send_confirmation_email(customer, url):
 @app.route('/customer', methods=['POST', 'GET', 'OPTIONS'])
 def customer():
     response = {}
+    headers = {}
     print(json.loads(request.data))
     if request.method == 'POST':
         requested_new_customer = json.loads(
             request.data)  # load JSON data from request
         generated_new_customer = Customer_Service().register_new_customer(
             requested_new_customer)
-        print('generated_new_customer', generated_new_customer)
+        print('generated_new_customer', generated_new_customer.serialize())
+        device_token = request.headers.get("DeviceToken")
 
         # generate a secure JSON token using the user's unverified email address. then i embed this token in the url for the verify account link sent in the email. i then parse this string when the user navigates to the page, securely verifying their email by using the
-        generated_new_customer.jwt_token = jwt.encode(
-            {"sub": f'{generated_new_customer.id}'}, key=secret, algorithm="HS256")
-        if generated_new_customer["jwt_token"]:
+        if generated_new_customer:
+            Customer_Service().update_device_token(
+                device_token, generated_new_customer.id, )
+            jwt_token = jwt.encode(
+                {"sub": f'{generated_new_customer.id}'}, key=secret, algorithm="HS256")
             # send the hashed user ID as a crypted key embedded in the activation link for security
-            send_confirmation_email(generated_new_customer, request.url)
-            return jsonify(generated_new_customer), 200
+            headers["authorization-token"] = jwt_token
+            Customer_Service().update_device_token(generated_new_customer.id)
+            send_confirmation_email(
+                jwt_token, generated_new_customer, request.url)
+            return Response(response=json.dumps(generated_new_customer.serialize()), status=200, headers=headers)
         else:
             return Response(status=400)
     if request.method == 'OPTIONS':
@@ -244,9 +259,19 @@ def customer():
 def verify_email(jwt_token):
     # verify the hashed username that was embedded in the verification link
     status = jwt.decode(jwt_token, secret, algorithms=["HS256"])
-    user_id = status["sub"]
-    response = {"msg": "successfully registered"}
-    return Response(response=json.dumps(response), status=200)
+    if status:
+        customer_id = status["sub"]
+        if Customer_Service().update_email_verification(customer_id):
+            device_token = Customer_Service().get_device_token(customer_id).device_token
+            send_apn(device_token, "email")
+            response = {"msg": "successfully registered"}
+            return Response(response=json.dumps(response), status=200)
+        else:
+            response = {"msg": "customer not found"}
+            return Response(response=json.dumps(response), status=400)
+    else:
+        response = {"msg": "invalid jwt token"}
+        return Response(response=json.dumps(response), status=400)
 
 
 @app.route('/business', methods=['GET'])

@@ -33,7 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             .requestAuthorization(
                 options: [.alert, .sound, .badge]) { [weak self] granted, _ in
                 print("Permission granted: \(granted)")
-                guard granted else { return }
+                guard granted else {
+                    self?.testNetwork()
+                    return
+                }
                 self?.getNotificationSettings()
             }
     }
@@ -46,108 +49,83 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 UIApplication.shared.registerForRemoteNotifications()
                 // set the delegate in didFinishLaunchingWithOptions
                 UNUserNotificationCenter.current().delegate = self
+                // trigger a dummy network request to authorize use of local network
             }
         }
     }
 
-//    @available(iOS 10.0, *)
-//    func userNotificationCenter(_: UNUserNotificationCenter, willPresent _: UNNotification, withCompletionHandler completionHandler: (UNNotificationPresentationOptions) -> Void)
-//    {
-//        print("update")
-//        // Handle the notification
-//        completionHandler(
-//            [UNNotificationPresentationOptions.alert,
-//             UNNotificationPresentationOptions.sound,
-//             UNNotificationPresentationOptions.badge])
-//    }
-    func applicationDidBecomeActive(_: UIApplication) {
-        print("became active")
+    func testNetwork() {
+        let testRequest = APIRequest(method: .get, path: "/test")
+        APIClient().perform(testRequest) {
+            result in
+            // this request will always fail because the network permissions have not been granted
+            switch result {
+            case let .success(response):
+                print(response.statusCode)
+            case let .failure(error):
+                print("error testing network", error)
+            }
+        }
     }
 
-    func application(_: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_: UIApplication, willFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         StripeAPI.defaultPublishableKey = "pk_test_51I0xFxFseFjpsgWvepMo3sJRNB4CCbFPhkxj2gEKgHUhIGBnciTqNVzjz1wz68Btbd5zAb2KC9eXpYaiOwLDA5QH00SZhtKPLT"
         IQKeyboardManager.shared.enable = true
         registerForPushNotifications()
-        print("launch")
-        if launchOptions?[UIApplication.LaunchOptionsKey.remoteNotification] != nil {
-            let navController: UINavigationController = SceneDelegate.shared.rootViewController.current as! UINavigationController
-
-            navController.pushViewController(RegistrationWithEmailViewController(), animated: true)
-        }
         return true
     }
 
     func application(_: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        print("register device token")
-        //        self.enableRemoteNotificationFeatures()
-        //        CheckoutCart.beamsClient.registerDeviceToken(deviceToken)
         let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
         let token = tokenParts.joined()
         try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).setValue(token, for: "deviceToken")
-//        let userCredentials: [HTTPHeader] = [HTTPHeader(field: "Authorization: Bearer", value: token)]
-//        let sendDeviceTokenRequest = try! APIRequest(method: .post, path: "/apn-token", headers: userCredentials)
-//        APIClient().perform(sendDeviceTokenRequest) { result in
-//            switch result {
-//            case let .success(response):
-//                if response.statusCode == 200 {
-//                    print("token registered")
-//                }
-//            case let .failure(error):
-//                print("error", error.localizedDescription)
-//                print("Device Token: \(token)")
-//            }
-//        }
     }
 
     func application(_: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
         print("Failed to register: \(error)")
     }
 
-    func userNotificationCenter(_: UNUserNotificationCenter,
-                                didReceive _: UNNotificationResponse,
-                                withCompletionHandler _: @escaping () -> Void)
+    func userNotificationCenter(_: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void)
     {
+        let userInfo = response.notification.request.content.userInfo
+        handleNotification(userInfo: userInfo)
+        completionHandler()
         print("notification tapped here")
-        switch UIApplication.shared.applicationState {
-        case .active:
-            print("active")
-        // app is currently active, can update badges count here
-        case .inactive:
-            print("inactive")
 
-        // app is transitioning from background to foreground (user taps notification), do what you need when user taps here
-        case .background:
-            print("background")
-
-        // app is in background, if content-available key of your notification is set to 1, poll to your backend to retrieve data and update your interface here
-        default:
-            print("something else")
-        }
+        //        switch UIApplication.shared.applicationState {
+        //        case .active:
+        //            print("active")
+        //        // app is currently active, can update badges count here
+        //        case .inactive:
+        //            print("inactive")
+        //
+        //        // app is transitioning from background to foreground (user taps notification), do what you need when user taps here
+        //        case .background:
+        //            print("background")
+        //
+        //        // app is in background, if content-available key of your notification is set to 1, poll to your backend to retrieve data and update your interface here
+        //        default:
+        //            print("something else")
+        //        }
     }
 
-    func application(
-        _: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler:
-        @escaping (UIBackgroundFetchResult) -> Void
-    ) {
+    func handleNotification(userInfo: [AnyHashable: Any]) {
         let navController: UINavigationController = SceneDelegate.shared.rootViewController.current as! UINavigationController
-
         print("userInfo", userInfo)
-
         if let aps = userInfo["aps"] as? NSDictionary {
             // silent notification
             if aps["content-available"] as? Int == 1 {
             } else {
-                if let alert = aps["alert"] as? NSDictionary {
-                    if let body = alert["body"] as? NSString {
-                        if let title = alert["title"] as? NSString {
-                            print("alert")
-                            let alertController = UIAlertController(title: title as String, message: body as String, preferredStyle: .alert)
-                            alertController.addAction(UIAlertAction(title: "Okay", style: .cancel) { _ in
-                                SceneDelegate.shared.rootViewController.dismiss(animated: true, completion: nil)
-                            })
-                            SceneDelegate.shared.rootViewController.current.present(alertController, animated: true, completion: nil)
+                if let alert = aps["alert"] as? NSDictionary, let body = alert["body"] as? NSString, let title = alert["title"] as? NSString, let category = alert["category"] as? NSString {
+                    let alertController = UIAlertController(title: title as String, message: body as String, preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Okay", style: .cancel) { _ in
+                        if category == "email" {
+                            CheckoutCart.shared.user?.emailVerified = true
+                            CoreDataManager.sharedManager.saveContext()
+                            SceneDelegate.shared.rootViewController.switchToHomePageViewController()
                         }
-                    }
+                    })
+                    SceneDelegate.shared.rootViewController.current.present(alertController, animated: true, completion: nil)
 
                     // do something with silent notification
                 } else if let _ = aps["alert"] as? NSString {
@@ -155,9 +133,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                     // Do stuff
                 }
             }
-            completionHandler(.newData)
             // do something with regular notification
         }
+    }
+
+    func application(
+        _: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler:
+        @escaping (UIBackgroundFetchResult) -> Void
+    ) {
+        handleNotification(userInfo: userInfo)
+        completionHandler(.newData)
     }
 
     func applicationWillTerminate(_: UIApplication) {

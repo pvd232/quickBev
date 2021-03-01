@@ -252,11 +252,10 @@ SWIFT_CLASS("_TtC8QuickBev11AppDelegate")
 @interface AppDelegate : UIResponder <UIApplicationDelegate, UNUserNotificationCenterDelegate>
 - (UISceneConfiguration * _Nonnull)application:(UIApplication * _Nonnull)_ configurationForConnectingSceneSession:(UISceneSession * _Nonnull)connectingSceneSession options:(UISceneConnectionOptions * _Nonnull)_ SWIFT_WARN_UNUSED_RESULT;
 - (void)application:(UIApplication * _Nonnull)_ didDiscardSceneSessions:(NSSet<UISceneSession *> * _Nonnull)_;
-- (void)applicationDidBecomeActive:(UIApplication * _Nonnull)_;
-- (BOOL)application:(UIApplication * _Nonnull)_ didFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)application:(UIApplication * _Nonnull)_ willFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)_ SWIFT_WARN_UNUSED_RESULT;
 - (void)application:(UIApplication * _Nonnull)_ didRegisterForRemoteNotificationsWithDeviceToken:(NSData * _Nonnull)deviceToken;
 - (void)application:(UIApplication * _Nonnull)_ didFailToRegisterForRemoteNotificationsWithError:(NSError * _Nonnull)error;
-- (void)userNotificationCenter:(UNUserNotificationCenter * _Nonnull)_ didReceiveNotificationResponse:(UNNotificationResponse * _Nonnull)_ withCompletionHandler:(void (^ _Nonnull)(void))_;
+- (void)userNotificationCenter:(UNUserNotificationCenter * _Nonnull)_ didReceiveNotificationResponse:(UNNotificationResponse * _Nonnull)response withCompletionHandler:(void (^ _Nonnull)(void))completionHandler;
 - (void)application:(UIApplication * _Nonnull)_ didReceiveRemoteNotification:(NSDictionary * _Nonnull)userInfo fetchCompletionHandler:(void (^ _Nonnull)(UIBackgroundFetchResult))completionHandler;
 - (void)applicationWillTerminate:(UIApplication * _Nonnull)_;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -691,7 +690,7 @@ SWIFT_CLASS("_TtC8QuickBev18RoundedUITextField")
 SWIFT_CLASS("_TtC8QuickBev13SceneDelegate")
 @interface SceneDelegate : UIResponder <UIWindowSceneDelegate>
 @property (nonatomic, strong) UIWindow * _Nullable window;
-- (void)scene:(UIScene * _Nonnull)scene willConnectToSession:(UISceneSession * _Nonnull)_ options:(UISceneConnectionOptions * _Nonnull)_;
+- (void)scene:(UIScene * _Nonnull)scene willConnectToSession:(UISceneSession * _Nonnull)_ options:(UISceneConnectionOptions * _Nonnull)connectionOptions;
 - (void)sceneDidDisconnect:(UIScene * _Nonnull)_;
 - (void)sceneDidBecomeActive:(UIScene * _Nonnull)_;
 - (void)sceneWillResignActive:(UIScene * _Nonnull)_;

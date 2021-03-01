@@ -175,7 +175,6 @@ class Order_Drink_Domain(object):
 
 class Customer_Domain(object):
     def __init__(self, customer_object=None, customer_json=None):
-        self.jwt_token = ''
         if customer_object:
             self.id = customer_object.id
             self.first_name = customer_object.first_name
@@ -187,6 +186,7 @@ class Customer_Domain(object):
             if "stripe_id" in customer_object.__dict__.keys():
                 self.stripe_id = customer_object.stripe_id
         elif customer_json:
+            print('customer_json', customer_json)
             print()
             print('customer_json["id"]', customer_json["id"])
             print()
@@ -414,13 +414,13 @@ class ETag_Domain(object):
 #     path = f'/3/device/{apn_jwt_token}'
 # class AppDelegate: UIResponder, UIApplicationDelegate {
 #     // MARK: UISceneSession Lifecycle
-    
+
 #     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
 #         // Called when a new scene session is being created.
 #         // Use this method to select a configuration to create the new scene with.
 #         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
 #     }
-    
+
 #     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
 #         // Called when the user discards a scene session.
 #         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
@@ -460,7 +460,7 @@ class ETag_Domain(object):
 #         let token = tokenParts.joined()
 #         print("Device Token: \(token)")
 #     }
-    
+
 #     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
 #         print("Failed to register: \(error)")
 #     }
@@ -479,8 +479,8 @@ class ETag_Domain(object):
 #         }
 
 #     }
-    
-    
+
+
 #     func applicationWillTerminate(_ application: UIApplication) {
 #         //        let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
 #         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
@@ -492,13 +492,13 @@ class ETag_Domain(object):
 # current beams implementaion
 # class AppDelegate: UIResponder, UIApplicationDelegate {
 #     // MARK: UISceneSession Lifecycle
-    
+
 #     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
 #         // Called when a new scene session is being created.
 #         // Use this method to select a configuration to create the new scene with.
 #         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
 #     }
-    
+
 #     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
 #         // Called when the user discards a scene session.
 #         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
@@ -520,12 +520,12 @@ class ETag_Domain(object):
 #     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
 #         CheckoutCart.beamsClient.handleNotification(userInfo: userInfo)
 #     }
-    
+
 #     func applicationWillTerminate(_ application: UIApplication) {
 # //        let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
 #         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 #         // Saves changes in the application's managed object context before the application terminates.
 #         CoreDataManager.sharedManager.saveContext()
 #     }
-    
+
 # }
