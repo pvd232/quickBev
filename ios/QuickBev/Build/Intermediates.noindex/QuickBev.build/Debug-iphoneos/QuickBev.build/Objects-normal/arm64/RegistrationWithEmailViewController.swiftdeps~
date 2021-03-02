@@ -52,6 +52,7 @@ depends-top-level:
 - !private "*"
 - !private "/"
 - "=="
+- !private "??"
 - !private "APIClient"
 - !private "APIRequest"
 - "Array"
@@ -66,6 +67,7 @@ depends-top-level:
 - "DrinkViewController"
 - "FloatLiteralType"
 - "GenericPasswordQueryable"
+- "HTTPHeader"
 - "HomePageViewController"
 - "IntegerLiteralType"
 - "NSCoder"
@@ -85,6 +87,7 @@ depends-top-level:
 - "UILabel"
 - "UINavigationController"
 - "UIStackView"
+- "UITextField"
 - "UITextFieldDelegate"
 - "UIViewController"
 - "User"
@@ -159,6 +162,7 @@ depends-member:
 - !private ["s7CVarArgP", "DrinkListTableViewController"]
 - !private ["s7CVarArgP", "DrinkViewController"]
 - !private ["s7CVarArgP", "GenericPasswordQueryable"]
+- !private ["s7CVarArgP", "HTTPHeader"]
 - !private ["s7CVarArgP", "HomePageViewController"]
 - !private ["s7CVarArgP", "NSLayoutConstraint"]
 - ["s7CVarArgP", "RoundButton"]
@@ -274,6 +278,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "DrinkListTableViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "DrinkViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "GenericPasswordQueryable"]
+- !private ["s28CustomDebugStringConvertibleP", "HTTPHeader"]
 - !private ["s28CustomDebugStringConvertibleP", "HomePageViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "NSLayoutConstraint"]
 - ["s28CustomDebugStringConvertibleP", "RoundButton"]
@@ -386,6 +391,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "DrinkListTableViewController"]
 - !private ["s23CustomStringConvertibleP", "DrinkViewController"]
 - !private ["s23CustomStringConvertibleP", "GenericPasswordQueryable"]
+- !private ["s23CustomStringConvertibleP", "HTTPHeader"]
 - !private ["s23CustomStringConvertibleP", "HomePageViewController"]
 - !private ["s23CustomStringConvertibleP", "NSLayoutConstraint"]
 - ["s23CustomStringConvertibleP", "RoundButton"]
@@ -414,6 +420,8 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "alertAccountCreation"]
 - !private ["s23CustomStringConvertibleP", "alertAccountCreationForGuest"]
 - !private ["s23CustomStringConvertibleP", "alertError"]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
 - !private ["s23CustomStringConvertibleP", "async"]
 - !private ["s23CustomStringConvertibleP", "backgroundColor"]
 - !private ["s23CustomStringConvertibleP", "bottomAnchor"]
@@ -492,6 +500,8 @@ depends-member:
 - !private ["Se", "stripeId"]
 - !private ["Se", "subscript"]
 - !private ["Se", "white"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
 - !private ["SD", "subscript"]
 - ["So18OS_dispatch_objectC", ""]
 - !private ["So18OS_dispatch_objectC", "async"]
@@ -522,6 +532,7 @@ depends-member:
 - !private ["SQ", "DrinkListTableViewController"]
 - !private ["SQ", "DrinkViewController"]
 - !private ["SQ", "GenericPasswordQueryable"]
+- !private ["SQ", "HTTPHeader"]
 - !private ["SQ", "HomePageViewController"]
 - !private ["SQ", "NSLayoutConstraint"]
 - ["SQ", "RoundButton"]
@@ -643,7 +654,9 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "bounds"]
 - !private ["s23ExpressibleByNilLiteralP", "safeAreaLayoutGuide"]
 - !private ["s23ExpressibleByNilLiteralP", "white"]
+- !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
 - ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
 - ["s26ExpressibleByStringLiteralP", ""]
 - ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["8QuickBev24GenericPasswordQueryableV", ""]
@@ -653,6 +666,7 @@ depends-member:
 - !private ["7SwiftUI7GestureP", "bounds"]
 - !private ["7SwiftUI7GestureP", "safeAreaLayoutGuide"]
 - !private ["7SwiftUI7GestureP", "white"]
+- !private ["8QuickBev10HTTPHeaderV", "init"]
 - !private ["8QuickBev10HTTPMethodO", "post"]
 - !private ["SH", "APIClient"]
 - !private ["SH", "APIRequest"]
@@ -662,6 +676,7 @@ depends-member:
 - !private ["SH", "DrinkListTableViewController"]
 - !private ["SH", "DrinkViewController"]
 - !private ["SH", "GenericPasswordQueryable"]
+- !private ["SH", "HTTPHeader"]
 - !private ["SH", "HomePageViewController"]
 - !private ["SH", "NSLayoutConstraint"]
 - ["SH", "RoundButton"]
@@ -784,6 +799,7 @@ depends-member:
 - !private ["So8NSCodingP", "DrinkListTableViewController"]
 - !private ["So8NSCodingP", "DrinkViewController"]
 - !private ["So8NSCodingP", "GenericPasswordQueryable"]
+- !private ["So8NSCodingP", "HTTPHeader"]
 - !private ["So8NSCodingP", "HomePageViewController"]
 - ["So8NSCodingP", "NSCoder"]
 - !private ["So8NSCodingP", "NSLayoutConstraint"]
@@ -800,6 +816,7 @@ depends-member:
 - ["So8NSCodingP", "UILabel"]
 - ["So8NSCodingP", "UINavigationController"]
 - ["So8NSCodingP", "UIStackView"]
+- ["So8NSCodingP", "UITextField"]
 - !private ["So8NSCodingP", "UIViewController"]
 - !private ["So8NSCodingP", "User"]
 - ["So8NSCodingP", "UsesAutoLayout"]
@@ -939,6 +956,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "DrinkListTableViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "DrinkViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "GenericPasswordQueryable"]
+- !private ["So26NSExtensionRequestHandlingP", "HTTPHeader"]
 - !private ["So26NSExtensionRequestHandlingP", "HomePageViewController"]
 - ["So26NSExtensionRequestHandlingP", "NSCoder"]
 - !private ["So26NSExtensionRequestHandlingP", "NSLayoutConstraint"]
@@ -955,6 +973,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "UILabel"]
 - ["So26NSExtensionRequestHandlingP", "UINavigationController"]
 - ["So26NSExtensionRequestHandlingP", "UIStackView"]
+- ["So26NSExtensionRequestHandlingP", "UITextField"]
 - !private ["So26NSExtensionRequestHandlingP", "UIViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "User"]
 - ["So26NSExtensionRequestHandlingP", "UsesAutoLayout"]
@@ -1077,6 +1096,7 @@ depends-member:
 - !private ["So8NSObjectC", "DrinkListTableViewController"]
 - !private ["So8NSObjectC", "DrinkViewController"]
 - !private ["So8NSObjectC", "GenericPasswordQueryable"]
+- !private ["So8NSObjectC", "HTTPHeader"]
 - !private ["So8NSObjectC", "HomePageViewController"]
 - ["So8NSObjectC", "NSCoder"]
 - !private ["So8NSObjectC", "NSLayoutConstraint"]
@@ -1093,6 +1113,7 @@ depends-member:
 - ["So8NSObjectC", "UILabel"]
 - ["So8NSObjectC", "UINavigationController"]
 - ["So8NSObjectC", "UIStackView"]
+- ["So8NSObjectC", "UITextField"]
 - !private ["So8NSObjectC", "UIViewController"]
 - !private ["So8NSObjectC", "User"]
 - ["So8NSObjectC", "UsesAutoLayout"]
@@ -1238,6 +1259,7 @@ depends-member:
 - !private ["So8NSObjectP", "DrinkListTableViewController"]
 - !private ["So8NSObjectP", "DrinkViewController"]
 - !private ["So8NSObjectP", "GenericPasswordQueryable"]
+- !private ["So8NSObjectP", "HTTPHeader"]
 - !private ["So8NSObjectP", "HomePageViewController"]
 - !private ["So8NSObjectP", "NSLayoutConstraint"]
 - ["So8NSObjectP", "RoundButton"]
@@ -1253,6 +1275,7 @@ depends-member:
 - ["So8NSObjectP", "UILabel"]
 - ["So8NSObjectP", "UINavigationController"]
 - ["So8NSObjectP", "UIStackView"]
+- ["So8NSObjectP", "UITextField"]
 - !private ["So8NSObjectP", "UIViewController"]
 - !private ["So8NSObjectP", "User"]
 - ["So8NSObjectP", "UsesAutoLayout"]
@@ -1432,6 +1455,7 @@ depends-member:
 - !private ["8QuickBev35RegistrationWithEmailViewControllerC", "DrinkListTableViewController"]
 - !private ["8QuickBev35RegistrationWithEmailViewControllerC", "DrinkViewController"]
 - !private ["8QuickBev35RegistrationWithEmailViewControllerC", "GenericPasswordQueryable"]
+- !private ["8QuickBev35RegistrationWithEmailViewControllerC", "HTTPHeader"]
 - !private ["8QuickBev35RegistrationWithEmailViewControllerC", "HomePageViewController"]
 - ["8QuickBev35RegistrationWithEmailViewControllerC", "NSCoder"]
 - !private ["8QuickBev35RegistrationWithEmailViewControllerC", "NSLayoutConstraint"]
@@ -1448,6 +1472,7 @@ depends-member:
 - ["8QuickBev35RegistrationWithEmailViewControllerC", "UILabel"]
 - ["8QuickBev35RegistrationWithEmailViewControllerC", "UINavigationController"]
 - ["8QuickBev35RegistrationWithEmailViewControllerC", "UIStackView"]
+- ["8QuickBev35RegistrationWithEmailViewControllerC", "UITextField"]
 - !private ["8QuickBev35RegistrationWithEmailViewControllerC", "UIViewController"]
 - !private ["8QuickBev35RegistrationWithEmailViewControllerC", "User"]
 - ["8QuickBev35RegistrationWithEmailViewControllerC", "UsesAutoLayout"]
@@ -1523,13 +1548,13 @@ depends-member:
 - !private ["8QuickBev18RoundedUITextFieldC", "delegate"]
 - !private ["8QuickBev18RoundedUITextFieldC", "heightAnchor"]
 - ["8QuickBev18RoundedUITextFieldC", "init"]
-- !private ["8QuickBev18RoundedUITextFieldC", "placeholder"]
 - !private ["8QuickBev18RoundedUITextFieldC", "text"]
 - !private ["8QuickBev18RoundedUITextFieldC", "widthAnchor"]
 - ["8QuickBev13SceneDelegateC", "rootViewController"]
 - ["8QuickBev13SceneDelegateC", "shared"]
 - !private ["7Combine9SchedulerP", "async"]
 - !private ["7Combine9SchedulerP", "main"]
+- !private ["8QuickBev11SecureStoreV", "getValue"]
 - !private ["8QuickBev11SecureStoreV", "init"]
 - !private ["8QuickBev11SecureStoreV", "setValue"]
 - !private ["8QuickBev20SecureStoreQueryableP", "init"]
@@ -1537,10 +1562,15 @@ depends-member:
 - !private ["ST", "subscript"]
 - !private ["s10SetAlgebraP", ""]
 - !private ["s10SetAlgebraP", "touchUpInside"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s27StringInterpolationProtocolP", "init"]
 - !private ["So22UIAlertControllerStyleV", "alert"]
 - !private ["So18UIAlertActionStyleV", "cancel"]
 - ["So28UIActivityIndicatorViewStyleV", "large"]
 - ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
 - ["s20TextOutputStreamableP", ""]
 - ["8QuickBev5ThemeO", "RoundButton"]
 - ["8QuickBev5ThemeO", "UILabel"]
@@ -1626,6 +1656,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "DrinkListTableViewController"]
 - !private ["So21UIAppearanceContainerP", "DrinkViewController"]
 - !private ["So21UIAppearanceContainerP", "GenericPasswordQueryable"]
+- !private ["So21UIAppearanceContainerP", "HTTPHeader"]
 - !private ["So21UIAppearanceContainerP", "HomePageViewController"]
 - ["So21UIAppearanceContainerP", "NSCoder"]
 - !private ["So21UIAppearanceContainerP", "NSLayoutConstraint"]
@@ -1642,6 +1673,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "UILabel"]
 - ["So21UIAppearanceContainerP", "UINavigationController"]
 - ["So21UIAppearanceContainerP", "UIStackView"]
+- ["So21UIAppearanceContainerP", "UITextField"]
 - !private ["So21UIAppearanceContainerP", "UIViewController"]
 - !private ["So21UIAppearanceContainerP", "User"]
 - ["So21UIAppearanceContainerP", "UsesAutoLayout"]
@@ -1750,6 +1782,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "DrinkListTableViewController"]
 - !private ["So18UIContentContainerP", "DrinkViewController"]
 - !private ["So18UIContentContainerP", "GenericPasswordQueryable"]
+- !private ["So18UIContentContainerP", "HTTPHeader"]
 - !private ["So18UIContentContainerP", "HomePageViewController"]
 - ["So18UIContentContainerP", "NSCoder"]
 - !private ["So18UIContentContainerP", "NSLayoutConstraint"]
@@ -1766,6 +1799,7 @@ depends-member:
 - ["So18UIContentContainerP", "UILabel"]
 - ["So18UIContentContainerP", "UINavigationController"]
 - ["So18UIContentContainerP", "UIStackView"]
+- ["So18UIContentContainerP", "UITextField"]
 - !private ["So18UIContentContainerP", "UIViewController"]
 - !private ["So18UIContentContainerP", "User"]
 - ["So18UIContentContainerP", "UsesAutoLayout"]
@@ -1917,6 +1951,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "DrinkListTableViewController"]
 - !private ["So18UIFocusEnvironmentP", "DrinkViewController"]
 - !private ["So18UIFocusEnvironmentP", "GenericPasswordQueryable"]
+- !private ["So18UIFocusEnvironmentP", "HTTPHeader"]
 - !private ["So18UIFocusEnvironmentP", "HomePageViewController"]
 - ["So18UIFocusEnvironmentP", "NSCoder"]
 - !private ["So18UIFocusEnvironmentP", "NSLayoutConstraint"]
@@ -1933,6 +1968,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "UILabel"]
 - ["So18UIFocusEnvironmentP", "UINavigationController"]
 - ["So18UIFocusEnvironmentP", "UIStackView"]
+- ["So18UIFocusEnvironmentP", "UITextField"]
 - !private ["So18UIFocusEnvironmentP", "UIViewController"]
 - !private ["So18UIFocusEnvironmentP", "User"]
 - ["So18UIFocusEnvironmentP", "UsesAutoLayout"]
@@ -2117,6 +2153,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "DrinkListTableViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "DrinkViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "GenericPasswordQueryable"]
+- !private ["So30UIPasteConfigurationSupportingP", "HTTPHeader"]
 - !private ["So30UIPasteConfigurationSupportingP", "HomePageViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSLayoutConstraint"]
 - ["So30UIPasteConfigurationSupportingP", "RoundButton"]
@@ -2132,6 +2169,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "UILabel"]
 - ["So30UIPasteConfigurationSupportingP", "UINavigationController"]
 - ["So30UIPasteConfigurationSupportingP", "UIStackView"]
+- ["So30UIPasteConfigurationSupportingP", "UITextField"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "User"]
 - ["So30UIPasteConfigurationSupportingP", "UsesAutoLayout"]
@@ -2234,6 +2272,7 @@ depends-member:
 - !private ["So11UIResponderC", "DrinkListTableViewController"]
 - !private ["So11UIResponderC", "DrinkViewController"]
 - !private ["So11UIResponderC", "GenericPasswordQueryable"]
+- !private ["So11UIResponderC", "HTTPHeader"]
 - !private ["So11UIResponderC", "HomePageViewController"]
 - ["So11UIResponderC", "NSCoder"]
 - !private ["So11UIResponderC", "NSLayoutConstraint"]
@@ -2250,6 +2289,7 @@ depends-member:
 - ["So11UIResponderC", "UILabel"]
 - ["So11UIResponderC", "UINavigationController"]
 - ["So11UIResponderC", "UIStackView"]
+- ["So11UIResponderC", "UITextField"]
 - !private ["So11UIResponderC", "UIViewController"]
 - !private ["So11UIResponderC", "User"]
 - ["So11UIResponderC", "UsesAutoLayout"]
@@ -2350,6 +2390,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "DrinkListTableViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "DrinkViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "GenericPasswordQueryable"]
+- !private ["So30UIResponderStandardEditActionsP", "HTTPHeader"]
 - !private ["So30UIResponderStandardEditActionsP", "HomePageViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "NSLayoutConstraint"]
 - ["So30UIResponderStandardEditActionsP", "RoundButton"]
@@ -2365,6 +2406,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "UILabel"]
 - ["So30UIResponderStandardEditActionsP", "UINavigationController"]
 - ["So30UIResponderStandardEditActionsP", "UIStackView"]
+- ["So30UIResponderStandardEditActionsP", "UITextField"]
 - !private ["So30UIResponderStandardEditActionsP", "UIViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "User"]
 - ["So30UIResponderStandardEditActionsP", "UsesAutoLayout"]
@@ -2459,7 +2501,6 @@ depends-member:
 - ["So15UISceneDelegateP", ""]
 - ["So15UISceneDelegateP", "rootViewController"]
 - ["So15UISceneDelegateP", "shared"]
-- ["So12UIScrollViewC", ""]
 - !private ["So20UIScrollViewDelegateP", ""]
 - !private ["So20UIScrollViewDelegateP", "init"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "addAction"]
@@ -2489,6 +2530,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "DrinkListTableViewController"]
 - !private ["So16UIStateRestoringP", "DrinkViewController"]
 - !private ["So16UIStateRestoringP", "GenericPasswordQueryable"]
+- !private ["So16UIStateRestoringP", "HTTPHeader"]
 - !private ["So16UIStateRestoringP", "HomePageViewController"]
 - ["So16UIStateRestoringP", "NSCoder"]
 - !private ["So16UIStateRestoringP", "NSLayoutConstraint"]
@@ -2505,6 +2547,7 @@ depends-member:
 - ["So16UIStateRestoringP", "UILabel"]
 - ["So16UIStateRestoringP", "UINavigationController"]
 - ["So16UIStateRestoringP", "UIStackView"]
+- ["So16UIStateRestoringP", "UITextField"]
 - !private ["So16UIStateRestoringP", "UIViewController"]
 - !private ["So16UIStateRestoringP", "User"]
 - ["So16UIStateRestoringP", "UsesAutoLayout"]
@@ -2602,6 +2645,7 @@ depends-member:
 - !private ["So19UITextFieldDelegateP", "DrinkListTableViewController"]
 - !private ["So19UITextFieldDelegateP", "DrinkViewController"]
 - !private ["So19UITextFieldDelegateP", "GenericPasswordQueryable"]
+- !private ["So19UITextFieldDelegateP", "HTTPHeader"]
 - !private ["So19UITextFieldDelegateP", "HomePageViewController"]
 - !private ["So19UITextFieldDelegateP", "NSLayoutConstraint"]
 - ["So19UITextFieldDelegateP", "RoundButton"]
@@ -2709,6 +2753,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "DrinkListTableViewController"]
 - !private ["So18UITraitEnvironmentP", "DrinkViewController"]
 - !private ["So18UITraitEnvironmentP", "GenericPasswordQueryable"]
+- !private ["So18UITraitEnvironmentP", "HTTPHeader"]
 - !private ["So18UITraitEnvironmentP", "HomePageViewController"]
 - ["So18UITraitEnvironmentP", "NSCoder"]
 - !private ["So18UITraitEnvironmentP", "NSLayoutConstraint"]
@@ -2725,6 +2770,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "UILabel"]
 - ["So18UITraitEnvironmentP", "UINavigationController"]
 - ["So18UITraitEnvironmentP", "UIStackView"]
+- ["So18UITraitEnvironmentP", "UITextField"]
 - !private ["So18UITraitEnvironmentP", "UIViewController"]
 - !private ["So18UITraitEnvironmentP", "User"]
 - ["So18UITraitEnvironmentP", "UsesAutoLayout"]
@@ -2821,6 +2867,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "DrinkListTableViewController"]
 - !private ["So23UIUserActivityRestoringP", "DrinkViewController"]
 - !private ["So23UIUserActivityRestoringP", "GenericPasswordQueryable"]
+- !private ["So23UIUserActivityRestoringP", "HTTPHeader"]
 - !private ["So23UIUserActivityRestoringP", "HomePageViewController"]
 - !private ["So23UIUserActivityRestoringP", "NSLayoutConstraint"]
 - ["So23UIUserActivityRestoringP", "RoundButton"]
@@ -2836,6 +2883,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "UILabel"]
 - ["So23UIUserActivityRestoringP", "UINavigationController"]
 - ["So23UIUserActivityRestoringP", "UIStackView"]
+- ["So23UIUserActivityRestoringP", "UITextField"]
 - !private ["So23UIUserActivityRestoringP", "UIViewController"]
 - !private ["So23UIUserActivityRestoringP", "User"]
 - ["So23UIUserActivityRestoringP", "UsesAutoLayout"]
@@ -2960,6 +3008,7 @@ depends-member:
 - !private ["So16UIViewControllerC", "DrinkListTableViewController"]
 - !private ["So16UIViewControllerC", "DrinkViewController"]
 - !private ["So16UIViewControllerC", "GenericPasswordQueryable"]
+- !private ["So16UIViewControllerC", "HTTPHeader"]
 - !private ["So16UIViewControllerC", "HomePageViewController"]
 - ["So16UIViewControllerC", "NSCoder"]
 - !private ["So16UIViewControllerC", "NSLayoutConstraint"]
@@ -2976,6 +3025,7 @@ depends-member:
 - ["So16UIViewControllerC", "UILabel"]
 - ["So16UIViewControllerC", "UINavigationController"]
 - ["So16UIViewControllerC", "UIStackView"]
+- ["So16UIViewControllerC", "UITextField"]
 - !private ["So16UIViewControllerC", "UIViewController"]
 - !private ["So16UIViewControllerC", "User"]
 - ["So16UIViewControllerC", "UsesAutoLayout"]
@@ -3075,6 +3125,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DrinkListTableViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DrinkViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "GenericPasswordQueryable"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "HTTPHeader"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "HomePageViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSLayoutConstraint"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "RoundButton"]
@@ -3178,6 +3229,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "DrinkListTableViewController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "DrinkViewController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "GenericPasswordQueryable"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "HTTPHeader"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "HomePageViewController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSLayoutConstraint"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "RoundButton"]
@@ -3322,6 +3374,7 @@ depends-nominal:
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - !private "Se"
+- !private "s26DefaultStringInterpolationV"
 - !private "SD"
 - "So18OS_dispatch_objectC"
 - !private "So17OS_dispatch_queueC"
@@ -3341,6 +3394,7 @@ depends-nominal:
 - "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "8QuickBev24GenericPasswordQueryableV"
 - !private "7SwiftUI7GestureP"
+- !private "8QuickBev10HTTPHeaderV"
 - !private "8QuickBev10HTTPMethodO"
 - "SH"
 - !private "8QuickBev22HomePageViewControllerC"
@@ -3378,6 +3432,7 @@ depends-nominal:
 - !private "8QuickBev20SecureStoreQueryableP"
 - "ST"
 - !private "s10SetAlgebraP"
+- !private "s27StringInterpolationProtocolP"
 - !private "So22UIAlertControllerStyleV"
 - !private "So18UIAlertActionStyleV"
 - "So28UIActivityIndicatorViewStyleV"
@@ -3415,7 +3470,6 @@ depends-nominal:
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
 - "So15UISceneDelegateP"
-- "So12UIScrollViewC"
 - !private "So20UIScrollViewDelegateP"
 - "So35UISpringLoadedInteractionSupportingP"
 - "So11UIStackViewC"
@@ -3627,4 +3681,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "a0bea24e5b2a1859bac01faa19f363ab"
+interface-hash: "7566fe8ae7f6ea6a680e00f7ad9f7c23"

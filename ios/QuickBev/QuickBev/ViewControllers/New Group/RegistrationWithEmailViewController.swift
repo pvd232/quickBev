@@ -95,7 +95,7 @@ class RegistrationWithEmailViewController: UIViewController, UITextFieldDelegate
         submitButton.addTarget(self, action: #selector(submitRegistration), for: .touchUpInside)
     }
 
-    private func textFieldDidEndEditing(_ textField: RoundedUITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         print("did end")
         if textField.placeholder == "Your first name" {
             formValues["firstName"] = textField.text
@@ -117,7 +117,8 @@ class RegistrationWithEmailViewController: UIViewController, UITextFieldDelegate
         }
     }
 
-    private func textFieldShouldReturn(_ textField: RoundedUITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("should return")
         if textField.placeholder == "Your first name" {
             formValues["firstName"] = textField.text
         }
@@ -143,6 +144,7 @@ class RegistrationWithEmailViewController: UIViewController, UITextFieldDelegate
         DispatchQueue.main.async {
             self.activityIndicator.startAnimating()
         }
+
         let requestedNewUser: User = {
             // regular registration process
             if CheckoutCart.shared.isGuest == false {
@@ -154,6 +156,7 @@ class RegistrationWithEmailViewController: UIViewController, UITextFieldDelegate
                 return User(FirstName: firstNameTextField.text!, LastName: lastNameTextField.text!, Email: emailTextField.text!, Password: passwordTextField.text!, StripeId: CheckoutCart.shared.stripeId!, EmailVerified: false)
             }
         }()
+
         if formValues["email"] != formValues["confirmEmail"] || formValues["password"] != formValues["confirmPassword"] {
             var title = ""
             var message = ""
@@ -177,13 +180,7 @@ class RegistrationWithEmailViewController: UIViewController, UITextFieldDelegate
                 self.activityIndicator.stopAnimating()
                 self.present(alertController, animated: true, completion: nil)
             }
-        }
-        // TODO: Do email confirmation web socket stuff on a new page, reset database in backend to include isVerified property and then set up timeout in websocket function that will test every 2 seconds if the users email has been verified. when the user verifies their email it will post a true value along with the associated email to the database. if the email is not verified before the timeout occurs, the user will be notified and given the option to send another email or register with a new email
-        // can also create another websocket function that registers to another socket in backend for front end to call when email is verified maybe
-        else {
-            print("req customer", requestedNewUser)
-            print("req cust email", requestedNewUser.email)
-
+        } else {
             let userCredentials: [HTTPHeader] = [HTTPHeader(field: "DeviceToken", value: "\(try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).getValue(for: "deviceToken") ?? "")")]
             let request = try! APIRequest(method: .post, path: "/customer", body: requestedNewUser, headers: userCredentials)
             APIClient().perform(request) { result in
@@ -191,9 +188,7 @@ class RegistrationWithEmailViewController: UIViewController, UITextFieldDelegate
                 case let .success(response):
                     if response.statusCode == 200, let response = try? response.decode(to: User.self) {
                         let fetchedUser = response.body as User
-                        print("fetchedUser", fetchedUser)
-                        print("response", response)
-                        CheckoutCart.shared.user = requestedNewUser
+                        CheckoutCart.shared.user = fetchedUser
                         CheckoutCart.shared.userId = requestedNewUser.email
 
                         // when changing UI based on asynchronous operation, or when updating core data need to wrap in dispatch queue because both are asynchronous ops themselves
@@ -202,10 +197,8 @@ class RegistrationWithEmailViewController: UIViewController, UITextFieldDelegate
                             CheckoutCart.shared.stripeId = fetchedUser.stripeId
                             requestedNewUser.stripeId = fetchedUser.stripeId
 
-                            print("response", response)
                             let sessionToken = response.headers["authorization-token"] as! String
                             try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).setValue(sessionToken, for: "sessionToken")
-                            print("sessionToken", sessionToken)
                             // set the token in the shopping cart and use it whenever calling the backend
                             DispatchQueue.main.async {
                                 self.activityIndicator.stopAnimating()

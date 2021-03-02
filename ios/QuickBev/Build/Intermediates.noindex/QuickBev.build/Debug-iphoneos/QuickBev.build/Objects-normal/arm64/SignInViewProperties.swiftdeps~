@@ -32,6 +32,7 @@ depends-top-level:
 - !private "~="
 depends-member:
 - !private ["s18AdditiveArithmeticP", ""]
+- !private ["SK", ""]
 - ["8QuickBev09SignInAndC7UpPropsO11ButtonIndexO", "=="]
 - ["8QuickBev09SignInAndC7UpPropsO11ButtonIndexO", "Default_RawValue"]
 - ["8QuickBev09SignInAndC7UpPropsO11ButtonIndexO", "RawValue"]
@@ -55,6 +56,7 @@ depends-member:
 - !private ["s7CVarArgP", "shared"]
 - !private ["8QuickBev12CheckoutCartC", "isGuest"]
 - !private ["8QuickBev12CheckoutCartC", "shared"]
+- !private ["Sl", ""]
 - !private ["SL", "<"]
 - !private ["SL", "<="]
 - !private ["SL", ">"]
@@ -68,6 +70,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "pushViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "rootViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "shared"]
+- !private ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "current"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isGuest"]
@@ -95,11 +98,15 @@ depends-member:
 - !private ["SQ", "shared"]
 - ["SQ", "third"]
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
 - !private ["s27ExpressibleByIntegerLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["SF", "<"]
 - !private ["SF", "<="]
 - !private ["SF", ">"]
@@ -130,6 +137,8 @@ depends-member:
 - !private ["s12IdentifiableP", "shared"]
 - !private ["8QuickBev19LoginViewControllerC", ""]
 - !private ["8QuickBev19LoginViewControllerC", "init"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "current"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "pushViewController"]
@@ -138,6 +147,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "pushViewController"]
 - !private ["So20NSFetchRequestResultP", "isGuest"]
 - !private ["So20NSFetchRequestResultP", "shared"]
+- ["So15NSManagedObjectC", ""]
 - !private ["So15NSManagedObjectC", "isGuest"]
 - !private ["So15NSManagedObjectC", "shared"]
 - ["So8NSObjectC", ""]
@@ -146,7 +156,7 @@ depends-member:
 - !private ["So8NSObjectC", "pushViewController"]
 - !private ["So8NSObjectC", "rootViewController"]
 - !private ["So8NSObjectC", "shared"]
-- !private ["So8NSObjectP", ""]
+- ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "current"]
 - !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "isGuest"]
@@ -179,6 +189,7 @@ depends-member:
 - !private ["8QuickBev18RoundedUITextFieldC", ""]
 - !private ["8QuickBev13SceneDelegateC", "rootViewController"]
 - !private ["8QuickBev13SceneDelegateC", "shared"]
+- !private ["ST", ""]
 - ["8QuickBev09SignInAndC7UpPropsO", "ButtonIndex"]
 - !private ["8QuickBev09SignInAndC7UpPropsO", "CheckoutCart"]
 - !private ["8QuickBev09SignInAndC7UpPropsO", "CoreDataManager"]
@@ -194,6 +205,9 @@ depends-member:
 - ["8QuickBev09SignInAndC7UpPropsO", "launchNewViewController"]
 - !private ["s13SignedNumericP", ""]
 - !private ["Sx", ""]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s20TextOutputStreamableP", ""]
+- !private ["8QuickBev11ToolbarViewC", ""]
 - !private ["So40UIAdaptivePresentationControllerDelegateP", ""]
 - !private ["So40UIAdaptivePresentationControllerDelegateP", "init"]
 - !private ["So21UIAppearanceContainerP", "current"]
@@ -243,13 +257,17 @@ depends-member:
 - ["So6UIViewC", ""]
 - ["So16UIViewControllerC", ""]
 - !private ["So16UIViewControllerC", "current"]
+- !private ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "pushViewController"]
 - !private ["So21UIWindowSceneDelegateP", "rootViewController"]
 - !private ["So21UIWindowSceneDelegateP", "shared"]
+- !private ["8QuickBev14UsesAutoLayoutV", "subscript"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "current"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isGuest"]
@@ -264,28 +282,35 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
 depends-nominal:
 - !private "s18AdditiveArithmeticP"
+- !private "SK"
 - "8QuickBev09SignInAndC7UpPropsO11ButtonIndexO"
 - !private "s7CVarArgP"
 - !private "8QuickBev12CheckoutCartC"
+- !private "Sl"
 - !private "SL"
 - !private "8QuickBev15CoreDataManagerC"
 - !private "s28CustomDebugStringConvertibleP"
 - !private "s23CustomStringConvertibleP"
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "SF"
 - "SH"
 - !private "8QuickBev22HomePageViewControllerC"
 - !private "s12IdentifiableP"
 - !private "8QuickBev19LoginViewControllerC"
-- !private "So8NSCodingP"
+- !private "s25LosslessStringConvertibleP"
+- "So8NSCodingP"
 - !private "So26NSExtensionRequestHandlingP"
 - !private "So20NSFetchRequestResultP"
-- !private "So15NSManagedObjectC"
+- "So15NSManagedObjectC"
 - "So8NSObjectC"
-- !private "So8NSObjectP"
+- "So8NSObjectP"
 - !private "8QuickBev25NewBusinessPickedProtocolP"
 - !private "Sj"
 - !private "7Combine16ObservableObjectP"
@@ -295,9 +320,13 @@ depends-nominal:
 - !private "8QuickBev11RoundButtonC"
 - !private "8QuickBev18RoundedUITextFieldC"
 - !private "8QuickBev13SceneDelegateC"
+- !private "ST"
 - "8QuickBev09SignInAndC7UpPropsO"
 - !private "s13SignedNumericP"
 - !private "Sx"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "8QuickBev11ToolbarViewC"
 - !private "So40UIAdaptivePresentationControllerDelegateP"
 - !private "So21UIAppearanceContainerP"
 - "So8UIButtonC"
@@ -318,10 +347,13 @@ depends-nominal:
 - "So6UIViewC"
 - "So16UIViewControllerC"
 - !private "So21UIWindowSceneDelegateP"
+- !private "8QuickBev14UsesAutoLayoutV"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "10Foundation27_KeyValueCodingAndObservingP"
 - !private "10Foundation37_KeyValueCodingAndObservingPublishingP"
 depends-dynamic-lookup:

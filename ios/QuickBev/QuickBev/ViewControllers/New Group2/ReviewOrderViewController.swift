@@ -64,34 +64,34 @@ class ReviewOrderViewController: UIViewController {
         // page content and formatting
 
         orderSummaryLabel.text = "Order summary"
-        orderSummaryLabel.font = UIFont(name: "Charter-Roman", size: 40.0)
+        orderSummaryLabel.font = UIFont(name: "Charter-Roman", size: calculateFontRatio(fontSize: 40.0))
 
         subtotalHeaderLabel.text = "Subtotal"
-        subtotalHeaderLabel.font = UIFont(name: "Charter-Black", size: 18.0)
+        subtotalHeaderLabel.font = UIFont(name: "Charter-Black", size: calculateFontRatio(fontSize: 18.0))
 
         orderSubtotalLabel.text = String(CheckoutCart.shared.subtotal)
-        orderSubtotalLabel.font = UIFont(name: "Charter-Roman", size: 18.0)
+        orderSubtotalLabel.font = UIFont(name: "Charter-Roman", size: calculateFontRatio(fontSize: 18.0))
         orderSubtotalLabel.setContentHuggingPriority(UILayoutPriority(500), for: .horizontal)
 
         salesTaxHeaderLabel.text = "Sales tax"
-        salesTaxHeaderLabel.font = UIFont(name: "Charter-Roman", size: 18.0)
+        salesTaxHeaderLabel.font = UIFont(name: "Charter-Roman", size: calculateFontRatio(fontSize: 18.0))
 
         salesTaxLabel.text = String(CheckoutCart.shared.salesTax)
-        salesTaxLabel.font = UIFont(name: "Charter-Roman", size: 18.0)
+        salesTaxLabel.font = UIFont(name: "Charter-Roman", size: calculateFontRatio(fontSize: 18.0))
         salesTaxLabel.setContentHuggingPriority(UILayoutPriority(500), for: .horizontal)
 
         tipHeaderLabel.text = "Tip (10%)"
-        tipHeaderLabel.font = UIFont(name: "Charter-Roman", size: 18.0)
+        tipHeaderLabel.font = UIFont(name: "Charter-Roman", size: calculateFontRatio(fontSize: 18.0))
 
         tipAmountLabel.text = String(CheckoutCart.shared.tipAmount)
-        tipAmountLabel.font = UIFont(name: "Charter-Roman", size: 18.0)
+        tipAmountLabel.font = UIFont(name: "Charter-Roman", size: calculateFontRatio(fontSize: 18.0))
         tipAmountLabel.setContentHuggingPriority(UILayoutPriority(500), for: .horizontal)
 
         totalHeaderLabel.text = "Total"
-        totalHeaderLabel.font = UIFont(name: "Charter-Black", size: 24.0)
+        totalHeaderLabel.font = UIFont(name: "Charter-Black", size: calculateFontRatio(fontSize: 24.0))
 
         orderTotalLabel.text = "$" + String(CheckoutCart.shared.cost)
-        orderTotalLabel.font = UIFont(name: "Charter-Black", size: 24.0)
+        orderTotalLabel.font = UIFont(name: "Charter-Black", size: calculateFontRatio(fontSize: 24.0))
         orderTotalLabel.setContentHuggingPriority(UILayoutPriority(500), for: .horizontal)
 
         orderSummaryStackView.axis = .vertical
@@ -124,10 +124,10 @@ class ReviewOrderViewController: UIViewController {
 
         changePaymentMethodButton.refreshColor(color: UIColor.themeColor)
         changePaymentMethodButton.refreshTitle(newTitle: "change")
-        changePaymentMethodButton.titleLabel?.font = UIFont(name: "Charter-Black", size: 20.0)
+        changePaymentMethodButton.titleLabel?.font = UIFont(name: "Charter-Black", size: calculateFontRatio(fontSize: 20.0))
 
         addPaymentMethodButton.refreshColor(color: UIColor.themeColor)
-        addPaymentMethodButton.titleLabel?.font = UIFont(name: "Charter-Black", size: 20.0)
+        addPaymentMethodButton.titleLabel?.font = UIFont(name: "Charter-Black", size: calculateFontRatio(fontSize: 20.0))
         addPaymentMethodButton.refreshTitle(newTitle: "Add payment method")
 
         let safeArea = view.safeAreaLayoutGuide

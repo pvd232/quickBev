@@ -45,10 +45,10 @@ class OrderConfirmationViewController: UIViewController {
         pickupDetailsStackView.spacing = 20
 
         pickupDetailsLabel.text = "Pickup details"
-        pickupDetailsLabel.font = UIFont(name: "Charter-Roman", size: 40.0)
+        pickupDetailsLabel.font = UIFont(name: "Charter-Roman", size: calculateFontRatio(fontSize: 40.0))
 
         pickupAddressLabel.text = "Pickup address"
-        pickupAddressLabel.font = UIFont(name: "Charter-Black", size: 20.0)
+        pickupAddressLabel.font = UIFont(name: "Charter-Black", size: calculateFontRatio(fontSize: 20.0))
 
         businessNameLabel.text = "Business Name"
         businessNameLabel.font = UIFont.themeLabelFont
@@ -57,7 +57,7 @@ class OrderConfirmationViewController: UIViewController {
         addressLabel.font = UIFont.themeLabelFont
 
         pickupInstructionsLabel.text = "Pickup instructions"
-        pickupInstructionsLabel.font = UIFont(name: "Charter-Black", size: 20.0)
+        pickupInstructionsLabel.font = UIFont(name: "Charter-Black", size: calculateFontRatio(fontSize: 20.0))
 
         pickupInstructionsText.text = "Go to the second floor to the end of the business and tell business your name"
         pickupInstructionsText.font = UIFont.themeLabelFont
@@ -87,14 +87,4 @@ class OrderConfirmationViewController: UIViewController {
     override func viewWillAppear(_: Bool) {
         toolbarView.hub!.setCount(CheckoutCart.shared.cart.count)
     }
-
-    /*
-     // MARK: - Navigation
-
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
 }

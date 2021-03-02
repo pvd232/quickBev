@@ -16,7 +16,12 @@ class RootViewController: UIViewController {
 
     init() {
         if CheckoutCart.shared.userId != "" {
-            current = TemplateNavigationController(rootViewController: HomePageViewController())
+            if CheckoutCart.shared.user?.emailVerified != true {
+                current = TemplateNavigationController(rootViewController: VerifyEmailViewController())
+            }
+            else {
+                current = TemplateNavigationController(rootViewController: HomePageViewController())
+            }
         } else {
             current = TemplateNavigationController(rootViewController: SplashPageViewController())
         }

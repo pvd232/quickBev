@@ -14,6 +14,7 @@ provides-dynamic-lookup:
 - "testNetwork"
 - "userNotificationCenter"
 depends-top-level:
+- "!="
 - "=="
 - !private "APIClient"
 - !private "APIRequest"

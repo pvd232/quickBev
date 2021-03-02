@@ -14,6 +14,7 @@ provides-dynamic-lookup:
 - "testNetwork"
 - "userNotificationCenter"
 depends-top-level:
+- "!="
 - "=="
 - !private "APIClient"
 - !private "APIRequest"
@@ -686,7 +687,6 @@ depends-member:
 - !private ["So8NSObjectP", "APIClient"]
 - !private ["So8NSObjectP", "APIRequest"]
 - ["So8NSObjectP", "AnyHashable"]
-- ["So8NSObjectP", "Bool"]
 - !private ["So8NSObjectP", "CheckoutCart"]
 - ["So8NSObjectP", "ConnectionOptions"]
 - !private ["So8NSObjectP", "CoreDataManager"]
@@ -709,7 +709,6 @@ depends-member:
 - !private ["So8NSObjectP", "UIAlertController"]
 - ["So8NSObjectP", "UIApplication"]
 - ["So8NSObjectP", "UIBackgroundFetchResult"]
-- !private ["So8NSObjectP", "UINavigationController"]
 - ["So8NSObjectP", "UIScene"]
 - ["So8NSObjectP", "UISceneConfiguration"]
 - ["So8NSObjectP", "UISceneSession"]
@@ -718,7 +717,6 @@ depends-member:
 - ["So8NSObjectP", "Void"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "actionWithTitle"]
-- !private ["So8NSObjectP", "activate"]
 - !private ["So8NSObjectP", "addAction"]
 - !private ["So8NSObjectP", "alertControllerWithTitle"]
 - ["So8NSObjectP", "application"]
@@ -827,8 +825,6 @@ depends-member:
 - !private ["8QuickBev35RegistrationWithEmailViewControllerC", "init"]
 - !private ["8QuickBev18RootViewControllerC", "current"]
 - !private ["8QuickBev18RootViewControllerC", "switchToHomePageViewController"]
-- !private ["8QuickBev11RoundButtonC", ""]
-- !private ["8QuickBev18RoundedUITextFieldC", ""]
 - !private ["8QuickBev13SceneDelegateC", "rootViewController"]
 - !private ["8QuickBev13SceneDelegateC", "shared"]
 - !private ["7Combine9SchedulerP", "async"]
@@ -923,7 +919,6 @@ depends-member:
 - ["So21UIApplicationDelegateP", "userNotificationCenter"]
 - ["So21UIApplicationDelegateP", "window"]
 - !private ["So23UIBackgroundFetchResultV", "newData"]
-- ["So8UIButtonC", ""]
 - !private ["So18UIContentContainerP", "addAction"]
 - !private ["So18UIContentContainerP", "alertControllerWithTitle"]
 - !private ["So18UIContentContainerP", "current"]
@@ -931,7 +926,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "present"]
 - !private ["So18UIContentContainerP", "pushViewController"]
 - !private ["So18UIContentContainerP", "switchToHomePageViewController"]
-- ["So9UIControlC", ""]
 - !private ["So18UIFocusEnvironmentP", "addAction"]
 - !private ["So18UIFocusEnvironmentP", "alertControllerWithTitle"]
 - !private ["So18UIFocusEnvironmentP", "current"]
@@ -968,7 +962,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "UIAlertController"]
 - ["So30UIPasteConfigurationSupportingP", "UIApplication"]
 - ["So30UIPasteConfigurationSupportingP", "UIBackgroundFetchResult"]
-- !private ["So30UIPasteConfigurationSupportingP", "UINavigationController"]
 - ["So30UIPasteConfigurationSupportingP", "UIScene"]
 - ["So30UIPasteConfigurationSupportingP", "UISceneConfiguration"]
 - ["So30UIPasteConfigurationSupportingP", "UISceneSession"]
@@ -1099,7 +1092,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "UIAlertController"]
 - ["So30UIResponderStandardEditActionsP", "UIApplication"]
 - ["So30UIResponderStandardEditActionsP", "UIBackgroundFetchResult"]
-- !private ["So30UIResponderStandardEditActionsP", "UINavigationController"]
 - ["So30UIResponderStandardEditActionsP", "UIScene"]
 - ["So30UIResponderStandardEditActionsP", "UISceneConfiguration"]
 - ["So30UIResponderStandardEditActionsP", "UISceneSession"]
@@ -1154,7 +1146,6 @@ depends-member:
 - !private ["So16UIStateRestoringP", "present"]
 - !private ["So16UIStateRestoringP", "pushViewController"]
 - !private ["So16UIStateRestoringP", "switchToHomePageViewController"]
-- ["So11UITextFieldC", ""]
 - !private ["So19UITextFieldDelegateP", "init"]
 - !private ["So18UITraitEnvironmentP", "addAction"]
 - !private ["So18UITraitEnvironmentP", "alertControllerWithTitle"]
@@ -1189,7 +1180,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "UIAlertController"]
 - ["So23UIUserActivityRestoringP", "UIApplication"]
 - ["So23UIUserActivityRestoringP", "UIBackgroundFetchResult"]
-- !private ["So23UIUserActivityRestoringP", "UINavigationController"]
 - ["So23UIUserActivityRestoringP", "UIScene"]
 - ["So23UIUserActivityRestoringP", "UISceneConfiguration"]
 - ["So23UIUserActivityRestoringP", "UISceneSession"]
@@ -1229,7 +1219,6 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "testNetwork"]
 - ["So23UIUserActivityRestoringP", "userNotificationCenter"]
 - ["So23UIUserActivityRestoringP", "window"]
-- ["So6UIViewC", ""]
 - ["So16UIViewControllerC", ""]
 - !private ["So16UIViewControllerC", "addAction"]
 - !private ["So16UIViewControllerC", "alertControllerWithTitle"]
@@ -1298,14 +1287,13 @@ depends-member:
 - ["So32UNUserNotificationCenterDelegateP", "userNotificationCenter"]
 - ["So32UNUserNotificationCenterDelegateP", "window"]
 - !private ["8QuickBev4UserC", "emailVerified"]
-- !private ["8QuickBev14UsesAutoLayoutV", "subscript"]
 - !private ["s14_ArrayProtocolP", "joined"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s24_DestructorSafeContainerP", "joined"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
@@ -1511,8 +1499,6 @@ depends-nominal:
 - !private "10Foundation20ReferenceConvertibleP"
 - !private "8QuickBev35RegistrationWithEmailViewControllerC"
 - !private "8QuickBev18RootViewControllerC"
-- !private "8QuickBev11RoundButtonC"
-- !private "8QuickBev18RoundedUITextFieldC"
 - !private "8QuickBev13SceneDelegateC"
 - !private "7Combine9SchedulerP"
 - !private "8QuickBev11SecureStoreV"
@@ -1534,9 +1520,7 @@ depends-nominal:
 - "So13UIApplicationC"
 - "So21UIApplicationDelegateP"
 - !private "So23UIBackgroundFetchResultV"
-- "So8UIButtonC"
 - !private "So18UIContentContainerP"
-- "So9UIControlC"
 - !private "So18UIFocusEnvironmentP"
 - !private "So27UIGestureRecognizerDelegateP"
 - !private "So22UINavigationControllerC"
@@ -1549,11 +1533,9 @@ depends-nominal:
 - !private "So14UISceneSessionC"
 - !private "So35UISpringLoadedInteractionSupportingP"
 - !private "So16UIStateRestoringP"
-- "So11UITextFieldC"
 - !private "So19UITextFieldDelegateP"
 - !private "So18UITraitEnvironmentP"
 - "So23UIUserActivityRestoringP"
-- "So6UIViewC"
 - "So16UIViewControllerC"
 - !private "So21UIWindowSceneDelegateP"
 - !private "So22UNAuthorizationOptionsV"
@@ -1566,13 +1548,12 @@ depends-nominal:
 - !private "So24UNUserNotificationCenterC"
 - "So32UNUserNotificationCenterDelegateP"
 - !private "8QuickBev4UserC"
-- !private "8QuickBev14UsesAutoLayoutV"
 - !private "s14_ArrayProtocolP"
 - !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
 - "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s19_HasContiguousBytesP"

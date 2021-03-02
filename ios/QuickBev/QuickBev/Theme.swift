@@ -71,8 +71,23 @@ enum Theme {
         }
     }
 
+    enum UITextViewProps {
+        case font(UIFont?)
+//        case placeHolderText(String)
+        case backgroundColor(UIColor)
+        case textColor
+        var rawValue: Any {
+            switch self {
+            case .font(nil):
+                return UIFont.themeLabelFont
+            default: return 0.0
+            }
+        }
+    }
+
     case RoundButton(props: [RoundButtonProps])
     case UIStackView(props: [UIStackViewProps])
     case UILabel(props: [UILabelProps])
     case UITextField(props: [UITextFieldProps])
+    case UITextView(props: [UITextViewProps])
 }

@@ -40,11 +40,11 @@ depends-top-level:
 - "UIWindow"
 - "UIWindowScene"
 - "UIWindowSceneDelegate"
+- !private "rootViewController"
 - !private "window"
 depends-member:
 - !private ["s18AdditiveArithmeticP", ""]
-- ["SK", ""]
-- !private ["So15CALayerDelegateP", ""]
+- !private ["SK", ""]
 - !private ["So15CALayerDelegateP", "init"]
 - !private ["So15CALayerDelegateP", "makeKeyAndVisible"]
 - !private ["So15CALayerDelegateP", "rootViewController"]
@@ -54,7 +54,6 @@ depends-member:
 - !private ["s7CVarArgP", "NSLog"]
 - !private ["s7CVarArgP", "RegistrationWithEmailViewController"]
 - !private ["s7CVarArgP", "RootViewController"]
-- !private ["s7CVarArgP", "SceneDelegate"]
 - !private ["s7CVarArgP", "UIApplication"]
 - !private ["s7CVarArgP", "UIWindow"]
 - ["s7CVarArgP", ""]
@@ -83,9 +82,9 @@ depends-member:
 - ["s7CVarArgP", "window"]
 - ["s7CVarArgP", "windowScene"]
 - !private ["8QuickBev12CheckoutCartC", "shared"]
-- ["Sl", ""]
+- !private ["Sl", ""]
 - !private ["Sl", "first"]
-- ["SL", ""]
+- !private ["SL", ""]
 - !private ["So24UISceneConnectionOptionsC", "notificationResponse"]
 - !private ["8QuickBev15CoreDataManagerC", "saveContext"]
 - !private ["8QuickBev15CoreDataManagerC", "sharedManager"]
@@ -95,7 +94,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "NSLog"]
 - !private ["s28CustomDebugStringConvertibleP", "RegistrationWithEmailViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "RootViewController"]
-- !private ["s28CustomDebugStringConvertibleP", "SceneDelegate"]
 - !private ["s28CustomDebugStringConvertibleP", "UIApplication"]
 - !private ["s28CustomDebugStringConvertibleP", "UIWindow"]
 - ["s28CustomDebugStringConvertibleP", ""]
@@ -130,7 +128,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "NSLog"]
 - !private ["s23CustomStringConvertibleP", "RegistrationWithEmailViewController"]
 - !private ["s23CustomStringConvertibleP", "RootViewController"]
-- !private ["s23CustomStringConvertibleP", "SceneDelegate"]
 - !private ["s23CustomStringConvertibleP", "UIApplication"]
 - !private ["s23CustomStringConvertibleP", "UIWindow"]
 - ["s23CustomStringConvertibleP", ""]
@@ -170,7 +167,6 @@ depends-member:
 - !private ["SQ", "NSLog"]
 - !private ["SQ", "RegistrationWithEmailViewController"]
 - !private ["SQ", "RootViewController"]
-- !private ["SQ", "SceneDelegate"]
 - !private ["SQ", "UIApplication"]
 - !private ["SQ", "UIWindow"]
 - ["SQ", ""]
@@ -201,14 +197,14 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", ""]
 - !private ["s25ExpressibleByArrayLiteralP", "first"]
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", ""]
 - !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
-- ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
 - !private ["s32ExpressibleByStringInterpolationP", "init"]
-- ["s26ExpressibleByStringLiteralP", ""]
-- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["SF", ""]
 - !private ["SH", "CheckoutCart"]
 - ["SH", "ConnectionOptions"]
@@ -216,7 +212,6 @@ depends-member:
 - !private ["SH", "NSLog"]
 - !private ["SH", "RegistrationWithEmailViewController"]
 - !private ["SH", "RootViewController"]
-- !private ["SH", "SceneDelegate"]
 - !private ["SH", "UIApplication"]
 - !private ["SH", "UIWindow"]
 - ["SH", ""]
@@ -245,7 +240,7 @@ depends-member:
 - ["SH", "window"]
 - ["SH", "windowScene"]
 - !private ["s12IdentifiableP", "shared"]
-- ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", ""]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "content"]
 - !private ["So8NSCodingP", "current"]
@@ -264,7 +259,6 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "pushViewController"]
 - !private ["So20NSFetchRequestResultP", "shared"]
-- ["So15NSManagedObjectC", ""]
 - !private ["So15NSManagedObjectC", "shared"]
 - !private ["So16NSMutableCopyingP", "userInfo"]
 - ["So8NSObjectC", "Bool"]
@@ -393,7 +387,7 @@ depends-member:
 - ["8QuickBev13SceneDelegateC", "windowScene"]
 - !private ["ST", "Element"]
 - !private ["ST", "Iterator"]
-- ["ST", ""]
+- !private ["ST", ""]
 - !private ["ST", "first"]
 - !private ["ST", "makeIterator"]
 - !private ["Sh", "first"]
@@ -403,19 +397,16 @@ depends-member:
 - !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
 - !private ["s27StringInterpolationProtocolP", "appendLiteral"]
 - !private ["s27StringInterpolationProtocolP", "init"]
-- ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", ""]
 - !private ["s16TextOutputStreamP", "appendInterpolation"]
 - !private ["s16TextOutputStreamP", "appendLiteral"]
-- ["s20TextOutputStreamableP", ""]
-- !private ["So29UIAccessibilityIdentificationP", ""]
+- !private ["s20TextOutputStreamableP", ""]
 - !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "makeKeyAndVisible"]
 - !private ["So29UIAccessibilityIdentificationP", "rootViewController"]
-- !private ["So12UIAppearanceP", ""]
 - !private ["So12UIAppearanceP", "init"]
 - !private ["So12UIAppearanceP", "makeKeyAndVisible"]
 - !private ["So12UIAppearanceP", "rootViewController"]
-- !private ["So21UIAppearanceContainerP", ""]
 - !private ["So21UIAppearanceContainerP", "current"]
 - ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "makeKeyAndVisible"]
@@ -428,11 +419,9 @@ depends-member:
 - ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "pushViewController"]
 - ["So9UIControlC", ""]
-- !private ["So17UICoordinateSpaceP", ""]
 - !private ["So17UICoordinateSpaceP", "init"]
 - !private ["So17UICoordinateSpaceP", "makeKeyAndVisible"]
 - !private ["So17UICoordinateSpaceP", "rootViewController"]
-- !private ["So13UIDynamicItemP", ""]
 - !private ["So13UIDynamicItemP", "init"]
 - !private ["So13UIDynamicItemP", "makeKeyAndVisible"]
 - !private ["So13UIDynamicItemP", "rootViewController"]
@@ -442,15 +431,12 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "makeKeyAndVisible"]
 - !private ["So18UIFocusEnvironmentP", "pushViewController"]
 - !private ["So18UIFocusEnvironmentP", "rootViewController"]
-- !private ["So11UIFocusItemP", ""]
 - !private ["So11UIFocusItemP", "init"]
 - !private ["So11UIFocusItemP", "makeKeyAndVisible"]
 - !private ["So11UIFocusItemP", "rootViewController"]
-- !private ["So20UIFocusItemContainerP", ""]
 - !private ["So20UIFocusItemContainerP", "init"]
 - !private ["So20UIFocusItemContainerP", "makeKeyAndVisible"]
 - !private ["So20UIFocusItemContainerP", "rootViewController"]
-- !private ["So24UILargeContentViewerItemP", ""]
 - !private ["So24UILargeContentViewerItemP", "init"]
 - !private ["So24UILargeContentViewerItemP", "makeKeyAndVisible"]
 - !private ["So24UILargeContentViewerItemP", "rootViewController"]
@@ -570,7 +556,6 @@ depends-member:
 - !private ["So15UISceneDelegateP", "NSLog"]
 - !private ["So15UISceneDelegateP", "RegistrationWithEmailViewController"]
 - !private ["So15UISceneDelegateP", "RootViewController"]
-- !private ["So15UISceneDelegateP", "SceneDelegate"]
 - !private ["So15UISceneDelegateP", "UIApplication"]
 - !private ["So15UISceneDelegateP", "UIWindow"]
 - ["So15UISceneDelegateP", ""]
@@ -594,7 +579,6 @@ depends-member:
 - !private ["So16UIStateRestoringP", "pushViewController"]
 - ["So11UITextFieldC", ""]
 - ["So19UITextFieldDelegateP", "init"]
-- !private ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "current"]
 - ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "makeKeyAndVisible"]
@@ -642,7 +626,6 @@ depends-member:
 - !private ["So6UIViewC", "rootViewController"]
 - ["So16UIViewControllerC", ""]
 - !private ["So16UIViewControllerC", "current"]
-- !private ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "pushViewController"]
 - !private ["So8UIWindowC", "init"]
 - !private ["So8UIWindowC", "makeKeyAndVisible"]
@@ -652,7 +635,6 @@ depends-member:
 - !private ["So21UIWindowSceneDelegateP", "NSLog"]
 - !private ["So21UIWindowSceneDelegateP", "RegistrationWithEmailViewController"]
 - !private ["So21UIWindowSceneDelegateP", "RootViewController"]
-- !private ["So21UIWindowSceneDelegateP", "SceneDelegate"]
 - !private ["So21UIWindowSceneDelegateP", "UIApplication"]
 - !private ["So21UIWindowSceneDelegateP", "UIWindow"]
 - ["So21UIWindowSceneDelegateP", ""]
@@ -675,12 +657,11 @@ depends-member:
 - !private ["So21UNNotificationContentC", "userInfo"]
 - !private ["So21UNNotificationRequestC", "content"]
 - !private ["So22UNNotificationResponseC", "notification"]
-- !private ["8QuickBev14UsesAutoLayoutV", "subscript"]
 - ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "first"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CheckoutCart"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "ConnectionOptions"]
@@ -688,7 +669,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSLog"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "RegistrationWithEmailViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "RootViewController"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "SceneDelegate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIApplication"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIWindow"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
@@ -721,7 +701,6 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSLog"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "RegistrationWithEmailViewController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "RootViewController"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "SceneDelegate"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIApplication"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIWindow"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
@@ -754,12 +733,12 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "rootViewController"]
 depends-nominal:
 - !private "s18AdditiveArithmeticP"
-- "SK"
+- !private "SK"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
 - !private "8QuickBev12CheckoutCartC"
-- "Sl"
-- "SL"
+- !private "Sl"
+- !private "SL"
 - !private "So24UISceneConnectionOptionsC"
 - !private "8QuickBev15CoreDataManagerC"
 - "s28CustomDebugStringConvertibleP"
@@ -770,21 +749,21 @@ depends-nominal:
 - !private "SE"
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
-- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
-- "s32ExpressibleByStringInterpolationP"
-- "s26ExpressibleByStringLiteralP"
-- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "SF"
 - "SH"
 - !private "s12IdentifiableP"
-- "s25LosslessStringConvertibleP"
+- !private "s25LosslessStringConvertibleP"
 - "So8NSCodingP"
 - !private "So9NSCopyingP"
 - "So26NSExtensionRequestHandlingP"
 - !private "So20NSFetchRequestResultP"
-- "So15NSManagedObjectC"
+- !private "So15NSManagedObjectC"
 - !private "So16NSMutableCopyingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
@@ -796,14 +775,14 @@ depends-nominal:
 - !private "8QuickBev11RoundButtonC"
 - !private "8QuickBev18RoundedUITextFieldC"
 - "8QuickBev13SceneDelegateC"
-- "ST"
+- !private "ST"
 - !private "Sh"
 - !private "s10SetAlgebraP"
 - !private "s13SignedNumericP"
 - !private "Sx"
 - !private "s27StringInterpolationProtocolP"
-- "s16TextOutputStreamP"
-- "s20TextOutputStreamableP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
@@ -836,12 +815,11 @@ depends-nominal:
 - !private "So21UNNotificationContentC"
 - !private "So21UNNotificationRequestC"
 - !private "So22UNNotificationResponseC"
-- !private "8QuickBev14UsesAutoLayoutV"
 - "s35_ExpressibleByBuiltinBooleanLiteralP"
-- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
-- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"

@@ -50,6 +50,7 @@ depends-top-level:
 - "UsesAutoLayout"
 - !private "addressLabel"
 - !private "businessNameLabel"
+- !private "calculateFontRatio"
 - !private "didLayoutBadgeNotification"
 - !private "fatalError"
 - !private "pickupAddressLabel"
@@ -104,6 +105,7 @@ depends-member:
 - !private ["s7CVarArgP", "backgroundColor"]
 - !private ["s7CVarArgP", "bottomAnchor"]
 - !private ["s7CVarArgP", "businessNameLabel"]
+- !private ["s7CVarArgP", "calculateFontRatio"]
 - !private ["s7CVarArgP", "cart"]
 - !private ["s7CVarArgP", "centerXAnchor"]
 - !private ["s7CVarArgP", "constraint"]
@@ -160,6 +162,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "backgroundColor"]
 - !private ["s28CustomDebugStringConvertibleP", "bottomAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "businessNameLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "calculateFontRatio"]
 - !private ["s28CustomDebugStringConvertibleP", "cart"]
 - !private ["s28CustomDebugStringConvertibleP", "centerXAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "constraint"]
@@ -219,6 +222,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "backgroundColor"]
 - !private ["s23CustomStringConvertibleP", "bottomAnchor"]
 - !private ["s23CustomStringConvertibleP", "businessNameLabel"]
+- !private ["s23CustomStringConvertibleP", "calculateFontRatio"]
 - !private ["s23CustomStringConvertibleP", "cart"]
 - !private ["s23CustomStringConvertibleP", "centerXAnchor"]
 - !private ["s23CustomStringConvertibleP", "constraint"]
@@ -286,6 +290,7 @@ depends-member:
 - !private ["SQ", "backgroundColor"]
 - !private ["SQ", "bottomAnchor"]
 - !private ["SQ", "businessNameLabel"]
+- !private ["SQ", "calculateFontRatio"]
 - !private ["SQ", "cart"]
 - !private ["SQ", "centerXAnchor"]
 - !private ["SQ", "constraint"]
@@ -356,6 +361,7 @@ depends-member:
 - !private ["SH", "backgroundColor"]
 - !private ["SH", "bottomAnchor"]
 - !private ["SH", "businessNameLabel"]
+- !private ["SH", "calculateFontRatio"]
 - !private ["SH", "cart"]
 - !private ["SH", "centerXAnchor"]
 - !private ["SH", "constraint"]
@@ -421,6 +427,7 @@ depends-member:
 - !private ["So8NSCodingP", "backgroundColor"]
 - !private ["So8NSCodingP", "bottomAnchor"]
 - ["So8NSCodingP", "businessNameLabel"]
+- !private ["So8NSCodingP", "calculateFontRatio"]
 - !private ["So8NSCodingP", "centerXAnchor"]
 - !private ["So8NSCodingP", "constraint"]
 - ["So8NSCodingP", "didLayoutBadgeNotification"]
@@ -473,6 +480,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "_toolbarView"]
 - ["So26NSExtensionRequestHandlingP", "addressLabel"]
 - ["So26NSExtensionRequestHandlingP", "businessNameLabel"]
+- !private ["So26NSExtensionRequestHandlingP", "calculateFontRatio"]
 - ["So26NSExtensionRequestHandlingP", "didLayoutBadgeNotification"]
 - !private ["So26NSExtensionRequestHandlingP", "fatalError"]
 - ["So26NSExtensionRequestHandlingP", "init"]
@@ -527,6 +535,7 @@ depends-member:
 - !private ["So8NSObjectC", "backgroundColor"]
 - !private ["So8NSObjectC", "bottomAnchor"]
 - ["So8NSObjectC", "businessNameLabel"]
+- !private ["So8NSObjectC", "calculateFontRatio"]
 - !private ["So8NSObjectC", "cart"]
 - !private ["So8NSObjectC", "centerXAnchor"]
 - !private ["So8NSObjectC", "constraint"]
@@ -585,6 +594,7 @@ depends-member:
 - !private ["So8NSObjectP", "backgroundColor"]
 - !private ["So8NSObjectP", "bottomAnchor"]
 - ["So8NSObjectP", "businessNameLabel"]
+- !private ["So8NSObjectP", "calculateFontRatio"]
 - !private ["So8NSObjectP", "cart"]
 - !private ["So8NSObjectP", "centerXAnchor"]
 - !private ["So8NSObjectP", "constraint"]
@@ -647,6 +657,7 @@ depends-member:
 - !private ["8QuickBev31OrderConfirmationViewControllerC", "_toolbarView"]
 - ["8QuickBev31OrderConfirmationViewControllerC", "addressLabel"]
 - ["8QuickBev31OrderConfirmationViewControllerC", "businessNameLabel"]
+- !private ["8QuickBev31OrderConfirmationViewControllerC", "calculateFontRatio"]
 - ["8QuickBev31OrderConfirmationViewControllerC", "deinit"]
 - ["8QuickBev31OrderConfirmationViewControllerC", "didLayoutBadgeNotification"]
 - !private ["8QuickBev31OrderConfirmationViewControllerC", "fatalError"]
@@ -739,6 +750,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "backgroundColor"]
 - !private ["So21UIAppearanceContainerP", "bottomAnchor"]
 - ["So21UIAppearanceContainerP", "businessNameLabel"]
+- !private ["So21UIAppearanceContainerP", "calculateFontRatio"]
 - !private ["So21UIAppearanceContainerP", "centerXAnchor"]
 - ["So21UIAppearanceContainerP", "didLayoutBadgeNotification"]
 - !private ["So21UIAppearanceContainerP", "fatalError"]
@@ -787,6 +799,7 @@ depends-member:
 - ["So18UIContentContainerP", "_toolbarView"]
 - ["So18UIContentContainerP", "addressLabel"]
 - ["So18UIContentContainerP", "businessNameLabel"]
+- !private ["So18UIContentContainerP", "calculateFontRatio"]
 - ["So18UIContentContainerP", "didLayoutBadgeNotification"]
 - !private ["So18UIContentContainerP", "fatalError"]
 - ["So18UIContentContainerP", "init"]
@@ -867,6 +880,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "backgroundColor"]
 - !private ["So18UIFocusEnvironmentP", "bottomAnchor"]
 - ["So18UIFocusEnvironmentP", "businessNameLabel"]
+- !private ["So18UIFocusEnvironmentP", "calculateFontRatio"]
 - !private ["So18UIFocusEnvironmentP", "centerXAnchor"]
 - ["So18UIFocusEnvironmentP", "didLayoutBadgeNotification"]
 - !private ["So18UIFocusEnvironmentP", "fatalError"]
@@ -978,6 +992,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "backgroundColor"]
 - !private ["So30UIPasteConfigurationSupportingP", "bottomAnchor"]
 - ["So30UIPasteConfigurationSupportingP", "businessNameLabel"]
+- !private ["So30UIPasteConfigurationSupportingP", "calculateFontRatio"]
 - !private ["So30UIPasteConfigurationSupportingP", "centerXAnchor"]
 - ["So30UIPasteConfigurationSupportingP", "didLayoutBadgeNotification"]
 - !private ["So30UIPasteConfigurationSupportingP", "fatalError"]
@@ -1030,6 +1045,7 @@ depends-member:
 - !private ["So11UIResponderC", "backgroundColor"]
 - !private ["So11UIResponderC", "bottomAnchor"]
 - ["So11UIResponderC", "businessNameLabel"]
+- !private ["So11UIResponderC", "calculateFontRatio"]
 - !private ["So11UIResponderC", "centerXAnchor"]
 - ["So11UIResponderC", "didLayoutBadgeNotification"]
 - !private ["So11UIResponderC", "fatalError"]
@@ -1080,6 +1096,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "backgroundColor"]
 - !private ["So30UIResponderStandardEditActionsP", "bottomAnchor"]
 - ["So30UIResponderStandardEditActionsP", "businessNameLabel"]
+- !private ["So30UIResponderStandardEditActionsP", "calculateFontRatio"]
 - !private ["So30UIResponderStandardEditActionsP", "centerXAnchor"]
 - ["So30UIResponderStandardEditActionsP", "didLayoutBadgeNotification"]
 - !private ["So30UIResponderStandardEditActionsP", "fatalError"]
@@ -1134,6 +1151,7 @@ depends-member:
 - ["So16UIStateRestoringP", "_toolbarView"]
 - ["So16UIStateRestoringP", "addressLabel"]
 - ["So16UIStateRestoringP", "businessNameLabel"]
+- !private ["So16UIStateRestoringP", "calculateFontRatio"]
 - ["So16UIStateRestoringP", "didLayoutBadgeNotification"]
 - !private ["So16UIStateRestoringP", "fatalError"]
 - ["So16UIStateRestoringP", "init"]
@@ -1174,6 +1192,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "backgroundColor"]
 - !private ["So18UITraitEnvironmentP", "bottomAnchor"]
 - ["So18UITraitEnvironmentP", "businessNameLabel"]
+- !private ["So18UITraitEnvironmentP", "calculateFontRatio"]
 - !private ["So18UITraitEnvironmentP", "centerXAnchor"]
 - ["So18UITraitEnvironmentP", "didLayoutBadgeNotification"]
 - !private ["So18UITraitEnvironmentP", "fatalError"]
@@ -1224,6 +1243,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "backgroundColor"]
 - !private ["So23UIUserActivityRestoringP", "bottomAnchor"]
 - ["So23UIUserActivityRestoringP", "businessNameLabel"]
+- !private ["So23UIUserActivityRestoringP", "calculateFontRatio"]
 - !private ["So23UIUserActivityRestoringP", "centerXAnchor"]
 - ["So23UIUserActivityRestoringP", "didLayoutBadgeNotification"]
 - !private ["So23UIUserActivityRestoringP", "fatalError"]
@@ -1289,6 +1309,7 @@ depends-member:
 - ["So16UIViewControllerC", "_toolbarView"]
 - ["So16UIViewControllerC", "addressLabel"]
 - ["So16UIViewControllerC", "businessNameLabel"]
+- !private ["So16UIViewControllerC", "calculateFontRatio"]
 - ["So16UIViewControllerC", "didLayoutBadgeNotification"]
 - !private ["So16UIViewControllerC", "fatalError"]
 - ["So16UIViewControllerC", "init"]
@@ -1338,6 +1359,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "backgroundColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "bottomAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "businessNameLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "calculateFontRatio"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cart"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "centerXAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "constraint"]
@@ -1388,6 +1410,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "backgroundColor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bottomAnchor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "businessNameLabel"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "calculateFontRatio"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "cart"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "centerXAnchor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "constraint"]
@@ -1575,6 +1598,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64-apple-ios.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/WebKit.swiftmodule/arm64-apple-ios.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CloudKit.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/MapKit.swiftmodule/arm64-apple-ios.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64-apple-ios.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/DeveloperToolsSupport.swiftmodule/arm64-apple-ios.swiftmodule"
 - "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Products/Debug-iphoneos/Stripe/Stripe.framework/Headers/UIViewController+Stripe3DS2.h"

@@ -73,7 +73,6 @@ def update(customer_id):
 
 @app.route('/apn-token/<string:customer_id>', methods=["POST"])
 def apn_token(customer_id):
-    print('customer_id', customer_id)
     device_token = request.headers.get("DeviceToken")
     print('device_token', device_token)
     authorization_token = request.headers.get(

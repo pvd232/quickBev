@@ -11,7 +11,7 @@ import UIKit
 class DrinkViewController: UIViewController {
     var drink: Drink
     @UsesAutoLayout var drinkImageStackView = UIStackView(theme: Theme.UIStackView(props: [.vertical, .spacing(30)]))
-    @UsesAutoLayout var drinkDescriptionLabel = UITextView()
+    @UsesAutoLayout var drinkDescriptionTextView = UITextView()
     @UsesAutoLayout var drinkPriceLabel = UILabel(theme: Theme.UILabel(props: [.textColor]))
     @UsesAutoLayout var drinkImageView = UIImageView()
     @UsesAutoLayout var drinkQuantityStackView = UIStackView(theme: Theme.UIStackView(props: [.horizontal, .spacing(30)]))
@@ -46,7 +46,7 @@ class DrinkViewController: UIViewController {
         drinkImageStackView.axis = .vertical
         drinkImageStackView.spacing = 30.0
         drinkImageStackView.addArrangedSubview(drinkImageView)
-        drinkImageStackView.addArrangedSubview(drinkDescriptionLabel)
+        drinkImageStackView.addArrangedSubview(drinkDescriptionTextView)
         drinkImageStackView.addArrangedSubview(drinkPriceLabel)
 
         drinkQuantityStackView.axis = .horizontal
@@ -56,8 +56,8 @@ class DrinkViewController: UIViewController {
 
         drinkQuantityStackView.addArrangedSubview(plusButton)
 
-        drinkDescriptionLabel.backgroundColor = .clear
-        drinkDescriptionLabel.textColor = .black
+        drinkDescriptionTextView.backgroundColor = .clear
+        drinkDescriptionTextView.textColor = .black
 
         let safeArea = view.safeAreaLayoutGuide
         NSLayoutConstraint.activate([
@@ -80,24 +80,24 @@ class DrinkViewController: UIViewController {
 
         drinkImageView.image = drinkImage
 
-        drinkDescriptionLabel.text = drink.detail
-        drinkDescriptionLabel.font = UIFont.themeLabelFont
-        drinkDescriptionLabel.textAlignment = .center
+        drinkDescriptionTextView.text = drink.detail
+        drinkDescriptionTextView.font = UIFont.themeLabelFont
+        drinkDescriptionTextView.textAlignment = .center
 
         drinkQuantityLabel.text = String(drink.quantity)
-        drinkQuantityLabel.font = UIFont(name: "Charter-Roman", size: 40.0)
+        drinkQuantityLabel.font = UIFont(name: "Charter-Roman", size: calculateFontRatio(fontSize: 40.0))
         drinkQuantityLabel.textAlignment = .center
 
         // TODO: Possibly remove this label so as not to discourage purchases similar to Starbucks app
         drinkPriceLabel.text = "$\(drink.price.description)"
-        drinkPriceLabel.font = UIFont(name: "Charter-Roman", size: 50.0)
+        drinkPriceLabel.font = UIFont(name: "Charter-Roman", size: calculateFontRatio(fontSize: 50.0))
         drinkPriceLabel.textAlignment = .center
 
         minusButton.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.144928).isActive = true
         minusButton.heightAnchor.constraint(equalTo: minusButton.widthAnchor, multiplier: 1.0).isActive = true
         minusButton.cornerRadius = minusButton.safeAreaLayoutGuide.layoutFrame.width / 2
         minusButton.setTitle("-", for: .normal)
-        minusButton.titleLabel?.font = UIFont.systemFont(ofSize: 55.0)
+        minusButton.titleLabel?.font = UIFont.systemFont(ofSize: calculateFontRatio(fontSize: 55.0))
         minusButton.contentVerticalAlignment = .bottom
         minusButton.refreshColor(color: UIColor.themeColor)
 
@@ -105,24 +105,19 @@ class DrinkViewController: UIViewController {
         plusButton.heightAnchor.constraint(equalTo: plusButton.widthAnchor, multiplier: 1.0).isActive = true
         plusButton.cornerRadius = plusButton.safeAreaLayoutGuide.layoutFrame.width / 2
         plusButton.setTitle("+", for: .normal)
-        plusButton.titleLabel?.font = UIFont.systemFont(ofSize: 45.0)
+        plusButton.titleLabel?.font = UIFont.systemFont(ofSize: calculateFontRatio(fontSize: 45.0))
 
         plusButton.contentVerticalAlignment = .top
         plusButton.refreshColor(color: UIColor.themeColor)
 
         addToOrderButton.setTitle("Add to Order", for: .normal)
         addToOrderButton.backgroundColor = UIColor.themeColor
-        addToOrderButton.titleLabel?.font = UIFont(name: "Charter-Black", size: 35.0)
+        addToOrderButton.titleLabel?.font = UIFont(name: "Charter-Black", size: calculateFontRatio(fontSize: 35.0))
         addToOrderButton.contentHorizontalAlignment = .center
 
         minusButton.addTarget(self, action: #selector(decreaseDrinkQuantity), for: .touchUpInside)
         plusButton.addTarget(self, action: #selector(increaseDrinkQuantity), for: .touchUpInside)
         addToOrderButton.addTarget(self, action: #selector(buyButtonPressed), for: .touchUpInside)
-    }
-
-    override func viewWillAppear(_: Bool) {
-        let attributes = [NSAttributedString.Key.font: UIFont(name: "Charter-Roman", size: 25)!]
-        navigationController!.navigationBar.standardAppearance.titleTextAttributes = attributes
     }
 
     @objc func increaseDrinkQuantity() {

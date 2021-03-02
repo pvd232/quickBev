@@ -21,11 +21,12 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
     let locationManager = CLLocationManager()
     var customAnnotations = [CustomAnnotation]()
     var businessPickerDelegate: NewBusinessPickedProtocol?
-
+    let regionRadius: Double = 1600
+    let authorizationStatus = CLLocationManager.authorizationStatus()
     init() {
         super.init(nibName: nil, bundle: nil)
         view.backgroundColor = .white
-        makeBusinessServiceCall()
+        configureLocationServices()
     }
 
     @available(*, unavailable)
@@ -36,17 +37,16 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(mapView)
+
         view.addSubview(activityIndicator)
         activityIndicator.frame = view.bounds
         activityIndicator.backgroundColor = UIColor(white: 0, alpha: 0.4)
         mapView.delegate = self
         mapView.showsUserLocation = true
-
         locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
         let margins = view.safeAreaLayoutGuide
         NSLayoutConstraint.activate([
-            mapView.bottomAnchor.constraint(equalTo: margins.bottomAnchor),
+            mapView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             mapView.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
             mapView.heightAnchor.constraint(equalTo: mapView.superview!.heightAnchor),
             mapView.widthAnchor.constraint(equalTo: margins.widthAnchor),
@@ -64,9 +64,9 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
         navigationController?.interactivePopGestureRecognizer?.delegate = self
         if CLLocationManager.locationServicesEnabled() {
             locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
-            //            locationManager.allowsBackgroundLocationUpdates = true
+            locationManager.allowsBackgroundLocationUpdates = true
             locationManager.requestLocation()
-            //            locationManager.startUpdatingLocation()
+            locationManager.startUpdatingLocation()
             makeBusinessServiceCall()
         }
     }
@@ -88,7 +88,6 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
                 business.coordinate = locationCoordinate
             } else {
                 group.enter()
-                print("business.address!", business.address!)
                 business.getLocation(from: business.address!) { location in
                     if location != nil {
                         business.coordinate = location!
@@ -103,7 +102,7 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
         group.notify(queue: .main, execute: {
             for business in CheckoutCart.shared.businessArray {
                 let customCoordinate = business.coordinate
-                let customAnnotation = CustomAnnotation(coordinate: customCoordinate!, title: "\(business.name!)", image: (UIImage(named: "blaise"))!, businessId: business.id!)
+                let customAnnotation = CustomAnnotation(coordinate: customCoordinate!, businessName: business.name!, businessId: business.id!)
                 self.mapView.addAnnotation(customAnnotation)
             }
             self.activityIndicator.stopAnimating()
@@ -125,8 +124,23 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
 
     func locationManager(_: CLLocationManager, didUpdateLocations _: [CLLocation]) {}
 
-    private func locationManager(manager _: CLLocationManager, didChangeAuthorizationStatus _: CLAuthorizationStatus)
-    {}
+    func centerMapOnUserLocation() {
+        guard let coordinate = locationManager.location?.coordinate else { return }
+        let coordinateRegion = MKCoordinateRegion(center: coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+
+    func configureLocationServices() {
+        if authorizationStatus == .notDetermined {
+            locationManager.requestWhenInUseAuthorization()
+        } else {
+            return
+        }
+    }
+
+    func locationManager(_: CLLocationManager, didChangeAuthorization _: CLAuthorizationStatus) {
+        centerMapOnUserLocation()
+    }
 
     func locationManager(_: CLLocationManager, didFailWithError error: Error) {
         print("location manager error", error)
@@ -151,24 +165,55 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
         let customAnnotation = annotation as! CustomAnnotation
 
         // programatically creating an image view to hold the picture of the 360 bridge for the custom annotation
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-        imageView.image = customAnnotation.image
+//        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+//        imageView.image = customAnnotation.image
 
         let detailView = UIView()
-        detailView.addSubview(imageView)
-        let widthConstraint = NSLayoutConstraint(item: detailView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 200)
+//        detailView.addSubview(imageView)
+        detailView.translatesAutoresizingMaskIntoConstraints = false
+        let widthConstraint = NSLayoutConstraint(item: detailView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 0.25 * UIViewController.screenSize.width)
         detailView.addConstraint(widthConstraint)
-        let heightConstraint = NSLayoutConstraint(item: detailView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 250)
+        let heightConstraint = NSLayoutConstraint(item: detailView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 0.15 * UIViewController.screenSize.width)
         detailView.addConstraint(heightConstraint)
 
         // add button
-        let button = RoundButton(frame: CGRect(x: 50, y: 200, width: 100, height: 40))
+        let button = RoundButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundImageColor = .blue
         button.setTitle("Select", for: .normal)
+        button.titleLabel?.font = UIFont(name: "Charter-Black", size: 18.0)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         button.params["businessId"] = customAnnotation.businessId?.uuidString
+        var labelColor: UIColor {
+            if #available(iOS 13.0, *) {
+                if UITraitCollection.current.userInterfaceStyle == .dark {
+                    return .white
+                } else {
+                    return .black
+                }
+            } else { return .white }
+        }
+        let titleLabel = UILabel(theme: Theme.UILabel(props: [.text(customAnnotation.businessName!), .center, .font(UIFont(name: "Charter-Roman", size: 18.0))]))
+        titleLabel.textColor = labelColor
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        detailView.addSubview(titleLabel)
         detailView.addSubview(button)
+        button.centerXAnchor.constraint(equalTo: detailView.centerXAnchor).isActive = true
+//        button.centerYAnchor.constraint(equalTo: detailView.centerYAnchor).isActive = true
+        let buttonWidth = NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: UIViewController.screenSize.width * 0.2)
+        let buttonHeight = NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: UIViewController.screenSize.width * 0.085)
+        button.addConstraint(buttonWidth)
+        button.addConstraint(buttonHeight)
+        button.bottomAnchor.constraint(equalTo: detailView.bottomAnchor).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: detailView.topAnchor, constant: -5.0).isActive = true
+        titleLabel.centerXAnchor.constraint(equalTo: detailView.centerXAnchor).isActive = true
+        titleLabel.bottomAnchor.constraint(equalTo: button.topAnchor, constant: -10.0).isActive = true
+
+//        button.widthAnchor.constraint(constant: UIViewController.screenSize.width * 0.2).isActive = true
+//        button.heightAnchor.constraint(constant: UIViewController.screenSize.width * 0.07).isActive = true
+
         annotationView?.detailCalloutAccessoryView = detailView
+//         annotationView?.detailCalloutAccessoryView?.addLayoutGuide(UILayoutGuide())
         return annotationView
     }
 

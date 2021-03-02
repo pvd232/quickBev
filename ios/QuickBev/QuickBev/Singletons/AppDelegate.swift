@@ -34,7 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 options: [.alert, .sound, .badge]) { [weak self] granted, _ in
                 print("Permission granted: \(granted)")
                 guard granted else {
-                    self?.testNetwork()
                     return
                 }
                 self?.getNotificationSettings()
@@ -71,7 +70,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func application(_: UIApplication, willFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         StripeAPI.defaultPublishableKey = "pk_test_51I0xFxFseFjpsgWvepMo3sJRNB4CCbFPhkxj2gEKgHUhIGBnciTqNVzjz1wz68Btbd5zAb2KC9eXpYaiOwLDA5QH00SZhtKPLT"
         IQKeyboardManager.shared.enable = true
+        // make sure notifications have not been given and then ask for network settings
+        UNUserNotificationCenter.current().getNotificationSettings { settings in
+            if settings.authorizationStatus != .authorized {
+                self.testNetwork()
+            }
+        }
         registerForPushNotifications()
+
+        _ = CheckoutCart.shared
         return true
     }
 
@@ -116,7 +123,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             // silent notification
             if aps["content-available"] as? Int == 1 {
             } else {
-                if let alert = aps["alert"] as? NSDictionary, let body = alert["body"] as? NSString, let title = alert["title"] as? NSString, let category = alert["category"] as? NSString {
+                if let alert = aps["alert"] as? NSDictionary, let body = alert["body"] as? NSString, let title = alert["title"] as? NSString, let category = aps["category"] as? NSString {
                     let alertController = UIAlertController(title: title as String, message: body as String, preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "Okay", style: .cancel) { _ in
                         if category == "email" {

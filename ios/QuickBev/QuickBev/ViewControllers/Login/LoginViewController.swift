@@ -25,11 +25,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @UsesAutoLayout var signInToQuickBevLabel: UILabel = {
         if UIViewController.screenSize.height <= 736 {
             let smallFontUILabel = UILabel(theme: Theme.UILabel(props: [.textColor]))
-            smallFontUILabel.font = UIFont(name: "Charter-Roman", size: 20.0)
+            smallFontUILabel.font = UIFont(name: "Charter-Roman", size: calculateFontRatio(fontSize: 20.0))
             return smallFontUILabel
         } else {
             let largeFontUILabel = UILabel(theme: Theme.UILabel(props: [.textColor]))
-            largeFontUILabel.font = UIFont(name: "Charter-Roman", size: 22.0)
+            largeFontUILabel.font = UIFont(name: "Charter-Roman", size: calculateFontRatio(fontSize: 22.0))
             return largeFontUILabel
         }
     }()
@@ -68,7 +68,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         letsGetStartedLabel.textColor = .black
 
         ellipsisLabel.text = "· · ·"
-        ellipsisLabel.font = UIFont(name: "System-Bold", size: 20.0)
+        ellipsisLabel.font = UIFont(name: "System-Bold", size: calculateFontRatio(fontSize: 20.0))
         ellipsisLabel.textAlignment = .center
         ellipsisLabel.textColor = .black
 
@@ -97,7 +97,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.clear])
 
         forgotPasswordButton.setTitle("Forgot Password?", for: .normal)
-        forgotPasswordButton.titleLabel?.font = UIFont(name: "Charter-Roman", size: 18.0)
+        forgotPasswordButton.titleLabel?.font = UIFont(name: "Charter-Roman", size: calculateFontRatio(fontSize: 18.0))
         forgotPasswordButton.setTitleColor(.black, for: .normal)
         forgotPasswordButton.contentHorizontalAlignment = .center
 
@@ -120,7 +120,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
         submitButton.refreshTitle(newTitle: "Submit")
         submitButton.titleLabel?.textColor = UIColor.white
-        submitButton.titleLabel?.font = UIFont(name: "Charter-Black", size: 20.0)
+        submitButton.titleLabel?.font = UIFont(name: "Charter-Black", size: calculateFontRatio(fontSize: 20.0))
         submitButton.refreshColor(color: UIColor(red: 134 / 255, green: 130 / 255, blue: 230 / 255, alpha: 1.0))
 
         view.addSubview(logoImageView)

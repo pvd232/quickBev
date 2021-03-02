@@ -34,33 +34,43 @@ extension NSLayoutConstraint {
     }
 }
 
+// this function allows you to plug in the current static font size you are using and replace it with a dynamic font size that scales with the phone's area based on the desired font size to area ratio tested on font size 20 with an iphone 11 pro max
+public func calculateFontRatio(fontSize: CGFloat) -> CGFloat {
+    let currentRatio = (UIViewController.screenSize.width * UIViewController.screenSize.height) / fontSize
+    // desired ratio is based on Iphone 11 Pro Max with height of 896 and width of 414
+    let desiredRatio = (414.0 * 896.0) / fontSize
+    let differenceInRatios = desiredRatio / currentRatio
+    let newFontSize = fontSize * differenceInRatios
+    return newFontSize
+}
+
 extension UIFont {
     class var largeThemeLabelFont: UIFont {
-        return UIFont(name: "Charter-Roman", size: 0.039409 * UIViewController.screenSize.height)!
+        return UIFont(name: "Charter-Roman", size: calculateFontRatio(fontSize: 35.3))!
     }
 
     class var themeButtonFont: UIFont {
-        return UIFont(name: "Charter-Black", size: 20.0)!
+        return UIFont(name: "Charter-Black", size: calculateFontRatio(fontSize: 20.0))!
     }
 
     class var mediumLargeThemeButtonFont: UIFont {
-        return UIFont(name: "Charter-Black", size: 18.0)!
+        return UIFont(name: "Charter-Black", size: calculateFontRatio(fontSize: 18.0))!
     }
 
     class var mediumThemeButtonFont: UIFont {
-        return UIFont(name: "Charter-Black", size: 16.0)!
+        return UIFont(name: "Charter-Black", size: calculateFontRatio(fontSize: 16.0))!
     }
 
     class var smallThemeButtonFont: UIFont {
-        return UIFont(name: "Charter-Black", size: 12.0)!
+        return UIFont(name: "Charter-Black", size: calculateFontRatio(fontSize: 12.0))!
     }
 
     class var themeLabelFont: UIFont {
-        return UIFont(name: "Charter-Roman", size: 20.0)!
+        return UIFont(name: "Charter-Roman", size: calculateFontRatio(fontSize: 20.0))!
     }
 
     class var themeLabelSmallFont: UIFont {
-        return UIFont(name: "Charter-Roman", size: 14.0)!
+        return UIFont(name: "Charter-Roman", size: calculateFontRatio(fontSize: 14.0))!
     }
 }
 
@@ -185,6 +195,26 @@ extension UIView {
                         self.textAlignment = .center
                     case let .text(value):
                         self.text = value
+                    case .textColor:
+                        self.textColor = .black
+                    }
+                }
+            default:
+                ()
+            }
+        case let self as UITextView:
+            switch theme {
+            case let .UITextView(props):
+                for prop in props {
+                    switch prop {
+                    case let .font(value):
+                        if value == nil {
+                            self.font = prop.rawValue as? UIFont
+                        } else {
+                            self.font = value
+                        }
+                    case let .backgroundColor(value):
+                        self.backgroundColor = value
                     case .textColor:
                         self.textColor = .black
                     }

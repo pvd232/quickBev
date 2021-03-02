@@ -89,6 +89,7 @@ depends-top-level:
 - "User"
 - "UsesAutoLayout"
 - !private "activityIndicator"
+- "calculateFontRatio"
 - !private "ellipsisLabel"
 - !private "emailAddressLabel"
 - !private "emailTextField"
@@ -123,7 +124,7 @@ depends-member:
 - ["7SwiftUI10AnimatableP", "height"]
 - !private ["7SwiftUI10AnimatableP", "size"]
 - !private ["So22UILayoutConstraintAxisV", "vertical"]
-- ["SK", ""]
+- !private ["SK", ""]
 - !private ["SB", "init"]
 - !private ["SB", "isTotallyOrdered"]
 - !private ["SB", "radix"]
@@ -217,6 +218,7 @@ depends-member:
 - !private ["s7CVarArgP", "bottomAnchor"]
 - !private ["s7CVarArgP", "bounds"]
 - !private ["s7CVarArgP", "bringSubviewToFront"]
+- ["s7CVarArgP", "calculateFontRatio"]
 - !private ["s7CVarArgP", "centerXAnchor"]
 - !private ["s7CVarArgP", "centerYAnchor"]
 - !private ["s7CVarArgP", "clear"]
@@ -295,7 +297,7 @@ depends-member:
 - !private ["8QuickBev12CheckoutCartC", "stripeId"]
 - !private ["8QuickBev12CheckoutCartC", "user"]
 - !private ["8QuickBev12CheckoutCartC", "userId"]
-- ["Sl", ""]
+- !private ["Sl", ""]
 - !private ["Sl", "subscript"]
 - ["SL", "<"]
 - ["SL", "<="]
@@ -351,6 +353,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "bottomAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "bounds"]
 - !private ["s28CustomDebugStringConvertibleP", "bringSubviewToFront"]
+- ["s28CustomDebugStringConvertibleP", "calculateFontRatio"]
 - !private ["s28CustomDebugStringConvertibleP", "centerXAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "centerYAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "clear"]
@@ -485,6 +488,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "bottomAnchor"]
 - !private ["s23CustomStringConvertibleP", "bounds"]
 - !private ["s23CustomStringConvertibleP", "bringSubviewToFront"]
+- ["s23CustomStringConvertibleP", "calculateFontRatio"]
 - !private ["s23CustomStringConvertibleP", "centerXAnchor"]
 - !private ["s23CustomStringConvertibleP", "centerYAnchor"]
 - !private ["s23CustomStringConvertibleP", "clear"]
@@ -639,6 +643,7 @@ depends-member:
 - !private ["SQ", "bottomAnchor"]
 - !private ["SQ", "bounds"]
 - !private ["SQ", "bringSubviewToFront"]
+- ["SQ", "calculateFontRatio"]
 - !private ["SQ", "cancel"]
 - !private ["SQ", "center"]
 - !private ["SQ", "centerXAnchor"]
@@ -737,7 +742,7 @@ depends-member:
 - ["s30ExpressibleByDictionaryLiteralP", "Value"]
 - ["s30ExpressibleByDictionaryLiteralP", "init"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - ["s25ExpressibleByFloatLiteralP", "FloatLiteralType"]
 - ["s25ExpressibleByFloatLiteralP", "init"]
 - ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
@@ -751,10 +756,10 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "safeAreaLayoutGuide"]
 - !private ["s23ExpressibleByNilLiteralP", "white"]
 - !private ["s32ExpressibleByStringInterpolationP", "StringInterpolation"]
-- ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
 - !private ["s32ExpressibleByStringInterpolationP", "init"]
-- ["s26ExpressibleByStringLiteralP", ""]
-- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["SF", "*"]
 - !private ["SF", "*="]
 - !private ["SF", "+"]
@@ -870,6 +875,7 @@ depends-member:
 - !private ["SH", "bottomAnchor"]
 - !private ["SH", "bounds"]
 - !private ["SH", "bringSubviewToFront"]
+- ["SH", "calculateFontRatio"]
 - !private ["SH", "cancel"]
 - !private ["SH", "center"]
 - !private ["SH", "centerXAnchor"]
@@ -1008,6 +1014,7 @@ depends-member:
 - !private ["8QuickBev19LoginViewControllerC", "_signInToQuickBevLabel"]
 - !private ["8QuickBev19LoginViewControllerC", "_submitButton"]
 - !private ["8QuickBev19LoginViewControllerC", "activityIndicator"]
+- ["8QuickBev19LoginViewControllerC", "calculateFontRatio"]
 - ["8QuickBev19LoginViewControllerC", "deinit"]
 - !private ["8QuickBev19LoginViewControllerC", "dismiss"]
 - ["8QuickBev19LoginViewControllerC", "ellipsisLabel"]
@@ -1040,12 +1047,11 @@ depends-member:
 - !private ["8QuickBev19LoginViewControllerC", "view"]
 - ["8QuickBev19LoginViewControllerC", "viewDidLayoutSubviews"]
 - ["8QuickBev19LoginViewControllerC", "viewDidLoad"]
-- ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", ""]
 - !private ["So18NSAttributedStringC", "Key"]
 - !private ["So18NSAttributedStringC", "init"]
 - !private ["So8NSCodingP", "APIClient"]
 - !private ["So8NSCodingP", "APIRequest"]
-- ["So8NSCodingP", "Bool"]
 - !private ["So8NSCodingP", "CGFloat"]
 - !private ["So8NSCodingP", "CheckoutCart"]
 - !private ["So8NSCodingP", "CoreDataManager"]
@@ -1070,7 +1076,6 @@ depends-member:
 - ["So8NSCodingP", "UIImageView"]
 - ["So8NSCodingP", "UILabel"]
 - ["So8NSCodingP", "UIStackView"]
-- ["So8NSCodingP", "UITextField"]
 - ["So8NSCodingP", "UIViewController"]
 - !private ["So8NSCodingP", "User"]
 - ["So8NSCodingP", "UsesAutoLayout"]
@@ -1102,6 +1107,7 @@ depends-member:
 - !private ["So8NSCodingP", "bottomAnchor"]
 - !private ["So8NSCodingP", "bounds"]
 - !private ["So8NSCodingP", "bringSubviewToFront"]
+- ["So8NSCodingP", "calculateFontRatio"]
 - !private ["So8NSCodingP", "centerXAnchor"]
 - !private ["So8NSCodingP", "centerYAnchor"]
 - !private ["So8NSCodingP", "clear"]
@@ -1176,7 +1182,6 @@ depends-member:
 - !private ["So9NSCopyingP", "white"]
 - !private ["So26NSExtensionRequestHandlingP", "APIClient"]
 - !private ["So26NSExtensionRequestHandlingP", "APIRequest"]
-- ["So26NSExtensionRequestHandlingP", "Bool"]
 - !private ["So26NSExtensionRequestHandlingP", "CGFloat"]
 - !private ["So26NSExtensionRequestHandlingP", "CheckoutCart"]
 - !private ["So26NSExtensionRequestHandlingP", "CoreDataManager"]
@@ -1200,7 +1205,6 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "UIImageView"]
 - ["So26NSExtensionRequestHandlingP", "UILabel"]
 - ["So26NSExtensionRequestHandlingP", "UIStackView"]
-- ["So26NSExtensionRequestHandlingP", "UITextField"]
 - ["So26NSExtensionRequestHandlingP", "UIViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "User"]
 - ["So26NSExtensionRequestHandlingP", "UsesAutoLayout"]
@@ -1220,6 +1224,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "_submitButton"]
 - ["So26NSExtensionRequestHandlingP", "activityIndicator"]
 - !private ["So26NSExtensionRequestHandlingP", "addAction"]
+- ["So26NSExtensionRequestHandlingP", "calculateFontRatio"]
 - ["So26NSExtensionRequestHandlingP", "deinit"]
 - !private ["So26NSExtensionRequestHandlingP", "dismiss"]
 - ["So26NSExtensionRequestHandlingP", "ellipsisLabel"]
@@ -1349,18 +1354,10 @@ depends-member:
 - !private ["So8NSObjectC", "bounds"]
 - !private ["So8NSObjectC", "bringSubview"]
 - !private ["So8NSObjectC", "bringSubviewToFront"]
+- ["So8NSObjectC", "calculateFontRatio"]
 - !private ["So8NSObjectC", "centerXAnchor"]
 - !private ["So8NSObjectC", "centerYAnchor"]
 - !private ["So8NSObjectC", "clear"]
-- !private ["So8NSObjectC", "colorNamed"]
-- !private ["So8NSObjectC", "colorWithCGColor"]
-- !private ["So8NSObjectC", "colorWithCIColor"]
-- !private ["So8NSObjectC", "colorWithDisplayP3Red"]
-- !private ["So8NSObjectC", "colorWithDynamicProvider"]
-- !private ["So8NSObjectC", "colorWithHue"]
-- !private ["So8NSObjectC", "colorWithPatternImage"]
-- !private ["So8NSObjectC", "colorWithRed"]
-- !private ["So8NSObjectC", "colorWithWhite"]
 - !private ["So8NSObjectC", "constraint"]
 - !private ["So8NSObjectC", "contentHorizontalAlignment"]
 - !private ["So8NSObjectC", "delegate"]
@@ -1371,21 +1368,13 @@ depends-member:
 - ["So8NSObjectC", "emailTextField"]
 - !private ["So8NSObjectC", "fatalError"]
 - ["So8NSObjectC", "font"]
-- ["So8NSObjectC", "fontWithDescriptor"]
-- ["So8NSObjectC", "fontWithName"]
 - ["So8NSObjectC", "forgotPasswordButton"]
 - ["So8NSObjectC", "formValue"]
 - !private ["So8NSObjectC", "frame"]
 - !private ["So8NSObjectC", "heightAnchor"]
 - !private ["So8NSObjectC", "image"]
-- ["So8NSObjectC", "imageNamed"]
-- ["So8NSObjectC", "imageWithCGImage"]
-- ["So8NSObjectC", "imageWithCIImage"]
-- ["So8NSObjectC", "imageWithContentsOfFile"]
-- ["So8NSObjectC", "imageWithData"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "isSecureTextEntry"]
-- ["So8NSObjectC", "jpegData"]
 - ["So8NSObjectC", "largeThemeLabelFont"]
 - !private ["So8NSObjectC", "leadingAnchor"]
 - ["So8NSObjectC", "letsGetStartedLabel"]
@@ -1397,7 +1386,6 @@ depends-member:
 - ["So8NSObjectC", "passwordLabel"]
 - ["So8NSObjectC", "passwordTextField"]
 - !private ["So8NSObjectC", "placeholder"]
-- ["So8NSObjectC", "pngData"]
 - !private ["So8NSObjectC", "present"]
 - !private ["So8NSObjectC", "print"]
 - !private ["So8NSObjectC", "refreshColor"]
@@ -1418,7 +1406,6 @@ depends-member:
 - ["So8NSObjectC", "submitButtonPressed"]
 - !private ["So8NSObjectC", "superview"]
 - !private ["So8NSObjectC", "switchToHomePageViewController"]
-- ["So8NSObjectC", "systemImageNamed"]
 - !private ["So8NSObjectC", "text"]
 - !private ["So8NSObjectC", "textAlignment"]
 - !private ["So8NSObjectC", "textColor"]
@@ -1443,7 +1430,6 @@ depends-member:
 - !private ["So8NSObjectC", "widthAnchor"]
 - !private ["So8NSObjectP", "APIClient"]
 - !private ["So8NSObjectP", "APIRequest"]
-- ["So8NSObjectP", "Bool"]
 - !private ["So8NSObjectP", "CGFloat"]
 - !private ["So8NSObjectP", "CheckoutCart"]
 - !private ["So8NSObjectP", "CoreDataManager"]
@@ -1468,7 +1454,6 @@ depends-member:
 - ["So8NSObjectP", "UIImageView"]
 - ["So8NSObjectP", "UILabel"]
 - ["So8NSObjectP", "UIStackView"]
-- ["So8NSObjectP", "UITextField"]
 - ["So8NSObjectP", "UIViewController"]
 - !private ["So8NSObjectP", "User"]
 - ["So8NSObjectP", "UsesAutoLayout"]
@@ -1504,18 +1489,10 @@ depends-member:
 - !private ["So8NSObjectP", "bounds"]
 - !private ["So8NSObjectP", "bringSubview"]
 - !private ["So8NSObjectP", "bringSubviewToFront"]
+- ["So8NSObjectP", "calculateFontRatio"]
 - !private ["So8NSObjectP", "centerXAnchor"]
 - !private ["So8NSObjectP", "centerYAnchor"]
 - !private ["So8NSObjectP", "clear"]
-- !private ["So8NSObjectP", "colorNamed"]
-- !private ["So8NSObjectP", "colorWithCGColor"]
-- !private ["So8NSObjectP", "colorWithCIColor"]
-- !private ["So8NSObjectP", "colorWithDisplayP3Red"]
-- !private ["So8NSObjectP", "colorWithDynamicProvider"]
-- !private ["So8NSObjectP", "colorWithHue"]
-- !private ["So8NSObjectP", "colorWithPatternImage"]
-- !private ["So8NSObjectP", "colorWithRed"]
-- !private ["So8NSObjectP", "colorWithWhite"]
 - !private ["So8NSObjectP", "constraint"]
 - !private ["So8NSObjectP", "contentHorizontalAlignment"]
 - ["So8NSObjectP", "deinit"]
@@ -1527,21 +1504,13 @@ depends-member:
 - ["So8NSObjectP", "emailTextField"]
 - !private ["So8NSObjectP", "fatalError"]
 - ["So8NSObjectP", "font"]
-- ["So8NSObjectP", "fontWithDescriptor"]
-- ["So8NSObjectP", "fontWithName"]
 - ["So8NSObjectP", "forgotPasswordButton"]
 - ["So8NSObjectP", "formValue"]
 - !private ["So8NSObjectP", "frame"]
 - !private ["So8NSObjectP", "heightAnchor"]
 - !private ["So8NSObjectP", "image"]
-- ["So8NSObjectP", "imageNamed"]
-- ["So8NSObjectP", "imageWithCGImage"]
-- ["So8NSObjectP", "imageWithCIImage"]
-- ["So8NSObjectP", "imageWithContentsOfFile"]
-- ["So8NSObjectP", "imageWithData"]
 - ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "isSecureTextEntry"]
-- ["So8NSObjectP", "jpegData"]
 - ["So8NSObjectP", "largeThemeLabelFont"]
 - !private ["So8NSObjectP", "leadingAnchor"]
 - ["So8NSObjectP", "letsGetStartedLabel"]
@@ -1553,7 +1522,6 @@ depends-member:
 - ["So8NSObjectP", "passwordLabel"]
 - ["So8NSObjectP", "passwordTextField"]
 - !private ["So8NSObjectP", "placeholder"]
-- ["So8NSObjectP", "pngData"]
 - !private ["So8NSObjectP", "present"]
 - !private ["So8NSObjectP", "print"]
 - ["So8NSObjectP", "refreshColor"]
@@ -1574,7 +1542,6 @@ depends-member:
 - ["So8NSObjectP", "submitButtonPressed"]
 - !private ["So8NSObjectP", "superview"]
 - !private ["So8NSObjectP", "switchToHomePageViewController"]
-- ["So8NSObjectP", "systemImageNamed"]
 - !private ["So8NSObjectP", "text"]
 - !private ["So8NSObjectP", "textAlignment"]
 - !private ["So8NSObjectP", "textColor"]
@@ -1662,7 +1629,7 @@ depends-member:
 - !private ["8QuickBev11SecureStoreV", "init"]
 - !private ["8QuickBev11SecureStoreV", "setValue"]
 - !private ["8QuickBev20SecureStoreQueryableP", "init"]
-- ["ST", ""]
+- !private ["ST", ""]
 - !private ["ST", "subscript"]
 - !private ["s10SetAlgebraP", ""]
 - !private ["s10SetAlgebraP", "normal"]
@@ -1677,10 +1644,10 @@ depends-member:
 - !private ["So22UIAlertControllerStyleV", "alert"]
 - !private ["So18UIAlertActionStyleV", "cancel"]
 - ["So28UIActivityIndicatorViewStyleV", "large"]
-- ["s16TextOutputStreamP", ""]
+- !private ["s16TextOutputStreamP", ""]
 - !private ["s16TextOutputStreamP", "appendInterpolation"]
 - !private ["s16TextOutputStreamP", "appendLiteral"]
-- ["s20TextOutputStreamableP", ""]
+- !private ["s20TextOutputStreamableP", ""]
 - ["8QuickBev5ThemeO", "UILabel"]
 - ["8QuickBev5ThemeO", "UITextField"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "addTarget"]
@@ -1790,7 +1757,6 @@ depends-member:
 - !private ["So12UIAppearanceP", "widthAnchor"]
 - !private ["So21UIAppearanceContainerP", "APIClient"]
 - !private ["So21UIAppearanceContainerP", "APIRequest"]
-- ["So21UIAppearanceContainerP", "Bool"]
 - !private ["So21UIAppearanceContainerP", "CGFloat"]
 - !private ["So21UIAppearanceContainerP", "CheckoutCart"]
 - !private ["So21UIAppearanceContainerP", "CoreDataManager"]
@@ -1814,7 +1780,6 @@ depends-member:
 - ["So21UIAppearanceContainerP", "UIImageView"]
 - ["So21UIAppearanceContainerP", "UILabel"]
 - ["So21UIAppearanceContainerP", "UIStackView"]
-- ["So21UIAppearanceContainerP", "UITextField"]
 - ["So21UIAppearanceContainerP", "UIViewController"]
 - !private ["So21UIAppearanceContainerP", "User"]
 - ["So21UIAppearanceContainerP", "UsesAutoLayout"]
@@ -1845,6 +1810,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "bottomAnchor"]
 - !private ["So21UIAppearanceContainerP", "bounds"]
 - !private ["So21UIAppearanceContainerP", "bringSubviewToFront"]
+- ["So21UIAppearanceContainerP", "calculateFontRatio"]
 - !private ["So21UIAppearanceContainerP", "centerXAnchor"]
 - !private ["So21UIAppearanceContainerP", "centerYAnchor"]
 - !private ["So21UIAppearanceContainerP", "contentHorizontalAlignment"]
@@ -1923,7 +1889,6 @@ depends-member:
 - !private ["So7UIColorC", "white"]
 - !private ["So18UIContentContainerP", "APIClient"]
 - !private ["So18UIContentContainerP", "APIRequest"]
-- ["So18UIContentContainerP", "Bool"]
 - !private ["So18UIContentContainerP", "CGFloat"]
 - !private ["So18UIContentContainerP", "CheckoutCart"]
 - !private ["So18UIContentContainerP", "CoreDataManager"]
@@ -1947,7 +1912,6 @@ depends-member:
 - ["So18UIContentContainerP", "UIImageView"]
 - ["So18UIContentContainerP", "UILabel"]
 - ["So18UIContentContainerP", "UIStackView"]
-- ["So18UIContentContainerP", "UITextField"]
 - ["So18UIContentContainerP", "UIViewController"]
 - !private ["So18UIContentContainerP", "User"]
 - ["So18UIContentContainerP", "UsesAutoLayout"]
@@ -1967,6 +1931,7 @@ depends-member:
 - ["So18UIContentContainerP", "_submitButton"]
 - ["So18UIContentContainerP", "activityIndicator"]
 - !private ["So18UIContentContainerP", "addAction"]
+- ["So18UIContentContainerP", "calculateFontRatio"]
 - ["So18UIContentContainerP", "deinit"]
 - !private ["So18UIContentContainerP", "dismiss"]
 - ["So18UIContentContainerP", "ellipsisLabel"]
@@ -2132,7 +2097,6 @@ depends-member:
 - !private ["So13UIDynamicItemP", "widthAnchor"]
 - !private ["So18UIFocusEnvironmentP", "APIClient"]
 - !private ["So18UIFocusEnvironmentP", "APIRequest"]
-- ["So18UIFocusEnvironmentP", "Bool"]
 - !private ["So18UIFocusEnvironmentP", "CGFloat"]
 - !private ["So18UIFocusEnvironmentP", "CheckoutCart"]
 - !private ["So18UIFocusEnvironmentP", "CoreDataManager"]
@@ -2156,7 +2120,6 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "UIImageView"]
 - ["So18UIFocusEnvironmentP", "UILabel"]
 - ["So18UIFocusEnvironmentP", "UIStackView"]
-- ["So18UIFocusEnvironmentP", "UITextField"]
 - ["So18UIFocusEnvironmentP", "UIViewController"]
 - !private ["So18UIFocusEnvironmentP", "User"]
 - ["So18UIFocusEnvironmentP", "UsesAutoLayout"]
@@ -2187,6 +2150,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "bottomAnchor"]
 - !private ["So18UIFocusEnvironmentP", "bounds"]
 - !private ["So18UIFocusEnvironmentP", "bringSubviewToFront"]
+- ["So18UIFocusEnvironmentP", "calculateFontRatio"]
 - !private ["So18UIFocusEnvironmentP", "centerXAnchor"]
 - !private ["So18UIFocusEnvironmentP", "centerYAnchor"]
 - !private ["So18UIFocusEnvironmentP", "contentHorizontalAlignment"]
@@ -2405,7 +2369,6 @@ depends-member:
 - !private ["So13UILayoutGuideC", "widthAnchor"]
 - !private ["So30UIPasteConfigurationSupportingP", "APIClient"]
 - !private ["So30UIPasteConfigurationSupportingP", "APIRequest"]
-- ["So30UIPasteConfigurationSupportingP", "Bool"]
 - !private ["So30UIPasteConfigurationSupportingP", "CGFloat"]
 - !private ["So30UIPasteConfigurationSupportingP", "CheckoutCart"]
 - !private ["So30UIPasteConfigurationSupportingP", "CoreDataManager"]
@@ -2429,7 +2392,6 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "UIImageView"]
 - ["So30UIPasteConfigurationSupportingP", "UILabel"]
 - ["So30UIPasteConfigurationSupportingP", "UIStackView"]
-- ["So30UIPasteConfigurationSupportingP", "UITextField"]
 - ["So30UIPasteConfigurationSupportingP", "UIViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "User"]
 - ["So30UIPasteConfigurationSupportingP", "UsesAutoLayout"]
@@ -2461,6 +2423,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "bounds"]
 - !private ["So30UIPasteConfigurationSupportingP", "bringSubview"]
 - !private ["So30UIPasteConfigurationSupportingP", "bringSubviewToFront"]
+- ["So30UIPasteConfigurationSupportingP", "calculateFontRatio"]
 - !private ["So30UIPasteConfigurationSupportingP", "centerXAnchor"]
 - !private ["So30UIPasteConfigurationSupportingP", "centerYAnchor"]
 - !private ["So30UIPasteConfigurationSupportingP", "contentHorizontalAlignment"]
@@ -2584,6 +2547,7 @@ depends-member:
 - !private ["So11UIResponderC", "bounds"]
 - !private ["So11UIResponderC", "bringSubview"]
 - !private ["So11UIResponderC", "bringSubviewToFront"]
+- ["So11UIResponderC", "calculateFontRatio"]
 - !private ["So11UIResponderC", "centerXAnchor"]
 - !private ["So11UIResponderC", "centerYAnchor"]
 - !private ["So11UIResponderC", "contentHorizontalAlignment"]
@@ -2648,7 +2612,6 @@ depends-member:
 - !private ["So11UIResponderC", "widthAnchor"]
 - !private ["So30UIResponderStandardEditActionsP", "APIClient"]
 - !private ["So30UIResponderStandardEditActionsP", "APIRequest"]
-- ["So30UIResponderStandardEditActionsP", "Bool"]
 - !private ["So30UIResponderStandardEditActionsP", "CGFloat"]
 - !private ["So30UIResponderStandardEditActionsP", "CheckoutCart"]
 - !private ["So30UIResponderStandardEditActionsP", "CoreDataManager"]
@@ -2672,7 +2635,6 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "UIImageView"]
 - ["So30UIResponderStandardEditActionsP", "UILabel"]
 - ["So30UIResponderStandardEditActionsP", "UIStackView"]
-- ["So30UIResponderStandardEditActionsP", "UITextField"]
 - ["So30UIResponderStandardEditActionsP", "UIViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "User"]
 - ["So30UIResponderStandardEditActionsP", "UsesAutoLayout"]
@@ -2704,6 +2666,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "bounds"]
 - !private ["So30UIResponderStandardEditActionsP", "bringSubview"]
 - !private ["So30UIResponderStandardEditActionsP", "bringSubviewToFront"]
+- ["So30UIResponderStandardEditActionsP", "calculateFontRatio"]
 - !private ["So30UIResponderStandardEditActionsP", "centerXAnchor"]
 - !private ["So30UIResponderStandardEditActionsP", "centerYAnchor"]
 - !private ["So30UIResponderStandardEditActionsP", "contentHorizontalAlignment"]
@@ -2794,7 +2757,6 @@ depends-member:
 - !private ["So11UIStackViewC", "trailingAnchor"]
 - !private ["So16UIStateRestoringP", "APIClient"]
 - !private ["So16UIStateRestoringP", "APIRequest"]
-- ["So16UIStateRestoringP", "Bool"]
 - !private ["So16UIStateRestoringP", "CGFloat"]
 - !private ["So16UIStateRestoringP", "CheckoutCart"]
 - !private ["So16UIStateRestoringP", "CoreDataManager"]
@@ -2818,7 +2780,6 @@ depends-member:
 - ["So16UIStateRestoringP", "UIImageView"]
 - ["So16UIStateRestoringP", "UILabel"]
 - ["So16UIStateRestoringP", "UIStackView"]
-- ["So16UIStateRestoringP", "UITextField"]
 - ["So16UIStateRestoringP", "UIViewController"]
 - !private ["So16UIStateRestoringP", "User"]
 - ["So16UIStateRestoringP", "UsesAutoLayout"]
@@ -2838,6 +2799,7 @@ depends-member:
 - ["So16UIStateRestoringP", "_submitButton"]
 - ["So16UIStateRestoringP", "activityIndicator"]
 - !private ["So16UIStateRestoringP", "addAction"]
+- ["So16UIStateRestoringP", "calculateFontRatio"]
 - ["So16UIStateRestoringP", "deinit"]
 - !private ["So16UIStateRestoringP", "dismiss"]
 - ["So16UIStateRestoringP", "ellipsisLabel"]
@@ -2950,6 +2912,7 @@ depends-member:
 - ["So19UITextFieldDelegateP", "_signInToQuickBevLabel"]
 - ["So19UITextFieldDelegateP", "_submitButton"]
 - ["So19UITextFieldDelegateP", "activityIndicator"]
+- ["So19UITextFieldDelegateP", "calculateFontRatio"]
 - ["So19UITextFieldDelegateP", "deinit"]
 - !private ["So19UITextFieldDelegateP", "dismiss"]
 - ["So19UITextFieldDelegateP", "ellipsisLabel"]
@@ -3022,7 +2985,6 @@ depends-member:
 - !private ["So34UITextPasteConfigurationSupportingP", "widthAnchor"]
 - !private ["So18UITraitEnvironmentP", "APIClient"]
 - !private ["So18UITraitEnvironmentP", "APIRequest"]
-- ["So18UITraitEnvironmentP", "Bool"]
 - !private ["So18UITraitEnvironmentP", "CGFloat"]
 - !private ["So18UITraitEnvironmentP", "CheckoutCart"]
 - !private ["So18UITraitEnvironmentP", "CoreDataManager"]
@@ -3046,7 +3008,6 @@ depends-member:
 - ["So18UITraitEnvironmentP", "UIImageView"]
 - ["So18UITraitEnvironmentP", "UILabel"]
 - ["So18UITraitEnvironmentP", "UIStackView"]
-- ["So18UITraitEnvironmentP", "UITextField"]
 - ["So18UITraitEnvironmentP", "UIViewController"]
 - !private ["So18UITraitEnvironmentP", "User"]
 - ["So18UITraitEnvironmentP", "UsesAutoLayout"]
@@ -3077,6 +3038,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "bottomAnchor"]
 - !private ["So18UITraitEnvironmentP", "bounds"]
 - !private ["So18UITraitEnvironmentP", "bringSubviewToFront"]
+- ["So18UITraitEnvironmentP", "calculateFontRatio"]
 - !private ["So18UITraitEnvironmentP", "centerXAnchor"]
 - !private ["So18UITraitEnvironmentP", "centerYAnchor"]
 - !private ["So18UITraitEnvironmentP", "contentHorizontalAlignment"]
@@ -3140,7 +3102,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "widthAnchor"]
 - !private ["So23UIUserActivityRestoringP", "APIClient"]
 - !private ["So23UIUserActivityRestoringP", "APIRequest"]
-- ["So23UIUserActivityRestoringP", "Bool"]
 - !private ["So23UIUserActivityRestoringP", "CGFloat"]
 - !private ["So23UIUserActivityRestoringP", "CheckoutCart"]
 - !private ["So23UIUserActivityRestoringP", "CoreDataManager"]
@@ -3164,7 +3125,6 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "UIImageView"]
 - ["So23UIUserActivityRestoringP", "UILabel"]
 - ["So23UIUserActivityRestoringP", "UIStackView"]
-- ["So23UIUserActivityRestoringP", "UITextField"]
 - ["So23UIUserActivityRestoringP", "UIViewController"]
 - !private ["So23UIUserActivityRestoringP", "User"]
 - ["So23UIUserActivityRestoringP", "UsesAutoLayout"]
@@ -3196,6 +3156,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "bounds"]
 - !private ["So23UIUserActivityRestoringP", "bringSubview"]
 - !private ["So23UIUserActivityRestoringP", "bringSubviewToFront"]
+- ["So23UIUserActivityRestoringP", "calculateFontRatio"]
 - !private ["So23UIUserActivityRestoringP", "centerXAnchor"]
 - !private ["So23UIUserActivityRestoringP", "centerYAnchor"]
 - !private ["So23UIUserActivityRestoringP", "contentHorizontalAlignment"]
@@ -3347,6 +3308,7 @@ depends-member:
 - ["So16UIViewControllerC", "_submitButton"]
 - ["So16UIViewControllerC", "activityIndicator"]
 - !private ["So16UIViewControllerC", "addAction"]
+- ["So16UIViewControllerC", "calculateFontRatio"]
 - !private ["So16UIViewControllerC", "dismiss"]
 - ["So16UIViewControllerC", "ellipsisLabel"]
 - ["So16UIViewControllerC", "emailAddressLabel"]
@@ -3398,11 +3360,11 @@ depends-member:
 - ["s30_CustomPlaygroundQuickLookableP", "height"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "size"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s26_ExpressibleByColorLiteralP", "black"]
 - !private ["s26_ExpressibleByColorLiteralP", "clear"]
 - !private ["s26_ExpressibleByColorLiteralP", "init"]
@@ -3457,6 +3419,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "bottomAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "bounds"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "bringSubviewToFront"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "calculateFontRatio"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "centerXAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "centerYAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "clear"]
@@ -3576,6 +3539,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bottomAnchor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bounds"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bringSubviewToFront"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "calculateFontRatio"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "centerXAnchor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "centerYAnchor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "clear"]
@@ -3709,7 +3673,7 @@ depends-nominal:
 - "s18AdditiveArithmeticP"
 - "7SwiftUI10AnimatableP"
 - !private "So22UILayoutConstraintAxisV"
-- "SK"
+- !private "SK"
 - !private "SB"
 - !private "So17UITextBorderStyleV"
 - "8QuickBev5ThemeO16UITextFieldPropsO11BorderstyleO"
@@ -3718,7 +3682,7 @@ depends-nominal:
 - !private "So6CGSizeV"
 - "s7CVarArgP"
 - !private "8QuickBev12CheckoutCartC"
-- "Sl"
+- !private "Sl"
 - "SL"
 - !private "So35UIControlContentHorizontalAlignmentV"
 - !private "8QuickBev15CoreDataManagerC"
@@ -3736,13 +3700,13 @@ depends-nominal:
 - !private "So15UIControlEventsV"
 - "s25ExpressibleByArrayLiteralP"
 - "s30ExpressibleByDictionaryLiteralP"
-- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - "s25ExpressibleByFloatLiteralP"
 - "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- "s32ExpressibleByStringInterpolationP"
-- "s26ExpressibleByStringLiteralP"
-- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
 - "SF"
 - !private "8QuickBev24GenericPasswordQueryableV"
 - !private "7SwiftUI7GestureP"
@@ -3752,7 +3716,7 @@ depends-nominal:
 - !private "s12IdentifiableP"
 - !private "So21NSAttributedStringKeya"
 - "8QuickBev19LoginViewControllerC"
-- "s25LosslessStringConvertibleP"
+- !private "s25LosslessStringConvertibleP"
 - !private "So18NSAttributedStringC"
 - "So8NSCodingP"
 - "So9NSCopyingP"
@@ -3784,7 +3748,7 @@ depends-nominal:
 - !private "7Combine9SchedulerP"
 - !private "8QuickBev11SecureStoreV"
 - !private "8QuickBev20SecureStoreQueryableP"
-- "ST"
+- !private "ST"
 - !private "s10SetAlgebraP"
 - "s13SignedNumericP"
 - !private "So14UIControlStateV"
@@ -3793,8 +3757,8 @@ depends-nominal:
 - !private "So22UIAlertControllerStyleV"
 - !private "So18UIAlertActionStyleV"
 - "So28UIActivityIndicatorViewStyleV"
-- "s16TextOutputStreamP"
-- "s20TextOutputStreamableP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
 - "8QuickBev5ThemeO"
 - "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - "So29UIAccessibilityIdentificationP"
@@ -3849,11 +3813,11 @@ depends-nominal:
 - !private "7SwiftUI4ViewP"
 - "s30_CustomPlaygroundQuickLookableP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
-- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - "s33_ExpressibleByBuiltinFloatLiteralP"
 - "s35_ExpressibleByBuiltinIntegerLiteralP"
 - "s34_ExpressibleByBuiltinStringLiteralP"
-- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - "s26_ExpressibleByImageLiteralP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
@@ -4035,4 +3999,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "49181b1c386530189c9313b7256661e2"
+interface-hash: "646e570c233de6a85e0352e6c8b28fa4"

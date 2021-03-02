@@ -11,14 +11,14 @@ import UIKit
 
 class CustomAnnotation: NSObject, MKAnnotation {
     let coordinate: CLLocationCoordinate2D
-    let title: String?
-    let image: UIImage?
+    let businessName: String?
+//    let image: UIImage?
     let businessId: UUID?
 
-    init(coordinate: CLLocationCoordinate2D, title: String, image: UIImage, businessId: UUID) {
+    init(coordinate: CLLocationCoordinate2D, businessName: String, businessId: UUID) {
         self.coordinate = coordinate
-        self.title = title
-        self.image = image
+        self.businessName = businessName
+//        self.image = image
         self.businessId = businessId
         super.init()
     }

@@ -80,12 +80,6 @@ class CheckoutViewController: UIViewController, UITableViewDelegate, UITableView
         CheckoutCart.shared.calculateCost()
     }
 
-    override func viewWillAppear(_: Bool) {
-        title = "Your Order"
-        let attributes = [NSAttributedString.Key.font: UIFont(name: "Charter-Roman", size: 25)!]
-        navigationController!.navigationBar.standardAppearance.titleTextAttributes = attributes
-    }
-
     @objc func clickAddMoreItems(_: RoundButton) {
         let homePageViewController = HomePageViewController()
         let drinkListTableViewController = DrinkListTableViewController()

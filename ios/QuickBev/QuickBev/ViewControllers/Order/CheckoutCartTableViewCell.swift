@@ -22,10 +22,10 @@ class CheckoutCartTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(drinkImageView)
         backgroundColor = .clear
-        name.font = UIFont(name: "Charter-Roman", size: 22)
+        name.font = UIFont(name: "Charter-Roman", size: calculateFontRatio(fontSize: 22.0))
         drinkImageView.contentMode = .scaleToFill
         drinkImageView.clipsToBounds = true
-        cost.font = UIFont(name: "Charter-Roman", size: 22)
+        cost.font = UIFont(name: "Charter-Roman", size: calculateFontRatio(fontSize: 22.0))
 
         let safeArea = contentView.safeAreaLayoutGuide
         stackView.axis = .horizontal

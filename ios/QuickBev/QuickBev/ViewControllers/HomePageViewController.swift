@@ -56,18 +56,18 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol {
         theNightIsYoungStackView.addArrangedSubview(ellipsisLabel)
         theNightIsYoungStackView.addArrangedSubview(theNightisYoungLabel)
 
-        goodEveningLabel.font = UIFont(name: "Charter-Roman", size: 30.0)
+        goodEveningLabel.font = UIFont(name: "Charter-Roman", size: calculateFontRatio(fontSize: 30.0))
         goodEveningLabel.textAlignment = .center
 
         theNightisYoungLabel.text = "The night is young"
-        theNightisYoungLabel.font = UIFont(name: "Charter-Roman", size: 30.0)
+        theNightisYoungLabel.font = UIFont(name: "Charter-Roman", size: calculateFontRatio(fontSize: 30.0))
         theNightisYoungLabel.textAlignment = .center
 
         ellipsisLabel.text = "· · ·"
-        ellipsisLabel.font = UIFont(name: "Charter-Roman", size: 30.0)
+        ellipsisLabel.font = UIFont(name: "Charter-Roman", size: calculateFontRatio(fontSize: 30.0))
         ellipsisLabel.textAlignment = .center
 
-        navigationBarLabel.font = UIFont(name: "Charter-Roman", size: 20)
+        navigationBarLabel.font = UIFont(name: "Charter-Roman", size: calculateFontRatio(fontSize: 20.0))
         navigationBarStackView.spacing = 10
         let chevronArrowImage = UIImage(systemName: "chevron.down")
         let locationArrowImage = UIImage(systemName: "location.fill")
@@ -137,11 +137,15 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol {
         if let fetchedBusinesses = CoreDataManager.sharedManager.fetchEntities(entityName: "Business") as? [Business], fetchedBusinesses.count > 0 {
             Business.getBusinesses(APIClient: APIClient()) {
                 businessesFromAPICall in
+                print(1)
+
                 guard businessesFromAPICall != nil else {
+                    print(2)
                     self.businesses = fetchedBusinesses
                     group.leave()
                     return
                 }
+                print(3)
                 CoreDataManager.sharedManager.deleteEntities(entityName: "Business")
                 CoreDataManager.sharedManager.saveContext()
                 self.businesses = businessesFromAPICall!
@@ -154,12 +158,22 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol {
                 guard businessesFromAPICall != nil else {
                     return
                 }
+                print(4)
+                for business in businessesFromAPICall! {
+                    print("business in businessFromAPICall", business)
+                }
                 self.businesses = businessesFromAPICall!
                 fetchedDrinksOrBusinessesBool = true
                 group.leave()
             }
         }
         group.enter()
+        for business in CheckoutCart.shared.businessArray {
+            print("business.name b4", business.name)
+        }
+        for business in businesses {
+            print("business.name in self.biz", business.name)
+        }
         if let fetchedDrinks = CoreDataManager.sharedManager.fetchEntities(entityName: "Drink") as? [Drink], fetchedDrinks.count > 0 {
             // even if there are drinks stored in core data, the drink list might have been updated, so we make the call to the backend with the If-None-Match header and if no drinks are returned then we set the page's drink list to be the still current drink list in core data. we don't set the fetch bool to be true because the relationships between the businesses and drinks in core data is still intact
             Drink.getDrinks(APIClient: APIClient()) { drinksFromAPICall in
@@ -188,6 +202,7 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol {
             // if the drinks or businesses were fetched from an API call we must establish their relationships in core data and set them in the checkout cart
             if fetchedDrinksOrBusinessesBool == true {
                 for business in self.businesses {
+                    print("business in group.notify", business)
                     var businessDrinks = [Drink]()
                     for drink in self.drinks {
                         if drink.businessId == business.id {
@@ -197,11 +212,16 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol {
                     }
                     business.drinks = NSSet(array: businessDrinks)
                 }
+                for business in self.businesses {
+                    print("business after setting drinks", business)
+                }
                 CheckoutCart.shared.business = NSSet(array: self.businesses)
                 CoreDataManager.sharedManager.saveContext()
             }
             // if the user has signed out of their account the shopping cart will be empty but the businesses and drinks will be saved in core data
             else if CheckoutCart.shared.businessArray.count == 0 {
+                print(6)
+                print(CheckoutCart.shared.businessArray)
                 CheckoutCart.shared.business = NSSet(array: self.businesses)
                 CoreDataManager.sharedManager.saveContext()
             }
@@ -246,9 +266,18 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol {
     }
 
     @objc func centerButtonTouchup(_: RoundButton) {
+        for business in CheckoutCart.shared.businessArray {
+            print("business name", business.name)
+        }
+        if let fetchedbiz = CoreDataManager.sharedManager.fetchEntities(entityName: "Business") as? [Business] {
+            for business in fetchedbiz {
+                print("biz name", business.name)
+            }
+        }
         if CheckoutCart.shared.userBusiness != nil {
-            let drinkListTableViewController = DrinkListTableViewController()
-            navigationController?.pushViewController(drinkListTableViewController, animated: true)
+            navigationController?.pushViewController(VerifyEmailViewController(), animated: true)
+//            let drinkListTableViewController = DrinkListTableViewController()
+//            navigationController?.pushViewController(drinkListTableViewController, animated: true)
         } else {
             launchBusinessViewController()
         }

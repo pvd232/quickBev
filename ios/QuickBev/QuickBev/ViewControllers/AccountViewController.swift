@@ -25,11 +25,7 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let attributes = [NSAttributedString.Key.font: UIFont(name: "Charter-Roman", size: 25)!]
-//        self.navigationItem.standardAppearance?.titleTextAttributes = attributes
-//        self.navigationItem.standardAppearance?.backgroundColor = UIColor.init(red: 134/255, green: 130/255, blue: 230/255, alpha: 1.0)
 
-//        self.navigationItem.setHidesBackButton(false, animated: true)
         view.backgroundColor = .white
         // add the table view to self.view
         view.addSubview(logoImageView)
@@ -42,13 +38,8 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
             logoImageView.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: CGFloat(0.565217)),
             logoImageView.heightAnchor.constraint(equalTo: logoImageView.widthAnchor),
             logoImageView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
-//            logoImageView.bottomAnchor.constraint(lessThanOrEqualTo :letsGetStartedStackView.topAnchor , constant: -10.0),
-            logoImageView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 0.02 * UIViewController.screenSize.height),
 
-//        logoImageView.heightAnchor.constraint(equalTo: safeArea.heightAnchor, multiplier: 0.148515)
-//        logoImageView.widthAnchor.constraint(equalTo: logoImageView.heightAnchor, multiplier: 1.0)
-//        logoImageView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 20)
-//        logoImageView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor)
+            logoImageView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 0.02 * UIViewController.screenSize.height),
 
             tableView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 0),
             tableView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: 0),

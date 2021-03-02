@@ -344,6 +344,7 @@ SWIFT_CLASS("_TtC8QuickBev25BusinessMapViewController")
 - (void)back;
 - (void)didReceiveMemoryWarning;
 - (void)locationManager:(CLLocationManager * _Nonnull)_ didUpdateLocations:(NSArray<CLLocation *> * _Nonnull)_;
+- (void)locationManager:(CLLocationManager * _Nonnull)_ didChangeAuthorizationStatus:(CLAuthorizationStatus)_;
 - (void)locationManager:(CLLocationManager * _Nonnull)_ didFailWithError:(NSError * _Nonnull)error;
 - (MKAnnotationView * _Nullable)mapView:(MKMapView * _Nonnull)_ viewForAnnotation:(id <MKAnnotation> _Nonnull)annotation SWIFT_WARN_UNUSED_RESULT;
 - (void)buttonActionWithSender:(RoundButton * _Null_unspecified)sender;
@@ -411,7 +412,6 @@ SWIFT_CLASS("_TtC8QuickBev22CheckoutViewController")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ OBJC_DESIGNATED_INITIALIZER SWIFT_UNAVAILABLE;
 - (void)viewDidLoad;
-- (void)viewWillAppear:(BOOL)_;
 - (void)clickAddMoreItems:(RoundButton * _Nonnull)_;
 - (void)proceedToReviewOrder;
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)_ SWIFT_WARN_UNUSED_RESULT;
@@ -425,7 +425,6 @@ SWIFT_CLASS("_TtC8QuickBev22CheckoutViewController")
 SWIFT_CLASS("_TtC8QuickBev16CustomAnnotation")
 @interface CustomAnnotation : NSObject <MKAnnotation>
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
-@property (nonatomic, readonly, copy) NSString * _Nullable title;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -482,7 +481,6 @@ SWIFT_CLASS("_TtC8QuickBev19DrinkViewController")
 @interface DrinkViewController : UIViewController
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ OBJC_DESIGNATED_INITIALIZER SWIFT_UNAVAILABLE;
 - (void)viewDidLoad;
-- (void)viewWillAppear:(BOOL)_;
 - (void)increaseDrinkQuantity;
 - (void)decreaseDrinkQuantity;
 - (void)buyButtonPressed:(RoundButton * _Nonnull)_;
@@ -629,6 +627,8 @@ SWIFT_CLASS("_TtC8QuickBev35RegistrationWithEmailViewController")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ OBJC_DESIGNATED_INITIALIZER SWIFT_UNAVAILABLE;
 - (void)viewDidLoad;
+- (void)textFieldDidEndEditing:(UITextField * _Nonnull)textField;
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
@@ -863,6 +863,7 @@ SWIFT_CLASS("_TtC8QuickBev25VerifyEmailViewController")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ OBJC_DESIGNATED_INITIALIZER SWIFT_UNAVAILABLE;
 - (void)viewDidLoad;
+- (void)firstButtonTouchUp;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 

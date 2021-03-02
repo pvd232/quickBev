@@ -21,10 +21,10 @@ class BusinessArrayTableViewCell: UITableViewCell {
 
         name.translatesAutoresizingMaskIntoConstraints = false
         name.font = UIFont(name: "Charter-Roman",
-                           size: 20.0)
+                           size: calculateFontRatio(fontSize: 20.0))
         address.translatesAutoresizingMaskIntoConstraints = false
         address.font = UIFont(name: "Charter-Roman",
-                              size: 14.0)
+                              size: calculateFontRatio(fontSize: 14.0))
         address.textColor = UIColor.lightGray
 
         let margins = contentView.safeAreaLayoutGuide

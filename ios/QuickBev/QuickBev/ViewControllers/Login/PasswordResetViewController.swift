@@ -8,7 +8,7 @@
 
 import UIKit
 class PasswordResetViewController: UIViewController {
-    @UsesAutoLayout var pageLabel = UILabel(theme: Theme.UILabel(props: [.text("Reset Password"), .font(UIFont(name: "Charter-Roman", size: 30.0)), .textColor]))
+    @UsesAutoLayout var pageLabel = UILabel(theme: Theme.UILabel(props: [.text("Reset Password"), .font(UIFont(name: "Charter-Roman", size: calculateFontRatio(fontSize: 30.0))), .textColor]))
     @UsesAutoLayout var passwordResetStackView = UIStackView(theme: Theme.UIStackView(props: [.vertical, .spacing(10)]))
     @UsesAutoLayout var passwordLabel = UILabel(theme: Theme.UILabel(props: [.text("Enter Password"), .font(nil), .textColor]))
     @UsesAutoLayout var confirmPasswordLabel = UILabel(theme: Theme.UILabel(props: [.text("Confirm Password"), .font(nil), .textColor]))

@@ -18,7 +18,6 @@ class SignInOrSignUpView: UIView {
     }()
 
     var shouldSetupConstraints = true
-//    var viewProps: SignInAndSignUpProps
     let logoImage = UIImage(named: "charterRomanPurpleLogo-30")
 
     @UsesAutoLayout var logoImageView = UIImageView()
@@ -30,8 +29,6 @@ class SignInOrSignUpView: UIView {
     @UsesAutoLayout var orLabel = UILabel(theme: Theme.UILabel(props: [.textColor]))
 
     override init(frame: CGRect) {
-        // have to initialize view controller properties before calling super.init
-//        viewProps = props
         super.init(frame: frame)
         addSubview(logoImageView)
         addSubview(centerLabel)
@@ -42,30 +39,10 @@ class SignInOrSignUpView: UIView {
         optionsStackView.axis = .vertical
         optionsStackView.spacing = 14.0
 
-//        firstButton.refreshTitle(newTitle: props.getButtonText())
-//        firstButton.titleLabel?.font = UIFont.themeButtonFont
-//        firstButton.refreshColor(color:  UIColor.themeColor)
-
-//        secondButton.refreshTitle(newTitle: props.getButtonText())
-//        if props.getRawValue() == "splash"{
-//            secondButton.refreshColor(color:  UIColor.themeColor)
-//            secondButton.setTitleColor(UIColor.white, for: .normal)
-
-//        }
-//        else {
-//            secondButton.refreshColor(color: UIColor.white)
-//            secondButton.setTitleColor(UIColor.black, for: .normal)
-//        }
-//        secondButton.titleLabel?.font = UIFont.themeButtonFont
-//        thirdButton.refreshTitle(newTitle: props.getButtonText())
-//        thirdButton.titleLabel?.font = UIFont.themeButtonFont
-//        thirdButton.refreshColor(color:  UIColor.themeColor)
-
         orLabel.text = "OR"
-        orLabel.font = UIFont(name: "Charter-Roman", size: 18.0)
+        orLabel.font = UIFont(name: "Charter-Roman", size: calculateFontRatio(fontSize: 18.0))
         orLabel.textAlignment = .center
 
-//        centerLabel.text = props.getCenterTitleText()
         centerLabel.textAlignment = .center
         centerLabel.textColor = UIColor.black
 
