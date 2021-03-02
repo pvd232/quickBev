@@ -147,6 +147,7 @@ class Customer_Repository(object):
             return False
 
     def register_new_customer(self, session, customer):
+        print('customer', customer.serialize())
         print('customer.id', customer.id)
         test_customer = session.query(Customer).filter(
             Customer.id == customer.id).first()
@@ -156,11 +157,13 @@ class Customer_Repository(object):
         print('test_stripe_id', test_stripe_id)
 
         if not test_customer and test_stripe_id:
+            print(1)
             new_customer = Customer(id=customer.id, password=customer.password,
                                     first_name=customer.first_name, last_name=customer.last_name, stripe_id=test_stripe_id.id, email_verified=customer.email_verified)
             session.add(new_customer)
             return customer
         elif not test_customer and not test_stripe_id:
+            print(2)
             new_customer = stripe.Customer.create()
             new_stripe = Stripe_Customer(id=new_customer.id)
             session.add(new_stripe)
@@ -169,6 +172,7 @@ class Customer_Repository(object):
             session.add(new_customer)
             return customer
         else:
+            print(3)
             return False
 
     def get_customers(self, session, merchant_id):
@@ -180,8 +184,17 @@ class Customer_Repository(object):
         customer_to_update = session.query(Customer).filter(
             Customer.id == customer_id).first()
         if customer_to_update:
-            print('customer_to_update', customer_to_update.serialize)
+            print()
+            print('customer_to_update before token update',
+                  customer_to_update.serialize)
+            print()
+
             customer_to_update.device_token = device_token
+
+            print('customer_to_update after token update',
+                  customer_to_update.serialize)
+            print()
+
             return True
         else:
             return False

@@ -124,11 +124,14 @@ class Customer_Service(object):
             requested_new_customer = Customer_Domain(customer_json=customer)
             registered_new_customer = Customer_Repository().register_new_customer(
                 session, requested_new_customer)
-            registered_new_customer_domain = Customer_Domain(
-                customer_object=registered_new_customer)
-            print('registered_new_customer_domain',
-                  registered_new_customer_domain.serialize())
-            return registered_new_customer_domain
+            if registered_new_customer:
+                registered_new_customer_domain = Customer_Domain(
+                    customer_object=registered_new_customer)
+                print('registered_new_customer_domain',
+                      registered_new_customer_domain.serialize())
+                return registered_new_customer_domain
+            else:
+                return False
 
     def get_customers(self, merchant_id):
         with session_scope() as session:

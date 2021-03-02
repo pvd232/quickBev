@@ -52,7 +52,7 @@ def send_apn(device_token, action):
         client.send(
             ids=[device_token],
             title="Email verified",
-            message="Email verification complete. Lets get the party started",
+            message="Email verification complete. Lets get this party started",
             category="email"
         )
     # response = client.send(
@@ -210,38 +210,44 @@ def send_confirmation_email(jwt_token, customer, url):
     s.quit()
 
 
-@app.route('/customer', methods=['POST', 'GET', 'OPTIONS'])
+@app.route('/customer', methods=['POST', 'GET', 'OPTIONS', 'PUT'])
 def customer():
     response = {}
     headers = {}
     print(json.loads(request.data))
     if request.method == 'POST':
         requested_new_customer = json.loads(
-            request.data)  # load JSON data from request
+            request.data)
         generated_new_customer = Customer_Service().register_new_customer(
             requested_new_customer)
-        print('generated_new_customer', generated_new_customer.serialize())
         device_token = request.headers.get("DeviceToken")
 
         # generate a secure JSON token using the user's unverified email address. then i embed this token in the url for the verify account link sent in the email. i then parse this string when the user navigates to the page, securely verifying their email by using the
         if generated_new_customer:
             Customer_Service().update_device_token(
-                device_token, generated_new_customer.id, )
+                device_token, generated_new_customer.id)
             jwt_token = jwt.encode(
                 {"sub": f'{generated_new_customer.id}'}, key=secret, algorithm="HS256")
             # send the hashed user ID as a crypted key embedded in the activation link for security
             headers["authorization-token"] = jwt_token
-            Customer_Service().update_device_token(generated_new_customer.id)
             send_confirmation_email(
                 jwt_token, generated_new_customer, request.url)
             return Response(response=json.dumps(generated_new_customer.serialize()), status=200, headers=headers)
         else:
             return Response(status=400)
-    if request.method == 'OPTIONS':
+    elif request.method == 'PUT':
+        customer = Customer_Domain(customer_json=json.loads(
+            request.data))
+        jwt_token = jwt.encode(
+            {"sub": f'{customer.id}'}, key=secret, algorithm="HS256")
+        send_confirmation_email(
+            jwt_token, customer, request.url)
+        return Response(status=200)
+    elif request.method == 'OPTIONS':
         header = {}
         header["Access-Control-Allow-Credentials"] = 'true'
         return Response(status=200, headers=header)
-    if request.method == "GET":
+    elif request.method == "GET":
         header = {}
         header["Access-Control-Expose-Headers"] = "authorization"
         # header["Access-Control-Allow-Origin"] = "http://localhost:3000"
@@ -262,7 +268,14 @@ def verify_email(jwt_token):
     if status:
         customer_id = status["sub"]
         if Customer_Service().update_email_verification(customer_id):
-            device_token = Customer_Service().get_device_token(customer_id).device_token
+            Customer_Service().get_device_token(customer_id)
+            print()
+
+            print('Customer_Service().get_device_token(customer_id)',
+                  Customer_Service().get_device_token(customer_id))
+            print()
+
+            device_token = Customer_Service().get_device_token(customer_id)
             send_apn(device_token, "email")
             response = {"msg": "successfully registered"}
             return Response(response=json.dumps(response), status=200)
