@@ -38,7 +38,7 @@ final class StripeAPIClient: NSObject, STPCustomerEphemeralKeyProvider {
     }()
 
     func createPaymentIntent(order: Order, completion: @escaping ((Result<String, Error>) -> Void)) {
-        let url = baseURL.appendingPathComponent("create-payment-intent")
+        let url = baseURL.appendingPathComponent("create-payment-intent/" + CheckoutCart.shared.sessionToken)
         var params: [String: Order] = [:]
         let encoder = JSONEncoder()
 
@@ -65,7 +65,7 @@ final class StripeAPIClient: NSObject, STPCustomerEphemeralKeyProvider {
     }
 
     func createCustomerKey(withAPIVersion apiVersion: String, completion: @escaping STPJSONResponseCompletionBlock) {
-        let url = baseURL.appendingPathComponent("create-ephemeral-keys")
+        let url = baseURL.appendingPathComponent("create-ephemeral-keys/" + CheckoutCart.shared.sessionToken)
         var customerStripeId: String? = ""
         if CheckoutCart.shared.stripeId != nil {
             customerStripeId = CheckoutCart.shared.stripeId!

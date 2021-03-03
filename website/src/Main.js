@@ -6,6 +6,7 @@ import Signup from "./pages/Signup.js";
 import Signin from "./pages/Signin.js";
 import Splash from "./pages/Splash.js";
 import PayoutSetupCallback from "./pages/PayoutSetupCallback.js";
+import ResetPassword from "./pages/PasswordReset.js";
 
 const Main = () => {
   return (
@@ -20,6 +21,12 @@ const Main = () => {
         component={PayoutSetupCallback}
       ></Route>
       <Route exact path="/" component={Splash}></Route>
+      <Switch>
+        <Route
+          path="/reset-password/:sessionToken"
+          children={<ResetPassword />}
+        />
+      </Switch>
     </Switch>
   );
 };

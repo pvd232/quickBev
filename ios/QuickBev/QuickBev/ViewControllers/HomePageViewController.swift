@@ -266,18 +266,9 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol {
     }
 
     @objc func centerButtonTouchup(_: RoundButton) {
-        for business in CheckoutCart.shared.businessArray {
-            print("business name", business.name)
-        }
-        if let fetchedbiz = CoreDataManager.sharedManager.fetchEntities(entityName: "Business") as? [Business] {
-            for business in fetchedbiz {
-                print("biz name", business.name)
-            }
-        }
         if CheckoutCart.shared.userBusiness != nil {
-            navigationController?.pushViewController(VerifyEmailViewController(), animated: true)
-//            let drinkListTableViewController = DrinkListTableViewController()
-//            navigationController?.pushViewController(drinkListTableViewController, animated: true)
+            let drinkListTableViewController = DrinkListTableViewController()
+            navigationController?.pushViewController(drinkListTableViewController, animated: true)
         } else {
             launchBusinessViewController()
         }

@@ -17,7 +17,6 @@ provides-dynamic-lookup:
 - "shared"
 - "window"
 depends-top-level:
-- !private "Array"
 - "AssignmentPrecedence"
 - "Bool"
 - "BooleanLiteralType"
@@ -196,7 +195,6 @@ depends-member:
 - ["SQ", "windowScene"]
 - !private ["s25ExpressibleByArrayLiteralP", ""]
 - !private ["s25ExpressibleByArrayLiteralP", "first"]
-- !private ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s25ExpressibleByFloatLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", ""]
@@ -244,7 +242,7 @@ depends-member:
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "content"]
 - !private ["So8NSCodingP", "current"]
-- ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "makeKeyAndVisible"]
 - !private ["So8NSCodingP", "notification"]
 - !private ["So8NSCodingP", "pushViewController"]
@@ -256,7 +254,7 @@ depends-member:
 - !private ["So9NSCopyingP", "request"]
 - !private ["So9NSCopyingP", "userInfo"]
 - !private ["So26NSExtensionRequestHandlingP", "current"]
-- ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "pushViewController"]
 - !private ["So20NSFetchRequestResultP", "shared"]
 - !private ["So15NSManagedObjectC", "shared"]
@@ -301,19 +299,15 @@ depends-member:
 - !private ["So8NSObjectC", "userInfo"]
 - ["So8NSObjectC", "window"]
 - ["So8NSObjectC", "windowScene"]
-- ["So8NSObjectP", "Bool"]
 - !private ["So8NSObjectP", "CheckoutCart"]
 - ["So8NSObjectP", "ConnectionOptions"]
 - !private ["So8NSObjectP", "CoreDataManager"]
 - !private ["So8NSObjectP", "NSLog"]
 - !private ["So8NSObjectP", "RegistrationWithEmailViewController"]
 - ["So8NSObjectP", "RootViewController"]
-- ["So8NSObjectP", "SceneDelegate"]
 - !private ["So8NSObjectP", "UIApplication"]
-- !private ["So8NSObjectP", "UINavigationController"]
 - ["So8NSObjectP", "UIScene"]
 - ["So8NSObjectP", "UISceneSession"]
-- ["So8NSObjectP", "UIViewController"]
 - ["So8NSObjectP", "UIWindow"]
 - !private ["So8NSObjectP", "UIWindowScene"]
 - ["So8NSObjectP", ""]
@@ -353,8 +347,6 @@ depends-member:
 - !private ["8QuickBev18RootViewControllerC", ""]
 - !private ["8QuickBev18RootViewControllerC", "current"]
 - !private ["8QuickBev18RootViewControllerC", "init"]
-- !private ["8QuickBev11RoundButtonC", ""]
-- !private ["8QuickBev18RoundedUITextFieldC", ""]
 - ["8QuickBev13SceneDelegateC", "Bool"]
 - !private ["8QuickBev13SceneDelegateC", "CheckoutCart"]
 - !private ["8QuickBev13SceneDelegateC", "CoreDataManager"]
@@ -389,7 +381,6 @@ depends-member:
 - !private ["ST", "Iterator"]
 - !private ["ST", ""]
 - !private ["ST", "first"]
-- !private ["ST", "makeIterator"]
 - !private ["Sh", "first"]
 - !private ["s10SetAlgebraP", "first"]
 - !private ["s13SignedNumericP", ""]
@@ -408,17 +399,15 @@ depends-member:
 - !private ["So12UIAppearanceP", "makeKeyAndVisible"]
 - !private ["So12UIAppearanceP", "rootViewController"]
 - !private ["So21UIAppearanceContainerP", "current"]
-- ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "makeKeyAndVisible"]
 - !private ["So21UIAppearanceContainerP", "pushViewController"]
 - !private ["So21UIAppearanceContainerP", "rootViewController"]
 - !private ["So13UIApplicationC", "connectedScenes"]
 - !private ["So13UIApplicationC", "shared"]
-- ["So8UIButtonC", ""]
 - !private ["So18UIContentContainerP", "current"]
-- ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "pushViewController"]
-- ["So9UIControlC", ""]
 - !private ["So17UICoordinateSpaceP", "init"]
 - !private ["So17UICoordinateSpaceP", "makeKeyAndVisible"]
 - !private ["So17UICoordinateSpaceP", "rootViewController"]
@@ -427,7 +416,7 @@ depends-member:
 - !private ["So13UIDynamicItemP", "rootViewController"]
 - !private ["So18UIFocusEnvironmentP", ""]
 - !private ["So18UIFocusEnvironmentP", "current"]
-- ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "makeKeyAndVisible"]
 - !private ["So18UIFocusEnvironmentP", "pushViewController"]
 - !private ["So18UIFocusEnvironmentP", "rootViewController"]
@@ -441,19 +430,15 @@ depends-member:
 - !private ["So24UILargeContentViewerItemP", "makeKeyAndVisible"]
 - !private ["So24UILargeContentViewerItemP", "rootViewController"]
 - !private ["So22UINavigationControllerC", "pushViewController"]
-- ["So30UIPasteConfigurationSupportingP", "Bool"]
 - !private ["So30UIPasteConfigurationSupportingP", "CheckoutCart"]
 - ["So30UIPasteConfigurationSupportingP", "ConnectionOptions"]
 - !private ["So30UIPasteConfigurationSupportingP", "CoreDataManager"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSLog"]
 - !private ["So30UIPasteConfigurationSupportingP", "RegistrationWithEmailViewController"]
 - ["So30UIPasteConfigurationSupportingP", "RootViewController"]
-- ["So30UIPasteConfigurationSupportingP", "SceneDelegate"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIApplication"]
-- !private ["So30UIPasteConfigurationSupportingP", "UINavigationController"]
 - ["So30UIPasteConfigurationSupportingP", "UIScene"]
 - ["So30UIPasteConfigurationSupportingP", "UISceneSession"]
-- ["So30UIPasteConfigurationSupportingP", "UIViewController"]
 - ["So30UIPasteConfigurationSupportingP", "UIWindow"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIWindowScene"]
 - ["So30UIPasteConfigurationSupportingP", ""]
@@ -512,19 +497,15 @@ depends-member:
 - ["So11UIResponderC", "stateRestorationActivityForScene"]
 - ["So11UIResponderC", "window"]
 - ["So11UIResponderC", "windowScene"]
-- ["So30UIResponderStandardEditActionsP", "Bool"]
 - !private ["So30UIResponderStandardEditActionsP", "CheckoutCart"]
 - ["So30UIResponderStandardEditActionsP", "ConnectionOptions"]
 - !private ["So30UIResponderStandardEditActionsP", "CoreDataManager"]
 - !private ["So30UIResponderStandardEditActionsP", "NSLog"]
 - !private ["So30UIResponderStandardEditActionsP", "RegistrationWithEmailViewController"]
 - ["So30UIResponderStandardEditActionsP", "RootViewController"]
-- ["So30UIResponderStandardEditActionsP", "SceneDelegate"]
 - !private ["So30UIResponderStandardEditActionsP", "UIApplication"]
-- !private ["So30UIResponderStandardEditActionsP", "UINavigationController"]
 - ["So30UIResponderStandardEditActionsP", "UIScene"]
 - ["So30UIResponderStandardEditActionsP", "UISceneSession"]
-- ["So30UIResponderStandardEditActionsP", "UIViewController"]
 - ["So30UIResponderStandardEditActionsP", "UIWindow"]
 - !private ["So30UIResponderStandardEditActionsP", "UIWindowScene"]
 - ["So30UIResponderStandardEditActionsP", ""]
@@ -575,28 +556,23 @@ depends-member:
 - ["So15UISceneDelegateP", "window"]
 - ["So15UISceneDelegateP", "windowScene"]
 - !private ["So16UIStateRestoringP", "current"]
-- ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "pushViewController"]
-- ["So11UITextFieldC", ""]
-- ["So19UITextFieldDelegateP", "init"]
+- !private ["So19UITextFieldDelegateP", "init"]
 - !private ["So18UITraitEnvironmentP", "current"]
-- ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "makeKeyAndVisible"]
 - !private ["So18UITraitEnvironmentP", "pushViewController"]
 - !private ["So18UITraitEnvironmentP", "rootViewController"]
-- ["So23UIUserActivityRestoringP", "Bool"]
 - !private ["So23UIUserActivityRestoringP", "CheckoutCart"]
 - ["So23UIUserActivityRestoringP", "ConnectionOptions"]
 - !private ["So23UIUserActivityRestoringP", "CoreDataManager"]
 - !private ["So23UIUserActivityRestoringP", "NSLog"]
 - !private ["So23UIUserActivityRestoringP", "RegistrationWithEmailViewController"]
 - ["So23UIUserActivityRestoringP", "RootViewController"]
-- ["So23UIUserActivityRestoringP", "SceneDelegate"]
 - !private ["So23UIUserActivityRestoringP", "UIApplication"]
-- !private ["So23UIUserActivityRestoringP", "UINavigationController"]
 - ["So23UIUserActivityRestoringP", "UIScene"]
 - ["So23UIUserActivityRestoringP", "UISceneSession"]
-- ["So23UIUserActivityRestoringP", "UIViewController"]
 - ["So23UIUserActivityRestoringP", "UIWindow"]
 - !private ["So23UIUserActivityRestoringP", "UIWindowScene"]
 - ["So23UIUserActivityRestoringP", ""]
@@ -761,7 +737,7 @@ depends-nominal:
 - !private "s25LosslessStringConvertibleP"
 - "So8NSCodingP"
 - !private "So9NSCopyingP"
-- "So26NSExtensionRequestHandlingP"
+- !private "So26NSExtensionRequestHandlingP"
 - !private "So20NSFetchRequestResultP"
 - !private "So15NSManagedObjectC"
 - !private "So16NSMutableCopyingP"
@@ -772,8 +748,6 @@ depends-nominal:
 - !private "7Combine16ObservableObjectP"
 - !private "8QuickBev35RegistrationWithEmailViewControllerC"
 - !private "8QuickBev18RootViewControllerC"
-- !private "8QuickBev11RoundButtonC"
-- !private "8QuickBev18RoundedUITextFieldC"
 - "8QuickBev13SceneDelegateC"
 - !private "ST"
 - !private "Sh"
@@ -785,14 +759,12 @@ depends-nominal:
 - !private "s20TextOutputStreamableP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
-- "So21UIAppearanceContainerP"
+- !private "So21UIAppearanceContainerP"
 - !private "So13UIApplicationC"
-- "So8UIButtonC"
-- "So18UIContentContainerP"
-- "So9UIControlC"
+- !private "So18UIContentContainerP"
 - !private "So17UICoordinateSpaceP"
 - !private "So13UIDynamicItemP"
-- "So18UIFocusEnvironmentP"
+- !private "So18UIFocusEnvironmentP"
 - !private "So11UIFocusItemP"
 - !private "So20UIFocusItemContainerP"
 - !private "So24UILargeContentViewerItemP"
@@ -802,10 +774,9 @@ depends-nominal:
 - "So30UIResponderStandardEditActionsP"
 - "So7UISceneC"
 - "So15UISceneDelegateP"
-- "So16UIStateRestoringP"
-- "So11UITextFieldC"
-- "So19UITextFieldDelegateP"
-- "So18UITraitEnvironmentP"
+- !private "So16UIStateRestoringP"
+- !private "So19UITextFieldDelegateP"
+- !private "So18UITraitEnvironmentP"
 - "So23UIUserActivityRestoringP"
 - "So6UIViewC"
 - "So16UIViewControllerC"

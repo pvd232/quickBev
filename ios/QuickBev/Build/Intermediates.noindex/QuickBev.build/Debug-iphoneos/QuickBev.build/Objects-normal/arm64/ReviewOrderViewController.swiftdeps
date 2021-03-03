@@ -54,7 +54,7 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "!="
 - !private "*"
-- !private "+"
+- "+"
 - !private "/"
 - !private "??"
 - "APIClient"
@@ -62,7 +62,7 @@ depends-top-level:
 - "Array"
 - "AssignmentPrecedence"
 - !private "BooleanLiteralType"
-- !private "CheckoutCart"
+- "CheckoutCart"
 - !private "CoreDataManager"
 - "Error"
 - !private "FloatLiteralType"
@@ -262,6 +262,7 @@ depends-member:
 - !private ["s7CVarArgP", "salesTaxLabel"]
 - !private ["s7CVarArgP", "salesTaxStackView"]
 - !private ["s7CVarArgP", "selectedPaymentOption"]
+- !private ["s7CVarArgP", "sessionToken"]
 - !private ["s7CVarArgP", "setContentHuggingPriority"]
 - !private ["s7CVarArgP", "setViewControllers"]
 - !private ["s7CVarArgP", "shared"]
@@ -294,6 +295,7 @@ depends-member:
 - !private ["8QuickBev12CheckoutCartC", "customerContext"]
 - !private ["8QuickBev12CheckoutCartC", "emptyCart"]
 - !private ["8QuickBev12CheckoutCartC", "salesTax"]
+- !private ["8QuickBev12CheckoutCartC", "sessionToken"]
 - !private ["8QuickBev12CheckoutCartC", "shared"]
 - !private ["8QuickBev12CheckoutCartC", "subtotal"]
 - !private ["8QuickBev12CheckoutCartC", "tipAmount"]
@@ -392,6 +394,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "salesTaxLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "salesTaxStackView"]
 - !private ["s28CustomDebugStringConvertibleP", "selectedPaymentOption"]
+- !private ["s28CustomDebugStringConvertibleP", "sessionToken"]
 - !private ["s28CustomDebugStringConvertibleP", "setContentHuggingPriority"]
 - !private ["s28CustomDebugStringConvertibleP", "setViewControllers"]
 - !private ["s28CustomDebugStringConvertibleP", "shared"]
@@ -513,6 +516,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "salesTaxLabel"]
 - !private ["s23CustomStringConvertibleP", "salesTaxStackView"]
 - !private ["s23CustomStringConvertibleP", "selectedPaymentOption"]
+- !private ["s23CustomStringConvertibleP", "sessionToken"]
 - !private ["s23CustomStringConvertibleP", "setContentHuggingPriority"]
 - !private ["s23CustomStringConvertibleP", "setViewControllers"]
 - !private ["s23CustomStringConvertibleP", "shared"]
@@ -652,6 +656,7 @@ depends-member:
 - !private ["SQ", "salesTaxLabel"]
 - !private ["SQ", "salesTaxStackView"]
 - !private ["SQ", "selectedPaymentOption"]
+- !private ["SQ", "sessionToken"]
 - !private ["SQ", "setContentHuggingPriority"]
 - !private ["SQ", "setViewControllers"]
 - !private ["SQ", "shared"]
@@ -818,6 +823,7 @@ depends-member:
 - !private ["SH", "salesTaxLabel"]
 - !private ["SH", "salesTaxStackView"]
 - !private ["SH", "selectedPaymentOption"]
+- !private ["SH", "sessionToken"]
 - !private ["SH", "setContentHuggingPriority"]
 - !private ["SH", "setViewControllers"]
 - !private ["SH", "shared"]
@@ -855,6 +861,7 @@ depends-member:
 - !private ["s12IdentifiableP", "emptyCart"]
 - !private ["s12IdentifiableP", "init"]
 - !private ["s12IdentifiableP", "salesTax"]
+- !private ["s12IdentifiableP", "sessionToken"]
 - !private ["s12IdentifiableP", "shared"]
 - !private ["s12IdentifiableP", "subtotal"]
 - !private ["s12IdentifiableP", "tipAmount"]
@@ -1080,6 +1087,7 @@ depends-member:
 - ["So20NSFetchRequestResultP", "emptyCart"]
 - !private ["So20NSFetchRequestResultP", "init"]
 - !private ["So20NSFetchRequestResultP", "salesTax"]
+- !private ["So20NSFetchRequestResultP", "sessionToken"]
 - !private ["So20NSFetchRequestResultP", "shared"]
 - !private ["So20NSFetchRequestResultP", "subtotal"]
 - !private ["So20NSFetchRequestResultP", "tipAmount"]
@@ -1102,6 +1110,7 @@ depends-member:
 - !private ["So15NSManagedObjectC", "emptyCart"]
 - !private ["So15NSManagedObjectC", "init"]
 - !private ["So15NSManagedObjectC", "salesTax"]
+- !private ["So15NSManagedObjectC", "sessionToken"]
 - !private ["So15NSManagedObjectC", "shared"]
 - !private ["So15NSManagedObjectC", "subtotal"]
 - !private ["So15NSManagedObjectC", "tipAmount"]
@@ -1228,6 +1237,7 @@ depends-member:
 - ["So8NSObjectC", "salesTaxLabel"]
 - ["So8NSObjectC", "salesTaxStackView"]
 - !private ["So8NSObjectC", "selectedPaymentOption"]
+- !private ["So8NSObjectC", "sessionToken"]
 - !private ["So8NSObjectC", "setContentHuggingPriority"]
 - !private ["So8NSObjectC", "setViewControllers"]
 - !private ["So8NSObjectC", "shared"]
@@ -1377,6 +1387,7 @@ depends-member:
 - ["So8NSObjectP", "salesTaxLabel"]
 - ["So8NSObjectP", "salesTaxStackView"]
 - !private ["So8NSObjectP", "selectedPaymentOption"]
+- !private ["So8NSObjectP", "sessionToken"]
 - !private ["So8NSObjectP", "setContentHuggingPriority"]
 - !private ["So8NSObjectP", "setViewControllers"]
 - !private ["So8NSObjectP", "shared"]
@@ -1417,6 +1428,7 @@ depends-member:
 - !private ["7Combine16ObservableObjectP", "emptyCart"]
 - !private ["7Combine16ObservableObjectP", "init"]
 - !private ["7Combine16ObservableObjectP", "salesTax"]
+- !private ["7Combine16ObservableObjectP", "sessionToken"]
 - !private ["7Combine16ObservableObjectP", "shared"]
 - !private ["7Combine16ObservableObjectP", "subtotal"]
 - !private ["7Combine16ObservableObjectP", "tipAmount"]
@@ -3246,6 +3258,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "salesTaxLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "salesTaxStackView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "selectedPaymentOption"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sessionToken"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setContentHuggingPriority"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setViewControllers"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
@@ -3359,6 +3372,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "salesTaxLabel"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "salesTaxStackView"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "selectedPaymentOption"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sessionToken"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setContentHuggingPriority"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setViewControllers"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]

@@ -226,10 +226,14 @@ depends-member:
 - !private ["s30KeyedDecodingContainerProtocolP", "decode"]
 - !private ["s22KeyedEncodingContainerV", "encode"]
 - !private ["s30KeyedEncodingContainerProtocolP", "encode"]
+- ["So8NSCodingP", ""]
+- ["So20NSFetchRequestResultP", "CodingKey"]
 - !private ["So20NSFetchRequestResultP", "CodingKeys"]
 - !private ["So20NSFetchRequestResultP", "CoreDataManager"]
+- ["So20NSFetchRequestResultP", "Decoder"]
+- ["So20NSFetchRequestResultP", "Encoder"]
 - ["So20NSFetchRequestResultP", "Int64"]
-- !private ["So20NSFetchRequestResultP", "String"]
+- ["So20NSFetchRequestResultP", "String"]
 - ["So20NSFetchRequestResultP", ""]
 - !private ["So20NSFetchRequestResultP", "_findStringSwitchCase"]
 - !private ["So20NSFetchRequestResultP", "category"]
@@ -265,10 +269,13 @@ depends-member:
 - !private ["So8NSObjectC", "findStringSwitchCase"]
 - !private ["So8NSObjectC", "id"]
 - ["So8NSObjectC", "init"]
+- ["So8NSObjectP", "CodingKey"]
 - !private ["So8NSObjectP", "CodingKeys"]
 - !private ["So8NSObjectP", "CoreDataManager"]
+- ["So8NSObjectP", "Decoder"]
+- ["So8NSObjectP", "Encoder"]
 - ["So8NSObjectP", "Int64"]
-- !private ["So8NSObjectP", "String"]
+- ["So8NSObjectP", "String"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "_findStringSwitchCase"]
 - !private ["So8NSObjectP", "category"]
@@ -349,6 +356,7 @@ depends-nominal:
 - !private "s30KeyedDecodingContainerProtocolP"
 - !private "s22KeyedEncodingContainerV"
 - !private "s30KeyedEncodingContainerProtocolP"
+- "So8NSCodingP"
 - "So20NSFetchRequestResultP"
 - "So15NSManagedObjectC"
 - "So8NSObjectC"

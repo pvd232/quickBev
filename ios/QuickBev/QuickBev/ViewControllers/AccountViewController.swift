@@ -6,14 +6,14 @@
 //  Copyright © 2020 Peter Vail Driscoll II. All rights reserved.
 //
 
+import Stripe
 import UIKit
-
 class AccountViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @UsesAutoLayout var tableView = UITableView()
     @UsesAutoLayout var logoImageView = UIImageView.LogoImageView
 
-    let accountOptions = ["Edit Profile", "Manage Payment Methods", "Customer Support", "Settings", "Legal", "Sign Out"]
-
+    let accountOptions = ["Contact us", "Manage payment methods", "Sign out"]
+    var paymentContext: STPPaymentContext?
     init() {
         super.init(nibName: nil, bundle: nil)
     }
@@ -27,13 +27,14 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
 
         view.backgroundColor = .white
-        // add the table view to self.view
         view.addSubview(logoImageView)
         view.addSubview(tableView)
         tableView.backgroundColor = .clear
 
+        paymentContext = STPPaymentContext(customerContext: CheckoutCart.customerContext)
+        paymentContext!.delegate = self
+        paymentContext!.hostViewController = self
         let safeArea = view.safeAreaLayoutGuide
-        //        let frame = self.view.safeAreaLayoutGuide.layoutFrame
         NSLayoutConstraint.activate([
             logoImageView.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: CGFloat(0.565217)),
             logoImageView.heightAnchor.constraint(equalTo: logoImageView.widthAnchor),
@@ -43,7 +44,7 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
 
             tableView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 0),
             tableView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: 0),
-            tableView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 140.0 / UIViewController.screenSize.height),
+            tableView.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 140.0 / UIViewController.screenSize.height),
             tableView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: 0),
         ])
 
@@ -51,7 +52,7 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
-        // register a defalut cell
+        // register a default cell
         tableView.register(AccountTableViewCell.self, forCellReuseIdentifier: "cell")
         // to get rid of default grey lines that border cells in UITableView
         tableView.separatorColor = UIColor.clear
@@ -103,6 +104,7 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
             SceneDelegate.shared.rootViewController.switchToSplashPageViewController()
         }
+        // make the logout button text red like it is in instagram
         logoutAction.setValue(UIColor.red, forKey: "titleTextColor")
         alertController.addAction(logoutAction)
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel) { _ in
@@ -113,9 +115,24 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedAccountOption = accountOptions[indexPath.row]
-        if selectedAccountOption == "Sign Out" {
+        if selectedAccountOption == "Sign out" {
             alert(title: "Log out of \(String(describing: CheckoutCart.shared.user!.email))?", message: "")
+        } else if selectedAccountOption == "Manage payment methods" {
+            paymentContext!.presentPaymentOptionsViewController()
+        } else if selectedAccountOption == "Contact us" {
+            navigationController?.pushViewController(ContactViewController(), animated: true)
         }
-        // etc
     }
+}
+
+extension AccountViewController: STPPaymentContextDelegate {
+    func paymentContext(_: STPPaymentContext, didFailToLoadWithError error: Error) {
+        print(error)
+    }
+
+    func paymentContextDidChange(_: STPPaymentContext) {}
+
+    func paymentContext(_: STPPaymentContext, didCreatePaymentResult _: STPPaymentResult, completion _: @escaping STPPaymentStatusBlock) {}
+
+    func paymentContext(_: STPPaymentContext, didFinishWith _: STPPaymentStatus, error _: Error?) {}
 }

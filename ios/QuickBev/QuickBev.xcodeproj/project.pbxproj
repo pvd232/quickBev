@@ -37,7 +37,6 @@
 		1D56E7822592FFB300BE9F13 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D56E7812592FFB300BE9F13 /* CheckoutViewController.swift */; };
 		1D56E785259304BE00BE9F13 /* CheckoutCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D56E784259304BE00BE9F13 /* CheckoutCart.swift */; };
 		1D56E78825930A8000BE9F13 /* CheckoutCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D56E78725930A8000BE9F13 /* CheckoutCartTableViewCell.swift */; };
-		1D5A5EBB244943AB009579BD /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5A5EBA244943AB009579BD /* OrderTableViewController.swift */; };
 		1D5A5EBD24494A81009579BD /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5A5EBC24494A81009579BD /* Order.swift */; };
 		1D6A7A6E2487978E00517300 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A7A6D2487978E00517300 /* HomePageViewController.swift */; };
 		1D7460362593F19A00BDEF84 /* CoreDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7460352593F19A00BDEF84 /* CoreDataManger.swift */; };
@@ -49,7 +48,6 @@
 		1D9019362431913400289FA5 /* DrinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9019352431913400289FA5 /* DrinkTableViewCell.swift */; };
 		1D90193A243191E200289FA5 /* DrinkListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D901939243191E200289FA5 /* DrinkListTableViewController.swift */; };
 		1D90193E24319DB000289FA5 /* DrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D90193D24319DB000289FA5 /* DrinkViewController.swift */; };
-		1D91CB96244B5CC100C9F136 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D91CB95244B5CC100C9F136 /* OrderTableViewCell.swift */; };
 		1D921035258C056B00C9676D /* BusinessArrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D921034258C056B00C9676D /* BusinessArrayViewController.swift */; };
 		1D921037258C06D100C9676D /* BusinessArrayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D921036258C06D100C9676D /* BusinessArrayTableViewCell.swift */; };
 		1D927C082489DAC8009C13A3 /* RegistrationWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D927C072489DAC8009C13A3 /* RegistrationWithEmailViewController.swift */; };
@@ -58,12 +56,13 @@
 		1DACFB402591774A00D0C7B2 /* StripeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DACFB3F2591774A00D0C7B2 /* StripeAPIClient.swift */; };
 		1DB05C3425CDC03500823511 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB05C3325CDC03500823511 /* Theme.swift */; };
 		1DB8C2A5259FD22D0092FE49 /* ReviewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB8C2A4259FD22D0092FE49 /* ReviewOrderViewController.swift */; };
+		1DBA68E825EF5ADF0064FF5E /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA68E725EF5ADF0064FF5E /* ContactViewController.swift */; };
 		1DBC17E825D5FF0400CE594E /* QuickBev.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DBC17E625D5FF0400CE594E /* QuickBev.xcdatamodeld */; };
 		1DBC17EE25D61A6400CE594E /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBC17ED25D61A6400CE594E /* WebSocket.swift */; };
 		1DD3BB9825DF35AE000AC737 /* RoundedUITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD3BB9725DF35AE000AC737 /* RoundedUITextView.swift */; };
 		1DD5D63D25A79B8400B3E7F7 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD5D63C25A79B8400B3E7F7 /* OrderConfirmationViewController.swift */; };
 		1DDBAD7525A8C07000DC95F4 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDBAD7425A8C07000DC95F4 /* RoundButton.swift */; };
-		1DE2909425CB9FC900F4235B /* SignInOrSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE2909325CB9FC900F4235B /* SignInOrSignUpView.swift */; };
+		1DE2909425CB9FC900F4235B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE2909325CB9FC900F4235B /* SplashView.swift */; };
 		1DE2909825CCA51800F4235B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE2909725CCA51800F4235B /* Extensions.swift */; };
 		1DE290B125CCAF4100F4235B /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE290B025CCAF4100F4235B /* APIClient.swift */; };
 		1DE4E51325CA138800F53D6A /* ToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE4E51225CA138800F53D6A /* ToolbarView.swift */; };
@@ -106,7 +105,6 @@
 		1D56E7812592FFB300BE9F13 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		1D56E784259304BE00BE9F13 /* CheckoutCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutCart.swift; sourceTree = "<group>"; };
 		1D56E78725930A8000BE9F13 /* CheckoutCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutCartTableViewCell.swift; sourceTree = "<group>"; };
-		1D5A5EBA244943AB009579BD /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
 		1D5A5EBC24494A81009579BD /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		1D6A7A6D2487978E00517300 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		1D7460352593F19A00BDEF84 /* CoreDataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataManger.swift; path = QuickBev/Singletons/CoreDataManger.swift; sourceTree = SOURCE_ROOT; };
@@ -118,7 +116,6 @@
 		1D9019352431913400289FA5 /* DrinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTableViewCell.swift; sourceTree = "<group>"; };
 		1D901939243191E200289FA5 /* DrinkListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkListTableViewController.swift; sourceTree = "<group>"; };
 		1D90193D24319DB000289FA5 /* DrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DrinkViewController.swift; path = "../New Group2/DrinkViewController.swift"; sourceTree = "<group>"; };
-		1D91CB95244B5CC100C9F136 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 		1D921034258C056B00C9676D /* BusinessArrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessArrayViewController.swift; sourceTree = "<group>"; };
 		1D921036258C06D100C9676D /* BusinessArrayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessArrayTableViewCell.swift; sourceTree = "<group>"; };
 		1D927C072489DAC8009C13A3 /* RegistrationWithEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegistrationWithEmailViewController.swift; path = "../New Group/RegistrationWithEmailViewController.swift"; sourceTree = "<group>"; };
@@ -127,12 +124,13 @@
 		1DACFB3F2591774A00D0C7B2 /* StripeAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeAPIClient.swift; sourceTree = "<group>"; };
 		1DB05C3325CDC03500823511 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		1DB8C2A4259FD22D0092FE49 /* ReviewOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewOrderViewController.swift; path = "../New Group2/ReviewOrderViewController.swift"; sourceTree = "<group>"; };
+		1DBA68E725EF5ADF0064FF5E /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		1DBC17E725D5FF0400CE594E /* QuickBev.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuickBev.xcdatamodel; sourceTree = "<group>"; };
 		1DBC17ED25D61A6400CE594E /* WebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 		1DD3BB9725DF35AE000AC737 /* RoundedUITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUITextView.swift; sourceTree = "<group>"; };
 		1DD5D63C25A79B8400B3E7F7 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OrderConfirmationViewController.swift; path = "../New Group2/OrderConfirmationViewController.swift"; sourceTree = "<group>"; };
 		1DDBAD7425A8C07000DC95F4 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoundButton.swift; path = "../New Group/RoundButton.swift"; sourceTree = "<group>"; };
-		1DE2909325CB9FC900F4235B /* SignInOrSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInOrSignUpView.swift; sourceTree = "<group>"; };
+		1DE2909325CB9FC900F4235B /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		1DE2909725CCA51800F4235B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = UIElements/Extensions.swift; sourceTree = "<group>"; };
 		1DE290B025CCAF4100F4235B /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		1DE4E51225CA138800F53D6A /* ToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarView.swift; sourceTree = "<group>"; };
@@ -225,7 +223,6 @@
 		1DB05C1325CDB45E00823511 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				1DE2909325CB9FC900F4235B /* SignInOrSignUpView.swift */,
 				1DE913ED2485FC2F0034094D /* LoginViewController.swift */,
 			);
 			path = Login;
@@ -237,8 +234,6 @@
 				1D901939243191E200289FA5 /* DrinkListTableViewController.swift */,
 				1D9019352431913400289FA5 /* DrinkTableViewCell.swift */,
 				1D90193D24319DB000289FA5 /* DrinkViewController.swift */,
-				1D5A5EBA244943AB009579BD /* OrderTableViewController.swift */,
-				1D91CB95244B5CC100C9F136 /* OrderTableViewCell.swift */,
 				1D56E7812592FFB300BE9F13 /* CheckoutViewController.swift */,
 				1D56E78725930A8000BE9F13 /* CheckoutCartTableViewCell.swift */,
 				1DB8C2A4259FD22D0092FE49 /* ReviewOrderViewController.swift */,
@@ -295,9 +290,11 @@
 		1DE4E51725CA157D00F53D6A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1DBA68E725EF5ADF0064FF5E /* ContactViewController.swift */,
 				1D40374625AC076300F1E61F /* TemplateNavigationController.swift */,
 				1D1290B625AA962900A843C4 /* RootViewController.swift */,
 				1D7865D82487A03200389C54 /* SplashPageViewController.swift */,
+				1DE2909325CB9FC900F4235B /* SplashView.swift */,
 				1D6A7A6D2487978E00517300 /* HomePageViewController.swift */,
 				1DE4E51225CA138800F53D6A /* ToolbarView.swift */,
 				1D52A37925C3FA0000BA5A43 /* BusinessMapViewCotroller.swift */,
@@ -489,20 +486,19 @@
 				1DE913EE2485FC2F0034094D /* LoginViewController.swift in Sources */,
 				1D9A649124DBDB8900952B29 /* AccountTableViewCell.swift in Sources */,
 				1D52A39625C40B4200BA5A43 /* Drink+CoreDataProperties.swift in Sources */,
-				1D5A5EBB244943AB009579BD /* OrderTableViewController.swift in Sources */,
 				1D2A321F25D877390083E585 /* SecureStore.swift in Sources */,
-				1DE2909425CB9FC900F4235B /* SignInOrSignUpView.swift in Sources */,
+				1DE2909425CB9FC900F4235B /* SplashView.swift in Sources */,
 				1DACFB402591774A00D0C7B2 /* StripeAPIClient.swift in Sources */,
 				1DACFB352590EFB000D0C7B2 /* EventCreationViewController2.swift in Sources */,
 				1D5A5EBD24494A81009579BD /* Order.swift in Sources */,
 				1DB05C3425CDC03500823511 /* Theme.swift in Sources */,
 				1D90193A243191E200289FA5 /* DrinkListTableViewController.swift in Sources */,
-				1D91CB96244B5CC100C9F136 /* OrderTableViewCell.swift in Sources */,
 				1DDBAD7525A8C07000DC95F4 /* RoundButton.swift in Sources */,
 				1DD5D63D25A79B8400B3E7F7 /* OrderConfirmationViewController.swift in Sources */,
 				1D2A322225D877560083E585 /* SecureStoreQueryable.swift in Sources */,
 				1DB8C2A5259FD22D0092FE49 /* ReviewOrderViewController.swift in Sources */,
 				1D6A7A6E2487978E00517300 /* HomePageViewController.swift in Sources */,
+				1DBA68E825EF5ADF0064FF5E /* ContactViewController.swift in Sources */,
 				1D28B18425E47445002D8577 /* ETag.swift in Sources */,
 				1D4DF48225EC4C99009E4A12 /* PasswordResetViewController.swift in Sources */,
 				1D2A323125D87A240083E585 /* VerifyEmailViewController.swift in Sources */,

@@ -10,6 +10,8 @@ provides-member:
 - ["8QuickBev12CheckoutCartC", "userBusinessDrinks"]
 - ["8QuickBev12CheckoutCartC", "canPay"]
 - ["8QuickBev12CheckoutCartC", "calculateCost"]
+- ["8QuickBev12CheckoutCartC", "sessionToken"]
+- ["8QuickBev12CheckoutCartC", "deviceToken"]
 - ["8QuickBev12CheckoutCartC", "emptyCart"]
 provides-dynamic-lookup:
 - "businessArray"
@@ -18,9 +20,11 @@ provides-dynamic-lookup:
 - "canPay"
 - "cart"
 - "customerContext"
+- "deviceToken"
 - "drinkETag"
 - "emptyCart"
 - "guestDrink"
+- "sessionToken"
 - "shared"
 - "userBusinessDrinks"
 depends-top-level:
@@ -43,11 +47,14 @@ depends-top-level:
 - "Drink"
 - "ETag"
 - !private "FloatLiteralType"
+- !private "GenericPasswordQueryable"
 - !private "IntegerLiteralType"
 - "NSManagedObject"
 - !private "NSSet"
 - "STPCustomerContext"
+- !private "SecureStore"
 - "Set"
+- "String"
 - !private "StringLiteralType"
 - "StripeAPIClient"
 - !private "business"
@@ -55,6 +62,7 @@ depends-top-level:
 - !private "cart"
 - !private "cost"
 - !private "drinks"
+- !private "print"
 - !private "salesTax"
 - !private "subtotal"
 - !private "tipAmount"
@@ -89,8 +97,10 @@ depends-member:
 - !private ["s7CVarArgP", "CoreDataManager"]
 - !private ["s7CVarArgP", "Drink"]
 - !private ["s7CVarArgP", "ETag"]
+- !private ["s7CVarArgP", "GenericPasswordQueryable"]
 - !private ["s7CVarArgP", "NSSet"]
 - ["s7CVarArgP", "STPCustomerContext"]
+- !private ["s7CVarArgP", "SecureStore"]
 - ["s7CVarArgP", "StripeAPIClient"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "business"]
@@ -103,6 +113,7 @@ depends-member:
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isEmpty"]
 - !private ["s7CVarArgP", "name"]
+- !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "reduce"]
 - !private ["s7CVarArgP", "rounded"]
 - !private ["s7CVarArgP", "salesTax"]
@@ -121,9 +132,12 @@ depends-member:
 - !private ["8QuickBev12CheckoutCartC", "Double"]
 - ["8QuickBev12CheckoutCartC", "Drink"]
 - ["8QuickBev12CheckoutCartC", "ETag"]
+- !private ["8QuickBev12CheckoutCartC", "GenericPasswordQueryable"]
 - !private ["8QuickBev12CheckoutCartC", "NSSet"]
 - ["8QuickBev12CheckoutCartC", "STPCustomerContext"]
+- !private ["8QuickBev12CheckoutCartC", "SecureStore"]
 - !private ["8QuickBev12CheckoutCartC", "Set"]
+- ["8QuickBev12CheckoutCartC", "String"]
 - ["8QuickBev12CheckoutCartC", "StripeAPIClient"]
 - ["8QuickBev12CheckoutCartC", ""]
 - !private ["8QuickBev12CheckoutCartC", "business"]
@@ -135,12 +149,15 @@ depends-member:
 - !private ["8QuickBev12CheckoutCartC", "cost"]
 - ["8QuickBev12CheckoutCartC", "customerContext"]
 - ["8QuickBev12CheckoutCartC", "deinit"]
+- ["8QuickBev12CheckoutCartC", "deviceToken"]
 - ["8QuickBev12CheckoutCartC", "drinkETag"]
 - !private ["8QuickBev12CheckoutCartC", "drinks"]
 - ["8QuickBev12CheckoutCartC", "emptyCart"]
 - ["8QuickBev12CheckoutCartC", "guestDrink"]
 - ["8QuickBev12CheckoutCartC", "init"]
+- !private ["8QuickBev12CheckoutCartC", "print"]
 - !private ["8QuickBev12CheckoutCartC", "salesTax"]
+- ["8QuickBev12CheckoutCartC", "sessionToken"]
 - ["8QuickBev12CheckoutCartC", "shared"]
 - !private ["8QuickBev12CheckoutCartC", "subtotal"]
 - !private ["8QuickBev12CheckoutCartC", "tipAmount"]
@@ -169,8 +186,10 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "CoreDataManager"]
 - !private ["s28CustomDebugStringConvertibleP", "Drink"]
 - !private ["s28CustomDebugStringConvertibleP", "ETag"]
+- !private ["s28CustomDebugStringConvertibleP", "GenericPasswordQueryable"]
 - !private ["s28CustomDebugStringConvertibleP", "NSSet"]
 - ["s28CustomDebugStringConvertibleP", "STPCustomerContext"]
+- !private ["s28CustomDebugStringConvertibleP", "SecureStore"]
 - ["s28CustomDebugStringConvertibleP", "StripeAPIClient"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "business"]
@@ -183,6 +202,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
 - !private ["s28CustomDebugStringConvertibleP", "name"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "reduce"]
 - !private ["s28CustomDebugStringConvertibleP", "rounded"]
 - !private ["s28CustomDebugStringConvertibleP", "salesTax"]
@@ -205,8 +225,10 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "CoreDataManager"]
 - !private ["s23CustomStringConvertibleP", "Drink"]
 - !private ["s23CustomStringConvertibleP", "ETag"]
+- !private ["s23CustomStringConvertibleP", "GenericPasswordQueryable"]
 - !private ["s23CustomStringConvertibleP", "NSSet"]
 - ["s23CustomStringConvertibleP", "STPCustomerContext"]
+- !private ["s23CustomStringConvertibleP", "SecureStore"]
 - ["s23CustomStringConvertibleP", "StripeAPIClient"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "business"]
@@ -219,6 +241,7 @@ depends-member:
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isEmpty"]
 - !private ["s23CustomStringConvertibleP", "name"]
+- !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "reduce"]
 - !private ["s23CustomStringConvertibleP", "rounded"]
 - !private ["s23CustomStringConvertibleP", "salesTax"]
@@ -271,8 +294,10 @@ depends-member:
 - !private ["SQ", "CoreDataManager"]
 - !private ["SQ", "Drink"]
 - !private ["SQ", "ETag"]
+- !private ["SQ", "GenericPasswordQueryable"]
 - !private ["SQ", "NSSet"]
 - ["SQ", "STPCustomerContext"]
+- !private ["SQ", "SecureStore"]
 - ["SQ", "StripeAPIClient"]
 - ["SQ", ""]
 - !private ["SQ", "business"]
@@ -285,6 +310,7 @@ depends-member:
 - ["SQ", "init"]
 - !private ["SQ", "isEmpty"]
 - !private ["SQ", "name"]
+- !private ["SQ", "print"]
 - !private ["SQ", "reduce"]
 - !private ["SQ", "rounded"]
 - !private ["SQ", "salesTax"]
@@ -313,12 +339,16 @@ depends-member:
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["SF", ""]
 - !private ["SF", "rounded"]
+- !private ["8QuickBev24GenericPasswordQueryableV", ""]
+- !private ["8QuickBev24GenericPasswordQueryableV", "init"]
 - !private ["SH", "CheckoutCart"]
 - !private ["SH", "CoreDataManager"]
 - !private ["SH", "Drink"]
 - !private ["SH", "ETag"]
+- !private ["SH", "GenericPasswordQueryable"]
 - !private ["SH", "NSSet"]
 - ["SH", "STPCustomerContext"]
+- !private ["SH", "SecureStore"]
 - ["SH", "StripeAPIClient"]
 - ["SH", ""]
 - !private ["SH", "business"]
@@ -331,6 +361,7 @@ depends-member:
 - ["SH", "init"]
 - !private ["SH", "isEmpty"]
 - !private ["SH", "name"]
+- !private ["SH", "print"]
 - !private ["SH", "reduce"]
 - !private ["SH", "rounded"]
 - !private ["SH", "salesTax"]
@@ -346,8 +377,10 @@ depends-member:
 - !private ["s12IdentifiableP", "CoreDataManager"]
 - !private ["s12IdentifiableP", "Drink"]
 - !private ["s12IdentifiableP", "ETag"]
+- !private ["s12IdentifiableP", "GenericPasswordQueryable"]
 - !private ["s12IdentifiableP", "NSSet"]
 - ["s12IdentifiableP", "STPCustomerContext"]
+- !private ["s12IdentifiableP", "SecureStore"]
 - ["s12IdentifiableP", "StripeAPIClient"]
 - !private ["s12IdentifiableP", "business"]
 - !private ["s12IdentifiableP", "canPay"]
@@ -357,6 +390,7 @@ depends-member:
 - !private ["s12IdentifiableP", "drinks"]
 - !private ["s12IdentifiableP", "init"]
 - !private ["s12IdentifiableP", "name"]
+- !private ["s12IdentifiableP", "print"]
 - !private ["s12IdentifiableP", "salesTax"]
 - !private ["s12IdentifiableP", "salesTaxRate"]
 - !private ["s12IdentifiableP", "subtotal"]
@@ -387,8 +421,10 @@ depends-member:
 - !private ["So20NSFetchRequestResultP", "CoreDataManager"]
 - !private ["So20NSFetchRequestResultP", "Drink"]
 - ["So20NSFetchRequestResultP", "ETag"]
+- !private ["So20NSFetchRequestResultP", "GenericPasswordQueryable"]
 - !private ["So20NSFetchRequestResultP", "NSSet"]
 - ["So20NSFetchRequestResultP", "STPCustomerContext"]
+- !private ["So20NSFetchRequestResultP", "SecureStore"]
 - !private ["So20NSFetchRequestResultP", "Set"]
 - ["So20NSFetchRequestResultP", "StripeAPIClient"]
 - ["So20NSFetchRequestResultP", ""]
@@ -401,14 +437,17 @@ depends-member:
 - !private ["So20NSFetchRequestResultP", "category"]
 - !private ["So20NSFetchRequestResultP", "cost"]
 - ["So20NSFetchRequestResultP", "customerContext"]
+- ["So20NSFetchRequestResultP", "deviceToken"]
 - ["So20NSFetchRequestResultP", "drinkETag"]
 - !private ["So20NSFetchRequestResultP", "drinks"]
 - ["So20NSFetchRequestResultP", "emptyCart"]
 - ["So20NSFetchRequestResultP", "guestDrink"]
 - ["So20NSFetchRequestResultP", "init"]
 - !private ["So20NSFetchRequestResultP", "name"]
+- !private ["So20NSFetchRequestResultP", "print"]
 - !private ["So20NSFetchRequestResultP", "salesTax"]
 - !private ["So20NSFetchRequestResultP", "salesTaxRate"]
+- ["So20NSFetchRequestResultP", "sessionToken"]
 - ["So20NSFetchRequestResultP", "shared"]
 - !private ["So20NSFetchRequestResultP", "subtotal"]
 - !private ["So20NSFetchRequestResultP", "tipAmount"]
@@ -422,9 +461,12 @@ depends-member:
 - !private ["So15NSManagedObjectC", "Double"]
 - ["So15NSManagedObjectC", "Drink"]
 - ["So15NSManagedObjectC", "ETag"]
+- !private ["So15NSManagedObjectC", "GenericPasswordQueryable"]
 - !private ["So15NSManagedObjectC", "NSSet"]
 - ["So15NSManagedObjectC", "STPCustomerContext"]
+- !private ["So15NSManagedObjectC", "SecureStore"]
 - !private ["So15NSManagedObjectC", "Set"]
+- ["So15NSManagedObjectC", "String"]
 - ["So15NSManagedObjectC", "StripeAPIClient"]
 - ["So15NSManagedObjectC", ""]
 - !private ["So15NSManagedObjectC", "business"]
@@ -436,14 +478,17 @@ depends-member:
 - !private ["So15NSManagedObjectC", "category"]
 - !private ["So15NSManagedObjectC", "cost"]
 - ["So15NSManagedObjectC", "customerContext"]
+- ["So15NSManagedObjectC", "deviceToken"]
 - ["So15NSManagedObjectC", "drinkETag"]
 - !private ["So15NSManagedObjectC", "drinks"]
 - ["So15NSManagedObjectC", "emptyCart"]
 - ["So15NSManagedObjectC", "guestDrink"]
 - ["So15NSManagedObjectC", "init"]
 - !private ["So15NSManagedObjectC", "name"]
+- !private ["So15NSManagedObjectC", "print"]
 - !private ["So15NSManagedObjectC", "salesTax"]
 - !private ["So15NSManagedObjectC", "salesTaxRate"]
+- ["So15NSManagedObjectC", "sessionToken"]
 - ["So15NSManagedObjectC", "shared"]
 - !private ["So15NSManagedObjectC", "subtotal"]
 - !private ["So15NSManagedObjectC", "tipAmount"]
@@ -458,9 +503,12 @@ depends-member:
 - !private ["So8NSObjectC", "Double"]
 - ["So8NSObjectC", "Drink"]
 - ["So8NSObjectC", "ETag"]
+- !private ["So8NSObjectC", "GenericPasswordQueryable"]
 - !private ["So8NSObjectC", "NSSet"]
 - ["So8NSObjectC", "STPCustomerContext"]
+- !private ["So8NSObjectC", "SecureStore"]
 - !private ["So8NSObjectC", "Set"]
+- ["So8NSObjectC", "String"]
 - ["So8NSObjectC", "StripeAPIClient"]
 - ["So8NSObjectC", ""]
 - !private ["So8NSObjectC", "business"]
@@ -472,14 +520,17 @@ depends-member:
 - !private ["So8NSObjectC", "category"]
 - !private ["So8NSObjectC", "cost"]
 - ["So8NSObjectC", "customerContext"]
+- ["So8NSObjectC", "deviceToken"]
 - ["So8NSObjectC", "drinkETag"]
 - !private ["So8NSObjectC", "drinks"]
 - ["So8NSObjectC", "emptyCart"]
 - ["So8NSObjectC", "guestDrink"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "name"]
+- !private ["So8NSObjectC", "print"]
 - !private ["So8NSObjectC", "salesTax"]
 - !private ["So8NSObjectC", "salesTaxRate"]
+- ["So8NSObjectC", "sessionToken"]
 - !private ["So8NSObjectC", "set"]
 - !private ["So8NSObjectC", "setWithArray"]
 - !private ["So8NSObjectC", "setWithObject"]
@@ -492,12 +543,15 @@ depends-member:
 - !private ["So8NSObjectC", "tipPercentage"]
 - !private ["So8NSObjectC", "userBusiness"]
 - ["So8NSObjectC", "userBusinessDrinks"]
+- ["So8NSObjectP", "Business"]
 - !private ["So8NSObjectP", "CheckoutCart"]
 - !private ["So8NSObjectP", "CoreDataManager"]
 - !private ["So8NSObjectP", "Drink"]
 - ["So8NSObjectP", "ETag"]
+- !private ["So8NSObjectP", "GenericPasswordQueryable"]
 - !private ["So8NSObjectP", "NSSet"]
 - ["So8NSObjectP", "STPCustomerContext"]
+- !private ["So8NSObjectP", "SecureStore"]
 - !private ["So8NSObjectP", "Set"]
 - ["So8NSObjectP", "StripeAPIClient"]
 - ["So8NSObjectP", ""]
@@ -510,14 +564,17 @@ depends-member:
 - !private ["So8NSObjectP", "category"]
 - !private ["So8NSObjectP", "cost"]
 - ["So8NSObjectP", "customerContext"]
+- ["So8NSObjectP", "deviceToken"]
 - ["So8NSObjectP", "drinkETag"]
 - !private ["So8NSObjectP", "drinks"]
 - ["So8NSObjectP", "emptyCart"]
 - ["So8NSObjectP", "guestDrink"]
 - ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "name"]
+- !private ["So8NSObjectP", "print"]
 - !private ["So8NSObjectP", "salesTax"]
 - !private ["So8NSObjectP", "salesTaxRate"]
+- ["So8NSObjectP", "sessionToken"]
 - !private ["So8NSObjectP", "set"]
 - !private ["So8NSObjectP", "setWithArray"]
 - !private ["So8NSObjectP", "setWithObject"]
@@ -538,8 +595,10 @@ depends-member:
 - !private ["7Combine16ObservableObjectP", "CoreDataManager"]
 - !private ["7Combine16ObservableObjectP", "Drink"]
 - !private ["7Combine16ObservableObjectP", "ETag"]
+- !private ["7Combine16ObservableObjectP", "GenericPasswordQueryable"]
 - !private ["7Combine16ObservableObjectP", "NSSet"]
 - ["7Combine16ObservableObjectP", "STPCustomerContext"]
+- !private ["7Combine16ObservableObjectP", "SecureStore"]
 - ["7Combine16ObservableObjectP", "StripeAPIClient"]
 - ["7Combine16ObservableObjectP", ""]
 - !private ["7Combine16ObservableObjectP", "business"]
@@ -550,6 +609,7 @@ depends-member:
 - !private ["7Combine16ObservableObjectP", "drinks"]
 - !private ["7Combine16ObservableObjectP", "init"]
 - !private ["7Combine16ObservableObjectP", "name"]
+- !private ["7Combine16ObservableObjectP", "print"]
 - !private ["7Combine16ObservableObjectP", "salesTax"]
 - !private ["7Combine16ObservableObjectP", "salesTaxRate"]
 - !private ["7Combine16ObservableObjectP", "subtotal"]
@@ -572,6 +632,9 @@ depends-member:
 - ["6Stripe20STPBackendAPIAdapterP", "init"]
 - ["6Stripe18STPCustomerContextC", "init"]
 - ["6Stripe31STPCustomerEphemeralKeyProviderP", "sharedAPIClient"]
+- !private ["8QuickBev11SecureStoreV", "getValue"]
+- !private ["8QuickBev11SecureStoreV", "init"]
+- !private ["8QuickBev20SecureStoreQueryableP", "init"]
 - !private ["ST", "Element"]
 - !private ["ST", "Iterator"]
 - !private ["ST", ""]
@@ -587,7 +650,6 @@ depends-member:
 - !private ["s13SignedNumericP", "rounded"]
 - !private ["Sx", ""]
 - !private ["Sx", "rounded"]
-- ["8QuickBev15StripeAPIClientC", ""]
 - ["8QuickBev15StripeAPIClientC", "sharedAPIClient"]
 - !private ["s16TextOutputStreamP", ""]
 - !private ["s20TextOutputStreamableP", ""]
@@ -631,8 +693,10 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CoreDataManager"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Drink"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "ETag"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "GenericPasswordQueryable"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSSet"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "STPCustomerContext"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "SecureStore"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "StripeAPIClient"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "business"]
@@ -643,6 +707,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "drinks"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "salesTax"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "salesTaxRate"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "sharedAPIClient"]
@@ -654,8 +719,10 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CoreDataManager"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Drink"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ETag"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "GenericPasswordQueryable"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSSet"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPCustomerContext"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "SecureStore"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "StripeAPIClient"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "business"]
@@ -666,6 +733,7 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "drinks"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "name"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "print"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "salesTax"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "salesTaxRate"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sharedAPIClient"]
@@ -712,6 +780,7 @@ depends-nominal:
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "SF"
+- !private "8QuickBev24GenericPasswordQueryableV"
 - "SH"
 - "s12IdentifiableP"
 - !private "s25LosslessStringConvertibleP"
@@ -735,6 +804,8 @@ depends-nominal:
 - "6Stripe20STPBackendAPIAdapterP"
 - "6Stripe18STPCustomerContextC"
 - "6Stripe31STPCustomerEphemeralKeyProviderP"
+- !private "8QuickBev11SecureStoreV"
+- !private "8QuickBev20SecureStoreQueryableP"
 - !private "ST"
 - !private "Sh"
 - !private "s10SetAlgebraP"
@@ -934,4 +1005,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "0c20b463aff110e03eef9f4835eb2435"
+interface-hash: "ccecd37c26e4761afbe019ad8f9c9a76"

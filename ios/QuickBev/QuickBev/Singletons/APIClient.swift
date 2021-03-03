@@ -108,7 +108,6 @@ struct APIClient {
     typealias APIClientCompletion = (APIResult<Data?>) -> Void
 
     private let session = URLSession.shared
-//    private let baseURL = URL(string: "http://192.168.86.42:5000")!
     private let baseURL = URL(string: "http://192.168.0.58:5000")!
 
     func perform(_ request: APIRequest, _ completion: @escaping APIClientCompletion) {
@@ -138,12 +137,7 @@ struct APIClient {
             guard let httpResponse = response as? HTTPURLResponse else {
                 completion(.failure(.requestFailed)); return
             }
-//            if let ETag = httpResponse.value("If-None-Match") {
-//
-//            }
-
             print("allHeaderFields", httpResponse.allHeaderFields)
-            // TODO: check the etag on the response and set it in core data
             guard let _ = data,
                   error == nil
             else {

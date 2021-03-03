@@ -7,8 +7,8 @@ provides-member:
 - ["8QuickBev16CustomAnnotationC", ""]
 provides-dynamic-lookup:
 - "businessId"
+- "businessName"
 - "coordinate"
-- "title"
 depends-top-level:
 - "AssignmentPrecedence"
 - "CLLocationCoordinate2D"
@@ -20,6 +20,7 @@ depends-top-level:
 depends-member:
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "businessId"]
+- !private ["s7CVarArgP", "businessName"]
 - ["s7CVarArgP", "coordinate"]
 - !private ["s7CVarArgP", "init"]
 - ["s7CVarArgP", "subtitle"]
@@ -29,6 +30,7 @@ depends-member:
 - ["8QuickBev16CustomAnnotationC", "UUID"]
 - ["8QuickBev16CustomAnnotationC", ""]
 - ["8QuickBev16CustomAnnotationC", "businessId"]
+- ["8QuickBev16CustomAnnotationC", "businessName"]
 - ["8QuickBev16CustomAnnotationC", "coordinate"]
 - ["8QuickBev16CustomAnnotationC", "deinit"]
 - ["8QuickBev16CustomAnnotationC", "init"]
@@ -36,65 +38,70 @@ depends-member:
 - ["8QuickBev16CustomAnnotationC", "title"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "businessId"]
+- !private ["s28CustomDebugStringConvertibleP", "businessName"]
 - ["s28CustomDebugStringConvertibleP", "coordinate"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - ["s28CustomDebugStringConvertibleP", "subtitle"]
 - ["s28CustomDebugStringConvertibleP", "title"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "businessId"]
+- !private ["s23CustomStringConvertibleP", "businessName"]
 - ["s23CustomStringConvertibleP", "coordinate"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - ["s23CustomStringConvertibleP", "subtitle"]
 - ["s23CustomStringConvertibleP", "title"]
 - ["SQ", ""]
 - !private ["SQ", "businessId"]
+- !private ["SQ", "businessName"]
 - ["SQ", "coordinate"]
 - !private ["SQ", "init"]
 - ["SQ", "subtitle"]
 - ["SQ", "title"]
 - ["SH", ""]
 - !private ["SH", "businessId"]
+- !private ["SH", "businessName"]
 - ["SH", "coordinate"]
 - !private ["SH", "init"]
 - ["SH", "subtitle"]
 - ["SH", "title"]
 - ["So12MKAnnotationP", ""]
 - ["So12MKAnnotationP", "businessId"]
+- ["So12MKAnnotationP", "businessName"]
 - ["So12MKAnnotationP", "coordinate"]
 - ["So12MKAnnotationP", "deinit"]
 - ["So12MKAnnotationP", "init"]
 - ["So12MKAnnotationP", "subtitle"]
 - ["So12MKAnnotationP", "title"]
-- ["So8NSCodingP", ""]
 - ["So8NSObjectC", "CLLocationCoordinate2D"]
 - ["So8NSObjectC", "String"]
 - ["So8NSObjectC", "UUID"]
 - ["So8NSObjectC", ""]
 - ["So8NSObjectC", "businessId"]
+- ["So8NSObjectC", "businessName"]
 - ["So8NSObjectC", "coordinate"]
 - ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "subtitle"]
 - ["So8NSObjectC", "title"]
 - ["So8NSObjectP", "CLLocationCoordinate2D"]
-- ["So8NSObjectP", "String"]
 - ["So8NSObjectP", "UUID"]
 - ["So8NSObjectP", ""]
 - ["So8NSObjectP", "businessId"]
+- ["So8NSObjectP", "businessName"]
 - ["So8NSObjectP", "coordinate"]
 - ["So8NSObjectP", "deinit"]
 - ["So8NSObjectP", "init"]
 - ["So8NSObjectP", "subtitle"]
 - ["So8NSObjectP", "title"]
-- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
-- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "businessId"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "businessName"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "coordinate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "subtitle"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "title"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "businessId"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "businessName"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "coordinate"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "subtitle"]
@@ -107,11 +114,8 @@ depends-nominal:
 - "SQ"
 - "SH"
 - "So12MKAnnotationP"
-- "So8NSCodingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
-- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
-- !private "s34_ExpressibleByBuiltinStringLiteralP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"
 depends-dynamic-lookup:
@@ -287,4 +291,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "d4491fe9102ed3f9c7ab37e349b72e23"
+interface-hash: "d7fd4990b9bd2d211a7b5a2311881423"

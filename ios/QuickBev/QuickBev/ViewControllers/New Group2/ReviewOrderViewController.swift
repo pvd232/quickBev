@@ -212,7 +212,7 @@ extension ReviewOrderViewController: STPPaymentContextDelegate {
                     switch status {
                     case .succeeded:
                         // Your backend asynchronously fulfills the customer's order, e.g. via webhook
-                        let request = try! APIRequest(method: .post, path: "/order", body: orderToBeSubmitted)
+                        let request = try! APIRequest(method: .post, path: "/order/" + CheckoutCart.shared.sessionToken, body: orderToBeSubmitted)
                         APIClient().perform(request) { result in
                             switch result {
                             case .success:

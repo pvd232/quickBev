@@ -720,7 +720,7 @@ const Signin = () => {
     event.preventDefault();
     const form = event.target;
     if (validate(form)) {
-      API.makeRequest("POST", "/validate-merchant", authorization, false).then(
+      API.makeRequest("POST", "/validate-merchant", authorization).then(
         (response) => {
           if (response) {
             // if the username is available the response from the API will be true
@@ -757,7 +757,7 @@ const Signin = () => {
                 <div className="invalid-feedback" style={errorMsgStyle}>
                   {errorMsg ? errorMsg.errorMsg : ""}
                 </div>
-                <Form.Label>First name</Form.Label>
+                <Form.Label>Email</Form.Label>
                 <Form.Control
                   type="text"
                   name="email"
@@ -771,7 +771,7 @@ const Signin = () => {
             </Row>
             <Row>
               <Col xs={10}>
-                <Form.Label>Last name</Form.Label>
+                <Form.Label>Password</Form.Label>
                 <Form.Control
                   type="text"
                   name="password"

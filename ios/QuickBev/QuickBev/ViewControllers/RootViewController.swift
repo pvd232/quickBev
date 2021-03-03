@@ -15,13 +15,8 @@ class RootViewController: UIViewController {
     }
 
     init() {
-        if CheckoutCart.shared.userId != "" {
-            if CheckoutCart.shared.user?.emailVerified != true {
-                current = TemplateNavigationController(rootViewController: VerifyEmailViewController())
-            }
-            else {
-                current = TemplateNavigationController(rootViewController: HomePageViewController())
-            }
+        if CheckoutCart.shared.userId != "", CheckoutCart.shared.user?.emailVerified == true {
+            current = TemplateNavigationController(rootViewController: HomePageViewController())
         } else {
             current = TemplateNavigationController(rootViewController: SplashPageViewController())
         }
@@ -34,6 +29,11 @@ class RootViewController: UIViewController {
         current.view.frame = view.bounds
         view.addSubview(current.view)
         current.didMove(toParent: self)
+        if CheckoutCart.shared.user?.emailVerified == false {
+            if let current = current as? UINavigationController {
+                current.pushViewController(VerifyEmailViewController(), animated: false)
+            }
+        }
     }
 
     func switchToHomePageViewController() {

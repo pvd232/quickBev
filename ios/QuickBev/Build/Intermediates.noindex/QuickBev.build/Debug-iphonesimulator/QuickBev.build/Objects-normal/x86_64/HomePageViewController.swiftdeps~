@@ -67,6 +67,7 @@ depends-top-level:
 - !private "NSLayoutConstraint"
 - "NSSet"
 - "NewBusinessPickedProtocol"
+- !private "PasswordResetViewController"
 - "RoundButton"
 - !private "StringLiteralType"
 - "Theme"
@@ -84,7 +85,6 @@ depends-top-level:
 - !private "UITapGestureRecognizer"
 - "UIViewController"
 - "UsesAutoLayout"
-- !private "VerifyEmailViewController"
 - !private "bottomButtonsViewContainer"
 - !private "businesses"
 - !private "calculateFontRatio"
@@ -194,6 +194,7 @@ depends-member:
 - ["s7CVarArgP", "LogoImageView"]
 - !private ["s7CVarArgP", "NSLayoutConstraint"]
 - !private ["s7CVarArgP", "NSSet"]
+- !private ["s7CVarArgP", "PasswordResetViewController"]
 - ["s7CVarArgP", "RoundButton"]
 - ["s7CVarArgP", "Theme"]
 - ["s7CVarArgP", "ToolbarView"]
@@ -208,7 +209,6 @@ depends-member:
 - !private ["s7CVarArgP", "UITapGestureRecognizer"]
 - !private ["s7CVarArgP", "UIViewController"]
 - ["s7CVarArgP", "UsesAutoLayout"]
-- !private ["s7CVarArgP", "VerifyEmailViewController"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "activate"]
 - ["s7CVarArgP", "adaptivePresentationStyle"]
@@ -351,6 +351,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "LogoImageView"]
 - !private ["s28CustomDebugStringConvertibleP", "NSLayoutConstraint"]
 - !private ["s28CustomDebugStringConvertibleP", "NSSet"]
+- !private ["s28CustomDebugStringConvertibleP", "PasswordResetViewController"]
 - ["s28CustomDebugStringConvertibleP", "RoundButton"]
 - ["s28CustomDebugStringConvertibleP", "Theme"]
 - ["s28CustomDebugStringConvertibleP", "ToolbarView"]
@@ -365,7 +366,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "UITapGestureRecognizer"]
 - !private ["s28CustomDebugStringConvertibleP", "UIViewController"]
 - ["s28CustomDebugStringConvertibleP", "UsesAutoLayout"]
-- !private ["s28CustomDebugStringConvertibleP", "VerifyEmailViewController"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "activate"]
 - ["s28CustomDebugStringConvertibleP", "adaptivePresentationStyle"]
@@ -501,6 +501,7 @@ depends-member:
 - ["s23CustomStringConvertibleP", "LogoImageView"]
 - !private ["s23CustomStringConvertibleP", "NSLayoutConstraint"]
 - !private ["s23CustomStringConvertibleP", "NSSet"]
+- !private ["s23CustomStringConvertibleP", "PasswordResetViewController"]
 - ["s23CustomStringConvertibleP", "RoundButton"]
 - ["s23CustomStringConvertibleP", "Theme"]
 - ["s23CustomStringConvertibleP", "ToolbarView"]
@@ -515,7 +516,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "UITapGestureRecognizer"]
 - !private ["s23CustomStringConvertibleP", "UIViewController"]
 - ["s23CustomStringConvertibleP", "UsesAutoLayout"]
-- !private ["s23CustomStringConvertibleP", "VerifyEmailViewController"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "activate"]
 - ["s23CustomStringConvertibleP", "adaptivePresentationStyle"]
@@ -701,6 +701,7 @@ depends-member:
 - ["SQ", "LogoImageView"]
 - !private ["SQ", "NSLayoutConstraint"]
 - !private ["SQ", "NSSet"]
+- !private ["SQ", "PasswordResetViewController"]
 - ["SQ", "RoundButton"]
 - ["SQ", "Theme"]
 - ["SQ", "ToolbarView"]
@@ -715,7 +716,6 @@ depends-member:
 - !private ["SQ", "UITapGestureRecognizer"]
 - !private ["SQ", "UIViewController"]
 - ["SQ", "UsesAutoLayout"]
-- !private ["SQ", "VerifyEmailViewController"]
 - ["SQ", ""]
 - !private ["SQ", "activate"]
 - ["SQ", "adaptivePresentationStyle"]
@@ -880,6 +880,7 @@ depends-member:
 - ["SH", "LogoImageView"]
 - !private ["SH", "NSLayoutConstraint"]
 - !private ["SH", "NSSet"]
+- !private ["SH", "PasswordResetViewController"]
 - ["SH", "RoundButton"]
 - ["SH", "Theme"]
 - ["SH", "ToolbarView"]
@@ -894,7 +895,6 @@ depends-member:
 - !private ["SH", "UITapGestureRecognizer"]
 - !private ["SH", "UIViewController"]
 - ["SH", "UsesAutoLayout"]
-- !private ["SH", "VerifyEmailViewController"]
 - ["SH", ""]
 - !private ["SH", "activate"]
 - ["SH", "adaptivePresentationStyle"]
@@ -1021,6 +1021,7 @@ depends-member:
 - ["8QuickBev22HomePageViewControllerC", "NSCoder"]
 - !private ["8QuickBev22HomePageViewControllerC", "NSLayoutConstraint"]
 - !private ["8QuickBev22HomePageViewControllerC", "NSSet"]
+- !private ["8QuickBev22HomePageViewControllerC", "PasswordResetViewController"]
 - ["8QuickBev22HomePageViewControllerC", "RoundButton"]
 - ["8QuickBev22HomePageViewControllerC", "Theme"]
 - ["8QuickBev22HomePageViewControllerC", "ToolbarView"]
@@ -1036,7 +1037,6 @@ depends-member:
 - !private ["8QuickBev22HomePageViewControllerC", "UITapGestureRecognizer"]
 - ["8QuickBev22HomePageViewControllerC", "UIViewController"]
 - ["8QuickBev22HomePageViewControllerC", "UsesAutoLayout"]
-- !private ["8QuickBev22HomePageViewControllerC", "VerifyEmailViewController"]
 - ["8QuickBev22HomePageViewControllerC", ""]
 - !private ["8QuickBev22HomePageViewControllerC", "_bottomButtonsViewContainer"]
 - !private ["8QuickBev22HomePageViewControllerC", "_centerButton"]
@@ -1134,6 +1134,7 @@ depends-member:
 - ["So8NSCodingP", "NSCoder"]
 - !private ["So8NSCodingP", "NSLayoutConstraint"]
 - !private ["So8NSCodingP", "NSSet"]
+- !private ["So8NSCodingP", "PasswordResetViewController"]
 - ["So8NSCodingP", "RoundButton"]
 - ["So8NSCodingP", "Theme"]
 - ["So8NSCodingP", "ToolbarView"]
@@ -1149,7 +1150,6 @@ depends-member:
 - !private ["So8NSCodingP", "UITapGestureRecognizer"]
 - ["So8NSCodingP", "UIViewController"]
 - ["So8NSCodingP", "UsesAutoLayout"]
-- !private ["So8NSCodingP", "VerifyEmailViewController"]
 - ["So8NSCodingP", ""]
 - ["So8NSCodingP", "_bottomButtonsViewContainer"]
 - ["So8NSCodingP", "_centerButton"]
@@ -1301,6 +1301,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "NSCoder"]
 - !private ["So26NSExtensionRequestHandlingP", "NSLayoutConstraint"]
 - !private ["So26NSExtensionRequestHandlingP", "NSSet"]
+- !private ["So26NSExtensionRequestHandlingP", "PasswordResetViewController"]
 - ["So26NSExtensionRequestHandlingP", "RoundButton"]
 - ["So26NSExtensionRequestHandlingP", "Theme"]
 - ["So26NSExtensionRequestHandlingP", "ToolbarView"]
@@ -1316,7 +1317,6 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "UITapGestureRecognizer"]
 - ["So26NSExtensionRequestHandlingP", "UIViewController"]
 - ["So26NSExtensionRequestHandlingP", "UsesAutoLayout"]
-- !private ["So26NSExtensionRequestHandlingP", "VerifyEmailViewController"]
 - ["So26NSExtensionRequestHandlingP", ""]
 - ["So26NSExtensionRequestHandlingP", "_bottomButtonsViewContainer"]
 - ["So26NSExtensionRequestHandlingP", "_centerButton"]
@@ -1454,6 +1454,7 @@ depends-member:
 - ["So8NSObjectC", "NSCoder"]
 - !private ["So8NSObjectC", "NSLayoutConstraint"]
 - !private ["So8NSObjectC", "NSSet"]
+- !private ["So8NSObjectC", "PasswordResetViewController"]
 - ["So8NSObjectC", "RoundButton"]
 - ["So8NSObjectC", "Theme"]
 - ["So8NSObjectC", "ToolbarView"]
@@ -1469,7 +1470,6 @@ depends-member:
 - !private ["So8NSObjectC", "UITapGestureRecognizer"]
 - ["So8NSObjectC", "UIViewController"]
 - ["So8NSObjectC", "UsesAutoLayout"]
-- !private ["So8NSObjectC", "VerifyEmailViewController"]
 - ["So8NSObjectC", ""]
 - ["So8NSObjectC", "_bottomButtonsViewContainer"]
 - ["So8NSObjectC", "_centerButton"]
@@ -1641,6 +1641,7 @@ depends-member:
 - ["So8NSObjectP", "LogoImageView"]
 - !private ["So8NSObjectP", "NSLayoutConstraint"]
 - !private ["So8NSObjectP", "NSSet"]
+- !private ["So8NSObjectP", "PasswordResetViewController"]
 - ["So8NSObjectP", "RoundButton"]
 - ["So8NSObjectP", "Theme"]
 - ["So8NSObjectP", "ToolbarView"]
@@ -1656,7 +1657,6 @@ depends-member:
 - !private ["So8NSObjectP", "UITapGestureRecognizer"]
 - ["So8NSObjectP", "UIViewController"]
 - ["So8NSObjectP", "UsesAutoLayout"]
-- !private ["So8NSObjectP", "VerifyEmailViewController"]
 - ["So8NSObjectP", ""]
 - ["So8NSObjectP", "_bottomButtonsViewContainer"]
 - ["So8NSObjectP", "_centerButton"]
@@ -1834,6 +1834,7 @@ depends-member:
 - ["8QuickBev25NewBusinessPickedProtocolP", "Drink"]
 - !private ["8QuickBev25NewBusinessPickedProtocolP", "NSLayoutConstraint"]
 - !private ["8QuickBev25NewBusinessPickedProtocolP", "NSSet"]
+- !private ["8QuickBev25NewBusinessPickedProtocolP", "PasswordResetViewController"]
 - ["8QuickBev25NewBusinessPickedProtocolP", "RoundButton"]
 - ["8QuickBev25NewBusinessPickedProtocolP", "Theme"]
 - ["8QuickBev25NewBusinessPickedProtocolP", "ToolbarView"]
@@ -1848,7 +1849,6 @@ depends-member:
 - !private ["8QuickBev25NewBusinessPickedProtocolP", "UITapGestureRecognizer"]
 - !private ["8QuickBev25NewBusinessPickedProtocolP", "UIViewController"]
 - ["8QuickBev25NewBusinessPickedProtocolP", "UsesAutoLayout"]
-- !private ["8QuickBev25NewBusinessPickedProtocolP", "VerifyEmailViewController"]
 - ["8QuickBev25NewBusinessPickedProtocolP", ""]
 - ["8QuickBev25NewBusinessPickedProtocolP", "adaptivePresentationStyle"]
 - ["8QuickBev25NewBusinessPickedProtocolP", "adaptivePresentationStyleForPresentationController"]
@@ -1923,6 +1923,8 @@ depends-member:
 - !private ["Sq", "frame"]
 - !private ["Sq", "safeAreaLayoutGuide"]
 - !private ["Sq", "white"]
+- !private ["8QuickBev27PasswordResetViewControllerC", ""]
+- !private ["8QuickBev27PasswordResetViewControllerC", "init"]
 - ["Sk", ""]
 - !private ["Sk", "append"]
 - !private ["Sk", "count"]
@@ -1948,6 +1950,7 @@ depends-member:
 - !private ["8QuickBev11RoundButtonC", "refreshTitle"]
 - !private ["8QuickBev11RoundButtonC", "titleLabel"]
 - !private ["8QuickBev11RoundButtonC", "widthAnchor"]
+- !private ["8QuickBev18RoundedUITextFieldC", ""]
 - !private ["7Combine9SchedulerP", "main"]
 - !private ["ST", "Element"]
 - !private ["ST", "Iterator"]
@@ -2040,6 +2043,7 @@ depends-member:
 - ["So40UIAdaptivePresentationControllerDelegateP", "Drink"]
 - !private ["So40UIAdaptivePresentationControllerDelegateP", "NSLayoutConstraint"]
 - !private ["So40UIAdaptivePresentationControllerDelegateP", "NSSet"]
+- !private ["So40UIAdaptivePresentationControllerDelegateP", "PasswordResetViewController"]
 - ["So40UIAdaptivePresentationControllerDelegateP", "RoundButton"]
 - ["So40UIAdaptivePresentationControllerDelegateP", "Theme"]
 - ["So40UIAdaptivePresentationControllerDelegateP", "ToolbarView"]
@@ -2054,7 +2058,6 @@ depends-member:
 - !private ["So40UIAdaptivePresentationControllerDelegateP", "UITapGestureRecognizer"]
 - !private ["So40UIAdaptivePresentationControllerDelegateP", "UIViewController"]
 - ["So40UIAdaptivePresentationControllerDelegateP", "UsesAutoLayout"]
-- !private ["So40UIAdaptivePresentationControllerDelegateP", "VerifyEmailViewController"]
 - ["So40UIAdaptivePresentationControllerDelegateP", ""]
 - ["So40UIAdaptivePresentationControllerDelegateP", "_bottomButtonsViewContainer"]
 - ["So40UIAdaptivePresentationControllerDelegateP", "_centerButton"]
@@ -2154,6 +2157,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "NSCoder"]
 - !private ["So21UIAppearanceContainerP", "NSLayoutConstraint"]
 - !private ["So21UIAppearanceContainerP", "NSSet"]
+- !private ["So21UIAppearanceContainerP", "PasswordResetViewController"]
 - ["So21UIAppearanceContainerP", "RoundButton"]
 - ["So21UIAppearanceContainerP", "Theme"]
 - ["So21UIAppearanceContainerP", "ToolbarView"]
@@ -2169,7 +2173,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "UITapGestureRecognizer"]
 - ["So21UIAppearanceContainerP", "UIViewController"]
 - ["So21UIAppearanceContainerP", "UsesAutoLayout"]
-- !private ["So21UIAppearanceContainerP", "VerifyEmailViewController"]
 - ["So21UIAppearanceContainerP", ""]
 - ["So21UIAppearanceContainerP", "_bottomButtonsViewContainer"]
 - ["So21UIAppearanceContainerP", "_centerButton"]
@@ -2287,6 +2290,7 @@ depends-member:
 - ["So18UIContentContainerP", "NSCoder"]
 - !private ["So18UIContentContainerP", "NSLayoutConstraint"]
 - !private ["So18UIContentContainerP", "NSSet"]
+- !private ["So18UIContentContainerP", "PasswordResetViewController"]
 - ["So18UIContentContainerP", "RoundButton"]
 - ["So18UIContentContainerP", "Theme"]
 - ["So18UIContentContainerP", "ToolbarView"]
@@ -2302,7 +2306,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "UITapGestureRecognizer"]
 - ["So18UIContentContainerP", "UIViewController"]
 - ["So18UIContentContainerP", "UsesAutoLayout"]
-- !private ["So18UIContentContainerP", "VerifyEmailViewController"]
 - ["So18UIContentContainerP", ""]
 - ["So18UIContentContainerP", "_bottomButtonsViewContainer"]
 - ["So18UIContentContainerP", "_centerButton"]
@@ -2470,6 +2473,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "NSCoder"]
 - !private ["So18UIFocusEnvironmentP", "NSLayoutConstraint"]
 - !private ["So18UIFocusEnvironmentP", "NSSet"]
+- !private ["So18UIFocusEnvironmentP", "PasswordResetViewController"]
 - ["So18UIFocusEnvironmentP", "RoundButton"]
 - ["So18UIFocusEnvironmentP", "Theme"]
 - ["So18UIFocusEnvironmentP", "ToolbarView"]
@@ -2485,7 +2489,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "UITapGestureRecognizer"]
 - ["So18UIFocusEnvironmentP", "UIViewController"]
 - ["So18UIFocusEnvironmentP", "UsesAutoLayout"]
-- !private ["So18UIFocusEnvironmentP", "VerifyEmailViewController"]
 - ["So18UIFocusEnvironmentP", ""]
 - ["So18UIFocusEnvironmentP", "_bottomButtonsViewContainer"]
 - ["So18UIFocusEnvironmentP", "_centerButton"]
@@ -2725,6 +2728,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "LogoImageView"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSLayoutConstraint"]
 - !private ["So30UIPasteConfigurationSupportingP", "NSSet"]
+- !private ["So30UIPasteConfigurationSupportingP", "PasswordResetViewController"]
 - ["So30UIPasteConfigurationSupportingP", "RoundButton"]
 - ["So30UIPasteConfigurationSupportingP", "Theme"]
 - ["So30UIPasteConfigurationSupportingP", "ToolbarView"]
@@ -2740,7 +2744,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "UITapGestureRecognizer"]
 - ["So30UIPasteConfigurationSupportingP", "UIViewController"]
 - ["So30UIPasteConfigurationSupportingP", "UsesAutoLayout"]
-- !private ["So30UIPasteConfigurationSupportingP", "VerifyEmailViewController"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - ["So30UIPasteConfigurationSupportingP", "_bottomButtonsViewContainer"]
 - ["So30UIPasteConfigurationSupportingP", "_centerButton"]
@@ -2844,6 +2847,7 @@ depends-member:
 - ["So39UIPopoverPresentationControllerDelegateP", "Drink"]
 - !private ["So39UIPopoverPresentationControllerDelegateP", "NSLayoutConstraint"]
 - !private ["So39UIPopoverPresentationControllerDelegateP", "NSSet"]
+- !private ["So39UIPopoverPresentationControllerDelegateP", "PasswordResetViewController"]
 - ["So39UIPopoverPresentationControllerDelegateP", "RoundButton"]
 - ["So39UIPopoverPresentationControllerDelegateP", "Theme"]
 - ["So39UIPopoverPresentationControllerDelegateP", "ToolbarView"]
@@ -2858,7 +2862,6 @@ depends-member:
 - !private ["So39UIPopoverPresentationControllerDelegateP", "UITapGestureRecognizer"]
 - !private ["So39UIPopoverPresentationControllerDelegateP", "UIViewController"]
 - ["So39UIPopoverPresentationControllerDelegateP", "UsesAutoLayout"]
-- !private ["So39UIPopoverPresentationControllerDelegateP", "VerifyEmailViewController"]
 - ["So39UIPopoverPresentationControllerDelegateP", ""]
 - ["So39UIPopoverPresentationControllerDelegateP", "_bottomButtonsViewContainer"]
 - ["So39UIPopoverPresentationControllerDelegateP", "_centerButton"]
@@ -2930,6 +2933,7 @@ depends-member:
 - ["So11UIResponderC", "NSCoder"]
 - !private ["So11UIResponderC", "NSLayoutConstraint"]
 - !private ["So11UIResponderC", "NSSet"]
+- !private ["So11UIResponderC", "PasswordResetViewController"]
 - ["So11UIResponderC", "RoundButton"]
 - ["So11UIResponderC", "Theme"]
 - ["So11UIResponderC", "ToolbarView"]
@@ -2945,7 +2949,6 @@ depends-member:
 - !private ["So11UIResponderC", "UITapGestureRecognizer"]
 - ["So11UIResponderC", "UIViewController"]
 - ["So11UIResponderC", "UsesAutoLayout"]
-- !private ["So11UIResponderC", "VerifyEmailViewController"]
 - ["So11UIResponderC", ""]
 - ["So11UIResponderC", "_bottomButtonsViewContainer"]
 - ["So11UIResponderC", "_centerButton"]
@@ -3048,6 +3051,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "LogoImageView"]
 - !private ["So30UIResponderStandardEditActionsP", "NSLayoutConstraint"]
 - !private ["So30UIResponderStandardEditActionsP", "NSSet"]
+- !private ["So30UIResponderStandardEditActionsP", "PasswordResetViewController"]
 - ["So30UIResponderStandardEditActionsP", "RoundButton"]
 - ["So30UIResponderStandardEditActionsP", "Theme"]
 - ["So30UIResponderStandardEditActionsP", "ToolbarView"]
@@ -3063,7 +3067,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "UITapGestureRecognizer"]
 - ["So30UIResponderStandardEditActionsP", "UIViewController"]
 - ["So30UIResponderStandardEditActionsP", "UsesAutoLayout"]
-- !private ["So30UIResponderStandardEditActionsP", "VerifyEmailViewController"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - ["So30UIResponderStandardEditActionsP", "_bottomButtonsViewContainer"]
 - ["So30UIResponderStandardEditActionsP", "_centerButton"]
@@ -3189,6 +3192,7 @@ depends-member:
 - ["So16UIStateRestoringP", "NSCoder"]
 - !private ["So16UIStateRestoringP", "NSLayoutConstraint"]
 - !private ["So16UIStateRestoringP", "NSSet"]
+- !private ["So16UIStateRestoringP", "PasswordResetViewController"]
 - ["So16UIStateRestoringP", "RoundButton"]
 - ["So16UIStateRestoringP", "Theme"]
 - ["So16UIStateRestoringP", "ToolbarView"]
@@ -3204,7 +3208,6 @@ depends-member:
 - !private ["So16UIStateRestoringP", "UITapGestureRecognizer"]
 - ["So16UIStateRestoringP", "UIViewController"]
 - ["So16UIStateRestoringP", "UsesAutoLayout"]
-- !private ["So16UIStateRestoringP", "VerifyEmailViewController"]
 - ["So16UIStateRestoringP", ""]
 - ["So16UIStateRestoringP", "_bottomButtonsViewContainer"]
 - ["So16UIStateRestoringP", "_centerButton"]
@@ -3263,6 +3266,8 @@ depends-member:
 - ["So16UIStateRestoringP", "viewDidLoad"]
 - ["So16UIStateRestoringP", "viewWillAppear"]
 - !private ["So22UITapGestureRecognizerC", "init"]
+- ["So11UITextFieldC", ""]
+- ["So19UITextFieldDelegateP", "init"]
 - !private ["So18UITraitEnvironmentP", "APIClient"]
 - ["So18UITraitEnvironmentP", "Bool"]
 - ["So18UITraitEnvironmentP", "Business"]
@@ -3277,6 +3282,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "NSCoder"]
 - !private ["So18UITraitEnvironmentP", "NSLayoutConstraint"]
 - !private ["So18UITraitEnvironmentP", "NSSet"]
+- !private ["So18UITraitEnvironmentP", "PasswordResetViewController"]
 - ["So18UITraitEnvironmentP", "RoundButton"]
 - ["So18UITraitEnvironmentP", "Theme"]
 - ["So18UITraitEnvironmentP", "ToolbarView"]
@@ -3292,7 +3298,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "UITapGestureRecognizer"]
 - ["So18UITraitEnvironmentP", "UIViewController"]
 - ["So18UITraitEnvironmentP", "UsesAutoLayout"]
-- !private ["So18UITraitEnvironmentP", "VerifyEmailViewController"]
 - ["So18UITraitEnvironmentP", ""]
 - ["So18UITraitEnvironmentP", "_bottomButtonsViewContainer"]
 - ["So18UITraitEnvironmentP", "_centerButton"]
@@ -3397,6 +3402,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "LogoImageView"]
 - !private ["So23UIUserActivityRestoringP", "NSLayoutConstraint"]
 - !private ["So23UIUserActivityRestoringP", "NSSet"]
+- !private ["So23UIUserActivityRestoringP", "PasswordResetViewController"]
 - ["So23UIUserActivityRestoringP", "RoundButton"]
 - ["So23UIUserActivityRestoringP", "Theme"]
 - ["So23UIUserActivityRestoringP", "ToolbarView"]
@@ -3412,7 +3418,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "UITapGestureRecognizer"]
 - ["So23UIUserActivityRestoringP", "UIViewController"]
 - ["So23UIUserActivityRestoringP", "UsesAutoLayout"]
-- !private ["So23UIUserActivityRestoringP", "VerifyEmailViewController"]
 - ["So23UIUserActivityRestoringP", ""]
 - ["So23UIUserActivityRestoringP", "_bottomButtonsViewContainer"]
 - ["So23UIUserActivityRestoringP", "_centerButton"]
@@ -3548,6 +3553,7 @@ depends-member:
 - ["So16UIViewControllerC", "NSCoder"]
 - !private ["So16UIViewControllerC", "NSLayoutConstraint"]
 - !private ["So16UIViewControllerC", "NSSet"]
+- !private ["So16UIViewControllerC", "PasswordResetViewController"]
 - ["So16UIViewControllerC", "RoundButton"]
 - ["So16UIViewControllerC", "Theme"]
 - ["So16UIViewControllerC", "ToolbarView"]
@@ -3563,7 +3569,6 @@ depends-member:
 - !private ["So16UIViewControllerC", "UITapGestureRecognizer"]
 - ["So16UIViewControllerC", "UIViewController"]
 - ["So16UIViewControllerC", "UsesAutoLayout"]
-- !private ["So16UIViewControllerC", "VerifyEmailViewController"]
 - ["So16UIViewControllerC", ""]
 - ["So16UIViewControllerC", "_bottomButtonsViewContainer"]
 - ["So16UIViewControllerC", "_centerButton"]
@@ -3627,8 +3632,6 @@ depends-member:
 - ["8QuickBev14UsesAutoLayoutV", "init"]
 - ["8QuickBev14UsesAutoLayoutV", "subscript"]
 - ["8QuickBev14UsesAutoLayoutV", "wrappedValue"]
-- !private ["8QuickBev25VerifyEmailViewControllerC", ""]
-- !private ["8QuickBev25VerifyEmailViewControllerC", "init"]
 - !private ["7SwiftUI4ViewP", "addSubview"]
 - !private ["7SwiftUI4ViewP", "backgroundColor"]
 - !private ["7SwiftUI4ViewP", "bottomAnchor"]
@@ -3677,6 +3680,7 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "LogoImageView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSLayoutConstraint"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NSSet"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "PasswordResetViewController"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "RoundButton"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "Theme"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "ToolbarView"]
@@ -3691,7 +3695,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UITapGestureRecognizer"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIViewController"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UsesAutoLayout"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "VerifyEmailViewController"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "activate"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "adaptivePresentationStyle"]
@@ -3811,6 +3814,7 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "LogoImageView"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSLayoutConstraint"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSSet"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "PasswordResetViewController"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "RoundButton"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Theme"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ToolbarView"]
@@ -3825,7 +3829,6 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UITapGestureRecognizer"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIViewController"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UsesAutoLayout"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "VerifyEmailViewController"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "activate"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "adaptivePresentationStyle"]
@@ -4063,10 +4066,12 @@ depends-nominal:
 - !private "7Combine16ObservableObjectP"
 - !private "s9OptionSetP"
 - !private "Sq"
+- !private "8QuickBev27PasswordResetViewControllerC"
 - "Sk"
 - "Sm"
 - !private "SY"
 - "8QuickBev11RoundButtonC"
+- !private "8QuickBev18RoundedUITextFieldC"
 - !private "7Combine9SchedulerP"
 - "ST"
 - !private "s10SetAlgebraP"
@@ -4119,6 +4124,8 @@ depends-nominal:
 - "So11UIStackViewC"
 - "So16UIStateRestoringP"
 - !private "So22UITapGestureRecognizerC"
+- "So11UITextFieldC"
+- "So19UITextFieldDelegateP"
 - "So18UITraitEnvironmentP"
 - "So23UIUserActivityRestoringP"
 - "So6UIViewC"
@@ -4126,7 +4133,6 @@ depends-nominal:
 - "So44UIViewControllerTransitionCoordinatorContextP"
 - !private "8QuickBev4UserC"
 - "8QuickBev14UsesAutoLayoutV"
-- !private "8QuickBev25VerifyEmailViewControllerC"
 - !private "7SwiftUI4ViewP"
 - "s14_ArrayProtocolP"
 - !private "s30_CustomPlaygroundQuickLookableP"

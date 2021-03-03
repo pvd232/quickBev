@@ -5,11 +5,21 @@ class Client {
     this.baseUrl = "http://0.0.0.0:5000";
     this.url = "";
   }
-  async makeRequest(method, path, data, isForm = false) {
+  async makeRequest(method, path, data, headersParam = false, isForm = false) {
+    console.log("method", method);
     let requestData = data || {};
+    console.log("data", data);
     try {
       this.url = this.baseUrl + path;
       console.log("baseUrl", this.url);
+      var requestHeaders = false;
+      if (headersParam) {
+        requestHeaders = new Headers();
+        for (const [key, value] of Object.entries(headersParam)) {
+          console.log(`headers key and value: ${key}: ${value}`);
+          requestHeaders.set(key, value);
+        }
+      }
       const response = await fetch(this.url, {
         method: method,
         body:
@@ -18,12 +28,13 @@ class Client {
             : method === "POST" && isForm
             ? requestData
             : null,
+        headers: headersParam ? requestHeaders : {},
       });
 
       if (response.ok) {
         let responseContent = await response.json();
-        console.log("responseContent", responseContent);
-        return [responseContent, response];
+        console.log("response", response);
+        return responseContent;
       } else {
         let body = await response.text();
         console.log(
@@ -59,7 +70,7 @@ class Client {
     }).then((data) => data.json());
   };
   getCustomers = async () => {
-    this.url = this.baseUrl + "customer";
+    this.url = this.baseUrl + "/customer";
     var headers = new Headers();
     const currentMerchant = new Merchant(
       "localStorage",

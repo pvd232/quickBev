@@ -88,9 +88,9 @@ class Order_Service(object):
                 response.append(order_dto)
             return response
 
-    def get_stripe_ephemeral_key(self, request):
+    def create_stripe_ephemeral_key(self, request):
         with session_scope() as session:
-            return Order_Repository().get_stripe_ephemeral_key(session, request)
+            return Order_Repository().create_stripe_ephemeral_key(session, request)
 
     def stripe_payment_intent(self, request):
         with session_scope() as session:
@@ -151,6 +151,22 @@ class Customer_Service(object):
     def update_email_verification(self, customer_id):
         with session_scope() as session:
             return Customer_Repository().update_email_verification(session, customer_id)
+
+    def add_guest_device_token(self, device_token):
+        with session_scope() as session:
+            return Customer_Repository().add_guest_device_token(session, device_token)
+
+    def update_password(self, customer_id, new_password):
+        with session_scope() as session:
+            return Customer_Repository().update_password(session, customer_id, new_password)
+
+    def get_customer(self, customer_id):
+        with session_scope() as session:
+            customer = Customer_Repository().get_customer(session, customer_id)
+            if customer:
+                return Customer_Domain(customer_object=Customer_Repository().get_customer(session, customer_id))
+            else:
+                return customer
 
 
 class Merchant_Service(object):

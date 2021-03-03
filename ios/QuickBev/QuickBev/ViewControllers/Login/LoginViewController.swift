@@ -201,36 +201,40 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     // the backend does not include email and password in the attributes it sends back for security so we have to grab them from the login fields manually if this is the first time the user is logging in on the device
 
                     user.email = self.formValue["email"]!
-                    print("user.email", user.email)
                     user.password = self.formValue["password"]!
 
-                    print("response", response)
                     let sessionToken = response.headers["authorization-token"] as! String
+
+                    // set the token in keychain and use it whenever calling the backend
                     try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).setValue(sessionToken, for: "sessionToken")
 
-                    print("sessionToken", sessionToken)
-                    let userCredentials: [HTTPHeader] = [HTTPHeader(field: "Authorization", value: "Bearer \(sessionToken)"), HTTPHeader(field: "DeviceToken", value: "\(try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).getValue(for: "deviceToken") ?? "")")]
-                    let sendDeviceTokenRequest = try! APIRequest(method: .post, path: "/apn-token/\(user.email)", headers: userCredentials)
+                    let userCredentials: [HTTPHeader] = [HTTPHeader(field: "DeviceToken", value: CheckoutCart.shared.deviceToken)]
+                    let sendDeviceTokenRequest = try! APIRequest(method: .post, path: "/apn-token/\(user.email)/\(sessionToken)", headers: userCredentials)
                     APIClient().perform(sendDeviceTokenRequest) { result in
                         switch result {
                         case let .success(response):
                             if response.statusCode == 200 {
-                                print("token registered")
+                                print("token registered", response)
                             }
                         case let .failure(error):
                             print("error", error.localizedDescription)
-                            print("Device Token: \(sessionToken)")
                         }
                     }
-//                        let headers = ["Authorization": "Bearer \(sessionToken)"] // Headers your auth endpoint needs
-                    // set the token in the shopping cart and use it whenever calling the backend
                     DispatchQueue.main.async {
                         CheckoutCart.shared.user = user
                         CheckoutCart.shared.userId = user.email
                         CheckoutCart.shared.stripeId = user.stripeId
                         CoreDataManager.sharedManager.saveContext()
-                        SceneDelegate.shared.rootViewController.switchToHomePageViewController()
                         self.activityIndicator.stopAnimating()
+                        if user.emailVerified != true {
+                            let alertController = UIAlertController(title: "Unverified Email", message: "This email is unverified. We have resent your confirmation email. Click the verify button in the email and you're good to go!", preferredStyle: .alert)
+                            alertController.addAction(UIAlertAction(title: "Okay", style: .cancel) { _ in
+                                self.navigationController!.pushViewController(VerifyEmailViewController(), animated: true)
+                            })
+                            self.present(alertController, animated: true, completion: nil)
+                        } else {
+                            SceneDelegate.shared.rootViewController.switchToHomePageViewController()
+                        }
                     }
                 } else {
                     DispatchQueue.main.async {

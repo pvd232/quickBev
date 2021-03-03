@@ -13,7 +13,7 @@ class ToolbarView: UIView {
     @UsesAutoLayout var bottomButtonsStackView = UIStackView()
     @UsesAutoLayout var orderButton = UIButton()
     @UsesAutoLayout var accountButton = UIButton()
-    @UsesAutoLayout var eventsButton = UIButton()
+//    @UsesAutoLayout var eventsButton = UIButton()
     @UsesAutoLayout var homeButton = UIButton()
     var hub: BadgeHub?
 
@@ -43,19 +43,19 @@ class ToolbarView: UIView {
         hub!.setCount(CheckoutCart.shared.cart.count)
 
         bottomButtonsStackView.axis = .horizontal
-        bottomButtonsStackView.distribution = .fillProportionally
+        bottomButtonsStackView.distribution = .fillEqually
         bottomButtonsStackView.alignment = .top
         bottomButtonsStackView.spacing = 30
         bottomButtonsStackView.addArrangedSubview(homeButton)
-        bottomButtonsStackView.addArrangedSubview(eventsButton)
+//        bottomButtonsStackView.addArrangedSubview(eventsButton)
         bottomButtonsStackView.addArrangedSubview(accountButton)
         bottomButtonsStackView.addArrangedSubview(orderButton)
 
         accountButton.setTitle("Account", for: .normal)
         accountButton.titleLabel?.font = UIFont.mediumLargeThemeButtonFont
-
-        eventsButton.setTitle("Events", for: .normal)
-        eventsButton.titleLabel?.font = UIFont.mediumLargeThemeButtonFont
+//
+//        eventsButton.setTitle("Events", for: .normal)
+//        eventsButton.titleLabel?.font = UIFont.mediumLargeThemeButtonFont
 
         homeButton.setTitle("Home", for: .normal)
         homeButton.titleLabel?.font = UIFont.mediumLargeThemeButtonFont
@@ -68,6 +68,7 @@ class ToolbarView: UIView {
             bottomButtonsStackView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.8),
             bottomButtonsStackView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.95),
             bottomButtonsStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+
         ])
 
         accountButton.addTarget(self, action: #selector(launchAccountViewController), for: .touchUpInside)

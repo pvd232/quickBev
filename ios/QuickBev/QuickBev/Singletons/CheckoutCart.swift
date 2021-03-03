@@ -20,40 +20,45 @@ public class CheckoutCart: NSManagedObject {
 
     static var businessETag: ETag? {
         get {
-            var fetchedBool = false
+            var etag: ETag?
+            var found = false
             if let fetchedResults = CoreDataManager.sharedManager.fetchEntities(entityName: "ETag") as? [ETag], fetchedResults.count > 0 {
                 for fetchedResult in fetchedResults {
                     if fetchedResult.category == "business" {
-                        fetchedBool = true
-                        return fetchedResult
+                        etag = fetchedResult
+                        found = true
                     }
                 }
             }
-            if fetchedBool == false {
+            if found == false {
                 let newBusinessEtag = ETag(Id: -1, Category: "business")
                 CoreDataManager.sharedManager.saveContext()
-                return newBusinessEtag
+                etag = newBusinessEtag
             }
+            return etag!
         }
         set {}
     }
 
     static var drinkETag: ETag? {
         get {
-            var fetchedBool = false
+            var etag: ETag?
+            var found = false
             if let fetchedResults = CoreDataManager.sharedManager.fetchEntities(entityName: "ETag") as? [ETag], fetchedResults.count > 0 {
                 for fetchedResult in fetchedResults {
                     if fetchedResult.category == "drink" {
-                        fetchedBool = true
-                        return fetchedResult
+                        etag = fetchedResult
+                        found = true
                     }
                 }
             }
-            if fetchedBool == false {
+            if found == false {
                 let newDrinkEtag = ETag(Id: -1, Category: "drink")
+                print("nah")
                 CoreDataManager.sharedManager.saveContext()
-                return newDrinkEtag
+                etag = newDrinkEtag
             }
+            return etag!
         }
         set {}
     }
@@ -93,6 +98,22 @@ public extension CheckoutCart {
             salesTax = (cost * userBusiness!.salesTaxRate).rounded(digits: 2)
             tipAmount = (tipPercentage * subtotal).rounded(digits: 2)
             cost = (subtotal + salesTax + tipAmount).rounded(digits: 2)
+        }
+    }
+
+    var sessionToken: String {
+        if let theToken = try? SecureStore(secureStoreQueryable: GenericPasswordQueryable()).getValue(for: "sessionToken") {
+            return theToken
+        } else {
+            return ""
+        }
+    }
+
+    var deviceToken: String {
+        if let theToken = try? SecureStore(secureStoreQueryable: GenericPasswordQueryable()).getValue(for: "deviceToken") {
+            return theToken
+        } else {
+            return ""
         }
     }
 

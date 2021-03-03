@@ -24,15 +24,9 @@ class SplashPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        splashView = SignInOrSignUpView(frame: view.frame)
+        splashView = SplashView(frame: view.frame)
         view.addSubview(splashView)
         print("screenSize.height", UIViewController.screenSize.height)
-
-        if let fetchedBusinesses = CoreDataManager.sharedManager.fetchEntities(entityName: "Business") as? [Business] {
-            for fetchedBusiness in fetchedBusinesses {
-                print("fetchedBusiness in splash", fetchedBusiness)
-            }
-        }
         let safeArea = view.safeAreaLayoutGuide
         NSLayoutConstraint.activate([splashView.topAnchor.constraint(equalTo: safeArea.topAnchor),
                                      splashView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),

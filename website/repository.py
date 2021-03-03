@@ -65,7 +65,7 @@ class Order_Repository(object):
         drinks = session.query(Drink)
         return orders, drinks
 
-    def get_stripe_ephemeral_key(self, session, request):
+    def create_stripe_ephemeral_key(self, session, request):
         customer = request['stripe_id']
         customer_bool = False
         if customer:
@@ -153,9 +153,6 @@ class Customer_Repository(object):
             Customer.id == customer.id).first()
         test_stripe_id = session.query(Stripe_Customer).filter(
             Stripe_Customer.id == customer.stripe_id).first()
-        print('test_customer', test_customer)
-        print('test_stripe_id', test_stripe_id)
-
         if not test_customer and test_stripe_id:
             print(1)
             new_customer = Customer(id=customer.id, password=customer.password,
@@ -171,8 +168,26 @@ class Customer_Repository(object):
                                     first_name=customer.first_name, last_name=customer.last_name, stripe_id=new_stripe.id, email_verified=customer.email_verified)
             session.add(new_customer)
             return customer
+        # if the customer that has been requested for registration from the front end is unverified then we overwrite the customer values with the new values and return True to let the front end know that this customer has previously attempted to have been registered but was never verified. that way if a customer never verfies the account can continue to be modified as necessary while still preserving its unverified state
+        elif test_customer and test_customer.email_verified == False and not test_stripe_id:
+            new_customer = stripe.Customer.create()
+            new_stripe = Stripe_Customer(id=new_customer.id)
+            session.add(new_stripe)
+            test_customer.password = customer.password
+            test_customer.first_name = customer.first_name
+            test_customer.last_name = customer.last_name
+            test_customer.stripe_id = new_stripe.id
+            test_customer.has_registered = True
+            return test_customer
+
+        elif test_customer and test_customer.email_verified == False and test_stripe_id:
+            test_customer.password = customer.password
+            test_customer.first_name = customer.first_name
+            test_customer.last_name = customer.last_name
+            test_customer.stripe_id = customer.stripe_id
+            test_customer.has_registered = True
+            return test_customer
         else:
-            print(3)
             return False
 
     def get_customers(self, session, merchant_id):
@@ -212,12 +227,39 @@ class Customer_Repository(object):
         else:
             return False
 
+    def add_guest_device_token(self, session, device_token):
+        new_guest_device_token = Guest_Device_Token(id=device_token)
+        exists = session.query(Guest_Device_Token).filter(
+            Guest_Device_Token.id == device_token).first()
+        if exists:
+            return True
+        else:
+            session.add(new_guest_device_token)
+            return True
+
     def update_email_verification(self, session, customer_id):
         requested_customer = session.query(Customer).filter(
             Customer.id == customer_id).first()
         if requested_customer:
             requested_customer.email_verified = True
             return True
+        else:
+            return False
+
+    def update_password(self, session, customer_id, new_password):
+        requested_customer = session.query(Customer).filter(
+            Customer.id == customer_id).first()
+        if requested_customer:
+            requested_customer.password = generate_password_hash(new_password)
+            return True
+        else:
+            return False
+
+    def get_customer(self, session, customer_id):
+        customer = session.query(Customer).filter(
+            Customer.id == customer_id).first()
+        if customer:
+            return customer
         else:
             return False
 

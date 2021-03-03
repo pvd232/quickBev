@@ -37,6 +37,7 @@ depends-top-level:
 - !private "tableView"
 - !private "view"
 depends-member:
+- !private ["s18AdditiveArithmeticP", ""]
 - !private ["7SwiftUI10AnimatableP", "height"]
 - !private ["Sa", "count"]
 - !private ["Sa", "subscript"]
@@ -53,6 +54,7 @@ depends-member:
 - !private ["SK", "subscript"]
 - !private ["So15CALayerDelegateP", "backgroundColor"]
 - !private ["So15CALayerDelegateP", "dequeueReusableCell"]
+- !private ["So15CALayerDelegateP", "dequeueReusableCellWithIdentifier"]
 - !private ["So15CALayerDelegateP", "drinkImageView"]
 - !private ["So15CALayerDelegateP", "frame"]
 - !private ["So15CALayerDelegateP", "image"]
@@ -306,7 +308,9 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "lowercased"]
+- !private ["s25ExpressibleByFloatLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
+- !private ["s27ExpressibleByIntegerLiteralP", ""]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "backgroundColor"]
 - !private ["s23ExpressibleByNilLiteralP", "register"]
@@ -318,6 +322,7 @@ depends-member:
 - !private ["s26ExpressibleByStringLiteralP", "lowercased"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "lowercased"]
+- !private ["SF", ""]
 - !private ["7SwiftUI7GestureP", "backgroundColor"]
 - !private ["7SwiftUI7GestureP", "register"]
 - !private ["7SwiftUI7GestureP", "translatesAutoresizingMaskIntoConstraints"]
@@ -380,11 +385,15 @@ depends-member:
 - !private ["So8NSCodingP", "Drink"]
 - !private ["So8NSCodingP", "DrinkTableViewCell"]
 - !private ["So8NSCodingP", "DrinkViewController"]
+- ["So8NSCodingP", "IndexPath"]
+- ["So8NSCodingP", "Int"]
 - !private ["So8NSCodingP", "UIImage"]
+- ["So8NSCodingP", "UITableView"]
 - ["So8NSCodingP", "UITableViewCell"]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "backgroundColor"]
 - !private ["So8NSCodingP", "dequeueReusableCell"]
+- !private ["So8NSCodingP", "dequeueReusableCellWithIdentifier"]
 - !private ["So8NSCodingP", "drinkImageView"]
 - !private ["So8NSCodingP", "fatalError"]
 - !private ["So8NSCodingP", "frame"]
@@ -418,7 +427,10 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "Drink"]
 - !private ["So26NSExtensionRequestHandlingP", "DrinkTableViewCell"]
 - !private ["So26NSExtensionRequestHandlingP", "DrinkViewController"]
+- ["So26NSExtensionRequestHandlingP", "IndexPath"]
+- ["So26NSExtensionRequestHandlingP", "Int"]
 - !private ["So26NSExtensionRequestHandlingP", "UIImage"]
+- ["So26NSExtensionRequestHandlingP", "UITableView"]
 - ["So26NSExtensionRequestHandlingP", "UITableViewCell"]
 - ["So26NSExtensionRequestHandlingP", ""]
 - !private ["So26NSExtensionRequestHandlingP", "fatalError"]
@@ -465,6 +477,7 @@ depends-member:
 - !private ["So8NSObjectC", "backgroundColor"]
 - !private ["So8NSObjectC", "copy"]
 - !private ["So8NSObjectC", "dequeueReusableCell"]
+- !private ["So8NSObjectC", "dequeueReusableCellWithIdentifier"]
 - !private ["So8NSObjectC", "detail"]
 - !private ["So8NSObjectC", "drinkImageView"]
 - !private ["So8NSObjectC", "fatalError"]
@@ -496,12 +509,16 @@ depends-member:
 - !private ["So8NSObjectP", "CheckoutCart"]
 - !private ["So8NSObjectP", "DrinkTableViewCell"]
 - !private ["So8NSObjectP", "DrinkViewController"]
+- ["So8NSObjectP", "IndexPath"]
+- ["So8NSObjectP", "Int"]
 - !private ["So8NSObjectP", "UIImage"]
+- ["So8NSObjectP", "UITableView"]
 - ["So8NSObjectP", "UITableViewCell"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "backgroundColor"]
 - !private ["So8NSObjectP", "copy"]
 - !private ["So8NSObjectP", "dequeueReusableCell"]
+- !private ["So8NSObjectP", "dequeueReusableCellWithIdentifier"]
 - !private ["So8NSObjectP", "detail"]
 - !private ["So8NSObjectP", "drinkImageView"]
 - !private ["So8NSObjectP", "fatalError"]
@@ -535,6 +552,7 @@ depends-member:
 - !private ["So14NSSecureCodingP", "lowercased"]
 - !private ["So14NSSecureCodingP", "white"]
 - !private ["So8NSStringC", "lowercased"]
+- !private ["Sj", ""]
 - !private ["7Combine16ObservableObjectP", "copy"]
 - !private ["7Combine16ObservableObjectP", "detail"]
 - !private ["7Combine16ObservableObjectP", "guestDrink"]
@@ -568,6 +586,8 @@ depends-member:
 - !private ["ST", "name"]
 - !private ["ST", "row"]
 - !private ["ST", "subscript"]
+- !private ["s13SignedNumericP", ""]
+- !private ["Sx", ""]
 - !private ["SS", "lowercased"]
 - !private ["Sy", "lowercased"]
 - !private ["s16TextOutputStreamP", ""]
@@ -577,6 +597,7 @@ depends-member:
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "image"]
 - !private ["So29UIAccessibilityIdentificationP", "backgroundColor"]
 - !private ["So29UIAccessibilityIdentificationP", "dequeueReusableCell"]
+- !private ["So29UIAccessibilityIdentificationP", "dequeueReusableCellWithIdentifier"]
 - !private ["So29UIAccessibilityIdentificationP", "drinkImageView"]
 - !private ["So29UIAccessibilityIdentificationP", "frame"]
 - !private ["So29UIAccessibilityIdentificationP", "image"]
@@ -590,6 +611,7 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So12UIAppearanceP", "backgroundColor"]
 - !private ["So12UIAppearanceP", "dequeueReusableCell"]
+- !private ["So12UIAppearanceP", "dequeueReusableCellWithIdentifier"]
 - !private ["So12UIAppearanceP", "drinkImageView"]
 - !private ["So12UIAppearanceP", "frame"]
 - !private ["So12UIAppearanceP", "image"]
@@ -605,11 +627,15 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "Drink"]
 - !private ["So21UIAppearanceContainerP", "DrinkTableViewCell"]
 - !private ["So21UIAppearanceContainerP", "DrinkViewController"]
+- ["So21UIAppearanceContainerP", "IndexPath"]
+- ["So21UIAppearanceContainerP", "Int"]
 - !private ["So21UIAppearanceContainerP", "UIImage"]
+- ["So21UIAppearanceContainerP", "UITableView"]
 - ["So21UIAppearanceContainerP", "UITableViewCell"]
 - ["So21UIAppearanceContainerP", ""]
 - !private ["So21UIAppearanceContainerP", "backgroundColor"]
 - !private ["So21UIAppearanceContainerP", "dequeueReusableCell"]
+- !private ["So21UIAppearanceContainerP", "dequeueReusableCellWithIdentifier"]
 - !private ["So21UIAppearanceContainerP", "drinkImageView"]
 - !private ["So21UIAppearanceContainerP", "fatalError"]
 - !private ["So21UIAppearanceContainerP", "frame"]
@@ -635,7 +661,10 @@ depends-member:
 - !private ["So18UIContentContainerP", "Drink"]
 - !private ["So18UIContentContainerP", "DrinkTableViewCell"]
 - !private ["So18UIContentContainerP", "DrinkViewController"]
+- ["So18UIContentContainerP", "IndexPath"]
+- ["So18UIContentContainerP", "Int"]
 - !private ["So18UIContentContainerP", "UIImage"]
+- ["So18UIContentContainerP", "UITableView"]
 - ["So18UIContentContainerP", "UITableViewCell"]
 - ["So18UIContentContainerP", ""]
 - !private ["So18UIContentContainerP", "fatalError"]
@@ -648,8 +677,10 @@ depends-member:
 - !private ["So18UIContentContainerP", "view"]
 - ["So18UIContentContainerP", "viewDidLoad"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- ["So33UIContextMenuInteractionAnimatingP", ""]
 - !private ["So17UICoordinateSpaceP", "backgroundColor"]
 - !private ["So17UICoordinateSpaceP", "dequeueReusableCell"]
+- !private ["So17UICoordinateSpaceP", "dequeueReusableCellWithIdentifier"]
 - !private ["So17UICoordinateSpaceP", "drinkImageView"]
 - !private ["So17UICoordinateSpaceP", "frame"]
 - !private ["So17UICoordinateSpaceP", "image"]
@@ -666,6 +697,7 @@ depends-member:
 - !private ["So23UIDataSourceTranslatingP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So13UIDynamicItemP", "backgroundColor"]
 - !private ["So13UIDynamicItemP", "dequeueReusableCell"]
+- !private ["So13UIDynamicItemP", "dequeueReusableCellWithIdentifier"]
 - !private ["So13UIDynamicItemP", "drinkImageView"]
 - !private ["So13UIDynamicItemP", "frame"]
 - !private ["So13UIDynamicItemP", "image"]
@@ -681,11 +713,15 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "Drink"]
 - !private ["So18UIFocusEnvironmentP", "DrinkTableViewCell"]
 - !private ["So18UIFocusEnvironmentP", "DrinkViewController"]
+- ["So18UIFocusEnvironmentP", "IndexPath"]
+- ["So18UIFocusEnvironmentP", "Int"]
 - !private ["So18UIFocusEnvironmentP", "UIImage"]
+- ["So18UIFocusEnvironmentP", "UITableView"]
 - ["So18UIFocusEnvironmentP", "UITableViewCell"]
 - ["So18UIFocusEnvironmentP", ""]
 - !private ["So18UIFocusEnvironmentP", "backgroundColor"]
 - !private ["So18UIFocusEnvironmentP", "dequeueReusableCell"]
+- !private ["So18UIFocusEnvironmentP", "dequeueReusableCellWithIdentifier"]
 - !private ["So18UIFocusEnvironmentP", "drinkImageView"]
 - !private ["So18UIFocusEnvironmentP", "fatalError"]
 - !private ["So18UIFocusEnvironmentP", "frame"]
@@ -707,6 +743,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "viewDidLoad"]
 - !private ["So11UIFocusItemP", "backgroundColor"]
 - !private ["So11UIFocusItemP", "dequeueReusableCell"]
+- !private ["So11UIFocusItemP", "dequeueReusableCellWithIdentifier"]
 - !private ["So11UIFocusItemP", "drinkImageView"]
 - !private ["So11UIFocusItemP", "frame"]
 - !private ["So11UIFocusItemP", "image"]
@@ -717,9 +754,10 @@ depends-member:
 - !private ["So11UIFocusItemP", "registerNib"]
 - !private ["So11UIFocusItemP", "text"]
 - !private ["So11UIFocusItemP", "translatesAutoresizingMaskIntoConstraints"]
-- !private ["So20UIFocusItemContainerP", ""]
+- ["So20UIFocusItemContainerP", ""]
 - !private ["So20UIFocusItemContainerP", "backgroundColor"]
 - !private ["So20UIFocusItemContainerP", "dequeueReusableCell"]
+- !private ["So20UIFocusItemContainerP", "dequeueReusableCellWithIdentifier"]
 - !private ["So20UIFocusItemContainerP", "drinkImageView"]
 - !private ["So20UIFocusItemContainerP", "frame"]
 - !private ["So20UIFocusItemContainerP", "image"]
@@ -731,6 +769,7 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "text"]
 - !private ["So20UIFocusItemContainerP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So30UIFocusItemScrollableContainerP", "dequeueReusableCell"]
+- !private ["So30UIFocusItemScrollableContainerP", "dequeueReusableCellWithIdentifier"]
 - !private ["So30UIFocusItemScrollableContainerP", "frame"]
 - !private ["So30UIFocusItemScrollableContainerP", "register"]
 - !private ["So30UIFocusItemScrollableContainerP", "registerClass"]
@@ -745,6 +784,7 @@ depends-member:
 - !private ["So7UILabelC", "text"]
 - !private ["So24UILargeContentViewerItemP", "backgroundColor"]
 - !private ["So24UILargeContentViewerItemP", "dequeueReusableCell"]
+- !private ["So24UILargeContentViewerItemP", "dequeueReusableCellWithIdentifier"]
 - !private ["So24UILargeContentViewerItemP", "drinkImageView"]
 - !private ["So24UILargeContentViewerItemP", "frame"]
 - !private ["So24UILargeContentViewerItemP", "image"]
@@ -761,11 +801,15 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "Drink"]
 - !private ["So30UIPasteConfigurationSupportingP", "DrinkTableViewCell"]
 - !private ["So30UIPasteConfigurationSupportingP", "DrinkViewController"]
+- ["So30UIPasteConfigurationSupportingP", "IndexPath"]
+- ["So30UIPasteConfigurationSupportingP", "Int"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIImage"]
+- ["So30UIPasteConfigurationSupportingP", "UITableView"]
 - ["So30UIPasteConfigurationSupportingP", "UITableViewCell"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "backgroundColor"]
 - !private ["So30UIPasteConfigurationSupportingP", "dequeueReusableCell"]
+- !private ["So30UIPasteConfigurationSupportingP", "dequeueReusableCellWithIdentifier"]
 - !private ["So30UIPasteConfigurationSupportingP", "drinkImageView"]
 - !private ["So30UIPasteConfigurationSupportingP", "fatalError"]
 - !private ["So30UIPasteConfigurationSupportingP", "frame"]
@@ -800,6 +844,7 @@ depends-member:
 - ["So11UIResponderC", ""]
 - !private ["So11UIResponderC", "backgroundColor"]
 - !private ["So11UIResponderC", "dequeueReusableCell"]
+- !private ["So11UIResponderC", "dequeueReusableCellWithIdentifier"]
 - !private ["So11UIResponderC", "drinkImageView"]
 - !private ["So11UIResponderC", "fatalError"]
 - !private ["So11UIResponderC", "frame"]
@@ -824,11 +869,15 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "Drink"]
 - !private ["So30UIResponderStandardEditActionsP", "DrinkTableViewCell"]
 - !private ["So30UIResponderStandardEditActionsP", "DrinkViewController"]
+- ["So30UIResponderStandardEditActionsP", "IndexPath"]
+- ["So30UIResponderStandardEditActionsP", "Int"]
 - !private ["So30UIResponderStandardEditActionsP", "UIImage"]
+- ["So30UIResponderStandardEditActionsP", "UITableView"]
 - ["So30UIResponderStandardEditActionsP", "UITableViewCell"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "backgroundColor"]
 - !private ["So30UIResponderStandardEditActionsP", "dequeueReusableCell"]
+- !private ["So30UIResponderStandardEditActionsP", "dequeueReusableCellWithIdentifier"]
 - !private ["So30UIResponderStandardEditActionsP", "drinkImageView"]
 - !private ["So30UIResponderStandardEditActionsP", "fatalError"]
 - !private ["So30UIResponderStandardEditActionsP", "frame"]
@@ -851,6 +900,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
 - ["So12UIScrollViewC", ""]
 - !private ["So12UIScrollViewC", "dequeueReusableCell"]
+- !private ["So12UIScrollViewC", "dequeueReusableCellWithIdentifier"]
 - !private ["So12UIScrollViewC", "frame"]
 - !private ["So12UIScrollViewC", "register"]
 - !private ["So12UIScrollViewC", "registerClass"]
@@ -861,8 +911,11 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "Drink"]
 - !private ["So20UIScrollViewDelegateP", "DrinkTableViewCell"]
 - !private ["So20UIScrollViewDelegateP", "DrinkViewController"]
+- ["So20UIScrollViewDelegateP", "IndexPath"]
+- ["So20UIScrollViewDelegateP", "Int"]
 - ["So20UIScrollViewDelegateP", "NSCoder"]
 - !private ["So20UIScrollViewDelegateP", "UIImage"]
+- ["So20UIScrollViewDelegateP", "UITableView"]
 - ["So20UIScrollViewDelegateP", "UITableViewCell"]
 - ["So20UIScrollViewDelegateP", ""]
 - !private ["So20UIScrollViewDelegateP", "fatalError"]
@@ -882,7 +935,10 @@ depends-member:
 - !private ["So16UIStateRestoringP", "Drink"]
 - !private ["So16UIStateRestoringP", "DrinkTableViewCell"]
 - !private ["So16UIStateRestoringP", "DrinkViewController"]
+- ["So16UIStateRestoringP", "IndexPath"]
+- ["So16UIStateRestoringP", "Int"]
 - !private ["So16UIStateRestoringP", "UIImage"]
+- ["So16UIStateRestoringP", "UITableView"]
 - ["So16UIStateRestoringP", "UITableViewCell"]
 - ["So16UIStateRestoringP", ""]
 - !private ["So16UIStateRestoringP", "fatalError"]
@@ -927,8 +983,11 @@ depends-member:
 - !private ["So21UITableViewDataSourceP", "Drink"]
 - !private ["So21UITableViewDataSourceP", "DrinkTableViewCell"]
 - !private ["So21UITableViewDataSourceP", "DrinkViewController"]
+- ["So21UITableViewDataSourceP", "IndexPath"]
+- ["So21UITableViewDataSourceP", "Int"]
 - ["So21UITableViewDataSourceP", "NSCoder"]
 - !private ["So21UITableViewDataSourceP", "UIImage"]
+- ["So21UITableViewDataSourceP", "UITableView"]
 - ["So21UITableViewDataSourceP", "UITableViewCell"]
 - ["So21UITableViewDataSourceP", ""]
 - !private ["So21UITableViewDataSourceP", "fatalError"]
@@ -944,8 +1003,11 @@ depends-member:
 - !private ["So19UITableViewDelegateP", "Drink"]
 - !private ["So19UITableViewDelegateP", "DrinkTableViewCell"]
 - !private ["So19UITableViewDelegateP", "DrinkViewController"]
+- ["So19UITableViewDelegateP", "IndexPath"]
+- ["So19UITableViewDelegateP", "Int"]
 - ["So19UITableViewDelegateP", "NSCoder"]
 - !private ["So19UITableViewDelegateP", "UIImage"]
+- ["So19UITableViewDelegateP", "UITableView"]
 - ["So19UITableViewDelegateP", "UITableViewCell"]
 - ["So19UITableViewDelegateP", ""]
 - !private ["So19UITableViewDelegateP", "fatalError"]
@@ -961,11 +1023,15 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "Drink"]
 - !private ["So18UITraitEnvironmentP", "DrinkTableViewCell"]
 - !private ["So18UITraitEnvironmentP", "DrinkViewController"]
+- ["So18UITraitEnvironmentP", "IndexPath"]
+- ["So18UITraitEnvironmentP", "Int"]
 - !private ["So18UITraitEnvironmentP", "UIImage"]
+- ["So18UITraitEnvironmentP", "UITableView"]
 - ["So18UITraitEnvironmentP", "UITableViewCell"]
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "backgroundColor"]
 - !private ["So18UITraitEnvironmentP", "dequeueReusableCell"]
+- !private ["So18UITraitEnvironmentP", "dequeueReusableCellWithIdentifier"]
 - !private ["So18UITraitEnvironmentP", "drinkImageView"]
 - !private ["So18UITraitEnvironmentP", "fatalError"]
 - !private ["So18UITraitEnvironmentP", "frame"]
@@ -989,11 +1055,15 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "Drink"]
 - !private ["So23UIUserActivityRestoringP", "DrinkTableViewCell"]
 - !private ["So23UIUserActivityRestoringP", "DrinkViewController"]
+- ["So23UIUserActivityRestoringP", "IndexPath"]
+- ["So23UIUserActivityRestoringP", "Int"]
 - !private ["So23UIUserActivityRestoringP", "UIImage"]
+- ["So23UIUserActivityRestoringP", "UITableView"]
 - ["So23UIUserActivityRestoringP", "UITableViewCell"]
 - ["So23UIUserActivityRestoringP", ""]
 - !private ["So23UIUserActivityRestoringP", "backgroundColor"]
 - !private ["So23UIUserActivityRestoringP", "dequeueReusableCell"]
+- !private ["So23UIUserActivityRestoringP", "dequeueReusableCellWithIdentifier"]
 - !private ["So23UIUserActivityRestoringP", "drinkImageView"]
 - !private ["So23UIUserActivityRestoringP", "fatalError"]
 - !private ["So23UIUserActivityRestoringP", "frame"]
@@ -1017,6 +1087,7 @@ depends-member:
 - ["So6UIViewC", ""]
 - !private ["So6UIViewC", "backgroundColor"]
 - !private ["So6UIViewC", "dequeueReusableCell"]
+- !private ["So6UIViewC", "dequeueReusableCellWithIdentifier"]
 - !private ["So6UIViewC", "drinkImageView"]
 - !private ["So6UIViewC", "frame"]
 - !private ["So6UIViewC", "image"]
@@ -1165,6 +1236,7 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "text"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "translatesAutoresizingMaskIntoConstraints"]
 depends-nominal:
+- !private "s18AdditiveArithmeticP"
 - !private "7SwiftUI10AnimatableP"
 - !private "Sa"
 - !private "s10ArraySliceV"
@@ -1191,11 +1263,13 @@ depends-nominal:
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
 - !private "s32ExpressibleByStringInterpolationP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "SF"
 - !private "7SwiftUI7GestureP"
 - "SH"
 - !private "s12IdentifiableP"
@@ -1216,12 +1290,15 @@ depends-nominal:
 - "So8NSObjectP"
 - !private "So14NSSecureCodingP"
 - !private "So8NSStringC"
+- !private "Sj"
 - !private "7Combine16ObservableObjectP"
 - !private "Sq"
 - !private "Sk"
 - !private "Sm"
 - !private "10Foundation20ReferenceConvertibleP"
 - !private "ST"
+- !private "s13SignedNumericP"
+- !private "Sx"
 - !private "SS"
 - !private "Sy"
 - !private "s16TextOutputStreamP"
@@ -1233,12 +1310,13 @@ depends-nominal:
 - !private "So7UIColorC"
 - "So18UIContentContainerP"
 - !private "So30UIContentSizeCategoryAdjustingP"
+- "So33UIContextMenuInteractionAnimatingP"
 - !private "So17UICoordinateSpaceP"
 - !private "So23UIDataSourceTranslatingP"
 - !private "So13UIDynamicItemP"
 - "So18UIFocusEnvironmentP"
 - !private "So11UIFocusItemP"
-- !private "So20UIFocusItemContainerP"
+- "So20UIFocusItemContainerP"
 - !private "So30UIFocusItemScrollableContainerP"
 - !private "So27UIGestureRecognizerDelegateP"
 - !private "So7UIImageC"

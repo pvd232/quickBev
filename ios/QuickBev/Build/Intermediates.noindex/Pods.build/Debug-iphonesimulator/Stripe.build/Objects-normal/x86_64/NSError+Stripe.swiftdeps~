@@ -1,0 +1,429 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+provides-member:
+- ["So7NSErrorC", ""]
+- ["So7NSErrorC", "stp_genericConnectionError"]
+- ["So7NSErrorC", "stp_genericFailedToParseResponseError"]
+- ["So7NSErrorC", "stp_ephemeralKeyDecodingError"]
+- ["So7NSErrorC", "stp_cardErrorInvalidNumberUserMessage"]
+- ["So7NSErrorC", "stp_cardInvalidCVCUserMessage"]
+- ["So7NSErrorC", "stp_cardErrorInvalidExpMonthUserMessage"]
+- ["So7NSErrorC", "stp_cardErrorInvalidExpYearUserMessage"]
+- ["So7NSErrorC", "stp_cardErrorExpiredCardUserMessage"]
+- ["So7NSErrorC", "stp_cardErrorDeclinedUserMessage"]
+- ["So7NSErrorC", "stp_cardErrorProcessingErrorUserMessage"]
+- ["So7NSErrorC", "stp_unexpectedErrorMessage"]
+provides-dynamic-lookup:
+- "stp_cardErrorDeclinedUserMessage"
+- "stp_cardErrorExpiredCardUserMessage"
+- "stp_cardErrorInvalidExpMonthUserMessage"
+- "stp_cardErrorInvalidExpYearUserMessage"
+- "stp_cardErrorInvalidNumberUserMessage"
+- "stp_cardErrorProcessingErrorUserMessage"
+- "stp_cardInvalidCVCUserMessage"
+- "stp_ephemeralKeyDecodingError"
+- "stp_genericConnectionError"
+- "stp_genericFailedToParseResponseError"
+- "stp_unexpectedErrorMessage"
+depends-top-level:
+- !private "Dictionary"
+- "NSError"
+- !private "NSLocalizedDescriptionKey"
+- !private "STPError"
+- !private "STPErrorCode"
+- !private "STPLocalizedString"
+- "String"
+- !private "StringLiteralType"
+- !private "stp_unexpectedErrorMessage"
+depends-member:
+- !private ["s7CVarArgP", "NSError"]
+- !private ["s7CVarArgP", "NSLocalizedDescriptionKey"]
+- !private ["s7CVarArgP", "STPError"]
+- !private ["s7CVarArgP", "STPErrorCode"]
+- !private ["s7CVarArgP", "STPLocalizedString"]
+- !private ["s7CVarArgP", "errorMessageKey"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "stp_unexpectedErrorMessage"]
+- !private ["s7CVarArgP", "stripeDomain"]
+- !private ["s28CustomDebugStringConvertibleP", "NSError"]
+- !private ["s28CustomDebugStringConvertibleP", "NSLocalizedDescriptionKey"]
+- !private ["s28CustomDebugStringConvertibleP", "STPError"]
+- !private ["s28CustomDebugStringConvertibleP", "STPErrorCode"]
+- !private ["s28CustomDebugStringConvertibleP", "STPLocalizedString"]
+- !private ["s28CustomDebugStringConvertibleP", "errorMessageKey"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "stp_unexpectedErrorMessage"]
+- !private ["s28CustomDebugStringConvertibleP", "stripeDomain"]
+- !private ["s23CustomStringConvertibleP", "NSError"]
+- !private ["s23CustomStringConvertibleP", "NSLocalizedDescriptionKey"]
+- !private ["s23CustomStringConvertibleP", "STPError"]
+- !private ["s23CustomStringConvertibleP", "STPErrorCode"]
+- !private ["s23CustomStringConvertibleP", "STPLocalizedString"]
+- !private ["s23CustomStringConvertibleP", "errorMessageKey"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "stp_unexpectedErrorMessage"]
+- !private ["s23CustomStringConvertibleP", "stripeDomain"]
+- !private ["SQ", "NSError"]
+- !private ["SQ", "NSLocalizedDescriptionKey"]
+- !private ["SQ", "STPError"]
+- !private ["SQ", "STPErrorCode"]
+- !private ["SQ", "STPLocalizedString"]
+- !private ["SQ", ""]
+- !private ["SQ", "apiError"]
+- !private ["SQ", "connectionError"]
+- !private ["SQ", "ephemeralKeyDecodingError"]
+- !private ["SQ", "errorMessageKey"]
+- !private ["SQ", "init"]
+- !private ["SQ", "rawValue"]
+- !private ["SQ", "stp_unexpectedErrorMessage"]
+- !private ["SQ", "stripeDomain"]
+- !private ["s5ErrorP", "NSError"]
+- !private ["s5ErrorP", "NSLocalizedDescriptionKey"]
+- !private ["s5ErrorP", "STPError"]
+- !private ["s5ErrorP", "STPErrorCode"]
+- !private ["s5ErrorP", "STPLocalizedString"]
+- !private ["s5ErrorP", "init"]
+- !private ["s5ErrorP", "stp_unexpectedErrorMessage"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Key"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Value"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["SH", "NSError"]
+- !private ["SH", "NSLocalizedDescriptionKey"]
+- !private ["SH", "STPError"]
+- !private ["SH", "STPErrorCode"]
+- !private ["SH", "STPLocalizedString"]
+- !private ["SH", "apiError"]
+- !private ["SH", "connectionError"]
+- !private ["SH", "ephemeralKeyDecodingError"]
+- !private ["SH", "errorMessageKey"]
+- !private ["SH", "init"]
+- !private ["SH", "rawValue"]
+- !private ["SH", "stp_unexpectedErrorMessage"]
+- !private ["SH", "stripeDomain"]
+- !private ["So8NSCodingP", "NSError"]
+- !private ["So8NSCodingP", "NSLocalizedDescriptionKey"]
+- !private ["So8NSCodingP", "STPError"]
+- !private ["So8NSCodingP", "STPErrorCode"]
+- !private ["So8NSCodingP", "STPLocalizedString"]
+- ["So8NSCodingP", "String"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "init"]
+- ["So8NSCodingP", "stp_cardErrorDeclinedUserMessage"]
+- ["So8NSCodingP", "stp_cardErrorExpiredCardUserMessage"]
+- ["So8NSCodingP", "stp_cardErrorInvalidExpMonthUserMessage"]
+- ["So8NSCodingP", "stp_cardErrorInvalidExpYearUserMessage"]
+- ["So8NSCodingP", "stp_cardErrorInvalidNumberUserMessage"]
+- ["So8NSCodingP", "stp_cardErrorProcessingErrorUserMessage"]
+- ["So8NSCodingP", "stp_cardInvalidCVCUserMessage"]
+- ["So8NSCodingP", "stp_ephemeralKeyDecodingError"]
+- ["So8NSCodingP", "stp_genericConnectionError"]
+- ["So8NSCodingP", "stp_genericFailedToParseResponseError"]
+- ["So8NSCodingP", "stp_unexpectedErrorMessage"]
+- !private ["So9NSCopyingP", "NSError"]
+- !private ["So9NSCopyingP", "NSLocalizedDescriptionKey"]
+- !private ["So9NSCopyingP", "STPError"]
+- !private ["So9NSCopyingP", "STPErrorCode"]
+- !private ["So9NSCopyingP", "STPLocalizedString"]
+- ["So9NSCopyingP", "String"]
+- !private ["So9NSCopyingP", "init"]
+- ["So9NSCopyingP", "stp_cardErrorDeclinedUserMessage"]
+- ["So9NSCopyingP", "stp_cardErrorExpiredCardUserMessage"]
+- ["So9NSCopyingP", "stp_cardErrorInvalidExpMonthUserMessage"]
+- ["So9NSCopyingP", "stp_cardErrorInvalidExpYearUserMessage"]
+- ["So9NSCopyingP", "stp_cardErrorInvalidNumberUserMessage"]
+- ["So9NSCopyingP", "stp_cardErrorProcessingErrorUserMessage"]
+- ["So9NSCopyingP", "stp_cardInvalidCVCUserMessage"]
+- ["So9NSCopyingP", "stp_ephemeralKeyDecodingError"]
+- ["So9NSCopyingP", "stp_genericConnectionError"]
+- ["So9NSCopyingP", "stp_genericFailedToParseResponseError"]
+- ["So9NSCopyingP", "stp_unexpectedErrorMessage"]
+- ["So7NSErrorC", "NSError"]
+- !private ["So7NSErrorC", "NSLocalizedDescriptionKey"]
+- !private ["So7NSErrorC", "STPError"]
+- !private ["So7NSErrorC", "STPErrorCode"]
+- !private ["So7NSErrorC", "STPLocalizedString"]
+- ["So7NSErrorC", "String"]
+- ["So7NSErrorC", ""]
+- !private ["So7NSErrorC", "init"]
+- ["So7NSErrorC", "stp_cardErrorDeclinedUserMessage"]
+- ["So7NSErrorC", "stp_cardErrorExpiredCardUserMessage"]
+- ["So7NSErrorC", "stp_cardErrorInvalidExpMonthUserMessage"]
+- ["So7NSErrorC", "stp_cardErrorInvalidExpYearUserMessage"]
+- ["So7NSErrorC", "stp_cardErrorInvalidNumberUserMessage"]
+- ["So7NSErrorC", "stp_cardErrorProcessingErrorUserMessage"]
+- ["So7NSErrorC", "stp_cardInvalidCVCUserMessage"]
+- ["So7NSErrorC", "stp_ephemeralKeyDecodingError"]
+- ["So7NSErrorC", "stp_genericConnectionError"]
+- ["So7NSErrorC", "stp_genericFailedToParseResponseError"]
+- ["So7NSErrorC", "stp_unexpectedErrorMessage"]
+- ["So8NSObjectC", "NSError"]
+- !private ["So8NSObjectC", "NSLocalizedDescriptionKey"]
+- !private ["So8NSObjectC", "STPError"]
+- !private ["So8NSObjectC", "STPErrorCode"]
+- !private ["So8NSObjectC", "STPLocalizedString"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "errorMessageKey"]
+- !private ["So8NSObjectC", "errorWithDomain"]
+- !private ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "stp_cardErrorDeclinedUserMessage"]
+- ["So8NSObjectC", "stp_cardErrorExpiredCardUserMessage"]
+- ["So8NSObjectC", "stp_cardErrorInvalidExpMonthUserMessage"]
+- ["So8NSObjectC", "stp_cardErrorInvalidExpYearUserMessage"]
+- ["So8NSObjectC", "stp_cardErrorInvalidNumberUserMessage"]
+- ["So8NSObjectC", "stp_cardErrorProcessingErrorUserMessage"]
+- ["So8NSObjectC", "stp_cardInvalidCVCUserMessage"]
+- ["So8NSObjectC", "stp_ephemeralKeyDecodingError"]
+- ["So8NSObjectC", "stp_genericConnectionError"]
+- ["So8NSObjectC", "stp_genericFailedToParseResponseError"]
+- ["So8NSObjectC", "stp_unexpectedErrorMessage"]
+- !private ["So8NSObjectC", "stripeDomain"]
+- !private ["So8NSObjectP", "NSError"]
+- !private ["So8NSObjectP", "NSLocalizedDescriptionKey"]
+- !private ["So8NSObjectP", "STPError"]
+- !private ["So8NSObjectP", "STPErrorCode"]
+- !private ["So8NSObjectP", "STPLocalizedString"]
+- !private ["So8NSObjectP", "errorMessageKey"]
+- !private ["So8NSObjectP", "errorWithDomain"]
+- !private ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "stp_cardErrorDeclinedUserMessage"]
+- ["So8NSObjectP", "stp_cardErrorExpiredCardUserMessage"]
+- ["So8NSObjectP", "stp_cardErrorInvalidExpMonthUserMessage"]
+- ["So8NSObjectP", "stp_cardErrorInvalidExpYearUserMessage"]
+- ["So8NSObjectP", "stp_cardErrorInvalidNumberUserMessage"]
+- ["So8NSObjectP", "stp_cardErrorProcessingErrorUserMessage"]
+- ["So8NSObjectP", "stp_cardInvalidCVCUserMessage"]
+- ["So8NSObjectP", "stp_ephemeralKeyDecodingError"]
+- ["So8NSObjectP", "stp_genericConnectionError"]
+- ["So8NSObjectP", "stp_genericFailedToParseResponseError"]
+- ["So8NSObjectP", "stp_unexpectedErrorMessage"]
+- !private ["So8NSObjectP", "stripeDomain"]
+- !private ["So14NSSecureCodingP", "NSError"]
+- !private ["So14NSSecureCodingP", "NSLocalizedDescriptionKey"]
+- !private ["So14NSSecureCodingP", "STPError"]
+- !private ["So14NSSecureCodingP", "STPErrorCode"]
+- !private ["So14NSSecureCodingP", "STPLocalizedString"]
+- ["So14NSSecureCodingP", "String"]
+- !private ["So14NSSecureCodingP", "init"]
+- ["So14NSSecureCodingP", "stp_cardErrorDeclinedUserMessage"]
+- ["So14NSSecureCodingP", "stp_cardErrorExpiredCardUserMessage"]
+- ["So14NSSecureCodingP", "stp_cardErrorInvalidExpMonthUserMessage"]
+- ["So14NSSecureCodingP", "stp_cardErrorInvalidExpYearUserMessage"]
+- ["So14NSSecureCodingP", "stp_cardErrorInvalidNumberUserMessage"]
+- ["So14NSSecureCodingP", "stp_cardErrorProcessingErrorUserMessage"]
+- ["So14NSSecureCodingP", "stp_cardInvalidCVCUserMessage"]
+- ["So14NSSecureCodingP", "stp_ephemeralKeyDecodingError"]
+- ["So14NSSecureCodingP", "stp_genericConnectionError"]
+- ["So14NSSecureCodingP", "stp_genericFailedToParseResponseError"]
+- ["So14NSSecureCodingP", "stp_unexpectedErrorMessage"]
+- !private ["SY", "apiError"]
+- !private ["SY", "connectionError"]
+- !private ["SY", "ephemeralKeyDecodingError"]
+- !private ["SY", "rawValue"]
+- !private ["6Stripe8STPErrorC", "errorMessageKey"]
+- !private ["6Stripe8STPErrorC", "stripeDomain"]
+- !private ["6Stripe12STPErrorCodeO", "RawValue"]
+- !private ["6Stripe12STPErrorCodeO", ""]
+- !private ["6Stripe12STPErrorCodeO", "apiError"]
+- !private ["6Stripe12STPErrorCodeO", "connectionError"]
+- !private ["6Stripe12STPErrorCodeO", "ephemeralKeyDecodingError"]
+- !private ["6Stripe12STPErrorCodeO", "rawValue"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSLocalizedDescriptionKey"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPErrorCode"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "STPLocalizedString"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "errorMessageKey"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stp_unexpectedErrorMessage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stripeDomain"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSError"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSLocalizedDescriptionKey"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPError"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPErrorCode"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "STPLocalizedString"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "errorMessageKey"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stp_unexpectedErrorMessage"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stripeDomain"]
+depends-nominal:
+- !private "s7CVarArgP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s23CustomStringConvertibleP"
+- !private "SQ"
+- !private "s5ErrorP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "SH"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So7NSErrorC"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "So14NSSecureCodingP"
+- !private "SY"
+- !private "6Stripe8STPErrorC"
+- !private "6Stripe12STPErrorCodeO"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "10Foundation37_KeyValueCodingAndObservingPublishingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreML.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Vision.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/os.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Contacts.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CloudKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/DeveloperToolsSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIViewController+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSError+Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/Stripe3DS2.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Target Support Files/Stripe/Stripe-umbrella.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDS2Service.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseImage.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSErrorMessage.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONDecodable.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONEncodable.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONWebSignature.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponse.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationResponse.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDirectoryServerCertificate.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDSProtocolVersion+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTransaction+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformationParameter+Private.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSString+EmptyChecking.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSWarning.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSLocalizedString.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSEphemeralKeyPair+Testing.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSwiftTryCatch.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSErrorMessage+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDirectoryServerCertificate+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSException+Internal.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseMessageExtension.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSThreeDSProtocolVersion.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformation.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIButton+CustomInitialization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSUICustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTextFieldCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSLabelCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSelectionCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSButtonCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSNavigationBarCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSFooterCustomization.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTransaction.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSNotInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAlreadyInitializedException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSRuntimeException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSInvalidInputException.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONWebEncryption.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSelectionButton.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseSelectionInfo.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/Stripe3DS2-Bridging-Header.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSImageLoader.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJSONEncoder.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSACSNetworkingManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSynchronousLocationManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformationManager.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSJailbreakChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSOSVersionChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDebuggerChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSimulatorChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSIntegrityChecker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCategoryLinker.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseViewController.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSProgressViewController.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDeviceInformationParameter.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeStatusReceiver.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSDirectoryServer.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSEphemeralKeyPair.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSStripe3DS2Error.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSBundleLocator.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSecTypeUtilities.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSData+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSString+JWEHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSDictionary+DecodingHelpers.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSConfigParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationRequestParameters.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIColor+DefaultColors.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSIPAddress.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIFont+DefaultFonts.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseImageObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSAuthenticationResponseObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseMessageExtensionObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeResponseSelectionInfoObject.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSCompletionEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSRuntimeErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSProtocolErrorEvent.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSEllipticCurvePoint.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIColor+ThirteenSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/NSLayoutConstraint+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/UIView+LayoutSupport.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSWebView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSTextChallengeView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSBrandingView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSProcessingView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSStackView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSExpandableInformationView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSChallengeSelectionView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSSpacerView.h"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Pods/Stripe/Stripe3DS2/Stripe3DS2/include/STDSWhitelistView.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/machina/Developer/quickbev/ios/QuickBev/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Stripe.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Contacts.framework/Headers/Contacts.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CloudKit.framework/Headers/CloudKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/PassKit.framework/Headers/PassKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "c4c96ce21a0d50ae2a2ac1bbab471f25"

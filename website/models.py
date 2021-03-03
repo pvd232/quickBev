@@ -139,6 +139,7 @@ class Customer(db.Model):
     first_name = db.Column(db.String(80), nullable=False)
     last_name = db.Column(db.String(80), nullable=False)
     email_verified = db.Column(db.Boolean(), nullable=False)
+    has_registered = db.Column(db.Boolean(), nullable=False)
     device_token = db.Column(db.String(80), nullable=True)
     order = relationship('Order', lazy=True, backref="order")
     tab = relationship('Tab', lazy=True, backref="tab")
@@ -282,6 +283,20 @@ class ETag (db.Model):
         return serialized_attributes
 
 
+class Guest_Device_Token(db.Model):
+    __tablename__ = 'guest_device_token'
+    id = db.Column(db.String(80), primary_key=True, nullable=False)
+
+    @property
+    def serialize(self):
+        attribute_names = list(self.__dict__.keys())
+        attributes = list(self.__dict__.values())
+        serialized_attributes = {}
+        for i in range(len(attributes)):
+            serialized_attributes[attribute_names[i]] = attributes[i]
+        return serialized_attributes
+
+
 def load_json(filename):
 
     with open(filename) as file:
@@ -299,7 +314,7 @@ def create_business():
     new_stripe_account = Stripe_Account(id=new_account.id)
     db.session.add(new_stripe_account)
     new_merchant = Merchant(id="a", password="a", first_name="peter",
-                            last_name="driscoll", phone_number=5126456898, number_of_businesses=2)
+                            last_name="driscoll", phone_number=5126456898, number_of_businesses=2, has_registered=False)
     new_merchant_stripe = Merchant_Stripe(
         merchant_id=new_merchant.id, stripe_id=new_stripe_account.id)
 
@@ -380,6 +395,8 @@ def create_everything():
     create_business()
     create_drink()
 
+
+# db.create_all()
 
 # create_everything()
 # create_etag()

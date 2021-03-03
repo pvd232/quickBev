@@ -241,6 +241,16 @@ SWIFT_CLASS("_TtC8QuickBev21AccountViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
+@class STPPaymentContext;
+@class STPPaymentResult;
+
+@interface AccountViewController (SWIFT_EXTENSION(QuickBev)) <STPPaymentContextDelegate>
+- (void)paymentContext:(STPPaymentContext * _Nonnull)_ didFailToLoadWithError:(NSError * _Nonnull)error;
+- (void)paymentContextDidChange:(STPPaymentContext * _Nonnull)_;
+- (void)paymentContext:(STPPaymentContext * _Nonnull)_ didCreatePaymentResult:(STPPaymentResult * _Nonnull)_ completion:(void (^ _Nonnull)(enum STPPaymentStatus, NSError * _Nullable))_;
+- (void)paymentContext:(STPPaymentContext * _Nonnull)_ didFinishWith:(enum STPPaymentStatus)_ error:(NSError * _Nullable)_;
+@end
+
 @class UIApplication;
 @class UISceneSession;
 @class UISceneConnectionOptions;
@@ -362,18 +372,18 @@ SWIFT_CLASS("_TtC8QuickBev12CheckoutCart")
 
 
 @interface CheckoutCart (SWIFT_EXTENSION(QuickBev))
-- (void)addBusinessObject:(Business * _Nonnull)value;
-- (void)removeBusinessObject:(Business * _Nonnull)value;
-- (void)addBusiness:(NSSet * _Nonnull)values;
-- (void)removeBusiness:(NSSet * _Nonnull)values;
-@end
-
-
-@interface CheckoutCart (SWIFT_EXTENSION(QuickBev))
 - (void)addDrinksObject:(Drink * _Nonnull)value;
 - (void)removeDrinksObject:(Drink * _Nonnull)value;
 - (void)addDrinks:(NSSet * _Nonnull)values;
 - (void)removeDrinks:(NSSet * _Nonnull)values;
+@end
+
+
+@interface CheckoutCart (SWIFT_EXTENSION(QuickBev))
+- (void)addBusinessObject:(Business * _Nonnull)value;
+- (void)removeBusinessObject:(Business * _Nonnull)value;
+- (void)addBusiness:(NSSet * _Nonnull)values;
+- (void)removeBusiness:(NSSet * _Nonnull)values;
 @end
 
 
@@ -418,6 +428,15 @@ SWIFT_CLASS("_TtC8QuickBev22CheckoutViewController")
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)_ SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)_ numberOfRowsInSection:(NSInteger)_ SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8QuickBev21ContactViewController")
+@interface ContactViewController : UIViewController
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ OBJC_DESIGNATED_INITIALIZER SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
@@ -579,36 +598,14 @@ SWIFT_CLASS("_TtC8QuickBev31OrderConfirmationViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
-@class UILabel;
-
-SWIFT_CLASS("_TtC8QuickBev18OrderTableViewCell")
-@interface OrderTableViewCell : UITableViewCell
-@property (nonatomic, strong) IBOutlet UILabel * _Null_unspecified orderNumber;
-@property (nonatomic, strong) IBOutlet UILabel * _Null_unspecified orderPrice;
-- (void)awakeFromNib;
-- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ OBJC_DESIGNATED_INITIALIZER SWIFT_UNAVAILABLE;
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
-@end
-
-
-SWIFT_CLASS("_TtC8QuickBev24OrderTableViewController")
-@interface OrderTableViewController : UITableViewController
-- (void)viewDidLoad;
-- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)_ SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)tableView:(UITableView * _Nonnull)_ numberOfRowsInSection:(NSInteger)_ SWIFT_WARN_UNUSED_RESULT;
-- (DrinkTableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
 
 SWIFT_CLASS("_TtC8QuickBev27PasswordResetViewController")
-@interface PasswordResetViewController : UIViewController
+@interface PasswordResetViewController : UIViewController <UITextFieldDelegate>
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ OBJC_DESIGNATED_INITIALIZER SWIFT_UNAVAILABLE;
 - (void)viewDidLoad;
+- (void)textFieldDidEndEditing:(UITextField * _Nonnull)textField;
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
@@ -643,8 +640,6 @@ SWIFT_CLASS("_TtC8QuickBev25ReviewOrderViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
-@class STPPaymentContext;
-@class STPPaymentResult;
 
 @interface ReviewOrderViewController (SWIFT_EXTENSION(QuickBev)) <STPPaymentContextDelegate>
 - (void)paymentContext:(STPPaymentContext * _Nonnull)_ didFailToLoadWithError:(NSError * _Nonnull)error;
@@ -700,23 +695,23 @@ SWIFT_CLASS("_TtC8QuickBev13SceneDelegate")
 @end
 
 
-SWIFT_CLASS("_TtC8QuickBev18SignInOrSignUpView")
-@interface SignInOrSignUpView : UIView
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ OBJC_DESIGNATED_INITIALIZER SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (void)updateConstraints;
-- (void)firstButtonTouchUp;
-- (void)secondButtonTouchUp;
-- (void)thirdButtonTouchUp;
-@end
-
-
 SWIFT_CLASS("_TtC8QuickBev24SplashPageViewController")
 @interface SplashPageViewController : UIViewController
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ OBJC_DESIGNATED_INITIALIZER SWIFT_UNAVAILABLE;
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8QuickBev10SplashView")
+@interface SplashView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ OBJC_DESIGNATED_INITIALIZER SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (void)updateConstraints;
+- (void)firstButtonTouchUp;
+- (void)secondButtonTouchUp;
+- (void)thirdButtonTouchUp;
 @end
 
 

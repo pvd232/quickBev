@@ -9,11 +9,11 @@
 import UIKit
 
 class RegistrationWithEmailViewController: UIViewController, UITextFieldDelegate {
-    @UsesAutoLayout var firstNameTextField = RoundedUITextField(theme: Theme.UITextField(props: [.font(nil), .placeHolderText("Your first name"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.white)]))
-    @UsesAutoLayout var lastNameTextField = RoundedUITextField(theme: Theme.UITextField(props: [.font(nil), .placeHolderText("Your last name"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.white)]))
-    @UsesAutoLayout var emailTextField = RoundedUITextField(theme: Theme.UITextField(props: [.font(nil), .placeHolderText("Your email address"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.white)]))
-    @UsesAutoLayout var confirmEmailTextField = RoundedUITextField(theme: Theme.UITextField(props: [.font(nil), .placeHolderText("Confirm your email address"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.white)]))
-    @UsesAutoLayout var passwordTextField = RoundedUITextField(theme: Theme.UITextField(props: [.font(nil), .placeHolderText("Your password"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.white)]))
+    @UsesAutoLayout var firstNameTextField = RoundedUITextField(theme: Theme.UITextField(props: [.font(nil), .placeHolderText("Your first name"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
+    @UsesAutoLayout var lastNameTextField = RoundedUITextField(theme: Theme.UITextField(props: [.font(nil), .placeHolderText("Your last name"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
+    @UsesAutoLayout var emailTextField = RoundedUITextField(theme: Theme.UITextField(props: [.font(nil), .placeHolderText("Your email address"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
+    @UsesAutoLayout var confirmEmailTextField = RoundedUITextField(theme: Theme.UITextField(props: [.font(nil), .placeHolderText("Confirm your email address"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
+    @UsesAutoLayout var passwordTextField = RoundedUITextField(theme: Theme.UITextField(props: [.font(nil), .placeHolderText("Your password"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
     @UsesAutoLayout var confirmPasswordTextField = RoundedUITextField(theme: Theme.UITextField(props: [.font(nil), .placeHolderText("Confirm your password"), .autocapitalizationType(autocapitalizationType: .none), .borderStyle(borderStyle: .roundedRect), .backgroundColor(UIColor.clear)]))
     @UsesAutoLayout var firstNameLabel = UILabel(theme: Theme.UILabel(props: [.text("First Name"), .font(nil), .textColor]))
     @UsesAutoLayout var lastNameLabel = UILabel(theme: Theme.UILabel(props: [.text("Last Name"), .font(nil), .textColor]))
@@ -181,7 +181,7 @@ class RegistrationWithEmailViewController: UIViewController, UITextFieldDelegate
                 self.present(alertController, animated: true, completion: nil)
             }
         } else {
-            let userCredentials: [HTTPHeader] = [HTTPHeader(field: "DeviceToken", value: "\(try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).getValue(for: "deviceToken") ?? "")")]
+            let userCredentials: [HTTPHeader] = [HTTPHeader(field: "DeviceToken", value: CheckoutCart.shared.deviceToken)]
             let request = try! APIRequest(method: .post, path: "/customer", body: requestedNewUser, headers: userCredentials)
             APIClient().perform(request) { result in
                 switch result {
@@ -213,6 +213,32 @@ class RegistrationWithEmailViewController: UIViewController, UITextFieldDelegate
                                 CoreDataManager.sharedManager.saveContext()
                             }
                         }
+                    } else if response.statusCode == 201, let response = try? response.decode(to: User.self) {
+                        let fetchedUser = response.body as User
+                        CheckoutCart.shared.user = fetchedUser
+                        CheckoutCart.shared.userId = requestedNewUser.email
+
+                        if CheckoutCart.shared.isGuest == false {
+                            // if the new user's stripe id is nill then this is the regular user creation process and a stripe id will be sent from the backend
+                            CheckoutCart.shared.stripeId = fetchedUser.stripeId
+                            requestedNewUser.stripeId = fetchedUser.stripeId
+
+                            let sessionToken = response.headers["authorization-token"] as! String
+                            try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).setValue(sessionToken, for: "sessionToken")
+                            // set the token in the shopping cart and use it whenever calling the backend
+                            DispatchQueue.main.async {
+                                self.activityIndicator.stopAnimating()
+                                self.alertAccountCreationPreviouslyRegistered()
+                            }
+                        }
+                        // the user is creating an account without having ordered something prior as a guest. this is the typical process which redirects to the home page
+                        else {
+                            DispatchQueue.main.async {
+                                self.activityIndicator.stopAnimating()
+                                self.alertAccountCreationForGuestPreviouslyRegistered()
+                                CoreDataManager.sharedManager.saveContext()
+                            }
+                        }
                     } else {
                         DispatchQueue.main.async {
                             self.activityIndicator.stopAnimating()
@@ -238,10 +264,26 @@ class RegistrationWithEmailViewController: UIViewController, UITextFieldDelegate
         )
     }
 
+    private func alertAccountCreationForGuestPreviouslyRegistered() {
+        return alert(
+            title: "",
+            message: "Welcome to QuickBev! This email has already been used to create an account, but its still unverified. We've updated the account information to match what you just submitted. You may now proceed with your order.",
+            alertType: "accountCreationGuest"
+        )
+    }
+
     private func alertAccountCreation() {
         return alert(
             title: "Welcome to QuickBev!",
             message: "",
+            alertType: "accountCreation"
+        )
+    }
+
+    private func alertAccountCreationPreviouslyRegistered() {
+        return alert(
+            title: "Welcome to QuickBev!",
+            message: "This email has already been used to create an account, but its still unverified. We've updated the account information to match what you just submitted.",
             alertType: "accountCreation"
         )
     }

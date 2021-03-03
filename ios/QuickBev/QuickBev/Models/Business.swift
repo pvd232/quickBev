@@ -57,7 +57,7 @@ public class Business: NSManagedObject, Codable {
         let jsonData = try! JSONEncoder().encode(CheckoutCart.businessETag)
         let headerString = String(data: jsonData, encoding: .utf8)!
         let ifNoneMatchHeader: [HTTPHeader] = [HTTPHeader(field: "If-None-Match", value: headerString)]
-        let request = try! APIRequest(method: .get, path: "/business", headers: ifNoneMatchHeader)
+        let request = try! APIRequest(method: .get, path: "/business/" + CheckoutCart.shared.sessionToken, headers: ifNoneMatchHeader)
         APIClient.perform(request) { result in
             switch result {
             case let .success(response):

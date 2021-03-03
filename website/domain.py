@@ -180,18 +180,16 @@ class Customer_Domain(object):
             self.first_name = customer_object.first_name
             self.last_name = customer_object.last_name
             self.email_verified = customer_object.email_verified
+            # self.has_registered = customer_object.has_registered
+            self.has_registered = False
+
             # might not want to send this sensitive information in every request
             if "password" in customer_object.__dict__.keys():
                 self.password = customer_object.password
             if "stripe_id" in customer_object.__dict__.keys():
                 self.stripe_id = customer_object.stripe_id
         elif customer_json:
-            print('customer_json', customer_json)
-            print()
-            print('customer_json["id"]', customer_json["id"])
-            print()
-            print('generate_password_hash(customer_json["id"], "sha256") ', generate_password_hash(
-                customer_json["id"], "sha256"))
+            # has registered property will be set in repository, so it will never be sent down from front end thus wont be necessary in initialization from json
             self.id = customer_json["id"]
             self.password = generate_password_hash(
                 customer_json["password"], "sha256")

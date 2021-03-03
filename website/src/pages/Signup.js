@@ -52,8 +52,8 @@ const CreateYourAccountFieldset = (props) => {
   const [errorMsg, setErrorMsg] = useReducer(
     (state, newState) => ({ ...state, ...newState }),
     {
-      confirmPwdDisplay: "none",
-      emailDisplay: "none",
+      confirmPasswordErrorMsg: "",
+      emailErrorMsg: "",
     }
   );
   const formChangeHandler = (event) => {
@@ -84,35 +84,32 @@ const CreateYourAccountFieldset = (props) => {
       } else {
         const newMerchant = new Merchant("merchantObject", formValue);
         const merchantData = { merchant: newMerchant };
-        API.makeRequest(
-          "POST",
-          "/validate-merchant",
-          merchantData,
-          false
-        ).then((response) => {
-          if (response) {
-            // if the username is available the response from the API will be true
-            props.onClick("next", "merchant", newMerchant);
-          } else {
-            // otherwise it will be false
-            newErrorMsgState["emailErrorMsg"] = "* Username already claimed";
-            newErrorMsgState["emailDisplay"] = "inline-block";
-            setErrorMsg(newErrorMsgState);
-            return false;
+        API.makeRequest("POST", "/validate-merchant", merchantData).then(
+          (response) => {
+            if (response) {
+              // if the username is available the response from the API will be true
+              props.onClick("next", "merchant", newMerchant);
+            } else {
+              // otherwise it will be false
+              newErrorMsgState["emailErrorMsg"] = "* Username already claimed";
+              newErrorMsgState["emailDisplay"] = "inline-block";
+              setErrorMsg(newErrorMsgState);
+              return false;
+            }
           }
-        });
+        );
       }
     } else {
       return false;
     }
   };
   const confirmPwdErrorMsgStyle = {
-    display: errorMsg.confirmPwdDisplay,
+    display: errorMsg ? errorMsg.confirmPwdDisplay : "none",
     textAlign: "left",
     marginTop: "0",
   };
   const emailErrorMsgStyle = {
-    display: errorMsg.emailDisplay,
+    display: errorMsg ? errorMsg.emailDisplay : "none",
     textAlign: "left",
     marginTop: "0",
   };
@@ -742,13 +739,8 @@ const Signup = () => {
     setLocalStorage("business", newBusiness);
     console.log("localStorageMerchant", localStorage.getItem("merchant"));
     // set in local storage if user has multiple businesses so we can display a tab to add more businesses late
-    let response = await API.makeRequest(
-      "POST",
-      "/signup",
-      newForm,
-      true
-    );
-    const responseBody = response[0];
+    let response = await API.makeRequest("POST", "/signup", newForm, true);
+    const responseBody = response;
     console.log(
       "responseBody.confirmed_new_business",
       responseBody.confirmed_new_business

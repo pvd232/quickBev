@@ -48,6 +48,7 @@ def send_apn(device_token, action):
     client = APNSHTTP2SandboxClient(
         token=token,
         bundle_id='com.theQuickCompany.QuickBev')
+
     if action == "email":
         client.send(
             ids=[device_token],
@@ -64,23 +65,12 @@ def send_apn(device_token, action):
     # )
 
 
-@app.route('/update/<string:customer_id>')
-def update(customer_id):
-    device_token = Customer_Service().get_device_token(customer_id)
-    send_apn(device_token)
-    return Response(status=200)
-
-
-@app.route('/apn-token/<string:customer_id>', methods=["POST"])
-def apn_token(customer_id):
+# this is called by the customer to update their device token after they have successfully logged in
+@app.route('/apn-token/<string:customer_id>/<string:session_token>', methods=["POST"])
+def apn_token(customer_id, session_token):
     device_token = request.headers.get("DeviceToken")
-    print('device_token', device_token)
-    authorization_token = request.headers.get(
-        "Authorization").split(" ")[1]
-    print('authorization_token', authorization_token)
-
-    if not jwt.decode(authorization_token, secret, algorithms=["HS256"]):
-        return 'Inconsistent request', 401
+    if not jwt.decode(session_token, secret, algorithms=["HS256"]):
+        return Response(status=401, response=json.dumps({"msg": "Inconsistent request"}))
     else:
         Customer_Service().update_device_token(device_token, customer_id)
         return Response(status=200)
@@ -106,15 +96,15 @@ def login():
         jwt_token = jwt.encode(
             {"sub": f'{serialized_customer["id"]}'}, key=secret, algorithm="HS256")
         headers["authorization-token"] = jwt_token
-        print('thing', jwt_token)
-        print('headers["authorization-token"]', headers["authorization-token"])
         return Response(status=200, response=json.dumps(serialized_customer), headers=headers)
     else:
         return Response(status=404, response=json.dumps(response))
 
 
-@app.route('/drink', methods=['GET'])
-def inventory():
+@app.route('/drink/<string:session_token>', methods=['GET'])
+def inventory(session_token):
+    if not jwt.decode(session_token, secret, algorithms=["HS256"]):
+        return Response(status=401, response=json.dumps({"msg": "Inconsistent request"}))
     drink_list = []
     response = {}
     headers = {}
@@ -141,8 +131,10 @@ def inventory():
     return Response(status=200, response=json.dumps(response), headers=headers)
 
 
-@app.route('/order', methods=['POST', 'GET', 'OPTIONS'])
-def orders():
+@app.route('/order/<string:session_token>', methods=['POST', 'GET', 'OPTIONS'])
+def orders(session_token):
+    if not jwt.decode(session_token, secret, algorithms=["HS256"]):
+        return Response(status=401, response=json.dumps({"msg": "Inconsistent request"}))
     response = {}
     order_service = Order_Service()
     if request.method == 'POST':
@@ -153,13 +145,13 @@ def orders():
         return Response(status=200, response=json.dumps(response))
     if request.method == 'OPTIONS':
         header = {}
-        header["Access-Control-Allow-Credentials"] = 'true'
+        header["Access-Control-Allow-Credentials"] = "true"
         return Response(status=200, headers=header)
     if request.method == "GET":
         header = {}
         header["Access-Control-Expose-Headers"] = "authorization"
         # header["Access-Control-Allow-Origin"] = "http://localhost:3000"
-        header["Access-Control-Allow-Credentials"] = 'true'
+        header["Access-Control-Allow-Credentials"] = "true"
         username = base64.b64decode(
             request.headers.get(
                 "Authorization").split(" ")[1]).decode("utf-8").split(":")[0]
@@ -179,9 +171,9 @@ def send_confirmation_email(jwt_token, customer, url):
 
     with open(logo, "rb") as image_file:
         encoded_string = base64.b64encode(image_file.read())
-
-    mail_body_text = f'<p style="margin-top: 15px;margin-bottom: 15px;">Hey {customer.first_name},</p><p style="margin-top: 15px;margin-bottom: 15px;">Welcome to QuickBev!</p><p style="margin-top: 15px;margin-bottom: 15px;">Please click the link below to verify your account</p><br /><p style="margin-top: 15px;margin-bottom: 15px;">Let the good times begin,</p><p style="margin-top: 15px;margin-bottom: 15px;">—The QuickBev Team</p></div><div style="display:flex; justify-content: center;"><a style="background-color:white; border-color:#8682E6; font-weight:bold; align-self:center;" href="{button_url}"><button type="button" class="btn btn-outline-*" style="background-color:white; border-color:#8682E6; font-weight:bold; align-self:center;">VERIFY EMAIL</button></a>'
-    mail_body = f'<div style="height: 100%;"><div style="width: 100%;height: 100%;display: flex;justify-content: center;background-color: #e8e8e8;"><div style="width: 100%;max-width: 500px;margin-top: 3%;margin-bottom: 10%; margin-right:auto; margin-left:auto; background-color: white;"><div  style="width: 100%; padding:30px 30px 30px 30px"><div  style="display: flex; width:100%; justify-content: center; text-align:center;"><img src="data:image/png;base64,{encoded_string} style="width:50%; height:12%" alt="img" /></div><div  style="margin-top: 30px;">{mail_body_text}</div></div></div></div>'
+    verify_button = f'<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin-right: auto; margin-left:auto; margin-top:3vh; padding-right:30px; border-collapse:separate;line-height:100%;"><tr><td><div><!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://www.activecampaign.com" style="height:40px;v-text-anchor:middle;width:130px;" arcsize="5%" strokecolor="#19cca3" fillcolor="#19cca3;width: 130;"><w:anchorlock/><center style="color:#ffffff;font-family:Helvetica, sans-serif;font-size:18px; font-weight: 600;">Click here!</center></v:roundrect><![endif]--><a href={button_url} style="display: inline-block; mso-hide:all; background-color: #19cca3; color: #FFFFFF; border:1px solid #19cca3; border-radius: 6px; line-height: 220%; width: 200px; font-family: Helvetica, sans-serif; font-size:18px; font-weight:600; text-align: center; text-decoration: none; -webkit-text-size-adjust:none;" target="_blank">Verify email!</a></a></div></td></tr></table>'
+    mail_body_text = f'<p style="margin-top: 15px;margin-bottom: 15px;">Hey {customer.first_name},</p><p style="margin-top: 15px;margin-bottom: 15px;">Welcome to QuickBev!</p><p style="margin-top: 15px;margin-bottom: 15px;">Please click the link below to verify your account</p><br /><p style="margin-top: 15px;margin-bottom: 15px;">Let the good times begin,</p><p style="margin-top: 15px;margin-bottom: 15px;">—The QuickBev Team</p></div><div style="width:100%">{verify_button}</div>'
+    mail_body = f'<div style="height: 100%;"><div style="width: 100%;height: 100%;background-color: #e8e8e8;"><div style="width: 100%;max-width: 500px;margin-top: 0%;margin-bottom: 10%; margin-right:auto; margin-left:auto; background-color: #e8e8e8;"><tr style="width:100%;height:20vh;"></tr><div style="width:calc(100% - 30px); padding:30px 30px 30px 30px; background-color:white"><div  style="display: flex; width:100%; text-align:center;"><img src="data:image/png;base64,{encoded_string} style="width:50%; height:12%" alt="img" /></div><div  style="margin-top: 30px;">{mail_body_text}</div></div></div></div>'
 
     sender_address = 'patardriscoll@gmail.com'
     email = 'patardriscoll@gmail.com'
@@ -209,6 +201,60 @@ def send_confirmation_email(jwt_token, customer, url):
     s.quit()
 
 
+def send_password_reset_email(jwt_token, customer):
+    print('jwt_token', jwt_token)
+    # host = request.headers.get('Host')
+    host = "localhost:3000"
+
+    button_url = f"http://{host}/reset-password/{jwt_token}"
+
+    logo = os.path.join(os.path.dirname(os.path.abspath(
+        __file__)), "./src/static/landscape-logo-purple.png")
+
+    with open(logo, "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read())
+    verify_button = f'<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin-right: auto; margin-top:5vh; margin-left:auto;   border-collapse:separate;line-height:100%;"><tr><td><div><!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://www.activecampaign.com" style="height:40px;v-text-anchor:middle;width:130px;" arcsize="5%" strokecolor="#19cca3" fillcolor="#19cca3;width: 130;"><w:anchorlock/><center style="color:#ffffff;font-family:Helvetica, sans-serif;font-size:18px; font-weight: 600;">Click here!</center></v:roundrect><![endif]--><a href={button_url} style="display: inline-block; mso-hide:all; background-color: #19cca3; color: #FFFFFF; border:1px solid #19cca3; border-radius: 6px; line-height: 220%; width: 200px; font-family: Helvetica, sans-serif; font-size:18px; font-weight:600; text-align: center; text-decoration: none; -webkit-text-size-adjust:none;" target="_blank">Reset passsword</a></a></div></td></tr></table>'
+    mail_body_text = f'<p style="margin-top: 3vh;margin-bottom: 15px;">Hey {customer.first_name},</p><p style="margin-top: 15px;margin-bottom: 15px;">Having trouble logging in?</p><p style="margin-top: 15px;margin-bottom: 15px;">No worries. Click the button below to reset your password.</p><br /><p style="margin-top: 15px;margin-bottom: 15px;">Keep calm and carry on,</p><p style="margin-top: 15px;margin-bottom: 15px;">—The QuickBev Team</p></div><div style="width:100%">{verify_button}</div>'
+    mail_body = f'<div style="height: 100%;"><div style="width: 100%;height: 100%;background-color: #e8e8e8;"><div style="width: 100%;max-width: 500px;height: 80vh; margin-top: 0%;margin-bottom: 10%; margin-right:auto; margin-left:auto; background-color: #e8e8e8;"><tr style="width:100%;height:10vh;"></tr><div style="width:calc(100% - 30px); height:40vh; padding:30px 30px 30px 30px; background-color:white; margin-top:auto; margin-bottom:auto"><div style="display: flex; width:100%; text-align:center;"><img src="data:image/png;base64,{encoded_string} style="width:50%; height:12%" alt="img" /></div><div  style="margin-top: 30px;">{mail_body_text}</div><tr style="width:100%;height:10vh;"></tr></div></div></div>'
+
+    sender_address = 'patardriscoll@gmail.com'
+    email = 'patardriscoll@gmail.com'
+
+    # Setup the MIME
+    message = MIMEMultipart()
+    message['From'] = sender_address
+    message['To'] = email
+
+    message['Subject'] = 'Order From'  # The subject line
+
+    mail_content = mail_body
+    # The body and the attachments for the mail
+    message.attach(MIMEText(mail_content, 'html'))
+    # Create SMTP session for sending the mail
+    s = smtplib.SMTP('smtp.gmail.com', 587)
+    # s.connect('smtp.gmail.com', 587)
+    s.starttls()
+
+    s.login(user="patardriscoll@gmail.com", password="Iqopaogh23!")
+    # s = smtplib.SMTP('smtp.mailgun.org', 587)
+    # s.login('postmaster@crepenshake.com',
+    #         '6695313d8a619bc44dce00ad7184960a-ba042922-f2a8cfbb')
+    s.sendmail(message['From'], message['To'], message.as_string())
+    s.quit()
+
+
+@app.route('/guest-device-token', methods=['POST'])
+def guest_device_token():
+    headers = {}
+    device_token = request.headers.get("DeviceToken")
+    print('device_token', device_token)
+    Customer_Service().add_guest_device_token(device_token)
+    jwt_token = jwt.encode(
+        {"sub": f'{device_token}'}, key=secret, algorithm="HS256")
+    headers["authorization-token"] = jwt_token
+    return Response(status=200, headers=headers)
+
+
 @app.route('/customer', methods=['POST', 'GET', 'OPTIONS', 'PUT'])
 def customer():
     response = {}
@@ -231,7 +277,11 @@ def customer():
             headers["authorization-token"] = jwt_token
             send_confirmation_email(
                 jwt_token, generated_new_customer, request.url)
-            return Response(response=json.dumps(generated_new_customer.serialize()), status=200, headers=headers)
+            if generated_new_customer.has_registered:
+                status = 201
+            else:
+                status = 200
+            return Response(response=json.dumps(generated_new_customer.serialize()), status=status, headers=headers)
         else:
             return Response(status=400)
     elif request.method == 'PUT':
@@ -260,34 +310,48 @@ def customer():
 
 
 # strongly typed url argument ;)
-@app.route("/verify-email/<string:jwt_token>")
-def verify_email(jwt_token):
+@app.route("/verify-email/<string:session_token>")
+def verify_email(session_token):
+    status = jwt.decode(session_token, secret, algorithms=["HS256"])
+    if not status:
+        return Response(status=401, response=json.dumps({"msg": "Inconsistent request"}))
     # verify the hashed username that was embedded in the verification link
-    status = jwt.decode(jwt_token, secret, algorithms=["HS256"])
-    if status:
-        customer_id = status["sub"]
-        if Customer_Service().update_email_verification(customer_id):
-            Customer_Service().get_device_token(customer_id)
-            print()
-
-            print('Customer_Service().get_device_token(customer_id)',
-                  Customer_Service().get_device_token(customer_id))
-            print()
-
-            device_token = Customer_Service().get_device_token(customer_id)
-            send_apn(device_token, "email")
-            response = {"msg": "successfully registered"}
-            return Response(response=json.dumps(response), status=200)
-        else:
-            response = {"msg": "customer not found"}
-            return Response(response=json.dumps(response), status=400)
+    customer_id = status["sub"]
+    if Customer_Service().update_email_verification(customer_id):
+        Customer_Service().get_device_token(customer_id)
+        device_token = Customer_Service().get_device_token(customer_id)
+        send_apn(device_token, "email")
+        response = {"msg": "successfully registered"}
+        return Response(response=json.dumps(response), status=200)
     else:
-        response = {"msg": "invalid jwt token"}
+        response = {"msg": "customer not found"}
         return Response(response=json.dumps(response), status=400)
 
 
-@app.route('/business', methods=['GET'])
-def get_businesss():
+@app.route('/reset-password/<string:customer_id>', methods=['POST', 'GET'])
+def reset_password(customer_id):
+    if request.method == 'GET':
+        customer = Customer_Service().get_customer(customer_id)
+        if customer:
+            jwt_token = jwt.encode(
+                {"sub": customer_id}, key=secret, algorithm="HS256")
+            send_password_reset_email(
+                jwt_token=jwt_token, customer=customer)
+        return Response(status=200)
+    elif request.method == 'POST':
+        jwt_token = customer_id
+        if jwt.decode(jwt_token, secret, algorithms=["HS256"]):
+            new_password = json.loads(request.data)
+            Customer_Service().update_password(customer_id, new_password)
+            return Response(status=200, response=json.dumps({"msg": "password reset"}))
+        else:
+            return Response(status=400, response=json.dumps({"msg": "error"}))
+
+
+@app.route('/business/<string:session_token>', methods=['GET'])
+def get_businesss(session_token):
+    if not jwt.decode(session_token, secret, algorithms=["HS256"]):
+        return Response(status=401, response=json.dumps({"msg": "Inconsistent request"}))
     response = {}
     headers = {}
     business_list = []
@@ -315,11 +379,10 @@ def get_businesss():
         etag = ETag_Service().get_etag("business")
         headers["E-tag-category"] = etag.category
         headers["E-tag-id"] = str(etag.id)
-    print("response", response)
     return Response(status=200, response=json.dumps(response), headers=headers)
 
 
-@app.route('/tabs', methods=['POST', 'GET'])
+@ app.route('/tabs', methods=['POST', 'GET'])
 def tabs():
     if request.method == 'POST':
         response = {}
@@ -333,20 +396,24 @@ def tabs():
             return Response(status=500, response=json.dumps(response))
 
 
-@app.route('/create-ephemeral-keys', methods=['POST'])
-def ephemeral_keys():
+@ app.route('/create-ephemeral-keys/<string:session_token>', methods=['POST'])
+def ephemeral_keys(session_token):
+    if not jwt.decode(session_token, secret, algorithms=["HS256"]):
+        return Response(status=401, response=json.dumps({"msg": "Inconsistent request"}))
     request_data = json.loads(request.data)
     print('request_data', request_data)
     order_service = Order_Service()
-    key, header = order_service.get_stripe_ephemeral_key(request_data)
+    key, header = order_service.create_stripe_ephemeral_key(request_data)
     if key and header:
         return Response(status=200, response=json.dumps(key), headers=header)
     else:
         return Response(status=200, response=json.dumps(key))
 
 
-@app.route('/create-payment-intent', methods=['POST'])
-def create_payment_intent():
+@ app.route('/create-payment-intent/<string:session_token>', methods=['POST'])
+def create_payment_intent(session_token):
+    if not jwt.decode(session_token, secret, algorithms=["HS256"]):
+        return Response(status=401, response=json.dumps({"msg": "Inconsistent request"}))
     response = {}
     request_data = json.loads(request.data)
     print('request_data payment intent', request_data)
@@ -363,7 +430,7 @@ def allowed_file(filename):
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
-@app.route('/signup', methods=['POST'])
+@ app.route('/signup', methods=['POST'])
 def signup():
     response = {"msg": ""}
     # check if the post request has the file part
@@ -403,7 +470,7 @@ def signup():
         return Response(status=500, response=json.dumps(response))
 
 
-@app.route('/signup-redirect', methods=['POST'])
+@ app.route('/signup-redirect', methods=['POST'])
 def signup_redirect():
     response = {"msg": ""}
     business_service = Business_Service()
@@ -417,7 +484,7 @@ def signup_redirect():
         return Response(status=500, response=json.dumps(response))
 
 
-@app.route('/validate-merchant', methods=['POST'])
+@ app.route('/validate-merchant', methods=['POST'])
 def validate_merchant():
     merchant_service = Merchant_Service()
     request_data = json.loads(request.data)
@@ -430,8 +497,10 @@ def validate_merchant():
         return jsonify(response), 400
 
 
-@app.route('/create-stripe-account', methods=['GET'])
-def create_stripe_account():
+@ app.route('/create-stripe-account/<string:session_token>', methods=['GET'])
+def create_stripe_account(session_token):
+    if not jwt.decode(session_token, secret, algorithms=["HS256"]):
+        return Response(status=401, response=json.dumps({"msg": "Inconsistent request"}))
     merchant_service = Merchant_Service()
     new_account = merchant_service.create_stripe_account()
     account_links = stripe.AccountLink.create(
@@ -448,7 +517,7 @@ def create_stripe_account():
     return response
 
 
-@app.route('/add-menu', methods=['POST'])
+@ app.route('/add-menu', methods=['POST'])
 def add_menu():
     drink_service = Drink_Service()
     menu = json.loads(request.data)

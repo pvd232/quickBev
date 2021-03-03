@@ -48,7 +48,7 @@ public class Drink: NSManagedObject, Codable, NSCopying {
         let jsonData = try! JSONEncoder().encode(CheckoutCart.drinkETag)
         let headerString = String(data: jsonData, encoding: .utf8)!
         let ifNoneMatchHeader: [HTTPHeader] = [HTTPHeader(field: "If-None-Match", value: headerString)]
-        let request = try! APIRequest(method: .get, path: "/drink", headers: ifNoneMatchHeader)
+        let request = try! APIRequest(method: .get, path: "/drink/" + CheckoutCart.shared.sessionToken, headers: ifNoneMatchHeader)
         APIClient.perform(request) { result in
             switch result {
             case let .success(response):

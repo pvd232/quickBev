@@ -34,6 +34,14 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
         fatalError("coder not set up")
     }
 
+    func configureLocationServices() {
+        if authorizationStatus == .notDetermined {
+            locationManager.requestWhenInUseAuthorization()
+        } else {
+            return
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(mapView)
@@ -130,14 +138,6 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
         mapView.setRegion(coordinateRegion, animated: true)
     }
 
-    func configureLocationServices() {
-        if authorizationStatus == .notDetermined {
-            locationManager.requestWhenInUseAuthorization()
-        } else {
-            return
-        }
-    }
-
     func locationManager(_: CLLocationManager, didChangeAuthorization _: CLAuthorizationStatus) {
         centerMapOnUserLocation()
     }
@@ -164,13 +164,9 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
 
         let customAnnotation = annotation as! CustomAnnotation
 
-        // programatically creating an image view to hold the picture of the 360 bridge for the custom annotation
-//        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-//        imageView.image = customAnnotation.image
-
         let detailView = UIView()
-//        detailView.addSubview(imageView)
         detailView.translatesAutoresizingMaskIntoConstraints = false
+
         let widthConstraint = NSLayoutConstraint(item: detailView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 0.25 * UIViewController.screenSize.width)
         detailView.addConstraint(widthConstraint)
         let heightConstraint = NSLayoutConstraint(item: detailView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 0.15 * UIViewController.screenSize.width)
@@ -198,22 +194,18 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         detailView.addSubview(titleLabel)
         detailView.addSubview(button)
-        button.centerXAnchor.constraint(equalTo: detailView.centerXAnchor).isActive = true
-//        button.centerYAnchor.constraint(equalTo: detailView.centerYAnchor).isActive = true
+
         let buttonWidth = NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: UIViewController.screenSize.width * 0.2)
         let buttonHeight = NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: UIViewController.screenSize.width * 0.085)
         button.addConstraint(buttonWidth)
         button.addConstraint(buttonHeight)
+        button.centerXAnchor.constraint(equalTo: detailView.centerXAnchor).isActive = true
         button.bottomAnchor.constraint(equalTo: detailView.bottomAnchor).isActive = true
         titleLabel.topAnchor.constraint(equalTo: detailView.topAnchor, constant: -5.0).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: detailView.centerXAnchor).isActive = true
         titleLabel.bottomAnchor.constraint(equalTo: button.topAnchor, constant: -10.0).isActive = true
 
-//        button.widthAnchor.constraint(constant: UIViewController.screenSize.width * 0.2).isActive = true
-//        button.heightAnchor.constraint(constant: UIViewController.screenSize.width * 0.07).isActive = true
-
         annotationView?.detailCalloutAccessoryView = detailView
-//         annotationView?.detailCalloutAccessoryView?.addLayoutGuide(UILayoutGuide())
         return annotationView
     }
 
