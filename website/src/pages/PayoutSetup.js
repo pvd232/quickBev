@@ -26,8 +26,8 @@ const PayoutSetup = (props) => {
 		}
 	};
 	const handleConnect = async () => {
-		let [responseBody, response] = await getRedirectInfo();
-		const merchantStripeId = response.headers.get('stripe_id');
+		let responseBody = await getRedirectInfo();
+		const merchantStripeId = responseBody.stripe_id;
 		let url = responseBody.url;
 		if (url && merchantStripeId) {
 			redirectUrl = url;

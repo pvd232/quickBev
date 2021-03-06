@@ -71,7 +71,7 @@ const CreateYourAccountFieldset = (props) => {
 				setErrorMsg(newErrorMsgState);
 				return false;
 			} else {
-				const newMerchant = new Merchant('merchantObject', formValue);
+				const newMerchant = new Merchant('json', formValue);
 				const merchantData = { merchant: newMerchant };
 				API.makeRequest('POST', '/validate-merchant', merchantData).then((response) => {
 					if (response) {

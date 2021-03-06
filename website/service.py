@@ -257,4 +257,4 @@ class Test_Service(object):
         if len(inspector.get_table_names()) == 0:
             instantiate_db_connection()
             self.test_engine.dispose()
-            return
+        return

@@ -236,10 +236,10 @@ class Merchant_Domain(object):
             self.password = merchant_object.password
             self.first_name = merchant_object.first_name
             self.last_name = merchant_object.last_name
-            self.phone_number = merchant_object.phone_numberß
+            self.phone_number = merchant_object.phone_number
             self.number_of_businesses = merchant_object.number_of_businesses
             # stripe ID is in an associative table now
-            if 'stripe_id' in merchant_object:
+            if 'stripe_id' in merchant_object.__dict__:
                 self.stripe_id = merchant_object.stripe_id
 
         elif merchant_json:
@@ -256,12 +256,15 @@ class Merchant_Domain(object):
             if "stripe_id" in merchant_json:
                 self.stripe_id = merchant_json["stripe_id"]
 
-    def serialize(self):
+    def dto_serialize(self):
         attribute_names = list(self.__dict__.keys())
         attributes = list(self.__dict__.values())
         serialized_attributes = {}
         for i in range(len(attributes)):
-            serialized_attributes[attribute_names[i]] = attributes[i]
+            if attribute_names[i] == 'id':
+                serialized_attributes['id'] = str(self.id)
+            else:
+                serialized_attributes[attribute_names[i]] = attributes[i]
         return serialized_attributes
 
 
