@@ -61,6 +61,10 @@ def send_apn(device_token, action):
     # )
 
 
+# @app.route("/")
+# def my_index():
+#     return render_template("index.html", flask_token="Hello world")
+
 @app.route("/b")
 def b():
     # test_service = Test_Service()
