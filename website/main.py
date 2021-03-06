@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, Response, request, redirect, url_for
+from flask import Flask, jsonify, Response, request, redirect, url_for, render_template
 import requests
 from models import app
 from service import *
@@ -9,8 +9,6 @@ import stripe
 import os
 from werkzeug.utils import secure_filename
 import base64
-import asyncio
-import websockets
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -20,8 +18,6 @@ import calendar
 from pushjack_http2 import APNSHTTP2SandboxClient, APNSAuthToken
 from werkzeug.security import generate_password_hash, check_password_hash
 
-
-app = Flask(__name__)
 
 merchant_menu_upload_folder = os.getcwd() + "/files"
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
@@ -65,7 +61,14 @@ def send_apn(device_token, action):
     # )
 
 
+@app.route("/b")
+def b():
+    test_service = Test_Service()
+    test_service.test_connection()
+    return Response(status=200)
 # this is called by the customer to update their device token after they have successfully logged in
+
+
 @app.route('/apn-token/<string:customer_id>/<string:session_token>', methods=["POST"])
 def apn_token(customer_id, session_token):
     device_token = request.headers.get("DeviceToken")
@@ -94,7 +97,7 @@ def login():
     if customer:
         serialized_customer = customer.serialize()
         jwt_token = jwt.encode(
-            {"sub": f'{serialized_customer["id"]}'}, key=secret, algorithm="HS256")
+            {"sub": {serialized_customer["id"]}}, key=secret, algorithm="HS256")
         headers["authorization-token"] = jwt_token
         return Response(status=200, response=json.dumps(serialized_customer), headers=headers)
     else:
@@ -204,9 +207,9 @@ def send_confirmation_email(jwt_token, customer, url):
 def send_password_reset_email(jwt_token, customer):
     print('jwt_token', jwt_token)
     # host = request.headers.get('Host')
-    host = "localhost:3000"
+    host = "quickbev.uc.r.appspot.com"
 
-    button_url = f"http://{host}/reset-password/{jwt_token}"
+    button_url = f"https://{host}/reset-password/{jwt_token}"
 
     logo = os.path.join(os.path.dirname(os.path.abspath(
         __file__)), "./src/static/landscape-logo-purple.png")
@@ -382,7 +385,7 @@ def get_businesss(session_token):
     return Response(status=200, response=json.dumps(response), headers=headers)
 
 
-@ app.route('/tabs', methods=['POST', 'GET'])
+@app.route('/tabs', methods=['POST', 'GET'])
 def tabs():
     if request.method == 'POST':
         response = {}
@@ -396,7 +399,7 @@ def tabs():
             return Response(status=500, response=json.dumps(response))
 
 
-@ app.route('/create-ephemeral-keys/<string:session_token>', methods=['POST'])
+@app.route('/create-ephemeral-keys/<string:session_token>', methods=['POST'])
 def ephemeral_keys(session_token):
     if not jwt.decode(session_token, secret, algorithms=["HS256"]):
         return Response(status=401, response=json.dumps({"msg": "Inconsistent request"}))
@@ -410,7 +413,7 @@ def ephemeral_keys(session_token):
         return Response(status=200, response=json.dumps(key))
 
 
-@ app.route('/create-payment-intent/<string:session_token>', methods=['POST'])
+@app.route('/create-payment-intent/<string:session_token>', methods=['POST'])
 def create_payment_intent(session_token):
     if not jwt.decode(session_token, secret, algorithms=["HS256"]):
         return Response(status=401, response=json.dumps({"msg": "Inconsistent request"}))
@@ -430,7 +433,7 @@ def allowed_file(filename):
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
-@ app.route('/signup', methods=['POST'])
+@app.route('/signup', methods=['POST'])
 def signup():
     response = {"msg": ""}
     # check if the post request has the file part
@@ -470,26 +473,36 @@ def signup():
         return Response(status=500, response=json.dumps(response))
 
 
-@ app.route('/signup-redirect', methods=['POST'])
+@app.route('/signup-redirect', methods=['POST'])
 def signup_redirect():
     response = {"msg": ""}
+    header = {}
     business_service = Business_Service()
     request_json = json.loads(request.data)
     business_to_update = request_json["business"]
     if business_service.update_business(business_to_update):
+        header["jwt_token"] = jwt.encode(
+            {"sub": {business_to_update["id"]}}, key=secret, algorithm="HS256")
         response["msg"] = "Business sucessfully updated"
-        return Response(status=200, response=json.dumps(response))
+        return Response(status=200, response=json.dumps(response), headers=header)
     else:
         response["msg"] = "Failed to update business"
         return Response(status=500, response=json.dumps(response))
 
 
-@ app.route('/validate-merchant', methods=['POST'])
+@app.route('/validate-merchant', methods=['POST'])
 def validate_merchant():
-    merchant_service = Merchant_Service()
     request_data = json.loads(request.data)
-    requested_merchant = request_data['merchant']
-    response = merchant_service.validate_merchant(requested_merchant)
+    print("request_data", request_data)
+
+    username = request.headers.get('username')
+    print("username", username)
+    password = request.headers.get('password')
+    print("password", password)
+
+    # TODO: finish merchant login
+    response = {"msg": "customer not found"}
+    response = Merchant_Service().authenticate_merchant(username, password)
     # if the merchant exists it will return False, if it doesn't it will return True
     if response:
         return jsonify(response), 200
@@ -497,16 +510,13 @@ def validate_merchant():
         return jsonify(response), 400
 
 
-@ app.route('/create-stripe-account/<string:session_token>', methods=['GET'])
-def create_stripe_account(session_token):
-    if not jwt.decode(session_token, secret, algorithms=["HS256"]):
-        return Response(status=401, response=json.dumps({"msg": "Inconsistent request"}))
-    merchant_service = Merchant_Service()
-    new_account = merchant_service.create_stripe_account()
+@app.route('/create-stripe-account', methods=['GET'])
+def create_stripe_account():
+    new_account = Merchant_Service().create_stripe_account()
     account_links = stripe.AccountLink.create(
         account=new_account.id,
-        refresh_url='http://localhost:3000/payout-setup-callback',
-        return_url='http://localhost:3000/home',
+        refresh_url='https://quickbev.uc.r.appspot.com/payout-setup-callback',
+        return_url='https://quickbev.uc.r.appspot.com/home',
         type='account_onboarding',
     )
     header = {}
@@ -517,7 +527,7 @@ def create_stripe_account(session_token):
     return response
 
 
-@ app.route('/add-menu', methods=['POST'])
+@app.route('/add-menu', methods=['POST'])
 def add_menu():
     drink_service = Drink_Service()
     menu = json.loads(request.data)
@@ -529,73 +539,6 @@ def add_menu():
     return response
 
 
-# @socketio.on_error_default
-# def default_error_handler(e):
-#     print(request.event["message"])  # "my error event"
-#     print(request.event["args"])    # (data,)
-
-
-# @socketio.on('connect')
-# def test_connect():
-#     print(request)
-#     emit('my response', {'data': 'Connected'})
-
-
-# @socketio.on('disconnect')
-# def test_disconnect():
-#     print('Client disconnected')
-
-
-# @socketio.on('json')
-# def handle_json(json):
-#     print('received json: ' + str(json))
-
-# async def hello(websocket, path):
-#     remote_ip = websocket.remote_address[0]
-#     remote_ip_list = websocket.remote_address
-#     print('remote_ip_list', remote_ip_list)
-
-#     print('remote_ip', remote_ip)
-
-#     name = await websocket.recv()
-#     # print(f"< {name}")
-#     print("data recieved", name)
-
-#     greeting = f"Hello {name}!"
-
-#     await websocket.send(greeting)
-#     print(f"> {greeting}")
-
-
-# app = Flask(__name__)
-# ws = WebSocket(app)
-
-
-# @ws.on('click')
-# def click(data):
-#     print(data)
-# def run_websocket():
-#     start_server = websockets.serve(hello, "localhost", 8765)
-#     asyncio.get_event_loop().run_until_complete(start_server)
-#     asyncio.get_event_loop().run_forever()
-
-
-# def run_flask_app():
-#     app.run(debug=True)
-
-
-# p_flask = multiprocessing.Process(target=run_flask_app)
-# p_ws = multiprocessing.Process(target=run_websocket)
-
-
-# def run_everything():
-#     p_ws.start()
-#     p_flask.start()
-#     p_ws.join()
-
-#     p_flask.join()
-
-
 if __name__ == '__main__':
     # app.run(host="192.168.86.42", port=5000, debug=True)
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host='127.0.0.1', port=8080, debug=True)

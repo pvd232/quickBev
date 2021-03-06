@@ -9,8 +9,8 @@ from sqlalchemy import create_engine
 from contextlib import contextmanager
 
 
-username = os.environ.get("USER", "")
-password = os.environ.get("PASSWORD", "")
+username = "postgres"
+password = "Iqopaogh23!"
 connection_string_beginning = "postgres://"
 connection_string_end = "@localhost:5432/quickbevdb"
 connection_string = connection_string_beginning + \
@@ -174,12 +174,16 @@ class Merchant_Service(object):
         with session_scope() as session:
             return Merchant_Repository().create_stripe_account(session)
 
-    def validate_merchant(self, merchant):
+    def authenticate_merchant(self, email, password):
         with session_scope() as session:
-            requested_new_merchant = Merchant_Domain(merchant_json=merchant)
-            registered_merchant_status = Merchant_Repository().validate_merchant(
-                session, requested_new_merchant)
-            return registered_merchant_status
+            merchant_object = Merchant_Repository().authenticate_merchant(
+                session, email, password)
+            if merchant_object:
+                merchant_domain = Merchant_Domain(
+                    merchant_object=merchant_object)
+                return merchant_domain
+            else:
+                return False
 
     def add_merchant(self, merchant):
         with session_scope() as session:
@@ -233,3 +237,24 @@ class ETag_Service(object):
     def update_etag(self, category):
         with session_scope() as session:
             ETag_Repository().update_etag(session, category)
+
+
+class Test_Service(object):
+    def __init__(self):
+        self.username = "postgres"
+        self.password = "Iqopaogh23!"
+        self.connection_string_beginning = "postgres://"
+        self.connection_string_end = "@localhost:5432/crepenshakedb"
+        self.connection_string = self.connection_string_beginning + \
+            self.username + ":" + self.password + self.connection_string_end
+        self.test_engine = create_engine(
+            os.environ.get("DB_STRING", self.connection_string))
+
+    def test_connection(self):
+        inspector = inspect(self.test_engine)
+        # use this if you want to trigger a reset of the database in GCP
+        # if len(inspector.get_table_names()) > 0:
+        if len(inspector.get_table_names()) == 0:
+            instantiate_db_connection()
+            self.test_engine.dispose()
+            return

@@ -24,8 +24,8 @@ def _compile_drop_table(element, compiler, **kwargs):
 
 
 app = Flask(__name__)
-username = os.environ.get("USER", "")
-password = os.environ.get("PASSWORD", "")
+username = "postgres"
+password = "Iqopaogh23!"
 connection_string_beginning = "postgres://"
 connection_string_end = "@localhost:5432/quickbevdb"
 connection_string = connection_string_beginning + \
@@ -314,7 +314,7 @@ def create_business():
     new_stripe_account = Stripe_Account(id=new_account.id)
     db.session.add(new_stripe_account)
     new_merchant = Merchant(id="a", password="a", first_name="peter",
-                            last_name="driscoll", phone_number=5126456898, number_of_businesses=2, has_registered=False)
+                            last_name="driscoll", phone_number=5126456898, number_of_businesses=2)
     new_merchant_stripe = Merchant_Stripe(
         merchant_id=new_merchant.id, stripe_id=new_stripe_account.id)
 
@@ -346,7 +346,7 @@ def create_business():
     # id = generate_password_hash("a", "sha256")
     password = generate_password_hash("a", "sha256")
     new_customer = Customer(id="a", password=password,
-                            first_name="peter", last_name="driscoll", stripe_id=new_stripe_customer.id, email_verified=False)
+                            first_name="peter", last_name="driscoll", stripe_id=new_stripe_customer.id, email_verified=False, has_registered=False)
     db.session.add(new_stripe_customer_id)
     db.session.add(new_customer)
     # commit the session to my DB.
@@ -394,9 +394,8 @@ def create_everything():
     db.create_all()
     create_business()
     create_drink()
+    create_etag()
 
 
-# db.create_all()
-
-# create_everything()
-# create_etag()
+def instantiate_db_connection():
+    create_everything()

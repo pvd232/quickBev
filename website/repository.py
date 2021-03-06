@@ -306,13 +306,12 @@ class Merchant_Repository(object):
         session.add(new_stripe_account_id)
         return new_account
 
-    def validate_merchant(self, session, requested_merchant):
-        merchant = session.query(Merchant).filter(
-            Merchant.id == requested_merchant.id).first()
-        if merchant:
-            return False
+    def authenticate_merchant(self, session, email, password):
+        for merchant in session.query(Merchant):
+            if merchant.id == email and check_password_hash(merchant.password, password):
+                return merchant
         else:
-            return True
+            return False
 
     def add_merchant(self, session, requested_merchant):
         new_merchant = Merchant(id=requested_merchant.id, password=requested_merchant.password, first_name=requested_merchant.first_name,
@@ -347,3 +346,24 @@ class ETag_Repository():
             return True
         else:
             return False
+
+
+class Test_Service(object):
+    def __init__(self):
+        self.username = "postgres"
+        self.password = "Iqopaogh23!"
+        self.connection_string_beginning = "postgres://"
+        self.connection_string_end = "@localhost:5432/crepenshakedb"
+        self.connection_string = self.connection_string_beginning + \
+            self.username + ":" + self.password + self.connection_string_end
+        self.test_engine = create_engine(
+            os.environ.get("DB_STRING", self.connection_string))
+
+    def test_connection(self):
+        inspector = inspect(self.test_engine)
+        # use this if you want to trigger a reset of the database in GCP
+        # if len(inspector.get_table_names()) > 0:
+        if len(inspector.get_table_names()) == 0:
+            instantiate_db_connection()
+            self.test_engine.dispose()
+            return
