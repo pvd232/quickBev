@@ -74,18 +74,11 @@ extension Order {
         businessId = checkoutCart.businessId!
         orderDrink = NSSet(array: checkoutCart.cart)
         dateTime = Date()
-//        self.cost = checkoutCart.cost
         cost = 0.0
         subtotal = 0.0
         salesTax = 0.0
-//        self.subtotal = checkoutCart.subtotal
-//        self.salesTax = checkoutCart.salesTax
         salesTaxRate = checkoutCart.userBusiness!.salesTaxRate
         tipPercentage = checkoutCart.tipPercentage
         tipAmount = 0.0
-//        self.tipAmount = checkoutCart.tipAmount
-        for drink in checkoutCart.cart {
-            print("drink in order", drink)
-        }
     }
 }

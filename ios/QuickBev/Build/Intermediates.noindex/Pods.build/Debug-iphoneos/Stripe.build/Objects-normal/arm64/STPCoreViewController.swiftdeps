@@ -53,6 +53,7 @@ depends-top-level:
 - !private "useSystemBackButton"
 - !private "view"
 depends-member:
+- ["SK", ""]
 - !private ["So15CALayerDelegateP", "backgroundColor"]
 - !private ["So15CALayerDelegateP", "endEditing"]
 - !private ["So15CALayerDelegateP", "stp_theme"]
@@ -98,6 +99,8 @@ depends-member:
 - !private ["s7CVarArgP", "viewDidLoad"]
 - !private ["s7CVarArgP", "viewWillAppear"]
 - !private ["s7CVarArgP", "viewWillDisappear"]
+- ["Sl", ""]
+- ["SL", ""]
 - !private ["s28CustomDebugStringConvertibleP", "NotificationCenter"]
 - !private ["s28CustomDebugStringConvertibleP", "STPAddCardViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "STPColorUtils"]
@@ -233,8 +236,12 @@ depends-member:
 - !private ["SQ", "viewDidLoad"]
 - !private ["SQ", "viewWillAppear"]
 - !private ["SQ", "viewWillDisappear"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s23ExpressibleByNilLiteralP", "backgroundColor"]
 - !private ["s23ExpressibleByNilLiteralP", "endEditing"]
+- ["s32ExpressibleByStringInterpolationP", ""]
+- ["s26ExpressibleByStringLiteralP", ""]
+- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["7SwiftUI7GestureP", "backgroundColor"]
 - !private ["7SwiftUI7GestureP", "endEditing"]
 - !private ["SH", "NotificationCenter"]
@@ -282,6 +289,7 @@ depends-member:
 - !private ["SH", "viewDidLoad"]
 - !private ["SH", "viewWillAppear"]
 - !private ["SH", "viewWillDisappear"]
+- ["s25LosslessStringConvertibleP", ""]
 - ["So8NSCodingP", "Bool"]
 - ["So8NSCodingP", "Bundle"]
 - ["So8NSCodingP", "NSCoder"]
@@ -299,7 +307,7 @@ depends-member:
 - !private ["So8NSCodingP", "backgroundColor"]
 - ["So8NSCodingP", "cancelItem"]
 - ["So8NSCodingP", "commonInit"]
-- !private ["So8NSCodingP", "createAndSetupViews"]
+- ["So8NSCodingP", "createAndSetupViews"]
 - !private ["So8NSCodingP", "dismiss"]
 - !private ["So8NSCodingP", "endEditing"]
 - ["So8NSCodingP", "handleCancelTapped"]
@@ -319,10 +327,10 @@ depends-member:
 - ["So8NSCodingP", "stp_setTheme"]
 - !private ["So8NSCodingP", "stp_theme"]
 - ["So8NSCodingP", "theme"]
-- !private ["So8NSCodingP", "updateAppearance"]
+- ["So8NSCodingP", "updateAppearance"]
 - ["So8NSCodingP", "useSystemBackButton"]
 - !private ["So8NSCodingP", "view"]
-- !private ["So8NSCodingP", "viewDidLoad"]
+- ["So8NSCodingP", "viewDidLoad"]
 - ["So8NSCodingP", "viewWillAppear"]
 - ["So8NSCodingP", "viewWillDisappear"]
 - ["So9NSCopyingP", "defaultTheme"]
@@ -343,7 +351,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "_theme"]
 - ["So26NSExtensionRequestHandlingP", "cancelItem"]
 - ["So26NSExtensionRequestHandlingP", "commonInit"]
-- !private ["So26NSExtensionRequestHandlingP", "createAndSetupViews"]
+- ["So26NSExtensionRequestHandlingP", "createAndSetupViews"]
 - !private ["So26NSExtensionRequestHandlingP", "dismiss"]
 - ["So26NSExtensionRequestHandlingP", "handleCancelTapped"]
 - ["So26NSExtensionRequestHandlingP", "init"]
@@ -358,10 +366,10 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "stp_isAtRootOfNavigationController"]
 - !private ["So26NSExtensionRequestHandlingP", "stp_navigationItemProxy"]
 - ["So26NSExtensionRequestHandlingP", "theme"]
-- !private ["So26NSExtensionRequestHandlingP", "updateAppearance"]
+- ["So26NSExtensionRequestHandlingP", "updateAppearance"]
 - ["So26NSExtensionRequestHandlingP", "useSystemBackButton"]
 - !private ["So26NSExtensionRequestHandlingP", "view"]
-- !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - ["So26NSExtensionRequestHandlingP", "viewWillAppear"]
 - ["So26NSExtensionRequestHandlingP", "viewWillDisappear"]
 - ["So8NSObjectC", "Bool"]
@@ -415,11 +423,14 @@ depends-member:
 - ["So8NSObjectC", "viewDidLoad"]
 - ["So8NSObjectC", "viewWillAppear"]
 - ["So8NSObjectC", "viewWillDisappear"]
+- ["So8NSObjectP", "Bool"]
+- ["So8NSObjectP", "Bundle"]
 - ["So8NSObjectP", "NSCoder"]
 - !private ["So8NSObjectP", "NotificationCenter"]
 - !private ["So8NSObjectP", "STPAddCardViewController"]
 - !private ["So8NSObjectP", "STPColorUtils"]
 - ["So8NSObjectP", "STPTheme"]
+- ["So8NSObjectP", "String"]
 - ["So8NSObjectP", "UIBarButtonItem"]
 - !private ["So8NSObjectP", "UIContentSizeCategory"]
 - ["So8NSObjectP", "UIStatusBarStyle"]
@@ -430,9 +441,9 @@ depends-member:
 - !private ["So8NSObjectP", "addObserverForName"]
 - !private ["So8NSObjectP", "backgroundColor"]
 - ["So8NSObjectP", "cancelItem"]
-- !private ["So8NSObjectP", "colorIsBright"]
+- ["So8NSObjectP", "colorIsBright"]
 - ["So8NSObjectP", "commonInit"]
-- !private ["So8NSObjectP", "createAndSetupViews"]
+- ["So8NSObjectP", "createAndSetupViews"]
 - !private ["So8NSObjectP", "default"]
 - ["So8NSObjectP", "defaultTheme"]
 - !private ["So8NSObjectP", "dismiss"]
@@ -457,10 +468,10 @@ depends-member:
 - ["So8NSObjectP", "stp_setTheme"]
 - !private ["So8NSObjectP", "stp_theme"]
 - ["So8NSObjectP", "theme"]
-- !private ["So8NSObjectP", "updateAppearance"]
+- ["So8NSObjectP", "updateAppearance"]
 - ["So8NSObjectP", "useSystemBackButton"]
 - !private ["So8NSObjectP", "view"]
-- !private ["So8NSObjectP", "viewDidLoad"]
+- ["So8NSObjectP", "viewDidLoad"]
 - ["So8NSObjectP", "viewWillAppear"]
 - ["So8NSObjectP", "viewWillDisappear"]
 - !private ["So20NSNotificationCenterC", "addObserver"]
@@ -479,6 +490,7 @@ depends-member:
 - !private ["6Stripe22STPCardScannerDelegateP", "handleCancelTapped"]
 - !private ["6Stripe22STPCardScannerDelegateP", "updateAppearance"]
 - !private ["6Stripe13STPColorUtilsC", "colorIsBright"]
+- ["6Stripe27STPCoreScrollViewControllerC", ""]
 - !private ["6Stripe27STPCoreScrollViewControllerC", "handleCancelTapped"]
 - !private ["6Stripe27STPCoreScrollViewControllerC", "updateAppearance"]
 - ["6Stripe26STPCoreTableViewControllerC", ""]
@@ -522,7 +534,10 @@ depends-member:
 - ["6Stripe8STPThemeC", "defaultTheme"]
 - !private ["6Stripe8STPThemeC", "primaryBackgroundColor"]
 - !private ["6Stripe8STPThemeC", "secondaryBackgroundColor"]
+- ["ST", ""]
 - !private ["So21UIBarButtonSystemItemV", "cancel"]
+- ["s16TextOutputStreamP", ""]
+- ["s20TextOutputStreamableP", ""]
 - !private ["So29UIAccessibilityIdentificationP", "accessibilityIdentifier"]
 - !private ["So29UIAccessibilityIdentificationP", "backgroundColor"]
 - !private ["So29UIAccessibilityIdentificationP", "endEditing"]
@@ -551,7 +566,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "backgroundColor"]
 - ["So21UIAppearanceContainerP", "cancelItem"]
 - ["So21UIAppearanceContainerP", "commonInit"]
-- !private ["So21UIAppearanceContainerP", "createAndSetupViews"]
+- ["So21UIAppearanceContainerP", "createAndSetupViews"]
 - !private ["So21UIAppearanceContainerP", "dismiss"]
 - !private ["So21UIAppearanceContainerP", "endEditing"]
 - ["So21UIAppearanceContainerP", "handleCancelTapped"]
@@ -568,10 +583,10 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "stp_navigationItemProxy"]
 - !private ["So21UIAppearanceContainerP", "stp_theme"]
 - ["So21UIAppearanceContainerP", "theme"]
-- !private ["So21UIAppearanceContainerP", "updateAppearance"]
+- ["So21UIAppearanceContainerP", "updateAppearance"]
 - ["So21UIAppearanceContainerP", "useSystemBackButton"]
 - !private ["So21UIAppearanceContainerP", "view"]
-- !private ["So21UIAppearanceContainerP", "viewDidLoad"]
+- ["So21UIAppearanceContainerP", "viewDidLoad"]
 - ["So21UIAppearanceContainerP", "viewWillAppear"]
 - ["So21UIAppearanceContainerP", "viewWillDisappear"]
 - !private ["So15UIBarButtonItemC", "accessibilityIdentifier"]
@@ -597,7 +612,7 @@ depends-member:
 - ["So18UIContentContainerP", "_theme"]
 - ["So18UIContentContainerP", "cancelItem"]
 - ["So18UIContentContainerP", "commonInit"]
-- !private ["So18UIContentContainerP", "createAndSetupViews"]
+- ["So18UIContentContainerP", "createAndSetupViews"]
 - !private ["So18UIContentContainerP", "dismiss"]
 - ["So18UIContentContainerP", "handleCancelTapped"]
 - ["So18UIContentContainerP", "init"]
@@ -612,10 +627,10 @@ depends-member:
 - ["So18UIContentContainerP", "stp_isAtRootOfNavigationController"]
 - !private ["So18UIContentContainerP", "stp_navigationItemProxy"]
 - ["So18UIContentContainerP", "theme"]
-- !private ["So18UIContentContainerP", "updateAppearance"]
+- ["So18UIContentContainerP", "updateAppearance"]
 - ["So18UIContentContainerP", "useSystemBackButton"]
 - !private ["So18UIContentContainerP", "view"]
-- !private ["So18UIContentContainerP", "viewDidLoad"]
+- ["So18UIContentContainerP", "viewDidLoad"]
 - ["So18UIContentContainerP", "viewWillAppear"]
 - ["So18UIContentContainerP", "viewWillDisappear"]
 - !private ["So21UIContentSizeCategorya", "didChangeNotification"]
@@ -641,7 +656,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "backgroundColor"]
 - ["So18UIFocusEnvironmentP", "cancelItem"]
 - ["So18UIFocusEnvironmentP", "commonInit"]
-- !private ["So18UIFocusEnvironmentP", "createAndSetupViews"]
+- ["So18UIFocusEnvironmentP", "createAndSetupViews"]
 - !private ["So18UIFocusEnvironmentP", "dismiss"]
 - !private ["So18UIFocusEnvironmentP", "endEditing"]
 - ["So18UIFocusEnvironmentP", "handleCancelTapped"]
@@ -658,10 +673,10 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "stp_navigationItemProxy"]
 - !private ["So18UIFocusEnvironmentP", "stp_theme"]
 - ["So18UIFocusEnvironmentP", "theme"]
-- !private ["So18UIFocusEnvironmentP", "updateAppearance"]
+- ["So18UIFocusEnvironmentP", "updateAppearance"]
 - ["So18UIFocusEnvironmentP", "useSystemBackButton"]
 - !private ["So18UIFocusEnvironmentP", "view"]
-- !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- ["So18UIFocusEnvironmentP", "viewDidLoad"]
 - ["So18UIFocusEnvironmentP", "viewWillAppear"]
 - ["So18UIFocusEnvironmentP", "viewWillDisappear"]
 - !private ["So11UIFocusItemP", "backgroundColor"]
@@ -694,7 +709,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "backgroundColor"]
 - ["So30UIPasteConfigurationSupportingP", "cancelItem"]
 - ["So30UIPasteConfigurationSupportingP", "commonInit"]
-- !private ["So30UIPasteConfigurationSupportingP", "createAndSetupViews"]
+- ["So30UIPasteConfigurationSupportingP", "createAndSetupViews"]
 - !private ["So30UIPasteConfigurationSupportingP", "dismiss"]
 - !private ["So30UIPasteConfigurationSupportingP", "dismissViewControllerAnimated"]
 - !private ["So30UIPasteConfigurationSupportingP", "endEditing"]
@@ -712,10 +727,10 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "stp_navigationItemProxy"]
 - !private ["So30UIPasteConfigurationSupportingP", "stp_theme"]
 - ["So30UIPasteConfigurationSupportingP", "theme"]
-- !private ["So30UIPasteConfigurationSupportingP", "updateAppearance"]
+- ["So30UIPasteConfigurationSupportingP", "updateAppearance"]
 - ["So30UIPasteConfigurationSupportingP", "useSystemBackButton"]
 - !private ["So30UIPasteConfigurationSupportingP", "view"]
-- !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - ["So30UIPasteConfigurationSupportingP", "viewWillAppear"]
 - ["So30UIPasteConfigurationSupportingP", "viewWillDisappear"]
 - ["So11UIResponderC", "Bool"]
@@ -774,7 +789,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "backgroundColor"]
 - ["So30UIResponderStandardEditActionsP", "cancelItem"]
 - ["So30UIResponderStandardEditActionsP", "commonInit"]
-- !private ["So30UIResponderStandardEditActionsP", "createAndSetupViews"]
+- ["So30UIResponderStandardEditActionsP", "createAndSetupViews"]
 - !private ["So30UIResponderStandardEditActionsP", "dismiss"]
 - !private ["So30UIResponderStandardEditActionsP", "dismissViewControllerAnimated"]
 - !private ["So30UIResponderStandardEditActionsP", "endEditing"]
@@ -792,10 +807,10 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "stp_navigationItemProxy"]
 - !private ["So30UIResponderStandardEditActionsP", "stp_theme"]
 - ["So30UIResponderStandardEditActionsP", "theme"]
-- !private ["So30UIResponderStandardEditActionsP", "updateAppearance"]
+- ["So30UIResponderStandardEditActionsP", "updateAppearance"]
 - ["So30UIResponderStandardEditActionsP", "useSystemBackButton"]
 - !private ["So30UIResponderStandardEditActionsP", "view"]
-- !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
 - ["So30UIResponderStandardEditActionsP", "viewWillAppear"]
 - ["So30UIResponderStandardEditActionsP", "viewWillDisappear"]
 - !private ["So20UIScrollViewDelegateP", ""]
@@ -819,7 +834,7 @@ depends-member:
 - ["So16UIStateRestoringP", "_theme"]
 - ["So16UIStateRestoringP", "cancelItem"]
 - ["So16UIStateRestoringP", "commonInit"]
-- !private ["So16UIStateRestoringP", "createAndSetupViews"]
+- ["So16UIStateRestoringP", "createAndSetupViews"]
 - !private ["So16UIStateRestoringP", "dismiss"]
 - ["So16UIStateRestoringP", "handleCancelTapped"]
 - ["So16UIStateRestoringP", "init"]
@@ -834,10 +849,10 @@ depends-member:
 - ["So16UIStateRestoringP", "stp_isAtRootOfNavigationController"]
 - !private ["So16UIStateRestoringP", "stp_navigationItemProxy"]
 - ["So16UIStateRestoringP", "theme"]
-- !private ["So16UIStateRestoringP", "updateAppearance"]
+- ["So16UIStateRestoringP", "updateAppearance"]
 - ["So16UIStateRestoringP", "useSystemBackButton"]
 - !private ["So16UIStateRestoringP", "view"]
-- !private ["So16UIStateRestoringP", "viewDidLoad"]
+- ["So16UIStateRestoringP", "viewDidLoad"]
 - ["So16UIStateRestoringP", "viewWillAppear"]
 - ["So16UIStateRestoringP", "viewWillDisappear"]
 - !private ["So16UIStatusBarStyleV", "default"]
@@ -862,7 +877,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "backgroundColor"]
 - ["So18UITraitEnvironmentP", "cancelItem"]
 - ["So18UITraitEnvironmentP", "commonInit"]
-- !private ["So18UITraitEnvironmentP", "createAndSetupViews"]
+- ["So18UITraitEnvironmentP", "createAndSetupViews"]
 - !private ["So18UITraitEnvironmentP", "dismiss"]
 - !private ["So18UITraitEnvironmentP", "endEditing"]
 - ["So18UITraitEnvironmentP", "handleCancelTapped"]
@@ -879,10 +894,10 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "stp_navigationItemProxy"]
 - !private ["So18UITraitEnvironmentP", "stp_theme"]
 - ["So18UITraitEnvironmentP", "theme"]
-- !private ["So18UITraitEnvironmentP", "updateAppearance"]
+- ["So18UITraitEnvironmentP", "updateAppearance"]
 - ["So18UITraitEnvironmentP", "useSystemBackButton"]
 - !private ["So18UITraitEnvironmentP", "view"]
-- !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- ["So18UITraitEnvironmentP", "viewDidLoad"]
 - ["So18UITraitEnvironmentP", "viewWillAppear"]
 - ["So18UITraitEnvironmentP", "viewWillDisappear"]
 - ["So23UIUserActivityRestoringP", "Bool"]
@@ -901,7 +916,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "backgroundColor"]
 - ["So23UIUserActivityRestoringP", "cancelItem"]
 - ["So23UIUserActivityRestoringP", "commonInit"]
-- !private ["So23UIUserActivityRestoringP", "createAndSetupViews"]
+- ["So23UIUserActivityRestoringP", "createAndSetupViews"]
 - !private ["So23UIUserActivityRestoringP", "dismiss"]
 - !private ["So23UIUserActivityRestoringP", "dismissViewControllerAnimated"]
 - !private ["So23UIUserActivityRestoringP", "endEditing"]
@@ -919,10 +934,10 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "stp_navigationItemProxy"]
 - !private ["So23UIUserActivityRestoringP", "stp_theme"]
 - ["So23UIUserActivityRestoringP", "theme"]
-- !private ["So23UIUserActivityRestoringP", "updateAppearance"]
+- ["So23UIUserActivityRestoringP", "updateAppearance"]
 - ["So23UIUserActivityRestoringP", "useSystemBackButton"]
 - !private ["So23UIUserActivityRestoringP", "view"]
-- !private ["So23UIUserActivityRestoringP", "viewDidLoad"]
+- ["So23UIUserActivityRestoringP", "viewDidLoad"]
 - ["So23UIUserActivityRestoringP", "viewWillAppear"]
 - ["So23UIUserActivityRestoringP", "viewWillDisappear"]
 - ["So6UIViewC", ""]
@@ -968,7 +983,10 @@ depends-member:
 - !private ["7SwiftUI4ViewP", "backgroundColor"]
 - !private ["7SwiftUI4ViewP", "endEditing"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s35_HasCustomAnyHashableRepresentationP", ""]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "didChangeNotification"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NotificationCenter"]
@@ -1063,17 +1081,25 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "endEditing"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "stp_theme"]
 depends-nominal:
+- "SK"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
+- "Sl"
+- "SL"
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - !private "Se"
 - !private "SE"
 - "SQ"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
+- "s32ExpressibleByStringInterpolationP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "7SwiftUI7GestureP"
 - "SH"
+- "s25LosslessStringConvertibleP"
 - "So8NSCodingP"
 - "So9NSCopyingP"
 - "So26NSExtensionRequestHandlingP"
@@ -1086,12 +1112,15 @@ depends-nominal:
 - !private "6Stripe27STPAddressViewModelDelegateP"
 - !private "6Stripe22STPCardScannerDelegateP"
 - !private "6Stripe13STPColorUtilsC"
-- !private "6Stripe27STPCoreScrollViewControllerC"
+- "6Stripe27STPCoreScrollViewControllerC"
 - "6Stripe26STPCoreTableViewControllerC"
 - "6Stripe21STPCoreViewControllerC"
 - !private "6Stripe31STPPaymentCardTextFieldDelegateP"
 - "6Stripe8STPThemeC"
+- "ST"
 - !private "So21UIBarButtonSystemItemV"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
@@ -1124,7 +1153,10 @@ depends-nominal:
 - "So16UIViewControllerC"
 - !private "7SwiftUI4ViewP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "10Foundation37_KeyValueCodingAndObservingPublishingP"

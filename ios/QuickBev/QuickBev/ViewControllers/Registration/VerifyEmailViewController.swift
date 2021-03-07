@@ -28,7 +28,6 @@ class VerifyEmailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(UIViewController.screenSize.width * 0.047)
 
         view.addSubview(verifyEmailStackView)
         view.addSubview(resendButton)

@@ -96,7 +96,6 @@ class RegistrationWithEmailViewController: UIViewController, UITextFieldDelegate
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print("did end")
         if textField.placeholder == "Your first name" {
             formValues["firstName"] = textField.text
         }
@@ -118,7 +117,6 @@ class RegistrationWithEmailViewController: UIViewController, UITextFieldDelegate
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("should return")
         if textField.placeholder == "Your first name" {
             formValues["firstName"] = textField.text
         }
@@ -148,7 +146,6 @@ class RegistrationWithEmailViewController: UIViewController, UITextFieldDelegate
         let requestedNewUser: User = {
             // regular registration process
             if CheckoutCart.shared.isGuest == false {
-                print("checkout card stripeId is nil")
                 return User(FirstName: firstNameTextField.text!, LastName: lastNameTextField.text!, Email: emailTextField.text!, Password: passwordTextField.text!, EmailVerified: false)
             }
             // guest registration process because the stripe id was acquired at home page when a user did not yet exist

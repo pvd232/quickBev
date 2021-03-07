@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -27,8 +27,8 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-    <key>NSLocalNetworkUsageDescription</key>
-    <string>${PRODUCT_NAME} uses the local network to uses the local network to send and receive data during the ordering process.
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>${PRODUCT_NAME} uses the local network to uses the local network to send and receive data during the ordering process.
     network.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>This application will use location data all the time</string>

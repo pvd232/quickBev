@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func application(_: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options _: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
-        print("scene")
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
 
@@ -98,22 +97,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         handleNotification(userInfo: userInfo)
         completionHandler()
         print("notification tapped here")
-
-        //        switch UIApplication.shared.applicationState {
-        //        case .active:
-        //            print("active")
-        //        // app is currently active, can update badges count here
-        //        case .inactive:
-        //            print("inactive")
-        //
-        //        // app is transitioning from background to foreground (user taps notification), do what you need when user taps here
-        //        case .background:
-        //            print("background")
-        //
-        //        // app is in background, if content-available key of your notification is set to 1, poll to your backend to retrieve data and update your interface here
-        //        default:
-        //            print("something else")
-        //        }
     }
 
     func handleNotification(userInfo: [AnyHashable: Any]) {

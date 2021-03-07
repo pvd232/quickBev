@@ -72,7 +72,7 @@ public class Business: NSManagedObject, Codable {
                     let businesses = response.body["businesses"]
                     completion(businesses)
                 } else {
-                    print("na")
+                    print("get business status code bad")
                 }
             case let .failure(error):
                 completion(nil)

@@ -19,15 +19,10 @@ class DrinkViewController: UIViewController {
     @UsesAutoLayout var plusButton = RoundButton()
     @UsesAutoLayout var drinkQuantityLabel = UILabel(theme: Theme.UILabel(props: [.textColor]))
     @UsesAutoLayout var addToOrderButton = UIButton()
-    // let testAPIKey = pk_test_51I0xFxFseFjpsgWvepMo3sJRNB4CCbFPhkxj2gEKgHUhIGBnciTqNVzjz1wz68Btbd5zAb2KC9eXpYaiOwLDA5QH00SZhtKPLT
-
     init(drink: Drink) {
-//        print("drink", drink)
         self.drink = drink
 
         super.init(nibName: nil, bundle: nil)
-        print("self.drink", self.drink as Any)
-        print("self.drink", self.drink as Any)
     }
 
     @available(*, unavailable)

@@ -54,7 +54,6 @@ public class CheckoutCart: NSManagedObject {
             }
             if found == false {
                 let newDrinkEtag = ETag(Id: -1, Category: "drink")
-                print("nah")
                 CoreDataManager.sharedManager.saveContext()
                 etag = newDrinkEtag
             }

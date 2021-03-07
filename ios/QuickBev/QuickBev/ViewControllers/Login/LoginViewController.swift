@@ -166,7 +166,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("text field editing")
         if textField.placeholder == "email" {
             formValue["email"] = textField.text!
         } else if textField.placeholder == "password" {
@@ -176,7 +175,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print("did end")
         if textField.placeholder == "email" {
             formValue["email"] = textField.text!
         } else if textField.placeholder == "password" {
@@ -194,8 +192,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             switch result {
             case let .success(response): // the response is the APIResponse struct parameter that was passed into the APIResult instance for the .success case
                 if response.statusCode == 200, let response = try? response.decode(to: User.self) {
-                    print("login response", response)
-                    print("login response body", response.body)
                     // the response body where the decode to User.self happened
                     let user = response.body
                     // the backend does not include email and password in the attributes it sends back for security so we have to grab them from the login fields manually if this is the first time the user is logging in on the device
@@ -259,9 +255,5 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
-    }
-
-    override func viewDidLayoutSubviews() {
-        print("height", letsGetStartedStackView.frame.size.height)
     }
 }

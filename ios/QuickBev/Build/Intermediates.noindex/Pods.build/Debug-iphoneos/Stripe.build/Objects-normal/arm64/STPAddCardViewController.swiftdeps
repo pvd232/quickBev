@@ -227,7 +227,7 @@ depends-member:
 - !private ["Sa", "append"]
 - !private ["Sa", "count"]
 - !private ["Sa", "stp_boundSafeObject"]
-- !private ["SK", ""]
+- ["SK", ""]
 - !private ["SK", "append"]
 - !private ["SK", "count"]
 - !private ["SK", "index"]
@@ -562,7 +562,7 @@ depends-member:
 - ["s7CVarArgP", "viewForZoomingInScrollView"]
 - !private ["s7CVarArgP", "viewWillTransition"]
 - !private ["So20UITableViewCellStyleV", "default"]
-- !private ["Sl", ""]
+- ["Sl", ""]
 - !private ["Sl", "append"]
 - !private ["Sl", "count"]
 - !private ["Sl", "index"]
@@ -572,7 +572,7 @@ depends-member:
 - !private ["Sl", "startIndex"]
 - !private ["Sl", "stp_boundSafeObject"]
 - !private ["Sl", "subscript"]
-- !private ["SL", ""]
+- ["SL", ""]
 - !private ["SL", "count"]
 - !private ["SL", "greatestFiniteMagnitude"]
 - !private ["SL", "index"]
@@ -860,6 +860,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "CGRect"]
 - !private ["s23CustomStringConvertibleP", "CGSize"]
 - !private ["s23CustomStringConvertibleP", "DispatchQueue"]
+- !private ["s23CustomStringConvertibleP", "Element"]
 - !private ["s23CustomStringConvertibleP", "IndexPath"]
 - !private ["s23CustomStringConvertibleP", "Int"]
 - ["s23CustomStringConvertibleP", "STPAPIClient"]
@@ -1442,7 +1443,7 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "transitionCrossDissolve"]
 - !private ["s25ExpressibleByArrayLiteralP", "transitionFlipFromLeft"]
 - !private ["s25ExpressibleByArrayLiteralP", "transitionFlipFromRight"]
-- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "count"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "index"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
@@ -1467,19 +1468,19 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "none"]
 - !private ["s23ExpressibleByNilLiteralP", "postalCode"]
 - ["s23ExpressibleByNilLiteralP", "shipping"]
-- !private ["s32ExpressibleByStringInterpolationP", ""]
+- ["s32ExpressibleByStringInterpolationP", ""]
 - !private ["s32ExpressibleByStringInterpolationP", "count"]
 - !private ["s32ExpressibleByStringInterpolationP", "index"]
 - !private ["s32ExpressibleByStringInterpolationP", "init"]
 - !private ["s32ExpressibleByStringInterpolationP", "startIndex"]
 - !private ["s32ExpressibleByStringInterpolationP", "subscript"]
-- !private ["s26ExpressibleByStringLiteralP", ""]
+- ["s26ExpressibleByStringLiteralP", ""]
 - !private ["s26ExpressibleByStringLiteralP", "count"]
 - !private ["s26ExpressibleByStringLiteralP", "index"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "startIndex"]
 - !private ["s26ExpressibleByStringLiteralP", "subscript"]
-- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- ["s33ExpressibleByUnicodeScalarLiteralP", ""]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "count"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "index"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
@@ -1819,7 +1820,8 @@ depends-member:
 - !private ["10Foundation9IndexPathV", "row"]
 - !private ["10Foundation9IndexPathV", "section"]
 - !private ["Si", "init"]
-- !private ["s25LosslessStringConvertibleP", ""]
+- !private ["s25LosslessStringConvertibleP", "Element"]
+- ["s25LosslessStringConvertibleP", ""]
 - !private ["s25LosslessStringConvertibleP", "count"]
 - !private ["s25LosslessStringConvertibleP", "index"]
 - !private ["s25LosslessStringConvertibleP", "init"]
@@ -2546,16 +2548,19 @@ depends-member:
 - ["So8NSObjectC", "viewWillTransition"]
 - ["So8NSObjectP", "$__lazy_storage_$_cardScanner"]
 - !private ["So8NSObjectP", "AnimationOptions"]
+- ["So8NSObjectP", "Bool"]
 - ["So8NSObjectP", "CGFloat"]
 - !private ["So8NSObjectP", "CGRect"]
 - ["So8NSObjectP", "CGSize"]
 - !private ["So8NSObjectP", "DispatchQueue"]
+- ["So8NSObjectP", "Error"]
 - ["So8NSObjectP", "IndexPath"]
-- !private ["So8NSObjectP", "Int"]
+- ["So8NSObjectP", "Int"]
+- !private ["So8NSObjectP", "NSError"]
 - ["So8NSObjectP", "STPAPIClient"]
 - ["So8NSObjectP", "STPAddCardViewController"]
 - ["So8NSObjectP", "STPAddCardViewControllerDelegate"]
-- !private ["So8NSObjectP", "STPAddress"]
+- ["So8NSObjectP", "STPAddress"]
 - ["So8NSObjectP", "STPAddressViewModel"]
 - !private ["So8NSObjectP", "STPAnalyticsClient"]
 - ["So8NSObjectP", "STPCardScanner"]
@@ -2580,6 +2585,7 @@ depends-member:
 - ["So8NSObjectP", "STPToken"]
 - ["So8NSObjectP", "STPUserInformation"]
 - !private ["So8NSObjectP", "String"]
+- ["So8NSObjectP", "TimeInterval"]
 - ["So8NSObjectP", "Timer"]
 - !private ["So8NSObjectP", "UIAlertAction"]
 - !private ["So8NSObjectP", "UIAlertController"]
@@ -2741,6 +2747,7 @@ depends-member:
 - !private ["So8NSObjectP", "reloadData"]
 - !private ["So8NSObjectP", "requiredBillingAddressFields"]
 - !private ["So8NSObjectP", "resignFirstResponder"]
+- !private ["So8NSObjectP", "resume"]
 - !private ["So8NSObjectP", "rightBarButtonItem"]
 - ["So8NSObjectP", "scanCard"]
 - ["So8NSObjectP", "scannerCell"]
@@ -4072,11 +4079,12 @@ depends-member:
 - !private ["So25UITableViewScrollPositionV", "middle"]
 - !private ["ST", "Element"]
 - !private ["ST", "Iterator"]
-- !private ["ST", ""]
+- ["ST", ""]
 - !private ["ST", "append"]
 - !private ["ST", "count"]
 - !private ["ST", "index"]
 - !private ["ST", "init"]
+- !private ["ST", "makeIterator"]
 - !private ["ST", "row"]
 - !private ["ST", "section"]
 - !private ["ST", "startIndex"]
@@ -4113,13 +4121,13 @@ depends-member:
 - !private ["So22UIAlertControllerStyleV", "alert"]
 - !private ["So18UIAlertActionStyleV", "cancel"]
 - !private ["So21UIBarButtonSystemItemV", "done"]
-- !private ["s16TextOutputStreamP", ""]
+- ["s16TextOutputStreamP", ""]
 - !private ["s16TextOutputStreamP", "count"]
 - !private ["s16TextOutputStreamP", "index"]
 - !private ["s16TextOutputStreamP", "init"]
 - !private ["s16TextOutputStreamP", "startIndex"]
 - !private ["s16TextOutputStreamP", "subscript"]
-- !private ["s20TextOutputStreamableP", ""]
+- ["s20TextOutputStreamableP", ""]
 - !private ["s20TextOutputStreamableP", "count"]
 - !private ["s20TextOutputStreamableP", "index"]
 - !private ["s20TextOutputStreamableP", "init"]
@@ -7308,7 +7316,7 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "count"]
 - !private ["s24_DestructorSafeContainerP", "stp_boundSafeObject"]
 - ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
-- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "count"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "index"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
@@ -7321,7 +7329,7 @@ depends-member:
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "startIndex"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "subscript"]
-- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "count"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "index"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
@@ -7818,6 +7826,10 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewWillTransition"]
 - !private ["s21_ObjectiveCBridgeableP", ""]
 - !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
+- !private ["s21_ObjectiveCBridgeableP", "_bridgeToObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_conditionallyBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_forceBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_unconditionallyBridgeFromObjectiveC"]
 - !private ["s21_ObjectiveCBridgeableP", "addGestureRecognizer"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
 - !private ["s21_ObjectiveCBridgeableP", "backgroundColor"]
@@ -7910,7 +7922,7 @@ depends-nominal:
 - !private "7SwiftUI10AnimatableP"
 - !private "So22UIViewAnimationOptionsV"
 - !private "Sa"
-- !private "SK"
+- "SK"
 - !private "SB"
 - !private "Sz"
 - "So15CALayerDelegateP"
@@ -7921,8 +7933,8 @@ depends-nominal:
 - !private "So15CNKeyDescriptorP"
 - "s7CVarArgP"
 - !private "So20UITableViewCellStyleV"
-- !private "Sl"
-- !private "SL"
+- "Sl"
+- "SL"
 - !private "So17UIViewContentModeV"
 - !private "10Foundation15ContiguousBytesP"
 - "s28CustomDebugStringConvertibleP"
@@ -7937,20 +7949,20 @@ depends-nominal:
 - !private "s5ErrorP"
 - !private "So15UIControlEventsV"
 - !private "s25ExpressibleByArrayLiteralP"
-- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
 - "s23ExpressibleByNilLiteralP"
-- !private "s32ExpressibleByStringInterpolationP"
-- !private "s26ExpressibleByStringLiteralP"
-- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s32ExpressibleByStringInterpolationP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "s17FixedWidthIntegerP"
 - !private "SF"
 - "7SwiftUI7GestureP"
 - "SH"
 - !private "10Foundation9IndexPathV"
 - !private "Si"
-- !private "s25LosslessStringConvertibleP"
+- "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
 - !private "SM"
 - !private "10Foundation19MutableDataProtocolP"
@@ -8015,7 +8027,7 @@ depends-nominal:
 - !private "6Stripe18STPUserInformationC"
 - !private "7Combine9SchedulerP"
 - !private "So25UITableViewScrollPositionV"
-- !private "ST"
+- "ST"
 - !private "s10SetAlgebraP"
 - !private "SZ"
 - !private "s13SignedNumericP"
@@ -8026,8 +8038,8 @@ depends-nominal:
 - !private "So22UIAlertControllerStyleV"
 - !private "So18UIAlertActionStyleV"
 - !private "So21UIBarButtonSystemItemV"
-- !private "s16TextOutputStreamP"
-- !private "s20TextOutputStreamableP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
 - !private "So7NSTimerC"
 - !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - "So29UIAccessibilityIdentificationP"
@@ -8091,11 +8103,11 @@ depends-nominal:
 - !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
 - "s35_ExpressibleByBuiltinBooleanLiteralP"
-- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - "s33_ExpressibleByBuiltinFloatLiteralP"
 - "s35_ExpressibleByBuiltinIntegerLiteralP"
 - "s34_ExpressibleByBuiltinStringLiteralP"
-- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - !private "7SwiftUI18_FormatSpecifiableP"
 - !private "s19_HasContiguousBytesP"

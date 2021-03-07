@@ -549,7 +549,6 @@ SWIFT_CLASS("_TtC8QuickBev19LoginViewController")
 - (void)viewDidLoad;
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
 - (void)textFieldDidEndEditing:(UITextField * _Nonnull)textField;
-- (void)viewDidLayoutSubviews;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 

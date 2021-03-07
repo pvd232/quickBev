@@ -108,7 +108,7 @@ struct APIClient {
     typealias APIClientCompletion = (APIResult<Data?>) -> Void
 
     private let session = URLSession.shared
-    private let baseURL = URL(string: "http://192.168.0.58:5000")!
+    private let baseURL = URL(string: "https://quickbev.uc.r.appspot.com")!
 
     func perform(_ request: APIRequest, _ completion: @escaping APIClientCompletion) {
         var urlComponents = URLComponents()

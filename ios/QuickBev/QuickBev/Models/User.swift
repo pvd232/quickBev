@@ -50,7 +50,6 @@ public class User: NSManagedObject, Codable {
             }
         }
         set(newEmail) {
-            print("new email", newEmail)
             try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).setValue(newEmail, for: "email")
         }
     }
@@ -59,15 +58,12 @@ public class User: NSManagedObject, Codable {
         get {
             if let password = try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).getValue(for: "password")
             {
-                print("made password", password)
                 return password
             } else {
-                print("no password")
                 return ""
             }
         }
         set(newPassword) {
-            print("new password", newPassword)
             try! SecureStore(secureStoreQueryable: GenericPasswordQueryable()).setValue(newPassword, for: "password")
         }
     }

@@ -27,8 +27,7 @@ final class StripeAPIClient: NSObject, STPCustomerEphemeralKeyProvider {
         // private
     }
 
-//    var baseURLString = "http://192.168.86.42:5000"
-    var baseURLString = "http://192.168.0.58:5000"
+    var baseURLString = "https://quickbev.uc.r.appspot.com"
 
     private lazy var baseURL: URL = {
         guard let url = URL(string: baseURLString) else {

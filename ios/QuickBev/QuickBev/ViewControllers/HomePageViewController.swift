@@ -107,13 +107,6 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol {
 
         // initialize checkout cart
         // this triggers the StripeAPI to call the create customer key function, sending the existing stripe id of the user returned from logging in as a parameter
-//        if let u = CoreDataManager.sharedManager.fetchEntities(entityName: "ETag") as? [ETag] {
-//            for e in u {
-//                print("etag.id", e.id)
-//                print("etag.category", e.category)
-//            }
-//        }
-
         _ = CheckoutCart.customerContext
         if CheckoutCart.shared.user == nil {
             centerButton.refreshTitle(newTitle: "Choose a venue")
@@ -137,15 +130,11 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol {
         if let fetchedBusinesses = CoreDataManager.sharedManager.fetchEntities(entityName: "Business") as? [Business], fetchedBusinesses.count > 0 {
             Business.getBusinesses(APIClient: APIClient()) {
                 businessesFromAPICall in
-                print(1)
-
                 guard businessesFromAPICall != nil else {
-                    print(2)
                     self.businesses = fetchedBusinesses
                     group.leave()
                     return
                 }
-                print(3)
                 CoreDataManager.sharedManager.deleteEntities(entityName: "Business")
                 CoreDataManager.sharedManager.saveContext()
                 self.businesses = businessesFromAPICall!
@@ -156,11 +145,8 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol {
             Business.getBusinesses(APIClient: APIClient()) {
                 businessesFromAPICall in
                 guard businessesFromAPICall != nil else {
+                    group.leave()
                     return
-                }
-                print(4)
-                for business in businessesFromAPICall! {
-                    print("business in businessFromAPICall", business)
                 }
                 self.businesses = businessesFromAPICall!
                 fetchedDrinksOrBusinessesBool = true
@@ -168,12 +154,6 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol {
             }
         }
         group.enter()
-        for business in CheckoutCart.shared.businessArray {
-            print("business.name b4", business.name)
-        }
-        for business in businesses {
-            print("business.name in self.biz", business.name)
-        }
         if let fetchedDrinks = CoreDataManager.sharedManager.fetchEntities(entityName: "Drink") as? [Drink], fetchedDrinks.count > 0 {
             // even if there are drinks stored in core data, the drink list might have been updated, so we make the call to the backend with the If-None-Match header and if no drinks are returned then we set the page's drink list to be the still current drink list in core data. we don't set the fetch bool to be true because the relationships between the businesses and drinks in core data is still intact
             Drink.getDrinks(APIClient: APIClient()) { drinksFromAPICall in
@@ -191,6 +171,7 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol {
         } else {
             Drink.getDrinks(APIClient: APIClient()) { drinksFromAPICall in
                 guard drinksFromAPICall != nil else {
+                    group.leave()
                     return
                 }
                 self.drinks = drinksFromAPICall!
@@ -202,7 +183,6 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol {
             // if the drinks or businesses were fetched from an API call we must establish their relationships in core data and set them in the checkout cart
             if fetchedDrinksOrBusinessesBool == true {
                 for business in self.businesses {
-                    print("business in group.notify", business)
                     var businessDrinks = [Drink]()
                     for drink in self.drinks {
                         if drink.businessId == business.id {
@@ -212,16 +192,11 @@ class HomePageViewController: UIViewController, NewBusinessPickedProtocol {
                     }
                     business.drinks = NSSet(array: businessDrinks)
                 }
-                for business in self.businesses {
-                    print("business after setting drinks", business)
-                }
                 CheckoutCart.shared.business = NSSet(array: self.businesses)
                 CoreDataManager.sharedManager.saveContext()
             }
             // if the user has signed out of their account the shopping cart will be empty but the businesses and drinks will be saved in core data
             else if CheckoutCart.shared.businessArray.count == 0 {
-                print(6)
-                print(CheckoutCart.shared.businessArray)
                 CheckoutCart.shared.business = NSSet(array: self.businesses)
                 CoreDataManager.sharedManager.saveContext()
             }

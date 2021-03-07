@@ -58,7 +58,6 @@
 		1DB8C2A5259FD22D0092FE49 /* ReviewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB8C2A4259FD22D0092FE49 /* ReviewOrderViewController.swift */; };
 		1DBA68E825EF5ADF0064FF5E /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBA68E725EF5ADF0064FF5E /* ContactViewController.swift */; };
 		1DBC17E825D5FF0400CE594E /* QuickBev.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DBC17E625D5FF0400CE594E /* QuickBev.xcdatamodeld */; };
-		1DBC17EE25D61A6400CE594E /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBC17ED25D61A6400CE594E /* WebSocket.swift */; };
 		1DD3BB9825DF35AE000AC737 /* RoundedUITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD3BB9725DF35AE000AC737 /* RoundedUITextView.swift */; };
 		1DD5D63D25A79B8400B3E7F7 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD5D63C25A79B8400B3E7F7 /* OrderConfirmationViewController.swift */; };
 		1DDBAD7525A8C07000DC95F4 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDBAD7425A8C07000DC95F4 /* RoundButton.swift */; };
@@ -126,7 +125,6 @@
 		1DB8C2A4259FD22D0092FE49 /* ReviewOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewOrderViewController.swift; path = "../New Group2/ReviewOrderViewController.swift"; sourceTree = "<group>"; };
 		1DBA68E725EF5ADF0064FF5E /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		1DBC17E725D5FF0400CE594E /* QuickBev.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuickBev.xcdatamodel; sourceTree = "<group>"; };
-		1DBC17ED25D61A6400CE594E /* WebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 		1DD3BB9725DF35AE000AC737 /* RoundedUITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUITextView.swift; sourceTree = "<group>"; };
 		1DD5D63C25A79B8400B3E7F7 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OrderConfirmationViewController.swift; path = "../New Group2/OrderConfirmationViewController.swift"; sourceTree = "<group>"; };
 		1DDBAD7425A8C07000DC95F4 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoundButton.swift; path = "../New Group/RoundButton.swift"; sourceTree = "<group>"; };
@@ -277,7 +275,6 @@
 			children = (
 				1DE290B025CCAF4100F4235B /* APIClient.swift */,
 				1D236D032430204800BF3412 /* SceneDelegate.swift */,
-				1DBC17ED25D61A6400CE594E /* WebSocket.swift */,
 				1D236D012430204800BF3412 /* AppDelegate.swift */,
 				1D446A6125C9A01D005B8202 /* CheckoutCart+CoreDataProperties.swift */,
 				1D56E784259304BE00BE9F13 /* CheckoutCart.swift */,
@@ -511,7 +508,6 @@
 				1D9019362431913400289FA5 /* DrinkTableViewCell.swift in Sources */,
 				1D52A37225C3C27D00BA5A43 /* Business.swift in Sources */,
 				1D446A6325C9A01D005B8202 /* CheckoutCart+CoreDataProperties.swift in Sources */,
-				1DBC17EE25D61A6400CE594E /* WebSocket.swift in Sources */,
 				1DD3BB9825DF35AE000AC737 /* RoundedUITextView.swift in Sources */,
 				1DE290B125CCAF4100F4235B /* APIClient.swift in Sources */,
 				1D921035258C056B00C9676D /* BusinessArrayViewController.swift in Sources */,
@@ -682,6 +678,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.theQuickCompany.QuickBev;
 				PRODUCT_NAME = QuickBev;
 				SWIFT_VERSION = 5.0;
@@ -703,6 +700,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.theQuickCompany.QuickBev;
 				PRODUCT_NAME = QuickBev;
 				SWIFT_VERSION = 5.0;

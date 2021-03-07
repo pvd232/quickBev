@@ -116,7 +116,7 @@ class BusinessMapViewController: UIViewController, CLLocationManagerDelegate, MK
             self.activityIndicator.stopAnimating()
 
             // executed after all async calls in for loop finish
-            print("done with all async calls weeee")
+            print("done with all async calls")
         })
     }
 

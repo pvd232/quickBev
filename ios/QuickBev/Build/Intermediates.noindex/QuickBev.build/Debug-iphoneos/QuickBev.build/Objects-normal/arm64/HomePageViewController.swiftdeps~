@@ -47,6 +47,7 @@ depends-top-level:
 - "=="
 - !private ">"
 - !private "APIClient"
+- "Array"
 - "AssignmentPrecedence"
 - "Bool"
 - "BooleanLiteralType"
@@ -85,7 +86,6 @@ depends-top-level:
 - "UIViewController"
 - "UsesAutoLayout"
 - !private "bottomButtonsViewContainer"
-- !private "businesses"
 - !private "calculateFontRatio"
 - !private "centerButton"
 - !private "centerButtonTouchup"
@@ -102,7 +102,6 @@ depends-top-level:
 - !private "navigationController"
 - !private "navigationItem"
 - !private "present"
-- "print"
 - !private "theNightIsYoungStackView"
 - !private "theNightisYoungLabel"
 - !private "view"
@@ -285,7 +284,6 @@ depends-member:
 - ["s7CVarArgP", "presentationControllerShouldDismiss"]
 - ["s7CVarArgP", "presentationControllerWillDismiss"]
 - !private ["s7CVarArgP", "presentedViewController"]
-- !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "pushViewController"]
 - !private ["s7CVarArgP", "refreshColor"]
 - !private ["s7CVarArgP", "refreshTitle"]
@@ -443,7 +441,6 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "presentationControllerShouldDismiss"]
 - ["s28CustomDebugStringConvertibleP", "presentationControllerWillDismiss"]
 - !private ["s28CustomDebugStringConvertibleP", "presentedViewController"]
-- !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "pushViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "refreshColor"]
 - !private ["s28CustomDebugStringConvertibleP", "refreshTitle"]
@@ -594,7 +591,6 @@ depends-member:
 - ["s23CustomStringConvertibleP", "presentationControllerShouldDismiss"]
 - ["s23CustomStringConvertibleP", "presentationControllerWillDismiss"]
 - !private ["s23CustomStringConvertibleP", "presentedViewController"]
-- !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "pushViewController"]
 - !private ["s23CustomStringConvertibleP", "refreshColor"]
 - !private ["s23CustomStringConvertibleP", "refreshTitle"]
@@ -660,7 +656,6 @@ depends-member:
 - !private ["So18OS_dispatch_objectC", "leave"]
 - !private ["So18OS_dispatch_objectC", "main"]
 - !private ["So18OS_dispatch_objectC", "notify"]
-- !private ["So18OS_dispatch_objectC", "sync"]
 - !private ["So17OS_dispatch_queueC", "main"]
 - ["8QuickBev5DrinkC", ""]
 - !private ["8QuickBev5DrinkC", "businessId"]
@@ -798,7 +793,6 @@ depends-member:
 - ["SQ", "presentationControllerShouldDismiss"]
 - ["SQ", "presentationControllerWillDismiss"]
 - !private ["SQ", "presentedViewController"]
-- !private ["SQ", "print"]
 - !private ["SQ", "pushViewController"]
 - !private ["SQ", "refreshColor"]
 - !private ["SQ", "refreshTitle"]
@@ -973,7 +967,6 @@ depends-member:
 - ["SH", "presentationControllerShouldDismiss"]
 - ["SH", "presentationControllerWillDismiss"]
 - !private ["SH", "presentedViewController"]
-- !private ["SH", "print"]
 - !private ["SH", "pushViewController"]
 - !private ["SH", "refreshColor"]
 - !private ["SH", "refreshTitle"]
@@ -1078,7 +1071,6 @@ depends-member:
 - ["8QuickBev22HomePageViewControllerC", "presentationControllerDidDismiss"]
 - ["8QuickBev22HomePageViewControllerC", "presentationControllerShouldDismiss"]
 - ["8QuickBev22HomePageViewControllerC", "presentationControllerWillDismiss"]
-- !private ["8QuickBev22HomePageViewControllerC", "print"]
 - ["8QuickBev22HomePageViewControllerC", "theNightIsYoungStackView"]
 - ["8QuickBev22HomePageViewControllerC", "theNightisYoungLabel"]
 - !private ["8QuickBev22HomePageViewControllerC", "view"]
@@ -1213,7 +1205,6 @@ depends-member:
 - ["So8NSCodingP", "presentationControllerDidDismiss"]
 - ["So8NSCodingP", "presentationControllerShouldDismiss"]
 - ["So8NSCodingP", "presentationControllerWillDismiss"]
-- !private ["So8NSCodingP", "print"]
 - !private ["So8NSCodingP", "pushViewController"]
 - !private ["So8NSCodingP", "refreshColor"]
 - !private ["So8NSCodingP", "refreshTitle"]
@@ -1320,7 +1311,6 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "presentationControllerDidDismiss"]
 - ["So26NSExtensionRequestHandlingP", "presentationControllerShouldDismiss"]
 - ["So26NSExtensionRequestHandlingP", "presentationControllerWillDismiss"]
-- !private ["So26NSExtensionRequestHandlingP", "print"]
 - !private ["So26NSExtensionRequestHandlingP", "pushViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "screenSize"]
 - ["So26NSExtensionRequestHandlingP", "theNightIsYoungStackView"]
@@ -1496,21 +1486,16 @@ depends-member:
 - ["So8NSObjectC", "presentationControllerShouldDismiss"]
 - ["So8NSObjectC", "presentationControllerWillDismiss"]
 - !private ["So8NSObjectC", "presentedViewController"]
-- !private ["So8NSObjectC", "print"]
 - !private ["So8NSObjectC", "pushViewController"]
 - !private ["So8NSObjectC", "refreshColor"]
 - !private ["So8NSObjectC", "refreshTitle"]
-- !private ["So8NSObjectC", "resume"]
 - !private ["So8NSObjectC", "safeAreaLayoutGuide"]
 - !private ["So8NSObjectC", "screenSize"]
 - !private ["So8NSObjectC", "setCount"]
-- !private ["So8NSObjectC", "setTarget"]
 - !private ["So8NSObjectC", "shared"]
 - !private ["So8NSObjectC", "sourceRect"]
 - !private ["So8NSObjectC", "sourceView"]
 - !private ["So8NSObjectC", "spacing"]
-- !private ["So8NSObjectC", "suspend"]
-- !private ["So8NSObjectC", "sync"]
 - !private ["So8NSObjectC", "text"]
 - !private ["So8NSObjectC", "textAlignment"]
 - ["So8NSObjectC", "theNightIsYoungStackView"]
@@ -1646,20 +1631,16 @@ depends-member:
 - ["So8NSObjectP", "presentationControllerShouldDismiss"]
 - ["So8NSObjectP", "presentationControllerWillDismiss"]
 - !private ["So8NSObjectP", "presentedViewController"]
-- !private ["So8NSObjectP", "print"]
 - !private ["So8NSObjectP", "pushViewController"]
 - !private ["So8NSObjectP", "refreshColor"]
 - !private ["So8NSObjectP", "refreshTitle"]
 - !private ["So8NSObjectP", "safeAreaLayoutGuide"]
 - !private ["So8NSObjectP", "screenSize"]
 - !private ["So8NSObjectP", "setCount"]
-- !private ["So8NSObjectP", "setTarget"]
 - !private ["So8NSObjectP", "shared"]
 - !private ["So8NSObjectP", "sourceRect"]
 - !private ["So8NSObjectP", "sourceView"]
 - !private ["So8NSObjectP", "spacing"]
-- !private ["So8NSObjectP", "suspend"]
-- !private ["So8NSObjectP", "sync"]
 - !private ["So8NSObjectP", "text"]
 - !private ["So8NSObjectP", "textAlignment"]
 - ["So8NSObjectP", "theNightIsYoungStackView"]
@@ -1745,7 +1726,6 @@ depends-member:
 - ["8QuickBev25NewBusinessPickedProtocolP", "presentationControllerDidDismiss"]
 - ["8QuickBev25NewBusinessPickedProtocolP", "presentationControllerShouldDismiss"]
 - ["8QuickBev25NewBusinessPickedProtocolP", "presentationControllerWillDismiss"]
-- !private ["8QuickBev25NewBusinessPickedProtocolP", "print"]
 - !private ["8QuickBev25NewBusinessPickedProtocolP", "theNightIsYoungStackView"]
 - !private ["8QuickBev25NewBusinessPickedProtocolP", "theNightisYoungLabel"]
 - !private ["8QuickBev25NewBusinessPickedProtocolP", "view"]
@@ -1754,16 +1734,11 @@ depends-member:
 - !private ["8QuickBev25NewBusinessPickedProtocolP", "viewDidLoad"]
 - !private ["8QuickBev25NewBusinessPickedProtocolP", "viewWillAppear"]
 - ["So9OS_objectC", ""]
-- !private ["So9OS_objectC", "activate"]
 - !private ["So9OS_objectC", "enter"]
 - !private ["So9OS_objectC", "init"]
 - !private ["So9OS_objectC", "leave"]
 - !private ["So9OS_objectC", "main"]
 - !private ["So9OS_objectC", "notify"]
-- !private ["So9OS_objectC", "resume"]
-- !private ["So9OS_objectC", "setTarget"]
-- !private ["So9OS_objectC", "suspend"]
-- !private ["So9OS_objectC", "sync"]
 - !private ["7Combine16ObservableObjectP", "business"]
 - !private ["7Combine16ObservableObjectP", "businessArray"]
 - !private ["7Combine16ObservableObjectP", "businessId"]
@@ -1801,6 +1776,7 @@ depends-member:
 - !private ["SY", "popover"]
 - !private ["SY", "touchUpInside"]
 - !private ["SY", "vertical"]
+- ["8QuickBev11RoundButtonC", ""]
 - !private ["8QuickBev11RoundButtonC", "addTarget"]
 - !private ["8QuickBev11RoundButtonC", "bottomAnchor"]
 - !private ["8QuickBev11RoundButtonC", "centerXAnchor"]
@@ -1818,6 +1794,7 @@ depends-member:
 - !private ["ST", "capitalizingFirstLetter"]
 - !private ["ST", "count"]
 - ["ST", "init"]
+- !private ["ST", "makeIterator"]
 - !private ["s10SetAlgebraP", ""]
 - !private ["s10SetAlgebraP", "touchUpInside"]
 - !private ["SS", "capitalizingFirstLetter"]
@@ -1825,6 +1802,7 @@ depends-member:
 - !private ["s27StringInterpolationProtocolP", "appendLiteral"]
 - !private ["s27StringInterpolationProtocolP", "init"]
 - !private ["Sy", "capitalizingFirstLetter"]
+- !private ["8QuickBev15StripeAPIClientC", ""]
 - !private ["s16TextOutputStreamP", ""]
 - !private ["s16TextOutputStreamP", "appendInterpolation"]
 - !private ["s16TextOutputStreamP", "appendLiteral"]
@@ -1832,6 +1810,7 @@ depends-member:
 - !private ["s20TextOutputStreamableP", ""]
 - !private ["s20TextOutputStreamableP", "capitalizingFirstLetter"]
 - ["8QuickBev5ThemeO", "UILabel"]
+- ["8QuickBev11ToolbarViewC", ""]
 - !private ["8QuickBev11ToolbarViewC", "bottomAnchor"]
 - !private ["8QuickBev11ToolbarViewC", "centerXAnchor"]
 - !private ["8QuickBev11ToolbarViewC", "heightAnchor"]
@@ -1955,7 +1934,6 @@ depends-member:
 - ["So40UIAdaptivePresentationControllerDelegateP", "presentationControllerDidDismiss"]
 - ["So40UIAdaptivePresentationControllerDelegateP", "presentationControllerShouldDismiss"]
 - ["So40UIAdaptivePresentationControllerDelegateP", "presentationControllerWillDismiss"]
-- !private ["So40UIAdaptivePresentationControllerDelegateP", "print"]
 - ["So40UIAdaptivePresentationControllerDelegateP", "theNightIsYoungStackView"]
 - ["So40UIAdaptivePresentationControllerDelegateP", "theNightisYoungLabel"]
 - !private ["So40UIAdaptivePresentationControllerDelegateP", "view"]
@@ -2092,7 +2070,6 @@ depends-member:
 - ["So21UIAppearanceContainerP", "presentationControllerShouldDismiss"]
 - ["So21UIAppearanceContainerP", "presentationControllerWillDismiss"]
 - !private ["So21UIAppearanceContainerP", "presentedViewController"]
-- !private ["So21UIAppearanceContainerP", "print"]
 - !private ["So21UIAppearanceContainerP", "pushViewController"]
 - !private ["So21UIAppearanceContainerP", "refreshColor"]
 - !private ["So21UIAppearanceContainerP", "refreshTitle"]
@@ -2203,7 +2180,6 @@ depends-member:
 - ["So18UIContentContainerP", "presentationControllerShouldDismiss"]
 - ["So18UIContentContainerP", "presentationControllerWillDismiss"]
 - !private ["So18UIContentContainerP", "presentedViewController"]
-- !private ["So18UIContentContainerP", "print"]
 - !private ["So18UIContentContainerP", "pushViewController"]
 - !private ["So18UIContentContainerP", "screenSize"]
 - !private ["So18UIContentContainerP", "sourceRect"]
@@ -2401,7 +2377,6 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "presentationControllerShouldDismiss"]
 - ["So18UIFocusEnvironmentP", "presentationControllerWillDismiss"]
 - !private ["So18UIFocusEnvironmentP", "presentedViewController"]
-- !private ["So18UIFocusEnvironmentP", "print"]
 - !private ["So18UIFocusEnvironmentP", "pushViewController"]
 - !private ["So18UIFocusEnvironmentP", "refreshColor"]
 - !private ["So18UIFocusEnvironmentP", "refreshTitle"]
@@ -2650,7 +2625,6 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "presentationControllerDidDismiss"]
 - ["So30UIPasteConfigurationSupportingP", "presentationControllerShouldDismiss"]
 - ["So30UIPasteConfigurationSupportingP", "presentationControllerWillDismiss"]
-- !private ["So30UIPasteConfigurationSupportingP", "print"]
 - !private ["So30UIPasteConfigurationSupportingP", "pushViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "refreshColor"]
 - !private ["So30UIPasteConfigurationSupportingP", "refreshTitle"]
@@ -2743,7 +2717,6 @@ depends-member:
 - ["So39UIPopoverPresentationControllerDelegateP", "presentationControllerDidDismiss"]
 - ["So39UIPopoverPresentationControllerDelegateP", "presentationControllerShouldDismiss"]
 - ["So39UIPopoverPresentationControllerDelegateP", "presentationControllerWillDismiss"]
-- !private ["So39UIPopoverPresentationControllerDelegateP", "print"]
 - ["So39UIPopoverPresentationControllerDelegateP", "theNightIsYoungStackView"]
 - ["So39UIPopoverPresentationControllerDelegateP", "theNightisYoungLabel"]
 - !private ["So39UIPopoverPresentationControllerDelegateP", "view"]
@@ -2853,7 +2826,6 @@ depends-member:
 - ["So11UIResponderC", "presentationControllerDidDismiss"]
 - ["So11UIResponderC", "presentationControllerShouldDismiss"]
 - ["So11UIResponderC", "presentationControllerWillDismiss"]
-- !private ["So11UIResponderC", "print"]
 - !private ["So11UIResponderC", "pushViewController"]
 - !private ["So11UIResponderC", "refreshColor"]
 - !private ["So11UIResponderC", "refreshTitle"]
@@ -2968,7 +2940,6 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "presentationControllerDidDismiss"]
 - ["So30UIResponderStandardEditActionsP", "presentationControllerShouldDismiss"]
 - ["So30UIResponderStandardEditActionsP", "presentationControllerWillDismiss"]
-- !private ["So30UIResponderStandardEditActionsP", "print"]
 - !private ["So30UIResponderStandardEditActionsP", "pushViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "refreshColor"]
 - !private ["So30UIResponderStandardEditActionsP", "refreshTitle"]
@@ -2989,7 +2960,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "viewWillAppear"]
 - !private ["So30UIResponderStandardEditActionsP", "widthAnchor"]
 - !private ["So20UIScrollViewDelegateP", ""]
-- !private ["So20UIScrollViewDelegateP", "init"]
+- ["So20UIScrollViewDelegateP", "init"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "addTarget"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "bottomAnchor"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "centerXAnchor"]
@@ -3087,7 +3058,6 @@ depends-member:
 - ["So16UIStateRestoringP", "presentationControllerDidDismiss"]
 - ["So16UIStateRestoringP", "presentationControllerShouldDismiss"]
 - ["So16UIStateRestoringP", "presentationControllerWillDismiss"]
-- !private ["So16UIStateRestoringP", "print"]
 - !private ["So16UIStateRestoringP", "pushViewController"]
 - !private ["So16UIStateRestoringP", "screenSize"]
 - ["So16UIStateRestoringP", "theNightIsYoungStackView"]
@@ -3098,8 +3068,9 @@ depends-member:
 - ["So16UIStateRestoringP", "viewDidLoad"]
 - ["So16UIStateRestoringP", "viewWillAppear"]
 - ["So21UITableViewControllerC", ""]
-- !private ["So21UITableViewDataSourceP", "init"]
-- !private ["So19UITableViewDelegateP", "init"]
+- !private ["So21UITableViewControllerC", "init"]
+- ["So21UITableViewDataSourceP", "init"]
+- ["So19UITableViewDelegateP", "init"]
 - !private ["So22UITapGestureRecognizerC", "init"]
 - !private ["So18UITraitEnvironmentP", "APIClient"]
 - ["So18UITraitEnvironmentP", "Business"]
@@ -3198,7 +3169,6 @@ depends-member:
 - ["So18UITraitEnvironmentP", "presentationControllerShouldDismiss"]
 - ["So18UITraitEnvironmentP", "presentationControllerWillDismiss"]
 - !private ["So18UITraitEnvironmentP", "presentedViewController"]
-- !private ["So18UITraitEnvironmentP", "print"]
 - !private ["So18UITraitEnvironmentP", "pushViewController"]
 - !private ["So18UITraitEnvironmentP", "refreshColor"]
 - !private ["So18UITraitEnvironmentP", "refreshTitle"]
@@ -3315,7 +3285,6 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "presentationControllerDidDismiss"]
 - ["So23UIUserActivityRestoringP", "presentationControllerShouldDismiss"]
 - ["So23UIUserActivityRestoringP", "presentationControllerWillDismiss"]
-- !private ["So23UIUserActivityRestoringP", "print"]
 - !private ["So23UIUserActivityRestoringP", "pushViewController"]
 - !private ["So23UIUserActivityRestoringP", "refreshColor"]
 - !private ["So23UIUserActivityRestoringP", "refreshTitle"]
@@ -3444,7 +3413,6 @@ depends-member:
 - ["So16UIViewControllerC", "presentationControllerDidDismiss"]
 - ["So16UIViewControllerC", "presentationControllerShouldDismiss"]
 - ["So16UIViewControllerC", "presentationControllerWillDismiss"]
-- !private ["So16UIViewControllerC", "print"]
 - !private ["So16UIViewControllerC", "pushViewController"]
 - !private ["So16UIViewControllerC", "screenSize"]
 - ["So16UIViewControllerC", "theNightIsYoungStackView"]
@@ -3599,7 +3567,6 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "presentationControllerShouldDismiss"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "presentationControllerWillDismiss"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "presentedViewController"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "pushViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "refreshColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "refreshTitle"]
@@ -3733,7 +3700,6 @@ depends-member:
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "presentationControllerShouldDismiss"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "presentationControllerWillDismiss"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "presentedViewController"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "print"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "pushViewController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "refreshColor"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "refreshTitle"]
@@ -3897,6 +3863,7 @@ depends-nominal:
 - !private "SS"
 - !private "s27StringInterpolationProtocolP"
 - !private "Sy"
+- !private "8QuickBev15StripeAPIClientC"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - "8QuickBev5ThemeO"
@@ -3936,13 +3903,13 @@ depends-nominal:
 - "So24UIPresentationControllerC"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
-- !private "So20UIScrollViewDelegateP"
+- "So20UIScrollViewDelegateP"
 - "So35UISpringLoadedInteractionSupportingP"
 - "So11UIStackViewC"
 - "So16UIStateRestoringP"
 - "So21UITableViewControllerC"
-- !private "So21UITableViewDataSourceP"
-- !private "So19UITableViewDelegateP"
+- "So21UITableViewDataSourceP"
+- "So19UITableViewDelegateP"
 - !private "So22UITapGestureRecognizerC"
 - "So18UITraitEnvironmentP"
 - "So23UIUserActivityRestoringP"
