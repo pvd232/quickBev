@@ -346,7 +346,7 @@ def create_business():
     # id = generate_password_hash("a", "sha256")
     password = generate_password_hash("a", "sha256")
     new_customer = Customer(id="a", password=password,
-                            first_name="peter", last_name="driscoll", stripe_id=new_stripe_customer.id, email_verified=False, has_registered=False)
+                            first_name="peter", last_name="driscoll", stripe_id=new_stripe_customer.id, email_verified=True, has_registered=False)
     db.session.add(new_stripe_customer_id)
     db.session.add(new_customer)
     # commit the session to my DB.

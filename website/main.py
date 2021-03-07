@@ -65,13 +65,20 @@ def send_apn(device_token, action):
 # def my_index():
 #     return render_template("index.html", flask_token="Hello world")
 
+
+# @app.errorhandler(404)
+# def not_found(e):
+#     print('error 404', e)
+#     return render_template('index.html')
+
+
 @app.route("/b")
 def b():
     # test_service = Test_Service()
     # test_service.test_connection()
     instantiate_db_connection()
     return Response(status=200)
-# this is called by the customer to update their device token after they have successfully logged in
+# this s called by the customer to update their device token after they have successfully logged in
 
 
 @app.route('/apn-token/<string:customer_id>/<string:session_token>', methods=["POST"])
@@ -102,7 +109,7 @@ def login():
     if customer:
         serialized_customer = customer.serialize()
         jwt_token = jwt.encode(
-            {"sub": {serialized_customer["id"]}}, key=secret, algorithm="HS256")
+            {"sub": serialized_customer["id"]}, key=secret, algorithm="HS256")
         headers["authorization-token"] = jwt_token
         return Response(status=200, response=json.dumps(serialized_customer), headers=headers)
     else:
@@ -118,8 +125,7 @@ def inventory(session_token):
     headers = {}
     drinks = Drink_Service().get_drinks()
     client_etag = json.loads(request.headers.get("If-None-Match"))
-    print('ETag_Service().validate_etag(client_etag) for drinks',
-          ETag_Service().validate_etag(client_etag))
+
     if client_etag:
         if not ETag_Service().validate_etag(client_etag):
             for drink in drinks:
@@ -174,14 +180,14 @@ def send_confirmation_email(jwt_token, customer, url):
     host = request.headers.get('Host')
     button_url = f"http://{host}/verify-email/{jwt_token}"
 
-    logo = os.path.join(os.path.dirname(os.path.abspath(
-        __file__)), "./src/static/landscape-logo-purple.png")
+    # logo = os.path.join(os.path.dirname(os.path.abspath(
+    #     __file__)), "./src/static/landscape-logo-purple.png")
 
-    with open(logo, "rb") as image_file:
-        encoded_string = base64.b64encode(image_file.read())
+    # with open(logo, "rb") as image_file:
+    #     encoded_string = base64.b64encode(image_file.read())
     verify_button = f'<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin-right: auto; margin-left:auto; margin-top:3vh; padding-right:30px; border-collapse:separate;line-height:100%;"><tr><td><div><!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://www.activecampaign.com" style="height:40px;v-text-anchor:middle;width:130px;" arcsize="5%" strokecolor="#19cca3" fillcolor="#19cca3;width: 130;"><w:anchorlock/><center style="color:#ffffff;font-family:Helvetica, sans-serif;font-size:18px; font-weight: 600;">Click here!</center></v:roundrect><![endif]--><a href={button_url} style="display: inline-block; mso-hide:all; background-color: #19cca3; color: #FFFFFF; border:1px solid #19cca3; border-radius: 6px; line-height: 220%; width: 200px; font-family: Helvetica, sans-serif; font-size:18px; font-weight:600; text-align: center; text-decoration: none; -webkit-text-size-adjust:none;" target="_blank">Verify email!</a></a></div></td></tr></table>'
     mail_body_text = f'<p style="margin-top: 15px;margin-bottom: 15px;">Hey {customer.first_name},</p><p style="margin-top: 15px;margin-bottom: 15px;">Welcome to QuickBev!</p><p style="margin-top: 15px;margin-bottom: 15px;">Please click the link below to verify your account</p><br /><p style="margin-top: 15px;margin-bottom: 15px;">Let the good times begin,</p><p style="margin-top: 15px;margin-bottom: 15px;">—The QuickBev Team</p></div><div style="width:100%">{verify_button}</div>'
-    mail_body = f'<div style="height: 100%;"><div style="width: 100%;height: 100%;background-color: #e8e8e8;"><div style="width: 100%;max-width: 500px;margin-top: 0%;margin-bottom: 10%; margin-right:auto; margin-left:auto; background-color: #e8e8e8;"><tr style="width:100%;height:20vh;"></tr><div style="width:calc(100% - 30px); padding:30px 30px 30px 30px; background-color:white"><div  style="display: flex; width:100%; text-align:center;"><img src="data:image/png;base64,{encoded_string} style="width:50%; height:12%" alt="img" /></div><div  style="margin-top: 30px;">{mail_body_text}</div></div></div></div>'
+    mail_body = f'<div style="height: 100%;"><div style="width: 100%;height: 100%;background-color: #e8e8e8;"><div style="width: 100%;max-width: 500px;margin-top: 0%;margin-bottom: 10%; margin-right:auto; margin-left:auto; background-color: #e8e8e8;"><tr style="width:100%;height:20vh;"></tr><div style="width:calc(100% - 30px); padding:30px 30px 30px 30px; background-color:white"><div  style="display: flex; width:100%; text-align:center;"><img src=""style="width:50%; height:12%" alt="img" /></div><div  style="margin-top: 30px;">{mail_body_text}</div></div></div></div>'
 
     sender_address = 'patardriscoll@gmail.com'
     email = 'patardriscoll@gmail.com'
@@ -216,14 +222,14 @@ def send_password_reset_email(jwt_token, customer):
 
     button_url = f"https://{host}/reset-password/{jwt_token}"
 
-    logo = os.path.join(os.path.dirname(os.path.abspath(
-        __file__)), "./src/static/landscape-logo-purple.png")
+    # logo = os.path.join(os.path.dirname(os.path.abspath(
+    #     __file__)), "./src/static/landscape-logo-purple.png")
 
-    with open(logo, "rb") as image_file:
-        encoded_string = base64.b64encode(image_file.read())
+    # with open(logo, "rb") as image_file:
+    #     encoded_string = base64.b64encode(image_file.read())
     verify_button = f'<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin-right: auto; margin-top:5vh; margin-left:auto;   border-collapse:separate;line-height:100%;"><tr><td><div><!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://www.activecampaign.com" style="height:40px;v-text-anchor:middle;width:130px;" arcsize="5%" strokecolor="#19cca3" fillcolor="#19cca3;width: 130;"><w:anchorlock/><center style="color:#ffffff;font-family:Helvetica, sans-serif;font-size:18px; font-weight: 600;">Click here!</center></v:roundrect><![endif]--><a href={button_url} style="display: inline-block; mso-hide:all; background-color: #19cca3; color: #FFFFFF; border:1px solid #19cca3; border-radius: 6px; line-height: 220%; width: 200px; font-family: Helvetica, sans-serif; font-size:18px; font-weight:600; text-align: center; text-decoration: none; -webkit-text-size-adjust:none;" target="_blank">Reset passsword</a></a></div></td></tr></table>'
     mail_body_text = f'<p style="margin-top: 3vh;margin-bottom: 15px;">Hey {customer.first_name},</p><p style="margin-top: 15px;margin-bottom: 15px;">Having trouble logging in?</p><p style="margin-top: 15px;margin-bottom: 15px;">No worries. Click the button below to reset your password.</p><br /><p style="margin-top: 15px;margin-bottom: 15px;">Keep calm and carry on,</p><p style="margin-top: 15px;margin-bottom: 15px;">—The QuickBev Team</p></div><div style="width:100%">{verify_button}</div>'
-    mail_body = f'<div style="height: 100%;"><div style="width: 100%;height: 100%;background-color: #e8e8e8;"><div style="width: 100%;max-width: 500px;height: 80vh; margin-top: 0%;margin-bottom: 10%; margin-right:auto; margin-left:auto; background-color: #e8e8e8;"><tr style="width:100%;height:10vh;"></tr><div style="width:calc(100% - 30px); height:40vh; padding:30px 30px 30px 30px; background-color:white; margin-top:auto; margin-bottom:auto"><div style="display: flex; width:100%; text-align:center;"><img src="data:image/png;base64,{encoded_string} style="width:50%; height:12%" alt="img" /></div><div  style="margin-top: 30px;">{mail_body_text}</div><tr style="width:100%;height:10vh;"></tr></div></div></div>'
+    mail_body = f'<div style="height: 100%;"><div style="width: 100%;height: 100%;background-color: #e8e8e8;"><div style="width: 100%;max-width: 500px;height: 80vh; margin-top: 0%;margin-bottom: 10%; margin-right:auto; margin-left:auto; background-color: #e8e8e8;"><tr style="width:100%;height:10vh;"></tr><div style="width:calc(100% - 30px); height:40vh; padding:30px 30px 30px 30px; background-color:white; margin-top:auto; margin-bottom:auto"><div style="display: flex; width:100%; text-align:center;"><img src="" style="width:50%; height:12%" alt="img" /></div><div  style="margin-top: 30px;">{mail_body_text}</div><tr style="width:100%;height:10vh;"></tr></div></div></div>'
 
     sender_address = 'patardriscoll@gmail.com'
     email = 'patardriscoll@gmail.com'
@@ -258,7 +264,7 @@ def guest_device_token():
     print('device_token', device_token)
     Customer_Service().add_guest_device_token(device_token)
     jwt_token = jwt.encode(
-        {"sub": f'{device_token}'}, key=secret, algorithm="HS256")
+        {"sub": device_token}, key=secret, algorithm="HS256")
     headers["authorization-token"] = jwt_token
     return Response(status=200, headers=headers)
 
@@ -280,7 +286,7 @@ def customer():
             Customer_Service().update_device_token(
                 device_token, generated_new_customer.id)
             jwt_token = jwt.encode(
-                {"sub": f'{generated_new_customer.id}'}, key=secret, algorithm="HS256")
+                {"sub": generated_new_customer.id}, key=secret, algorithm="HS256")
             # send the hashed user ID as a crypted key embedded in the activation link for security
             headers["authorization-token"] = jwt_token
             send_confirmation_email(
@@ -296,7 +302,7 @@ def customer():
         customer = Customer_Domain(customer_json=json.loads(
             request.data))
         jwt_token = jwt.encode(
-            {"sub": f'{customer.id}'}, key=secret, algorithm="HS256")
+            {"sub": customer.id}, key=secret, algorithm="HS256")
         send_confirmation_email(
             jwt_token, customer, request.url)
         return Response(status=200)
@@ -487,7 +493,7 @@ def signup_redirect():
     business_to_update = request_json["business"]
     if business_service.update_business(business_to_update):
         header["jwt_token"] = jwt.encode(
-            {"sub": {business_to_update["id"]}}, key=secret, algorithm="HS256")
+            {"sub": business_to_update["id"]}, key=secret, algorithm="HS256")
         response["msg"] = "Business sucessfully updated"
         return Response(status=200, response=json.dumps(response), headers=header)
     else:
