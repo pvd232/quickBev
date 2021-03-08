@@ -15,7 +15,7 @@ from email.mime.text import MIMEText
 from flask import Flask
 import jwt
 import calendar
-from pushjack_http2 import APNSHTTP2SandboxClient, APNSAuthToken
+from pushjack_http2_mod import APNSHTTP2Client, APNSAuthToken
 from werkzeug.security import generate_password_hash, check_password_hash
 
 
@@ -27,6 +27,7 @@ stripe.api_key = "sk_test_51I0xFxFseFjpsgWvh9b1munh6nIea6f5Z8bYlIDfmKyNq6zzrgg8i
 secret = '3327aa0ee1f61998369e815c17b1dc5eaf7e728bca14f6fe557af366ee6e20f9'
 # theme color RGB = rgb(134,130,230), hex = #8682E6
 # TODO: need to finish the add_business function by adding the new business address and returning the unique identifier to main.py so i can dynamically set the files path of the new image using the UUID of the business address
+# TODO: copy over changes from backendquickbev to website and push website, then finish customers and orders page
 
 
 def send_apn(device_token, action):
@@ -36,12 +37,14 @@ def send_apn(device_token, action):
     with open(os.getcwd()+"/private_key.pem") as f:
         apn_token = f.read()
         f.close()
+    print("apn_token", apn_token)
+
     token = APNSAuthToken(
         token=apn_token,
         team_id=team_id,
         key_id="9KCZ66FCHF")
 
-    client = APNSHTTP2SandboxClient(
+    client = APNSHTTP2Client(
         token=token,
         bundle_id='com.theQuickCompany.QuickBev')
 
@@ -164,7 +167,6 @@ def orders(session_token):
     if request.method == "GET":
         header = {}
         header["Access-Control-Expose-Headers"] = "authorization"
-        # header["Access-Control-Allow-Origin"] = "http://localhost:3000"
         header["Access-Control-Allow-Credentials"] = "true"
         username = base64.b64decode(
             request.headers.get(
@@ -178,19 +180,19 @@ def orders(session_token):
 def send_confirmation_email(jwt_token, customer, url):
     print('jwt_token', jwt_token)
     host = request.headers.get('Host')
-    button_url = f"http://{host}/verify-email/{jwt_token}"
+    button_url = f"https://{host}/verify-email/{jwt_token}"
 
     # logo = os.path.join(os.path.dirname(os.path.abspath(
     #     __file__)), "./src/static/landscape-logo-purple.png")
 
     # with open(logo, "rb") as image_file:
     #     encoded_string = base64.b64encode(image_file.read())
-    verify_button = f'<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin-right: auto; margin-left:auto; margin-top:3vh; padding-right:30px; border-collapse:separate;line-height:100%;"><tr><td><div><!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://www.activecampaign.com" style="height:40px;v-text-anchor:middle;width:130px;" arcsize="5%" strokecolor="#19cca3" fillcolor="#19cca3;width: 130;"><w:anchorlock/><center style="color:#ffffff;font-family:Helvetica, sans-serif;font-size:18px; font-weight: 600;">Click here!</center></v:roundrect><![endif]--><a href={button_url} style="display: inline-block; mso-hide:all; background-color: #19cca3; color: #FFFFFF; border:1px solid #19cca3; border-radius: 6px; line-height: 220%; width: 200px; font-family: Helvetica, sans-serif; font-size:18px; font-weight:600; text-align: center; text-decoration: none; -webkit-text-size-adjust:none;" target="_blank">Verify email!</a></a></div></td></tr></table>'
-    mail_body_text = f'<p style="margin-top: 15px;margin-bottom: 15px;">Hey {customer.first_name},</p><p style="margin-top: 15px;margin-bottom: 15px;">Welcome to QuickBev!</p><p style="margin-top: 15px;margin-bottom: 15px;">Please click the link below to verify your account</p><br /><p style="margin-top: 15px;margin-bottom: 15px;">Let the good times begin,</p><p style="margin-top: 15px;margin-bottom: 15px;">—The QuickBev Team</p></div><div style="width:100%">{verify_button}</div>'
-    mail_body = f'<div style="height: 100%;"><div style="width: 100%;height: 100%;background-color: #e8e8e8;"><div style="width: 100%;max-width: 500px;margin-top: 0%;margin-bottom: 10%; margin-right:auto; margin-left:auto; background-color: #e8e8e8;"><tr style="width:100%;height:20vh;"></tr><div style="width:calc(100% - 30px); padding:30px 30px 30px 30px; background-color:white"><div  style="display: flex; width:100%; text-align:center;"><img src=""style="width:50%; height:12%" alt="img" /></div><div  style="margin-top: 30px;">{mail_body_text}</div></div></div></div>'
+    verify_button = f'<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin-right: auto; margin-top:5vh; margin-left:auto;   border-collapse:separate;line-height:100%;"><tr><td><div><!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://www.activecampaign.com" style="height:40px;v-text-anchor:middle;width:130px;" arcsize="5%" strokecolor="#19cca3" fillcolor="#19cca3;width: 130;"><w:anchorlock/><center style="color:#ffffff;font-family:Helvetica, sans-serif;font-size:18px; font-weight: 600;">Click here!</center></v:roundrect><![endif]--><a href={button_url} style="display: inline-block; mso-hide:all; background-color: #19cca3; color: #FFFFFF; border:1px solid #19cca3; border-radius: 6px; line-height: 220%; width: 200px; font-family: Helvetica, sans-serif; font-size:18px; font-weight:600; text-align: center; text-decoration: none; -webkit-text-size-adjust:none;" target="_blank">Verify email</a></a></div></td></tr></table>'
+    mail_body_text = f'<p style="margin-top: 3vh;margin-bottom: 15px;">Hey {customer.first_name},</p><p style="margin-top: 15px;margin-bottom: 15px;">Welcome to QuickBev!</p><p style="margin-top: 15px;margin-bottom: 15px;">Please click the link below to verify your account.</p><br /><p style="margin-top: 15px;margin-bottom: 15px;">Let the good times begin,</p><p style="margin-top: 15px;margin-bottom: 15px;">—The QuickBev Team</p></div><div style="width:100%; height:3vh;">{verify_button}</div>'
+    mail_body = f'<div style="height: 100%;"><div style="width: 100%;height: 100%;background-color: #e8e8e8;"><div style="width: 100%;max-width: 500px;height: 80vh; margin-top: 0%;margin-bottom: 10%; margin-right:auto; margin-left:auto; background-color: #e8e8e8;"><tr style="width:100%;height:5vh;"></tr><div style="width:calc(100% - 30px); height:50vh; padding:30px 30px 30px 30px; background-color:white; margin-top:auto; margin-bottom:auto"><div style="display: flex; width:100%; text-align:center;"><img src="" style="width:50%; height:12%" alt="img" /></div><div  style="margin-top: 30px;">{mail_body_text}</div><tr style="width:100%;height:5vh;"></tr></div></div></div>'
 
-    sender_address = 'patardriscoll@gmail.com'
-    email = 'patardriscoll@gmail.com'
+    sender_address = 'postmaster@sandbox471ef3a89bf64e819540bc75206062f2.mailgun.org'
+    email = customer.id
 
     # Setup the MIME
     message = MIMEMultipart()
@@ -202,15 +204,9 @@ def send_confirmation_email(jwt_token, customer, url):
     mail_content = mail_body
     # The body and the attachments for the mail
     message.attach(MIMEText(mail_content, 'html'))
-    # Create SMTP session for sending the mail
-    s = smtplib.SMTP('smtp.gmail.com', 587)
-    # s.connect('smtp.gmail.com', 587)
-    s.starttls()
-
-    s.login(user="patardriscoll@gmail.com", password="Iqopaogh23!")
-    # s = smtplib.SMTP('smtp.mailgun.org', 587)
-    # s.login('postmaster@crepenshake.com',
-    #         '6695313d8a619bc44dce00ad7184960a-ba042922-f2a8cfbb')
+    s = smtplib.SMTP('smtp.mailgun.org', 587)
+    s.login('postmaster@sandbox471ef3a89bf64e819540bc75206062f2.mailgun.org',
+            '44603d9d0e3864edd01989602e0db876-e49cc42c-7570439d')
     s.sendmail(message['From'], message['To'], message.as_string())
     s.quit()
 
@@ -229,7 +225,7 @@ def send_password_reset_email(jwt_token, customer):
     #     encoded_string = base64.b64encode(image_file.read())
     verify_button = f'<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin-right: auto; margin-top:5vh; margin-left:auto;   border-collapse:separate;line-height:100%;"><tr><td><div><!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://www.activecampaign.com" style="height:40px;v-text-anchor:middle;width:130px;" arcsize="5%" strokecolor="#19cca3" fillcolor="#19cca3;width: 130;"><w:anchorlock/><center style="color:#ffffff;font-family:Helvetica, sans-serif;font-size:18px; font-weight: 600;">Click here!</center></v:roundrect><![endif]--><a href={button_url} style="display: inline-block; mso-hide:all; background-color: #19cca3; color: #FFFFFF; border:1px solid #19cca3; border-radius: 6px; line-height: 220%; width: 200px; font-family: Helvetica, sans-serif; font-size:18px; font-weight:600; text-align: center; text-decoration: none; -webkit-text-size-adjust:none;" target="_blank">Reset passsword</a></a></div></td></tr></table>'
     mail_body_text = f'<p style="margin-top: 3vh;margin-bottom: 15px;">Hey {customer.first_name},</p><p style="margin-top: 15px;margin-bottom: 15px;">Having trouble logging in?</p><p style="margin-top: 15px;margin-bottom: 15px;">No worries. Click the button below to reset your password.</p><br /><p style="margin-top: 15px;margin-bottom: 15px;">Keep calm and carry on,</p><p style="margin-top: 15px;margin-bottom: 15px;">—The QuickBev Team</p></div><div style="width:100%">{verify_button}</div>'
-    mail_body = f'<div style="height: 100%;"><div style="width: 100%;height: 100%;background-color: #e8e8e8;"><div style="width: 100%;max-width: 500px;height: 80vh; margin-top: 0%;margin-bottom: 10%; margin-right:auto; margin-left:auto; background-color: #e8e8e8;"><tr style="width:100%;height:10vh;"></tr><div style="width:calc(100% - 30px); height:40vh; padding:30px 30px 30px 30px; background-color:white; margin-top:auto; margin-bottom:auto"><div style="display: flex; width:100%; text-align:center;"><img src="" style="width:50%; height:12%" alt="img" /></div><div  style="margin-top: 30px;">{mail_body_text}</div><tr style="width:100%;height:10vh;"></tr></div></div></div>'
+    mail_body = f'<div style="height: 100%;"><div style="width: 100%;height: 100%;background-color: #e8e8e8;"><div style="width: 100%;max-width: 500px;height: 80vh; margin-top: 0%;margin-bottom: 10%; margin-right:auto; margin-left:auto; background-color: #e8e8e8;"><tr style="width:100%;height:5vh;"></tr><div style="width:calc(100% - 30px); height:45vh; padding:30px 30px 30px 30px; background-color:white; margin-top:auto; margin-bottom:auto"><div style="display: flex; width:100%; text-align:center;"><img src="" style="width:50%; height:12%" alt="img" /></div><div  style="margin-top: 30px;">{mail_body_text}</div><tr style="width:100%;height:10vh;"></tr></div></div></div>'
 
     sender_address = 'patardriscoll@gmail.com'
     email = 'patardriscoll@gmail.com'

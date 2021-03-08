@@ -43,10 +43,10 @@ class Order_Repository(object):
         subtotal = round(subtotal, 2)
         tip_amount = round(order.tip_percentage * subtotal, 2)
         sales_tax = round(subtotal * order.sales_tax_percentage, 2)
-        cost = int(round(subtotal+tip_amount+sales_tax, 2) * 100)
+        pre_fee_cost = int(round(subtotal+tip_amount+sales_tax, 2) * 100)
         merchant_stripe_id = order.merchant_stripe_id
         service_fee = int(round(.1 * cost, 2) * 100)
-
+        cost = pre_fee_cost + service_fee
         new_order = Order(id=order.id, customer_id=order.customer_id, merchant_stripe_id=order.merchant_stripe_id,
                           business_id=order.business_id, cost=cost, subtotal=subtotal, tip_percentage=order.tip_percentage, tip_amount=tip_amount, sales_tax=sales_tax, sales_tax_percentage=order.sales_tax_percentage, date_time=order.date_time, service_fee=service_fee)
         session.add(new_order)

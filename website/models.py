@@ -10,6 +10,7 @@ from sqlalchemy.ext.compiler import compiles
 import uuid
 import json
 from datetime import date
+from datetime import datetime
 import stripe
 from werkzeug.security import generate_password_hash, check_password_hash
 from sqlalchemy.ext.hybrid import hybrid_method
@@ -377,6 +378,21 @@ def create_drink():
 
     # commit the session to my DB.
     db.session.commit()
+
+
+def create_orders():
+    drinks = db.session.query(Drink)
+    businesses = db.session.query(Business)
+    sales_tax_rate = .0625
+    subtotal = 30.0
+    tip_percentage = .1
+    tip_amount = tip_percentage * subtotal
+    sales_tax = sales_tax_rate * subtotal
+    pre_fee_cost = subtotal + sales_tax + tip_amount
+    service_fee = pre_fee_cost * .1
+    cost = service_fee + pre_fee_cost
+    new_order = Order(id=uuid.uuid4(), customer_id='a', business_id=businesses[0], merchant_stripe_id=new_account.id, cost=cost, subtotal=subtotal, sales_tax=sales_tax, sales_tax_percentage=sales_tax_rate, tip_percentage=tip_percentage, tip_amount=tip_amount, service_fee=service_fee, date_time=datetime.today().strftime(
+        "%m/%d/%Y"))
 
 
 def create_etag():
